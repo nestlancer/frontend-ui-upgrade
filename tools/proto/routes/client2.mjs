@@ -85,6 +85,57 @@ const settingsTabs = (r, active) => tabs([
 const settingsHead = (title, sub) => phead({ title: 'Settings', sub });
 const saveBar = `<div class="actionbar"><span class="text-xs dim mr-auto">Unsaved changes stay local until you save</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div>`;
 
+
+// ---------------------------------------------------------------- payment detail
+const PAY_PROJECT = 'Corporate LMS for 200 Employees';
+const payDetail = (r, state) => {
+  const isPaid = state === 'paid';
+  const statusBadge = isPaid
+    ? '<span class="badge tone-success">Completed</span>'
+    : '<span class="badge tone-neutral">Not due yet</span>';
+  const steps = isPaid
+    ? [['Created', 'done'], ['Pending', 'done'], ['Processing', 'done'], ['Completed', 'cur', 'Current: Completed'], ['Refunded', '']]
+    : [['Not due yet', 'done'], ['Pending', 'cur', 'Current: Not due yet'], ['Processing', ''], ['Completed', ''], ['Refunded', '']];
+  const stepHtml = steps.map(([t, k, sub]) => `<div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid ${k ? 'var(--brand-9)' : 'var(--line-strong)'};background:${k === 'done' ? 'var(--brand-9)' : 'transparent'}"></span><div><b class="text-sm ${k ? '' : 'dim'}">${t}</b>${sub ? `<div class="text-xs dim">${sub}</div>` : ''}</div></div>`).join('');
+  const docs = isPaid
+    ? `<div class="flex gap-3 flex-wrap"><button class="btn btn-primary">${icon('download', 14)} Download invoice</button><button class="btn btn-secondary">${icon('download', 14)} Download receipt</button></div>`
+    : '';
+  return `
+${backlink(r, 'apps/web/payments/', 'Back to payments')}
+<div class="flex items-start justify-between flex-wrap gap-3 mb-2 mt-4">
+  <div><h1 class="ptitle">Payment details</h1><p class="psub">${isPaid ? 'Review this payment and related documents.' : 'This installment is not due yet. Checkout unlocks after you approve delivery or when the studio requests payment.'}</p></div>
+  ${statusBadge}
+</div>
+<div class="grid gap-5 mt-5" style="grid-template-columns:7fr 5fr;align-items:start">
+  <div class="flex-col gap-5">
+    <div class="panel" style="border-top:3px solid var(--brand-9)"><div class="panel-body">
+      <div class="eyebrow">Order summary</div>
+      <div class="flex items-start justify-between mt-2 mb-4">
+        <div><b class="h3" style="font-size:17px">${PAY_PROJECT}</b><div class="text-sm muted mt-1">${isPaid ? 'Deposit' : 'Final payment'}</div></div>
+        ${isPaid ? '<span class="badge tone-success">Paid</span>' : '<span class="badge tone-neutral">Not due yet</span>'}
+      </div>
+      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹15,660.00</span></div>
+      ${kv([['Currency', 'INR'], ['Reference', `<span class="mono">${isPaid ? '01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2' : '01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5'}</span>`], ['Created', '10/5/2026, 3:47:22 AM']])}
+      ${isPaid
+        ? `<div class="mt-4 text-sm" style="padding:14px 16px;border-radius:10px;background:var(--t-success-bg);color:var(--t-success-tx)">This payment has been recorded. Download your receipt or invoice below.</div>`
+        : `<div class="mt-4" style="padding:14px 16px;border-radius:10px;background:var(--bg-sunken, #f4f4f2)"><b class="text-sm">Checkout not available yet</b><div class="text-sm muted mt-1">Complete the current milestone (payment or delivery review) before moving to later milestones.</div><div class="text-xs dim mt-2">Approve the milestone delivery from your project hub, or wait until Nestlancer requests this installment.</div></div>`}
+    </div></div>
+    ${isPaid
+      ? panel({ title: 'Billing documents', sub: 'Download the latest invoice or receipt for this payment.', body: docs })
+      : `<button class="btn btn-secondary" style="align-self:flex-start;color:var(--t-danger-tx)">Cancel payment</button>`}
+  </div>
+  <div class="flex-col gap-5">
+    ${panel({ title: 'Status', pad: true, body: stepHtml + (isPaid ? '' : `<button class="btn w-full mt-2" style="color:var(--t-danger-tx)">Cancel pending payment</button>`) })}
+    ${panel({ title: 'Payment details', pad: true, body: kv([
+      ['Payment ID', `<span class="mono" style="font-size:11px">${isPaid ? '01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2' : '01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5'}</span>`],
+      ['Project', `<a class="link" href="${LT(r, 'apps/web/projects/[id]/')}">${PAY_PROJECT}</a>`],
+      ['Created', '<span class="mono" style="font-size:11.5px">10/5/2026, 3:47:22 AM</span>'],
+    ]) })}
+    ${isPaid ? `<a class="link" href="#">File a payment dispute</a>` : ''}
+  </div>
+</div>`;
+};
+
 export default [
   // ================================================================ MESSAGES
   {
@@ -244,70 +295,16 @@ ${pager('Showing 1–3 of 3')}
 <div class="mt-5">${note('info','info','Offline transfers: after a NEFT/UPI bank transfer, post the <b>UTR reference</b> on the payment page — verification usually closes within 4 business hours.')}</div>`,
   },
 
-  {
-    path: 'apps/web/payments/[id]/', alias: 'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/', app: 'web', title: 'Checkout · Nestlancer', crumb: 'Checkout',
-    body: (r) => `
-${backlink(r, 'apps/web/payments/', 'Back to payments')}
-<div class="flex items-start justify-between flex-wrap gap-3 mb-4">
-  <div><h1 class="ptitle">Checkout</h1><p class="psub">Review your order, then complete payment through Razorpay&#39;s secure gateway.</p></div>
-  ${badge('Pending','warning')}
-</div>
-<div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
-  <div class="flex-col gap-5">
-    <div class="panel" style="border-top:3px solid var(--brand-9)">
-      <div class="panel-body">
-        <div class="eyebrow">ORDER SUMMARY</div>
-        <div class="flex items-start justify-between mt-2 mb-4">
-          <div><b class="h3" style="font-size:17px">Razorpay Settlement Reconciliation Engine</b><div class="text-sm muted mt-1 flex items-center gap-2">${icon('layers',13)} Mid-project payment</div></div>
-          ${badge('Pending','warning')}
-        </div>
-        <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹19,200.00</span></div>
-        ${kv([['Currency','INR'],['Reference','<span class="mono">01a10a2c-2d0e-7499-b769-967d17a42197</span>'],['Created','10/5/2026, 3:47:09 AM']])}
-        <div class="flex gap-0 mt-4" style="border:1px solid var(--line);border-radius:10px;overflow:hidden">
-          <button class="btn btn-primary grow" style="border-radius:0">Pay online</button>
-          <button class="btn grow" style="border-radius:0;border-left:1px solid var(--line)">Bank / UPI transfer</button>
-        </div>
-        <button class="btn btn-primary w-full btn-lg mt-3">${icon('lock',14)} Proceed to secure checkout</button>
-        <div class="text-center text-xs dim mt-2">Card, netbanking, wallets, or UPI (QR) in Razorpay&#39;s secure window</div>
-        <div class="flex items-center justify-center gap-3 my-4 text-xs dim"><span style="flex:1;height:1px;background:var(--line)"></span>OR<span style="flex:1;height:1px;background:var(--line)"></span></div>
-        ${note('warn','smartphone',`<b>UPI ID entry is not available on desktop browsers.</b> Razorpay and NPCI do not support typing a UPI ID (VPA) in checkout on desktop web. If you choose UPI here, Razorpay shows a <b>QR code</b> to scan with your phone — expected, not a bug.
-          <ul class="mt-2" style="padding-left:16px;list-style:disc"><li><b>Pay with UPI on desktop:</b> use <b>Proceed to secure checkout</b> → UPI → scan the QR with Google Pay, PhonePe, or Paytm.</li><li><b>No phone handy:</b> use <b>Card</b> in the same checkout.</li><li><b>Type your UPI ID:</b> open this payment page on your <b>phone browser</b> (not desktop) — the UPI ID field appears there.</li></ul>`)}
-        <div class="flex gap-2 mt-4">
-          <button class="btn btn-secondary btn-sm">${icon('file-text',13)} Invoice</button>
-          <button class="btn btn-danger btn-sm">Cancel payment</button>
-        </div>
-      </div>
-      <div class="panel-foot flex items-center gap-3 flex-wrap">
-        <span class="avatar sq" style="width:34px;height:34px;background:var(--brand-2);color:var(--brand-11)">${icon('shield-check',16)}</span>
-        <div class="min-w-0"><b style="font-size:12.5px">Secured by Razorpay</b><div class="text-xs dim">256-bit encryption · PCI-DSS compliant checkout</div></div>
-        <div class="ml-auto flex gap-2">${['UPI','CARDS','NETBANKING','WALLETS'].map(x=>`<span class="chip" style="height:20px;font-size:10px;font-family:var(--font-mono)">${x}</span>`).join('')}</div>
-      </div>
-    </div>
-    ${panel({ title: 'Billing documents', sub: 'Download the latest invoice or receipt for this payment.', body: `<button class="btn btn-primary">${icon('download',14)} Download invoice</button>` })}
-  </div>
-  <div class="flex-col gap-5" style="position:sticky;top:76px">
-    ${panel({ title: 'Status', pad: true, body: `
-      <div class="tline">
-        <div class="tline-item"><div class="flex items-center gap-2"><span style="color:var(--t-success-dot)">${icon('check-circle',14)}</span><b class="text-sm">Created</b></div></div>
-        <div class="tline-item"><div class="flex items-center gap-2"><span style="color:var(--t-warning-dot)">${icon('clock',14)}</span><b class="text-sm">Pending</b><span class="text-xs dim">Current: Pending</span></div></div>
-        <div class="tline-item mut"><div class="flex items-center gap-2"><span class="dim">${icon('refresh',14)}</span><b class="text-sm dim">Processing</b></div></div>
-        <div class="tline-item mut"><div class="flex items-center gap-2"><span class="dim">${icon('check-circle',14)}</span><b class="text-sm dim">Completed</b></div></div>
-        <div class="tline-item mut"><div class="flex items-center gap-2"><span class="dim">${icon('x',14)}</span><b class="text-sm dim">Refunded</b></div></div>
-      </div>
-      <button class="btn btn-danger w-full mt-2">Cancel pending payment</button>` })}
-    ${panel({ title: 'Payment details', body: kv([
-      ['Payment ID','<span class="mono" style="font-size:11px">01a10a2c-2d0e…42197</span>'],
-      ['Project','<a class="link" href="'+LT(r,'apps/web/projects/[id]/')+'">Razorpay Settlement…</a>'],
-      ['Created','<span class="mono" style="font-size:11.5px">10/5/2026, 3:47:09 AM</span>'],
-    ])})}
-    ${note('warn','alert-triangle','<b>Test mode checkout.</b> This environment uses Razorpay <b>test keys</b>. Test card details are hidden on production builds.')}
-    ${panel({ title: 'How checkout works', body: `<ol style="padding-left:18px;list-style:decimal;font-size:12.8px;color:var(--ink-2);line-height:1.7">
-      <li>We create a Razorpay order for this milestone amount.</li>
-      <li>Use <b>Pay with UPI ID</b> if you cannot scan the QR code, or use card / netbanking in the full checkout.</li>
-      <li>Pay the scheduled milestone instalment when the studio requests payment.</li></ol>` })}
-  </div>
-</div>`,
-  },
+  // ---- Payment detail — two verified states (original screenshots 001 + 002, Priya Nair, LMS project)
+  ...[
+    { path: 'apps/web/payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2/', state: 'paid' },
+    { path: 'apps/web/payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5/', state: 'notdue' },
+    // generic [id] target used by 'Pay now' links until the pending-payment screenshots are verified
+    { path: 'apps/web/payments/[id]/', state: 'paid' },
+  ].map(({ path, state }) => ({
+    path, app: 'web', title: 'Payment details · Nestlancer', crumb: 'Payment details',
+    body: (r) => payDetail(r, state),
+  })),
 
   {
     path: 'apps/web/payments/methods/', app: 'web', title: 'Payment methods · Nestlancer', crumb: 'Payment methods',

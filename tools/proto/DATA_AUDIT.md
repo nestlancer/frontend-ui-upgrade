@@ -7,8 +7,8 @@ Status: `todo` · `checked` (matches) · `fixed` (data updated) · `n/a` (no pro
 
 | # | Screenshot | Original URL | Status | Notes |
 |---|---|---|---|---|
-| 1 | `public/001-admin-login.webp` | https://admin.nestlancer.com/login | todo |  |
-| 2 | `public/002-blog-listing.webp` | https://app.nestlancer.com/blog | todo |  |
+| 1 | `clients/001-payment-details-completed-payment.webp` | /payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2 | fixed | Priya Nair deposit ₹15,660.00, Completed. Payment page rebuilt from this screenshot. Open: amount glyph ₹ not visible in render; header shows "Ananya Iyer" on every page (shell hardcoded, must follow account). |
+| 2 | `clients/002-payment-details-not-due-yet.webp` | /payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5 | fixed | Final payment ₹15,660.00, Not due yet, checkout locked. Rebuilt as second state of the payment page. |
 | 3 | `public/003-blog-article.webp` | https://app.nestlancer.com/blog/cutting-deploy-time-from-45-minutes-to-five | todo |  |
 | 4 | `public/004-contact.webp` | https://app.nestlancer.com/contact | todo |  |
 | 5 | `public/005-forgot-password.webp` | https://app.nestlancer.com/forgot-password | todo |  |
