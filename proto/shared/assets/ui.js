@@ -19,6 +19,18 @@
     var fab = document.getElementById('fab');
     if (fab && !ev.target.closest('#fab')) fab.classList.remove('open');
   });
-  // top-right progress on long pages
-  window.__nl = { version: 'dir-html/1.0' };
+  // scroll reveal — elements with .reveal fade/rise in once they enter the viewport
+  var els = document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!('IntersectionObserver' in window) || reduce) {
+    els.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+  window.__nl = { version: 'dir-html/1.1' };
 })();

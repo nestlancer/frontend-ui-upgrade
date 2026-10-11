@@ -575,3 +575,35 @@ table.tbl { width:100%; border-collapse:collapse; font-size:13px; }
   .actionbar { margin:26px -16px -56px; padding:14px 16px; }
   .chat-grid, .chat-grid.pane3 { grid-template-columns:1fr; height:auto; }
 }
+
+/* ---------------------------------------------------------------------------
+   Motion layer (added): scroll reveal, card hover lift, press feedback.
+   Durations follow the decision doc: 150ms micro, 220ms surfaces, ease-out.
+   Everything collapses to instant under prefers-reduced-motion.
+--------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 420ms cubic-bezier(.2,.7,.2,1), transform 420ms cubic-bezier(.2,.7,.2,1);
+  transition-delay: var(--d, 0ms);
+}
+.reveal.is-in { opacity: 1; transform: none; }
+.mkt-card, a.mkt-card {
+  transition: transform 220ms cubic-bezier(.2,.7,.2,1), box-shadow 220ms ease, border-color 220ms ease;
+}
+a.mkt-card:hover, .mkt-card.is-hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -18px rgba(11,60,56,.35);
+  border-color: var(--brand-6, #9fd6cf);
+}
+.btn { transition: background-color 150ms ease, color 150ms ease, box-shadow 150ms ease, transform 150ms ease; }
+.btn:active { transform: translateY(1px) scale(.99); }
+.link-arrow svg { transition: transform 220ms cubic-bezier(.2,.7,.2,1); }
+.link-arrow:hover svg { transform: translateX(3px); }
+.prog > i { transition: width 900ms cubic-bezier(.2,.7,.2,1); }
+@keyframes nl-fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .prog > i, .mkt-card, a.mkt-card, .btn, .link-arrow svg {
+    transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important;
+  }
+}

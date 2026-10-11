@@ -106,9 +106,9 @@ ${hero('WORK','Selected engagements.','Every card below shipped under a fixed-pr
   <div class="grid g3 gap-5">
     ${WORKS.map(w=>`
     <a href="${LT(r,'apps/web/portfolio/[id]/')}" class="mkt-card" style="overflow:hidden;display:block">
-      ${cover(w.sector.toUpperCase()+' · '+w.year, w.v, 'padding-top:52%')}
+      ${cover(w.sector.toUpperCase()+' · '+w.date, w.v, 'padding-top:52%')}
       <div style="padding:18px">
-        <div class="flex items-center justify-between"><div class="font-bold" style="font-size:15px;letter-spacing:-.02em">${w.t}</div><span class="mono text-xs dim">${w.dur}</span></div>
+        <div class="flex items-center justify-between"><div class="font-bold" style="font-size:15px;letter-spacing:-.02em">${w.t}</div><span class="mono text-xs dim">${w.date}</span></div>
         <div class="text-sm muted mt-2" style="line-height:1.55">${w.result}</div>
         <div class="flex gap-2 mt-3 flex-wrap">${w.tags.map(t=>`<span class="chip" style="height:22px;font-size:11px">${t}</span>`).join('')}</div>
       </div>
@@ -153,7 +153,7 @@ ${hero('PORTFOLIO','Case studies with receipts.','Filter by sector. Metrics are 
   <div class="grid g3 gap-5">
     ${WORKS.map(w=>`
     <a href="${LT(r,'apps/web/portfolio/[id]/')}" class="mkt-card" style="overflow:hidden;display:block">
-      ${cover(w.sector.toUpperCase()+' · '+w.year, w.v, 'padding-top:52%')}
+      ${cover(w.sector.toUpperCase()+' · '+w.date, w.v, 'padding-top:52%')}
       <div style="padding:18px">
         <div class="font-bold" style="font-size:15px;letter-spacing:-.02em">${w.t}</div>
         <div class="text-sm muted mt-2" style="line-height:1.55">${w.result}</div>

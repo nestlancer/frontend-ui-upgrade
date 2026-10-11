@@ -2,8 +2,8 @@
 <html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nestlancer web prototype — Checkout · Nestlancer">
-<title>Checkout · Nestlancer</title>
+<meta name="description" content="Nestlancer web prototype — Payment details · Nestlancer">
+<title>Payment details · Nestlancer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
@@ -37,7 +37,7 @@
 <div class="main">
 <header class="topbar">
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Checkout</b></nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Payment details</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
     <a class="icobtn" href="../../messages/inbox/index.html" title="Messages"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span class="bdg">9</span></a>
@@ -46,79 +46,38 @@
 </header>
 <main id="main" class="content">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
-<div class="flex items-start justify-between flex-wrap gap-3 mb-4">
-  <div><h1 class="ptitle">Checkout</h1><p class="psub">Review your order, then complete payment through Razorpay&#39;s secure gateway.</p></div>
-  <span class="badge tone-warning">Pending</span>
+<div class="flex items-start justify-between flex-wrap gap-3 mb-2 mt-4">
+  <div><h1 class="ptitle">Payment details</h1><p class="psub">This installment is not due yet. Checkout unlocks after you approve delivery or when the studio requests payment.</p></div>
+  <span class="badge tone-neutral">Not due yet</span>
 </div>
-<div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
+<div class="grid gap-5 mt-5" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="flex-col gap-5">
-    <div class="panel" style="border-top:3px solid var(--brand-9)">
-      <div class="panel-body">
-        <div class="eyebrow">ORDER SUMMARY</div>
-        <div class="flex items-start justify-between mt-2 mb-4">
-          <div><b class="h3" style="font-size:17px">Razorpay Settlement Reconciliation Engine</b><div class="text-sm muted mt-1 flex items-center gap-2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg> Mid-project payment</div></div>
-          <span class="badge tone-warning">Pending</span>
-        </div>
-        <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹19,200.00</span></div>
-        <dl class="kv"><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd><span class="mono">01a10a2c-2d0e-7499-b769-967d17a42197</span></dd><dt>Created</dt><dd>10/5/2026, 3:47:09 AM</dd></dl>
-        <div class="flex gap-0 mt-4" style="border:1px solid var(--line);border-radius:10px;overflow:hidden">
-          <button class="btn btn-primary grow" style="border-radius:0">Pay online</button>
-          <button class="btn grow" style="border-radius:0;border-left:1px solid var(--line)">Bank / UPI transfer</button>
-        </div>
-        <button class="btn btn-primary w-full btn-lg mt-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Proceed to secure checkout</button>
-        <div class="text-center text-xs dim mt-2">Card, netbanking, wallets, or UPI (QR) in Razorpay&#39;s secure window</div>
-        <div class="flex items-center justify-center gap-3 my-4 text-xs dim"><span style="flex:1;height:1px;background:var(--line)"></span>OR<span style="flex:1;height:1px;background:var(--line)"></span></div>
-        <div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><div><b>UPI ID entry is not available on desktop browsers.</b> Razorpay and NPCI do not support typing a UPI ID (VPA) in checkout on desktop web. If you choose UPI here, Razorpay shows a <b>QR code</b> to scan with your phone — expected, not a bug.
-          <ul class="mt-2" style="padding-left:16px;list-style:disc"><li><b>Pay with UPI on desktop:</b> use <b>Proceed to secure checkout</b> → UPI → scan the QR with Google Pay, PhonePe, or Paytm.</li><li><b>No phone handy:</b> use <b>Card</b> in the same checkout.</li><li><b>Type your UPI ID:</b> open this payment page on your <b>phone browser</b> (not desktop) — the UPI ID field appears there.</li></ul></div></div>
-        <div class="flex gap-2 mt-4">
-          <button class="btn btn-secondary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> Invoice</button>
-          <button class="btn btn-danger btn-sm">Cancel payment</button>
-        </div>
+    <div class="panel" style="border-top:3px solid var(--brand-9)"><div class="panel-body">
+      <div class="eyebrow">Order summary</div>
+      <div class="flex items-start justify-between mt-2 mb-4">
+        <div><b class="h3" style="font-size:17px">Corporate LMS for 200 Employees</b><div class="text-sm muted mt-1">Final payment</div></div>
+        <span class="badge tone-neutral">Not due yet</span>
       </div>
-      <div class="panel-foot flex items-center gap-3 flex-wrap">
-        <span class="avatar sq" style="width:34px;height:34px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
-        <div class="min-w-0"><b style="font-size:12.5px">Secured by Razorpay</b><div class="text-xs dim">256-bit encryption · PCI-DSS compliant checkout</div></div>
-        <div class="ml-auto flex gap-2"><span class="chip" style="height:20px;font-size:10px;font-family:var(--font-mono)">UPI</span><span class="chip" style="height:20px;font-size:10px;font-family:var(--font-mono)">CARDS</span><span class="chip" style="height:20px;font-size:10px;font-family:var(--font-mono)">NETBANKING</span><span class="chip" style="height:20px;font-size:10px;font-family:var(--font-mono)">WALLETS</span></div>
-      </div>
-    </div>
-    
-<div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Billing documents</div><div class="panel-sub">Download the latest invoice or receipt for this payment.</div></div></div>
-  <div class="panel-body"><button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download invoice</button></div>
-  
-</div>
+      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹15,660.00</span></div>
+      <dl class="kv"><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd><span class="mono">01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5</span></dd><dt>Created</dt><dd>10/5/2026, 3:47:22 AM</dd></dl>
+      <div class="mt-4" style="padding:14px 16px;border-radius:10px;background:var(--bg-sunken, #f4f4f2)"><b class="text-sm">Checkout not available yet</b><div class="text-sm muted mt-1">Complete the current milestone (payment or delivery review) before moving to later milestones.</div><div class="text-xs dim mt-2">Approve the milestone delivery from your project hub, or wait until Nestlancer requests this installment.</div></div>
+    </div></div>
+    <button class="btn btn-secondary" style="align-self:flex-start;color:var(--t-danger-tx)">Cancel payment</button>
   </div>
-  <div class="flex-col gap-5" style="position:sticky;top:76px">
+  <div class="flex-col gap-5">
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><div class="panel-title">Status</div></div></div>
-  <div class="panel-body">
-      <div class="tline">
-        <div class="tline-item"><div class="flex items-center gap-2"><span style="color:var(--t-success-dot)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><b class="text-sm">Created</b></div></div>
-        <div class="tline-item"><div class="flex items-center gap-2"><span style="color:var(--t-warning-dot)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><b class="text-sm">Pending</b><span class="text-xs dim">Current: Pending</span></div></div>
-        <div class="tline-item mut"><div class="flex items-center gap-2"><span class="dim"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span><b class="text-sm dim">Processing</b></div></div>
-        <div class="tline-item mut"><div class="flex items-center gap-2"><span class="dim"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span><b class="text-sm dim">Completed</b></div></div>
-        <div class="tline-item mut"><div class="flex items-center gap-2"><span class="dim"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span><b class="text-sm dim">Refunded</b></div></div>
-      </div>
-      <button class="btn btn-danger w-full mt-2">Cancel pending payment</button></div>
+  <div class="panel-body"><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Not due yet</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:transparent"></span><div><b class="text-sm ">Pending</b><div class="text-xs dim">Current: Not due yet</div></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Processing</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Completed</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Refunded</b></div></div><button class="btn w-full mt-2" style="color:var(--t-danger-tx)">Cancel pending payment</button></div>
   
 </div>
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><div class="panel-title">Payment details</div></div></div>
-  <div class="panel-body"><dl class="kv"><dt>Payment ID</dt><dd><span class="mono" style="font-size:11px">01a10a2c-2d0e…42197</span></dd><dt>Project</dt><dd><a class="link" href="../../projects/[id]/index.html">Razorpay Settlement…</a></dd><dt>Created</dt><dd><span class="mono" style="font-size:11.5px">10/5/2026, 3:47:09 AM</span></dd></dl></div>
+  <div class="panel-body"><dl class="kv"><dt>Payment ID</dt><dd><span class="mono" style="font-size:11px">01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5</span></dd><dt>Project</dt><dd><a class="link" href="../../projects/[id]/index.html">Corporate LMS for 200 Employees</a></dd><dt>Created</dt><dd><span class="mono" style="font-size:11.5px">10/5/2026, 3:47:22 AM</span></dd></dl></div>
   
 </div>
-    <div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div><b>Test mode checkout.</b> This environment uses Razorpay <b>test keys</b>. Test card details are hidden on production builds.</div></div>
     
-<div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">How checkout works</div></div></div>
-  <div class="panel-body"><ol style="padding-left:18px;list-style:decimal;font-size:12.8px;color:var(--ink-2);line-height:1.7">
-      <li>We create a Razorpay order for this milestone amount.</li>
-      <li>Use <b>Pay with UPI ID</b> if you cannot scan the QR code, or use card / netbanking in the full checkout.</li>
-      <li>Pay the scheduled milestone instalment when the studio requests payment.</li></ol></div>
-  
-</div>
   </div>
 </div></main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
@@ -137,7 +96,7 @@
   <a class="fx" href="../../login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Client sign-in</a>
   <a class="fx" href="../../../admin/login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Operator sign-in</a>
   <a class="fx" href="../../quotes/[id]/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg> Quote — sign &amp; accept</a>
-  <a class="fx" href="./index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Checkout — pay milestone</a>
+  <a class="fx" href="../01a10a2c-2d0e-7499-b769-967d17a42197/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Checkout — pay milestone</a>
   <div class="fab-sep"></div>
   <button class="fx" data-theme-toggle><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> <span>Theme</span> <small data-theme-label>Light</small></button>
 </div></div>

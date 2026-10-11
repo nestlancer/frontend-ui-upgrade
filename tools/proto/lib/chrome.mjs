@@ -48,7 +48,7 @@ function fab(route, hint) {
   <a class="fx" href="${L('apps/web/login/index.html')}">${icon('logIn', 15)} Client sign-in</a>
   <a class="fx" href="${L('apps/admin/login/index.html')}">${icon('shield', 15)} Operator sign-in</a>
   <a class="fx" href="${L('apps/web/quotes/[id]/index.html')}">${icon('receipt', 15)} Quote — sign &amp; accept</a>
-  <a class="fx" href="${L('apps/web/payments/[id]/index.html')}">${icon('card', 15)} Checkout — pay milestone</a>
+  <a class="fx" href="${L('apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html')}">${icon('card', 15)} Checkout — pay milestone</a>
   <div class="fab-sep"></div>
   <button class="fx" data-theme-toggle>${icon('sun', 15)} <span>Theme</span> <small data-theme-label>Light</small></button>
 </div></div>`;
@@ -58,11 +58,12 @@ function fab(route, hint) {
 export function mktHeader(route, active, app = 'landing') {
   const L = (t) => linkTo(route, t);
   const base = app === 'landing' ? 'apps/landing/' : 'apps/web/';
+  // Landing nav — verified order on nestlancer.com: Product, Portfolio, Blog, About, Pricing, Services, Contact
   const links =
     app === 'landing'
       ? [
-          ['Home', ''], ['Services', 'services/'], ['Pricing', 'pricing/'], ['Portfolio', 'portfolio/'],
-          ['Blog', 'blog/'], ['About', 'about/'], ['Contact', 'contact/'],
+          ['Product', ''], ['Portfolio', 'portfolio/'], ['Blog', 'blog/'], ['About', 'about/'],
+          ['Pricing', 'pricing/'], ['Services', 'services/'], ['Contact', 'contact/'],
         ]
       : [
           ['Home', ''], ['About', 'about/'], ['Work', 'work/'], ['Blog', 'blog/'], ['Contact', 'contact/'],
@@ -80,17 +81,18 @@ ${brand(L(base))}
 export function mktFooter(route, app = 'landing') {
   const L = (t) => linkTo(route, t);
   const base = app === 'landing' ? 'apps/landing/' : 'apps/web/';
+  // Footer columns + legal line verified on nestlancer.com (services page footer).
   return `<footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
   <div class="flex-col gap-3">
     ${brand(L(base))}
     <p class="text-sm muted" style="max-width:32ch;line-height:1.6">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
   </div>
-  <div><h5>Product</h5><a href="${L('apps/web/dashboard/')}">Project Hub</a><a href="${L('apps/landing/pricing/')}">Pricing</a><a href="${L('apps/landing/services/')}">Services</a><a href="${L(base + 'portfolio/')}">Portfolio</a><a href="${L(base + 'blog/')}">Blog</a></div>
-  <div><h5>Company</h5><a href="${L(base + 'about/')}">About</a><a href="${L(base + 'contact/')}">Contact</a><a href="${L('apps/web/register/')}">Start a project</a></div>
+  <div><h5>Product</h5><a href="${L('apps/web/dashboard/')}">Project Hub</a><a href="${L('apps/landing/pricing/')}">Pricing</a><a href="${L('apps/landing/services/')}">Services</a><a href="${L(base + 'portfolio/')}">Portfolio</a></div>
+  <div><h5>Company</h5><a href="${L(base + 'about/')}">About</a><a href="${L(base + 'blog/')}">Blog</a><a href="${L(base + 'contact/')}">Contact</a><a href="${L('apps/web/register/')}">Start a project</a></div>
   <div><h5>Legal</h5><a href="${L('apps/web/terms/')}">Terms</a><a href="${L('apps/web/privacy/')}">Privacy</a><a href="${L('apps/web/verify-document/')}">Verify document</a></div>
 </div>
-<div class="footer-base"><span>© 2026 Nestlancer Studio Private Limited · Hyderabad, IN</span><span class="mono">nestlancer.com · app.nestlancer.com · admin.nestlancer.com</span></div>
+<div class="footer-base"><span>© 2026 Nestlancer. Made in India. All rights reserved.</span></div>
 </div></footer>`;
 }
 
