@@ -90,11 +90,13 @@ const saveBar = `<div class="actionbar"><span class="text-xs dim mr-auto">Unsave
 const PAY_PROJECT = 'Corporate LMS for 200 Employees';
 const payDetail = (r, state) => {
   const isPaid = state === 'paid';
+  const isPending = state === 'pending';
   const statusBadge = isPaid
     ? '<span class="badge tone-success">Completed</span>'
-    : '<span class="badge tone-neutral">Not due yet</span>';
+    : isPending ? '<span class="badge tone-warning">Pending</span>' : '<span class="badge tone-neutral">Not due yet</span>';
   const steps = isPaid
     ? [['Created', 'done'], ['Pending', 'done'], ['Processing', 'done'], ['Completed', 'cur', 'Current: Completed'], ['Refunded', '']]
+    : isPending ? [['Created', 'done'], ['Pending', 'cur', 'Current: Pending'], ['Processing', ''], ['Completed', ''], ['Refunded', '']]
     : [['Not due yet', 'done'], ['Pending', 'cur', 'Current: Not due yet'], ['Processing', ''], ['Completed', ''], ['Refunded', '']];
   const stepHtml = steps.map(([t, k, sub]) => `<div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid ${k ? 'var(--brand-9)' : 'var(--line-strong)'};background:${k === 'done' ? 'var(--brand-9)' : 'transparent'}"></span><div><b class="text-sm ${k ? '' : 'dim'}">${t}</b>${sub ? `<div class="text-xs dim">${sub}</div>` : ''}</div></div>`).join('');
   const docs = isPaid
@@ -103,7 +105,7 @@ const payDetail = (r, state) => {
   return `
 ${backlink(r, 'apps/web/payments/', 'Back to payments')}
 <div class="flex items-start justify-between flex-wrap gap-3 mb-2 mt-4">
-  <div><h1 class="ptitle">Payment details</h1><p class="psub">${isPaid ? 'Review this payment and related documents.' : 'This installment is not due yet. Checkout unlocks after you approve delivery or when the studio requests payment.'}</p></div>
+  <div><h1 class="ptitle">Payment details</h1><p class="psub">${isPaid ? 'Review this payment and related documents.' : isPending ? 'Payment has been requested. Proceed to secure checkout to complete it.' : 'This installment is not due yet. Checkout unlocks after you approve delivery or when the studio requests payment.'}</p></div>
   ${statusBadge}
 </div>
 <div class="grid gap-5 mt-5" style="grid-template-columns:7fr 5fr;align-items:start">
@@ -111,17 +113,21 @@ ${backlink(r, 'apps/web/payments/', 'Back to payments')}
     <div class="panel" style="border-top:3px solid var(--brand-9)"><div class="panel-body">
       <div class="eyebrow">Order summary</div>
       <div class="flex items-start justify-between mt-2 mb-4">
-        <div><b class="h3" style="font-size:17px">${PAY_PROJECT}</b><div class="text-sm muted mt-1">${isPaid ? 'Deposit' : 'Final payment'}</div></div>
-        ${isPaid ? '<span class="badge tone-success">Paid</span>' : '<span class="badge tone-neutral">Not due yet</span>'}
+        <div><b class="h3" style="font-size:17px">${PAY_PROJECT}</b><div class="text-sm muted mt-1">${isPaid ? 'Deposit' : isPending ? 'Mid-project payment' : 'Final payment'}</div></div>
+        ${isPaid ? '<span class="badge tone-success">Paid</span>' : isPending ? '<span class="badge tone-warning">Pending</span>' : '<span class="badge tone-neutral">Not due yet</span>'}
       </div>
-      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹15,660.00</span></div>
-      ${kv([['Currency', 'INR'], ['Reference', `<span class="mono">${isPaid ? '01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2' : '01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5'}</span>`], ['Created', '10/5/2026, 3:47:22 AM']])}
-      ${isPaid
+      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">${isPending ? '₹19,200.00' : '₹15,660.00'}</span></div>
+      ${kv([['Currency', 'INR'], ['Reference', `<span class="mono">${isPaid ? '01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2' : isPending ? '01a10a2c-2d0e-7499-b769-967d17a42197' : '01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5'}</span>`], ['Created', isPending ? '10/5/2026, 3:47:09 AM' : '10/5/2026, 3:47:22 AM']])}
+      ${isPending
+        ? `<div class="mt-4" style="padding:14px 16px;border-radius:10px;background:var(--t-warning-bg, #fff7e6);color:var(--t-warning-tx)"><b class="text-sm">Pending checkout</b><div class="text-sm mt-1">This payment is awaiting Razorpay checkout. Proceed to secure checkout or cancel the pending payment.</div></div>`
+        : isPaid
         ? `<div class="mt-4 text-sm" style="padding:14px 16px;border-radius:10px;background:var(--t-success-bg);color:var(--t-success-tx)">This payment has been recorded. Download your receipt or invoice below.</div>`
         : `<div class="mt-4" style="padding:14px 16px;border-radius:10px;background:var(--bg-sunken, #f4f4f2)"><b class="text-sm">Checkout not available yet</b><div class="text-sm muted mt-1">Complete the current milestone (payment or delivery review) before moving to later milestones.</div><div class="text-xs dim mt-2">Approve the milestone delivery from your project hub, or wait until Nestlancer requests this installment.</div></div>`}
     </div></div>
     ${isPaid
       ? panel({ title: 'Billing documents', sub: 'Download the latest invoice or receipt for this payment.', body: docs })
+      : isPending
+      ? `<div class="flex gap-3"><button class="btn btn-primary">Proceed to secure checkout</button><button class="btn btn-secondary" style="color:var(--t-danger-tx)">Cancel pending payment</button></div>`
       : `<button class="btn btn-secondary" style="align-self:flex-start;color:var(--t-danger-tx)">Cancel payment</button>`}
   </div>
   <div class="flex-col gap-5">
@@ -271,7 +277,7 @@ ${pager('Showing 1–3 of 3')}`,
     path: 'apps/web/payments/', app: 'web', title: 'Billing · Nestlancer', crumb: 'Billing',
     body: (r) => `
 ${phead({ eyebrow: 'BILLING', title: 'Payments', sub: 'Milestone invoices, their rails, and where your money sits right now.',
-  actions: `<a class="btn btn-secondary" href="${LT(r,'apps/web/payments/methods/')}">${icon('card',14)} Payment methods</a><a class="btn btn-primary" href="${LT(r,'apps/web/payments/[id]/')}">Pay due amount</a>` })}
+  actions: `<a class="btn btn-secondary" href="${LT(r,'apps/web/payments/methods/')}">${icon('card',14)} Payment methods</a><a class="btn btn-primary" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}">Pay due amount</a>` })}
 ${stats([
   { label: 'Due now', value: '₹19,200.00', note: 'Mid-project · NL-204 checkout', icon: 'clock' },
   { label: 'Collected', value: '₹14,400.00', note: 'Deposit · Oct 5, 2026', icon: 'check-circle' },
@@ -286,9 +292,9 @@ ${stats([
 ${filterbar(`${searchInput('Search payments…', 240)}${sel(['All statuses','Pending','Processing','Completed','Refunded','Not due yet'])}`)}
 <div class="panel">
 ${table({ cols: [{l:'Payment'},{l:'Project'},{l:'Milestone'},{l:'Amount',r:1},{l:'Due'},{l:'Status'},{l:''}], rows: [
-  [`<b class="mono" style="font-size:12px">01a10a2c-2d0e…42197</b>`,'Razorpay Settlement Reconciliation Engine','Mid-project payment','<span class="mono font-semibold">₹19,200.00</span>','<span class="text-xs">Oct 14, 2026</span>',badge('Pending','warning'),`<a class="btn btn-primary btn-xs" href="${LT(r,'apps/web/payments/[id]/')}">Checkout</a>`],
-  [`<b class="mono" style="font-size:12px">01a10a2c-73fa…91c1c2</b>`,'Razorpay Settlement Reconciliation Engine','Deposit','<span class="mono font-semibold">₹14,400.00</span>','<span class="text-xs">Paid Oct 5</span>',badge('Completed','success'),`<a class="btn btn-ghost btn-xs" href="${LT(r,'apps/web/payments/[id]/')}">View</a>`],
-  [`<b class="mono" style="font-size:12px">01a10a2c-b5a4…610a5</b>`,'Razorpay Settlement Reconciliation Engine','Final payment','<span class="mono font-semibold">₹20,880.00</span>','<span class="text-xs">On approval</span>',badge('Not due yet','neutral'),`<a class="btn btn-ghost btn-xs" href="${LT(r,'apps/web/payments/[id]/')}">View</a>`],
+  [`<b class="mono" style="font-size:12px">01a10a2c-2d0e…42197</b>`,'Razorpay Settlement Reconciliation Engine','Mid-project payment','<span class="mono font-semibold">₹19,200.00</span>','<span class="text-xs">Oct 14, 2026</span>',badge('Pending','warning'),`<a class="btn btn-primary btn-xs" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}">Checkout</a>`],
+  [`<b class="mono" style="font-size:12px">01a10a2c-73fa…91c1c2</b>`,'Razorpay Settlement Reconciliation Engine','Deposit','<span class="mono font-semibold">₹14,400.00</span>','<span class="text-xs">Paid Oct 5</span>',badge('Completed','success'),`<a class="btn btn-ghost btn-xs" href="${LT(r,'apps/web/payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2/')}">View</a>`],
+  [`<b class="mono" style="font-size:12px">01a10a2c-b5a4…610a5</b>`,'Razorpay Settlement Reconciliation Engine','Final payment','<span class="mono font-semibold">₹20,880.00</span>','<span class="text-xs">On approval</span>',badge('Not due yet','neutral'),`<a class="btn btn-ghost btn-xs" href="${LT(r,'apps/web/payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5/')}">View</a>`],
 ]})}
 </div>
 ${pager('Showing 1–3 of 3')}
@@ -299,8 +305,8 @@ ${pager('Showing 1–3 of 3')}
   ...[
     { path: 'apps/web/payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2/', state: 'paid' },
     { path: 'apps/web/payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5/', state: 'notdue' },
-    // generic [id] target used by 'Pay now' links until the pending-payment screenshots are verified
-    { path: 'apps/web/payments/[id]/', state: 'paid' },
+    // pending checkout (screenshot 010, Ananya Iyer ₹19,200.00) — target of generic 'Pay now' links
+    { path: 'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/', state: 'pending' },
   ].map(({ path, state }) => ({
     path, app: 'web', title: 'Payment details · Nestlancer', crumb: 'Payment details',
     body: (r) => payDetail(r, state),
@@ -391,7 +397,7 @@ ${backlink(r, 'apps/web/payments/invoices/', 'Back to invoices')}
     path: 'apps/web/invoices/', app: 'web', title: 'Invoices · Nestlancer', crumb: 'Invoices',
     body: (r) => `
 ${phead({ eyebrow: 'FINANCE', title: 'Invoices', sub: 'Every GST invoice, credit note, and receipt across all your projects.',
-  actions: `<a class="btn btn-secondary" href="${LT(r,'apps/web/payments/methods/')}">${icon('card',14)} Methods</a><a class="btn btn-primary" href="${LT(r,'apps/web/payments/[id]/')}">${icon('download',14)} Export for AP</a>` })}
+  actions: `<a class="btn btn-secondary" href="${LT(r,'apps/web/payments/methods/')}">${icon('card',14)} Methods</a><a class="btn btn-primary" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}">${icon('download',14)} Export for AP</a>` })}
 ${stats([
   { label: 'This FY billed', value: '₹39,600', note: 'Apr – Oct 2026', icon: 'receipt' },
   { label: 'Outstanding', value: '₹19,200', note: '1 invoice issued', icon: 'clock' },
@@ -413,7 +419,7 @@ ${pager('Showing 1–4 of 4')}`,
 ${backlink(r, 'apps/web/invoices/', 'Back to invoices')}
 <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
   <div><h1 class="ptitle" style="font-size:22px">Invoice NL-INV-2026-000009</h1><p class="psub">GST tax invoice · issued Oct 8, 2026 · due Oct 14, 2026</p></div>
-  <div class="flex gap-2">${badge('Issued','info')}<a class="btn btn-primary btn-sm" href="${LT(r,'apps/web/payments/[id]/')}">${icon('card',13)} Pay now</a><button class="btn btn-secondary btn-sm">${icon('download',13)} PDF</button></div>
+  <div class="flex gap-2">${badge('Issued','info')}<a class="btn btn-primary btn-sm" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}">${icon('card',13)} Pay now</a><button class="btn btn-secondary btn-sm">${icon('download',13)} PDF</button></div>
 </div>
 <div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="panel"><div class="panel-body" style="padding:26px 30px">
@@ -431,7 +437,7 @@ ${backlink(r, 'apps/web/invoices/', 'Back to invoices')}
   </div></div>
   <div class="flex-col gap-5">
     ${panel({ title: 'Payment state', body: kv([['Status',badge('Awaiting payment','warning')],['Due','<b class="mono">Oct 14, 2026</b>'],['Rails','Razorpay · NEFT / UPI'],['Late policy','Work pauses after day 5']])})}
-    ${note('info','info','Paying by bank transfer? Post the UTR on the <a class="link" href="'+LT(r,'apps/web/payments/[id]/')+'">checkout page</a> so reconciliation can verify it.')}
+    ${note('info','info','Paying by bank transfer? Post the UTR on the <a class="link" href="'+LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')+'">checkout page</a> so reconciliation can verify it.')}
   </div>
 </div>`,
   },

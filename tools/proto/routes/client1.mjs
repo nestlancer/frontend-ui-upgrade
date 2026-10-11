@@ -25,7 +25,7 @@ export default [
     path: 'apps/web/dashboard/', app: 'web', title: 'Overview · Nestlancer', crumb: 'Overview',
     body: (r) => `
 ${phead({ eyebrow: 'ANANYA IYER', title: 'Overview', sub: 'One action will unblock your workspace.',
-  actions: `<a class="btn btn-primary" href="${LT(r,'apps/web/payments/[id]/')}">Complete checkout ${icon('arrow-right',14)}</a><a class="btn btn-secondary" href="${LT(r,'apps/web/projects/')}">Projects</a>` })}
+  actions: `<a class="btn btn-primary" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}">Complete checkout ${icon('arrow-right',14)}</a><a class="btn btn-secondary" href="${LT(r,'apps/web/projects/')}">Projects</a>` })}
 <div class="flex items-center justify-between mb-3" style="font-size:12.5px">
   <div class="flex items-center gap-2"><b>Invoiced</b><span class="mono muted">₹14,400.00</span><span class="dim">·</span><span class="mono muted">₹19,200.00 pending</span></div>
   <a class="link" href="${LT(r,'apps/web/invoices/')}">Billing history</a>
@@ -47,11 +47,11 @@ ${stats([
       <div class="p-3" style="background:var(--t-warning-bg);border:1px solid var(--t-warning-bd);border-radius:8px">
         <div class="eyebrow" style="font-size:9.5px;color:var(--t-warning-tx)">PENDING</div>
         <div class="mono font-semibold mt-1" style="color:var(--t-warning-tx);font-size:16px">₹19,200.00</div>
-        <a class="link text-xs" href="${LT(r,'apps/web/payments/[id]/')}" style="color:var(--t-warning-tx)">Complete checkout →</a>
+        <a class="link text-xs" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}" style="color:var(--t-warning-tx)">Complete checkout →</a>
       </div>
     </div>` })}
   <div class="panel"><div class="panel-head"><div class="panel-title">Awaiting you</div></div>
-    ${[['card','Pending payment','₹19,200.00','apps/web/payments/[id]/'],['message','Unread messages','6 messages','apps/web/messages/inbox/'],['bell','Notifications','32 new','apps/web/notifications/']].map(([i,t,s,h])=>`
+    ${[['card','Pending payment','₹19,200.00','apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/'],['message','Unread messages','6 messages','apps/web/messages/inbox/'],['bell','Notifications','32 new','apps/web/notifications/']].map(([i,t,s,h])=>`
     <a class="panel-row" href="${LT(r,h)}"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)">${icon(i,13)}</span>
     <div class="min-w-0 flex-1"><b style="font-size:13px">${t}</b><div class="text-xs dim">${s}</div></div>${icon('chevron-right',14)}</a>`).join('')}
   </div>
@@ -278,7 +278,7 @@ ${progress(40,'grad')}
   ${badge('In progress','info')}<span class="mono text-xs dim">40% complete</span><span class="dim">·</span>
   <span class="text-sm">Next: <b>Mid-project payment</b></span><span class="mono text-sm muted">₹20,880.00</span>
   <div class="ml-auto flex gap-2">
-    <a class="btn btn-primary btn-sm" href="${LT(r,'apps/web/payments/[id]/')}">Pay now</a>
+    <a class="btn btn-primary btn-sm" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}">Pay now</a>
     <a class="btn btn-secondary btn-sm" href="${LT(r,'apps/web/messages/thread/[threadId]/')}">${icon('message',13)} Message</a>
     <button class="btn btn-primary btn-sm">View milestones</button>
   </div>

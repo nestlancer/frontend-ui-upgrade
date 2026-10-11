@@ -47,42 +47,37 @@
 <main id="main" class="content">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
 <div class="flex items-start justify-between flex-wrap gap-3 mb-2 mt-4">
-  <div><h1 class="ptitle">Payment details</h1><p class="psub">Review this payment and related documents.</p></div>
-  <span class="badge tone-success">Completed</span>
+  <div><h1 class="ptitle">Payment details</h1><p class="psub">Payment has been requested. Proceed to secure checkout to complete it.</p></div>
+  <span class="badge tone-warning">Pending</span>
 </div>
 <div class="grid gap-5 mt-5" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="flex-col gap-5">
     <div class="panel" style="border-top:3px solid var(--brand-9)"><div class="panel-body">
       <div class="eyebrow">Order summary</div>
       <div class="flex items-start justify-between mt-2 mb-4">
-        <div><b class="h3" style="font-size:17px">Corporate LMS for 200 Employees</b><div class="text-sm muted mt-1">Deposit</div></div>
-        <span class="badge tone-success">Paid</span>
+        <div><b class="h3" style="font-size:17px">Corporate LMS for 200 Employees</b><div class="text-sm muted mt-1">Mid-project payment</div></div>
+        <span class="badge tone-warning">Pending</span>
       </div>
-      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹15,660.00</span></div>
-      <dl class="kv"><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd><span class="mono">01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2</span></dd><dt>Created</dt><dd>10/5/2026, 3:47:22 AM</dd></dl>
-      <div class="mt-4 text-sm" style="padding:14px 16px;border-radius:10px;background:var(--t-success-bg);color:var(--t-success-tx)">This payment has been recorded. Download your receipt or invoice below.</div>
+      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹19,200.00</span></div>
+      <dl class="kv"><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd><span class="mono">01a10a2c-2d0e-7499-b769-967d17a42197</span></dd><dt>Created</dt><dd>10/5/2026, 3:47:09 AM</dd></dl>
+      <div class="mt-4" style="padding:14px 16px;border-radius:10px;background:var(--t-warning-bg, #fff7e6);color:var(--t-warning-tx)"><b class="text-sm">Pending checkout</b><div class="text-sm mt-1">This payment is awaiting Razorpay checkout. Proceed to secure checkout or cancel the pending payment.</div></div>
     </div></div>
-    
-<div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Billing documents</div><div class="panel-sub">Download the latest invoice or receipt for this payment.</div></div></div>
-  <div class="panel-body"><div class="flex gap-3 flex-wrap"><button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download invoice</button><button class="btn btn-secondary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download receipt</button></div></div>
-  
-</div>
+    <div class="flex gap-3"><button class="btn btn-primary">Proceed to secure checkout</button><button class="btn btn-secondary" style="color:var(--t-danger-tx)">Cancel pending payment</button></div>
   </div>
   <div class="flex-col gap-5">
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><div class="panel-title">Status</div></div></div>
-  <div class="panel-body"><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Created</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Pending</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Processing</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:transparent"></span><div><b class="text-sm ">Completed</b><div class="text-xs dim">Current: Completed</div></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Refunded</b></div></div></div>
+  <div class="panel-body"><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Created</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:transparent"></span><div><b class="text-sm ">Pending</b><div class="text-xs dim">Current: Pending</div></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Processing</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Completed</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Refunded</b></div></div><button class="btn w-full mt-2" style="color:var(--t-danger-tx)">Cancel pending payment</button></div>
   
 </div>
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><div class="panel-title">Payment details</div></div></div>
-  <div class="panel-body"><dl class="kv"><dt>Payment ID</dt><dd><span class="mono" style="font-size:11px">01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2</span></dd><dt>Project</dt><dd><a class="link" href="../../projects/[id]/index.html">Corporate LMS for 200 Employees</a></dd><dt>Created</dt><dd><span class="mono" style="font-size:11.5px">10/5/2026, 3:47:22 AM</span></dd></dl></div>
+  <div class="panel-body"><dl class="kv"><dt>Payment ID</dt><dd><span class="mono" style="font-size:11px">01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5</span></dd><dt>Project</dt><dd><a class="link" href="../../projects/[id]/index.html">Corporate LMS for 200 Employees</a></dd><dt>Created</dt><dd><span class="mono" style="font-size:11.5px">10/5/2026, 3:47:22 AM</span></dd></dl></div>
   
 </div>
-    <a class="link" href="#">File a payment dispute</a>
+    
   </div>
 </div></main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>

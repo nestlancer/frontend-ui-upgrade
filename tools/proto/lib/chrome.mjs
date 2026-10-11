@@ -48,7 +48,7 @@ function fab(route, hint) {
   <a class="fx" href="${L('apps/web/login/index.html')}">${icon('logIn', 15)} Client sign-in</a>
   <a class="fx" href="${L('apps/admin/login/index.html')}">${icon('shield', 15)} Operator sign-in</a>
   <a class="fx" href="${L('apps/web/quotes/[id]/index.html')}">${icon('receipt', 15)} Quote — sign &amp; accept</a>
-  <a class="fx" href="${L('apps/web/payments/[id]/index.html')}">${icon('card', 15)} Checkout — pay milestone</a>
+  <a class="fx" href="${L('apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html')}">${icon('card', 15)} Checkout — pay milestone</a>
   <div class="fab-sep"></div>
   <button class="fx" data-theme-toggle>${icon('sun', 15)} <span>Theme</span> <small data-theme-label>Light</small></button>
 </div></div>`;
