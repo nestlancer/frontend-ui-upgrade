@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-density="compact">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Command Center · Nestlancer Operator Console</title>
+  <link rel="stylesheet" href="tokens.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app-shell">
+    <!-- ====================================================================
+         ADMIN OPERATOR SIDEBAR (232px Locked — Identical Geometry to Portal)
+         Fixes overlapping "OPERATOR CONSOLE" logo collision from 015-dashboard
+         ==================================================================== -->
+    <aside class="app-sidebar" aria-label="Operator Console Navigation">
+      <div class="sidebar-header">
+        <a href="08-admin-dashboard.html" class="brand-logo">
+          <span class="brand-logo-mark" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </span>
+          <span>Nestlancer<span class="brand-logo-dot">.</span></span>
+        </a>
+        <span class="brand-surface-tag">Admin</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section">
+          <div class="sidebar-section-label">Operations</div>
+          <a href="08-admin-dashboard.html" class="nav-item active" aria-current="page">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+              <span>Dashboard</span>
+            </span>
+          </a>
+          <a href="19-admin-user-detail.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+              <span>Pipelines</span>
+            </span>
+          </a>
+          <a href="12-marketing-contact.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Inquiries</span>
+            </span>
+            <span class="nav-count">17</span>
+          </a>
+          <a href="08-admin-dashboard.html#recent-requests" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Requests</span>
+            </span>
+            <span class="nav-count">11</span>
+          </a>
+          <a href="20-admin-payments-ops.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/></svg>
+              <span>Quotes</span>
+            </span>
+            <span class="nav-count">7</span>
+          </a>
+          <a href="20-admin-payments-ops.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span>Projects</span>
+            </span>
+            <span class="nav-count">4</span>
+          </a>
+          <a href="20-admin-payments-ops.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              <span>Payments</span>
+            </span>
+            <span class="nav-count">16</span>
+          </a>
+          <a href="18-admin-users-list.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Users</span>
+            </span>
+            <span class="nav-count">34</span>
+          </a>
+          <a href="16-client-messages.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <span>Messages</span>
+            </span>
+            <span class="nav-count">21</span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-label">Content &amp; Media</div>
+          <a href="01-marketing-home.html#selected-work" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Portfolio</span>
+            </span>
+          </a>
+          <a href="13-public-trust-verify.html" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              <span>Media Library</span>
+            </span>
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-label">System</div>
+          <a href="19-admin-user-detail.html#audit-log" class="nav-item">
+            <span class="nav-item-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Audit Logs</span>
+            </span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-pill">
+          <span class="avatar">RK</span>
+          <div style="min-width: 0;">
+            <div class="text-xs font-semibold">Riya Kapoor</div>
+            <div class="mono text-xs text-muted" style="font-size:11px;">admin@nestlancer.com</div>
+          </div>
+        </div>
+        <a href="02-auth-login-register.html" class="btn btn-ghost btn-sm" title="Sign out" aria-label="Sign out">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ====================================================================
+         MAIN OPERATOR WORKSPACE
+         ==================================================================== -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="breadcrumbs">
+          <span>Operations</span>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-current">Command center</span>
+        </div>
+
+        <div class="topbar-actions">
+          <button type="button" class="cmd-trigger" data-modal-open="cmd-palette" aria-label="Open operator command palette">
+            <span class="flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Search users, quotes, payments, routes...</span>
+            </span>
+            <kbd class="kbd">⌘K</kbd>
+          </button>
+
+          <button type="button" class="btn btn-ghost btn-sm" data-density-toggle>
+            <span class="text-xs text-muted">Density:</span>
+            <span data-density-label class="font-medium">Compact</span>
+          </button>
+
+          <button type="button" class="btn btn-ghost btn-sm" data-theme-toggle>
+            <span data-theme-label>Light</span>
+          </button>
+
+          <span class="status-badge tone-success">System healthy</span>
+        </div>
+      </header>
+
+      <main id="main-content" class="app-content">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="page-header-copy">
+            <div class="page-eyebrow">
+              <span>STUDIO OPERATIONS</span>
+              <span>·</span>
+              <span class="mono">SEP 11 – OCT 11, 2026 (30D WINDOW)</span>
+            </div>
+            <h1 class="page-title">Command center</h1>
+            <p class="page-subtitle">
+              Live studio revenue, intake triage queues, and milestone settlement status — refreshed every 30s.
+            </p>
+          </div>
+
+          <div class="page-actions">
+            <div class="segmented-control" role="group" aria-label="Time window">
+              <button type="button" class="seg-btn">7 days</button>
+              <button type="button" class="seg-btn active">30 days</button>
+              <button type="button" class="seg-btn">90 days</button>
+              <button type="button" class="seg-btn">1 year</button>
+            </div>
+            <a href="19-admin-user-detail.html" class="btn btn-secondary">Pipelines</a>
+            <a href="20-admin-payments-ops.html" class="btn btn-primary">Open Payments Ops →</a>
+          </div>
+        </div>
+
+        <!-- Needs Attention Action Strip (Compact Linear-style Triage Bar) -->
+        <section class="panel" style="padding: var(--space-3) var(--card-p);" aria-label="Queues needing attention">
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div class="flex items-center gap-2">
+              <span class="status-badge tone-warning">Needs attention</span>
+              <span class="text-xs text-muted">Active queues requiring operator action today:</span>
+            </div>
+
+            <div class="flex items-center gap-4 flex-wrap">
+              <a href="#recent-requests" class="flex items-center gap-2 text-xs" style="color: var(--neutral-12);">
+                <span class="text-muted">Pending requests</span>
+                <strong class="mono font-semibold" style="padding: 1px 6px; background: var(--status-warning-bg); color: var(--status-warning-text); border-radius: 4px;">11</strong>
+              </a>
+              <a href="20-admin-payments-ops.html" class="flex items-center gap-2 text-xs" style="color: var(--neutral-12);">
+                <span class="text-muted">Open quotes</span>
+                <strong class="mono font-semibold" style="padding: 1px 6px; background: var(--status-info-bg); color: var(--status-info-text); border-radius: 4px;">7</strong>
+              </a>
+              <a href="20-admin-payments-ops.html" class="flex items-center gap-2 text-xs" style="color: var(--neutral-12);">
+                <span class="text-muted">Pending payments</span>
+                <strong class="mono font-semibold" style="padding: 1px 6px; background: var(--status-warning-bg); color: var(--status-warning-text); border-radius: 4px;">16</strong>
+              </a>
+              <a href="20-admin-payments-ops.html" class="flex items-center gap-2 text-xs" style="color: var(--neutral-12);">
+                <span class="text-muted">UTR verification</span>
+                <strong class="mono font-semibold" style="padding: 1px 6px; background: var(--status-warning-bg); color: var(--status-warning-text); border-radius: 4px;">3</strong>
+              </a>
+              <a href="12-marketing-contact.html" class="flex items-center gap-2 text-xs" style="color: var(--neutral-12);">
+                <span class="text-muted">Contact inquiries</span>
+                <strong class="mono font-semibold" style="padding: 1px 6px; background: var(--neutral-3); border-radius: 4px;">17</strong>
+              </a>
+              <span class="flex items-center gap-2 text-xs text-muted">
+                <span>Flagged msgs</span>
+                <strong class="mono">0</strong>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 30-Day Period KPI Strip (Replaces 6x Repeated "↑ new" Spam) -->
+        <section aria-label="30-Day Studio Metrics" class="kpi-strip">
+          <div class="kpi-cell">
+            <span class="kpi-label">Collected revenue (30d)</span>
+            <span class="kpi-value">₹7,08,160.00</span>
+            <span class="kpi-meta"><span class="mono">₹2,60,790.00</span> outstanding</span>
+          </div>
+
+          <div class="kpi-cell">
+            <span class="kpi-label">Accepted quote volume</span>
+            <span class="kpi-value">₹9,68,950.00</span>
+            <span class="kpi-meta"><span class="text-brand font-medium">50.0%</span> acceptance (18/36)</span>
+          </div>
+
+          <div class="kpi-cell">
+            <span class="kpi-label">Active projects</span>
+            <span class="kpi-value">4</span>
+            <span class="kpi-meta">10 completed · 28% capacity</span>
+          </div>
+
+          <div class="kpi-cell">
+            <span class="kpi-label">Registered clients</span>
+            <span class="kpi-value">34</span>
+            <span class="kpi-meta">34 active · 0 suspended</span>
+          </div>
+
+          <div class="kpi-cell">
+            <span class="kpi-label">Inbound conversion</span>
+            <span class="kpi-value">43.9%</span>
+            <span class="kpi-meta">46 total briefs · &lt; 2h SLA</span>
+          </div>
+        </section>
+
+        <!-- Charts Row: Revenue Trajectory + Project Lifecycle Mix (B5: Recharts-like Restraint) -->
+        <div class="split-main-aside">
+          <!-- Left: Revenue Trajectory & Settlement Volume SVG Chart -->
+          <section class="panel" aria-labelledby="rev-chart-title">
+            <div class="panel-header">
+              <div>
+                <h2 id="rev-chart-title" class="panel-title">Revenue &amp; milestone settlements trajectory</h2>
+                <p class="panel-subtitle">Captured Razorpay &amp; verified NEFT/UPI settlements across 30-day window (INR).</p>
+              </div>
+              <div class="flex items-center gap-4 text-xs">
+                <span class="flex items-center gap-1"><span style="width:8px; height:8px; border-radius:2px; background:var(--chart-1); display:inline-block;"></span> Settled (₹7.08L)</span>
+                <span class="flex items-center gap-1"><span style="width:8px; height:8px; border-radius:2px; background:var(--chart-4); display:inline-block;"></span> Invoiced / Due (₹2.60L)</span>
+              </div>
+            </div>
+            <div class="panel-body">
+              <svg viewBox="0 0 720 210" width="100%" height="210" role="img" aria-label="30-day revenue trajectory chart showing ₹7,08,160 collected">
+                <!-- Horizontal Grid Lines -->
+                <line x1="56" y1="20" x2="704" y2="20" stroke="var(--chart-grid)" stroke-dasharray="3 3" />
+                <line x1="56" y1="65" x2="704" y2="65" stroke="var(--chart-grid)" stroke-dasharray="3 3" />
+                <line x1="56" y1="110" x2="704" y2="110" stroke="var(--chart-grid)" stroke-dasharray="3 3" />
+                <line x1="56" y1="155" x2="704" y2="155" stroke="var(--chart-grid)" stroke-dasharray="3 3" />
+                <line x1="56" y1="180" x2="704" y2="180" stroke="var(--neutral-6)" />
+
+                <!-- Y-Axis Labels (Tabular Mono) -->
+                <text x="48" y="24" text-anchor="end" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">₹2.5L</text>
+                <text x="48" y="69" text-anchor="end" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">₹1.8L</text>
+                <text x="48" y="114" text-anchor="end" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">₹1.2L</text>
+                <text x="48" y="159" text-anchor="end" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">₹60K</text>
+                <text x="48" y="183" text-anchor="end" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">₹0</text>
+
+                <!-- Area Under Curve -->
+                <path d="M70,162 L140,148 L210,132 L280,140 L350,98 L420,112 L490,68 L560,44 L630,58 L690,28 L690,180 L70,180 Z" fill="var(--brand-3)" opacity="0.55" />
+
+                <!-- Pending / Invoiced Dashed Line -->
+                <polyline fill="none" stroke="var(--chart-4)" stroke-width="1.75" stroke-dasharray="4 4" points="70,170 140,160 210,150 280,146 350,126 420,130 490,104 560,92 630,86 690,74" />
+
+                <!-- Primary Settled Revenue Line -->
+                <polyline fill="none" stroke="var(--chart-1)" stroke-width="2.25" points="70,162 140,148 210,132 280,140 350,98 420,112 490,68 560,44 630,58 690,28" />
+
+                <!-- Data Points -->
+                <circle cx="350" cy="98" r="3.5" fill="var(--surface-elevated)" stroke="var(--chart-1)" stroke-width="2" />
+                <circle cx="490" cy="68" r="3.5" fill="var(--surface-elevated)" stroke="var(--chart-1)" stroke-width="2" />
+                <circle cx="560" cy="44" r="3.5" fill="var(--surface-elevated)" stroke="var(--chart-1)" stroke-width="2" />
+                <circle cx="690" cy="28" r="4" fill="var(--chart-1)" />
+
+                <!-- X-Axis Dates -->
+                <text x="70" y="198" text-anchor="middle" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">Sep 12</text>
+                <text x="210" y="198" text-anchor="middle" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">Sep 19</text>
+                <text x="350" y="198" text-anchor="middle" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">Sep 26</text>
+                <text x="490" y="198" text-anchor="middle" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">Oct 03</text>
+                <text x="690" y="198" text-anchor="end" fill="var(--chart-axis)" font-family="Geist Mono, monospace" font-size="10">Oct 10</text>
+              </svg>
+            </div>
+            <div class="panel-footer">
+              <span class="mono text-xs text-muted">18 projects with active billing · Avg milestone ticket ₹39,342.00</span>
+              <a href="20-admin-payments-ops.html" class="text-xs font-medium text-brand">Open reconciliation ledger →</a>
+            </div>
+          </section>
+
+          <!-- Right: Project Mix & Moderation Queues -->
+          <div class="flex-col gap-5">
+            <section class="panel" aria-labelledby="mix-title">
+              <div class="panel-header">
+                <div>
+                  <h2 id="mix-title" class="panel-title">Project lifecycle mix</h2>
+                  <p class="panel-subtitle">17 total engagements</p>
+                </div>
+                <span class="mono text-xs text-muted">28% load</span>
+              </div>
+              <div class="panel-body">
+                <!-- Stacked Proportion Bar -->
+                <div style="display: flex; height: 10px; border-radius: 4px; overflow: hidden; gap: 2px; margin-bottom: var(--space-4);">
+                  <div style="width: 24%; background: var(--chart-2);" title="In Progress: 24%"></div>
+                  <div style="width: 18%; background: var(--chart-4);" title="Pending Payment: 18%"></div>
+                  <div style="width: 58%; background: var(--chart-1);" title="Completed: 58%"></div>
+                </div>
+
+                <div class="key-value-list">
+                  <div class="kv-row">
+                    <span class="flex items-center gap-2 text-xs"><span style="width:8px; height:8px; border-radius:50%; background:var(--chart-2);"></span> In Progress</span>
+                    <span class="mono text-xs font-semibold">4 · 24%</span>
+                  </div>
+                  <div class="kv-row">
+                    <span class="flex items-center gap-2 text-xs"><span style="width:8px; height:8px; border-radius:50%; background:var(--chart-4);"></span> Pending Payment</span>
+                    <span class="mono text-xs font-semibold">3 · 18%</span>
+                  </div>
+                  <div class="kv-row">
+                    <span class="flex items-center gap-2 text-xs"><span style="width:8px; height:8px; border-radius:50%; background:var(--chart-1);"></span> Completed</span>
+                    <span class="mono text-xs font-semibold">10 · 58%</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="mod-queue-title">
+              <div class="panel-header">
+                <h2 id="mod-queue-title" class="panel-title">Operations &amp; trust queues</h2>
+              </div>
+              <div class="panel-body">
+                <div class="key-value-list">
+                  <div class="kv-row">
+                    <span class="kv-key">Pending bank UTR verifications</span>
+                    <a href="20-admin-payments-ops.html" class="mono text-xs font-semibold text-brand">3 awaiting →</a>
+                  </div>
+                  <div class="kv-row">
+                    <span class="kv-key">Pending milestone settlements</span>
+                    <a href="20-admin-payments-ops.html" class="mono text-xs font-semibold">16 open →</a>
+                  </div>
+                  <div class="kv-row">
+                    <span class="kv-key">New website contact mail</span>
+                    <span class="mono text-xs font-semibold">17 unread</span>
+                  </div>
+                  <div class="kv-row">
+                    <span class="kv-key">Flagged messages / moderation</span>
+                    <span class="mono text-xs text-muted">0 flagged</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Dense Operational Tables Row (Fixes 3-Line Wrapped UUIDs & Clipped Dates!) -->
+        <div class="grid-2" id="recent-requests">
+          <!-- Left Table: Recent Inbound Requests -->
+          <section class="panel" aria-labelledby="recent-req-title">
+            <div class="panel-header">
+              <div>
+                <h2 id="recent-req-title" class="panel-title">Recent requests</h2>
+                <p class="panel-subtitle">Newest inbound client briefs requiring review or quoting.</p>
+              </div>
+              <a href="04-client-request-detail.html" class="btn btn-secondary btn-sm">View all (46) →</a>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Ref</th>
+                    <th>Client</th>
+                    <th>Brief Subject</th>
+                    <th>Status</th>
+                    <th class="col-actions">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mono text-xs text-muted" title="01a10a2c-530e-7354-b21b-f5ecdab54f7a">REQ-530E</td>
+                    <td>Priya Nair</td>
+                    <td class="font-medium">Corporate LMS for 200 Employees</td>
+                    <td><span class="status-badge tone-success">Converted</span></td>
+                    <td class="col-actions"><a href="04-client-request-detail.html" class="text-xs font-medium text-brand">Open →</a></td>
+                  </tr>
+                  <tr>
+                    <td class="mono text-xs text-muted" title="01a10a2c-1a04-75bb-8e80-fc143257fa02">REQ-1A04</td>
+                    <td>Ananya Iyer</td>
+                    <td class="font-medium">UPI Merchant Collections Mobile App</td>
+                    <td><span class="status-badge tone-info">Under review</span></td>
+                    <td class="col-actions"><a href="20-admin-payments-ops.html" class="text-xs font-medium text-brand">Quote →</a></td>
+                  </tr>
+                  <tr>
+                    <td class="mono text-xs text-muted" title="01a10a2c-8812-71c9-9b10-dc143257fa19">REQ-8812</td>
+                    <td>Rahul Desai</td>
+                    <td class="font-medium">Live Shipment Tracking Dashboard</td>
+                    <td><span class="status-badge tone-info">Under review</span></td>
+                    <td class="col-actions"><a href="20-admin-payments-ops.html" class="text-xs font-medium text-brand">Quote →</a></td>
+                  </tr>
+                  <tr>
+                    <td class="mono text-xs text-muted" title="01a10a2b-541d-7051-8f2d-e9b9e6ef21f5">REQ-541D</td>
+                    <td>Samira Patel</td>
+                    <td class="font-medium">Patel Digital Agency Website Redesign</td>
+                    <td><span class="status-badge tone-info">Submitted</span></td>
+                    <td class="col-actions"><a href="04-client-request-detail.html" class="text-xs font-medium text-brand">Review →</a></td>
+                  </tr>
+                  <tr>
+                    <td class="mono text-xs text-muted" title="01a10fa4-8fd5-712e-97d7-7d3d12f94976">REQ-8FD5</td>
+                    <td>Arjun Mehta</td>
+                    <td class="font-medium">Khandesh Spice D2C Storefront v2</td>
+                    <td><span class="status-badge tone-info">Submitted</span></td>
+                    <td class="col-actions"><a href="04-client-request-detail.html" class="text-xs font-medium text-brand">Review →</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Right Table: Recent Settlements (Fixes Clipped Date Column!) -->
+          <section class="panel" aria-labelledby="recent-pay-title">
+            <div class="panel-header">
+              <div>
+                <h2 id="recent-pay-title" class="panel-title">Recent payments</h2>
+                <p class="panel-subtitle">16 pending · ₹2,60,790.00 awaiting collection.</p>
+              </div>
+              <a href="20-admin-payments-ops.html" class="btn btn-secondary btn-sm">View all →</a>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Project</th>
+                    <th class="col-num">Amount</th>
+                    <th>Status</th>
+                    <th class="col-num">Settled</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Karthik Menon</td>
+                    <td class="font-medium">UPI Switch Integration Layer</td>
+                    <td class="col-num font-semibold">₹36,000.00</td>
+                    <td><span class="status-badge tone-success">Paid</span></td>
+                    <td class="col-num text-xs text-muted">Oct 5, 2026</td>
+                  </tr>
+                  <tr>
+                    <td>Pooja Kulkarni</td>
+                    <td class="font-medium">Multi-Branch Clinic Booking</td>
+                    <td class="col-num font-semibold">₹26,000.00</td>
+                    <td><span class="status-badge tone-success">Paid</span></td>
+                    <td class="col-num text-xs text-muted">Oct 5, 2026</td>
+                  </tr>
+                  <tr>
+                    <td>Sandeep Chopra</td>
+                    <td class="font-medium">GPS Fleet Tracking Portal</td>
+                    <td class="col-num font-semibold">₹21,600.00</td>
+                    <td><span class="status-badge tone-success">Paid</span></td>
+                    <td class="col-num text-xs text-muted">Oct 5, 2026</td>
+                  </tr>
+                  <tr>
+                    <td>Priya Nair</td>
+                    <td class="font-medium">Corporate LMS for 200 Employees</td>
+                    <td class="col-num font-semibold">₹20,880.00</td>
+                    <td><span class="status-badge tone-warning">Pending</span></td>
+                    <td class="col-num text-xs text-muted">Due now</td>
+                  </tr>
+                  <tr>
+                    <td>Arjun Mehta</td>
+                    <td class="font-medium">Khandesh Spice D2C Store</td>
+                    <td class="col-num font-semibold">₹30,000.00</td>
+                    <td><span class="status-badge tone-warning">Verify UTR</span></td>
+                    <td class="col-num text-xs text-muted">Submitted</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Admin Global Search / Command Palette Modal (⌘K — Matches 072-global-search-admin-dialog) -->
+  <div id="cmd-palette" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Operator command palette">
+    <div class="modal-dialog">
+      <div style="padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--neutral-6); display: flex; align-items: center; gap: var(--space-3);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--neutral-9)" stroke-width="1.75"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="input" placeholder="Jump to operator console, client user, quote builder, or payment ID..." style="border:none; box-shadow:none; padding:0; height:28px;" />
+        <button type="button" class="kbd" data-modal-close style="cursor:pointer;">ESC</button>
+      </div>
+      <div style="padding: var(--space-3); max-height: 360px; overflow-y: auto;" class="flex-col gap-3">
+        <div>
+          <div class="sidebar-section-label">Operator Consoles</div>
+          <a href="18-admin-users-list.html" class="nav-item"><span class="nav-item-left">Users Directory (34 clients)</span><kbd class="kbd">G U</kbd></a>
+          <a href="19-admin-user-detail.html" class="nav-item"><span class="nav-item-left">User Detail &amp; Pipeline — Arjun Mehta</span><kbd class="kbd">G P</kbd></a>
+          <a href="20-admin-payments-ops.html" class="nav-item"><span class="nav-item-left">Payments, UTR Verification &amp; Quote Builder</span><kbd class="kbd">G B</kbd></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="ui.js"></script>
+</body>
+</html>
