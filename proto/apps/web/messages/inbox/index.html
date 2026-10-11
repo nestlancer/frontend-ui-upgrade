@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nestlancer web prototype — Messaging panel · Nestlancer">
+<title>Messaging panel · Nestlancer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../../../shared/assets/proto.css">
+</head>
+<body class="">
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="shell">
+<aside class="sidebar" aria-label="Client workspace navigation">
+<div class="sb-head">
+  <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
+  <path d="M4 20c6-3 12-3 24-7.5-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.5-15-2.5Z" fill="#32998C" opacity=".85"/>
+  <path d="M4 26.5c6-3 12-3 24-6.5-1 3.5-4 6.5-8 7.8-3.8 1.1-9-.2-16-1.3Z" fill="#86D0C6" opacity=".8"/>
+</svg><span>Nestlancer<span class="tld">.</span></span></a>
+  
+</div>
+<nav class="sb-nav"><div class="sb-section"><div class="sb-label"><span>Main</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><a class="sb-item" href="../../dashboard/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></span></a><a class="sb-item" href="../../requests/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><span>Requests</span></span></a><a class="sb-item" href="../../projects/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><span>Projects</span></span></a><a class="sb-item" href="../../quotes/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg><span>Quotes</span></span></a><a class="sb-item active" href="../index.html" aria-current="page">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Messages</span></span><span class="sb-count">6</span></a><a class="sb-item" href="../../payments/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span>Billing</span></span></a><a class="sb-item" href="../../invoices/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg><span>Invoices</span></span></a><a class="sb-item" href="../../notifications/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span>Notifications</span></span></a></div><div class="sb-section"><div class="sb-label"><span>Explore</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><a class="sb-item" href="../../blog/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg><span>Blog</span></span></a><a class="sb-item" href="../../portfolio/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9.2" cy="9.2" r="1.4"/><path d="M8 19l3-3.5a1.2 1.2 0 011.8-.1L20 10l0 9H8z"/></svg><span>Portfolio</span></span></a></div><div class="sb-section"><div class="sb-label"><span>Account</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><a class="sb-item" href="../../profile/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Profile</span></span></a><a class="sb-item" href="../../settings/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg><span>Settings</span></span></a></div></nav>
+</aside>
+<div class="main">
+<header class="topbar">
+  <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Inbox</b></nav>
+  <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
+    <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+    <a class="icobtn" href="./index.html" title="Messages"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span class="bdg">9</span></a>
+    <a class="icobtn" href="../../notifications/index.html" title="Notifications"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span class="bdg">32</span></a>
+    <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
+</header>
+<main id="main" class="content">
+<div class="phead">
+<div class="min-w-0">
+  <div class="eyebrow"><span class="dot"></span>SUPPORT</div>
+  <h1 class="ptitle">Messaging panel</h1>
+  <p class="psub">Triage on the left, the open thread on the right. Your delivery lead reads everything here.</p>
+</div>
+<div class="phead-actions"><a class="btn btn-secondary btn-sm" href="../index.html">Inbox health</a><a class="btn btn-primary btn-sm" href="../new/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New message</a></div>
+</div>
+
+<div class="chat-grid pane3" style="margin-top:4px">
+  
+<div class="chat-col">
+  <div class="chat-head"><b style="font-size:13px">Mailbox</b><button class="btn-icon btn sm" title="Compose"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg></button></div>
+  
+  <a class="conv" href="./index.html" style="background:var(--brand-1);box-shadow:inset 2.5px 0 0 var(--brand-9)">
+    <span style="color:var(--ink-3);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span><div class="flex-1"><div class="t">Inbox</div></div><span class="sb-count">6</span>
+  </a>
+  <a class="conv" href="../threads/index.html" style="">
+    <span style="color:var(--ink-3);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><div class="flex-1"><div class="t">Threads</div></div><span class="sb-count">2</span>
+  </a>
+  <a class="conv" href="../archived/index.html" style="">
+    <span style="color:var(--ink-3);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg></span><div class="flex-1"><div class="t">Archived</div></div>
+  </a>
+  <div class="p-3">
+    <a class="btn btn-primary btn-sm w-full" href="../new/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New message</a>
+    <a class="btn btn-ghost btn-sm w-full mt-2" href="../new/direct/index.html">New direct</a>
+  </div>
+</div>
+  
+<div class="chat-col">
+  <div class="chat-head"><div class="input-wrap grow"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input sm" placeholder="Search conversations…"></div></div>
+  
+<div class="conv">
+  <span class="avatar hue-1 lg">PO</span>
+  <div class="flex-1 min-w-0">
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Payments ops — Razorpay settlement and webhooks <span class="badge tone-info no-dot" style="height:16px;padding:0 5px;font-size:9px">GROUP</span></div><span class="tm">5 days ago</span></div>
+    <div class="s">I'll post the shared retry checklist here after tomorrow's reconciliation review. Production changes still go through each project milestone.</div>
+  </div>
+  <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
+</div>
+<div class="conv active">
+  <span class="avatar hue-2 lg">RK</span>
+  <div class="flex-1 min-w-0">
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Riya Kapoor <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:9px">DIRECT</span></div><span class="tm">5 days ago</span></div>
+    <div class="s">Thanks. Our finance team confirmed the duplicate NEFT on their end too. Replay UI remains the priority for month-end.</div>
+  </div>
+  
+</div>
+<div class="conv">
+  <span class="avatar hue-4 lg">LD</span>
+  <div class="flex-1 min-w-0">
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">LMS delivery — NL-204 <span class="badge tone-info no-dot" style="height:16px;padding:0 5px;font-size:9px">GROUP</span></div><span class="tm">2 days ago</span></div>
+    <div class="s">Quiz engine thresholds deployed to staging. Two question types pending copy review.</div>
+  </div>
+  <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
+</div>
+<div class="conv">
+  <span class="avatar hue-3 lg">SA</span>
+  <div class="flex-1 min-w-0">
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Studio announcements <span class="badge tone-info no-dot" style="height:16px;padding:0 5px;font-size:9px">GROUP</span></div><span class="tm">Oct 4</span></div>
+    <div class="s">Scheduled maintenance Sun 02:00–03:30 IST. Read-only mode expected for 20 minutes.</div>
+  </div>
+  
+</div>
+</div>
+  
+<div class="chat-col flex-col" style="display:flex">
+  <div class="chat-head" style="padding:12px 16px">
+    <div class="flex items-center gap-3 min-w-0">
+      <div class="min-w-0"><b class="block truncate" style="font-size:13.5px">Riya Kapoor</b><div class="text-xs dim"><i class="dot" style="background:var(--t-success-dot);display:inline-block;margin-right:4px"></i>Online · replies under 2h</div></div>
+    </div>
+    <div class="flex gap-1"><button class="btn-icon btn sm" title="Details"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></button><button class="btn-icon btn sm" title="More"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div>
+  </div>
+  <div class="grow" style="overflow-y:auto;padding-bottom:14px">
+    <div class="msg-day"><span>Oct 5, 2026</span></div>
+    
+<div class="msg-row">
+  <span class="avatar hue-2 ">RK</span>
+  <div class="min-w-0" style="max-width:100%">
+    <div class="bubble">Good morning Ananya — finance confirmed the duplicate NEFT on their end as well. Reversal reference is in the thread from Tuesday.</div>
+    <div class="msg-meta">Riya Kapoor · 9:41 AM</div>
+  </div>
+</div>
+<div class="msg-row me">
+  
+  <div class="min-w-0" style="max-width:100%">
+    <div class="bubble">Perfect. Will the settlement slip reflect it before month-end reconciliation?</div>
+    <div class="msg-meta text-right">You · 9:44 AM</div>
+  </div>
+</div>
+<div class="msg-row">
+  <span class="avatar hue-2 ">RK</span>
+  <div class="min-w-0" style="max-width:100%">
+    <div class="bubble">Yes — replay UI remains the priority for month-end, and the slip regenerates tonight. You will see both entries marked clearly.</div>
+    <div class="msg-meta">Riya Kapoor · 9:46 AM</div>
+  </div>
+</div>
+<div class="msg-row">
+  <span class="avatar hue-2 ">RK</span>
+  <div class="min-w-0" style="max-width:100%">
+    <div class="bubble">Sharing the retry checklist PDF here once the review closes tomorrow.</div>
+    <div class="msg-meta">Riya Kapoor · 9:47 AM</div>
+  </div>
+</div>
+  </div>
+  
+<div class="composer">
+  <button class="btn btn-ghost btn-icon" title="Attach"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg></button>
+  <textarea class="textarea flex-1" rows="1" placeholder="Reply… (Enter to send, Shift+Enter for newline)"></textarea>
+  <button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><span>Send</span></button>
+</div>
+</div>
+</div></main>
+<footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
+</div></div>
+<div class="fab" id="fab">
+<button class="fab-btn" onclick="document.getElementById('fab').classList.toggle('open')" aria-label="Prototype menu"><i class="dot"></i><span>Prototype</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button>
+<div class="fab-menu">
+  <div class="fab-lab">Jump to surface</div>
+  <a class="fx" href="../../../../index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg> Sign-off hub <small>hub</small></a>
+  <a class="fx" href="../../../landing/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Marketing — nestlancer.com <small>9020</small></a>
+  <a class="fx" href="../../index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Public app — app.nestlancer.com <small>9000</small></a>
+  <a class="fx" href="../../dashboard/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg> Client portal <small>web</small></a>
+  <a class="fx" href="../../../admin/dashboard/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg> Admin console <small>admin</small></a>
+  <div class="fab-sep"></div>
+  <div class="fab-lab">Quick states</div>
+  <a class="fx" href="../../login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Client sign-in</a>
+  <a class="fx" href="../../../admin/login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Operator sign-in</a>
+  <a class="fx" href="../../quotes/[id]/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg> Quote — sign &amp; accept</a>
+  <a class="fx" href="../../payments/[id]/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Checkout — pay milestone</a>
+  <div class="fab-sep"></div>
+  <button class="fx" data-theme-toggle><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> <span>Theme</span> <small data-theme-label>Light</small></button>
+</div></div>
+<script src="../../../../shared/assets/ui.js" defer></script>
+</body>
+</html>
