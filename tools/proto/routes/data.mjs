@@ -19,40 +19,36 @@ export const CLIENTS = [
   { name: 'Sandeep Chopra', company: 'Chopra Fleet Logistics', city: 'Chandigarh', email: 'sandeep.chopra@nestlancer.com' },
 ];
 
+// VERIFIED against https://app.nestlancer.com/blog (page 1 of 7, "All articles" = 110)
+// and the Blog article page. Read time = "N min read". Views as shown on the listing.
 export const POSTS = [
-  { slug: 'cutting-deploy-time-from-45-minutes-to-five', t: 'Cutting Deploy Time from 45 Minutes to Five', cat: 'Case Studies', min: 8, excerpt: 'CI caching, smaller build artifacts, and service-level pipelines after the monolith split.', featured: true, views: '4 views' },
-  { slug: 'scaling-a-freelance-marketplace-architecture', t: 'Scaling a Freelance Marketplace Architecture', cat: 'Case Studies', min: 7, excerpt: 'Matching algorithms, escrow flows, and dispute resolution at growing GMV.' },
-  { slug: 'gdpr-compliance-platform-rebuild', t: 'GDPR Compliance Platform Rebuild', cat: 'Case Studies', min: 2, excerpt: 'Data maps, deletion workflows, and consent logging across microservices.' },
-  { slug: 'migrating-from-websockets-to-sse', t: 'Migrating from WebSockets to SSE', cat: 'Case Studies', min: 2, excerpt: 'Simpler infra, CDN friendliness, and trade-offs for one-way realtime feeds.' },
-  { slug: 'elasticsearch-migration-for-search-features', t: 'Elasticsearch Migration for Search Features', cat: 'Case Studies', min: 2, excerpt: 'Reindex strategies, zero-downtime aliases, and relevance tuning.' },
-  { slug: 'api-versioning-without-breaking-mobile-clients', t: 'API Versioning Without Breaking Mobile Clients', cat: 'Case Studies', min: 2, excerpt: 'Sunset headers, parallel versions, and contract tests with consumer teams.' },
-  { slug: 'multi-region-deployment-case-study', t: 'Multi-Region Deployment Case Study', cat: 'Case Studies', min: 2, excerpt: 'Latency goals, data residency, and failover drills across EU and US.' },
-  { slug: 'event-sourcing-for-order-management', t: 'Event Sourcing for Order Management', cat: 'Case Studies', min: 2, excerpt: 'Auditability wins, projection rebuilds, and complexity caution in production.' },
-  { slug: 'kubernetes-migration-cost-analysis', t: 'Kubernetes Migration Cost Analysis', cat: 'Case Studies', min: 3, excerpt: 'Real infra bills, engineer time, and when managed services beat self-hosted clusters.' },
-  { slug: 'building-an-incident-response-culture', t: 'Building an Incident Response Culture', cat: 'Case Studies', min: 2, excerpt: 'Blameless postmortems, severity definitions, and action-item tracking.' },
-  { slug: 'splitting-a-monorepo-into-microservices', t: 'Splitting a Monorepo into Microservices', cat: 'Case Studies', min: 2, excerpt: 'Repository boundaries, CI pipelines, and contract tests during extraction.' },
-  { slug: 'legacy-php-to-nestjs-migration-story', t: 'Legacy PHP to NestJS Migration Story', cat: 'Case Studies', min: 2, excerpt: 'Strangling admin APIs first, shared database phase, and team retraining.' },
-  { slug: 'saas-metrics-every-founder-must-track', t: 'SaaS Metrics Every Founder Must Track', cat: 'Business', min: 4, excerpt: 'MRR, NRR, CAC payback, and the dashboards that keep a studio honest.' },
-  { slug: 'market-research-for-freelance-niches', t: 'Market Research for Freelance Niches', cat: 'Business', min: 5, excerpt: 'Find a defensible niche before you write a single proposal.' },
-  { slug: 'building-lean-ai-native-startup-teams', t: 'Building Lean AI-Native Startup Teams', cat: 'Business', min: 6, excerpt: 'Hiring pods around AI-augmented workflows without drowning in tooling.' },
-  { slug: 'empty-state-ux-patterns-that-guide-users', t: 'Empty State UX Patterns That Guide Users', cat: 'Design', min: 1, excerpt: 'Zero-data screens that teach, not apologize.' },
-  { slug: 'wcag-2-2-accessibility-compliance-guide', t: 'WCAG 2.2 Accessibility Compliance Guide', cat: 'Design', min: 1, excerpt: 'New success criteria, focus appearance, and dragging movements explained.' },
-  { slug: 'secrets-management-with-infisical-and-vault', t: 'Secrets Management with Infisical and Vault Patterns', cat: 'Technology', min: 3, excerpt: 'Rotation, audit trails, and developer ergonomics for env secrets.' },
-  { slug: 'hardening-docker-compose-for-production', t: 'Hardening Docker Compose for Production-Like Dev', cat: 'Technology', min: 3, excerpt: 'Healthchecks, resource limits, and reproducible local stacks.' },
-  { slug: 'kubernetes-cost-optimization-in-2026', t: 'Kubernetes Cost Optimization in 2026', cat: 'Technology', min: 4, excerpt: 'Right-size requests, spot node pools, and kill zombie workloads.' },
-  { slug: 'reliable-notification-workers-at-scale', t: 'Reliable Notification Workers at Scale', cat: 'Case Studies', min: 4, excerpt: 'Retries, backoff, and idempotency for email + push fan-out.' },
-  { slug: 'netflix-seven-years-from-monolith-to-microservices', t: 'Netflix: Seven Years from Monolith to Microservices', cat: 'Case Studies', min: 5, excerpt: 'What a decade of migration teaches smaller teams today.' },
-  { slug: 'ai-first-development-workflows-2026', t: 'AI-First Development Workflows in 2026', cat: 'Technology', min: 4, excerpt: 'Agent-assisted code review, evals, and where humans stay in the loop.' },
-  { slug: 'building-production-ready-microservices', t: 'Building Production-Ready Microservices with NestJS', cat: 'Case Studies', min: 6, excerpt: 'Guards, interceptors, and the module boundaries that survive rewrites.' },
+  { slug: 'cutting-deploy-time-from-45-minutes-to-five', t: 'Cutting Deploy Time from 45 Minutes to Five', cat: 'Case Studies', min: 2, views: 4, featured: true, excerpt: 'CI caching, smaller artifacts, and service-level pipelines after monolith split.' },
+  { slug: 'scaling-a-freelance-marketplace-architecture', t: 'Scaling a Freelance Marketplace Architecture', cat: 'Case Studies', min: 3, views: 1, excerpt: 'Matching algorithms, escrow flows, and dispute resolution at growing GMV.' },
+  { slug: 'gdpr-compliance-platform-rebuild', t: 'GDPR Compliance Platform Rebuild', cat: 'Case Studies', min: 2, views: 1, excerpt: 'Data maps, deletion workflows, and consent logging across microservices.' },
+  { slug: 'migrating-from-websockets-to-sse', t: 'Migrating from WebSockets to SSE', cat: 'Case Studies', min: 2, views: 2, excerpt: 'Simpler infra, CDN friendliness, and trade-offs for one-way realtime feeds.' },
+  { slug: 'elasticsearch-migration-for-search-features', t: 'Elasticsearch Migration for Search Features', cat: 'Case Studies', min: 2, views: 1, excerpt: 'Reindex strategies, zero-downtime aliases, and relevance tuning.' },
+  { slug: 'api-versioning-without-breaking-mobile-clients', t: 'API Versioning Without Breaking Mobile Clients', cat: 'Case Studies', min: 2, views: 1, excerpt: 'Sunset headers, parallel versions, and contract tests with consumer teams.' },
+  { slug: 'multi-region-deployment-case-study', t: 'Multi-Region Deployment Case Study', cat: 'Case Studies', min: 2, views: 1, excerpt: 'Latency goals, data residency, and failover drills across EU and US.' },
+  { slug: 'event-sourcing-for-order-management', t: 'Event Sourcing for Order Management', cat: 'Case Studies', min: 3, views: 1, featured: true, excerpt: 'Auditability wins, projection rebuilds, and complexity costs in production.' },
+  { slug: 'kubernetes-migration-cost-analysis', t: 'Kubernetes Migration Cost Analysis', cat: 'Case Studies', min: 3, views: 1, featured: true, excerpt: 'Real infra bills, engineer time, and when managed services beat self-hosted clusters.' },
+  { slug: 'building-an-incident-response-culture', t: 'Building an Incident Response Culture', cat: 'Case Studies', min: 2, views: 2, excerpt: 'Blameless postmortems, severity definitions, and action item tracking.' },
+  { slug: 'splitting-a-monorepo-into-microservices', t: 'Splitting a Monorepo into Microservices', cat: 'Case Studies', min: 2, views: 1, excerpt: 'Repository boundaries, CI pipelines, and contract tests during extraction.' },
+  { slug: 'legacy-php-to-nestjs-migration-story', t: 'Legacy PHP to NestJS Migration Story', cat: 'Case Studies', min: 2, views: 1, excerpt: 'Strangling admin APIs first, shared database phase, and team retraining.' },
 ];
 
+// Category counts shown in the blog rail (verified): All 110 · Business 27 · Case Studies 26 · Design 27 · Technology 30
+export const BLOG_COUNTS = { all: 110, Business: 27, 'Case Studies': 26, Design: 27, Technology: 30 };
+
+// VERIFIED against https://app.nestlancer.com/portfolio (8 projects, 2026)
 export const WORKS = [
-  { id: 'fintech-payments-hub', t: 'Fintech Payments Hub', sector: 'Fintech', result: 'Settlement errors down 42% for a lending firm', v: 1, tags: ['Razorpay', 'UPI', 'Reconciliation'], dur: '14 weeks', year: '2026' },
-  { id: 'saas-analytics-platform', t: 'SaaS Analytics Platform', sector: 'SaaS', result: 'Real-time dashboards with custom report builders', v: 2, tags: ['ClickHouse', 'NestJS', 'Recharts'], dur: '11 weeks', year: '2026' },
-  { id: 'ecommerce-mobile-app', t: 'E-Commerce Mobile App', sector: 'Retail', result: '2.1× repeat purchase via personalized carts', v: 3, tags: ['React Native', 'Checkout', 'CRM'], dur: '12 weeks', year: '2025' },
-  { id: 'healthtech-telemedicine', t: 'HealthTech Telemedicine Platform', sector: 'HealthTech', result: 'HIPAA-style video consults for 3 clinic chains', v: 5, tags: ['WebRTC', 'Scheduling', 'EHR'], dur: '16 weeks', year: '2025' },
-  { id: 'logistics-fleet-portal', t: 'Logistics Fleet Portal', sector: 'Logistics', result: 'Live GPS tracking for 220 vehicles', v: 6, tags: ['Maps', 'WebSockets', 'Dispatch'], dur: '10 weeks', year: '2026' },
-  { id: 'edtech-lms', t: 'EdTech Corporate LMS', sector: 'Education', result: 'SCORM courses for 2,000 employees', v: 4, tags: ['Video', 'Quizzes', 'SAML SSO'], dur: '13 weeks', year: '2026' },
+  { id: 'b2b-portal-ux', t: 'B2B Client Portal UX', sector: 'UI/UX Design', result: 'Information architecture and UI for a client self-serve portal.', v: 1, tags: ['Figma', 'User Interviews', 'Prototyping'], date: 'Oct 2026' },
+  { id: 'fitness-tracking-app', t: 'Fitness Tracking App', sector: 'Mobile App', result: 'iOS/Android workout tracker with coach dashboards.', v: 2, tags: ['React Native', 'NestJS', 'PostgreSQL'], date: 'Oct 2026' },
+  { id: 'marketplace-redesign', t: 'Marketplace Redesign', sector: 'E-Commerce', result: 'Conversion-focused UX overhaul for a multi-vendor storefront.', v: 3, tags: ['Figma', 'Next.js', 'Analytics'], date: 'Oct 2026' },
+  { id: 'brand-identity-system', t: 'Brand Identity System', sector: 'UI/UX Design', result: 'Design tokens, type, and component foundations for a B2B brand.', v: 4, tags: ['Figma', 'Storybook', 'CSS Tokens'], date: 'Oct 2026' },
+  { id: 'fintech-payments-hub', t: 'Fintech Payments Hub', sector: 'E-Commerce', result: 'Unified payouts and reconciliation for a lending platform.', v: 5, tags: ['NestJS', 'PostgreSQL', 'RabbitMQ', 'Razorpay'], date: 'Oct 2026', featured: true },
+  { id: 'saas-analytics-platform', t: 'SaaS Analytics Platform', sector: 'Web Development', result: 'Business intelligence platform with custom dashboards.', v: 6, tags: ['Vue.js', 'FastAPI', 'PostgreSQL', 'Redis'], date: 'Oct 2026', featured: true },
+  { id: 'ecommerce-mobile-app', t: 'E-Commerce Mobile App', sector: 'Mobile App', result: 'Cross-platform shopping app with Razorpay integration.', v: 1, tags: ['React Native', 'Node.js', 'MongoDB', 'Razorpay'], date: 'Oct 2026', featured: true },
+  { id: 'healthtech-dashboard', t: 'HealthTech Dashboard', sector: 'Web Development', result: 'Real-time patient monitoring dashboard for hospitals.', v: 2, tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Redis'], date: 'Oct 2026', featured: true },
 ];
 
 export const REQ_LIST = [

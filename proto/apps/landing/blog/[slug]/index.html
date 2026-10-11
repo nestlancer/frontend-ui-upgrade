@@ -16,54 +16,41 @@
   <path d="M4 20c6-3 12-3 24-7.5-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.5-15-2.5Z" fill="#32998C" opacity=".85"/>
   <path d="M4 26.5c6-3 12-3 24-6.5-1 3.5-4 6.5-8 7.8-3.8 1.1-9-.2-16-1.3Z" fill="#86D0C6" opacity=".8"/>
 </svg><span>Nestlancer<span class="tld">.</span></span></a>
-<nav class="mkt-links" aria-label="Primary"><a href="../../index.html">Home</a><a href="../../services/index.html">Services</a><a href="../../pricing/index.html">Pricing</a><a href="../../portfolio/index.html">Portfolio</a><a href="../index.html" class="active">Blog</a><a href="../../about/index.html">About</a><a href="../../contact/index.html">Contact</a></nav>
+<nav class="mkt-links" aria-label="Primary"><a href="../../index.html">Product</a><a href="../../portfolio/index.html">Portfolio</a><a href="../index.html" class="active">Blog</a><a href="../../about/index.html">About</a><a href="../../pricing/index.html">Pricing</a><a href="../../services/index.html">Services</a><a href="../../contact/index.html">Contact</a></nav>
 <div class="flex items-center gap-2">
   
   <a class="btn btn-ghost btn-sm" href="../../../web/login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="../../contact/index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div></div></header><main id="main" >
-<section style="padding:48px 0 24px"><div class="mkt-wrap" style="max-width:880px">
-  <a href="../index.html" class="link-arrow mb-4" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> All articles</a>
-  <div class="eyebrow mb-3">CASE STUDIES · <span>OCT 5, 2026</span></div>
-  <h1 class="h1">Cutting Deploy Time from 45 Minutes to Five</h1>
-  <div class="flex items-center gap-3 mt-5">
-    <span class="avatar hue-2 lg">NE</span>
-    <div><b style="font-size:13.5px">Nestlancer Editorial</b><div class="text-xs dim">8 min read · Engineering practice</div></div>
-    <div class="ml-auto flex gap-2"><button class="btn-icon btn sm" title="Bookmark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg></button><button class="btn-icon btn sm" title="Share"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></button></div>
-  </div>
+<section style="padding:40px 0 10px"><div class="mkt-wrap" style="max-width:780px">
+  <div class="flex justify-between text-xs dim"><a class="link-arrow" href="../index.html">← Back to articles</a><span class="mono">2 min read · 4 views</span></div>
+  <h1 class="h1 mt-6">Cutting Deploy Time from 45 Minutes to Five</h1>
+  <p class="lead mt-4">CI caching, smaller artifacts, and service-level pipelines after monolith split.</p>
+  <div class="flex items-center gap-3 mt-5"><span class="avatar" style="background:var(--brand-2);color:var(--brand-11)">NE</span><div><b style="font-size:14px">Nestlancer Editorial</b><div class="text-xs dim">Oct 5, 2026 · 2 min read · 2 comments</div></div></div>
+  <div class="mt-6 cover" style="padding-top:46%"><span>CASE STUDIES</span></div>
 </div></section>
-<div class="mkt-wrap" style="max-width:880px;padding-bottom:72px">
-  <div class="cover" style="padding-top:36%;margin-bottom:36px"><span>DEPLOY PIPELINE · BEFORE/AFTER</span></div>
-  <div class="prose">
-    <p>A 45-minute deploy is not a tooling problem — it is a feedback problem. When a deploy takes three quarters of an hour, nobody ships on Friday, nobody ships after lunch, and "continuous" becomes a slogan. Here is how we took a client's NestJS monolith from 45 minutes to five, in order of what actually mattered.</p>
-    <h2>1. Profile before you optimize</h2>
-    <p>The pipeline spent 19 minutes in dependency install, 14 minutes compiling TypeScript, 8 minutes building a Docker image containing the world, and 4 minutes on rollout. Optimizing rollout first would have saved nothing that matters.</p>
-    <h2>2. Cache like the build depends on it</h2>
-    <div class="codeblk"><span class="c1"># .github/workflows/deploy.yml — the two lines that saved 19 minutes</span><br>- uses: actions/setup-node@v4<br>&nbsp;&nbsp;<span class="c2">with:</span> { cache: pnpm, cache-dependency-path: pnpm-lock.yaml }<br>- run: pnpm fetch <span class="c1"># warm store from lockfile, offline install after</span></div>
-    <p>Lockfile-keyed pnpm store caching took install from 19 minutes to 90 seconds. The trick is separating <b>fetch</b> (network, cacheable) from <b>install</b> (local, deterministic).</p>
-    <h2>3. Split build from bundle</h2>
-    <ul class="dot-list"><li>TypeScript compiles in CI once; the Docker stage copies <span class="mono">dist/</span> instead of recompiling.</li><li>Production image went from 1.9 GB to 240 MB (node:22-alpine + pnpm deploy --prod).</li><li>Layer caching keyed on lockfile hash: source-only changes rebuild in ~40s.</li></ul>
-    <div class="pullquote">Ten engineers regained roughly eleven hours of waiting — every single week.</div>
-    <h2>4. Make rollback boring</h2>
-    <p>Five-minute deploys only stay safe when rollback is faster than panic. We pinned every release to an immutable image digest, kept the previous task definition warm, and wired a one-command rollback into the runbook. Friday deploys came back.</p>
-    <h3>Results after six weeks</h3>
-    <ul class="dot-list"><li>Median deploy: <b>4m 40s</b> (p95: 6m 10s)</li><li>Deploys per week: 9 → 34</li><li>Change-failure rate: down 31% (smaller diffs, more often)</li></ul>
-    <p>Speed is a feature of culture as much as tooling: once deploys are cheap, review becomes the bottleneck — which is exactly where a senior team should spend its minutes.</p>
-  </div>
-  <div class="divider my-8"></div>
-  <div class="grid g3 gap-4">
-    <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-      <div class="eyebrow" style="font-size:9.5px">CASE STUDIES</div>
-      <b style="font-size:13px;line-height:1.4;display:block;margin-top:4px">Scaling a Freelance Marketplace Architecture</b>
-      <div class="text-xs dim mono mt-2">7 min read</div></a><a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-      <div class="eyebrow" style="font-size:9.5px">CASE STUDIES</div>
-      <b style="font-size:13px;line-height:1.4;display:block;margin-top:4px">GDPR Compliance Platform Rebuild</b>
-      <div class="text-xs dim mono mt-2">2 min read</div></a><a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-      <div class="eyebrow" style="font-size:9.5px">CASE STUDIES</div>
-      <b style="font-size:13px;line-height:1.4;display:block;margin-top:4px">Migrating from WebSockets to SSE</b>
-      <div class="text-xs dim mono mt-2">2 min read</div></a>
-  </div>
-</div></main><footer class="footer"><div class="mkt-wrap">
+<section class="mkt-section" style="padding-top:8px"><article class="mkt-wrap" style="max-width:780px;line-height:1.75;font-size:16px">
+  <p class="muted">The team prioritized <b>operational ownership</b> while migrating on a Nestlancer-style stack — gateway at the edge, domain NestJS services, Prisma on Postgres, async work through RabbitMQ, and media on Backblaze B2.</p>
+  <h2 class="h3 mt-8">Where we started</h2>
+  <p class="muted">The team inherited a single pipeline building every service on each commit. The triggering incident was clear: hotfix queue depth grew while waiting for unrelated image builds. Leadership funded the refactor when customer-visible latency and support load rose together — not when the diagram looked messy.</p>
+  <h2 class="h3 mt-8">Architecture before</h2>
+  <ul class="muted"><li>Single deploy artifact coupling unrelated domains</li><li>Synchronous cross-module HTTP with partial timeouts</li><li>Mixed read/write traffic on one database primary</li><li>Ad-hoc file storage complicating virus scan and CDN caching</li></ul>
+  <h2 class="h3 mt-8">Migration timeline</h2>
+  <p class="muted"><b>Discovery.</b> Mapped the single pipeline and inventoried which routes could move behind the gateway without user-visible changes.</p>
+  <p class="muted"><b>Strangler cutover.</b> Routed new traffic through NestJS handlers while legacy paths drained over 12 weeks.</p>
+  <p class="muted"><b>Reliability hardening.</b> Added gateway, Prisma with explicit SLOs owned by a 9-engineer platform squad.</p>
+  <p class="muted"><b>Stabilize and learn.</b> Ran game days for DLQ replay, replica lag failover, and presigned upload expiry edge cases.</p>
+  <h2 class="h3 mt-8">Results</h2>
+  <ul class="muted"><li>Path-filtered CI and per-service images cut deploy time to five minutes</li><li>On-call pages for queue backlog fell after outbox lag dashboards went live</li><li>Product teams could ship blog and portfolio changes without redeploying payments</li><li>Support tickets citing 'stale listings' dropped once read paths moved to replicas</li></ul>
+  <h2 class="h3 mt-8">Lesson</h2>
+  <p class="muted">Microservices did not arrive on day one. The team earned splits by proving <b>operational ownership</b> per domain — not by copying a reference diagram.</p>
+  <div class="flex gap-2 mt-6"><span class="chip">#NestJS</span><span class="chip">#Node.js</span></div>
+  <div class="flex gap-3 mt-6 text-sm dim"><span>Like</span><span>Bookmark</span></div>
+</article></section>
+<section class="mkt-section"><div class="mkt-wrap">
+  <h2 class="h3 mb-4">Related posts</h2>
+  <div class="grid g3 gap-4"><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow" style="font-size:10px">CASE STUDIES</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">Scaling a Freelance Marketplace Architecture</div><div class="text-xs dim mono mt-2">3 min read</div></a><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow" style="font-size:10px">CASE STUDIES</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">GDPR Compliance Platform Rebuild</div><div class="text-xs dim mono mt-2">2 min read</div></a><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow" style="font-size:10px">CASE STUDIES</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">Migrating from WebSockets to SSE</div><div class="text-xs dim mono mt-2">2 min read</div></a></div>
+</div></section></main><footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
   <div class="flex-col gap-3">
     <a href="../../index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -73,11 +60,11 @@
 </svg><span>Nestlancer<span class="tld">.</span></span></a>
     <p class="text-sm muted" style="max-width:32ch;line-height:1.6">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
   </div>
-  <div><h5>Product</h5><a href="../../../web/dashboard/index.html">Project Hub</a><a href="../../pricing/index.html">Pricing</a><a href="../../services/index.html">Services</a><a href="../../portfolio/index.html">Portfolio</a><a href="../index.html">Blog</a></div>
-  <div><h5>Company</h5><a href="../../about/index.html">About</a><a href="../../contact/index.html">Contact</a><a href="../../../web/register/index.html">Start a project</a></div>
+  <div><h5>Product</h5><a href="../../../web/dashboard/index.html">Project Hub</a><a href="../../pricing/index.html">Pricing</a><a href="../../services/index.html">Services</a><a href="../../portfolio/index.html">Portfolio</a></div>
+  <div><h5>Company</h5><a href="../../about/index.html">About</a><a href="../index.html">Blog</a><a href="../../contact/index.html">Contact</a><a href="../../../web/register/index.html">Start a project</a></div>
   <div><h5>Legal</h5><a href="../../../web/terms/index.html">Terms</a><a href="../../../web/privacy/index.html">Privacy</a><a href="../../../web/verify-document/index.html">Verify document</a></div>
 </div>
-<div class="footer-base"><span>© 2026 Nestlancer Studio Private Limited · Hyderabad, IN</span><span class="mono">nestlancer.com · app.nestlancer.com · admin.nestlancer.com</span></div>
+<div class="footer-base"><span>© 2026 Nestlancer. Made in India. All rights reserved.</span></div>
 </div></footer>
 <div class="fab" id="fab">
 <button class="fab-btn" onclick="document.getElementById('fab').classList.toggle('open')" aria-label="Prototype menu"><i class="dot"></i><span>Prototype</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button>
