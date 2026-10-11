@@ -26,13 +26,13 @@ Status: `todo` · `checked` (matches) · `fixed` (data updated) · `n/a` (no pro
 | 17 | `public/017-marketing-services.webp` | https://nestlancer.com/services | todo |  |
 | 18 | `clients/001-payment-details-completed-payment.webp` | https://app.nestlancer.com/payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2 | todo | Priya Nair deposit ₹15,660.00, Completed, Corporate LMS for 200 Employees. Proto payment page shows a different payment (₹14,400, Ananya) — needs correcting. |
 | 19 | `clients/002-payment-details-not-due-yet.webp` | https://app.nestlancer.com/payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5 | todo |  |
-| 20 | `clients/003-invoices.webp` | https://app.nestlancer.com/invoices | todo |  |
-| 21 | `clients/004-messages.webp` | https://app.nestlancer.com/messages | todo |  |
-| 22 | `clients/005-messages-inbox.webp` | https://app.nestlancer.com/messages/inbox | todo |  |
-| 23 | `clients/006-messages-new-direct.webp` | https://app.nestlancer.com/messages/new/direct | todo |  |
-| 24 | `clients/007-messages-thread-details.webp` | https://app.nestlancer.com/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a | todo |  |
+| 20 | `clients/003-invoices.webp` | https://app.nestlancer.com/invoices | checked | Vikram Shah. Archive: NL-INV-2026-000016 ₹25,500.00, NL-INV-2026-000014 ₹25,500.00, NL-INV-2026-000015 ₹34,000.00; project B2B Textile Export Order Portal; all Issued; actions Download invoice / View. |
+| 21 | `clients/004-messages.webp` | https://app.nestlancer.com/messages | checked | Ananya Iyer. Open conversations 2; unread messages 6; unread threads 1 (needs a reply). Recent: Payments ops — Razorpay settlement and webhooks (GROUP, 5 days ago); Riya Kapoor (DIRECT): "Thanks. Our finance team confirmed the duplicate NEFT on their end too. Replay UI remains the priority for month-end." |
+| 22 | `clients/005-messages-inbox.webp` | https://app.nestlancer.com/messages/inbox | checked | Samira Patel. Inbox snapshot: Open 2, Unread 7, Waiting 2; by type Project 0 / Direct 1 / Group 1. Queue: Agency partne… (GROUP, 5d) and Riya Kapoor (DIRECT, 5d). |
+| 23 | `clients/006-messages-new-direct.webp` | https://app.nestlancer.com/messages/new/direct | checked | Samira Patel. New message to Nestlancer Support: "Platform support admin for your account. Client-to-client messaging is not available." Buttons: Start conversation / Cancel. |
+| 24 | `clients/007-messages-thread-details.webp` | https://app.nestlancer.com/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a | checked | Karthik Menon. Group thread Payments ops — Razorpay settlement and webhooks, 3 members. Quick replies: Thanks, I will review this. / Can you clarify the timeline? / Could we schedule a quick call? |
 | 25 | `clients/008-notifications.webp` | https://app.nestlancer.com/notifications | todo |  |
-| 26 | `clients/009-payments.webp` | https://app.nestlancer.com/payments | todo |  |
+| 26 | `clients/009-payments.webp` | https://app.nestlancer.com/payments | checked | Karthik Menon. Total paid ₹36,000.00; pending ₹48,000.00; in dispute ₹0.00. UPI Switch Integration Layer: Mid-project payment ₹48,000.00 Pending (Checkout); Final payment ₹36,000.00 Not due yet (View); Deposit ₹36,000.00 Completed (View). |
 | 27 | `clients/010-payments-details.webp` | https://app.nestlancer.com/payments/01a10a2c-2d0e-7499-b769-967d17a42197 | todo |  |
 | 28 | `clients/011-payments-methods.webp` | https://app.nestlancer.com/payments/methods | todo |  |
 | 29 | `clients/012-profile.webp` | https://app.nestlancer.com/profile | todo |  |
