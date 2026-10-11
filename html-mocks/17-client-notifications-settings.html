@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-density="compact">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notifications &amp; Account Settings · Nestlancer</title>
+  <link rel="stylesheet" href="tokens.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app-shell">
+    <!-- Client Sidebar -->
+    <aside class="app-sidebar" aria-label="Client Workspace Navigation">
+      <div class="sidebar-header">
+        <a href="01-marketing-home.html" class="brand-logo">
+          <span class="brand-logo-mark" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </span>
+          <span>Nestlancer<span class="brand-logo-dot">.</span></span>
+        </a>
+        <span class="brand-surface-tag">Client</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section">
+          <div class="sidebar-section-label">Main</div>
+          <a href="03-client-dashboard.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg><span>Dashboard</span></span></a>
+          <a href="14-client-requests-projects-list.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span>Requests &amp; Projects</span></span></a>
+          <a href="06-client-project-detail.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg><span>Project Detail</span></span></a>
+          <a href="16-client-messages.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span>Messages</span></span></a>
+          <a href="15-client-quotes-payments-list.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span>Billing &amp; Invoices</span></span></a>
+          <a href="17-client-notifications-settings.html" class="nav-item active" aria-current="page"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span>Notifications &amp; Settings</span></span><span class="nav-count">2</span></a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-pill">
+          <span class="avatar">PN</span>
+          <div>
+            <div class="text-xs font-semibold">Priya Nair</div>
+            <div class="mono text-xs text-muted" style="font-size:11px;">priya.nair@nestlancer.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="breadcrumbs">
+          <a href="03-client-dashboard.html">Dashboard</a>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-current">Notifications &amp; Account Settings</span>
+        </div>
+
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" data-density-toggle><span data-density-label>Compact</span></button>
+          <button type="button" class="btn btn-ghost btn-sm" data-theme-toggle><span data-theme-label>Light</span></button>
+        </div>
+      </header>
+
+      <main id="main-content" class="app-content">
+        <div class="page-header">
+          <div class="page-header-copy">
+            <div class="page-eyebrow">CLIENT GOVERNANCE · NOTIFICATIONS, PROFILE, SECURITY &amp; STORAGE</div>
+            <h1 class="page-title">Notifications &amp; Workspace Settings</h1>
+            <p class="page-subtitle">Manage inbox alerts, corporate profile details, two-factor authentication, and file storage quotas.</p>
+          </div>
+        </div>
+
+        <!-- 5 Interactive Tabs: Notifications Inbox / Account Profile / Security & 2FA / Files & Storage / Activity Log -->
+        <section class="panel">
+          <div class="tab-bar" role="tablist" aria-label="Notifications and settings tabs" style="padding: 0 var(--card-p);">
+            <button type="button" role="tab" aria-selected="true" class="tab-btn active" data-tab-group="cfg" data-tab-target="cfg-notifs">Notifications Inbox <span class="nav-count">3</span></button>
+            <button type="button" role="tab" aria-selected="false" class="tab-btn" data-tab-group="cfg" data-tab-target="cfg-account">Account Profile</button>
+            <button type="button" role="tab" aria-selected="false" class="tab-btn" data-tab-group="cfg" data-tab-target="cfg-security">Security &amp; 2FA</button>
+            <button type="button" role="tab" aria-selected="false" class="tab-btn" data-tab-group="cfg" data-tab-target="cfg-files">Files &amp; Quota</button>
+            <button type="button" role="tab" aria-selected="false" class="tab-btn" data-tab-group="cfg" data-tab-target="cfg-activity">Activity Audit</button>
+          </div>
+
+          <!-- Tab 1: Notifications Inbox (/notifications) -->
+          <div id="cfg-notifs" data-tab-panel data-tab-group="cfg">
+            <div class="filter-bar">
+              <div class="flex items-center gap-2">
+                <span class="status-badge tone-info">2 unread alerts</span>
+                <span class="text-xs text-muted">Project updates, quote signatures, and invoice events</span>
+              </div>
+              <button type="button" class="btn btn-secondary btn-sm">Mark all as read</button>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Notification</th>
+                    <th>Received</th>
+                    <th>Status</th>
+                    <th class="col-actions">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="status-badge tone-warning">Payment Due</span></td>
+                    <td>
+                      <div class="font-semibold">Milestone 2 payment due (₹20,880.00)</div>
+                      <div class="text-xs text-muted">Mid-project installment for Corporate LMS for 200 Employees is ready for checkout.</div>
+                    </td>
+                    <td class="mono text-xs text-muted">2h ago</td>
+                    <td><span class="status-badge tone-info">Unread</span></td>
+                    <td class="col-actions"><a href="07-client-payment-detail.html" class="btn btn-primary btn-sm">Pay now →</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="status-badge tone-info">Project Update</span></td>
+                    <td>
+                      <div class="font-semibold">Staging build uploaded for review</div>
+                      <div class="text-xs text-muted">Riya Kapoor posted a progress update and staging link in Corporate LMS for 200 Employees.</div>
+                    </td>
+                    <td class="mono text-xs text-muted">5h ago</td>
+                    <td><span class="status-badge tone-info">Unread</span></td>
+                    <td class="col-actions"><a href="06-client-project-detail.html" class="btn btn-secondary btn-sm">Open Hub →</a></td>
+                  </tr>
+                  <tr>
+                    <td><span class="status-badge tone-success">Invoice Issued</span></td>
+                    <td>
+                      <div class="font-semibold">GST Tax Invoice NL-INV-2026-000016 generated</div>
+                      <div class="text-xs text-muted">Official tax invoice for Deposit (₹15,660.00) is ready for PDF download.</div>
+                    </td>
+                    <td class="mono text-xs text-muted">Oct 5, 2026</td>
+                    <td><span class="status-badge tone-muted">Read</span></td>
+                    <td class="col-actions"><a href="15-client-quotes-payments-list.html" class="btn btn-ghost btn-sm">View PDF</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 2: Account Profile (/settings/account) -->
+          <div id="cfg-account" data-tab-panel data-tab-group="cfg" class="panel-body" style="display: none;" hidden>
+            <div class="split-main-aside">
+              <form onsubmit="event.preventDefault();" class="flex-col gap-4">
+                <div class="grid-2">
+                  <div class="field-group">
+                    <label for="prof-first" class="field-label">First name</label>
+                    <input id="prof-first" type="text" class="input" value="Priya" />
+                  </div>
+                  <div class="field-group">
+                    <label for="prof-last" class="field-label">Last name</label>
+                    <input id="prof-last" type="text" class="input" value="Nair" />
+                  </div>
+                </div>
+                <div class="grid-2">
+                  <div class="field-group">
+                    <label for="prof-email" class="field-label">Work email <span class="status-badge tone-success" style="height:18px; font-size:10px;">Verified</span></label>
+                    <input id="prof-email" type="email" class="input mono" value="priya.nair@nestlancer.com" readonly />
+                  </div>
+                  <div class="field-group">
+                    <label for="prof-phone" class="field-label">Phone number</label>
+                    <input id="prof-phone" type="tel" class="input mono" value="+91 98470 55103" />
+                  </div>
+                </div>
+                <div class="field-group">
+                  <label for="prof-bio" class="field-label">Organization &amp; role notes</label>
+                  <textarea id="prof-bio" class="textarea">L&amp;D platform lead at Nair Learning Systems, Kochi. Focused on enterprise LMS and regional language training.</textarea>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-primary">Save profile changes</button>
+                </div>
+              </form>
+
+              <div class="panel" style="padding: var(--space-4); background: var(--surface-subtle);">
+                <div class="font-semibold text-sm mb-2">Profile Avatar</div>
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="avatar" style="width:48px; height:48px; font-size:16px;">PN</span>
+                  <div class="text-xs text-muted">PNG, JPEG, or WebP up to 5 MB.</div>
+                </div>
+                <!-- Replaces unstyled native file input from 025-settings-account.webp -->
+                <label class="dropzone" style="padding: var(--space-3);">
+                  <input type="file" style="position:absolute; width:1px; height:1px; opacity:0;" />
+                  <span class="text-xs font-medium text-brand">Upload new photo</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Security & 2FA (/settings/security) -->
+          <div id="cfg-security" data-tab-panel data-tab-group="cfg" class="panel-body" style="display: none;" hidden>
+            <div class="grid-2">
+              <div class="panel" style="padding: var(--space-4);">
+                <h3 class="text-sm font-semibold mb-3">Change password</h3>
+                <div class="flex-col gap-3">
+                  <div class="field-group"><label class="field-label">Current password</label><input type="password" class="input" value="••••••••••••" /></div>
+                  <div class="field-group"><label class="field-label">New password</label><input type="password" class="input" placeholder="Minimum 8 chars, mixed case &amp; symbol" /></div>
+                  <button type="button" class="btn btn-primary btn-sm">Update password</button>
+                </div>
+              </div>
+              <div class="panel" style="padding: var(--space-4);">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-sm font-semibold">Two-factor authentication (TOTP)</h3>
+                  <span class="status-badge tone-neutral">Disabled</span>
+                </div>
+                <p class="text-xs text-muted mb-4">Protect your client account and contract signatures with an authenticator app (1Password, Google Authenticator, or Authy).</p>
+                <button type="button" class="btn btn-secondary btn-sm">Enable 2FA</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Files & Quota (/settings/files) -->
+          <div id="cfg-files" data-tab-panel data-tab-group="cfg" class="panel-body" style="display: none;" hidden>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-sm font-semibold">Workspace Storage Usage</span>
+              <span class="mono text-xs">12.4 MB of 100 MB (12.4%)</span>
+            </div>
+            <div class="progress-track mb-4"><div class="progress-fill" style="width: 12.4%;"></div></div>
+            <p class="text-xs text-muted">Project deliverables uploaded by the studio do not count against your personal attachment quota.</p>
+          </div>
+
+          <!-- Tab 5: Activity Audit (/settings/activity) -->
+          <div id="cfg-activity" data-tab-panel data-tab-group="cfg" class="table-wrap" style="display: none;" hidden>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Event</th>
+                  <th>Surface</th>
+                  <th>IP / User Agent</th>
+                  <th>Timestamp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-medium">Signed in to Client Portal</td>
+                  <td><code class="mono text-xs">/login</code></td>
+                  <td class="mono text-xs text-muted">103.21.125.14 · Chrome 129 (macOS)</td>
+                  <td class="mono text-xs text-muted">Oct 11, 2026 · 09:12 IST</td>
+                </tr>
+                <tr>
+                  <td class="font-medium">Accepted &amp; e-signed Quote QTE-01A10A2C</td>
+                  <td><code class="mono text-xs">/quotes/01a10a2c</code></td>
+                  <td class="mono text-xs text-muted">103.21.125.14 · Chrome 129 (macOS)</td>
+                  <td class="mono text-xs text-muted">Oct 5, 2026 · 03:49 IST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="ui.js"></script>
+</body>
+</html>

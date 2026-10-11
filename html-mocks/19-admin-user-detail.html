@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-density="compact">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arjun Mehta · Client 360° &amp; Identity Governance · Nestlancer Admin</title>
+  <link rel="stylesheet" href="tokens.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="app-shell">
+    <!-- Admin Sidebar -->
+    <aside class="app-sidebar" aria-label="Operator Console Navigation">
+      <div class="sidebar-header">
+        <a href="08-admin-dashboard.html" class="brand-logo">
+          <span class="brand-logo-mark" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </span>
+          <span>Nestlancer<span class="brand-logo-dot">.</span></span>
+        </a>
+        <span class="brand-surface-tag">Operator</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-section">
+          <div class="sidebar-section-label">Overview</div>
+          <a href="08-admin-dashboard.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg><span>Command Center</span></span></a>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-label">Pipeline &amp; Delivery</div>
+          <a href="18-admin-users-list.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span>Users &amp; Clients</span></span><span class="nav-count">10</span></a>
+          <a href="19-admin-user-detail.html" class="nav-item active" aria-current="page"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg><span>Client 360° Pipeline</span></span></a>
+          <a href="20-admin-payments-ops.html" class="nav-item"><span class="nav-item-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span>Payments &amp; Quote Ops</span></span></a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-pill">
+          <span class="avatar">RK</span>
+          <div>
+            <div class="text-xs font-semibold">Riya Kapoor</div>
+            <div class="mono text-xs text-muted" style="font-size:11px;">admin@nestlancer.com</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Column -->
+    <div class="app-main">
+      <header class="app-topbar">
+        <div class="breadcrumbs">
+          <a href="08-admin-dashboard.html">Operator Console</a>
+          <span class="crumb-sep">/</span>
+          <a href="18-admin-users-list.html">Users &amp; Clients</a>
+          <span class="crumb-sep">/</span>
+          <span class="crumb-current">Arjun Mehta (USR-01A10A22)</span>
+        </div>
+
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" data-density-toggle><span data-density-label>Compact</span></button>
+          <button type="button" class="btn btn-ghost btn-sm" data-theme-toggle><span data-theme-label>Light</span></button>
+          <button type="button" class="btn btn-secondary btn-sm" data-modal-open="impersonate-modal">Impersonate client</button>
+          <button type="button" class="btn btn-danger btn-sm" data-modal-open="deactivate-modal">Suspend account</button>
+        </div>
+      </header>
+
+      <main id="main-content" class="app-content">
+        <!-- Client 360° Header -->
+        <div class="page-header">
+          <div class="flex items-center gap-3">
+            <span class="avatar" style="width:44px; height:44px; font-size:16px;">AM</span>
+            <div class="page-header-copy">
+              <div class="flex items-center gap-2">
+                <span class="page-eyebrow">CLIENT 360° VIEW · MEHTA EXPORT HUB (SURAT)</span>
+                <span class="status-badge tone-success">Active Account</span>
+                <span class="status-badge tone-info">Email Verified</span>
+              </div>
+              <h1 class="page-title">Arjun Mehta</h1>
+              <p class="page-subtitle mono text-xs">arjun.mehta@nestlancer.com · +91 98201 44210 · Joined Oct 5, 2026</p>
+            </div>
+          </div>
+
+          <div class="page-actions">
+            <a href="16-client-messages.html" class="btn btn-secondary">Open direct message</a>
+            <a href="20-admin-payments-ops.html" class="btn btn-primary">+ Create quote for client</a>
+          </div>
+        </div>
+
+        <!-- Lifetime Value & Pipeline KPI Strip -->
+        <section class="kpi-strip" aria-label="Client lifetime metrics">
+          <div class="kpi-cell"><span class="kpi-label">Lifetime Revenue (LTV)</span><span class="kpi-value text-brand">₹85,000.00</span><span class="kpi-meta">3/3 milestones settled</span></div>
+          <div class="kpi-cell"><span class="kpi-label">Service Requests</span><span class="kpi-value">2</span><span class="kpi-meta">1 converted · 1 under review</span></div>
+          <div class="kpi-cell"><span class="kpi-label">Quotes Issued</span><span class="kpi-value">2</span><span class="kpi-meta">1 accepted · 1 declined</span></div>
+          <div class="kpi-cell"><span class="kpi-label">Delivered Projects</span><span class="kpi-value">1</span><span class="kpi-meta">100% completion · 5.0★ rating</span></div>
+        </section>
+
+        <div class="split-main-aside">
+          <!-- Left: Unified Pipeline Tables (Requests, Quotes, Projects, Payments) -->
+          <div class="flex-col gap-5">
+            <!-- Requests Table -->
+            <section class="panel">
+              <div class="panel-header">
+                <h2 class="panel-title">Service Requests (2)</h2>
+                <span class="mono text-xs text-muted">Canonical status badges</span>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Ref</th>
+                      <th>Brief Title</th>
+                      <th>Status</th>
+                      <th class="col-num">Budget</th>
+                      <th class="col-actions">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="mono text-xs">REQ-312B</td>
+                      <td class="font-medium">B2B Textile Export Order Portal</td>
+                      <td><span class="status-badge tone-success">Converted to Project</span></td>
+                      <td class="col-num">₹85,000.00</td>
+                      <td class="col-actions"><a href="04-client-request-detail.html" class="btn btn-ghost btn-sm">Open</a></td>
+                    </tr>
+                    <tr>
+                      <td class="mono text-xs">REQ-4A90</td>
+                      <td class="font-medium">Warehouse &amp; Fleet Operations Portal</td>
+                      <td><span class="status-badge tone-info">Submitted</span></td>
+                      <td class="col-num">₹19,800.00</td>
+                      <td class="col-actions"><a href="04-client-request-detail.html" class="btn btn-secondary btn-sm">Triage →</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- Quotes & Projects Table -->
+            <section class="panel">
+              <div class="panel-header">
+                <h2 class="panel-title">Quotes &amp; Projects (3)</h2>
+                <a href="20-admin-payments-ops.html" class="text-xs font-medium text-brand">Open Quote Builder →</a>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Record</th>
+                      <th>Title</th>
+                      <th>Status</th>
+                      <th class="col-num">Total (INR)</th>
+                      <th class="col-actions">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="brand-surface-tag">PROJECT</span></td>
+                      <td class="font-medium">B2B Textile Export Order Portal</td>
+                      <td><span class="status-badge tone-success">Completed (100%)</span></td>
+                      <td class="col-num font-semibold">₹85,000.00</td>
+                      <td class="col-actions"><a href="06-client-project-detail.html" class="btn btn-ghost btn-sm">Hub</a></td>
+                    </tr>
+                    <tr>
+                      <td><span class="brand-surface-tag">QUOTE</span></td>
+                      <td class="font-medium">B2B Textile Export Order Portal</td>
+                      <td><span class="status-badge tone-success">Accepted</span></td>
+                      <td class="col-num">₹85,000.00</td>
+                      <td class="col-actions"><a href="05-client-quote-detail.html" class="btn btn-ghost btn-sm">View</a></td>
+                    </tr>
+                    <tr>
+                      <td><span class="brand-surface-tag">QUOTE</span></td>
+                      <td class="font-medium">Warehouse &amp; Fleet Operations Portal</td>
+                      <td><span class="status-badge tone-danger">Declined</span></td>
+                      <td class="col-num text-muted">₹19,800.00</td>
+                      <td class="col-actions"><a href="05-client-quote-detail.html" class="btn btn-ghost btn-sm">View</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- Payments Ledger -->
+            <section class="panel">
+              <div class="panel-header">
+                <h2 class="panel-title">Settled Payments &amp; Invoices (3)</h2>
+              </div>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Ref</th>
+                      <th>Milestone</th>
+                      <th>Invoice</th>
+                      <th>Status</th>
+                      <th class="col-num">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="mono text-xs">PAY-01A10A3A</td>
+                      <td>Deposit (30%)</td>
+                      <td class="mono text-xs">NL-INV-2026-000014</td>
+                      <td><span class="status-badge tone-success">Completed</span></td>
+                      <td class="col-num font-semibold">₹25,500.00</td>
+                    </tr>
+                    <tr>
+                      <td class="mono text-xs">PAY-01A10A3B</td>
+                      <td>Mid-project payment (40%)</td>
+                      <td class="mono text-xs">NL-INV-2026-000015</td>
+                      <td><span class="status-badge tone-success">Completed</span></td>
+                      <td class="col-num font-semibold">₹34,000.00</td>
+                    </tr>
+                    <tr>
+                      <td class="mono text-xs">PAY-01A10A3C</td>
+                      <td>Final payment (30%)</td>
+                      <td class="mono text-xs">NL-INV-2026-000016</td>
+                      <td><span class="status-badge tone-success">Completed</span></td>
+                      <td class="col-num font-semibold">₹25,500.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+
+          <!-- Right Rail: Identity & RBAC Controls -->
+          <aside class="flex-col gap-5">
+            <section class="panel">
+              <div class="panel-header"><h2 class="panel-title">Identity &amp; RBAC Governance</h2></div>
+              <div class="panel-body flex-col gap-3">
+                <div class="field-group">
+                  <label for="u-role" class="field-label">Role assignment</label>
+                  <select id="u-role" class="select">
+                    <option selected>USER (Client Account)</option>
+                    <option>ADMIN (Studio Operator)</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="u-status" class="field-label">Account status</label>
+                  <select id="u-status" class="select">
+                    <option selected>ACTIVE</option>
+                    <option>SUSPENDED</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-primary w-full">Save governance settings</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-secondary w-full" data-modal-open="impersonate-modal">Start audited impersonation</button>
+                <button type="button" class="btn btn-ghost w-full">Revoke active sessions (2)</button>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-header"><h2 class="panel-title">Bio &amp; Metadata</h2></div>
+              <div class="panel-body">
+                <p class="text-xs text-muted mb-3">Founder at a Surat textile export house digitising B2B buyer catalogues and container tracking.</p>
+                <div class="key-value-list">
+                  <div class="kv-row"><span class="kv-key">Full UUID</span><span class="kv-val mono text-xs">01a10a22-8f64-4aa2-85e0</span></div>
+                  <div class="kv-row"><span class="kv-key">2FA Status</span><span class="kv-val">Disabled</span></div>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Audited Impersonation Dialog (Matches 068-user-impersonate-dialog.webp) -->
+  <div id="impersonate-modal" class="modal-backdrop" hidden>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="imp-title">
+      <div class="modal-header">
+        <span id="imp-title" class="modal-title">Impersonate Arjun Mehta</span>
+        <button type="button" class="btn btn-ghost btn-icon btn-sm" data-modal-close aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body flex-col gap-3">
+        <p class="text-sm text-muted">Starts an audited read/write session as <strong>arjun.mehta@nestlancer.com</strong> across the Client Portal (`*.nestlancer.com`). All actions are recorded in the immutable Audit Log.</p>
+        <div class="field-group">
+          <label for="imp-reason" class="field-label">Audit justification (optional)</label>
+          <input id="imp-reason" type="text" class="input" placeholder="e.g., Support ticket #412 — verifying invoice PDF download" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
+        <a href="03-client-dashboard.html" class="btn btn-primary">Start impersonation session →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Suspend Account Dialog (Matches 069-user-deactivate-dialog.webp) -->
+  <div id="deactivate-modal" class="modal-backdrop" hidden>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="deact-title">
+      <div class="modal-header">
+        <span id="deact-title" class="modal-title">Suspend client account</span>
+        <button type="button" class="btn btn-ghost btn-icon btn-sm" data-modal-close aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body flex-col gap-3">
+        <p class="text-sm text-muted">Suspending <strong>Arjun Mehta</strong> immediately revokes all active JWT sessions and blocks portal sign-in.</p>
+        <div class="field-group">
+          <label for="deact-reason" class="field-label">Suspension reason <span style="color:var(--status-danger-dot);">*</span></label>
+          <textarea id="deact-reason" class="textarea" placeholder="Required for compliance audit log..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
+        <button type="button" class="btn btn-danger" data-modal-close>Confirm suspension</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="ui.js"></script>
+</body>
+</html>

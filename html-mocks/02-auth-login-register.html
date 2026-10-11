@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-density="compact">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In &amp; Create Account · Nestlancer Client Portal</title>
+  <link rel="stylesheet" href="tokens.css" />
+</head>
+<body>
+  <a href="#auth-card" class="skip-link">Skip to authentication form</a>
+
+  <div style="min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);">
+    <!-- ====================================================================
+         LEFT COLUMN: CLERK-CLASS AUTHENTICATION WORKSPACE
+         ==================================================================== -->
+    <main id="auth-card" style="display: flex; flex-direction: column; justify-content: space-between; padding: var(--space-8) var(--space-10); background: var(--surface-elevated); border-right: 1px solid var(--neutral-6);">
+      <!-- Top Bar -->
+      <div class="flex items-center justify-between">
+        <a href="01-marketing-home.html" class="brand-logo">
+          <span class="brand-logo-mark" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </span>
+          <span>Nestlancer<span class="brand-logo-dot">.</span></span>
+        </a>
+
+        <div class="flex items-center gap-2">
+          <button type="button" class="btn btn-ghost btn-sm" data-theme-toggle>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <span data-theme-label>Light</span>
+          </button>
+          <a href="01-marketing-home.html" class="btn btn-ghost btn-sm">← Back to site</a>
+        </div>
+      </div>
+
+      <!-- Center Auth Container -->
+      <div style="width: 100%; max-width: 420px; margin: var(--space-8) auto;">
+        <!-- Interactive Flow Switcher (Sign In / Register / Forgot / Operator) -->
+        <div class="segmented-control w-full mb-6" role="tablist" aria-label="Authentication flows" style="display: grid; grid-template-columns: repeat(4, 1fr);">
+          <button type="button" role="tab" aria-selected="true" class="seg-btn active" data-tab-group="auth" data-tab-target="pane-login" style="justify-content:center;">Sign in</button>
+          <button type="button" role="tab" aria-selected="false" class="seg-btn" data-tab-group="auth" data-tab-target="pane-register" style="justify-content:center;">Register</button>
+          <button type="button" role="tab" aria-selected="false" class="seg-btn" data-tab-group="auth" data-tab-target="pane-forgot" style="justify-content:center;">Reset</button>
+          <button type="button" role="tab" aria-selected="false" class="seg-btn" data-tab-group="auth" data-tab-target="pane-operator" style="justify-content:center;">Operator</button>
+        </div>
+
+        <!-- ================================================================
+             PANE 1: CLIENT SIGN IN (app.nestlancer.com/login)
+             ================================================================ -->
+        <section id="pane-login" data-tab-panel data-tab-group="auth" aria-labelledby="login-heading">
+          <div style="margin-bottom: var(--space-6);">
+            <div class="page-eyebrow mb-2">Client Portal · app.nestlancer.com</div>
+            <h1 id="login-heading" class="text-xl font-semibold" style="margin-bottom: var(--space-1);">Sign in to your workspace</h1>
+            <p class="text-sm text-muted">For client accounts. Review quotes, fund milestones, and track project delivery.</p>
+          </div>
+
+          <form action="03-client-dashboard.html" class="flex-col gap-4">
+            <div class="field-group">
+              <label for="login-email" class="field-label">
+                <span>Work email <span style="color:var(--status-danger-dot);">*</span></span>
+              </label>
+              <input id="login-email" type="email" class="input input-lg" value="priya.nair@nestlancer.com" placeholder="you@company.com" required autocomplete="email" />
+            </div>
+
+            <div class="field-group">
+              <div class="field-label">
+                <label for="login-password">Password <span style="color:var(--status-danger-dot);">*</span></label>
+                <button type="button" class="btn-ghost text-xs text-brand" style="border:none; background:none; cursor:pointer; font-weight:500;" data-tab-group="auth" data-tab-target="pane-forgot">Forgot password?</button>
+              </div>
+              <input id="login-password" type="password" class="input input-lg" value="••••••••••••" placeholder="Enter your password" required autocomplete="current-password" />
+            </div>
+
+            <label class="flex items-center gap-2 text-xs text-muted" style="cursor: pointer;">
+              <input type="checkbox" checked style="accent-color: var(--brand-9); width: 15px; height: 15px;" />
+              <span>Keep me signed in for 30 days on this device</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full mt-2">
+              <span>Sign in to Client Portal</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </form>
+
+          <div class="divider"></div>
+
+          <div class="flex items-center justify-between text-xs text-muted">
+            <span>New to Nestlancer? <button type="button" class="text-brand font-medium" style="background:none; border:none; cursor:pointer;" data-tab-group="auth" data-tab-target="pane-register">Create client account →</button></span>
+            <button type="button" class="mono text-xs text-muted" style="background:none; border:none; cursor:pointer;" data-tab-group="auth" data-tab-target="pane-operator">Operator console</button>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             PANE 2: CLIENT REGISTER (app.nestlancer.com/register)
+             Clean labels — zero redundant (?) tooltip icons on obvious fields!
+             ================================================================ -->
+        <section id="pane-register" data-tab-panel data-tab-group="auth" style="display: none;" hidden aria-labelledby="register-heading">
+          <div style="margin-bottom: var(--space-5);">
+            <div class="page-eyebrow mb-2">Client Onboarding · app.nestlancer.com</div>
+            <h1 id="register-heading" class="text-xl font-semibold" style="margin-bottom: var(--space-1);">Create your client account</h1>
+            <p class="text-sm text-muted">Submit a project brief, receive itemized milestone quotes, and collaborate with the studio.</p>
+          </div>
+
+          <form action="03-client-dashboard.html" class="flex-col gap-3">
+            <div class="grid-2" style="gap: var(--space-3);">
+              <div class="field-group">
+                <label for="reg-first" class="field-label">First name <span style="color:var(--status-danger-dot);">*</span></label>
+                <input id="reg-first" type="text" class="input input-lg" placeholder="Arjun" required autocomplete="given-name" />
+              </div>
+              <div class="field-group">
+                <label for="reg-last" class="field-label">Last name <span style="color:var(--status-danger-dot);">*</span></label>
+                <input id="reg-last" type="text" class="input input-lg" placeholder="Mehta" required autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="reg-email" class="field-label">Work email <span style="color:var(--status-danger-dot);">*</span></label>
+              <input id="reg-email" type="email" class="input input-lg" placeholder="arjun@company.com" required autocomplete="email" />
+            </div>
+
+            <div class="field-group">
+              <label for="reg-pass" class="field-label">
+                <span>Password <span style="color:var(--status-danger-dot);">*</span></span>
+                <span class="field-hint mono">Min 10 chars, 1 symbol</span>
+              </label>
+              <input id="reg-pass" type="password" class="input input-lg" placeholder="Create a strong password" required autocomplete="new-password" />
+            </div>
+
+            <div class="field-group">
+              <label for="reg-pass-confirm" class="field-label">Confirm password <span style="color:var(--status-danger-dot);">*</span></label>
+              <input id="reg-pass-confirm" type="password" class="input input-lg" placeholder="Re-enter password" required autocomplete="new-password" />
+            </div>
+
+            <div class="flex-col gap-2 mt-2">
+              <label class="flex items-start gap-2 text-xs text-muted" style="cursor: pointer;">
+                <input type="checkbox" required style="accent-color: var(--brand-9); margin-top: 2px;" />
+                <span>I agree to the <a href="#terms">Terms of Service</a> and <a href="#privacy">Privacy Policy</a>.</span>
+              </label>
+              <label class="flex items-start gap-2 text-xs text-muted" style="cursor: pointer;">
+                <input type="checkbox" style="accent-color: var(--brand-9); margin-top: 2px;" />
+                <span>Send me studio delivery updates and release announcements.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full mt-2">Create client account</button>
+          </form>
+
+          <p class="text-xs text-muted mt-4">
+            Operator and administrator accounts are provisioned internally — this form is exclusively for client organizations.
+          </p>
+        </section>
+
+        <!-- ================================================================
+             PANE 3: FORGOT PASSWORD (app.nestlancer.com/forgot-password)
+             ================================================================ -->
+        <section id="pane-forgot" data-tab-panel data-tab-group="auth" style="display: none;" hidden aria-labelledby="forgot-heading">
+          <div style="margin-bottom: var(--space-6);">
+            <div class="page-eyebrow mb-2">Account Recovery</div>
+            <h1 id="forgot-heading" class="text-xl font-semibold" style="margin-bottom: var(--space-1);">Reset your password</h1>
+            <p class="text-sm text-muted">Enter the email associated with your client account and we will send a time-limited reset link (valid for 15 minutes).</p>
+          </div>
+
+          <form action="02-auth-login-register.html" class="flex-col gap-4">
+            <div class="field-group">
+              <label for="reset-email" class="field-label">Registered email address <span style="color:var(--status-danger-dot);">*</span></label>
+              <input id="reset-email" type="email" class="input input-lg" placeholder="you@company.com" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full">Send secure reset link</button>
+          </form>
+
+          <div class="divider"></div>
+          <div class="text-xs text-muted">
+            Remembered your password? <button type="button" class="text-brand font-medium" style="background:none; border:none; cursor:pointer;" data-tab-group="auth" data-tab-target="pane-login">Return to sign in →</button>
+          </div>
+        </section>
+
+        <!-- ================================================================
+             PANE 4: OPERATOR SIGN-IN (admin.nestlancer.com/login)
+             ================================================================ -->
+        <section id="pane-operator" data-tab-panel data-tab-group="auth" style="display: none;" hidden aria-labelledby="operator-heading">
+          <div style="margin-bottom: var(--space-5);">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="status-badge tone-warning">Internal Only</span>
+              <span class="mono text-xs text-muted">admin.nestlancer.com</span>
+            </div>
+            <h1 id="operator-heading" class="text-xl font-semibold" style="margin-bottom: var(--space-1);">Operator console sign-in</h1>
+            <p class="text-sm text-muted">Restricted to Nestlancer administrators and studio operators. All sign-in attempts are rate-limited and written to the audit log.</p>
+          </div>
+
+          <!-- Pre-Auth Zero-Trust Posture Checklist (Matches live admin login IA) -->
+          <div class="panel mb-4" style="background: var(--surface-subtle);">
+            <div class="panel-header" style="padding: var(--space-2) var(--space-3);">
+              <span class="mono text-xs font-semibold">PRE-AUTH POSTURE</span>
+              <span class="mono text-xs text-muted">2 / 3 ready · Session TTL 8h</span>
+            </div>
+            <div style="padding: var(--space-2) var(--space-3);" class="flex-col gap-2">
+              <div class="flex items-center justify-between text-xs">
+                <span>Transport security (HTTPS + HSTS)</span>
+                <span class="status-badge tone-success">PASS</span>
+              </div>
+              <div class="flex items-center justify-between text-xs">
+                <span>Network policy (CSP nonce + HttpOnly)</span>
+                <span class="status-badge tone-success">PASS</span>
+              </div>
+              <div class="flex items-center justify-between text-xs">
+                <span>Operator identity &amp; TOTP challenge</span>
+                <span class="status-badge tone-warning">PENDING</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="08-admin-dashboard.html" class="flex-col gap-3">
+            <div class="field-group">
+              <label for="admin-email" class="field-label">Operator work email</label>
+              <input id="admin-email" type="email" class="input input-lg" value="admin@nestlancer.com" required />
+            </div>
+            <div class="field-group">
+              <label for="admin-pass" class="field-label">Password</label>
+              <input id="admin-pass" type="password" class="input input-lg" value="••••••••••••" required />
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-full mt-2">Enter Operator Console →</button>
+          </form>
+        </section>
+      </div>
+
+      <!-- Bottom Legal Bar -->
+      <div class="flex items-center justify-between text-xs text-muted">
+        <span>© 2026 Nestlancer Pvt Ltd</span>
+        <div class="flex items-center gap-4">
+          <a href="13-public-trust-verify.html" class="text-muted">Verify Document</a>
+          <a href="#terms" class="text-muted">Terms</a>
+          <a href="#privacy" class="text-muted">Privacy</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ====================================================================
+         RIGHT COLUMN: STUDIO TRUST & WORKSPACE PREVIEW (Zero Blurry Orbs)
+         ==================================================================== -->
+    <aside style="padding: var(--space-10); background: var(--neutral-2); display: flex; flex-direction: column; justify-content: center;">
+      <div style="max-width: 500px; margin: 0 auto; width: 100%;">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="status-badge tone-success">Client Portal · Live</span>
+          <span class="mono text-xs text-muted">SINGLE STUDIO WORKSPACE</span>
+        </div>
+
+        <h2 class="mkt-h2" style="margin-bottom: var(--space-3);">
+          Your delivery OS — from scoped brief to final payout.
+        </h2>
+        <p class="text-sm text-muted" style="margin-bottom: var(--space-6); line-height: var(--leading-relaxed);">
+          Same brand language as our public site: engineered panels, crisp <code class="mono">#0B7A71</code> signal, and tabular INR milestones you can audit at a glance.
+        </p>
+
+        <!-- Authentic Workspace Card Preview -->
+        <div class="panel" style="border-color: var(--neutral-7); box-shadow: var(--shadow-sm); overflow: hidden; margin-bottom: var(--space-5);">
+          <div class="panel-header" style="background: var(--surface-subtle);">
+            <div class="flex items-center gap-2">
+              <span class="mono text-xs font-semibold">NL-204 · Milestone 2</span>
+              <span class="status-badge tone-info">In progress</span>
+            </div>
+            <span class="mono text-xs font-semibold">68%</span>
+          </div>
+          <div class="panel-body">
+            <div class="text-base font-semibold mb-1">Corporate LMS for 200 Employees</div>
+            <div class="text-xs text-muted mb-3">Nair Learning Systems · Contract #NL-CTR-2026-000005</div>
+
+            <div class="progress-track mb-4">
+              <div class="progress-fill" style="width: 68%;"></div>
+            </div>
+
+            <div class="key-value-list">
+              <div class="kv-row">
+                <span class="kv-key">Deposit (30%)</span>
+                <span class="kv-val mono text-brand">₹15,660.00 · Paid</span>
+              </div>
+              <div class="kv-row">
+                <span class="kv-key">Mid-project installment (40%)</span>
+                <span class="kv-val mono">₹20,880.00 · Due on approval</span>
+              </div>
+              <div class="kv-row">
+                <span class="kv-key">Latest studio activity</span>
+                <span class="kv-val text-xs">Staging build pushed 14m ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Capability Pillars -->
+        <div class="grid-3" style="gap: var(--space-3);">
+          <div class="panel" style="padding: var(--space-3);">
+            <div class="text-xs font-semibold mb-1">Project Hub</div>
+            <p class="text-xs text-muted">Milestones, deliverables, and threads in one surface.</p>
+          </div>
+          <div class="panel" style="padding: var(--space-3);">
+            <div class="text-xs font-semibold mb-1">Milestone Gates</div>
+            <p class="text-xs text-muted">Pay deposit, mid, and final as work is approved.</p>
+          </div>
+          <div class="panel" style="padding: var(--space-3);">
+            <div class="text-xs font-semibold mb-1">Razorpay &amp; UPI</div>
+            <p class="text-xs text-muted">Tabular INR invoices and cryptographic receipts.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="ui.js"></script>
+</body>
+</html>
