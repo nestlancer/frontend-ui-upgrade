@@ -27,19 +27,61 @@
 
   /* ------------------------------------------------- off-canvas navigation */
   var shell = document.getElementById('app-shell');
-  function setNav(open) {
+  var navOpener = null;
+  var navMedia = window.matchMedia ? window.matchMedia('(max-width: 900px)') : null;
+  function syncNavInert(open) {
+    if (!shell || !navMedia) return;
+    var aside = shell.querySelector('.sidebar');
+    if (!aside) return;
+    if (navMedia.matches && !open) aside.setAttribute('inert', '');
+    else aside.removeAttribute('inert');
+  }
+  function setNav(open, opener) {
     if (!shell) return;
     shell.classList.toggle('sb-open', open);
+    syncNavInert(open);
     document.querySelectorAll('[data-sb-toggle]').forEach(function (b) {
       b.setAttribute('aria-expanded', open ? 'true' : 'false');
       b.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
     });
     if (open) {
+      navOpener = opener || document.activeElement || shell.querySelector('[data-sb-toggle]');
       var first = shell.querySelector('.sb-item');
       if (first) first.focus({ preventScroll: true });
+    } else {
+      var restore = navOpener || shell.querySelector('[data-sb-toggle]');
+      navOpener = null;
+      if (restore && restore.isConnected) restore.focus({ preventScroll: true });
     }
   }
   var isOpen = function () { return shell && shell.classList.contains('sb-open'); };
+  if (shell) {
+    syncNavInert(isOpen());
+    if (navMedia) {
+      var syncNavBreakpoint = function () {
+        var aside = shell.querySelector('.sidebar');
+        // At desktop width the sidebar is the permanent navigation rail; if a
+        // phone drawer was open during rotation, leave focus in that visible rail.
+        if (!navMedia.matches && isOpen()) {
+          shell.classList.remove('sb-open');
+          document.querySelectorAll('[data-sb-toggle]').forEach(function (b) {
+            b.setAttribute('aria-expanded', 'false');
+            b.setAttribute('aria-label', 'Open navigation');
+          });
+          navOpener = null;
+        }
+        // When a desktop rail becomes a closed phone drawer, move focus out
+        // before making the off-canvas navigation inert.
+        if (navMedia.matches && !isOpen() && aside && aside.contains(document.activeElement)) {
+          var mobileToggle = shell.querySelector('[data-sb-toggle]');
+          if (mobileToggle) mobileToggle.focus({ preventScroll: true });
+        }
+        syncNavInert(isOpen());
+      };
+      if (navMedia.addEventListener) navMedia.addEventListener('change', syncNavBreakpoint);
+      else if (navMedia.addListener) navMedia.addListener(syncNavBreakpoint);
+    }
+  }
 
   /* ------------------------------------------------------------ delegation */
   document.addEventListener('click', function (ev) {
@@ -52,7 +94,12 @@
       return;
     }
 
-    if (ev.target.closest('[data-sb-toggle]')) { setNav(!isOpen()); return; }
+    var navToggle = ev.target.closest('[data-sb-toggle]');
+    if (navToggle) {
+      if (isOpen()) setNav(false);
+      else setNav(true, navToggle);
+      return;
+    }
     if (ev.target.closest('[data-sb-close]')) { setNav(false); return; }
     if (shell && isOpen() && ev.target.closest('.sidebar a')) { setNav(false); }
 

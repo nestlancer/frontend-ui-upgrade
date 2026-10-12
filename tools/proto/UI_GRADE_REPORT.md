@@ -284,7 +284,7 @@ system-wide decision, and this table is the evidence behind it.
 
 The work order ends with ten per-page ship gates plus an explicit keyboard smoke. `tools/proto/upgrade/gate_sweep.mjs --all` checks every proto `index.html` route (including ungraded state pages and the sign-off hub); `tools/proto/upgrade/links.py` checks the internal link graph.
 
-The all-route sweep covers **188/188 pages**: 82 routes carry the 181 screenshot-grade rows; `--all` adds the other 105 app routes plus the sign-off hub. The first all-app pass found 18 ship-gate findings across 16 ungraded routes. Batch J closed them. Batch K verified that all 188 skip links also transfer keyboard focus correctly; the combined final sweep is green.
+The all-route sweep covers **188/188 pages**: 82 routes carry the 181 screenshot-grade rows; `--all` adds the other 105 app routes plus the sign-off hub. The first all-app pass found 18 ship-gate findings across 16 ungraded routes. Batch J closed them. Batch K verified all 188 skip-link focus handoffs. Batch L added per-route theme keyboard/persistence gates, mobile drawer focus/ARIA gates, and the native-dialog keyboard contract; the combined final sweep is green. Source markup has 188 theme-control routes (341 buttons), 152 mobile-navigation routes, and one dialog route. Browser coverage also visits `/apps/admin/`, which immediately redirects to its dashboard: the live-DOM totals are therefore 342 theme buttons and 153 nav-route visits, including that dashboard duplicate.
 
 | Ship gate | How it is checked | Result |
 |---|---|---|
@@ -299,7 +299,7 @@ The all-route sweep covers **188/188 pages**: 82 routes carry the 181 screenshot
 | Dark theme responds | force `data-theme=light`, then `dark`; assert both `--bg-app` and computed body background change | 188/188 pass |
 | Links resolve | `links.py`: every internal href/asset path on disk | 0 missing of 7,047 across 188 pages |
 
-Additional keyboard and skip-link smoke:
+Additional keyboard and interaction smoke:
 
 | Check | Browser test | Result |
 |---|---|---|
@@ -307,6 +307,23 @@ Additional keyboard and skip-link smoke:
 | Skip target is valid | `href="#main"` points to one visible `<main id="main" tabindex="-1">` | 188/188 pass |
 | Skip transfers focus | press Enter; URL becomes `#main` and `document.activeElement` becomes that main | 188/188 pass |
 | Focus stays visible | skip link and target both match `:focus-visible` with a >=2px outline | 188/188 pass |
+| Theme works by keyboard | Tab to a visible theme control, then Space; on menu-only routes, Tab to the prototype menu, press Enter, then Tab to Theme | 188/188 routes pass |
+| Theme state and label sync | after activation, assert `data-theme`, every `aria-pressed`, and visible `data-theme-label` agree | 188/188 routes pass |
+| Theme persists | reload after keyboard activation; assert saved value, theme, pressed state, and label are restored | 188/188 routes pass |
+| Closed mobile drawer is skipped | at 390px, first Tab reaches skip link and next reaches opener, never an off-screen sidebar item | 152 authored routes pass (153 route visits including `/apps/admin/` redirect) |
+| Mobile drawer opens accessibly | Enter updates `aria-expanded`/label, removes `inert`, and focuses a navigation item | 152 authored routes pass |
+| Escape closes mobile drawer | Escape closes, restores `inert` and closed ARIA, and returns focus to the opener | 152 authored routes pass |
+| Breakpoint synchronization | resize closed/open drawer; verify inert and ARIA state track the desktop/mobile rail | 152 authored routes pass |
+| Native dialog keyboard contract | Enter opens a modal dialog; Escape closes and restores opener focus | 1/1 dialog route pass |
+
+Batch L fixed the off-screen mobile navigation focus leak without changing resting-state visuals:
+
+| Fix | Result |
+|---|---|
+| Closed mobile sidebar links were still sequentially focusable | Apply `inert` only while the mobile drawer is closed; clear it on open and synchronize it at the 900px breakpoint |
+| Escape closed the drawer but left focus on the hidden nav item | Save the toggle that opened the drawer; restore focus to it on close and synchronize ARIA labels/expanded state |
+| Theme label/state/persistence were only checked on representative pages | Added a real keyboard + reload gate across every theme-control route and checked the live visible menu label |
+| Native dialog keyboard behavior lacked a repeatable regression check | Added Enter → `showModal()` → Escape → native focus-restoration coverage |
 
 Batch J follow-up, based on the first all-app sweep:
 
@@ -342,4 +359,4 @@ The `a11y_fix.py` repair passes that closed the graded-route findings are idempo
 
 The probe deliberately exempts three classes that are not defects: checkbox/radio measured through their carrier label, links inline in a sentence (WCAG 2.5.8), and `aria-hidden`/`tabindex="-1"` proxies.
 
-Re-run all routes: `cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/ && cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ LD_LIBRARY_PATH=/tmp/nsswrap/lib node gate_sweep.mjs --all` (about 9 minutes for 188 pages: desktop/mobile layout, a real Tab → Enter → main-focus path, and a reduced-motion reload).
+Re-run all routes: `cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/ && cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ LD_LIBRARY_PATH=/tmp/nsswrap/lib node gate_sweep.mjs --all` (about 21 minutes on the current sandbox for 188 routes: layout probes, skip-link keyboard focus, per-route theme activation and reload, mobile navigation open/Escape/breakpoint checks, the native dialog, and a reduced-motion reload).
