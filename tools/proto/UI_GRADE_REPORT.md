@@ -4,17 +4,17 @@
 
 ## 1. Headline
 
-- **174 of 181 screens reach A.** B: 7, C: 0, D: 0, F: 0.
-- Median score: **94.1** (target 90). Median content coverage against the audit notes is **100%**, so the main gap is content and states, followed by mobile layout and health.
-- Main systemic gaps: density differs (68), page length differs >40% (65).
-- The 5 weakest screens: 087-project-details-archive-confirmation.webp 89.0; 088-project-details-change-operator-dialog.webp 89.3; 091-project-details-update-status-dialog.webp 89.5; 043-project-files-document-preview-dialog.webp 89.5; 082-portfolio-item-analytics-panel.webp 89.7.
+- **176 of 181 screens reach A.** B: 5, C: 0, D: 0, F: 0.
+- Median score: **94.2** (target 90). Median content coverage against the audit notes is **100%**, so the main gap is content and states, followed by mobile layout and health.
+- Main systemic gaps: density differs (66), page length differs >40% (65).
+- The 5 weakest screens: 087-project-details-archive-confirmation.webp 89.0; 088-project-details-change-operator-dialog.webp 89.3; 091-project-details-update-status-dialog.webp 89.5; 043-project-files-document-preview-dialog.webp 89.5; 092-project-details-use-as-template-dialog.webp 90.0.
 
 ## 2. Grade summary
 
 | Grade | Score | Meaning | Screens |
 |---|---|---|---|
-| **A** | ≥90 | Ready to sign off: content matches, renders clean, usable at mobile width | 174 |
-| **B** | 80–89.9 | Close: minor gaps (copy, density, responsive) | 7 |
+| **A** | ≥90 | Ready to sign off: content matches, renders clean, usable at mobile width | 176 |
+| **B** | 80–89.9 | Close: minor gaps (copy, density, responsive) | 5 |
 | **C** | 70–79.9 | Partial: key content or states missing | 0 |
 | **D** | 60–69.9 | Weak: large content gap or layout/health issues | 0 |
 | **F** | <60 | Not usable as a screen match (missing page, render failure, or near-empty) | 0 |
@@ -25,7 +25,7 @@
 |---|---|---|---|---|---|---|
 | public | 17 | 17 | 0 | 0 | 0 | 0 |
 | clients | 45 | 44 | 1 | 0 | 0 | 0 |
-| admin | 119 | 113 | 6 | 0 | 0 | 0 |
+| admin | 119 | 115 | 4 | 0 | 0 | 0 |
 
 ## 3. Scoring method
 
@@ -42,7 +42,7 @@ Score = 0.50 × **Fidelity** + 0.30 × **Health** + 0.20 × **UX**.
 
 | Issue | Screens affected | Fix |
 |---|---|---|
-| density differs | 68 | Match row height and spacing to the screenshot density. |
+| density differs | 66 | Match row height and spacing to the screenshot density. |
 | page length differs >40% | 65 | Match the section count and table length of the screenshot. |
 
 ## 5. Per-screen grade and UI-assumption review table
@@ -98,7 +98,7 @@ Each row is one screenshot. *Assumption* = what the proto page assumes the user 
 | 45 | `admin/045-pipeline-projects.webp` | `apps/admin/pipeline/projects/` | exact | **A** | 95.4 | 92.8 | 100 | 95 | page length differs (proto 900px vs screenshot 1635px) | Primary action: Open AUDIT-P25 Fixture Hub; lead heading: Project Pipeline Hub | ☐ OK ☐ Revise ☐ Reject — |
 | 46 | `admin/046-pipeline-projects-details.webp` | `apps/admin/pipeline/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | exact | **A** | 95.0 | 92.0 | 100 | 95 | none | Primary action: Full ops view; lead heading: AUDIT-P25-20261005-73dhk Project Fixture · Corporate LMS for 200 Employees | ☐ OK ☐ Revise ☐ Reject — |
 | 47 | `admin/047-pipeline-users.webp` | `apps/admin/pipeline/users/` | exact | **A** | 94.1 | 90.2 | 100 | 95 | density differs | Primary action: Open Arjun Mehta Hub; lead heading: User Pipeline Hub | ☐ OK ☐ Revise ☐ Reject — |
-| 48 | `admin/048-portfolio-listing.webp` | `apps/admin/portfolio/` | exact | **B** | 90.0 | 82.0 | 100 | 95 | density differs | Primary action: New project; lead heading: Portfolio | ☐ OK ☐ Revise ☐ Reject — |
+| 48 | `admin/048-portfolio-listing.webp` | `apps/admin/portfolio/` | exact | **A** | 96.3 | 94.5 | 100 | 95 | none | Primary action: New item; lead heading: Portfolio | ☐ OK ☐ Revise ☐ Reject — |
 | 49 | `admin/049-portfolio-details-edit.webp` | `apps/admin/portfolio/01a10a2a-544e-757a-8806-721a7b8591dd/edit/` | exact | **A** | 91.9 | 85.8 | 100 | 95 | page length differs (proto 900px vs screenshot 1554px); density differs | Primary action: Save changes; lead heading: Edit: Banking Dashboard | ☐ OK ☐ Revise ☐ Reject — |
 | 50 | `admin/050-portfolio-new.webp` | `apps/admin/portfolio/new/` | exact | **A** | 94.1 | 90.2 | 100 | 95 | none | Primary action: Publish; lead heading: New portfolio project | ☐ OK ☐ Revise ☐ Reject — |
 | 51 | `admin/051-profile.webp` | `apps/admin/profile/` | exact | **A** | 93.9 | 89.9 | 100 | 95 | page length differs (proto 900px vs screenshot 500px) | Primary action: Edit profile; lead heading: Your profile | ☐ OK ☐ Revise ☐ Reject — |
@@ -132,7 +132,7 @@ Each row is one screenshot. *Assumption* = what the proto page assumes the user 
 | 79 | `admin/079-messages-group-members-panel.webp` | `apps/admin/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/` | exact | **A** | 94.6 | 91.2 | 100 | 95 | page length differs (proto 900px vs screenshot 500px) | Primary action: Send; lead heading: Direct conversation with Arjun Mehta · Karthik Menon | ☐ OK ☐ Revise ☐ Reject — |
 | 80 | `admin/080-messages-reply-composer.webp` | `apps/admin/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/` | exact | **A** | 93.7 | 89.4 | 100 | 95 | page length differs (proto 900px vs screenshot 500px) | Primary action: Send; lead heading: Direct conversation with Arjun Mehta · Karthik Menon | ☐ OK ☐ Revise ☐ Reject — |
 | 81 | `admin/081-payment-details-awaiting-payment.webp` | `apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/` | exact | **A** | 94.4 | 90.9 | 100 | 95 | density differs | Primary action: Update status; lead heading: ₹3,000.00 COMPLETED · ₹36,000.00 — UTR PUNB1023456 | ☐ OK ☐ Revise ☐ Reject — |
-| 82 | `admin/082-portfolio-item-analytics-panel.webp` | `apps/admin/portfolio/` | exact | **B** | 89.7 | 81.4 | 100 | 95 | density differs | Primary action: New project; lead heading: Portfolio | ☐ OK ☐ Revise ☐ Reject — |
+| 82 | `admin/082-portfolio-item-analytics-panel.webp` | `apps/admin/portfolio/` | exact | **A** | 95.9 | 93.8 | 100 | 95 | none | Primary action: New item; lead heading: Portfolio | ☐ OK ☐ Revise ☐ Reject — |
 | 83 | `admin/083-project-delivery-add-milestone-dialog.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | exact | **A** | 90.2 | 82.5 | 100 | 95 | density differs | Primary action: Create milestone · Message pod; lead heading: Razorpay Settlement Reconciliation Engine | ☐ OK ☐ Revise ☐ Reject — |
 | 84 | `admin/084-project-delivery-deliverable-preview.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | exact | **A** | 95.5 | 93.0 | 100 | 95 | none | Primary action: Create milestone · Message pod; lead heading: Razorpay Settlement Reconciliation Engine | ☐ OK ☐ Revise ☐ Reject — |
 | 85 | `admin/085-project-delivery-upload-deliverable-form.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | exact | **A** | 90.7 | 83.3 | 100 | 95 | density differs | Primary action: Create milestone · Message pod; lead heading: Razorpay Settlement Reconciliation Engine | ☐ OK ☐ Revise ☐ Reject — |
@@ -241,11 +241,39 @@ Each row is one screenshot. *Assumption* = what the proto page assumes the user 
 | `admin/088-project-details-change-operator-dialog.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | 89.3 | B | page length differs (proto 900px vs screenshot 533px) |
 | `admin/091-project-details-update-status-dialog.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | 89.5 | B | page length differs (proto 900px vs screenshot 533px) |
 | `clients/043-project-files-document-preview-dialog.webp` | `apps/web/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8/` | 89.5 | B | page length differs (proto 900px vs screenshot 500px) |
-| `admin/082-portfolio-item-analytics-panel.webp` | `apps/admin/portfolio/` | 89.7 | B | density differs |
-| `admin/048-portfolio-listing.webp` | `apps/admin/portfolio/` | 90.0 | B | density differs |
 | `admin/092-project-details-use-as-template-dialog.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | 90.0 | B | page length differs (proto 900px vs screenshot 533px) |
 | `admin/075-media-create-share-link-dialog.webp` | `apps/admin/media/` | 90.1 | A | density differs |
 | `admin/083-project-delivery-add-milestone-dialog.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | 90.2 | A | density differs |
 | `clients/037-global-search-client-dialog.webp` | `apps/web/dashboard/` | 90.6 | A | density differs |
 | `admin/085-project-delivery-upload-deliverable-form.webp` | `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/` | 90.7 | A | density differs |
 | `clients/005-messages-inbox.webp` | `apps/web/messages/inbox/` | 90.7 | A | page length differs (proto 900px vs screenshot 500px) |
+| `clients/034-files-archive-preview-dialog.webp` | `apps/web/settings/files/` | 90.7 | A | density differs |
+| `admin/029-notifications.webp` | `apps/admin/notifications/` | 90.8 | A | page length differs (proto 900px vs screenshot 5028px) |
+
+## 7. Remaining below A — per-route decision
+
+Five screens sit just under the A line (89.0-90.0). They are one shape, not five bugs, and the honest
+reading of the numbers is that chasing them would make the product worse — so this section is the decision
+record, not a to-do list.
+
+| Screens | Capture | Why below A | Decision |
+|---|---|---|---|
+| `admin/087`, `admin/088`, `admin/091`, `admin/092` | 533px crop: a dialog over a dimmed page | Fidelity terms only. Ink density 0.07-0.20 vs our ~0.40, and 1533px of capture content against the 900px app frame. Coverage is 1.00, health 100, UX 95 — nothing is missing. | **Not chased.** The density term rewards a *less* legible page: matching it means dimming the working UI behind every dialog on `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/`, a route that serves 12 screens. Four sibling screens would regress for a 0.4-point gain on four. The capture records a modal *moment*, and its dimming is the screenshot's own visual noise, not a design of the page. Our `::backdrop` deliberately stops at rgba(.48) + 2px blur so the page behind stays readable while the dialog is open (a WCAG-driven adaptation). |
+| `clients/043` | 500px crop: document-preview dialog | Same shape as above; the route serves 7 client screens | **Not chased**, same reasoning. |
+
+### The frame question, settled by measurement
+
+`admin/048` and `admin/082` were the other members of this group: full-page captures (1409px, 1496px) graded
+against the 900px app frame, and they were fixed by *building what the capture shows* (see below), not by
+changing the frame. A frame-release opt-in (`app-flow`, letting a route scroll as one document at desktop
+widths) was prototyped and measured before being reverted:
+
+| Route | Framed (shipped) | Frame released | Delta |
+|---|---|---|---|
+| `admin/048` | 96.3 | 95.8 | -0.5 |
+| `admin/082` | 95.9 | 95.2 | -0.7 |
+
+Releasing the frame is a wash-to-negative here — the 900px frame is what the dialog-crop captures expect —
+and it would introduce a second desktop layout mode for every future page. The app frame stays a single
+system-wide decision, and this table is the evidence behind it.
+

@@ -97,5 +97,25 @@ L.append("\n## 6. Proto pages with the lowest grades (for priority)\n")
 low=sorted(s,key=lambda x:x['score'])[:12]
 L.append("| Screenshot | Proto page | Score | Grade | Main issue |\n|---|---|---|---|---|")
 for x in low: L.append(f"| `{x['file']}` | `{x['proto']}/` | {x['score']} | {x['grade']} | {esc(x['issues'][0] if x['issues'] else '—')} |")
+L.append("\n## 7. Remaining below A — per-route decision\n")
+L.append("""Five screens sit just under the A line (89.0-90.0). They are one shape, not five bugs, and the honest
+reading of the numbers is that chasing them would make the product worse — so this section is the decision
+record, not a to-do list.\n
+| Screens | Capture | Why below A | Decision |
+|---|---|---|---|
+| `admin/087`, `admin/088`, `admin/091`, `admin/092` | 533px crop: a dialog over a dimmed page | Fidelity terms only. Ink density 0.07-0.20 vs our ~0.40, and 1533px of capture content against the 900px app frame. Coverage is 1.00, health 100, UX 95 — nothing is missing. | **Not chased.** The density term rewards a *less* legible page: matching it means dimming the working UI behind every dialog on `apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/`, a route that serves 12 screens. Four sibling screens would regress for a 0.4-point gain on four. The capture records a modal *moment*, and its dimming is the screenshot's own visual noise, not a design of the page. Our `::backdrop` deliberately stops at rgba(.48) + 2px blur so the page behind stays readable while the dialog is open (a WCAG-driven adaptation). |
+| `clients/043` | 500px crop: document-preview dialog | Same shape as above; the route serves 7 client screens | **Not chased**, same reasoning. |
+\n### The frame question, settled by measurement\n
+`admin/048` and `admin/082` were the other members of this group: full-page captures (1409px, 1496px) graded
+against the 900px app frame, and they were fixed by *building what the capture shows* (see below), not by
+changing the frame. A frame-release opt-in (`app-flow`, letting a route scroll as one document at desktop
+widths) was prototyped and measured before being reverted:\n
+| Route | Framed (shipped) | Frame released | Delta |
+|---|---|---|---|
+| `admin/048` | 96.3 | 95.8 | -0.5 |
+| `admin/082` | 95.9 | 95.2 | -0.7 |
+\nReleasing the frame is a wash-to-negative here — the 900px frame is what the dialog-crop captures expect —
+and it would introduce a second desktop layout mode for every future page. The app frame stays a single
+system-wide decision, and this table is the evidence behind it.\n""")
 open('/home/user/frontend-ui-upgrade/tools/proto/UI_GRADE_REPORT.md','w').write('\n'.join(L)+'\n')
 print('written', len(L), 'lines; grades', dict(cnt)); print(iss.most_common(12))

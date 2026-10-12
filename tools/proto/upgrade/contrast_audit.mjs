@@ -50,19 +50,34 @@ const probe = `(() => {
     g: fg.g * fg.a + bg.g * (1 - fg.a),
     b: fg.b * fg.a + bg.b * (1 - fg.a), a: 1,
   });
-  // Returns null when an ancestor paints a gradient/image: backgroundColor
-  // reports transparent there, so any ratio computed would be a false positive.
+  // Effective background: walk up to the first *opaque* background, then
+  // composite any translucent layers found on the way back down. A translucent
+  // layer over an assumed white base would report a light surface that does not
+  // exist on screen, so the base is the opaque ancestor (or the document
+  // background when there is none).
   const bgOf = el => {
-    let n = el, acc = null;
+    const layers = [];
+    let n = el;
     while (n && n.nodeType === 1) {
       const cs = getComputedStyle(n);
-      if (cs.backgroundImage !== 'none') return null;
+      if (cs.backgroundImage !== 'none') return null;   // gradient/image: unmeasurable
       const c = parse(cs.backgroundColor);
-      if (c && c.a > 0) { acc = acc ? blend(acc, c) : c; if (acc.a >= 0.999) return acc; }
+      if (c && c.a > 0) {
+        if (c.a >= 0.999) {
+          let base = c;
+          for (let i = layers.length - 1; i >= 0; i--) base = blend(layers[i], base);
+          return base;
+        }
+        layers.push(c);
+      }
       n = n.parentElement;
     }
-    return acc && acc.a >= 0.999 ? acc : { r: 255, g: 255, b: 255, a: 1 };
+    const doc = parse(getComputedStyle(document.documentElement).backgroundColor);
+    let base = doc && doc.a >= 0.999 ? doc : { r: 255, g: 255, b: 255, a: 1 };
+    for (let i = layers.length - 1; i >= 0; i--) base = blend(layers[i], base);
+    return base;
   };
+
   const ratio = (a, b) => {
     const l1 = lum(a.r, a.g, a.b), l2 = lum(b.r, b.g, b.b);
     return ((Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05));
