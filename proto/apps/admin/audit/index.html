@@ -7,6 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  main#main, main.content { min-height: 6555px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,14 +66,28 @@
 <main id="main" class="content">
 <div class="phead">
 <div class="min-w-0">
-  <div class="eyebrow"><span class="dot"></span>GOVERNANCE</div>
-  <h1 class="ptitle">Audit log</h1>
+  <div class="eyebrow"><span class="dot"></span>GOVERNANCE · SECURITY</div>
+  <h1 class="ptitle">Audit Logs · Audit log</h1>
   <p class="psub">Every authenticated mutation across the platform. Immutable, exportable, and your first stop for “who did what”.</p>
 </div>
-<div class="phead-actions"><button class="btn btn-secondary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export CSV</button></div>
+<div class="phead-actions"><button class="btn btn-secondary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export CSV</button><button class="btn btn-primary">Verify &amp; Export Audit Trail</button></div>
 </div>
-<div class="filterbar mb-4"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search actor, meta, id…"></div><select class="select sm"><option>All categories</option><option>Auth</option><option>Admin</option><option>Billing</option><option>Content</option><option>Media</option><option>Messaging</option></select><select class="select sm"><option>All levels</option><option>Info</option><option>Warning</option><option>Critical</option></select><input class="input sm" type="date" style="width:150px"></div>
+
+<div class="panel mb-5">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Security Overview</h2><div class="panel-sub">Authentication, privilege, and impersonation telemetry across the operator boundary</div></div><span class="badge tone-brand"><span class="dot"></span>Immutable Ledger</span></div>
+  <div class="stats" style="border:none;border-radius:0;box-shadow:none;grid-template-columns:repeat(6,1fr)">
+    <div class="stat"><div class="stat-label">Failed Logins</div><div class="stat-value">24</div><div class="stat-note">Rate-limited challenges</div></div>
+    <div class="stat"><div class="stat-label">Account Lockouts</div><div class="stat-value">14</div><div class="stat-note">Auto-cooldown active</div></div>
+    <div class="stat"><div class="stat-label">Role Changes</div><div class="stat-value">3</div><div class="stat-note">Privilege mutations</div></div>
+    <div class="stat"><div class="stat-label">Suspend/Unsuspend</div><div class="stat-value">2</div><div class="stat-note">Account status actions</div></div>
+    <div class="stat"><div class="stat-label">Impersonation Events</div><div class="stat-value">1</div><div class="stat-note">Audited support session</div></div>
+    <div class="stat"><div class="stat-label">Password Resets</div><div class="stat-value">15</div><div class="stat-note">Operator &amp; user flows</div></div>
+  </div>
+</div>
+
+<div class="filterbar mb-4"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search actor, meta, id…"></div><select class="select sm"><option>All categories</option><option>Auth</option><option>Admin</option><option>Billing</option><option>Content</option><option>Media</option><option>Messaging</option></select><select class="select sm"><option>All levels</option><option>Info</option><option>Warning</option><option>Critical</option></select><input class="input sm" type="date" style="width:150px"><button class="btn btn-secondary btn-sm ml-auto">Clear</button></div>
 <div class="panel">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Full Audit Trail</h2><div class="panel-sub">All platform, operator, and system mutations in chronological order</div></div><span class="badge tone-neutral mono">128 events</span></div>
   <div class="tbl-wrap"><table class="tbl tbl-compact ">
 <thead><tr><th>Time</th><th>Action</th><th>Actor</th><th>Category</th><th>Entity</th><th>IP</th></tr></thead>
 <tbody><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 18:10:2</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">LOGIN_SUCCESS</span></td><td><span class="text-xs dim">riya@nestlancer…</span></td><td><span class="badge tone-info">auth</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">user:f8e12…</span></td><td><span class="mono text-xs dim">103.210.51.14</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 18:04:56</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">PAYMENT_RECEIVED</span></td><td><span class="text-xs dim">system</span></td><td><span class="badge tone-warning">billing</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">invoice:NL-INV-2026-000008</span></td><td><span class="mono text-xs dim">—</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 17:58:31</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">REQUEST_STATUS_CHANGED</span></td><td><span class="text-xs dim">riya@nestlancer…</span></td><td><span class="badge tone-info">admin</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">request:6a4110f3…</span></td><td><span class="mono text-xs dim">103.210.51.14</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 17:52:10</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">MEDIA_UPLOADED</span></td><td><span class="text-xs dim">priya.nair@…</span></td><td><span class="badge tone-info">media</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">file:41b2c9…</span></td><td><span class="mono text-xs dim">49.36.188.10</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 17:41:02</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">QUOTE_SENT</span></td><td><span class="text-xs dim">riya@nestlancer…</span></td><td><span class="badge tone-warning">billing</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">quote:01a10f80…</span></td><td><span class="mono text-xs dim">103.210.51.14</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 17:22:44</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">CACHE_CLEARED</span></td><td><span class="text-xs dim">sunita@nestlanc…</span></td><td><span class="badge tone-neutral">system</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">cache:post-lists</span></td><td><span class="mono text-xs dim">—</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 17:18:05</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">LOGIN_FAILURE</span></td><td><span class="text-xs dim">—</span></td><td><span class="badge tone-danger">auth</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">user:8b3f1c…</span></td><td><span class="mono text-xs dim">185.220.101.4</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 17:02:39</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">REQUEST_SUBMITTED</span></td><td><span class="text-xs dim">arjun.mehta@…</span></td><td><span class="badge tone-info">requests</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">request:6a4110f3…</span></td><td><span class="mono text-xs dim">103.220.18.14</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 16:55:12</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">EMAIL_TEMPLATE_UPDATED</span></td><td><span class="text-xs dim">riya@nestlancer…</span></td><td><span class="badge tone-neutral">system</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">template:quote-sent</span></td><td><span class="mono text-xs dim">103.210.51.14</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">Oct 10 16:40:55</span></td><td><span class="mono font-semibold" style="font-size:11px;letter-spacing:.01em">USER_ROLE_CHANGED</span></td><td><span class="text-xs dim">riya@nestlancer…</span></td><td><span class="badge tone-info">admin</span></td><td><span class="mono text-xs" style="font-family:var(--font-mono);color:var(--ink-2)">user:dc2a90…</span></td><td><span class="mono text-xs dim">103.210.51.14</span></td></tr></tbody></table></div>
@@ -83,7 +102,7 @@
 <div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Events per hour</div><div class="panel-sub">Today</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Events per hour</h2><div class="panel-sub">Today</div></div></div>
   <div class="panel-body"><svg viewBox="0 0 560 170" width="100%" height="170" preserveAspectRatio="none" style="display:block">
   <defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-8)" stop-opacity=".22"/><stop offset="1" stop-color="var(--brand-8)" stop-opacity="0"/></linearGradient></defs>
   <line x1="4" x2="556" y1="42.5" y2="42.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="85" y2="85" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="127.5" y2="127.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/>
@@ -95,14 +114,67 @@
 </div>
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Top categories</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Top categories</h2></div></div>
   <div class="panel-body"><svg viewBox="0 0 560 170" width="100%" height="170" style="display:block">
   <rect x="24.6" y="26.8" width="58.9" height="125.2" rx="4" fill="var(--brand-8)"/><rect x="116.6" y="94.6" width="58.9" height="57.4" rx="4" fill="var(--t-warning-dot)"/><rect x="208.6" y="110.3" width="58.9" height="41.7" rx="4" fill="var(--t-info-dot)"/><rect x="300.6" y="120.7" width="58.9" height="31.3" rx="4" fill="var(--line-strong)"/><rect x="392.6" y="128.5" width="58.9" height="23.5" rx="4" fill="var(--line-strong)"/><rect x="484.6" y="139.0" width="58.9" height="13.0" rx="4" fill="var(--t-danger-dot)"/>
 </svg><div class="flex justify-between text-xs dim mono"><span style="width:16.666666666666668%;text-align:center">auth</span><span style="width:16.666666666666668%;text-align:center">billing</span><span style="width:16.666666666666668%;text-align:center">admin</span><span style="width:16.666666666666668%;text-align:center">media</span><span style="width:16.666666666666668%;text-align:center">messaging</span><span style="width:16.666666666666668%;text-align:center">system</span></div></div>
   
 </div>
 </div>
-<div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div>Reads of PII-heavy records (user 360s, payment 360s, message controllers) are also logged under <span class="mono">VIEW_*</span> actions — that is the surveillance boundary. Operators can&#39;t mute it.</div></div></main>
+<div class="panel mt-5">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Public Audit Trail</h2><div class="panel-sub">Unauthenticated &amp; pre-session actions (contact submissions, verification lookups, webhook ingress)</div></div><span class="badge tone-info mono">Public Boundary</span></div>
+  <div class="tbl-wrap"><table class="tbl tbl-compact">
+    <thead><tr><th>Actor</th><th>Action</th><th>Entity</th><th>IP</th><th>User Agent</th><th>Timestamp</th></tr></thead>
+    <tbody>
+      <tr><td class="mono text-xs">admin@nestlancer.com</td><td class="mono font-semibold text-xs">VERIFY_DOCUMENT_LOOKUP</td><td class="mono text-xs dim">invoice:NL-INV-2026-000008</td><td class="mono text-xs dim">103.210.51.14</td><td class="text-xs dim">Mozilla/5.0 (Macintosh; Intel Mac OS X)</td><td class="mono text-xs dim">Oct 10, 2026 6:12 PM</td></tr>
+      <tr><td class="mono text-xs">sandeep.chopra@fleet.in</td><td class="mono font-semibold text-xs">CONTACT_INQUIRY_CREATED</td><td class="mono text-xs dim">contact:01a10a2e-4f64</td><td class="mono text-xs dim">49.36.188.10</td><td class="text-xs dim">Mozilla/5.0 (X11; Linux x86_64)</td><td class="mono text-xs dim">Oct 10, 2026 5:45 PM</td></tr>
+      <tr><td class="mono text-xs">razorpay-webhook</td><td class="mono font-semibold text-xs">WEBHOOK_SIGNATURE_VERIFIED</td><td class="mono text-xs dim">payment:pay_P8xK29mQ10</td><td class="mono text-xs dim">52.66.141.22</td><td class="text-xs dim">Razorpay-Webhook/v1</td><td class="mono text-xs dim">Oct 10, 2026 5:18 PM</td></tr>
+      <tr><td class="mono text-xs">karthik.menon@upiswitch.io</td><td class="mono font-semibold text-xs">QUOTE_PUBLIC_LINK_OPENED</td><td class="mono text-xs dim">quote:01a10f80-e01a</td><td class="mono text-xs dim">103.220.18.14</td><td class="text-xs dim">Mozilla/5.0 (Windows NT 10.0)</td><td class="mono text-xs dim">Oct 10, 2026 4:50 PM</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<div class="panel mt-5">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">User Audit Trail</h2><div class="panel-sub">Client portal mutations, MFA enrollments, session revocations, and password resets</div></div><span class="badge tone-success mono">34 active users</span></div>
+  <div class="tbl-wrap"><table class="tbl tbl-compact">
+    <thead><tr><th>Actor</th><th>Action</th><th>Resource</th><th>IP</th><th>User Agent</th><th>Timestamp</th></tr></thead>
+    <tbody>
+      <tr><td class="mono text-xs">arjun.mehta@craft.in</td><td class="mono font-semibold text-xs">USER_SESSION_CREATED</td><td class="mono text-xs dim">user:01a10a2a-a99a-7578-825a-c7de8bce4d2b</td><td class="mono text-xs dim">103.220.18.14</td><td class="text-xs dim">Chrome 130 · macOS</td><td class="mono text-xs dim">Oct 10, 2026 6:04 PM</td></tr>
+      <tr><td class="mono text-xs">priya.nair@edtech.co</td><td class="mono font-semibold text-xs">PASSWORD_RESET_COMPLETED</td><td class="mono text-xs dim">user:01a10a2a-b12c</td><td class="mono text-xs dim">49.36.188.10</td><td class="text-xs dim">Safari 18 · iOS</td><td class="mono text-xs dim">Oct 10, 2026 5:31 PM</td></tr>
+      <tr><td class="mono text-xs">ananya.iyer@finrecon.in</td><td class="mono font-semibold text-xs">DELIVERABLE_APPROVED</td><td class="mono text-xs dim">project:01a10a2b-5eaa-769e-a5d9-0d58fcca6924</td><td class="mono text-xs dim">103.210.51.14</td><td class="text-xs dim">Firefox 132 · Linux</td><td class="mono text-xs dim">Oct 10, 2026 4:22 PM</td></tr>
+      <tr><td class="mono text-xs">vikram.shah@export.in</td><td class="mono font-semibold text-xs">QUOTE_ACCEPTED_SIGNED</td><td class="mono text-xs dim">quote:01a10f80-e01a-4d90-bd1c-86a026ad71f9</td><td class="mono text-xs dim">106.51.72.90</td><td class="text-xs dim">Chrome 130 · Windows</td><td class="mono text-xs dim">Oct 10, 2026 3:15 PM</td></tr>
+    </tbody>
+  </table></div>
+</div>
+
+<div class="panel mt-5 mb-5">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Impersonation Sessions</h2><div class="panel-sub">Mandatory justification log for every operator support impersonation session</div></div><span class="badge tone-warning mono">1 recorded</span></div>
+  <div class="panel-row">
+    <div class="min-w-0">
+      <div class="font-semibold text-sm mono">Operator admin@nestlancer.com → Target user 01a10a2a-a99a-7578-825a-c7de8bce4d2b (Arjun Mehta)</div>
+      <div class="text-xs dim mt-1">Reason: Investigating invoice GST HSN code display discrepancy reported in support ticket #NL-409 · Duration: 14m 22s · IP 103.210.51.14</div>
+    </div>
+    <span class="badge tone-neutral mono">ENDED · AUDITED</span>
+  </div>
+</div>
+
+<div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div>Reads of PII-heavy records (user 360s, payment 360s, message controllers) are also logged under <span class="mono">VIEW_*</span> actions — that is the surveillance boundary. Operators can&#39;t mute it.</div></div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body is-expanded">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Audit · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/065-audit-logs-overview.webp</span></div><p>System &gt; Audit logs: security overview — total users 34; active 34; suspended 0; two-factor enabled 0; failed logins (24h) 1; active sessions 26. System audit logs (GET /admin/audit, 50 entries, scrollable): mostly LOGIN auth events Oct 10, 2026 9:56–11:53 AM by admin@nestlancer.com (IP 136.86.144.132 and 34.83.1.1), arjun.mehta, priya.nair, ananya.iyer, rahul.desai, samira.patel, sandeep.chopra, kavya.reddy, pooja.kulkarni, karthik.menon, rajan.kumar. Auth audit logs (GET /admin/logs, 50 entries) same LOGIN pattern. User admin logs: IMPERSONATION_START / IMPERSONATION_END entries Oct 5–7, 2026 by admin@nestlancer.com (IP 172.18.0.18; user agents Wget and node). Impersonation sessions list: 17 ended sessions, admin 31cde339… → user 01a10a2a-a99a… (audit reasons BV-P0-PROBE, AUDIT-P31-2026100x-…, &quot;test&quot;); all status ended.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>active admin agents ananya arjun audit audit-p chopra desai enabled ended entries events failed impersonation karthik kavya kulkarni kumar login logins mehta menon mostly nestlancer overview patel pattern pooja priya probe rahul rajan reasons reddy samira sandeep scrollable security sessions start suspended system total two-factor users 136.86 144.132 172.18 2026 2026100 339</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

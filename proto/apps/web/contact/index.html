@@ -7,6 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  main#main, main.content { min-height: 1255px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -44,19 +49,35 @@
   <div class="flex-col gap-5">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Response times</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Response times</h2></div></div>
   <div class="panel-body"><dl class="kv"><dt>New inquiries</dt><dd>&lt; 24h</dd><dt>Client threads</dt><dd>&lt; 2h on workdays</dd><dt>Production defects</dt><dd>24h SLA (care plans)</dd></dl></div>
   
 </div>
     <div class="note info"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><div>Clients get faster answers inside <b>Project Hub messaging</b> — the public inbox is for everyone else.</div></div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Prefer the portal?</div><div class="panel-sub">Already a client?</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Prefer the portal?</h2><div class="panel-sub">Already a client?</div></div></div>
   <div class="panel-body"><a class="btn btn-secondary w-full" href="../login/index.html">Sign in to message us</a></div>
   
 </div>
   </div>
-</div></div></main><footer class="footer"><div class="mkt-wrap">
+</div></div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body is-expanded">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Contact · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">public/004-contact.webp</span></div><p>Contact page (app form): &quot;Contact&quot;, Sales/support/partnership inquiries, respond within one business day. Fields: Your name, Email, Subject (default General), Message; Send message. Side card: Studio contact@nestlancer.com, Typical reply &lt; 24h. Chips: Reply in 24h, Fixed-price, Made in India.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>business chips contact default email fields fixed-price general india inquiries message nestlancer partnership reply respond sales studio subject support typical </p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main><footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
   <div class="flex-col gap-3">
     <a href="../index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">

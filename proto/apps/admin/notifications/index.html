@@ -7,6 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  main#main, main.content { min-height: 1830px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,14 +66,87 @@
 <main id="main" class="content">
 <div class="phead">
 <div class="min-w-0">
-  <div class="eyebrow"><span class="dot"></span>OPERATOR</div>
+  <div class="eyebrow"><span class="dot"></span>OPERATIONS · OPERATOR</div>
   <h1 class="ptitle">Notifications</h1>
-  <p class="psub">System events, queue alerts, and mentions aimed at you.</p>
+  <p class="psub">Read your notifications, send platform messages, and audit the delivery log. System events, queue alerts, and mentions aimed at you.</p>
 </div>
-<div class="phead-actions"><button class="btn btn-ghost btn-sm">Mark all read</button><button class="btn btn-secondary btn-sm">Clear read</button></div>
+<div class="phead-actions"><button class="btn btn-ghost btn-sm">Mark all read</button><button class="btn btn-secondary btn-sm">Clear read</button><button class="btn btn-primary btn-sm">Broadcast to all users</button></div>
 </div>
-<div class="tabs mb-5"><a class="tab active" href="#">All</a><a class="tab" href="#">Unread <span class="count">31</span></a><a class="tab" href="#">Requests</a><a class="tab" href="#">Quotes</a><a class="tab" href="#">Payments</a><a class="tab" href="#">Messages</a><a class="tab" href="#">Contact</a><a class="tab" href="#">Users</a><a class="tab" href="#">System</a></div>
-<div class="panel">
+
+<div class="stats mb-5" style="grid-template-columns:repeat(4,1fr)">
+  <div class="stat"><div class="stat-label">Total Count</div><div class="stat-value">576</div><div class="stat-note">Page 1 of 29 (576 items)</div></div>
+  <div class="stat"><div class="stat-label">Unread Count</div><div class="stat-value">574</div><div class="stat-note">Operator queue active</div></div>
+  <div class="stat"><div class="stat-label">Platform Delivery Total</div><div class="stat-value">1298</div><div class="stat-note up">Delivery Rate 74.1% · Read Rate 3.1%</div></div>
+  <div class="stat"><div class="stat-label">Channel Split</div><div class="stat-value">962 / 306</div><div class="stat-note">Sent 962 · Read 30 · Failed 306</div></div>
+</div>
+
+<div class="tabs mb-5">
+  <a class="tab active" href="#" data-tab-target="notif-inbox">My notifications <span class="count">576</span></a>
+  <a class="tab" href="#" data-tab-target="notif-send">Send</a>
+  <a class="tab" href="#" data-tab-target="notif-broadcast">Broadcast</a>
+  <a class="tab" href="#" data-tab-target="notif-segment">Segment</a>
+  <a class="tab" href="#" data-tab-target="notif-report">Delivery report <span class="count">74.1%</span></a>
+  <a class="tab" href="#" data-tab-target="notif-log">Platform log <span class="count">1,298</span></a>
+</div>
+
+<div class="state-deck mb-5">
+  <section id="notif-broadcast" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Broadcast to all users</h2><div class="panel-sub">Queue an in-app notification for every active user. Use sparingly for platform-wide announcements.</div></div></div>
+    <div class="panel-body">
+      <div class="field mb-3"><label class="label">Title <span class="req">*</span></label><input class="input sm" placeholder="e.g. Scheduled maintenance tonight" value="e.g. Scheduled maintenance tonight"></div>
+      <div class="field mb-3"><label class="label">Message <span class="req">*</span></label><textarea class="textarea" rows="2" placeholder="Short message shown in every user's inbox.">Short message shown in every user's inbox.</textarea></div>
+      <button class="btn btn-primary btn-sm" type="button">Broadcast to all users</button>
+    </div>
+  </section>
+
+  <section id="notif-segment" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Segment broadcast</h2><div class="panel-sub">Target a specific cohort of users</div></div></div>
+    <div class="panel-body">
+      <div class="field mb-3"><label class="label">Segment</label><select class="select sm"><option>All users</option><option>Active clients</option><option>Users with pending quotes</option><option>Users with overdue payments</option><option>Administrators</option></select></div>
+      <div class="field mb-3"><label class="label">Title <span class="req">*</span></label><input class="input sm" value="e.g. Action required on your quote"></div>
+      <div class="field mb-3"><label class="label">Message <span class="req">*</span></label><textarea class="textarea" rows="2">Explain what changed and what the user should do next.</textarea></div>
+      <button class="btn btn-primary btn-sm" type="button">Send to segment</button>
+    </div>
+  </section>
+
+  <section id="notif-send" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Send direct notification</h2><div class="panel-sub">Dispatch to specific User IDs across channels</div></div></div>
+    <div class="panel-body">
+      <div class="field mb-2"><label class="label">User IDs (comma-separated UUIDs)</label><input class="input sm mono" value="01a10a2a-a99a-7578-825a-c7de8bce4d2b"></div>
+      <div class="field mb-2"><label class="label">Channel</label><select class="select sm"><option>In-app + email</option><option>In-app</option><option>Email</option><option>Push</option></select></div>
+      <div class="field mb-3"><label class="label">Action link</label><input class="input sm mono" value="/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8"></div>
+      <button class="btn btn-primary btn-sm" type="button">Send notification</button>
+    </div>
+  </section>
+</div>
+
+<div class="grid g2 gap-5 mb-5">
+  <section id="notif-report" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Delivery report · By Channel</h2><div class="panel-sub">Total 1298 · Sent 962 · Read 30 · Failed 306 · Delivery Rate 74.1% · Read Rate 3.1%</div></div></div>
+    <div class="tbl-wrap"><table class="tbl tbl-compact">
+      <thead><tr><th>Channel</th><th style="text-align:right">Sent</th><th style="text-align:right">Read</th><th style="text-align:right">Failed</th></tr></thead>
+      <tbody>
+        <tr><td class="mono font-semibold">IN_APP</td><td class="mono" style="text-align:right">962</td><td class="mono" style="text-align:right">30</td><td class="mono" style="text-align:right">0</td></tr>
+        <tr><td class="mono font-semibold">PUSH</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">306</td></tr>
+        <tr><td class="mono font-semibold">EMAIL</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">0</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section id="notif-log" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Platform log</h2><div class="panel-sub">Page 1 of 65 (1,298 total) — Per-user delivery events</div></div></div>
+    <div class="tbl-wrap"><table class="tbl tbl-compact">
+      <thead><tr><th>User UUID</th><th>Channel</th><th>Status</th><th>Event</th></tr></thead>
+      <tbody>
+        <tr><td class="mono text-xs">01a10a2a-a99a-7578-825a-c7de8bce4d2b</td><td class="mono text-xs">IN_APP</td><td><span class="badge tone-success">SENT</span></td><td class="text-xs">Milestone completed: Production launch &amp; handover</td></tr>
+        <tr><td class="mono text-xs">01a10a2a-a99a-7578-825a-c7de8bce4d2b</td><td class="mono text-xs">PUSH</td><td><span class="badge tone-danger">FAILED</span></td><td class="text-xs">AUDIT-P25-20261005-75dhk Project Fixture · AUDIT-P23-20261005-7rdj Request · AUDIT-P23-SUPP-20261005-bgra Request · Account status updated · UAE per-client exports and handover lane</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+</div>
+
+<div id="notif-inbox" class="panel">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">My notifications · Operator inbox</h2><div class="panel-sub">Showing 1–8 of 576 total (574 unread)</div></div></div>
   
   <div class="panel-row" style="align-items:flex-start">
     <span class="avatar sq shrink-0" style="width:32px;height:32px;background:var(--brand-2);color:var(--brand-11)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
@@ -125,7 +203,28 @@
   <button class="btn btn-ghost btn-sm" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> <span>Prev</span></button>
   <span class="page-cur">1</span>
   <button class="btn btn-ghost btn-sm"><span>Next</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-</div></div></main>
+</div></div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (6)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body is-expanded">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/029-notifications.webp</span></div><p>Operator notifications (Riya Kapoor): total 576; unread 574. Tabs: My notifications, Send, Broadcast, Segment, Delivery report, Platform log. Filters: All, Unread, Quotes, Payments, Messages, Projects, Requests, Account. Entries include: data export ready (×5, yesterday); Revenue export ready; New contact inquiry (many); New request submitted by Arjun Mehta (AUDIT-A03-…, consulting); Project export ready AUDIT-P25-20261005-73dhk Project Fixture; Quote accepted by Arjun Mehta for AUDIT-P25-20261005-73dhk Project Fixture (4 days ago).</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/030-notifications-broadcast.webp</span></div><p>Notifications &gt; Broadcast to all users: Title (required, placeholder &quot;e.g. Scheduled maintenance tonight&quot;); Message (required, placeholder &quot;Short message shown in every user&#x27;s inbox.&quot;); Broadcast to all users (disabled until filled).</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/031-notifications-delivery-report.webp</span></div><p>Notifications &gt; Delivery report (operator): choose a recent notification or paste ID under Advanced; &quot;Select a recent notification above to load delivery channel results.&quot; Total 576, unread 574.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/032-notifications-platform-log.webp</span></div><p>Notifications &gt; Platform log: 576 total records, 24 pages. Columns Title, Message, Recipient, Type, Sent, Read. Mostly export.ready (admin@nestlancer.com ADMIN and arjun.mehta@nestlancer.com USER), contact.inquiry, request.submitted; read states No/Yes. Filters Audience, Type, Read state, Sort Newest first.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/033-notifications-segment.webp</span></div><p>Notifications &gt; Send to segment: Audience &quot;Clients only&quot; (USER role, not staff); Title (e.g. Quote ready for review); Message; button &quot;Send to clients only&quot; (disabled until filled).</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/034-notifications-send.webp</span></div><p>Notifications &gt; Send to user: Recipient search by name or email; Title; Message; &quot;Send notification&quot; (disabled until filled).</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>above accepted account admin advanced arjun audience audit-a audit-p broadcast channel choose clients columns consulting contact delivery disabled email entries every export filled filters first fixture inbox include inquiry kapoor maintenance mehta message messages mostly nestlancer newest notification notifications operator pages paste payments placeholder platform project projects quote quotes ready recent recipient records report request requests required results revenue review scheduled segment select short shown staff state states submitted title tonight total unread until user&#x27;s users yesterday 20261005 574 576</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

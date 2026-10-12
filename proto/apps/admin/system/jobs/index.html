@@ -79,7 +79,7 @@
 <div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Dead-letter queue</div><div class="panel-sub">2 entries — automatic retries exhausted</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Dead-letter queue</h2><div class="panel-sub">2 entries — automatic retries exhausted</div></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl tbl-compact ">
 <thead><tr><th>Job</th><th>Payload</th><th>Failed</th><th></th></tr></thead>
 <tbody><tr><td><span class="mono" style="font-size:11px">email-send</span></td><td><span class="mono text-xs">template:payment-received · user:dc2a90</span></td><td>Oct 9, 4:12 PM</td><td><button class="btn btn-secondary btn-xs">Replay</button></td></tr><tr><td><span class="mono" style="font-size:11px">webhook-deliver</span></td><td><span class="mono text-xs">ep:9f1c · event:project.milestone.approved</span></td><td>Oct 8, 9:41 AM</td><td><button class="btn btn-secondary btn-xs">Replay</button></td></tr></tbody></table></div></div>
@@ -87,7 +87,7 @@
 </div>
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Runtime profile</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Runtime profile</h2></div></div>
   <div class="panel-body"><div class="flex items-center gap-5">
 <svg width="120" height="120" viewBox="0 0 120 120"><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--bg-subtle)" stroke-width="14"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-success-dot)" stroke-width="14" stroke-dasharray="209.44 41.89" stroke-dashoffset="0.00"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-warning-dot)" stroke-width="14" stroke-dasharray="41.89 209.44" stroke-dashoffset="-209.44"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-danger-dot)" stroke-width="14" stroke-dasharray="0.00 251.33" stroke-dashoffset="-251.33"/></svg>
 <div class="flex-col gap-2"><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-success-dot);width:8px;height:8px"></i><span class="muted">Healthy</span><b class="mono ml-auto" style="font-size:12px">5 jobs</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-warning-dot);width:8px;height:8px"></i><span class="muted">Slow</span><b class="mono ml-auto" style="font-size:12px">1 job</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-danger-dot);width:8px;height:8px"></i><span class="muted">Failed</span><b class="mono ml-auto" style="font-size:12px">0 jobs</b></div></div></div></div>

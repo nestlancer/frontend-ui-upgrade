@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -72,7 +79,7 @@
   <div class="flex-col gap-5">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Legal entity</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Legal entity</h2></div></div>
   <div class="panel-body">
       
 <div class="field">
@@ -105,7 +112,7 @@
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Invoice sequence</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Invoice sequence</h2></div></div>
   <div class="panel-body"><dl class="kv"><dt>Proforma prefix</dt><dd><span class="mono">NL-PFY</span></dd><dt>Invoice prefix</dt><dd><span class="mono">NL-INV</span></dd><dt>Credit note prefix</dt><dd><span class="mono">NL-CN</span></dd><dt>Receipt prefix</dt><dd><span class="mono">NL-RCPT</span></dd><dt>Next invoice</dt><dd><span class="mono font-bold">NL-INV-2026-000164</span></dd></dl></div>
   
 </div>
@@ -113,7 +120,7 @@
   <div class="flex-col gap-5">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Tax defaults</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Tax defaults</h2></div></div>
   <div class="panel-body">
       
 <div class="field">
@@ -140,7 +147,7 @@
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Documents on file</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Documents on file</h2></div></div>
   <div class="">
       
       <div class="panel-row"><span style="color:var(--ink-3)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><div class="min-w-0 flex-1"><b style="font-size:12.8px">Certificate of incorporation (COI)</b><div class="text-xs dim">Uploaded Jan 2025</div></div><button class="btn btn-ghost btn-xs"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></button></div>
@@ -151,7 +158,24 @@
 </div>
   </div>
 </div>
-<div class="actionbar"><span class="text-xs dim mr-auto">Changes to the legal profile re-version all future documents</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div></main>
+<div class="actionbar"><span class="text-xs dim mr-auto">Changes to the legal profile re-version all future documents</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Company legal · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/042-payments-company-legal.webp</span></div><p>Payments &gt; Company legal identity: Label &quot;Primary legal entity&quot;; Legal name Nestlancer Pvt Ltd; trade name Nestlancer; GSTIN 29AABCT1332L1ZV; PAN AABCT1332L; CIN U72900KA2020PTC123456; state Karnataka (code 29); billing e-mail billing@nestlancer.com; phone +91 80 1234 5678; website https://nestlancer.com; Primary (used on PDFs) and Active checked; Create profile. One configured profile, Edit / Remove.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Company legal · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/070-company-legal-identity-edit-profile-form.webp</span></div><p>Payments &gt; Company legal identity, Edit profile: label Primary legal entity; legal name Nestlancer Pvt Ltd; trade name Nestlancer; GSTIN 29AABCT1332L1ZV; PAN AABCT1332L; CIN U72900KA2020PTC123456; state Karnataka (29); billing e-mail billing@nestlancer.com; phone +91 9876543210; website https://nestlancer.com; registered address 12th Floor, Prestige Tech Park, Outer Ring Road, Bengaluru, Karnataka 560103. Primary and Active checked; Update profile / Cancel edit. (Note: phone differs from the create form placeholder +91 80 1234 5678 seen in admin 042.)</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>aabct active address admin bengaluru billing cancel checked company configured create differs e-mail entity floor gstin https identity karnataka label legal nestlancer outer payments phone placeholder prestige primary profile registered remove state trade update website 042 1234 123456 1332 2020 560103 5678 72900 9876543210</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

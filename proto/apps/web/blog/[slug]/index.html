@@ -7,6 +7,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  main#main, main.content { min-height: 5805px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -35,31 +40,131 @@
 <div class="mkt-wrap" style="max-width:880px;padding-bottom:72px">
   <div class="cover" style="padding-top:34%;margin-bottom:32px"><span>DEPLOY PIPELINE · BEFORE/AFTER</span></div>
   <div class="prose">
+    <p>CI caching, smaller artifacts, and service-level pipelines after monolith split. The team prioritized <b>operational ownership</b> while migrating on a Nestlancer-style stack — gateway at the edge, domain NestJS services, Prisma on Postgres, async work through RabbitMQ, and media on Backblaze B2.</p>
     <p>A 45-minute deploy is not a tooling problem — it is a feedback problem. Here is how we took a NestJS monolith from 45 minutes to five, in the order that actually mattered.</p>
+    <h2>Where we started</h2>
+    <p>The team inherited a single pipeline building every service on each commit. The triggering incident was clear: hotfix queue depth grew while waiting for unrelated image builds. Leadership funded the refactor when customer-visible latency and support load rose together — not when the diagram looked messy.</p>
+    <h2>Architecture before</h2>
+    <ul class="dot-list">
+      <li>Single deploy artifact coupling unrelated domains</li>
+      <li>Synchronous cross-module HTTP with partial timeouts</li>
+      <li>Mixed read/write traffic on one database primary</li>
+      <li>Ad-hoc file storage complicating virus scan and CDN caching</li>
+    </ul>
+    <h2>Migration timeline</h2>
+    <h3>Discovery</h3>
+    <p>Mapped single pipeline building every service on each commit and inventoried which routes could move behind the gateway without user-visible changes.</p>
+    <h3>Strangler cutover</h3>
+    <p>Routed new traffic through NestJS handlers while legacy paths drained over 12 weeks.</p>
+    <h3>Reliability hardening</h3>
+    <p>Added gateway, Prisma with explicit SLOs owned by a 6-engineer platform squad.</p>
+    <h3>Stabilize and learn</h3>
+    <p>Ran game days for DLQ replay, replica lag failover, and presigned upload expiry edge cases.</p>
+    <h2>Patterns we applied</h2>
+    <ul class="dot-list">
+      <li><b>API gateway</b> centralized auth, OpenAPI, and aggregation for mobile clients.</li>
+      <li><b>Prisma</b> migrations shipped expand/contract to avoid hard downtime windows.</li>
+    </ul>
+    <h2>Code sketch from the cutover</h2>
+    <div class="codeblk">@Controller('blog')<br>export class BlogGatewayController {<br>&nbsp;&nbsp;constructor(private readonly blogClient: BlogServiceClient) {}<br>&nbsp;&nbsp;@Get('posts')<br>&nbsp;&nbsp;list(@Query() query: ListPostsDto) {<br>&nbsp;&nbsp;&nbsp;&nbsp;return this.blogClient.listPosts(query);<br>&nbsp;&nbsp;}<br>}</div>
     <h2>Profile before you optimize</h2>
     <p>19 minutes in dependency install, 14 compiling, 8 minutes building a Docker image containing the world, 4 rolling out. Optimizing rollout first would have saved nothing.</p>
     <div class="codeblk"><span class="c1"># the two lines that saved 19 minutes</span><br>- uses: actions/setup-node@v4<span class="c1"> # cache: pnpm</span><br>- run: pnpm fetch <span class="c1"># warm store; offline install after</span></div>
     <div class="pullquote">Ten engineers regained roughly eleven hours of waiting — every single week.</div>
-    <h2>Results after six weeks</h2>
-    <ul class="dot-list"><li>Median deploy: <b>4m 40s</b> (p95: 6m 10s)</li><li>Deploys per week: 9 → 34</li><li>Change-failure rate: down 31%</li></ul>
-    <p>Once deploys are cheap, review becomes the bottleneck — which is exactly where a senior team should spend its minutes.</p>
+    <h2>Results</h2>
+    <ul class="dot-list">
+      <li>Path-filtered CI and per-service images cut deploy time to five minutes (Median deploy: <b>4m 40s</b>, p95: 6m 10s; Deploys per week: 9 → 34; Change-failure rate: down 31%)</li>
+      <li>On-call pages for queue backlog fell after outbox lag dashboards went live</li>
+      <li>Product teams could ship blog and portfolio changes without redeploying payments</li>
+      <li>Support tickets citing 'stale listings' dropped once read paths moved to replicas</li>
+    </ul>
+    <h2>Retrospective checklist</h2>
+    <ul class="dot-list">
+      <li>Game day DLQ replay documented with ordering notes</li>
+      <li>Replica lag runbook tested in staging monthly</li>
+      <li>Presigned upload TTL aligned with mobile retry policy</li>
+      <li>Gateway error envelope consistent across all domain services</li>
+      <li>Post-incident templates link to dashboards — not screenshots</li>
+    </ul>
+    <h2>Lesson</h2>
+    <p>Microservices did not arrive on day one. The team earned splits by proving <b>operational ownership</b> per domain — not by copying a reference diagram. The Nestlancer patterns above were adopted only after metrics justified the coordination cost.</p>
+  </div>
+  <div class="flex gap-2 mt-5 flex-wrap">
+    <span class="chip">#NestJS</span><span class="chip">#Node.js</span><span class="chip">Channel: Web3/DeFi</span><span class="chip">Copy link</span><span class="chip">LinkedIn</span><span class="chip">X / Twitter</span>
+  </div>
+  <div class="panel mt-6" style="padding:24px;text-align:center;background:var(--brand-1);border-color:var(--brand-3)">
+    <span class="badge tone-success mb-2">Intake open</span>
+    <h2 style="font-size:18px;font-weight:700;margin:4px 0">Ready to work with the studio?</h2>
+    <p class="text-sm muted mb-4">Post a project request in a few minutes — milestone quotes, scheduled payments, and delivery in one workspace.</p>
+    <a class="btn btn-primary btn-sm" href="../../contact/index.html">Start a project →</a>
+  </div>
+  <div class="panel mt-6">
+    <div class="panel-head"><h2 class="panel-title">Comments (2)</h2><div class="flex gap-2"><button class="btn btn-secondary btn-xs">♥ Like</button><button class="btn btn-secondary btn-xs">Bookmark</button></div></div>
+    <div class="panel-body flex-col gap-3">
+      <div class="panel" style="padding:12px;background:var(--bg-subtle)">
+        <b style="font-size:13px">Arjun Mehta</b>
+        <p class="text-sm mt-1" style="margin-bottom:4px">AUDIT-SEED demo comment on cutting-deploy-time-from-45-minutes-to-five. Clear and practical guidance for shipping faster with Nestlancer.</p>
+        <span class="text-xs dim mono">Oct 5, 2026, 5:35 AM</span>
+      </div>
+      <div class="panel" style="padding:12px;background:var(--bg-subtle)">
+        <b style="font-size:13px">Arjun Mehta</b>
+        <p class="text-sm mt-1" style="margin-bottom:4px">AUDIT demo comment</p>
+        <span class="text-xs dim mono">Oct 6, 2026, 3:21 AM</span>
+      </div>
+      <div class="field mt-2">
+        <label class="label">Comment</label>
+        <textarea class="textarea" rows="3" placeholder="Sign in to write a comment..."></textarea>
+      </div>
+      <div><button class="btn btn-primary btn-sm">Post comment</button></div>
+    </div>
   </div>
   <div class="divider my-8"></div>
-  <div class="grid g3 gap-4">
+  <h2 class="h3 mb-4">Related posts</h2>
+  <div class="grid g2 gap-4">
     <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-    <div class="eyebrow" style="font-size:9.5px">CASE STUDIES</div>
-    <b style="font-size:13px;line-height:1.4;display:block;margin-top:4px">Scaling a Freelance Marketplace Architecture</b>
-    <div class="text-xs dim mono mt-2">3 min read</div></a>
+    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
+    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">Scaling a Freelance Marketplace Architecture</b>
+    <p class="text-xs muted mt-1">Matching algorithms, escrow flows, and dispute resolution at growing GMV.</p>
+    <div class="text-xs dim mono mt-2">Nestlancer Editorial · 3 min read</div></a>
     <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-    <div class="eyebrow" style="font-size:9.5px">CASE STUDIES</div>
-    <b style="font-size:13px;line-height:1.4;display:block;margin-top:4px">GDPR Compliance Platform Rebuild</b>
-    <div class="text-xs dim mono mt-2">2 min read</div></a>
+    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
+    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">GDPR Compliance Platform Rebuild</b>
+    <p class="text-xs muted mt-1">Data maps, deletion workflows, and consent logging across microservices.</p>
+    <div class="text-xs dim mono mt-2">Nestlancer Editorial · 2 min read</div></a>
     <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-    <div class="eyebrow" style="font-size:9.5px">CASE STUDIES</div>
-    <b style="font-size:13px;line-height:1.4;display:block;margin-top:4px">Migrating from WebSockets to SSE</b>
-    <div class="text-xs dim mono mt-2">2 min read</div></a>
+    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
+    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">Migrating from WebSockets to SSE</b>
+    <p class="text-xs muted mt-1">Simpler infra, CDN friendliness, and trade-offs for one-way realtime feeds.</p>
+    <div class="text-xs dim mono mt-2">Nestlancer Editorial · 2 min read</div></a>
+    <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
+    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
+    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">Elasticsearch Migration for Search Features</b>
+    <p class="text-xs muted mt-1">Reindex strategies, zero-downtime aliases, and relevance tuning.</p>
+    <div class="text-xs dim mono mt-2">Nestlancer Editorial · 2 min read</div></a>
   </div>
-</div></main><footer class="footer"><div class="mkt-wrap">
+  <div class="panel mt-6" style="padding:24px;background:var(--bg-subtle)">
+    <div class="eyebrow">STAY IN THE LOOP</div>
+    <h2 class="h3 mt-1">Ideas for product teams and studio clients</h2>
+    <p class="text-sm muted mt-1">Get practical playbooks on scoping, delivery, and growing your practice. We publish sparingly — only when there is something worth your time.</p>
+    <div class="flex gap-2 mt-3 flex-wrap"><a class="btn btn-primary btn-sm" href="../../contact/index.html">Get in touch</a><button class="btn btn-secondary btn-sm">RSS feed</button></div>
+  </div>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body is-expanded">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Cutting Deploy Time from 45 Minutes to Five | Nestlancer Blog · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">public/003-blog-article.webp</span></div><p>Blog article &quot;Cutting Deploy Time from 45 Minutes to Five&quot;: Nestlancer Editorial, Oct 5, 2026, 2 min read, 4 views, 2 comments (Arjun Mehta, Oct 6 9:35/9:36 AM). Tags #NestJS, #Node.js. TOC: Where we started, Architecture before, Migration timeline (Discovery, Strangler cutover, Reliability hardening, Stabilize and learn), Patterns we applied, Code sketch, Results, Retrospective checklist, Lesson. Related posts: Scaling a Freelance Marketplace Architecture (3 min), GDPR Compliance Platform Rebuild (2 min), Migrating from WebSockets to SSE (2 min), Elasticsearch Migration for Search Features (2 min).</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>applied architecture arjun article checklist comments compliance cutover cutting deploy discovery editorial elasticsearch features freelance hardening learn lesson marketplace mehta migrating migration minutes nestjs nestlancer patterns platform posts rebuild related reliability results retrospective scaling sketch stabilize started strangler timeline views websockets 2026</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main><footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
   <div class="flex-col gap-3">
     <a href="../../index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">

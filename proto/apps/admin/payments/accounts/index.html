@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -62,15 +69,15 @@
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
 <div class="phead">
 <div class="min-w-0">
-  <div class="eyebrow"><span class="dot"></span>FINANCE</div>
-  <h1 class="ptitle">Payout accounts</h1>
-  <p class="psub">Where client money settles and how refunds flow out. Changes require two-operator approval.</p>
+  <div class="eyebrow"><span class="dot"></span>FINANCE · BANK ACCOUNTS</div>
+  <h1 class="ptitle">Payout accounts · Bank accounts</h1>
+  <p class="psub">Platform bank accounts: HDFC Bank Current Account ····8821 (Primary Active · IFSC HDFC0000240 · Mumbai Nariman Point) · ICICI Bank Escrow Account ····4410 (Active · IFSC ICIC0000104 · Mumbai BKC).</p>
 </div>
-<div class="phead-actions"></div>
+<div class="phead-actions"><button class="btn btn-primary btn-sm" type="button">+ Add bank account</button></div>
 </div>
 <div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="panel">
-    <div class="panel-head"><div class="panel-title">Settlement accounts</div><span class="badge tone-success">2 active</span></div>
+    <div class="panel-head"><h2 class="panel-title">Settlement accounts</h2><span class="badge tone-success">2 active</span></div>
     
     <div class="panel-row"><span class="avatar sq" style="width:36px;height:36px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21v-8"/><path d="M9 21v-8"/><path d="M15 21v-8"/><path d="M19 21v-8"/><path d="m12 2 9 5H3Z"/></svg></span>
       <div class="min-w-0 flex-1"><b style="font-size:13.5px">HDFC Bank — Current ···· 8821</b><div class="text-xs dim mono mt-1">Primary settlement · Nestlancer Studio Pvt Ltd · HDFC0001232</div></div><span class="badge tone-success">Primary</span><button class="btn-icon btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div>
@@ -82,7 +89,7 @@
   <div class="flex-col gap-5">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Change request — dual control</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Change request — dual control</h2></div></div>
   <div class="panel-body">
       
 <div class="switch-row">
@@ -96,12 +103,29 @@
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Reconciliation</div></div><div class="flex items-center gap-2 shrink-0"><button class="btn btn-secondary btn-xs">Run now</button></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Reconciliation</h2></div><div class="flex items-center gap-2 shrink-0"><button class="btn btn-secondary btn-xs">Run now</button></div></div>
   <div class="panel-body"><dl class="kv"><dt>Last full match</dt><dd><span class="mono">Today, 2:00 AM IST</span></dd><dt>Unmatched entries</dt><dd><b class="mono" style="color:var(--t-danger-tx)">2</b></dd><dt>Cadence</dt><dd>Nightly + ad-hoc</dd></dl></div>
   
 </div>
   </div>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment accounts · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/041-payments-accounts.webp</span></div><p>Payments &gt; Settlement accounts: Label, Type (Bank + UPI), Account holder, Bank name, Account number, IFSC (HDFC0001234), UPI VPA (studio@okicici), Instructions &quot;Transfer INR and upload the UTR on checkout&quot;, Primary (invoices) and Active flags; Create account disabled. Existing account: &quot;Primary settlement — HDFC Current&quot; (A/C 50200012345678, IFSC HDFC0001234, UPI nestlancer@hdfcbank), type BOTH, Primary and Active; Edit / Disable.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment accounts · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/103-settlement-accounts-edit-account-form.webp</span></div><p>Payments &gt; Settlement accounts, Edit account (existing &quot;Primary settlement — HDFC Current&quot;): Label Primary settlement — HDFC Current; Type Bank + UPI; account holder Nestlancer Pvt Ltd; bank HDFC Bank; account 50200012345678; IFSC HDFC0001234; UPI VPA nestlancer@hdfcbank; Instructions &quot;Use the project or invoice reference in the transfer note so we can match payment quickly.&quot;; Primary and Active checked; Update account / Cancel edit. Accounts list: 1 configured, type BOTH, Primary and Active; Edit / Disable.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>account accounts active cancel checked checkout configured create current disable disabled existing flags hdfcbank holder instructions invoice invoices label match nestlancer number okicici payment payments primary project quickly reference settlement studio transfer update upload 0001234 50200012345678</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

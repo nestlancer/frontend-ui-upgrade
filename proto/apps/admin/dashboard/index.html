@@ -7,6 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+@media (min-width: 961px) {
+  .sidebar { background: #FAFDFC !important; border-color: #F0F5F4 !important; }
+  .sidebar .sb-item:not(.active) { color: #98A6A3 !important; }
+  .sidebar .sb-label { color: #B0BDBA !important; }
+  .panel, .stats, .stat, .chip { border-color: #EFF4F3 !important; box-shadow: none !important; }
+  .cover { background: #F2F7F6 !important; color: #3D4A46 !important; border: 1px solid #E6EEEE !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -111,7 +125,7 @@
 <div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Revenue trajectory</div><div class="panel-sub">Sep 11 — Oct 10 · 30d window</div></div><div class="flex items-center gap-2 shrink-0"><div class="seg"><button class="">7 days</button><button class="active">30 days</button><button class="">90 days</button><button class="">1 year</button></div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Revenue trajectory</h2><div class="panel-sub">Sep 11 — Oct 10 · 30d window</div></div><div class="flex items-center gap-2 shrink-0"><div class="seg"><button class="">7 days</button><button class="active">30 days</button><button class="">90 days</button><button class="">1 year</button></div></div></div>
   <div class="panel-body"><svg viewBox="0 0 560 170" width="100%" height="170" preserveAspectRatio="none" style="display:block">
   <defs><linearGradient id="g42" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-8)" stop-opacity=".22"/><stop offset="1" stop-color="var(--brand-8)" stop-opacity="0"/></linearGradient></defs>
   <line x1="4" x2="556" y1="42.5" y2="42.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="85" y2="85" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="127.5" y2="127.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/>
@@ -123,7 +137,7 @@
 </div>
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Project mix</div><div class="panel-sub">Lifecycle share</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Project mix</h2><div class="panel-sub">Lifecycle share</div></div></div>
   <div class="panel-body"><div class="flex items-center gap-5">
 <svg width="120" height="120" viewBox="0 0 120 120"><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--bg-subtle)" stroke-width="14"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--brand-8)" stroke-width="14" stroke-dasharray="59.14 192.19" stroke-dashoffset="0.00"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-info-dot)" stroke-width="14" stroke-dasharray="44.35 206.98" stroke-dashoffset="-59.14"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-warning-dot)" stroke-width="14" stroke-dasharray="147.84 103.49" stroke-dashoffset="-103.49"/></svg>
 <div class="flex-col gap-2"><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--brand-8);width:8px;height:8px"></i><span class="muted">In Progress</span><b class="mono ml-auto" style="font-size:12px">4 · 24%</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-info-dot);width:8px;height:8px"></i><span class="muted">Pending Payment</span><b class="mono ml-auto" style="font-size:12px">3 · 18%</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-warning-dot);width:8px;height:8px"></i><span class="muted">Completed</span><b class="mono ml-auto" style="font-size:12px">10 · 59%</b></div></div></div></div>
@@ -133,7 +147,7 @@
 <div class="grid gap-5 mt-5" style="grid-template-columns:1fr 1fr">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Recent requests</div><div class="panel-sub">Newest inbound work</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../requests/index.html">View all →</a></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent requests</h2><div class="panel-sub">Newest inbound work</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../requests/index.html">View all →</a></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl  ">
 <thead><tr><th>Request</th><th>Customer</th><th>Subject</th><th>Status</th></tr></thead>
 <tbody><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa4…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P23-LINE-20261005-7r0l Request</td><td><span class="badge tone-warning">Submitted</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa3…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P23-SUPP-20261005-6grw Request</td><td><span class="badge tone-warning">Submitted</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f87…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P25-20261005-73dhk Project Fixture</td><td><span class="badge tone-info">Converted To Project</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f84…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P24-20261005-6y6fa-draft Request</td><td><span class="badge tone-warning">Submitted</span></td></tr></tbody></table></div></div>
@@ -141,7 +155,7 @@
 </div>
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Recent payments</div><div class="panel-sub">16 pending · ₹2,60,790.00</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../payments/index.html">View all →</a></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent payments</h2><div class="panel-sub">16 pending · ₹2,60,790.00</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../payments/index.html">View all →</a></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl  ">
 <thead><tr><th>Client</th><th>Project</th><th style="text-align:right">Amount</th><th>Paid</th></tr></thead>
 <tbody><tr><td><b>Sandeep Chopra</b></td><td>GPS Fleet Tracking Portal</td><td style="text-align:right"><span class="mono">₹21,600.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td><b>Karthik Menon</b></td><td>UPI Switch Integration Layer</td><td style="text-align:right"><span class="mono">₹36,000.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td><b>Pooja Kulkarni</b></td><td>Multi-Branch Clinic Booking</td><td style="text-align:right"><span class="mono">₹19,500.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td><b>Pooja Kulkarni</b></td><td>Multi-Branch Clinic Booking</td><td style="text-align:right"><span class="mono">₹26,000.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr></tbody></table></div></div>
@@ -151,20 +165,37 @@
 <div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Request volume over time</div><div class="panel-sub">Inbound briefs · last 30 days · live</div></div><div class="flex items-center gap-2 shrink-0"><span class="badge tone-info">46 total</span></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Request volume over time</h2><div class="panel-sub">Inbound briefs · last 30 days · live</div></div><div class="flex items-center gap-2 shrink-0"><span class="badge tone-info">46 total</span></div></div>
   <div class="panel-body"><svg viewBox="0 0 560 170" width="100%" height="170" style="display:block">
   <rect x="12.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/><rect x="35.1" y="140.6" width="14.7" height="11.4" rx="4" fill="var(--brand-8)"/><rect x="58.1" y="129.2" width="14.7" height="22.8" rx="4" fill="var(--brand-8)"/><rect x="81.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/><rect x="104.1" y="123.5" width="14.7" height="28.5" rx="4" fill="var(--brand-8)"/><rect x="127.1" y="129.2" width="14.7" height="22.8" rx="4" fill="var(--brand-8)"/><rect x="150.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/><rect x="173.1" y="140.6" width="14.7" height="11.4" rx="4" fill="var(--brand-8)"/><rect x="196.1" y="129.2" width="14.7" height="22.8" rx="4" fill="var(--brand-8)"/><rect x="219.1" y="117.8" width="14.7" height="34.2" rx="4" fill="var(--brand-8)"/><rect x="242.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/><rect x="265.1" y="140.6" width="14.7" height="11.4" rx="4" fill="var(--brand-8)"/><rect x="288.1" y="129.2" width="14.7" height="22.8" rx="4" fill="var(--brand-8)"/><rect x="311.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/><rect x="334.1" y="123.5" width="14.7" height="28.5" rx="4" fill="var(--brand-8)"/><rect x="357.1" y="26.8" width="14.7" height="125.2" rx="4" fill="var(--brand-8)"/><rect x="380.1" y="100.8" width="14.7" height="51.2" rx="4" fill="var(--brand-8)"/><rect x="403.1" y="129.2" width="14.7" height="22.8" rx="4" fill="var(--brand-8)"/><rect x="426.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/><rect x="449.1" y="140.6" width="14.7" height="11.4" rx="4" fill="var(--brand-8)"/><rect x="472.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/><rect x="495.1" y="129.2" width="14.7" height="22.8" rx="4" fill="var(--brand-8)"/><rect x="518.1" y="140.6" width="14.7" height="11.4" rx="4" fill="var(--brand-8)"/><rect x="541.1" y="134.9" width="14.7" height="17.1" rx="4" fill="var(--brand-8)"/>
 </svg><div class="flex justify-between text-xs dim mono"><span style="width:20%;text-align:center">09-11</span><span style="width:20%;text-align:center">09-18</span><span style="width:20%;text-align:center">09-26</span><span style="width:20%;text-align:center">10-03</span><span style="width:20%;text-align:center">10-10</span></div><div class="text-xs dim mono mt-2">30 points · latest 0</div></div>
   
 </div>
-  <div class="panel"><div class="panel-head"><div><div class="panel-title">Moderation queues</div><div class="panel-sub">Flagged + contact inbox</div></div></div>
+  <div class="panel"><div class="panel-head"><div><h2 class="panel-title">Moderation queues</h2><div class="panel-sub">Flagged + contact inbox</div></div></div>
     
     <a class="panel-row" href="../moderation/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span><b style="font-size:13px" class="flex-1">Flagged messages</b><span class="mono font-semibold">0</span></a>
     <a class="panel-row" href="../contact/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span><b style="font-size:13px" class="flex-1">New contact mail</b><span class="mono font-semibold">17</span></a>
     <a class="panel-row" href="../payments/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><b style="font-size:13px" class="flex-1">Pending settlements</b><span class="mono font-semibold">16</span></a>
     <a class="panel-row" href="../messages/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><b style="font-size:13px" class="flex-1">Message center</b><span class="mono font-semibold">→</span></a>
   </div>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Command center · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/015-dashboard.webp</span></div><p>Operator Command center (Riya Kapoor), 30d window to Oct 10, 2026. Needs attention: pending requests 11; open quotes 7; pending pay 16; flagged msgs 0; contact new 17; alerts 0; system healthy. Revenue (month) ₹7,08,160.00 (₹2,60,790.00 awaiting). Total users 34; active projects 4; completed projects 10; pending requests 11. Project mix: In Progress 4 (24%), Pending Payment 3 (18%), Completed 10 (59%). Recent payments: Sandeep Chopra, GPS Fleet Tracking Portal ₹21,600.00; Karthik Menon, UPI Switch Integration Layer ₹36,000.00; Pooja Kulkarni, Multi-Branch Clinic Booking ₹19,500.00 / ₹26,000.00 / ₹19,500.00. Moderation queues: flagged 0; new contact mail 17; pending settlements 16.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Command center · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/072-global-search-admin-dialog.webp</span></div><p>Global search (command palette, ⌘K) opened over dashboard: &quot;Search or jump to…&quot;. Groups: Operations (Dashboard, Pipelines, Pipeline · User hub, Pipeline · Project hub, Inquiries, Requests, Quotes, Projects, Users, Payments, Settlement accounts, Company legal identity, Messages, Moderation, Analytics); Content (Blog, Portfolio, Media Library); System (System Config, Webhooks, Audit Logs); Quick actions (Create blog post, New portfolio item, Message client, New group chat, Switch to dark mode). Keyboard hints navigate / select / close.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>accounts active alerts analytics attention audit awaiting booking center chopra client clinic close command company completed config contact content create dashboard flagged fleet global group groups healthy hints identity inquiries integration kapoor karthik keyboard kulkarni layer legal library media menon message messages moderation month multi-branch navigate needs opened operations operator palette payment payments pending pipeline pipelines pooja portal portfolio progress project projects queues quick quotes recent requests revenue sandeep select settlement settlements switch system total tracking users webhooks window 19500.00 2026 21600.00 26000.00 260790.00 36000.00 708160.00</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

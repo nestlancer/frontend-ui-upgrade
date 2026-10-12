@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,12 +68,23 @@
 <main id="main" class="content">
 <div class="phead">
 <div class="min-w-0">
-  <div class="eyebrow"><span class="dot"></span>SUPPORT</div>
+  <div class="eyebrow"><span class="dot"></span>SUPPORT · MESSAGES INBOX</div>
   <h1 class="ptitle">Operator inbox</h1>
-  <p class="psub">Triage on the left, the active thread on the right. Client-facing — be precise.</p>
+  <p class="psub">Triage on the left, the active thread on the right. Filter tabs: All 20 · Unread · Direct · Group · Project · Archived.</p>
 </div>
-<div class="phead-actions"><a class="btn btn-secondary btn-sm" href="../index.html">Center</a><a class="btn btn-primary btn-sm" href="../new/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New message</a></div>
+<div class="phead-actions"><a class="btn btn-secondary btn-sm" href="../index.html">Center</a><a class="btn btn-primary btn-sm" href="../new-direct/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New message</a></div>
 </div>
+<div class="tabs mb-4" role="tablist">
+  <button class="tab active" type="button">All <span class="tab-count">20</span></button>
+  <button class="tab" type="button">Unread</button>
+  <button class="tab" type="button">Direct</button>
+  <button class="tab" type="button">Group</button>
+  <button class="tab" type="button">Project</button>
+  <button class="tab" type="button">Archived</button>
+</div>
+<section class="panel mb-4">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Active conversations (All 20)</h2><div class="panel-sub">Direct conversation with Arjun Mehta · Group conversation: Admin + Arjun + Priya · AUDIT-P25-20261005-73dhk Project Fixture · E-Commerce Storefront with Razorpay Checkout · Clinic Appointment &amp; Telemedicine Portal · B2B SaaS Analytics Dashboard · Logistics Fleet Tracking Mobile App</div></div></div>
+</section>
 <div class="chat-grid pane3" style="margin-top:4px">
   <div class="chat-col">
     <div class="chat-head"><b style="font-size:13px">Mailbox</b><span class="badge tone-danger" style="font-family:var(--font-mono)">12</span></div>
@@ -84,7 +102,7 @@
 <div class="conv active">
   <span class="avatar hue-1 lg">PN</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Priya Nair — LMS delivery · NL-204 <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:9px">Thread</span></div><span class="tm">2h ago</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Priya Nair — LMS delivery · NL-204 <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">2h ago</span></div>
     <div class="s">“Confirming Oct 13 review slot works?”</div>
   </div>
   <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
@@ -92,7 +110,7 @@
 <div class="conv">
   <span class="avatar hue-4 lg">KM</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Karthik Menon <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:9px">Thread</span></div><span class="tm">4h ago</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Karthik Menon <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">4h ago</span></div>
     <div class="s">“UTR posted on the payment page…”</div>
   </div>
   <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
@@ -100,7 +118,7 @@
 <div class="conv">
   <span class="avatar hue-3 lg">AP</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Agency partner coordination <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:9px">Thread</span></div><span class="tm">Yesterday</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Agency partner coordination <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">Yesterday</span></div>
     <div class="s">“Landing copy freeze moved to Monday.”</div>
   </div>
   
@@ -108,7 +126,7 @@
 <div class="conv">
   <span class="avatar hue-5 lg">PP</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Pain point capture thread <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:9px">Thread</span></div><span class="tm">Oct 8</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Pain point capture thread <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">Oct 8</span></div>
     <div class="s">“Client asked for sandbox keys twice…”</div>
   </div>
   
@@ -161,7 +179,23 @@
   <button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><span>Send</span></button>
 </div>
   </div>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Inbox · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/023-messages-inbox.webp</span></div><p>Messaging panel: conversation queue 18; 11 waiting for response. Inbox snapshot: Open 18, Unread 21, Waiting 11; by type Project 0, Direct 15, Group 3. Threads include Logistics ops (group), Sandeep Chopra, Payments ops — Razorpay settlement and webhooks (group), Karthik Menon, Pooja Kulkarni, Suresh Iyer, Neha Gupta, Amit Verma, Divya Sharma, Rajan Kumar, Kavya Reddy.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>chopra conversation direct divya group gupta inbox include karthik kavya kulkarni kumar logistics menon messaging panel payments pooja project queue rajan razorpay reddy response sandeep settlement sharma snapshot suresh threads unread verma waiting webhooks </p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

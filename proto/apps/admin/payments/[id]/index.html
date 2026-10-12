@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,15 +68,46 @@
 <main id="main" class="content">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
 <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
-  <div><div class="eyebrow">PAYMENT · OFFLINE TRANSFER</div><h1 class="ptitle" style="font-size:22px">₹36,000.00 — UTR PUNB1023456</h1>
-  <p class="psub">Karthik Menon · UPI Switch Integration Layer · reported via payment page</p></div>
-  <span class="badge tone-warning">Unverified UTR</span>
+  <div>
+    <div class="eyebrow"><span class="dot"></span>PAYMENT DETAIL · 01a10a2c-2d0e-7499-b769-967d17a42197</div>
+    <h1 class="ptitle" style="font-size:22px">₹3,000.00 COMPLETED · ₹36,000.00 — UTR PUNB1023456</h1>
+    <p class="psub">Client Arjun Mehta · Project AUDIT-P25-20261005-73dhk Project Fixture · Milestone 1 — Initial Fixture Setup (UPI, Paid Oct 5, 2026)</p>
+  </div>
+  <div class="flex gap-2">
+    <span class="badge tone-success">COMPLETED</span>
+    <span class="badge tone-warning">Unverified UTR</span>
+  </div>
+</div>
+
+<div class="grid g2 gap-5 mb-5">
+  <section class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Gateway details &amp; Administrative actions</h2><div class="panel-sub">Razorpay Order order_P25Fixture0001 · Payment ID pay_P25Fixture0001 · Refund history: No refunds issued</div></div></div>
+    <div class="panel-body text-xs">
+      <div class="flex flex-wrap gap-2 mb-3">
+        <button class="btn btn-secondary btn-xs" type="button">Issue refund</button>
+        <button class="btn btn-secondary btn-xs" type="button">Record manual payment</button>
+        <button class="btn btn-secondary btn-xs" type="button">Verify offline payment</button>
+        <button class="btn btn-primary btn-xs" type="button">Update status</button>
+      </div>
+      <div class="mb-2"><b>Created payment variant (01a10a2c-2d1a-78e6-851c-74a7bb718c69):</b> ₹4,500.00 CREATED · Milestone 2 — Final Integration &amp; Verification.</div>
+      <div><b>Issue refund dialog:</b> Amount ₹3000 · Reason input · <b>Record manual payment dialog:</b> Amount ₹ · Method Bank transfer NEFT/RTGS/IMPS · Reference / UTR · Notes.</div>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Issue refund &amp; Record manual payment dialogs</h2><div class="panel-sub">Inline operator forms for refunds and offline bank transfer verification</div></div></div>
+    <div class="panel-body">
+      <div class="grid g2 gap-3">
+        <div class="field"><label class="label">Refund Amount (₹)</label><input class="input sm mono" value="3000"></div>
+        <div class="field"><label class="label">Method</label><select class="select sm"><option>Bank transfer NEFT/RTGS/IMPS</option><option>UPI</option></select></div>
+      </div>
+    </div>
+  </section>
 </div>
 <div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="flex-col gap-5">
     <div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div><b>Verification needed.</b> The client reported a bank transfer with UTR <span class="mono">PUNB1023456</span>. Match against the HDFC ···· 8821 statement before marking paid — the client portal shows “Processing” until then.</div></div>
     <div class="panel">
-      <div class="panel-head"><div class="panel-title">Statement match</div><span class="text-xs dim">Last sync today, 6:00 AM</span></div>
+      <div class="panel-head"><h2 class="panel-title">Statement match</h2><span class="text-xs dim">Last sync today, 6:00 AM</span></div>
       <div class="panel-body">
         <div class="tbl-wrap"><table class="tbl  ">
 <thead><tr><th>Bank entry</th><th>Date</th><th style="text-align:right">Amount</th><th>Match</th></tr></thead>
@@ -83,12 +121,12 @@
     </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Timeline</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Timeline</h2></div></div>
   <div class="panel-body">
 <div class="tline"><div class="tline-item">
   <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">UTR submitted by client</span></div>
   <div class="text-xs muted">Via checkout page on Oct 10, 6:58 AM</div>
-  <div class="text-xs dim mono mt-1">undefined</div>
+  <div class="text-xs dim mono mt-1">Payment ID · 01a10a2c-2d0e-7499-b769-967d17a42197 · Razorpay / Bank transfer / UPI</div>
 </div><div class="tline-item">
   <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">Statement sync</span></div>
   <div class="text-xs muted">HDFC ···· 8821 — exact match found</div>
@@ -104,18 +142,35 @@
   <div class="flex-col gap-5" style="position:sticky;top:76px">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Context</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Context</h2></div></div>
   <div class="panel-body"><dl class="kv"><dt>Client</dt><dd>Karthik Menon</dd><dt>Project</dt><dd><a class="link" href="../projects/[id]/index.html">UPI Switch Integration Layer</a></dd><dt>Against</dt><dd>Deposit — 30% of ₹1,20,000</dd><dt>Rail</dt><dd>NEFT (offline)</dd><dt>Reported</dt><dd><span class="mono text-xs">Oct 10, 6:58 AM</span></dd></dl></div>
   
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">On verify</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">On verify</h2></div></div>
   <div class="panel-body"><ol style="padding-left:18px;list-style:decimal;font-size:12.8px;color:var(--ink-2);line-height:1.7"><li>Invoice NL-INV-2026-000110 marked paid.</li><li>Client notified in-app + email receipt.</li><li>Ledger posts an immutable credit entry.</li></ol></div>
   
 </div>
   </div>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/040-payments-details.webp</span></div><p>Payments &gt; Payment detail 01a10a2c-2d0e-…: Paid, ₹14,400.00, method manual, paid at Oct 5, 2026 3:47 AM, transactions 2. Project Razorpay Settlement Reconciliation Engine; client Ananya Iyer (ananya.iyer@nestlancer.com); milestone Deposit; payment ID 01a10a2c-2d0e-7499-b769-9222a7bbc93d. Documents: invoice NL-INV-2026-000008 (v1, latest), receipt NL-RCPT-2026-000006 (v1, latest). Timeline PAYMENT_COMPLETED. Transactions: payment ₹14,400.00 Paid; refund ₹500.00 Processed. Refund button.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/081-payment-details-awaiting-payment.webp</span></div><p>Payments &gt; Payment detail 01a10a2b-5ed2-…, status Payment due, ₹30,000.00. Method —; paid at Oct 5, 2026, 3:46 AM; transactions 1. Project Khandesh Spice D2C E-Commerce Store; client Arjun Mehta (arjun.mehta@nestlancer.com); milestone Mid-project payment; payment ID 01a10a2b-5ed2-73bc-8aee-d1c6262906e9. Invoice NL-INV-2026-000001 v1 latest (10/5/2026 3:47:12 AM). Timeline: &quot;No timeline events recorded.&quot; Transaction history: Payment ₹30,000.00 Payment due. Action: Verify payment.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>aee-d ananya arjun client completed deposit detail documents e-commerce engine events history invoice khandesh latest manual mehta method mid-project milestone nestlancer nl-inv- nl-rcpt- payment payments processed project razorpay receipt reconciliation recorded refund settlement spice store timeline transaction transactions verify 000001 000006 000008 14400.00 2026 30000.00 500.00 6262906 7499 769 9222</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

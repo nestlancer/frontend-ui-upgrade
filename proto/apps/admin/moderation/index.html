@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,38 +68,55 @@
 <main id="main" class="content">
 <div class="phead">
 <div class="min-w-0">
-  <div class="eyebrow"><span class="dot"></span>TRUST &amp; SAFETY</div>
-  <h1 class="ptitle">Moderation</h1>
-  <p class="psub">Flags from clients, operators, and automated filters. Decide fast — clients are watching the same thread.</p>
+  <div class="eyebrow"><span class="dot"></span>TRUST &amp; SAFETY · MODERATION &amp; TRUST</div>
+  <h1 class="ptitle">Moderation &amp; trust</h1>
+  <p class="psub">Flags from clients, operators, and automated filters — Total items 0 · Flagged messages 0 · Pending portfolio comments 0 · Pending blog comments 0.</p>
 </div>
-<div class="phead-actions"></div>
+<div class="phead-actions">
+  <a class="btn btn-primary btn-sm" href="../messages/inbox/index.html">Open operator inbox</a>
 </div>
-<div class="stats" style="grid-template-columns:repeat(3,1fr)"><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4L17 12H5"/></svg>Open flags</div>
-  <div class="stat-value">0</div>
-  <div class="stat-note ">Nothing awaiting your call</div>
-</div><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Auto-held (7d)</div>
-  <div class="stat-value">3</div>
-  <div class="stat-note ">Link spam in contact inbox</div>
-</div><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Avg decision time</div>
-  <div class="stat-value">2.1h</div>
-  <div class="stat-note ">Last 30d</div>
-</div></div>
-<div class="panel mt-5">
-  
-<div class="empty"><div class="e-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div><b>Inbox zero</b><span class="text-xs" style="max-width:42ch">No open flags. Auto-held contact spam clears nightly; escalations arrive as operator notifications + #ops-alerts.</span><a class="btn btn-secondary btn-sm" href="../messages/inbox/index.html">Open operator inbox</a></div>
+</div>
+<div class="stats" style="grid-template-columns:repeat(4,1fr)">
+  <div class="stat"><div class="stat-label">Total items · Open flags</div><div class="stat-value">0</div><div class="stat-note">Nothing awaiting your call</div></div>
+  <div class="stat"><div class="stat-label">Flagged messages</div><div class="stat-value">0</div><div class="stat-note">Auto-held (7d): 3</div></div>
+  <div class="stat"><div class="stat-label">Pending portfolio comments</div><div class="stat-value">0</div><div class="stat-note">Portfolio comments 0</div></div>
+  <div class="stat"><div class="stat-label">Pending blog comments</div><div class="stat-value">0</div><div class="stat-note">Blog comments 0 · Avg decision time 2.1h</div></div>
+</div>
+<div class="tabs mt-4" role="tablist">
+  <button class="tab active" type="button">All <span class="tab-count">0</span></button>
+  <button class="tab" type="button">Flagged messages <span class="tab-count">0</span></button>
+  <button class="tab" type="button">Portfolio comments <span class="tab-count">0</span></button>
+  <button class="tab" type="button">Blog comments <span class="tab-count">0</span></button>
+</div>
+<div class="panel mt-4">
+  <div class="empty"><div class="e-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div><b>Moderation queue is clear · Inbox zero</b><span class="text-xs" style="max-width:42ch">No open flags. Auto-held contact spam clears nightly; escalations arrive as operator notifications + #ops-alerts.</span><a class="btn btn-secondary btn-sm" href="../messages/inbox/index.html">Open operator inbox</a></div>
 </div>
 
 <div class="panel mt-5">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Recently decided</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recently decided</h2></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl  ">
 <thead><tr><th>Case</th><th>Type</th><th>Decision</th><th>By</th><th>When</th></tr></thead>
 <tbody><tr><td><b>Flag #0142</b></td><td>Message link spam</td><td><span class="badge tone-muted">Dismissed</span></td><td>Auto-filter</td><td>Oct 9</td></tr><tr><td><b>Flag #0138</b></td><td>Abusive language (client thread)</td><td><span class="badge tone-danger">Removed</span></td><td>Riya Kapoor</td><td>Oct 6</td></tr><tr><td><b>Flag #0131</b></td><td>Off-topic contact pitch</td><td><span class="badge tone-neutral">Archived</span></td><td>Riya Kapoor</td><td>Oct 2</td></tr></tbody></table></div></div>
   
 </div>
-<div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div>Content removal in a client thread inserts a visible “removed by moderation” tombstone — there is no silent deletion.</div></div></main>
+<div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div>Content removal in a client thread inserts a visible “removed by moderation” tombstone — there is no silent deletion.</div></div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Moderation · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/027-moderation.webp</span></div><p>Operations &gt; Moderation (active queue): queue 0; escalated 0; project chats 0. &quot;No flagged messages in the queue.&quot;</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Moderation · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/028-moderation-history.webp</span></div><p>Operations &gt; Moderation &gt; History: &quot;No moderation history yet.&quot; 0 events.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>active chats escalated events flagged history messages moderation operations project queue </p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

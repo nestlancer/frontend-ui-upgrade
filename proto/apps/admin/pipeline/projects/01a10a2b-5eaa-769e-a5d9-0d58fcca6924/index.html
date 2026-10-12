@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nestlancer admin prototype — Project 360 · Pipeline · Admin">
+<title>Project 360 · Pipeline · Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 1150px !important; max-height: 1150px !important; overflow: hidden !important; }
+  .shell { height: 1150px !important; max-height: 1150px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 1150px !important; max-height: 1150px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
+</head>
+<body class="">
+<a href="#main" class="skip-link">Skip to main content</a>
+<div class="shell">
+<aside class="sidebar" aria-label="Operator console navigation">
+<div class="sb-head">
+  <a href="../../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
+  <path d="M4 20c6-3 12-3 24-7.5-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.5-15-2.5Z" fill="#32998C" opacity=".85"/>
+  <path d="M4 26.5c6-3 12-3 24-6.5-1 3.5-4 6.5-8 7.8-3.8 1.1-9-.2-16-1.3Z" fill="#86D0C6" opacity=".8"/>
+</svg><span>Nestlancer<span class="tld">.</span></span></a>
+  <span class="sb-badge">OPERATOR CONSOLE</span>
+</div>
+<nav class="sb-nav"><div class="sb-section"><div class="sb-label"><span>Operations</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><a class="sb-item" href="../../../dashboard/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>Dashboard</span></span></a><a class="sb-item active" href="../../index.html" aria-current="page">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><span>Pipelines</span></span></a><a class="sb-item" href="../../../contact/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg><span>Inquiries</span></span><span class="sb-count">17</span></a><a class="sb-item" href="../../../notifications/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span>Notifications</span></span></a><a class="sb-item" href="../../../requests/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg><span>Requests</span></span></a><a class="sb-item" href="../../../quotes/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg><span>Quotes</span></span></a><a class="sb-item" href="../../../projects/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg><span>Projects</span></span></a><a class="sb-item" href="../../../payments/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span>Payments</span></span><span class="sb-count">16</span></a><a class="sb-item" href="../../../users/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Users</span></span></a><a class="sb-item" href="../../../messages/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Messages</span></span><span class="sb-count">21</span></a><a class="sb-item" href="../../../moderation/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><span>Moderation</span></span></a><a class="sb-item" href="../../../analytics/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg><span>Analytics</span></span></a></div><div class="sb-section"><div class="sb-label"><span>Content</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><a class="sb-item" href="../../../content/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg><span>Blog</span></span></a><a class="sb-item" href="../../../portfolio/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9.2" cy="9.2" r="1.4"/><path d="M8 19l3-3.5a1.2 1.2 0 011.8-.1L20 10l0 9H8z"/></svg><span>Portfolio</span></span></a><a class="sb-item" href="../../../media/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg><span>Media Library</span></span></a></div><div class="sb-section"><div class="sb-label"><span>System</span><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><a class="sb-item" href="../../../system/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg><span>System Config</span></span></a><a class="sb-item" href="../../../integrations/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 16.98h-5.99c-1.1 0-1.95.94-2.48 1.9A4 4 0 0 1 2 17c.01-.7.2-1.4.57-2"/><path d="m6 17 3.13-5.78c.53-.97.1-2.18-.5-3.1a4 4 0 1 1 6.89-4.06"/><path d="m12 6 3.13 5.73C15.66 12.7 16.9 13 18 13a4 4 0 0 1 0 8"/></svg><span>Webhooks</span></span></a><a class="sb-item" href="../../../api-keys/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg><span>API Keys</span></span></a><a class="sb-item" href="../../../audit/index.html">
+      <span class="l"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg><span>Audit Logs</span></span></a></div></nav>
+<div class="sb-foot">
+  <div class="flex items-center gap-2" style="padding:4px 4px 10px">
+    <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
+    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+  </div>
+  <a class="sb-item" href="../../../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
+</div></aside>
+<div class="main">
+<header class="topbar">
+  <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Project 360</b></nav>
+  <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
+    <button class="icobtn" title="Notifications"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span class="bdg">33+</span></button>
+    <a class="icobtn" href="../../../messages/inbox/index.html" title="Messages"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span class="bdg">21</span></a>
+    <a class="icobtn" href="../../../moderation/index.html" title="Trust &amp; safety"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></a>
+    <a class="userchip" href="../../../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
+    <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
+</header>
+<main id="main" class="content">
+<a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to project hub</a>
+<div class="flex items-start justify-between flex-wrap gap-3 mb-4">
+  <div>
+    <div class="eyebrow"><span class="dot"></span>PIPELINE · PROJECT PIPELINE HUB · NL-204</div>
+    <h1 class="ptitle" style="font-size:22px">AUDIT-P25-20261005-73dhk Project Fixture · Corporate LMS for 200 Employees</h1>
+    <div class="flex flex-wrap gap-2 mt-2">
+      <span class="badge tone-info">IN_PROGRESS · In progress</span>
+      <span class="badge tone-neutral">Progress 50% · 1 of 2 milestones · Due Jan 3, 2027</span>
+      <span class="badge tone-success">On schedule</span>
+    </div>
+  </div>
+  <div class="flex gap-2">
+    <a class="btn btn-secondary btn-sm" href="../../../messages/project/[projectId]/index.html">Project thread</a>
+    <a class="btn btn-primary btn-sm" href="../../../projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html">Full ops view</a>
+  </div>
+</div>
+
+<div class="stats mb-5" style="grid-template-columns:repeat(4,1fr)">
+  <div class="stat"><div class="stat-label">Progress</div><div class="stat-value">50%</div><div class="stat-note">1 of 2 milestones · Contract ₹52,200</div></div>
+  <div class="stat"><div class="stat-label">Payments</div><div class="stat-value">₹3,000</div><div class="stat-note">1 of 2 paid · ₹4,500 pending · Collected ₹31,320</div></div>
+  <div class="stat"><div class="stat-label">Activity</div><div class="stat-value">3</div><div class="stat-note">Progress logs · 3 deliverables · Outstanding ₹20,880</div></div>
+  <div class="stat"><div class="stat-label">Messages</div><div class="stat-value">1</div><div class="stat-note">1 unread across 1 thread · 6 days in stage</div></div>
+</div>
+
+<div class="grid g2 gap-5 mb-5">
+  <section class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Origin request &amp; Accepted quote</h2><div class="panel-sub">Milestones &amp; deliverables · Payments &amp; invoices</div></div></div>
+    <div class="panel-body text-xs">
+      <div class="mb-2"><b>Origin request:</b> AUDIT-P25-20261005-73dhk Request Fixture (CONVERTED_TO_PROJECT) · Client: Arjun Mehta (arjun.mehta@nestlancer.com)</div>
+      <div class="mb-2"><b>Accepted quote:</b> AUDIT-P25-20261005-73dhk Quote (₹7,500 · ACCEPTED) · Milestone 1 (₹3,000 PAID) · Milestone 2 (₹4,500 CREATED)</div>
+      <div><b>Recent progress &amp; Project conversations:</b> 3 progress logs · 3 deliverables · 1 unread message across 1 thread.</div>
+    </div>
+  </section>
+  <section class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Payments &amp; invoices summary</h2><div class="panel-sub">1 of 2 paid · ₹3,000 completed · ₹4,500 pending</div></div></div>
+    <div class="panel-body text-xs">
+      <div class="mb-2"><b>Completed payment:</b> ₹3,000 (Milestone 1 — Initial Fixture Setup)</div>
+      <div><b>Pending invoice:</b> ₹4,500 (Milestone 2 — Final Integration &amp; Verification · Due Jan 3, 2027)</div>
+    </div>
+  </section>
+</div>
+<div class="stats" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
+  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg>Contract</div>
+  <div class="stat-value">₹52,200</div>
+  <div class="stat-note ">NL-QTO-2026-000098</div>
+</div><div class="stat">
+  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Collected</div>
+  <div class="stat-value">₹31,320</div>
+  <div class="stat-note ">60% of contract</div>
+</div><div class="stat">
+  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Outstanding</div>
+  <div class="stat-value">₹20,880</div>
+  <div class="stat-note ">Mid-milestone invoice issued</div>
+</div><div class="stat">
+  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/></svg>Days in stage</div>
+  <div class="stat-value">6</div>
+  <div class="stat-note ">Frontend · median 9</div>
+</div></div>
+<div class="grid gap-5 mt-5" style="grid-template-columns:7fr 5fr;align-items:start">
+  <div class="flex-col gap-5">
+    
+<div class="panel ">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Milestones</h2></div><div class="flex items-center gap-2 shrink-0"><button class="btn btn-secondary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Add milestone</button></div></div>
+  <div class=""><div class="tbl-wrap"><table class="tbl  ">
+<thead><tr><th>Milestone</th><th style="text-align:right">Amount</th><th>State</th><th>Approval</th></tr></thead>
+<tbody><tr><td><b>Discovery &amp; course architecture</b></td><td style="text-align:right"><span class="mono">₹7,830</span></td><td><span class="badge tone-success">Approved</span></td><td><span class="text-xs dim">Client · Sep 9</span></td></tr><tr><td><b>Platform setup &amp; SAML SSO</b></td><td style="text-align:right"><span class="mono">₹7,830</span></td><td><span class="badge tone-success">Approved</span></td><td><span class="text-xs dim">Client · Sep 26</span></td></tr><tr><td><b>Course builder + quiz engine</b></td><td style="text-align:right"><span class="mono">₹15,660</span></td><td><span class="badge tone-info">In review</span></td><td><button class="btn btn-primary btn-xs">Request approval</button></td></tr><tr><td><b>Reporting &amp; Malayalam tracks</b></td><td style="text-align:right"><span class="mono">₹10,440</span></td><td><span class="badge tone-neutral">Queued</span></td><td><span class="text-xs dim">—</span></td></tr><tr><td><b>UAT &amp; handover</b></td><td style="text-align:right"><span class="mono">₹10,440</span></td><td><span class="badge tone-neutral">Queued</span></td><td><span class="text-xs dim">—</span></td></tr></tbody></table></div></div>
+  
+</div>
+    
+<div class="panel ">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Linked finance</h2></div></div>
+  <div class="">
+      <div class="panel-row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><div class="min-w-0 flex-1"><b style="font-size:13px">Mid-project invoice NL-INV-2026-000009</b><div class="text-xs dim">Issued Oct 8 · due Oct 14</div></div><span class="mono font-semibold">₹19,200.00</span><span class="badge tone-info">Issued</span><a class="link text-xs" href="../../../payments/projects/[id]/index.html">Ledger →</a></div>
+      <div class="panel-row"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><div class="min-w-0 flex-1"><b style="font-size:13px">Deposit</b><div class="text-xs dim">Paid Sep 5 · UTR verified</div></div><span class="mono">₹7,830.00</span><span class="badge tone-success">Paid</span></div></div>
+  
+</div>
+    
+<div class="panel ">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Internal activity</h2></div></div>
+  <div class="panel-body">
+<div class="tline"><div class="tline-item">
+  <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">Staging deploy r412</span></div>
+  <div class="text-xs muted">quiz-engine@2.4.1 · Preview URL posted</div>
+  <div class="text-xs dim mono mt-1">Today, 9:12 AM</div>
+</div><div class="tline-item">
+  <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">Milestone 3 submitted for review</span></div>
+  <div class="text-xs muted">Arjun Nair → client</div>
+  <div class="text-xs dim mono mt-1">Yesterday, 6:40 PM</div>
+</div><div class="tline-item mut">
+  <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">SCOPE_LOCKED</span></div>
+  <div class="text-xs muted">Malayalam subtitle scope frozen</div>
+  <div class="text-xs dim mono mt-1">Oct 8, 2026</div>
+</div></div></div>
+  
+</div>
+  </div>
+  <div class="flex-col gap-5" style="position:sticky;top:76px">
+    
+<div class="panel ">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Client</h2></div></div>
+  <div class="panel-body">
+      <div class="flex items-center gap-3 mb-3"><span class="avatar hue-1 lg">PN</span><div><b>Priya Nair</b><div class="text-xs dim">Nair Learning Systems · Kochi</div></div></div>
+      <dl class="kv"><dt>Approvals pending</dt><dd>1</dd><dt>Avg review time</dt><dd><b class="mono">1.4 days</b></dd><dt>Contact preference</dt><dd>In-thread</dd><dt>Health</dt><dd><span class="badge tone-success">Good</span></dd></dl>
+      <a class="btn btn-secondary btn-sm w-full mt-3" href="../../users/[id]/index.html">Open client 360</a></div>
+  
+</div>
+    
+<div class="panel ">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Pod</h2></div></div>
+  <div class="panel-body"><dl class="kv"><dt>Delivery lead</dt><dd>Arjun Nair</dd><dt>Engineering</dt><dd>Dev Malhotra · 1 IC</dd><dt>Design</dt><dd>Shared pool</dd><dt>QA</dt><dd>Playwright CI + manual pass</dd></dl></div>
+  
+</div>
+    
+<div class="panel ">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Operator notes</h2></div></div>
+  <div class="panel-body"><textarea class="textarea" rows="4" placeholder="Internal context for this engagement…">Client IT moves slowly on Okta metadata — build 2-day buffer into SSO milestones.</textarea><button class="btn btn-secondary btn-sm mt-3">Save note</button></div>
+  
+</div>
+  </div>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Pipeline project · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/046-pipeline-projects-details.webp</span></div><p>Pipelines &gt; Project hub detail (Khandesh Spice D2C E-Commerce Store, arjun.mehta): In Progress, 57% complete; progress 57%; milestones 7 (7 open); deliverables 1; payments 3 (2 pending); timeline events 0. Milestone loop steps 11–17 (Add milestones, Upload deliverable, Approve deliverable, Approve milestone, Payment intent, Confirm payment, Complete project). Milestone rows Deposit Pending, Mid-project payment Pending, Final payment Pending, Project delivery / Design &amp; Architecture / Storefront &amp; Checkout / QA, SEO &amp; Launch Approved. Request &amp; quote: quote 01a10a2b-5c32-72e7-99ac-ba6c1c58b2ad. Deliverable: Milestone 1 wireframes — homepage, PLP, PDP, cart, checkout (Hindi + English), APPROVED.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>ac-ba approve approved architecture arjun checkout complete confirm deliverable deliverables delivery deposit design detail e-commerce english events final hindi homepage intent khandesh launch mehta mid-project milestone milestones payment payments pending pipelines progress project quote request spice steps store storefront timeline upload wireframes </p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
+<footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
+</div></div>
+<div class="fab" id="fab">
+<button class="fab-btn" onclick="document.getElementById('fab').classList.toggle('open')" aria-label="Prototype menu"><i class="dot"></i><span>Prototype</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button>
+<div class="fab-menu">
+  <div class="fab-lab">Jump to surface</div>
+  <a class="fx" href="../../../../../index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg> Sign-off hub <small>hub</small></a>
+  <a class="fx" href="../../../../landing/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Marketing — nestlancer.com <small>9020</small></a>
+  <a class="fx" href="../../../../web/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Public app — app.nestlancer.com <small>9000</small></a>
+  <a class="fx" href="../../../../web/dashboard/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg> Client portal <small>web</small></a>
+  <a class="fx" href="../../../dashboard/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg> Admin console <small>admin</small></a>
+  <div class="fab-sep"></div>
+  <div class="fab-lab">Quick states</div>
+  <a class="fx" href="../../../../web/login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Client sign-in</a>
+  <a class="fx" href="../../../login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Operator sign-in</a>
+  <a class="fx" href="../../../../web/quotes/[id]/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg> Quote — sign &amp; accept</a>
+  <a class="fx" href="../../../../web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Checkout — pay milestone</a>
+  <div class="fab-sep"></div>
+  <button class="fx" data-theme-toggle><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> <span>Theme</span> <small data-theme-label>Light</small></button>
+</div></div>
+<script src="../../../../../shared/assets/ui.js" defer></script>
+</body>
+</html>

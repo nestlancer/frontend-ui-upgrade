@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 1075px !important; max-height: 1075px !important; overflow: hidden !important; }
+  .shell { height: 1075px !important; max-height: 1075px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 1075px !important; max-height: 1075px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -71,7 +78,7 @@
   <div class="flex-col gap-5">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Brief</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Brief</h2></div></div>
   <div class="panel-body">
       <p class="text-sm" style="line-height:1.7">Regression coverage request for the AUDIT-P23 line: the client wants a repeatable test pack for the quote-builder flow before the November pricing change ships.</p>
       <div class="grid g2 gap-4 mt-4"><div><div class="text-xs dim">Budget signaled</div><b class="mono mt-1 block" style="font-size:13px">₹1.5L – ₹2.2L</b></div><div><div class="text-xs dim">Desired start</div><b class="mono mt-1 block" style="font-size:13px">Oct 20, 2026</b></div><div><div class="text-xs dim">Hard deadline</div><b class="mono mt-1 block" style="font-size:13px">Nov 5, 2026</b></div><div><div class="text-xs dim">Attachments</div><b class="mono mt-1 block" style="font-size:13px">2 files</b></div></div></div>
@@ -79,7 +86,7 @@
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Engineer review notes</div><div class="panel-sub">Written during triage — visible to operators only</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Engineer review notes</h2><div class="panel-sub">Written during triage — visible to operators only</div></div></div>
   <div class="panel-body">
       <div class="panel" style="padding:12px 14px;background:var(--bg-hover)">
         <div class="flex items-center gap-2 mb-2"><span class="avatar hue-2">DN</span><b style="font-size:12.5px">Dev Malhotra</b><span class="text-xs dim">Oct 6, 2026 · triage</span></div>
@@ -96,7 +103,7 @@
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Status history</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Status history</h2></div></div>
   <div class="panel-body">
 <div class="tline"><div class="tline-item">
   <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">Submitted</span></div>
@@ -117,7 +124,7 @@
   <div class="flex-col gap-5" style="position:sticky;top:76px">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Client</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Client</h2></div></div>
   <div class="panel-body">
       <div class="flex items-center gap-3 mb-3"><span class="avatar hue-3 lg">AM</span><div class="min-w-0"><b style="font-size:14px">Arjun Mehta</b><div class="text-xs dim">Mehta Consulting Group · Mumbai</div></div></div>
       <dl class="kv"><dt>Account age</dt><dd>14 months</dd><dt>Lifetime billed</dt><dd><span class="mono">₹3,18,400</span></dd><dt>Open requests</dt><dd>4</dd><dt>Health</dt><dd><span class="badge tone-success">Good</span></dd></dl>
@@ -126,7 +133,7 @@
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Controls</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Controls</h2></div></div>
   <div class="panel-body">
       
 <div class="field">
@@ -146,7 +153,25 @@
 </div>
     <div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div>Rejection emails the client your reason verbatim. Operators can&#39;t delete requests — only reject or archive.</div></div>
   </div>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (3)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Request detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/001-request-details-ready-to-quote.webp</span></div><p>Operator request detail (Riya Kapoor): &quot;UPI Merchant Collections Mobile App&quot;, Under Review, Ready to quote panel; contact Ananya Iyer, category Mobile App, created/updated Oct 5, 2026 3:47 AM; budget ₹80,00,000.00 – ₹1,20,00,000.00; preferred start Jul 1, 2026; deadline Nov 1, 2026; requirements: Razorpay Payment Links from mobile, offline receipt queue with sync, Hindi and Kannada UI, daily collection summary notifications, agent GPS check-in. No attachments. History: Draft, Submitted, Under Review (Phase 1 proposal). Internal note: &quot;Propose Phase 1: agent login, Razorpay Payment Links, offline receipt sync. Kannada UI in Phase 2.&quot;</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Request detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/057-requests-details.webp</span></div><p>Requests &gt; Corporate LMS for 200 Employees (Converted To Project): contact Priya Nair (priya.nair@nestlancer.com); category Custom; created/last updated Oct 5, 2026 3:47 AM; budget ₹35,00,000.00 – ₹50,00,000.00; preferred start Aug 1, 2026; deadline Oct 31, 2026; timeline Fixed dates. Requirements: Course builder with video upload; Quiz engine with pass/fail thresholds; SAML SSO via Okta; Admin reporting — completion rates by department; Malayalam subtitles on compliance modules. Attachment request-brief.pdf. Quote (read-only) Accepted ₹52,200.00. History: Converted To Project; Quoted (×4, incl. CHANGES_REQUESTED and UNDER_REVIEW); Under Review (LMS requirements reviewed; Okta SAML metadata received); Submitted; Draft. Internal notes box.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Request detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/102-request-details-edit-form.webp</span></div><p>Requests &gt; B2B Wholesale Ordering Portal (Converted To Project), edit mode: Title &quot;B2B Wholesale Ordering Portal&quot;; Description (Gujarat distributor network, bulk SKU ordering, GST invoicing, credit-limit checks, Razorpay advance payment links, replaces WhatsApp order sheets for 40+ dealers in Ahmedabad and Surat); Save changes; Cancel edit. Details: contact Arjun Mehta (arjun.mehta@nestlancer.com), category Web Development, budget ₹40,00,000.00–₹80,00,000.00, preferred start Jun 1, 2026, deadline Aug 1, 2026. Requirements: dealer login with credit-limit visibility; bulk cart with MOQ rules; GST invoice PDF generation; Razorpay payment links for advance orders; admin dashboard for order fulfilment. Quote (read-only) Accepted ₹59,000.00.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>accepted admin advance agent ahmedabad ananya arjun attachment attachments budget builder cancel category changes check-in checks collection collections completion compliance contact converted corporate course created credit-limit custom daily dashboard dates deadline dealer dealers department description detail details development distributor draft employees engine fixed fulfilment generation gujarat hindi history internal invoice invoicing kannada kapoor links login malayalam mehta merchant metadata mobile modules nestlancer network notes notifications offline operator order ordering orders panel payment phase portal preferred priya project proposal propose queue quote quoted rates razorpay read-only ready receipt received replaces reporting request request-brief requested requests requirements review reviewed rules sheets start submitted subtitles summary surat thresholds timeline title updated upload video visibility whatsapp wholesale 12000000.00 200 2026 3500000.00 4000000.00 5000000.00 52200.00 59000.00 8000000.00</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

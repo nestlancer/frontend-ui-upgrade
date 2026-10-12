@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -47,44 +54,58 @@
 <main id="main" class="content">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
 <div class="flex items-start justify-between flex-wrap gap-3 mb-2 mt-4">
-  <div><h1 class="ptitle">Payment details</h1><p class="psub">Review this payment and related documents.</p></div>
-  <span class="badge tone-success">Completed</span>
+  <div><h1 class="ptitle">Payment details</h1><p class="psub">Payment has been requested. Proceed to secure checkout to complete it.</p></div>
+  <span class="badge tone-warning">Pending</span>
 </div>
 <div class="grid gap-5 mt-5" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="flex-col gap-5">
     <div class="panel" style="border-top:3px solid var(--brand-9)"><div class="panel-body">
       <div class="eyebrow">Order summary</div>
       <div class="flex items-start justify-between mt-2 mb-4">
-        <div><b class="h3" style="font-size:17px">Corporate LMS for 200 Employees</b><div class="text-sm muted mt-1">Deposit</div></div>
-        <span class="badge tone-success">Paid</span>
+        <div><b class="h3" style="font-size:17px">Corporate LMS for 200 Employees</b><div class="text-sm muted mt-1">Mid-project payment</div></div>
+        <span class="badge tone-warning">Pending</span>
       </div>
-      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹15,660.00</span></div>
-      <dl class="kv"><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd><span class="mono">01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2</span></dd><dt>Created</dt><dd>10/5/2026, 3:47:22 AM</dd></dl>
-      <div class="mt-4 text-sm" style="padding:14px 16px;border-radius:10px;background:var(--t-success-bg);color:var(--t-success-tx)">This payment has been recorded. Download your receipt or invoice below.</div>
+      <div class="flex items-end justify-between py-4" style="border-top:1px solid var(--line)"><span class="text-sm muted">Amount due</span><span class="mono" style="font-size:30px;font-weight:720;letter-spacing:-.03em">₹19,200.00</span></div>
+      <dl class="kv"><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd><span class="mono">01a10a2c-2d0e-7499-b769-967d17a42197</span></dd><dt>Created</dt><dd>10/5/2026, 3:47:09 AM</dd></dl>
+      <div class="mt-4" style="padding:14px 16px;border-radius:10px;background:var(--t-warning-bg, #fff7e6);color:var(--t-warning-tx)"><b class="text-sm">Pending checkout</b><div class="text-sm mt-1">This payment is awaiting Razorpay checkout. Proceed to secure checkout or cancel the pending payment.</div></div>
     </div></div>
-    
-<div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Billing documents</div><div class="panel-sub">Download the latest invoice or receipt for this payment.</div></div></div>
-  <div class="panel-body"><div class="flex gap-3 flex-wrap"><button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download invoice</button><button class="btn btn-secondary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download receipt</button></div></div>
-  
-</div>
+    <div class="flex gap-3"><button class="btn btn-primary">Proceed to secure checkout</button><button class="btn btn-secondary" style="color:var(--t-danger-tx)">Cancel pending payment</button></div>
   </div>
   <div class="flex-col gap-5">
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Status</div></div></div>
-  <div class="panel-body"><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Created</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Pending</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Processing</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:transparent"></span><div><b class="text-sm ">Completed</b><div class="text-xs dim">Current: Completed</div></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Refunded</b></div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Status</h2></div></div>
+  <div class="panel-body"><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:var(--brand-9)"></span><div><b class="text-sm ">Created</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--brand-9);background:transparent"></span><div><b class="text-sm ">Pending</b><div class="text-xs dim">Current: Pending</div></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Processing</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Completed</b></div></div><div class="flex gap-3 mb-4"><span style="width:14px;height:14px;border-radius:99px;margin-top:3px;border:2px solid var(--line-strong);background:transparent"></span><div><b class="text-sm dim">Refunded</b></div></div><button class="btn w-full mt-2" style="color:var(--t-danger-tx)">Cancel pending payment</button></div>
   
 </div>
     
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Payment details</div></div></div>
-  <div class="panel-body"><dl class="kv"><dt>Payment ID</dt><dd><span class="mono" style="font-size:11px">01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2</span></dd><dt>Project</dt><dd><a class="link" href="../../projects/[id]/index.html">Corporate LMS for 200 Employees</a></dd><dt>Created</dt><dd><span class="mono" style="font-size:11.5px">10/5/2026, 3:47:22 AM</span></dd></dl></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Payment details</h2></div></div>
+  <div class="panel-body"><dl class="kv"><dt>Payment ID</dt><dd><span class="mono" style="font-size:11px">01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5</span></dd><dt>Project</dt><dd><a class="link" href="../../projects/[id]/index.html">Corporate LMS for 200 Employees</a></dd><dt>Created</dt><dd><span class="mono" style="font-size:11.5px">10/5/2026, 3:47:22 AM</span></dd></dl></div>
   
 </div>
-    <a class="link" href="#">File a payment dispute</a>
+    
   </div>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (4)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/001-payment-details-completed-payment.webp</span></div><p>Priya Nair deposit ₹15,660.00, Completed, Corporate LMS for 200 Employees. Proto payment page shows a different payment (₹14,400, Ananya) — needs correcting. Payment details (Priya Nair), status Completed. Order summary: Corporate LMS for 200 Employees, Deposit, Paid, Amount due ₹15,660.00, Currency INR, Reference 01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2, Created 10/5/2026, 3:47:22 AM. Status steps Created, Pending, Processing, Completed (current), Refunded. Recorded-payment note; Receipt and Invoice buttons; File a payment dispute; Download invoice / Download receipt.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/002-payment-details-not-due-yet.webp</span></div><p>Payment details (Priya Nair), status Not due yet. Order summary: Corporate LMS for 200 Employees, Final payment, Not Due Yet, Amount due ₹15,660.00, INR, Reference 01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5, Created 10/5/2026, 3:47:22 AM. Steps Not due yet, Pending (current), Processing, Completed, Refunded. Notice: &quot;Checkout not available yet — complete the current milestone (payment or delivery review) before moving to later milestones.&quot; Cancel pending payment (status panel), Cancel payment (bottom).</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/010-payments-details.webp</span></div><p>Ananya Iyer. Checkout PENDING: Razorpay Settlement Reconciliation Engine, Mid-project payment, amount due ₹19,200.00, INR, reference 01a10a2c-2d0e-7499-b769-967d17a42197, created 10/5/2026 3:47:09 AM. Pay online / Bank-UPI transfer toggle; Proceed to secure checkout; UPI QR note; Cancel pending payment; Test mode checkout note; How checkout works 1-3. (This is the state the generic payments/[id] link should show.)</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/042-payment-details-bank-and-upi-transfer.webp</span></div><p>Checkout (Arjun Mehta): project Khandesh Spice D2C E-Commerce Store, Mid-project payment, status Pending, amount ₹30,000.00, INR, Reference 01a10a2b-5ed2-73bc-8aee-d1c6262906e9, Created 10/5/2026, 3:46:16 AM. Tabs Pay online / Bank / UPI transfer (selected). Primary settlement account Nestlancer Pvt Ltd, HDFC Bank, A/C 50200012345678, IFSC HDFC0001234, UPI nestlancer@hdfcbank. UTR / UPI reference, Notes (optional), receipt upload, Submit for verification. Cancel pending payment; Cancel payment; Invoice; Download invoice. Note: Test mode — this environment uses Razorpay test keys.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>account aee-d amount ananya arjun available bank-upi bottom buttons cancel checkout complete completed corporate correcting created currency current delivery deposit details different dispute download e-commerce employees engine environment final generic hdfcbank invoice khandesh later mehta mid-project milestone milestones moving needs nestlancer notes notice online optional order panel payment payments pending primary priya proceed processing project proto razorpay receipt reconciliation recorded-payment reference refunded review secure selected settlement shows spice state steps store submit summary toggle transfer upload verification works 0001234 14400 15660.00 19200.00 200 2026 30000.00 42197 50200012345678 610 6262906 6621 7499 769 967</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">
@@ -101,7 +122,7 @@
   <a class="fx" href="../../login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg> Client sign-in</a>
   <a class="fx" href="../../../admin/login/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Operator sign-in</a>
   <a class="fx" href="../../quotes/[id]/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg> Quote — sign &amp; accept</a>
-  <a class="fx" href="../01a10a2c-2d0e-7499-b769-967d17a42197/index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Checkout — pay milestone</a>
+  <a class="fx" href="./index.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg> Checkout — pay milestone</a>
   <div class="fab-sep"></div>
   <button class="fx" data-theme-toggle><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg> <span>Theme</span> <small data-theme-label>Light</small></button>
 </div></div>

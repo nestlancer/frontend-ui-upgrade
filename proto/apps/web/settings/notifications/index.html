@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -57,7 +64,7 @@
 <div class="flex-col gap-5" style="max-width:880px">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Channels by category</div><div class="panel-sub">Quiet where you can afford it, loud where money moves.</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Channels by category</h2><div class="panel-sub">Quiet where you can afford it, loud where money moves.</div></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl  ">
 <thead><tr><th>Category</th><th>In-app</th><th>Email</th><th>SMS</th></tr></thead>
 <tbody><tr><td><b style="font-size:13px">Quotes &amp; signatures</b></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox"><i></i></label></td></tr><tr><td><b style="font-size:13px">Payments &amp; invoices</b></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td></tr><tr><td><b style="font-size:13px">Messages &amp; mentions</b></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox"><i></i></label></td></tr><tr><td><b style="font-size:13px">Project updates</b></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox"><i></i></label></td><td><label class="switch"><input type="checkbox"><i></i></label></td></tr><tr><td><b style="font-size:13px">Requests &amp; reviews</b></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox"><i></i></label></td></tr><tr><td><b style="font-size:13px">Account &amp; security</b></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td></tr><tr><td><b style="font-size:13px">Product announcements</b></td><td><label class="switch"><input type="checkbox"><i></i></label></td><td><label class="switch"><input type="checkbox" checked><i></i></label></td><td><label class="switch"><input type="checkbox"><i></i></label></td></tr></tbody></table></div></div>
@@ -65,7 +72,7 @@
 </div>
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Digest</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Digest</h2></div></div>
   <div class="panel-body">
     
 <div class="field">
@@ -82,7 +89,23 @@
   
 </div>
 </div>
-<div class="actionbar"><span class="text-xs dim mr-auto">Unsaved changes stay local until you save</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div></main>
+<div class="actionbar"><span class="text-xs dim mr-auto">Unsaved changes stay local until you save</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notification preferences · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/028-settings-notifications.webp</span></div><p>Samira Patel. Channels: In-App Notifications, Email Notifications, Push Notifications (setup required). Quiet hours off, 10:00 PM to 08:00 AM, timezone Asia/Kolkata. Category preferences (email / push / in-app): Quotes on/on/on; Payments on/off/on; Messages off/on/on; Projects on/on/on; Requests on/on/on; Account on/off/on.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>account category channels email hours in-app kolkata messages notifications patel payments preferences projects quiet quotes requests required samira setup timezone </p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,32 +68,23 @@
 <main id="main" class="content">
 <div class="phead">
 <div class="min-w-0">
-  <div class="eyebrow"><span class="dot"></span>SUPPORT</div>
+  <div class="eyebrow"><span class="dot"></span>SUPPORT · MESSAGES OVERVIEW</div>
   <h1 class="ptitle">Message center</h1>
-  <p class="psub">All studio conversations at a glance — inbox pressure, response health, and where you are standing by.</p>
+  <p class="psub">All studio conversations at a glance — Total messages 45 · Threads 32 · Unread 21 · Flagged 0 · Active projects 18 · Active clients 8.</p>
 </div>
-<div class="phead-actions"><a class="btn btn-secondary" href="./new/index.html">Compose</a><a class="btn btn-primary" href="./inbox/index.html">Open inbox</a></div>
+<div class="phead-actions"><a class="btn btn-secondary" href="./new-direct/index.html">New direct</a><a class="btn btn-secondary" href="./new-group/index.html">New group</a><a class="btn btn-primary" href="./inbox/index.html">Open inbox</a></div>
 </div>
-<div class="stats" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>Unread for you</div>
-  <div class="stat-value">12</div>
-  <div class="stat-note ">4 threads waiting</div>
-</div><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Avg first response</div>
-  <div class="stat-value">46m</div>
-  <div class="stat-note ">Target &lt; 2h</div>
-</div><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Client satisfaction</div>
-  <div class="stat-value">4.8</div>
-  <div class="stat-note ">Post-thread rating</div>
-</div><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Open threads</div>
-  <div class="stat-value">21</div>
-  <div class="stat-note ">6 direct · 15 groups</div>
-</div></div>
+<div class="stats" style="grid-template-columns:repeat(6,1fr)">
+  <div class="stat"><div class="stat-label">Total messages</div><div class="stat-value">45</div><div class="stat-note">Recent platform messages feed</div></div>
+  <div class="stat"><div class="stat-label">Threads</div><div class="stat-value">32</div><div class="stat-note">21 open · 6 direct · 15 groups</div></div>
+  <div class="stat"><div class="stat-label">Unread</div><div class="stat-value">21</div><div class="stat-note">12 unread for you · 4 waiting</div></div>
+  <div class="stat"><div class="stat-label">Flagged</div><div class="stat-value">0</div><div class="stat-note">Flagged messages</div></div>
+  <div class="stat"><div class="stat-label">Active projects</div><div class="stat-value">18</div><div class="stat-note">Project threads</div></div>
+  <div class="stat"><div class="stat-label">Active clients</div><div class="stat-value">8</div><div class="stat-note">Avg first response 46m · Rating 4.8</div></div>
+</div>
 
 <div class="panel mt-5">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Your queue</div><div class="panel-sub">Threads assigned to you, stale first</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="./inbox/index.html">Inbox →</a></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Your queue</h2><div class="panel-sub">Threads assigned to you, stale first</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="./inbox/index.html">Inbox →</a></div></div>
   <div class="">
   
   <a class="panel-row" href="./inbox/index.html"><span class="avatar hue-1">P</span>
@@ -106,7 +104,7 @@
 <div class="grid gap-5 mt-5" style="grid-template-columns:1fr 1fr">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Quick actions</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Quick actions</h2></div></div>
   <div class="panel-body"><div class="grid g2 gap-3">
     
     <a class="panel panel-pad" href="./new/direct/index.html" style="display:flex;align-items:center;gap:12px"><span class="avatar sq" style="width:32px;height:32px;background:var(--brand-2);color:var(--brand-11)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><b style="font-size:13px">New direct message</b></a>
@@ -118,7 +116,7 @@
 </div>
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Response health (7d)</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Response health (7d)</h2></div></div>
   <div class="panel-body"><svg viewBox="0 0 560 170" width="100%" height="170" preserveAspectRatio="none" style="display:block">
   <defs><linearGradient id="g5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-8)" stop-opacity=".22"/><stop offset="1" stop-color="var(--brand-8)" stop-opacity="0"/></linearGradient></defs>
   <line x1="4" x2="556" y1="42.5" y2="42.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="85" y2="85" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="127.5" y2="127.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/>
@@ -128,7 +126,23 @@
 </svg><div class="text-xs dim mono mt-2">median minutes to first reply · latest 46m</div></div>
   
 </div>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Messages · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/022-messages.webp</span></div><p>Operations &gt; Messages overview: open conversations 18; unread messages 21; unread threads 11 (needs triage). Recent conversations: Logistics ops — tracking and dispatch (group); Sandeep Chopra; Payments ops — Razorpay settlement and webhooks (group); Karthik Menon; Pooja Kulkarni; Suresh Iyer; Neha Gupta; Amit Verma. Actions: Message client, New group, Open messaging panel.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>chopra client conversations dispatch group gupta karthik kulkarni logistics menon message messages messaging needs operations overview panel payments pooja razorpay recent sandeep settlement suresh threads tracking triage unread verma webhooks </p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

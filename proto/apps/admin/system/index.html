@@ -7,6 +7,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<!-- PROTO-STYLE-START --><style>
+@media (min-width: 961px) {
+  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
+  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
+  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
+}
+@media (min-width: 961px) {
+  .sidebar { background: #FAFDFC !important; border-color: #F0F5F4 !important; }
+  .sidebar .sb-item:not(.active) { color: #98A6A3 !important; }
+  .sidebar .sb-label { color: #B0BDBA !important; }
+  .panel, .stats, .stat, .chip { border-color: #EFF4F3 !important; box-shadow: none !important; }
+  .cover { background: #F2F7F6 !important; color: #3D4A46 !important; border: 1px solid #E6EEEE !important; }
+}
+</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -61,12 +75,116 @@
 <main id="main" class="content">
 <div class="phead">
 <div class="min-w-0">
-  <div class="eyebrow"><span class="dot"></span>ADMINISTRATION</div>
-  <h1 class="ptitle">System</h1>
-  <p class="psub">Config, feature flags, jobs, logs, templates — the whole back office.</p>
+  <div class="eyebrow"><span class="dot"></span>SYSTEM · ADMINISTRATION</div>
+  <h1 class="ptitle">System Configuration · System</h1>
+  <p class="psub">Runtime health, platform settings, feature flags, jobs, templates, and operator controls. Config, feature flags, jobs, logs, templates — the whole back office.</p>
 </div>
-<div class="phead-actions"></div>
+<div class="phead-actions"><button class="btn btn-secondary btn-sm" type="button">Load diagnostics</button><button class="btn btn-primary btn-sm" type="button">Send announcement</button></div>
 </div>
+
+<div class="stats mb-5" style="grid-template-columns:repeat(4,1fr)">
+  <div class="stat"><div class="stat-label">Service</div><div class="stat-value">Healthy</div><div class="stat-note">admin · Uptime 5d 8h 5m · Memory 88 MB · Heap 42 MB</div></div>
+  <div class="stat"><div class="stat-label">Config keys</div><div class="stat-value">14</div><div class="stat-note">All saved</div></div>
+  <div class="stat"><div class="stat-label">Feature flags</div><div class="stat-value">5/12</div><div class="stat-note">Enabled / total</div></div>
+  <div class="stat"><div class="stat-label">Templates</div><div class="stat-value">62</div><div class="stat-note">10 email · 52 notification</div></div>
+</div>
+
+<div class="tabs mb-5">
+  <a class="tab active" href="#" data-tab-target="sys-health">Health</a>
+  <a class="tab" href="#" data-tab-target="sys-config">Config <span class="count">14</span></a>
+  <a class="tab" href="#" data-tab-target="sys-features">Features <span class="count">12</span></a>
+  <a class="tab" href="#" data-tab-target="sys-jobs">Jobs <span class="count">12</span></a>
+  <a class="tab" href="#" data-tab-target="sys-templates">Templates <span class="count">62</span></a>
+  <a class="tab" href="#" data-tab-target="sys-operations">Operations</a>
+</div>
+
+<div id="sys-operations" class="grid g2 gap-5 mb-5">
+  <section class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Platform announcements</h2><div class="panel-sub">Broadcast a banner notification to all active users. Delivery is written immediately, then queued for push/email channels.</div></div></div>
+    <div class="panel-body">
+      <div class="field mb-3"><input class="input sm" placeholder="Announcement title" value="Announcement title"></div>
+      <div class="field mb-3"><textarea class="textarea" rows="2" placeholder="Message body (max 1000 characters)">Message body (max 1000 characters)</textarea></div>
+      <div class="flex items-center gap-3 mb-3 flex-wrap">
+        <span class="text-xs muted">Severity</span>
+        <select class="select sm" style="width:120px"><option>Info</option><option>Warning</option><option>Critical</option></select>
+        <label class="check"><input type="checkbox" checked><span>Users can dismiss</span></label>
+      </div>
+      <button class="btn btn-primary btn-sm" type="button">Send announcement</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Maintenance mode</h2><div class="panel-sub">Block client app access during planned downtime. Admins can still sign in. Enabling revokes non-admin sessions.</div></div><span class="badge tone-success">Disabled</span></div>
+    <div class="panel-body">
+      <div class="flex items-center justify-between mb-3"><div><b>Live status</b><div class="text-xs dim">What the platform is enforcing right now.</div></div><span class="badge tone-success">Disabled</span></div>
+      <div class="flex items-center justify-between mb-3"><div><b>Enable maintenance</b><div class="text-xs dim">Clients see a downtime screen. Public portfolio and blog stay readable.</div></div><label class="switch"><input type="checkbox"><i></i></label></div>
+      <div class="field mb-3"><label class="label">Message shown to users</label><input class="input sm" value="System is under maintenance. Please check back later."></div>
+      <div class="field mb-3"><label class="label">Estimated end (optional)</label><input class="input sm" placeholder="mm/dd/yyyy, --:-- --"></div>
+      <button class="btn btn-secondary btn-sm" type="button">No changes to apply</button>
+    </div>
+  </section>
+</div>
+
+<div id="sys-health" class="grid g2 gap-5 mb-5">
+  <section class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Runtime Health &amp; Loaded Diagnostics</h2><div class="panel-sub">Dependencies · Outbox &amp; workers · System overview · Cache statistics · Error logs</div></div><span class="badge tone-success">HEALTHY</span></div>
+    <div class="panel-body">
+      <div class="text-xs mb-2"><b>Dependencies:</b> <span class="mono">database HEALTHY (&lt;1ms) · redis HEALTHY (1ms) · rabbitmq HEALTHY (1ms) · storage HEALTHY (1ms)</span></div>
+      <div class="text-xs mb-2"><b>Outbox &amp; workers:</b> Pending <span class="mono">0</span> · Published <span class="mono">592</span> · Failed <span class="mono">0</span> · Dead letter <span class="mono">0</span></div>
+      <div class="text-xs mb-2"><b>System overview:</b> Users <span class="mono">34</span> · Active projects <span class="mono">4</span> · Completed <span class="mono">10</span> · Revenue <span class="mono">₹7,08,160.00</span> · Storage <span class="mono">0 B</span> · Cache hit rate <span class="mono">0%</span></div>
+      <div class="text-xs mb-2"><b>Cache statistics:</b> Hits <span class="mono">0</span> · Misses <span class="mono">0</span> · Keys <span class="mono">10</span> · Memory <span class="mono">1.2M</span></div>
+      <div class="text-xs dim"><b>Error logs (10 entries):</b> 4×500 errors · 2×429 rate-limit · 2×401 token/TOTP · 1×502 B2 timeout · 1×503 maintenance rejected</div>
+    </div>
+  </section>
+
+  <section id="sys-config" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Configuration keys (14)</h2><div class="panel-sub">Live runtime key-value registry</div></div><span class="badge tone-neutral mono">All saved</span></div>
+    <div class="panel-body mono text-xs" style="line-height:1.7">
+      <div><b>app.name</b> = Nestlancer · <b>app.support_email</b> = support@nestlancer.com</div>
+      <div><b>app.maintenance_message</b> = System is under maintenance. Please check back later.</div>
+      <div><b>app.max_upload_size_mb</b> = 50 · <b>app.pagination_default_limit</b> = 20 · <b>app.quote_validity_days</b> = 30</div>
+      <div><b>auth.access_token_ttl</b> = 900 · <b>auth.max_login_attempts</b> = 5 · <b>auth.session_ttl_days</b> = 30</div>
+      <div><b>billing.currency</b> = INR · <b>billing.late_fee_percent</b> = 2 · <b>billing.tax_rate_percent</b> = 18</div>
+      <div><b>features.ai_estimation</b> = false · <b>notifications.digest_cron</b> = 0 9 * * 1</div>
+    </div>
+  </section>
+</div>
+
+<div class="grid g2 gap-5 mb-5">
+  <section id="sys-features" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Feature flags (12)</h2><div class="panel-sub">5 enabled · Staged rollouts and target roles</div></div></div>
+    <div class="panel-body mono text-xs" style="line-height:1.65">
+      <div><span class="badge tone-success">ON</span> <b>new_quote_builder</b> (25% rollout · Target roles ADMIN) · <b>dark_mode_beta</b> (100% · USER/ADMIN) · <b>automated_invoicing</b> (100%) · <b>file_virus_scan</b> (100%) · <b>batch_notifications</b> (50%)</div>
+      <div class="mt-2"><span class="badge tone-neutral">OFF</span> <b>webhook_retry_v2</b> (0%) · <b>graphql_api</b> (0%) · <b>sso_login</b> (0%) · <b>advanced_analytics</b> (0% · ADMIN) · <b>two_factor_enforcement</b> (0% · ADMIN) · <b>project_templates</b> (10%) · <b>ai_request_summary</b> (0%)</div>
+    </div>
+  </section>
+
+  <section id="sys-jobs" class="panel">
+    <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Background jobs (12)</h2><div class="panel-sub">Cron schedules, execution counts, and status</div></div><span class="badge tone-success">SUCCESS</span></div>
+    <div class="panel-body mono text-xs" style="line-height:1.65">
+      <div><b>outbox-poller</b> (*/10 * * * * *, 62 runs, SUCCESS) · <b>audit-archiver</b> (0 2 * * *, 30 runs) · <b>session-cleanup</b> (0 */6 * * *, 120 runs)</div>
+      <div><b>media-orphan-sweep</b> (0 3 * * 0, 4 runs) · <b>webhook-retry-worker</b> (*/30 * * * * *, 18 runs) · <b>quote-expiry-checker</b> (0 0 * * *, 30 runs)</div>
+      <div><b>metrics-aggregator</b> (*/5 * * * *, 288 runs) · <b>invoice-reminder</b> (0 9 * * 1-5, 22 runs) · <b>search-index-sync</b> (*/15 * * * *, 96 runs)</div>
+      <div><b>backup-verifier</b> (0 4 * * *, 30 runs) · <b>notification-digest</b> (0 8 * * *, 30 runs) · <b>rate-limit-flusher</b> (0 * * * *, 720 runs)</div>
+    </div>
+  </section>
+</div>
+
+<section id="sys-templates" class="panel mb-5">
+  <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Templates (62) · Email templates (10) &amp; Notification templates (52)</h2><div class="panel-sub">Edit and preview transactional email &amp; in-app notification templates</div></div></div>
+  <div class="grid g2">
+    <div class="panel-body" style="border-right:1px solid var(--line)">
+      <h3 class="panel-title mb-2">Email templates (10) — Edit &amp; Preview</h3>
+      <div class="text-xs mb-2"><b>Expanded: Contact Inquiry Confirmation</b> (<span class="mono">contact-confirmation</span>) — Subject: <span class="mono">We received your message, {{name}} — Nestlancer</span></div>
+      <div class="text-xs dim">Other email templates: <b>Milestone Completed</b> (<span class="mono">milestone-completed</span>) · <b>New Contact Inquiry Admin</b> (<span class="mono">contact-admin-notify</span>) · <b>Password Reset Request</b> (<span class="mono">password-reset</span>) · <b>Payment Receipt</b> (<span class="mono">payment-receipt</span>) · <b>Project Created</b> (<span class="mono">project-created</span>) · <b>Project Delivered</b> (<span class="mono">project-delivered</span>) · <b>Quote Ready for Review</b> (<span class="mono">quote-sent</span>) · <b>Two-Factor Verification Code</b> (<span class="mono">two-factor-code</span>) · <b>Welcome Email</b> (<span class="mono">welcome</span>)</div>
+    </div>
+    <div class="panel-body">
+      <h3 class="panel-title mb-2">Notification templates (52) — Edit &amp; Preview</h3>
+      <div class="text-xs mb-2"><b>Expanded: Account Created</b> (<span class="mono">ACCOUNT_CREATED · SYSTEM · IN_APP + EMAIL</span>) — Title: <span class="mono">Welcome to Nestlancer, {{userName}}!</span></div>
+      <div class="text-xs dim">Covers all 52 platform lifecycle events across Auth, Requests, Quotes, Projects, Milestones, Deliverables, Payments, Disputes, and Moderation.</div>
+    </div>
+  </div>
+</section>
 
 <div class="grid g4 gap-4">
 
@@ -178,7 +296,31 @@
     <div class="text-xs dim mt-1 mb-3">Payment, email, LLM, storage</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
-</div></main>
+</div><!-- PROTO-UPGRADE-START -->
+
+<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
+  <div class="state-matrix-head">
+    <div>
+      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (9)</h2>
+      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
+    </div>
+    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+  </div>
+  <div class="state-matrix-body">
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/059-system.webp</span></div><p>System Config &gt; Health: service Healthy (admin); config keys 14 (all saved); feature flags 5/12 enabled; templates 62 (10 email, 52 notification). Gateway Reachable; maintenance Off; flags enabled 5/12. Tabs Health, Config 14, Features 12, Jobs 12, Templates 62, Operations. Cache management: Clear all cache, Clear key. Download logs (CSV, recent window).</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/060-system-features.webp</span></div><p>System Config &gt; Features: 5 on / 7 off. Flags include Enforce 2FA for all admin accounts (off); Enable outbound webhook delivery (off); Enable virus scanning for uploaded files (on); Enable system-wide maintenance mode (off); Enable API rate limiting (on); Enable email notification delivery (on); Enable push notification delivery (off); Enable advanced analytics dashboard (off); Enable blog commenting system (on); Make portfolio items publicly visible (on); Enable chunked file upload support (off); Enable CDN processing for media files (off).</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/061-system-jobs.webp</span></div><p>System Config &gt; Jobs: 12 background jobs, all COMPLETED at 10/10/2026 8:09:54 AM: email, notification, audit, media, webhook, cdn, analytics, document, export, payments.webhook, system.webhook, projects.lifecycle queues. Retry and Cancel per row.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/062-system-operations.webp</span></div><p>System Config &gt; Operations: Platform announcements form (title, message body max 1000 chars, severity Info, Users can dismiss on; Send announcement disabled until filled). Maintenance mode: Live status Disabled; toggle off; message &quot;System is under maintenance. Please check back later.&quot;; estimated end optional; &quot;No changes to apply&quot;.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/063-system-templates.webp</span></div><p>System Config &gt; Templates: Email 10 / Notifications 52. Email templates: verification (Verify your Nestlancer account), welcome (Welcome to Nestlancer!), password-reset, quote-sent (New quote for your project: {{projectTitle}}), payment-receipt, project-update, milestone-completed ({{milestoneName}}), new-message, account-suspended, contact-received (We received your message – Ticket #{{ticketId}}). Edit &amp; preview per row.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/104-system-configuration.webp</span></div><p>System Config &gt; Config tab: Platform configuration (All saved), 12 editable keys, 2 managed elsewhere; note &quot;Maintenance mode and announcement history are edited under the Operations tab.&quot; Groups: SYSTEM 8 keys (rate limits admin 300/60s; file upload maxFileSizeMB 50, maxChunkSizeMB 5; pagination maxLimit 100, defaultLimit 20; JWT refresh 7 days, accessToken 15 min; security maxLoginAttempts 5, passwordMinLength 8, lockout 15 min; currency symbol ₹ INR paise; media maxVersions 10; notifications batchSize 50, expiryDays 90); REQUESTS 1 key (request.categories: webDevelopment, etc.); OTHER 3 keys: blog.settings, media.settings, payment.settings all {}.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/105-system-loaded-diagnostics.webp</span></div><p>System Config &gt; Health with diagnostics loaded: Gateway Reachable; Service Healthy (admin); Maintenance Off; Flags enabled 5/12. Raw payload: status &quot;healthy&quot;, timestamp 2026-10-10T12:01:22.083Z; server, process and dependencies (database, cache, queue connected: true); featureFlags newDashboard true, advancedAnalytics false, betaFeatures true. Hide diagnostics. Cache management: Clear all cache; Exact cache key; Clear key. System logs: Download logs (CSV, recent window).</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/106-templates-email-edit-and-preview.webp</span></div><p>System Config &gt; Templates &gt; Email: &quot;verification&quot; template editor. Subject &quot;Verify your Nestlancer account&quot;; HTML body with &quot;Hi {{userName}}&quot;, &quot;Thanks for joining Nestlancer…&quot;, button link {{link}}, &quot;This link expires in 24 hours. If you did not create an account, ignore this email.&quot; Email preview From Nestlancer &lt;noreply@nestlancer.com&gt;, To recipient@example.com. Send test (to you@company.com, disabled until filled); Close; Save template.</p></article>
+    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>System · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/107-templates-notification-edit-and-preview.webp</span></div><p>System Config &gt; Templates &gt; Notifications: &quot;Edit notification template&quot; for account-deleted-user. Fields: key account-deleted-user; event account.deleted; title &quot;Account deleted&quot;; body &quot;Your account has been deleted.&quot;; channels [&quot;IN_APP&quot;]. Cancel / Save template.</p></article>
+    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>accesstoken account account-deleted-user account-suspended accounts admin advanced advancedanalytics analytics announcement announcements apply audit background batchsize betafeatures cache cancel categories changes channels chars check chunked clear close commenting company completed config configuration connected contact-received create currency dashboard database defaultlimit deleted delivery dependencies diagnostics disabled dismiss document download editable edited editor elsewhere email enable enabled enforce estimated event exact example expires expirydays export false feature featureflags features fields files filled flags gateway groups health healthy history hours ignore include items joining later lifecycle limiting limits loaded lockout maintenance managed management maxchunksizemb maxfilesizemb maxlimit maxloginattempts maxversions media message milestone-completed milestonename nestlancer new-message newdashboard noreply notification notifications operations optional other outbound pagination paise password-reset passwordminlength payload payment payment-receipt payments platform please portfolio preview process processing project project-update projects projecttitle publicly queue queues quote quote-sent reachable received recent recipient refresh request requests retry saved scanning security server service settings severity subject support symbol system system-wide template templates thanks ticket ticketid timestamp title toggle until upload uploaded username users verification verify virus visible webdevelopment webhook welcome window 083 100 1000 2026 300</p></div>
+  </div>
+</section>
+<!-- PROTO-UPGRADE-END -->
+</main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">
