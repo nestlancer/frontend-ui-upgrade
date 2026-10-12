@@ -12,6 +12,8 @@
  *   reduced       with prefers-reduced-motion: reduce forced, nothing is left
  *                 mid-animation (no non-none animation running on entry)
  *   theme         forcing light and dark changes both --bg-app and the body surface
+ *   keyboard      first Tab reaches the skip link; Enter focuses the unique main
+ *                 target and both focus states have a visible ring
  *
  * Default scope is the screenshot-mapped pages in pairs.json. `--all` adds
  * every proto index.html, including the sign-off hub and ungraded state routes;
@@ -135,6 +137,51 @@ for (const p of pages) {
     await new Promise(r => setTimeout(r, 300));
     const d = await page.evaluate(PROBE);
     Object.assign(row, d);
+
+    // Exercise the real keyboard path, not just the anchor markup. A valid skip
+    // link should be first in the tab order, and Enter should move focus to the
+    // named main landmark (tabindex=-1 keeps it out of the regular tab order).
+    const skipStart = await page.evaluate(() => {
+      const links = [...document.querySelectorAll('a.skip-link')];
+      const link = links[0];
+      const href = link?.getAttribute('href') || '';
+      const id = href.startsWith('#') ? decodeURIComponent(href.slice(1)) : '';
+      const targets = id ? [...document.querySelectorAll(`[id="${CSS.escape(id)}"]`)] : [];
+      const target = targets[0];
+      const r = target?.getBoundingClientRect();
+      const s = target && getComputedStyle(target);
+      return {
+        count: links.length, href, targetCount: targets.length,
+        targetTag: target?.tagName || '', targetTabindex: target?.getAttribute('tabindex'),
+        targetVisible: !!target && s.display !== 'none' && s.visibility !== 'hidden' && !!r?.width && !!r?.height,
+      };
+    });
+    await page.keyboard.press('Tab');
+    const skipFocus = await page.evaluate(() => {
+      const el = document.activeElement, s = getComputedStyle(el);
+      return { isSkip: el.matches('a.skip-link'), focusVisible: el.matches(':focus-visible'),
+        outline: s.outlineStyle, outlineWidth: parseFloat(s.outlineWidth) || 0,
+        rect: el.getBoundingClientRect().toJSON() };
+    });
+    await page.keyboard.press('Enter');
+    await new Promise(r => setTimeout(r, 40));
+    const skipLanding = await page.evaluate(() => {
+      const el = document.activeElement, target = document.getElementById('main'), s = getComputedStyle(el);
+      return { hash: location.hash, isMain: el === target, focusVisible: el.matches(':focus-visible'),
+        outline: s.outlineStyle, outlineWidth: parseFloat(s.outlineWidth) || 0 };
+    });
+    row.keyboard = [];
+    if (skipStart.count !== 1) row.keyboard.push(`skip-link count=${skipStart.count}`);
+    if (skipStart.href !== '#main') row.keyboard.push(`skip-link href=${skipStart.href || '(missing)'}`);
+    if (skipStart.targetCount !== 1 || skipStart.targetTag !== 'MAIN' || skipStart.targetTabindex !== '-1' || !skipStart.targetVisible)
+      row.keyboard.push('skip-link target is not one visible, focusable main landmark');
+    if (!skipFocus.isSkip) row.keyboard.push('first Tab did not focus the skip link');
+    if (!skipFocus.focusVisible || skipFocus.outline === 'none' || skipFocus.outlineWidth < 2 || skipFocus.rect.width < 1)
+      row.keyboard.push('skip-link focus ring is not visible');
+    if (skipLanding.hash !== '#main' || !skipLanding.isMain) row.keyboard.push('Enter did not focus #main');
+    if (!skipLanding.focusVisible || skipLanding.outline === 'none' || skipLanding.outlineWidth < 2)
+      row.keyboard.push('main focus ring is not visible after skip');
+
     await page.setViewport({ width: 390, height: 844 });
     await new Promise(r => setTimeout(r, 250));
     const m = await page.evaluate(PROBE);
@@ -165,6 +212,7 @@ for (const p of pages) {
   if (row.noAlt > 0) problems.push(`${row.noAlt}/${row.imgs} image(s) without alt`);
   if (row.unlabeled > 0) problems.push(`${row.unlabeled}/${row.fields} field(s) unlabeled`);
   if (row.animating > 0) problems.push(`${row.animating} element(s) still animating under reduced-motion`);
+  if (row.keyboard && row.keyboard.length) problems.push(...row.keyboard.map(x => `keyboard: ${x}`));
   if (row.error) problems.push(row.error);
   if (problems.length) fails.push({ page: pageName, problems, detail: row });
 }

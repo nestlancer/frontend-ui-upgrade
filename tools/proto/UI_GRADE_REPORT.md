@@ -280,13 +280,13 @@ and it would introduce a second desktop layout mode for every future page. The a
 system-wide decision, and this table is the evidence behind it.
 
 
-## 8. The ten ship gates, machine-checked on every page
+## 8. The ten ship gates + keyboard smoke, machine-checked on every page
 
-The work order ends with ten per-page gates. They are no longer a manual checklist: `tools/proto/upgrade/gate_sweep.mjs --all` checks every proto `index.html` route (including ungraded state pages and the sign-off hub); `tools/proto/upgrade/links.py` checks the internal link graph.
+The work order ends with ten per-page ship gates plus an explicit keyboard smoke. `tools/proto/upgrade/gate_sweep.mjs --all` checks every proto `index.html` route (including ungraded state pages and the sign-off hub); `tools/proto/upgrade/links.py` checks the internal link graph.
 
-The all-route sweep covers **188/188 pages**: 82 routes carry the 181 screenshot-grade rows; `--all` adds the other 105 app routes plus the sign-off hub. The first all-app pass found 18 findings across 16 ungraded routes. Batch J closed them; the final sweep is green at every route.
+The all-route sweep covers **188/188 pages**: 82 routes carry the 181 screenshot-grade rows; `--all` adds the other 105 app routes plus the sign-off hub. The first all-app pass found 18 ship-gate findings across 16 ungraded routes. Batch J closed them. Batch K verified that all 188 skip links also transfer keyboard focus correctly; the combined final sweep is green.
 
-| Gate | How it is checked | Result |
+| Ship gate | How it is checked | Result |
 |---|---|---|
 | One h1 per page | count of rendered, visible `h1` elements | 188/188 pass |
 | No skipped heading level | rendered heading order, `h1` through `h6` | 0 skips (was 13 on the graded-route baseline) |
@@ -299,6 +299,15 @@ The all-route sweep covers **188/188 pages**: 82 routes carry the 181 screenshot
 | Dark theme responds | force `data-theme=light`, then `dark`; assert both `--bg-app` and computed body background change | 188/188 pass |
 | Links resolve | `links.py`: every internal href/asset path on disk | 0 missing of 7,047 across 188 pages |
 
+Additional keyboard and skip-link smoke:
+
+| Check | Browser test | Result |
+|---|---|---|
+| Skip link is first | press Tab from page load; focus must land on the single `.skip-link` | 188/188 pass |
+| Skip target is valid | `href="#main"` points to one visible `<main id="main" tabindex="-1">` | 188/188 pass |
+| Skip transfers focus | press Enter; URL becomes `#main` and `document.activeElement` becomes that main | 188/188 pass |
+| Focus stays visible | skip link and target both match `:focus-visible` with a >=2px outline | 188/188 pass |
+
 Batch J follow-up, based on the first all-app sweep:
 
 | Fix | Result |
@@ -308,6 +317,14 @@ Batch J follow-up, based on the first all-app sweep:
 | Eight public/client footers started at h3 after a lone h1 | Promoted the three peer footer headings to h2 on those routes; added the matching shared style |
 | Verification digits and the planned-window end field had no accessible names | Named all 12 OTP digits and the planned window controls |
 | Eight media-row checkboxes and the reset cancel link were below 44px at 390px | Raised their carrier/action targets to 44px in the mobile-only rule |
+
+Batch K fixed skip-link focus handoff without changing the normal Tab order:
+
+| Fix | Result |
+|---|---|
+| 182 existing `main#main` targets could scroll to content but did not receive focus | Added `tabindex="-1"`; each is focusable by the skip link but omitted from sequential Tab order |
+| Five auth routes and the admin redirect fallback had no main target | Promoted the auth form wrappers and redirect message to focusable `<main>` landmarks; all 188 destinations are unique and visible |
+| Keyboard focus after skip had not been exercised | Added real Tab → Enter checks and a 2px `:focus-visible` ring assertion for both stops |
 
 The `a11y_fix.py` repair passes that closed the graded-route findings are idempotent and derived only from markup that already exists:
 
@@ -325,4 +342,4 @@ The `a11y_fix.py` repair passes that closed the graded-route findings are idempo
 
 The probe deliberately exempts three classes that are not defects: checkbox/radio measured through their carrier label, links inline in a sentence (WCAG 2.5.8), and `aria-hidden`/`tabindex="-1"` proxies.
 
-Re-run all routes: `cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/ && cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ LD_LIBRARY_PATH=/tmp/nsswrap/lib node gate_sweep.mjs --all` (about 9 minutes for 188 pages: a 1440px probe, a 390px probe and a reduced-motion reload each).
+Re-run all routes: `cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/ && cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ LD_LIBRARY_PATH=/tmp/nsswrap/lib node gate_sweep.mjs --all` (about 9 minutes for 188 pages: desktop/mobile layout, a real Tab → Enter → main-focus path, and a reduced-motion reload).
