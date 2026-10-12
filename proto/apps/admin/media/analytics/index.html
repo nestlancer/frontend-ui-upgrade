@@ -8,10 +8,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -49,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Analytics</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -58,7 +60,7 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Media center</a>
 <div class="phead">
 <div class="min-w-0">
@@ -120,9 +122,9 @@
 
 <div class="panel mt-5">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Most viewed (7d)</h2></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl  ">
-<thead><tr><th>File</th><th>Folder</th><th style="text-align:right">Views</th><th>Trend</th></tr></thead>
-<tbody><tr><td><span class="mono" style="font-size:11.5px">Case Study_FintechPayJan2026.webp</span></td><td><span class="dim">case-studies</span></td><td style="text-align:right"><span class="mono">142</span></td><td><span style="color:var(--t-success-tx)">▲</span></td></tr><tr><td><span class="mono" style="font-size:11.5px">Nestlancer Services Content.png</span></td><td><span class="dim">brand</span></td><td style="text-align:right"><span class="mono">98</span></td><td><span style="color:var(--t-success-tx)">▲</span></td></tr><tr><td><span class="mono" style="font-size:11.5px">RentFair_Architecture_Diagram.png</span></td><td><span class="dim">documents</span></td><td style="text-align:right"><span class="mono">61</span></td><td><span style="color:var(--ink-3)">■</span></td></tr><tr><td><span class="mono" style="font-size:11.5px">1_GTSiMaCAderv0Xi6AyOtmw.webp</span></td><td><span class="dim">documents</span></td><td style="text-align:right"><span class="mono">34</span></td><td><span style="color:var(--t-danger-tx)">▼</span></td></tr><tr><td><span class="mono" style="font-size:11.5px">mark-full.png</span></td><td><span class="dim">brand</span></td><td style="text-align:right"><span class="mono">21</span></td><td><span style="color:var(--ink-3)">■</span></td></tr></tbody></table></div></div>
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
+<thead><tr><th id="nl-th-1">File</th><th id="nl-th-2">Folder</th><th id="nl-th-3" style="text-align:right">Views</th><th id="nl-th-4">Trend</th></tr></thead>
+<tbody><tr><td data-label="File"><span class="mono" style="font-size:11.5px">Case Study_FintechPayJan2026.webp</span></td><td data-label="Folder"><span class="dim">case-studies</span></td><td data-label="Views" style="text-align:right"><span class="mono">142</span></td><td data-label="Trend"><span style="color:var(--t-success-tx)">▲</span></td></tr><tr><td data-label="File"><span class="mono" style="font-size:11.5px">Nestlancer Services Content.png</span></td><td data-label="Folder"><span class="dim">brand</span></td><td data-label="Views" style="text-align:right"><span class="mono">98</span></td><td data-label="Trend"><span style="color:var(--t-success-tx)">▲</span></td></tr><tr><td data-label="File"><span class="mono" style="font-size:11.5px">RentFair_Architecture_Diagram.png</span></td><td data-label="Folder"><span class="dim">documents</span></td><td data-label="Views" style="text-align:right"><span class="mono">61</span></td><td data-label="Trend"><span style="color:var(--ink-3)">■</span></td></tr><tr><td data-label="File"><span class="mono" style="font-size:11.5px">1_GTSiMaCAderv0Xi6AyOtmw.webp</span></td><td data-label="Folder"><span class="dim">documents</span></td><td data-label="Views" style="text-align:right"><span class="mono">34</span></td><td data-label="Trend"><span style="color:var(--t-danger-tx)">▼</span></td></tr><tr><td data-label="File"><span class="mono" style="font-size:11.5px">mark-full.png</span></td><td data-label="Folder"><span class="dim">brand</span></td><td data-label="Views" style="text-align:right"><span class="mono">21</span></td><td data-label="Trend"><span style="color:var(--ink-3)">■</span></td></tr></tbody></table></div></div>
   
 </div></main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>

@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -56,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Integrations</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -65,14 +60,14 @@
     <a class="userchip" href="../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <div class="phead">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>PLATFORM</div>
   <h1 class="ptitle">Integrations</h1>
   <p class="psub">Where the platform talks to the outside world — payments, email, LLMs, and notifications.</p>
 </div>
-<div class="phead-actions"></div>
+<div class="phead-actions"><button class="btn btn-primary" type="button" data-dialog-open="dlg-webhook">Add webhook</button></div>
 </div>
 <div class="panel mb-5">
   <div class="panel-row">
@@ -138,23 +133,33 @@
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
 </div>
-<div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div>Razorpay is in <b>test mode</b>. No real money moves until production keys replace the current test pair — keep client comms aligned.</div></div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><a class="btn btn-primary btn-sm" href="#proto-state-matrix">Review workspace state</a><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Integrations · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/016-integrations.webp</span></div><p>System &gt; Webhooks: integration health ok (webhooks-admin); event catalog 12 events; configured webhooks 0 endpoints (&quot;No webhooks registered yet&quot;). Delivery preferences: Retry failed deliveries on (5xx, exponential backoff); Require signing secret on (HMAC). Button + Add webhook.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Integrations · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/017-integrations-add-webhook.webp</span></div><p>System &gt; Webhooks &gt; New webhook form: Name &quot;Project updates&quot;; URL placeholder https://example.com/hook; Events &quot;request.created, quote.accepted&quot;; Create webhook (disabled in capture); Cancel.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>accepted backoff cancel capture catalog configured create created deliveries delivery disabled endpoints event events example exponential failed health https integration placeholder preferences project quote registered request require retry secret signing system updates webhook webhooks webhooks-admin </p></div>
-  </div>
+<div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div>Razorpay is in <b>test mode</b>. No real money moves until production keys replace the current test pair — keep client comms aligned.</div></div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">2 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>integrations</b><span class="ref-tag mono">016</span></div><ul class="ref-facts"><li>System &gt; Webhooks: integration health ok (webhooks-admin); event catalog 12 events</li><li>configured webhooks 0 endpoints (&quot;No webhooks registered yet&quot;). Delivery preferences: Retry failed deliveries on (5xx, exponential backoff)</li><li>Require signing secret on (HMAC). Button + Add webhook</li></ul></li><li class="ref-row"><div class="ref-head"><b>integrations — integrations — + Add webhook</b><span class="ref-tag mono">017</span></div><ul class="ref-facts"><li>System &gt; Webhooks &gt; New webhook form: Name &quot;Project updates&quot;; URL placeholder https://example.com/hook; Events &quot;request.created, quote.accepted&quot;; Create webhook (disabled in capture); Cancel</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
+
+<dialog class="dialog" id="dlg-webhook" aria-labelledby="dlg-webhook-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h2 class="panel-title" id="dlg-webhook-h">New webhook</h2>
+      <div class="panel-sub">Send a signed POST to your endpoint when a subscribed event fires.</div>
+    </div>
+    <button class="btn-icon" type="button" data-dialog-close aria-label="Close"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="dialog-body">
+    <div class="field"><label class="label" for="wh-name">Name</label><input class="input" id="wh-name" value="Project updates"></div>
+    <div class="field"><label class="label" for="wh-url">Endpoint URL</label><input class="input mono" id="wh-url" placeholder="https://example.com/hook"></div>
+    <div class="field"><label class="label" for="wh-events">Events</label><input class="input mono" id="wh-events" value="request.created, quote.accepted"></div>
+    <p class="text-xs muted">Every delivery is signed with the workspace secret and retried for 24 hours on failure.</p>
+  </div>
+  <div class="dialog-foot">
+    <button class="btn btn-secondary" type="button" data-dialog-close>Cancel</button>
+    <button class="btn btn-primary" type="button" disabled aria-disabled="true">Create webhook</button>
+  </div>
+</dialog>
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

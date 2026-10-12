@@ -8,10 +8,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -49,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Deep search</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -58,7 +60,7 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to users</a>
 <div class="phead">
 <div class="min-w-0">
@@ -74,7 +76,7 @@
   <div class="panel-body">
   <div class="grid gap-4" style="grid-template-columns:1fr auto auto">
     <div class="input-wrap"><span class="in-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="nair · +91 98410 · NL-204 · mehta@…"></div>
-    <select class="select" style="width:150px"><option>All fields</option><option>Email</option><option>Phone</option><option>Document ref</option></select>
+    <select aria-label="Filter by field" class="select" style="width:150px"><option>All fields</option><option>Email</option><option>Phone</option><option>Document ref</option></select>
     <button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Search</button>
   </div>
   <div class="flex gap-2 mt-3 flex-wrap"><span class="chip active">Role: client</span><span class="chip active">Role: operator</span><span class="chip">Has: open requests</span><span class="chip">Has: outstanding dues</span><span class="chip">Joined < 30d</span><span class="chip">State: suspended</span></div></div>
@@ -82,9 +84,9 @@
 </div>
 <div class="panel mt-5">
   <div class="panel-head"><h2 class="panel-title">Results — “nair”</h2><span class="text-xs dim">2 matches · 30 ms</span></div>
-  <div class="tbl-wrap"><table class="tbl  ">
-<thead><tr><th>User</th><th>Matched on</th><th>Status</th><th></th></tr></thead>
-<tbody><tr><td><div class="flex items-center gap-2"><span class="avatar hue-1">PN</span><b>Priya Nair</b></div></td><td>Name · 5 requests · NL-204 active</td><td><span class="badge tone-success">Active</span></td><td><a class="link text-xs font-semibold" href="../[id]/index.html">View →</a></td></tr><tr><td><div class="flex items-center gap-2"><span class="avatar hue-4">SN</span><b>Sandeep Nair</b></div></td><td>Email snair@… · IT approver at NLS</td><td><span class="badge tone-warning">Invited</span></td><td><a class="link text-xs font-semibold" href="../[id]/index.html">View →</a></td></tr></tbody></table></div>
+  <div class="tbl-wrap"><table class="tbl tbl-cards  ">
+<thead><tr><th id="nl-th-1">User</th><th id="nl-th-2">Matched on</th><th id="nl-th-3">Status</th><th></th></tr></thead>
+<tbody><tr><td data-label="User"><div class="flex items-center gap-2"><span class="avatar hue-1">PN</span><b>Priya Nair</b></div></td><td data-label="Matched on">Name · 5 requests · NL-204 active</td><td data-label="Status"><span class="badge tone-success">Active</span></td><td><a class="link text-xs font-semibold" href="../[id]/index.html">View →</a></td></tr><tr><td data-label="User"><div class="flex items-center gap-2"><span class="avatar hue-4">SN</span><b>Sandeep Nair</b></div></td><td data-label="Matched on">Email snair@… · IT approver at NLS</td><td data-label="Status"><span class="badge tone-warning">Invited</span></td><td><a class="link text-xs font-semibold" href="../[id]/index.html">View →</a></td></tr></tbody></table></div>
 </div></main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

@@ -8,10 +8,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -49,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Maintenance</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -58,7 +60,7 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> System</a>
 <div class="phead">
 <div class="min-w-0">
@@ -86,20 +88,20 @@
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Mode <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option>Read-only (browsing works, writes blocked)</option><option>Full standstill (everything except this console pauses)</option></select>
+  <label for="nl-mode" class="label">Mode <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-mode" class="select"><option>Read-only (browsing works, writes blocked)</option><option>Full standstill (everything except this console pauses)</option></select>
   
 </div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Public message <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="3" placeholder="Shown on the platform-wide banner…">We are upgrading our payment stack. Everything is safe — quoting, messaging, and uploads pause for about 30 minutes starting 02:00 IST on Oct 18.</textarea>
+  <label for="nl-public-message" class="label">Public message <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-public-message" class="textarea" rows="3" placeholder="Shown on the platform-wide banner…">We are upgrading our payment stack. Everything is safe — quoting, messaging, and uploads pause for about 30 minutes starting 02:00 IST on Oct 18.</textarea>
   
 </div></div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Planned window <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <div class="grid g2 gap-3"><input class="input" type="datetime-local"><input class="input" type="datetime-local"></div>
+  <label for="nl-planned-window" class="label">Planned window <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <div class="grid g2 gap-3"><input id="nl-planned-window" class="input" type="datetime-local" aria-label="Planned window start"><input class="input" type="datetime-local" aria-label="Planned window end"></div>
   
 </div></div>
       <div class="flex gap-2 mt-4"><button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l14-6v14L3 13v-2z"/><path d="M17 6a4 4 0 010 12"/><path d="M7 13v6a1 1 0 001 1h2"/></svg> Schedule announcement + window</button><button class="btn btn-danger">Engage now</button></div>
@@ -121,9 +123,9 @@
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">History</h2></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl tbl-compact ">
-<thead><tr><th>When</th><th>Mode</th><th>Duration</th><th>Outcome</th></tr></thead>
-<tbody><tr><td>Sep 14, 2026</td><td>Read-only</td><td>22 min</td><td><span class="text-xs">No incidents</span></td></tr><tr><td>Jul 30, 2026</td><td>Full</td><td>38 min</td><td><span class="text-xs">1 retry on payout lock</span></td></tr><tr><td>May 02, 2026</td><td>Read-only</td><td>14 min</td><td><span class="text-xs">Smooth</span></td></tr></tbody></table></div></div>
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
+<thead><tr><th id="nl-th-1">When</th><th id="nl-th-2">Mode</th><th id="nl-th-3">Duration</th><th id="nl-th-4">Outcome</th></tr></thead>
+<tbody><tr><td data-label="When">Sep 14, 2026</td><td data-label="Mode">Read-only</td><td data-label="Duration">22 min</td><td data-label="Outcome"><span class="text-xs">No incidents</span></td></tr><tr><td data-label="When">Jul 30, 2026</td><td data-label="Mode">Full</td><td data-label="Duration">38 min</td><td data-label="Outcome"><span class="text-xs">1 retry on payout lock</span></td></tr><tr><td data-label="When">May 02, 2026</td><td data-label="Mode">Read-only</td><td data-label="Duration">14 min</td><td data-label="Outcome"><span class="text-xs">Smooth</span></td></tr></tbody></table></div></div>
   
 </div>
   </div>

@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -56,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Analytics</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -65,7 +60,7 @@
     <a class="userchip" href="../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <div class="phead">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>ANALYTICS · INTELLIGENCE</div>
@@ -89,12 +84,12 @@
     <div class="stat"><div class="stat-label">Period trend</div><div class="stat-value">₹7,08,160.00 · +100 · up</div><div class="stat-note up">09-11 · 09-18 · 09-26 · 10-03 · 10-10</div></div>
     <div class="stat"><div class="stat-label">Revenue by category</div><div class="stat-value">3 categories</div><div class="stat-note">webDevelopment · custom · marketing</div></div>
   </div>
-  <div class="tbl-wrap"><table class="tbl tbl-compact">
-    <thead><tr><th>Category</th><th style="text-align:right">Amount</th></tr></thead>
+  <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
+    <thead><tr><th id="nl-th-1">Category</th><th id="nl-th-2" style="text-align:right">Amount</th></tr></thead>
     <tbody>
-      <tr><td class="font-semibold">webDevelopment</td><td class="mono font-semibold" style="text-align:right">₹6,66,100.00</td></tr>
-      <tr><td class="font-semibold">custom</td><td class="mono font-semibold" style="text-align:right">₹30,060.00</td></tr>
-      <tr><td class="font-semibold">marketing</td><td class="mono font-semibold" style="text-align:right">₹12,000.00</td></tr>
+      <tr><td data-label="Category" class="font-semibold">webDevelopment</td><td data-label="Amount" class="mono font-semibold" style="text-align:right">₹6,66,100.00</td></tr>
+      <tr><td data-label="Category" class="font-semibold">custom</td><td data-label="Amount" class="mono font-semibold" style="text-align:right">₹30,060.00</td></tr>
+      <tr><td data-label="Category" class="font-semibold">marketing</td><td data-label="Amount" class="mono font-semibold" style="text-align:right">₹12,000.00</td></tr>
     </tbody>
   </table></div>
 </section>
@@ -130,29 +125,29 @@
   <div class="grid g2" style="border-top:1px solid var(--line)">
     <div class="panel-body" style="border-right:1px solid var(--line)">
       <h3 class="panel-title mb-2">By status</h3>
-      <div class="tbl-wrap"><table class="tbl tbl-compact">
-        <thead><tr><th>Status</th><th style="text-align:right">Count</th></tr></thead>
+      <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
+        <thead><tr><th id="nl-th-3">Status</th><th id="nl-th-4" style="text-align:right">Count</th></tr></thead>
         <tbody>
-          <tr><td>Draft</td><td class="mono" style="text-align:right">5</td></tr>
-          <tr><td>Submitted</td><td class="mono" style="text-align:right">11</td></tr>
-          <tr><td>Converted To Project</td><td class="mono" style="text-align:right">18</td></tr>
-          <tr><td>Rejected</td><td class="mono" style="text-align:right">3</td></tr>
-          <tr><td>Quoted</td><td class="mono" style="text-align:right">7</td></tr>
-          <tr><td>Under Review</td><td class="mono" style="text-align:right">2</td></tr>
+          <tr><td data-label="Status">Draft</td><td data-label="Count" class="mono" style="text-align:right">5</td></tr>
+          <tr><td data-label="Status">Submitted</td><td data-label="Count" class="mono" style="text-align:right">11</td></tr>
+          <tr><td data-label="Status">Converted To Project</td><td data-label="Count" class="mono" style="text-align:right">18</td></tr>
+          <tr><td data-label="Status">Rejected</td><td data-label="Count" class="mono" style="text-align:right">3</td></tr>
+          <tr><td data-label="Status">Quoted</td><td data-label="Count" class="mono" style="text-align:right">7</td></tr>
+          <tr><td data-label="Status">Under Review</td><td data-label="Count" class="mono" style="text-align:right">2</td></tr>
         </tbody>
       </table></div>
     </div>
     <div class="panel-body">
       <h3 class="panel-title mb-2">By category</h3>
-      <div class="tbl-wrap"><table class="tbl tbl-compact">
-        <thead><tr><th>Category</th><th style="text-align:right">Count</th></tr></thead>
+      <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
+        <thead><tr><th id="nl-th-5">Category</th><th id="nl-th-6" style="text-align:right">Count</th></tr></thead>
         <tbody>
-          <tr><td>webDevelopment</td><td class="mono" style="text-align:right">37</td></tr>
-          <tr><td>custom</td><td class="mono" style="text-align:right">4</td></tr>
-          <tr><td>mobileApp</td><td class="mono" style="text-align:right">2</td></tr>
-          <tr><td>design</td><td class="mono" style="text-align:right">1</td></tr>
-          <tr><td>consulting</td><td class="mono" style="text-align:right">1</td></tr>
-          <tr><td>marketing</td><td class="mono" style="text-align:right">1</td></tr>
+          <tr><td data-label="Category">webDevelopment</td><td data-label="Count" class="mono" style="text-align:right">37</td></tr>
+          <tr><td data-label="Category">custom</td><td data-label="Count" class="mono" style="text-align:right">4</td></tr>
+          <tr><td data-label="Category">mobileApp</td><td data-label="Count" class="mono" style="text-align:right">2</td></tr>
+          <tr><td data-label="Category">design</td><td data-label="Count" class="mono" style="text-align:right">1</td></tr>
+          <tr><td data-label="Category">consulting</td><td data-label="Count" class="mono" style="text-align:right">1</td></tr>
+          <tr><td data-label="Category">marketing</td><td data-label="Count" class="mono" style="text-align:right">1</td></tr>
         </tbody>
       </table></div>
     </div>
@@ -225,25 +220,13 @@
     <div class="mb-3"><div class="flex justify-between text-xs mb-1"><span>NPS (client exit)</span><b class="mono">72</b></div><div class="prog"><i style="width:72%"></i></div></div></div>
   
 </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (4)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Analytics · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/003-analytics.webp</span></div><p>Analytics &gt; Revenue (30d): completed payments total ₹7,08,160.00 INR. By category: webDevelopment ₹6,66,100.00; custom ₹30,060.00; marketing ₹12,000.00.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Analytics · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/004-analytics-projects.webp</span></div><p>Analytics &gt; Projects: total 18; Active 4; Completed 10; On hold 0; Cancelled 0; avg completion 0 days; on-time rate 100%.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Analytics · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/005-analytics-requests.webp</span></div><p>Analytics &gt; Requests (30d): total 46; conversion 43.9%; avg response 0 minutes; open pipeline 13. By status: Draft 5, Submitted 11, Converted To Project 18, Rejected 3, Quoted 7, Under Review 2. By category: webDevelopment 37, custom 4, mobileApp 2, design 1, consulting 1, marketing 1. Quotes: total 36, accepted value ₹9,68,950.00, acceptance 50%.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Analytics · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/006-analytics-users.webp</span></div><p>Analytics &gt; Users (30d): total 34; active 34; new this month 34; by role User 33, Admin 1.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>acceptance accepted active admin analytics cancelled category completed completion consulting conversion converted custom design draft marketing minutes mobileapp month on-time payments pipeline project projects quoted quotes rejected requests response revenue review submitted total users value webdevelopment 100 12000.00 30060.00 666100.00 708160.00 968950.00</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">4 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>analytics</b><span class="ref-tag mono">003</span></div><ul class="ref-facts"><li>Analytics &gt; Revenue (30d): completed payments total ₹7,08,160.00 INR. By category: webDevelopment ₹6,66,100.00; custom ₹30,060.00; marketing ₹12,000.00</li></ul></li><li class="ref-row"><div class="ref-head"><b>analytics — analytics — Projects</b><span class="ref-tag mono">004</span></div><ul class="ref-facts"><li>Analytics &gt; Projects: total 18; Active 4; Completed 10; On hold 0; Cancelled 0; avg completion 0 days; on-time rate 100%</li></ul></li><li class="ref-row"><div class="ref-head"><b>analytics — analytics — Requests</b><span class="ref-tag mono">005</span></div><ul class="ref-facts"><li>Analytics &gt; Requests (30d): total 46; conversion 43.9%; avg response 0 minutes</li><li>open pipeline 13. By status: Draft 5, Submitted 11, Converted To Project 18, Rejected 3, Quoted 7, Under Review 2. By category: webDevelopment 37, custom 4, mobileApp 2, design 1, consulting 1, marketing 1. Quotes: total 36, accepted value ₹9,68,950.00, acceptance 50%</li></ul></li><li class="ref-row"><div class="ref-head"><b>analytics — analytics — Users</b><span class="ref-tag mono">006</span></div><ul class="ref-facts"><li>Analytics &gt; Users (30d): total 34; active 34; new this month 34; by role User 33, Admin 1</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

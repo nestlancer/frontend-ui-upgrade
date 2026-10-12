@@ -7,25 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-@media (min-width: 961px) {
-  .sidebar { background: #FAFDFC !important; border-color: #F0F5F4 !important; }
-  .sidebar .sb-item:not(.active) { color: #98A6A3 !important; }
-  .sidebar .sb-label { color: #B0BDBA !important; }
-  .panel, .stats, .stat, .chip { border-color: #EFF4F3 !important; box-shadow: none !important; }
-  .cover { background: #F2F7F6 !important; color: #3D4A46 !important; border: 1px solid #E6EEEE !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Client workspace navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Client workspace navigation">
 <div class="sb-head">
   <a href="./index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -50,6 +37,7 @@
 </aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="./index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Overview</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
@@ -58,7 +46,7 @@
     <a class="icobtn" href="../notifications/index.html" title="Notifications"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span class="bdg">32</span></a>
     <a class="userchip" href="../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <div class="phead">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>ANANYA IYER</div>
@@ -138,26 +126,13 @@
   <div class="panel">
     <div class="panel-row"><i class="dot shrink-0"></i><div class="min-w-0 flex-1"><b style="font-size:12.8px">Invoice</b> <span class="text-xs muted">— Your invoice for Razorpay Settlement Reconciliation Engine (₹14,400.00) is ready to download.</span></div><span class="text-xs dim shrink-0">5d ago</span></div><div class="panel-row"><i class="dot shrink-0"></i><div class="min-w-0 flex-1"><b style="font-size:12.8px">New message in Payments ops — Razorpay settlement and webhooks</b> <span class="text-xs muted">— Riya Kapoor sent a message in Payments ops — Razorpay settlement and webhooks: "I&#39;ll…</span></div><span class="text-xs dim shrink-0">5d ago</span></div><div class="panel-row"><i class="dot shrink-0"></i><div class="min-w-0 flex-1"><b style="font-size:12.8px">New message in Payments ops — Razorpay settlement and webhooks</b> <span class="text-xs muted">— Karthik Menon sent a message in Payments ops — Razorpay settlement and webhooks: "…</span></div><span class="text-xs dim shrink-0">5d ago</span></div><div class="panel-row"><i class="dot shrink-0"></i><div class="min-w-0 flex-1"><b style="font-size:12.8px">Project status updated</b> <span class="text-xs muted">— Razorpay Settlement Reconciliation Engine status changed to In Progress.</span></div><span class="text-xs dim shrink-0">5d ago</span></div>
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (5)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Dashboard · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/030-dashboard-inbox-panel.webp</span></div><p>Dashboard (Ananya Iyer), Inbox tab (2). Invoiced ₹14,400.00 · ₹19,200.00 pending; Complete checkout; Projects; Notifications 32; unread messages 6. Inbox items: &quot;Payments ops — Razorpay settlement and webhooks&quot; (preview &quot;I&#x27;ll post the shared retry checklist here after tomorrow&#x27;s reconciliation review…&quot;, 5d) and &quot;Riya Kapoor&quot; (&quot;Thanks. Our finance team confirmed the duplicate NEFT on their end too. Replay UI remains the priority for month-end.&quot;, 5d). Recent activity: Invoice ready (₹14,400.00); new messages in Payments ops (×3 + Riya Kapoor, Karthik Menon).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Dashboard · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/031-dashboard-pay-now-panel.webp</span></div><p>Ananya Iyer. Dashboard: Invoiced ₹14,400.00 · ₹19,200.00 pending; Open requests 1; Active projects 1 (0 completed); Pending quotes 0; Unread messages 6; Notifications 32. Pipeline: Active 1, Done 0, Requests 1, Quotes 0. Collected ₹14,400.00; Pending ₹19,200.00. Pay now panel: ₹19,200.00, Razorpay Settlement Reconciliation Engine · Mid-project payment, 5d. Awaiting you: Pending payment ₹19,200.00; Unread messages 6; Notifications 32 new.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Dashboard · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/032-dashboard-projects-panel.webp</span></div><p>Ananya Iyer. Same dashboard with Projects tab active (Projects 1): Razorpay Settlement Reconciliation Engine, status Revision Requested, 5d. Quotes 0, Pay now 1, Inbox 2.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Dashboard · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/033-dashboard-quotes-panel.webp</span></div><p>Arjun Mehta. Dashboard: Invoiced ₹81,500.00 · ₹31,875.00 pending; Open requests 17; Active projects 4 (1 completed); Pending quotes 7; Unread messages 0; Notifications 2. Pipeline: Active 4, Done 1, Requests 17, Quotes 7. Collected ₹81,500.00; Pending ₹31,875.00. Quotes tab (3): AUDIT-P24-20261005-6y6fa-sent Request ₹2,832.00 Viewed; AUDIT-P24-20261005-6v891-sent Request ₹2,832.00 Viewed; AUDIT-P23-20261005-6rdsf Request to Quote Builder ₹1,770.00 Viewed. Pay now 4, Projects 3, Inbox 2. Recent activity: data export ready (×4), login (just now).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Dashboard · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/037-global-search-client-dialog.webp</span></div><p>Global search (Ananya Iyer): &quot;Search or jump to…&quot; with navigation: Dashboard, Requests, Projects, Quotes, Messages, Billing, Notifications, Profile, Settings; Explore: Blog, Portfolio; Actions: New request, New project, New direct message, Switch to dark mode. Keyboard hints navigate / select / close. Toast &quot;Signed in&quot;.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>active activity ananya arjun audit-p awaiting billing builder checklist checkout close collected complete completed confirmed dashboard direct duplicate engine explore export fa-sent finance global hints inbox invoice invoiced items kapoor karthik keyboard login mehta menon message messages mid-project month-end navigate navigation notifications panel payment payments pending pipeline portfolio preview priority profile project projects quote quotes razorpay ready recent reconciliation remains replay request requested requests retry review revision select settings settlement shared signed switch thanks toast tomorrow&#x27;s unread viewed webhooks 14400.00 1770.00 19200.00 20261005 2832.00 31875.00 81500.00 891</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">5 states recorded for this route — values as captured in the clients screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>dashboard — Dashboard — Inbox panel</b><span class="ref-tag mono">030</span></div><ul class="ref-facts"><li>Dashboard (Ananya Iyer), Inbox tab (2). Invoiced ₹14,400.00; ₹19,200.00 pending; Complete checkout; Projects; Notifications 32</li><li>unread messages 6. Inbox items: &quot;Payments ops — Razorpay settlement and webhooks&quot; (preview &quot;I&#x27;ll post the shared retry checklist here after tomorrow&#x27;s reconciliation review…&quot;, 5d) and &quot;Riya Kapoor&quot; (&quot;Thanks. Our finance team confirmed the duplicate NEFT on their end too. Replay UI remains the priority for month-end.&quot;, 5d). Recent activity: Invoice ready (₹14,400.00)</li><li>new messages in Payments ops (×3 + Riya Kapoor, Karthik Menon)</li></ul></li><li class="ref-row"><div class="ref-head"><b>dashboard — Dashboard — Pay now panel</b><span class="ref-tag mono">031</span></div><ul class="ref-facts"><li>Ananya Iyer. Dashboard: Invoiced ₹14,400.00; ₹19,200.00 pending; Open requests 1; Active projects 1 (0 completed); Pending quotes 0; Unread messages 6</li><li>Notifications 32. Pipeline: Active 1, Done 0, Requests 1, Quotes 0. Collected ₹14,400.00; Pending ₹19,200.00. Pay now panel: ₹19,200.00, Razorpay Settlement Reconciliation Engine</li><li>Mid-project payment, 5d. Awaiting you: Pending payment ₹19,200.00; Unread messages 6; Notifications 32 new</li></ul></li><li class="ref-row"><div class="ref-head"><b>dashboard — Dashboard — Projects panel</b><span class="ref-tag mono">032</span></div><ul class="ref-facts"><li>Ananya Iyer. Same dashboard with Projects tab active (Projects 1): Razorpay Settlement Reconciliation Engine, status Revision Requested, 5d. Quotes 0, Pay now 1, Inbox 2</li></ul></li><li class="ref-row"><div class="ref-head"><b>dashboard — Dashboard — Quotes panel</b><span class="ref-tag mono">033</span></div><ul class="ref-facts"><li>Arjun Mehta. Dashboard: Invoiced ₹81,500.00; ₹31,875.00 pending; Open requests 17; Active projects 4 (1 completed); Pending quotes 7; Unread messages 0</li><li>Notifications 2. Pipeline: Active 4, Done 1, Requests 17, Quotes 7. Collected ₹81,500.00; Pending ₹31,875.00. Quotes tab (3): AUDIT-P24-20261005-6y6fa-sent Request ₹2,832.00 Viewed</li><li>AUDIT-P24-20261005-6v891-sent Request ₹2,832.00 Viewed</li><li>AUDIT-P23-20261005-6rdsf Request to Quote Builder ₹1,770.00 Viewed. Pay now 4, Projects 3, Inbox 2. Recent activity: data export ready (×4), login (just now)</li></ul></li><li class="ref-row"><div class="ref-head"><b>dashboard — Global search — Client dialog</b><span class="ref-tag mono">037</span></div><ul class="ref-facts"><li>Global search (Ananya Iyer): &quot;Search or jump to…&quot; with navigation: Dashboard, Requests, Projects, Quotes, Messages, Billing, Notifications, Profile, Settings; Explore: Blog, Portfolio</li><li>Actions: New request, New project, New direct message, Switch to dark mode. Keyboard hints navigate / select / close. Toast &quot;Signed in&quot;</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>

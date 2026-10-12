@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Client workspace navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Client workspace navigation">
 <div class="sb-head">
   <a href="../../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -43,6 +37,7 @@
 </aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Thread detail</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
@@ -51,7 +46,7 @@
     <a class="icobtn" href="../../../notifications/index.html" title="Notifications"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span class="bdg">32</span></a>
     <a class="userchip" href="../../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../../threads/index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to threads</a>
 <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
   <div><h1 class="ptitle" style="font-size:22px">Payments ops — Razorpay settlement and webhooks</h1>
@@ -110,25 +105,52 @@
   <button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><span>Send</span></button>
 </div>
 </div>
-<div class="panel mt-4"><div class="panel-row" style="gap:12px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><span class="text-sm font-semibold">retry-checklist-v3.pdf</span><span class="text-xs dim">212 KB · shared by Riya Kapoor · 8:16 AM</span><a class="link text-xs ml-auto" href="#">Download</a></div></div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (4)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Conversation · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/007-messages-thread-details.webp</span></div><p>Karthik Menon. Group thread Payments ops — Razorpay settlement and webhooks, 3 members. Quick replies: Thanks, I will review this. / Can you clarify the timeline? / Could we schedule a quick call?</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Conversation · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/038-messages-edit-message-form.webp</span></div><p>Messages (Ananya Iyer), group &quot;Payments ops — Razorpay settlement and webhooks&quot; (3 members). Own message in inline edit mode with Save and Cancel; sent Oct 5, 3:49 AM. Text inside the edit box is partly obscured in the capture. Other messages: Riya Kapoor &quot;Karthik, Ananya — this thread is for settlement and webhook questions…&quot; (Oct 5, 3:49 AM); Karthik Menon &quot;Useful. Our UPI adapter is still in staging…&quot;. Quick-reply chips: Thanks, I will review this / Can you clarify the timeline? / Could we schedule a quick call?</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Conversation · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/039-messages-group-members-panel.webp</span></div><p>Messages group members panel (Ananya Iyer): Group info, 3 members — Riya Kapoor (Admin, admin@nestlancer.com), Karthik Menon (Client, karthik.menon@nestla…), Ananya Iyer (Client, ananya.iyer@nestlancer.com). Actions: Leave group; Search in conversation.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Conversation · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/040-messages-reply-composer.webp</span></div><p>Messages reply composer (Ananya Iyer): &quot;Replying to Riya Kapoor&quot; banner quoting &quot;Karthik, Ananya — this thread is for settlement and webhook questions that overlap both engagements. Project files stay in each project.&quot; Composer mentions @Riya Kapoor, @Karthik Menon; Send.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>adapter admin ananya banner cancel capture chips clarify client composer conversation engagements files group inline inside kapoor karthik leave members menon mentions message messages nestla nestlancer obscured other overlap panel partly payments project questions quick quick-reply quoting razorpay replies reply replying review schedule settlement staging still thanks thread timeline useful webhook webhooks </p></div>
-  </div>
+<div class="panel mt-4"><div class="panel-row" style="gap:12px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><span class="text-sm font-semibold">retry-checklist-v3.pdf</span><span class="text-xs dim">212 KB · shared by Riya Kapoor · 8:16 AM</span><a class="link text-xs ml-auto" href="#">Download</a></div></div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">4 states recorded for this route — values as captured in the clients screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>messages/thread/… — messages/thread/details</b><span class="ref-tag mono">007</span></div><ul class="ref-facts"><li></li><li>Karthik Menon. Group thread Payments ops — Razorpay settlement and webhooks, 3 members. Quick replies: Thanks, I will review this. / Can you clarify the timeline? / Could we schedule a quick call?</li></ul></li><li class="ref-row"><div class="ref-head"><b>messages/thread/… — Messages — Edit message form</b><span class="ref-tag mono">038</span></div><ul class="ref-facts"><li>Messages (Ananya Iyer), group &quot;Payments ops — Razorpay settlement and webhooks&quot; (3 members). Own message in inline edit mode with Save and Cancel</li><li>sent Oct 5, 3:49 AM. Text inside the edit box is partly obscured in the capture. Other messages: Riya Kapoor &quot;Karthik, Ananya — this thread is for settlement and webhook questions…&quot; (Oct 5, 3:49 AM)</li><li>Karthik Menon &quot;Useful. Our UPI adapter is still in staging…&quot;. Quick-reply chips: Thanks, I will review this / Can you clarify the timeline? / Could we schedule a quick call?</li></ul></li><li class="ref-row"><div class="ref-head"><b>messages/thread/… — Messages — Group members panel</b><span class="ref-tag mono">039</span></div><ul class="ref-facts"><li></li><li>Messages group members panel (Ananya Iyer): Group info, 3 members — Riya Kapoor (Admin, admin@nestlancer.com), Karthik Menon (Client, karthik.menon@nestla…), Ananya Iyer (Client, ananya.iyer@nestlancer.com). Actions: Leave group</li><li>Search in conversation</li></ul></li><li class="ref-row"><div class="ref-head"><b>messages/thread/… — Messages — Reply composer</b><span class="ref-tag mono">040</span></div><ul class="ref-facts"><li></li><li>Messages reply composer (Ananya Iyer): &quot;Replying to Riya Kapoor&quot; banner quoting &quot;Karthik, Ananya — this thread is for settlement and webhook questions that overlap both engagements. Project files stay in each project.&quot; Composer mentions @Riya Kapoor, @Karthik Menon</li><li>Send</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
+<!-- PROTO-STATES-CMSG -->
+<section id="states-client-messages" class="mb-5" aria-labelledby="states-client-messages-h"><div class="sec-head">
+    <div class="min-w-0">
+      <div class="sec-eyebrow">Client states · 3 screens</div>
+      <h2 class="sec-title" id="states-client-messages-h">Thread states</h2>
+      <p class="sec-sub">Reply composer with mentions, the group member panel, and inline message editing in the client message centre.</p>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap"><span class="badge tone-neutral mono">038 edit message</span><span class="badge tone-neutral mono">039 group members</span><span class="badge tone-neutral mono">040 reply composer</span></div>
+  </div><div class="state-deck"><section class="dialog-surface" id="cm-reply" aria-labelledby="cm-reply-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="cm-reply-h">Reply composer</h3>
+      <div class="panel-sub">Payments ops — Razorpay settlement and webhooks · 3 members</div>
+    </div>
+    <span class="badge tone-neutral mono">040</span>
+  </div>
+  <div class="dialog-body"><div class="note"><span class="text-xs"><b>Replying to Riya Kapoor</b> — “Karthik, Ananya — this thread is for settlement and webhook questions that overlap both engagements. Project files stay in each project.”</span></div><div class="mt-3"><div class="field"><label class="label" for="cm-body">Message</label><textarea class="textarea" id="cm-body" rows="3" placeholder="Write a message… mentions: @Riya Kapoor, @Karthik Menon"></textarea></div></div><div class="mt-3"><div class="flex items-center gap-2 flex-wrap"><span class="chip active">Thanks, I will review this.</span><span class="chip">Can you clarify the timeline?</span><span class="chip">Could we schedule a quick call?</span></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Attach file</button><button class="btn btn-primary btn-sm" type="button">Send</button></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Sent to Riya Kapoor and Karthik Menon</span></div>
+</section><section class="dialog-surface" id="cm-edit" aria-labelledby="cm-edit-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="cm-edit-h">Edit message</h3>
+      <div class="panel-sub">Your message · sent Oct 5, 3:49 AM</div>
+    </div>
+    <span class="badge tone-neutral mono">038</span>
+  </div>
+  <div class="dialog-body"><div class="field"><label class="label" for="cm-edit">Message</label><textarea class="textarea" id="cm-edit" rows="3">Reconciliation checklist posted to the shared workspace — replay UI is next.</textarea></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-primary btn-sm" type="button">Save</button><button class="btn btn-secondary btn-sm" type="button">Cancel</button></div></div>
+  
+</section><section class="dialog-surface" id="cm-members" aria-labelledby="cm-members-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="cm-members-h">Group info</h3>
+      <div class="panel-sub">3 members · Group info panel</div>
+    </div>
+    <span class="badge tone-neutral mono">039</span>
+  </div>
+  <div class="dialog-body"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-1">Member</th><th id="nl-th-2">Role</th><th id="nl-th-3">Email</th></tr></thead><tbody><tr><td data-label="Member" class="min-w-0">Riya Kapoor</td><td data-label="Role" class="min-w-0"><span class="badge tone-brand mono">ADMIN</span></td><td data-label="Email" class="min-w-0">admin@nestlancer.com</td></tr><tr><td data-label="Member" class="min-w-0">Karthik Menon</td><td data-label="Role" class="min-w-0"><span class="badge tone-neutral mono">CLIENT</span></td><td data-label="Email" class="min-w-0">karthik.menon@nestlancer.com</td></tr><tr><td data-label="Member" class="min-w-0">Ananya Iyer</td><td data-label="Role" class="min-w-0"><span class="badge tone-neutral mono">CLIENT</span></td><td data-label="Email" class="min-w-0">ananya.iyer@nestlancer.com</td></tr></tbody></table></div><div class="mt-3"><div class="field"><label class="label" for="cm-search">Search in conversation</label><input class="input" id="cm-search" placeholder="Search this thread…"></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Leave group</button></div></div>
+  
+</section></div></section>
 </main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>

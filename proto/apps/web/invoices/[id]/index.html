@@ -8,10 +8,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Client workspace navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Client workspace navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -36,6 +37,7 @@
 </aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Invoice detail</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
@@ -44,7 +46,7 @@
     <a class="icobtn" href="../../notifications/index.html" title="Notifications"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span class="bdg">32</span></a>
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to invoices</a>
 <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
   <div><h1 class="ptitle" style="font-size:22px">Invoice NL-INV-2026-000009</h1><p class="psub">GST tax invoice · issued Oct 8, 2026 · due Oct 14, 2026</p></div>
@@ -56,9 +58,9 @@
       <div><b class="h3">Nestlancer Studio Pvt. Ltd.</b><div class="text-xs dim mt-1" style="line-height:1.6">GSTIN 36AAKCN9012E1Z5 · Hyderabad, IN</div></div>
       <div class="text-right"><div class="eyebrow">TAX INVOICE</div><div class="mono font-bold mt-1">NL-INV-2026-000009</div></div>
     </div>
-    <div class="tbl-wrap"><table class="tbl  ">
-<thead><tr><th>Description</th><th style="text-align:right">Qty</th><th style="text-align:right">Amount</th></tr></thead>
-<tbody><tr><td>Mid-project payment — Razorpay Settlement Reconciliation Engine</td><td style="text-align:right"><span class="mono">1</span></td><td style="text-align:right"><span class="mono">₹16,271.19</span></td></tr><tr><td><span class="dim">CGST @ 9%</span></td><td style="text-align:right"></td><td style="text-align:right"><span class="mono">₹1,464.41</span></td></tr><tr><td><span class="dim">SGST @ 9%</span></td><td style="text-align:right"></td><td style="text-align:right"><span class="mono">₹1,464.41</span></td></tr><tr><td><b>Total (INR)</b></td><td style="text-align:right"></td><td style="text-align:right"><span class="mono font-bold" style="font-size:16px">₹19,200.00</span></td></tr></tbody></table></div>
+    <div class="tbl-wrap"><table class="tbl tbl-cards  ">
+<thead><tr><th id="nl-th-1">Description</th><th id="nl-th-2" style="text-align:right">Qty</th><th id="nl-th-3" style="text-align:right">Amount</th></tr></thead>
+<tbody><tr><td data-label="Description">Mid-project payment — Razorpay Settlement Reconciliation Engine</td><td data-label="Qty" style="text-align:right"><span class="mono">1</span></td><td data-label="Amount" style="text-align:right"><span class="mono">₹16,271.19</span></td></tr><tr><td data-label="Description"><span class="dim">CGST @ 9%</span></td><td data-label="Qty" style="text-align:right"></td><td data-label="Amount" style="text-align:right"><span class="mono">₹1,464.41</span></td></tr><tr><td data-label="Description"><span class="dim">SGST @ 9%</span></td><td data-label="Qty" style="text-align:right"></td><td data-label="Amount" style="text-align:right"><span class="mono">₹1,464.41</span></td></tr><tr><td data-label="Description"><b>Total (INR)</b></td><td data-label="Qty" style="text-align:right"></td><td data-label="Amount" style="text-align:right"><span class="mono font-bold" style="font-size:16px">₹19,200.00</span></td></tr></tbody></table></div>
     <div class="text-xs dim mt-4">Terms: pay against milestone NL-204-M2 via portal checkout (Razorpay) or bank transfer with UTR reference.</div>
   </div></div>
   <div class="flex-col gap-5">

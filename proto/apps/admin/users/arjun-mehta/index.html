@@ -8,10 +8,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -49,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>User detail</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -58,7 +60,7 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to users</a>
 <div class="flex items-start justify-between flex-wrap gap-3 mb-4">
   <div class="flex items-center gap-4">
@@ -90,17 +92,17 @@
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent requests</h2></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../../requests/index.html">All requests →</a></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl  ">
-<thead><tr><th>Request</th><th>Status</th><th>Updated</th></tr></thead>
-<tbody><tr><td>AUDIT-P23-LINE-20261005-7r0l Request</td><td><span class="badge tone-warning">Submitted</span></td><td><span class="text-xs dim">Oct 6</span></td></tr><tr><td>AUDIT-P23-SUPP-20261005-6grw Request</td><td><span class="badge tone-warning">Submitted</span></td><td><span class="text-xs dim">Oct 6</span></td></tr><tr><td>AUDIT-P25-20261005-73dhk Project Fixture</td><td><span class="badge tone-info">Converted To Project</span></td><td><span class="text-xs dim">Oct 5</span></td></tr></tbody></table></div></div>
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
+<thead><tr><th id="nl-th-1">Request</th><th id="nl-th-2">Status</th><th id="nl-th-3">Updated</th></tr></thead>
+<tbody><tr><td data-label="Request">AUDIT-P23-LINE-20261005-7r0l Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td><td data-label="Updated"><span class="text-xs dim">Oct 6</span></td></tr><tr><td data-label="Request">AUDIT-P23-SUPP-20261005-6grw Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td><td data-label="Updated"><span class="text-xs dim">Oct 6</span></td></tr><tr><td data-label="Request">AUDIT-P25-20261005-73dhk Project Fixture</td><td data-label="Status"><span class="badge tone-info">Converted To Project</span></td><td data-label="Updated"><span class="text-xs dim">Oct 5</span></td></tr></tbody></table></div></div>
   
 </div>
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Sessions &amp; security</h2></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl tbl-compact ">
-<thead><tr><th>Device</th><th>Location</th><th>Last seen</th><th></th></tr></thead>
-<tbody><tr><td>Chrome 141 · macOS</td><td>Mumbai, IN</td><td><span class="mono text-xs">Now</span></td><td><span class="badge tone-success">Current</span></td></tr><tr><td>Safari · iPhone</td><td>Mumbai, IN</td><td><span class="mono text-xs">Oct 9</span></td><td><button class="btn btn-ghost btn-xs" style="color:var(--t-danger-tx)">Revoke</button></td></tr><tr><td>Firefox 143 · Windows</td><td>Pune, IN</td><td><span class="mono text-xs">Sep 30</span></td><td><button class="btn btn-ghost btn-xs" style="color:var(--t-danger-tx)">Revoke</button></td></tr></tbody></table></div></div>
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
+<thead><tr><th id="nl-th-4">Device</th><th id="nl-th-5">Location</th><th id="nl-th-6">Last seen</th><th></th></tr></thead>
+<tbody><tr><td data-label="Device">Chrome 141 · macOS</td><td data-label="Location">Mumbai, IN</td><td data-label="Last seen"><span class="mono text-xs">Now</span></td><td><span class="badge tone-success">Current</span></td></tr><tr><td data-label="Device">Safari · iPhone</td><td data-label="Location">Mumbai, IN</td><td data-label="Last seen"><span class="mono text-xs">Oct 9</span></td><td><button class="btn btn-ghost btn-xs" style="color:var(--t-danger-tx)">Revoke</button></td></tr><tr><td data-label="Device">Firefox 143 · Windows</td><td data-label="Location">Pune, IN</td><td data-label="Last seen"><span class="mono text-xs">Sep 30</span></td><td><button class="btn btn-ghost btn-xs" style="color:var(--t-danger-tx)">Revoke</button></td></tr></tbody></table></div></div>
   
 </div>
     
@@ -134,14 +136,14 @@
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Role <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option selected>Client</option><option>Operator — CX</option></select>
+  <label for="nl-role" class="label">Role <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-role" class="select"><option selected>Client</option><option>Operator — CX</option></select>
   
 </div>
       
 <div class="field">
-  <label class="label">Operator assignment <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option selected>Riya Kapoor</option><option>Arjun Nair</option></select>
+  <label for="nl-operator-assignment" class="label">Operator assignment <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-operator-assignment" class="select"><option selected>Riya Kapoor</option><option>Arjun Nair</option></select>
   
 </div>
       <div class="mt-2">

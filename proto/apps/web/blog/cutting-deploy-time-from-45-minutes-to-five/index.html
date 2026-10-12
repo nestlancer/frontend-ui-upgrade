@@ -7,11 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  main#main, main.content { min-height: 5805px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -26,7 +21,7 @@
   <a class="btn btn-ghost btn-icon" href="../bookmarks/index.html" title="Bookmarks"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg></a>
   <a class="btn btn-ghost btn-sm" href="../../login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="../../contact/index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-</div></div></header><main id="main" >
+</div></div></header><main id="main"  tabindex="-1">
 <section style="padding:48px 0 24px"><div class="mkt-wrap" style="max-width:880px">
   <a href="../index.html" class="link-arrow mb-4" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Blog</a>
   <div class="eyebrow mb-3">CASE STUDIES · OCT 5, 2026</div>
@@ -112,8 +107,8 @@
         <span class="text-xs dim mono">Oct 6, 2026, 3:21 AM</span>
       </div>
       <div class="field mt-2">
-        <label class="label">Comment</label>
-        <textarea class="textarea" rows="3" placeholder="Sign in to write a comment..."></textarea>
+        <label for="nl-comment" class="label">Comment</label>
+        <textarea id="nl-comment" class="textarea" rows="3" placeholder="Sign in to write a comment..."></textarea>
       </div>
       <div><button class="btn btn-primary btn-sm">Post comment</button></div>
     </div>
@@ -148,22 +143,13 @@
     <p class="text-sm muted mt-1">Get practical playbooks on scoping, delivery, and growing your practice. We publish sparingly — only when there is something worth your time.</p>
     <div class="flex gap-2 mt-3 flex-wrap"><a class="btn btn-primary btn-sm" href="../../contact/index.html">Get in touch</a><button class="btn btn-secondary btn-sm">RSS feed</button></div>
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body is-expanded">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Cutting Deploy Time from 45 Minutes to Five | Nestlancer Blog · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">public/003-blog-article.webp</span></div><p>Blog article &quot;Cutting Deploy Time from 45 Minutes to Five&quot;: Nestlancer Editorial, Oct 5, 2026, 2 min read, 4 views, 2 comments (Arjun Mehta, Oct 6 9:35/9:36 AM). Tags #NestJS, #Node.js. TOC: Where we started, Architecture before, Migration timeline (Discovery, Strangler cutover, Reliability hardening, Stabilize and learn), Patterns we applied, Code sketch, Results, Retrospective checklist, Lesson. Related posts: Scaling a Freelance Marketplace Architecture (3 min), GDPR Compliance Platform Rebuild (2 min), Migrating from WebSockets to SSE (2 min), Elasticsearch Migration for Search Features (2 min).</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>applied architecture arjun article checklist comments compliance cutover cutting deploy discovery editorial elasticsearch features freelance hardening learn lesson marketplace mehta migrating migration minutes nestjs nestlancer patterns platform posts rebuild related reliability results retrospective scaling sketch stabilize started strangler timeline views websockets 2026</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">1 states recorded for this route — values as captured in the public screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>blog/cutting-deploy-time-from-45-minutes-to-five — Blog article</b><span class="ref-tag mono">003</span></div><ul class="ref-facts"><li></li><li>Blog article &quot;Cutting Deploy Time from 45 Minutes to Five&quot;: Nestlancer Editorial, Oct 5, 2026, 2 min read, 4 views, 2 comments (Arjun Mehta, Oct 6 9:35/9:36 AM). Tags #NestJS, #Node.js. TOC: Where we started, Architecture before, Migration timeline (Discovery, Strangler cutover, Reliability hardening, Stabilize and learn), Patterns we applied, Code sketch, Results, Retrospective checklist, Lesson. Related posts: Scaling a Freelance Marketplace Architecture (3 min), GDPR Compliance Platform Rebuild (2 min), Migrating from WebSockets to SSE (2 min), Elasticsearch Migration for Search Features (2 min)</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main><footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
   <div class="flex-col gap-3">
@@ -174,9 +160,9 @@
 </svg><span>Nestlancer<span class="tld">.</span></span></a>
     <p class="text-sm muted" style="max-width:32ch;line-height:1.6">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
   </div>
-  <div><h5>Product</h5><a href="../../dashboard/index.html">Project Hub</a><a href="../../../landing/pricing/index.html">Pricing</a><a href="../../../landing/services/index.html">Services</a><a href="../../portfolio/index.html">Portfolio</a></div>
-  <div><h5>Company</h5><a href="../../about/index.html">About</a><a href="../index.html">Blog</a><a href="../../contact/index.html">Contact</a><a href="../../register/index.html">Start a project</a></div>
-  <div><h5>Legal</h5><a href="../../terms/index.html">Terms</a><a href="../../privacy/index.html">Privacy</a><a href="../../verify-document/index.html">Verify document</a></div>
+  <div><h3>Product</h3><a href="../../dashboard/index.html">Project Hub</a><a href="../../../landing/pricing/index.html">Pricing</a><a href="../../../landing/services/index.html">Services</a><a href="../../portfolio/index.html">Portfolio</a></div>
+  <div><h3>Company</h3><a href="../../about/index.html">About</a><a href="../index.html">Blog</a><a href="../../contact/index.html">Contact</a><a href="../../register/index.html">Start a project</a></div>
+  <div><h3>Legal</h3><a href="../../terms/index.html">Terms</a><a href="../../privacy/index.html">Privacy</a><a href="../../verify-document/index.html">Verify document</a></div>
 </div>
 <div class="footer-base"><span>© 2026 Nestlancer. Made in India. All rights reserved.</span></div>
 </div></footer>

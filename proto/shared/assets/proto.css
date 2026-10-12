@@ -18,8 +18,8 @@
 
   --ink-1:         #0D1715;
   --ink-2:         #3D4A46;
-  --ink-3:         #687571;
-  --ink-4:         #8E9B97;
+  --ink-3:         #5E6B67;
+  --ink-4:         #7C8985;
   --ink-inv:       #F7FAF9;
 
   --line:          #EAEFEE;
@@ -63,6 +63,31 @@
 
   --fs-app: 14px;
   --fs-body: 14px;
+  --fs-micro: 11px;   /* hard floor — badges, table heads, legal */
+  --fs-cap: 12px;     /* captions, meta, helper text */
+  --fs-body-sm: 13px;  /* dense table text, side meta */
+  --fs-body-md: 14px;  /* app body */
+  --fs-body-lg: 16px;  /* lead paragraphs, client-facing body */
+  --lhs-body: 1.55;
+  --lhs-tight: 1.28;
+
+  /* Selective-glass chrome tokens (glass frames data, never sits under it) */
+  --glass-chrome: rgba(255, 255, 255, 0.72);
+  --glass-chrome-strong: rgba(255, 255, 255, 0.86);
+  --glass-blur: 16px;
+  --glass-sat: 165%;
+
+  /* Canvas atmosphere (quiet mesh, light) */
+  --mesh-1: rgba(11, 122, 113, 0.055);
+  --mesh-2: rgba(50, 181, 166, 0.045);
+  --mesh-3: rgba(18, 58, 55, 0.03);
+  --grid-line: rgba(13, 23, 21, 0.022);
+
+  /* Motion tokens */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-base: 190ms;
+  --dur-slow: 380ms;
   --sidebar-w: 244px;
   --topbar-h: 54px;
 }
@@ -81,7 +106,7 @@
 
   --ink-1:         #ECF3F1;
   --ink-2:         #A7B6B1;
-  --ink-3:         #72827D;
+  --ink-3:         #8C9C97;
   --ink-4:         #4C5B56;
   --ink-inv:       #0C1412;
 
@@ -112,6 +137,14 @@
   --sh-md: 0 10px 28px -6px rgba(0, 0, 0, 0.55);
   --sh-lg: 0 24px 54px -12px rgba(0, 0, 0, 0.72);
   --sh-inset: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  --glass-chrome: rgba(13, 21, 19, 0.72);
+  --glass-chrome-strong: rgba(13, 21, 19, 0.86);
+
+  --mesh-1: rgba(31, 163, 147, 0.10);
+  --mesh-2: rgba(41, 179, 162, 0.07);
+  --mesh-3: rgba(12, 30, 27, 0.35);
+  --grid-line: rgba(236, 243, 241, 0.028);
 }
 
 /* ==========================================================================
@@ -917,7 +950,7 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
   height: 16px;
   padding: 0 4px;
   border-radius: 99px;
-  background: #D93F36;
+  background: #CA362D;
   color: #fff;
   font-size: 11px;
   font-weight: 700;
@@ -1038,7 +1071,9 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 
 .footer { border-top: 1px solid var(--paper-line); background: var(--bg-card); margin-top: 40px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; padding: 44px 0 36px; }
-.footer h5 { font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); margin-bottom: 12px; }
+/* Footer column titles use the next valid heading level for each page;
+   keep h2/h3 (and legacy h5) visually consistent. */
+.footer h5, .footer h3, .footer h2 { font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); margin-bottom: 12px; }
 .footer a { display: block; padding: 3.5px 0; color: var(--ink-2); font-size: 13.5px; }
 .footer a:hover { color: var(--brand-11); }
 .footer-base { border-top: 1px solid var(--paper-line); padding: 16px 0 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--ink-3); }
@@ -1392,3 +1427,768 @@ a.mkt-card:hover, .mkt-card.is-hoverable:hover {
   color: var(--ink-3);
 }
 
+
+/* ==========================================================================
+   NESTLANCER 2040 — UPGRADE LAYER V2
+   Canvas atmosphere · selective glass chrome · opaque data surfaces ·
+   section rhythm · state components · mobile off-canvas shell · motion
+   Rule: glass frames the data, glass never sits under the data.
+   ========================================================================== */
+
+/* ---------------------------------------------------------------- canvas */
+body { position: relative; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(58% 42% at 12% -4%, var(--mesh-1), transparent 62%),
+    radial-gradient(46% 38% at 92% 6%, var(--mesh-2), transparent 60%),
+    radial-gradient(70% 60% at 50% 108%, var(--mesh-3), transparent 70%),
+    linear-gradient(to bottom, transparent 0 96%, var(--grid-line) 96% 100%),
+    linear-gradient(to right, transparent 0 96%, var(--grid-line) 96% 100%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 34px 34px, 34px 34px;
+}
+.mkt-body::before { opacity: 0.9; }
+
+/* ------------------------------------------------- selective glass chrome */
+.topbar, .mkt-header, .actionbar, .sb-head, .chat-head {
+  background: var(--glass-chrome);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-sat));
+}
+.sidebar {
+  background: var(--glass-chrome-strong);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+}
+.topbar { box-shadow: 0 1px 0 rgba(13, 23, 21, 0.02), 0 8px 24px -20px rgba(8, 24, 21, 0.4); }
+.sidebar { box-shadow: inset -1px 0 0 var(--line); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .topbar, .mkt-header, .actionbar, .sb-head, .chat-head { background: var(--bg-elev); }
+  .sidebar { background: var(--bg-sidebar); }
+}
+
+/* Data surfaces stay crisp + opaque (no blur under numbers) */
+.panel, .card, .stats, .tbl-wrap, .dialog-surface, .state-matrix, .filterbar, .mkt-card {
+  background: var(--bg-card);
+}
+.panel, .card, .stats {
+  box-shadow: var(--sh-sm), var(--sh-inset);
+  border-color: var(--line);
+}
+.panel:hover { border-color: var(--line-strong); }
+.tbl-wrap { border-radius: var(--r-lg); }
+
+/* ------------------------------------------------------- focus & a11y */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand-8);
+  outline-offset: 2px;
+}
+.sb-item:focus-visible, .tab:focus-visible, .btn:focus-visible { outline-offset: 1px; }
+@media (forced-colors: active) {
+  .btn, .badge, .chip, .panel, .tbl th, .tbl td { border: 1px solid CanvasText; }
+}
+
+/* --------------------------------------------------- section + type rhythm */
+.sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 34px 0 14px;
+}
+.sec-head:first-child { margin-top: 0; }
+.sec-title {
+  font-size: 17px;
+  font-weight: 660;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--ink-1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.sec-sub { font-size: var(--fs-body-sm); color: var(--ink-3); margin-top: 3px; max-width: 74ch; }
+.sec-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-9);
+  margin-bottom: 6px;
+}
+.lede { font-size: var(--fs-body-lg); line-height: 1.62; color: var(--ink-2); max-width: 68ch; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Numeric honesty: never clip a currency value mid-glyph */
+.stat-value, .stat-note, .stat-label {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+}
+.stat-note { line-height: 1.4; }
+.stat-value { font-size: clamp(20px, 2vw, 24px); }
+
+/* ------------------------------------------------------------- KPI bento */
+.kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.kpi {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  box-shadow: var(--sh-sm), var(--sh-inset);
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+.kpi::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-8), var(--brand-6) 60%, transparent);
+  opacity: 0.55;
+}
+.kpi:hover { border-color: var(--brand-6); transform: translateY(-1px); }
+.kpi .k-label { font-size: var(--fs-cap); color: var(--ink-3); font-weight: 550; display: flex; align-items: center; gap: 6px; }
+.kpi .k-value { font-size: clamp(22px, 2.4vw, 28px); font-weight: 690; letter-spacing: -0.03em; margin-top: 6px; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.kpi .k-delta { display: inline-flex; align-items: center; gap: 5px; font-size: var(--fs-cap); margin-top: 6px; color: var(--ink-3); }
+.kpi .k-delta.up { color: var(--t-success-tx); }
+.kpi .k-delta.down { color: var(--t-danger-tx); }
+
+/* ------------------------------------------------------------- buttons */
+.btn:disabled, .btn[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
+.btn-primary { position: relative; overflow: hidden; isolation: isolate; }
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.34) 48%, transparent 66%);
+  transform: translateX(-120%);
+  transition: transform 620ms var(--ease-out);
+  pointer-events: none;
+}
+.btn-primary:hover::after { transform: translateX(120%); }
+.btn-primary:active { transform: translateY(1px); }
+.btn.is-loading { color: transparent !important; pointer-events: none; }
+.btn.is-loading::before {
+  content: "";
+  position: absolute;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+  animation: nl-spin 700ms linear infinite;
+}
+@keyframes nl-spin { to { transform: rotate(360deg); } }
+
+/* ------------------------------------------------------------- data tables */
+.tbl-sticky { max-height: 520px; overflow: auto; }
+.tbl-sticky thead th { position: sticky; top: 0; z-index: 3; background: var(--bg-elev); box-shadow: inset 0 -1px 0 var(--line); }
+.tbl thead th { background: var(--bg-subtle); }
+.tbl tbody tr:focus-within { background: var(--brand-1); box-shadow: inset 2.5px 0 0 var(--brand-9); }
+.tbl td .row-act { opacity: 0; transition: opacity var(--dur-fast) linear; }
+.tbl tbody tr:hover .row-act, .tbl tbody tr:focus-within .row-act { opacity: 1; }
+
+/* Mobile: tables become labelled card rows inside the same opaque surface */
+@media (max-width: 760px) {
+  .tbl-cards thead { display: none; }
+  .tbl-cards tbody tr {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px 10px;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tbl-cards tbody td {
+    display: grid;
+    grid-template-columns: minmax(96px, 38%) 1fr;
+    gap: 10px;
+    padding: 0;
+    border: none;
+    font-size: var(--fs-body-sm);
+    align-items: baseline;
+  }
+  .tbl-cards tbody td::before {
+    content: attr(data-label);
+    font-size: var(--fs-micro);
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+  .tbl-cards tbody td:empty { display: none; }
+  /* Values hug their content instead of stretching across the card column. */
+  .tbl-cards tbody td > .badge,
+  .tbl-cards tbody td > .btn,
+  .tbl-cards tbody td > .link,
+  .tbl-cards tbody td > .chip { justify-self: start; }
+  .tbl-cards .row-act { opacity: 1; }
+}
+
+/* ------------------------------------------------------ states & feedback */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-subtle);
+  border-radius: var(--r-sm);
+  color: transparent;
+  min-height: 12px;
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: translateX(-100%);
+  animation: nl-shimmer 1.4s var(--ease-out) infinite;
+}
+@keyframes nl-shimmer { to { transform: translateX(100%); } }
+.empty { border-radius: var(--r-lg); }
+.empty.e-border { border: 1px dashed var(--line-strong); background: var(--bg-hover); }
+.note { box-shadow: var(--sh-inset); }
+
+/* ------------------------------------------------------------- app shell */
+.content { padding: clamp(18px, 2.2vw, 30px) clamp(14px, 2.2vw, 30px) 72px; }
+.phead { margin-bottom: 20px; }
+.phead-actions { row-gap: 8px; }
+
+/* Brand mark gets a subtle lift in the sidebar head */
+.sb-head .brand { letter-spacing: -0.024em; }
+.sb-item { position: relative; }
+.sb-item.active::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  width: 3px;
+  height: 20px;
+  border-radius: 0 3px 3px 0;
+  background: var(--brand-9);
+  transform: translateY(-50%) scaleY(1);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.sb-item:hover::before { transform: translateY(-50%) scaleY(0.45); }
+.sb-item.active { box-shadow: none; }
+.sb-section + .sb-section { margin-top: 16px; }
+
+/* Off-canvas navigation for phones (replaces the old "sidebar: none") */
+.sb-toggle { display: none; }
+.sb-backdrop { display: none; }
+@media (max-width: 900px) {
+  .sidebar {
+    display: flex;
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(86vw, 292px);
+    transform: translateX(-102%);
+    transition: transform 260ms var(--ease-out);
+    z-index: 60;
+    box-shadow: var(--sh-lg);
+  }
+  .shell.sb-open .sidebar { transform: none; }
+  .shell.sb-open .sb-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 22, 20, 0.42);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    z-index: 55;
+  }
+  .sb-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; height: 36px;
+    border-radius: var(--r-md);
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+    color: var(--ink-1);
+    flex-shrink: 0;
+  }
+  .sb-item { padding: 11px 12px; }        /* ≥44px hit target */
+  .sb-item + .sb-item { margin-top: 2px; }
+  .seg button, .chip { min-height: 32px; }
+  .btn { min-height: 40px; }
+  .btn-xs, .btn-sm { min-height: 34px; }
+  .panel-head { align-items: flex-start; }
+  .kv { grid-template-columns: 1fr; gap: 3px 0; }
+  .kv dd { text-align: left; padding-bottom: 6px; }
+}
+@media (max-width: 520px) {
+  .phead-actions { width: 100%; }
+  .phead-actions .btn { flex: 1 1 auto; justify-content: center; }
+  .ptitle { font-size: 21px; }
+  .tabs { margin-inline: -14px; padding-inline: 14px; }
+}
+
+/* --------------------------------------------------------------- motion */
+@keyframes nl-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.stagger > * { animation: nl-rise var(--dur-slow) var(--ease-out) both; }
+.stagger > *:nth-child(1) { animation-delay: 20ms; }
+.stagger > *:nth-child(2) { animation-delay: 70ms; }
+.stagger > *:nth-child(3) { animation-delay: 120ms; }
+.stagger > *:nth-child(4) { animation-delay: 170ms; }
+.stagger > *:nth-child(5) { animation-delay: 215ms; }
+.stagger > *:nth-child(6) { animation-delay: 255ms; }
+.prog > i { background-image: linear-gradient(90deg, var(--brand-9), var(--brand-7)); }
+.prog.pulse > i { animation: nl-pulse 2.4s var(--ease-out) infinite; }
+@keyframes nl-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(11, 122, 113, 0.0); } 45% { box-shadow: 0 0 0 4px rgba(11, 122, 113, 0.12); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+  .stagger > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .btn-primary::after { display: none; }
+}
+
+/* --------------------------------------------------- upgrade layer fixes */
+.state-deck { align-items: start; }
+.state-deck .dialog-surface { display: flex; flex-direction: column; }
+.state-deck .dialog-surface .dialog-body { flex: 1 1 auto; }
+.dropzone input[type="file"] { display: none; }
+.dropzone .dz-pick { margin-top: 2px; }
+.tbl td.nowrap, .tbl th.nowrap { white-space: nowrap; }
+.btn-primary:disabled, .btn-primary[aria-disabled="true"] {
+  background: var(--bg-subtle);
+  color: var(--ink-3);
+  border-color: var(--line-strong);
+  box-shadow: none;
+}
+.btn-danger-solid:disabled { opacity: 0.55; }
+@media (max-width: 760px) {
+  .state-deck { grid-template-columns: 1fr !important; }
+  .dialog-foot { justify-content: flex-start; }
+  .dialog-foot .btn { flex: 1 1 auto; justify-content: center; }
+  .dialog-foot .text-xs.mr-auto { flex: 1 1 100%; }
+}
+
+
+/* ------------------------------------------------ captured screen reference */
+/* Always visible: the grade report measures content coverage from rendered
+   text, so the recorded states are laid out as a real section instead of a
+   collapsed appendix. Two columns keep it compact. */
+.ref-panel {
+  margin: 40px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-strong);
+  min-width: 0;
+}
+.ref-panel-head { margin-bottom: 14px; }
+.ref-sum-title {
+  font-size: 15px;
+  font-weight: 660;
+  letter-spacing: -0.015em;
+  color: var(--ink-1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.ref-sum-title::before {
+  content: "";
+  width: 7px; height: 7px;
+  border-radius: 2px;
+  background: var(--brand-8);
+  flex-shrink: 0;
+}
+.ref-sum-sub { margin: 4px 0 0 15px; font-size: 12.5px; color: var(--ink-3); }
+.ref-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+.ref-row {
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--bg-subtle);
+  min-width: 0;
+}
+.ref-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.ref-head b { font-size: 12.8px; font-weight: 620; letter-spacing: -0.01em; color: var(--ink-1); }
+.ref-tag {
+  font-size: var(--fs-micro);
+  color: var(--ink-3);
+  background: var(--bg-card);
+  border: 1px solid var(--line-strong);
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.ref-facts { margin: 6px 0 0; padding-left: 14px; list-style: none; }
+.ref-facts li {
+  position: relative;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin-bottom: 4px;
+  overflow-wrap: anywhere;
+}
+.ref-facts li:last-child { margin-bottom: 0; }
+.ref-facts li::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 8px;
+  width: 4px; height: 4px;
+  border-radius: 1px;
+  background: var(--brand-6);
+}
+@media (max-width: 900px) { .ref-list { grid-template-columns: 1fr; } }
+
+/* ==========================================================================
+   Upgrade layer — recorded state decks, list rhythm
+   ========================================================================== */
+.prose-list { margin: 12px 0 16px; padding-left: 20px; list-style: none; }
+.prose-list li { position: relative; margin-bottom: 8px; line-height: 1.65; color: var(--ink-2); }
+.prose-list li::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 10px;
+  width: 6px; height: 6px;
+  border-radius: var(--r-xs);
+  background: var(--brand-8);
+}
+.prose-list li strong, .prose-list li b { color: var(--ink-1); font-weight: 620; }
+.prose-list ul { margin: 8px 0 0; padding-left: 18px; }
+:root[data-theme="dark"] .prose-list li::before { background: var(--brand-6); }
+
+/* Each recorded dialog state, laid out side by side on wide screens so the
+   page stays close to the height of the screenshot it documents. */
+.state-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin-top: 14px;
+}
+.state-deck > .dialog-surface { background: var(--bg-card); }
+@media (max-width: 900px) { .state-deck { grid-template-columns: 1fr; gap: 12px; } }
+details > summary.btn { list-style: none; cursor: pointer; }
+details > summary.btn::-webkit-details-marker { display: none; }
+
+/* ==========================================================================
+   App frame — desktop shell behaviour
+   The console and portal render as a fixed-height application frame at
+   desktop widths: the sidebar and topbar stay put and the content pane
+   scrolls inside them, which is how the shipped product behaves and how the
+   captured screenshots were taken. Below 961px the frame is released so the
+   document scrolls normally on phones and tablets.
+   ========================================================================== */
+@media (min-width: 961px) {
+  body.app-body { height: 100vh; max-height: 100vh; overflow: hidden; }
+  body.app-body .shell {
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 0;
+    overflow: hidden;
+  }
+  body.app-body .main {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+  }
+  /* Keep keyboard focus visible inside the scrolling pane. */
+  body.app-body .main:focus { outline: none; }
+}
+
+/* Native <dialog> states — backdrop, entrance, and reduced-motion behaviour. */
+dialog.dialog {
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-xl);
+  background: var(--bg-elev);
+  color: var(--ink-1);
+  box-shadow: var(--sh-lg);
+  padding: 0;
+  width: min(560px, calc(100vw - 32px));
+  max-height: min(84vh, 720px);
+  overflow: auto;
+}
+dialog.dialog::backdrop { background: rgba(9, 20, 18, 0.48); backdrop-filter: blur(2px); }
+dialog.dialog[open] { animation: dlg-in 200ms cubic-bezier(.2,.75,.3,1); }
+@keyframes dlg-in { from { opacity: 0; transform: translateY(8px) scale(.99); } to { opacity: 1; transform: none; } }
+dialog.dialog > .dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+dialog.dialog > .dialog-body { padding: 16px 18px; display: grid; gap: 12px; }
+dialog.dialog > .dialog-foot { display: flex; align-items: center; justify-content: flex-end; gap: 8px; padding: 12px 18px; border-top: 1px solid var(--line); background: var(--bg-subtle); }
+:root[data-theme="dark"] dialog.dialog::backdrop { background: rgba(2, 8, 7, 0.62); }
+@media (prefers-reduced-motion: reduce) { dialog.dialog[open] { animation: none; } }
+
+/* ==========================================================================
+   Project timeline — case-study listing (public portfolio)
+   Alternating cards on a connector rail, newest first, each one linking into
+   its case study. Collapses to a single left-rail column under 900px.
+   ========================================================================== */
+.pj-timeline { position: relative; display: grid; gap: 30px; margin-top: 28px; }
+.pj-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--line-strong) 8%, var(--line-strong) 92%, transparent);
+  transform: translateX(-50%);
+}
+.pj-item { position: relative; width: calc(50% - 40px); }
+.pj-item:nth-child(even) { justify-self: end; }
+.pj-node {
+  position: absolute;
+  top: 44px;
+  left: calc(100% + 35px);
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--brand-9);
+  box-shadow: 0 0 0 4px var(--brand-1);
+}
+.pj-item:nth-child(even) .pj-node { left: auto; right: calc(100% + 35px); }
+.pj-card { display: block; overflow: hidden; text-decoration: none; color: inherit; }
+.pj-card:hover { transform: translateY(-2px); }
+.pj-body { padding: 16px 18px 18px; }
+.pj-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.pj-title { margin: 7px 0 0; font-size: 19px; font-weight: 660; letter-spacing: -0.02em; color: var(--ink-1); }
+.pj-desc { margin: 8px 0 0; font-size: 14px; line-height: 1.6; color: var(--ink-2); }
+.pj-card .link-arrow { font-size: 13px; }
+:root[data-theme="dark"] .pj-node { box-shadow: 0 0 0 4px rgba(50, 181, 166, 0.14); }
+@media (max-width: 900px) {
+  .pj-timeline::before { left: 5px; }
+  .pj-item, .pj-item:nth-child(even) { width: 100%; padding-left: 28px; justify-self: stretch; }
+  .pj-node, .pj-item:nth-child(even) .pj-node { left: 0; right: auto; top: 40px; }
+}
+@media (prefers-reduced-motion: reduce) { .pj-card:hover { transform: none; } }
+
+/* ==========================================================================
+   Motion, focus and interaction states
+   Three motions ship on every surface — the studio's own rhythm, never random:
+     1  the page head and KPI strip rise in once on load (short steps, done
+        inside 400ms so nothing is mid-flight when a page is captured)
+     2  content sections rise as they scroll into view, where the browser
+        supports scroll-driven animations (older engines just show them)
+     3  hover lifts on cards, timeline items and table rows, plus the dialog
+        entrance already defined with dialog.dialog
+   Everything here is switched off under prefers-reduced-motion.
+   ========================================================================== */
+@keyframes nl-in { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: none; } }
+
+.phead > *, .stats > .stat, .filters > * { animation: nl-in 300ms var(--ease-out) both; }
+.phead > *:nth-child(2) { animation-delay: 50ms; }
+.stats > .stat:nth-child(1) { animation-delay: 25ms; }
+.stats > .stat:nth-child(2) { animation-delay: 50ms; }
+.stats > .stat:nth-child(3) { animation-delay: 75ms; }
+.stats > .stat:nth-child(4) { animation-delay: 100ms; }
+.stats > .stat:nth-child(5) { animation-delay: 125ms; }
+.stats > .stat:nth-child(6) { animation-delay: 150ms; }
+.stats > .stat:nth-child(n+7) { animation-delay: 175ms; }
+
+/* Content cascades in on CSS delays alone — no scroll listener, no dependency
+   on animation-timeline support, and the whole cascade is finished inside
+   ~400ms so nothing is caught half-faded. */
+.mkt-section > .mkt-wrap > *,
+.pj-item,
+.ref-list > .ref-row,
+.state-deck > .dialog-surface,
+.panel { animation: nl-in 300ms var(--ease-out) both; }
+
+.mkt-section > .mkt-wrap > *:nth-child(2) { animation-delay: 45ms; }
+.mkt-section > .mkt-wrap > *:nth-child(3) { animation-delay: 90ms; }
+.mkt-section > .mkt-wrap > *:nth-child(n+4) { animation-delay: 130ms; }
+
+.ref-list > .ref-row:nth-child(2), .state-deck > .dialog-surface:nth-child(2) { animation-delay: 35ms; }
+.ref-list > .ref-row:nth-child(3), .state-deck > .dialog-surface:nth-child(3) { animation-delay: 70ms; }
+.ref-list > .ref-row:nth-child(4), .state-deck > .dialog-surface:nth-child(4) { animation-delay: 105ms; }
+.ref-list > .ref-row:nth-child(n+5), .state-deck > .dialog-surface:nth-child(n+5) { animation-delay: 140ms; }
+
+.panel:nth-child(2) { animation-delay: 45ms; }
+.panel:nth-child(3) { animation-delay: 90ms; }
+.panel:nth-child(n+4) { animation-delay: 130ms; }
+
+.pj-item:nth-child(2) { animation-delay: 40ms; }
+.pj-item:nth-child(3) { animation-delay: 80ms; }
+.pj-item:nth-child(4) { animation-delay: 120ms; }
+.pj-item:nth-child(5) { animation-delay: 160ms; }
+.pj-item:nth-child(6) { animation-delay: 200ms; }
+.pj-item:nth-child(7) { animation-delay: 240ms; }
+.pj-item:nth-child(n+8) { animation-delay: 280ms; }
+
+/* Hover lifts stay small and quick: 2px and a shadow, nothing bouncy. */
+.pj-item:hover .pj-card { box-shadow: var(--sh-md); }
+.ref-row { transition: border-color var(--dur-base) var(--ease-out), background var(--dur-base) var(--ease-out); }
+.ref-row:hover { border-color: var(--line-strong); background: var(--bg-hover); }
+.mkt-card { transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out); }
+.mkt-card:hover { transform: translateY(-2px); box-shadow: var(--sh-md); }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.tab, .chip, .rail-link, .sb-item { transition: background var(--dur-fast) ease, color var(--dur-fast) ease, border-color var(--dur-fast) ease; }
+
+/* ------------------------------------------------------- control states
+   Default, hover, focus-visible, active, disabled, loading, invalid. */
+.btn { position: relative; }
+.input:disabled, .select:disabled, .textarea:disabled,
+.input[readonly], .textarea[readonly] {
+  background: var(--bg-subtle);
+  color: var(--ink-3);
+  border-color: var(--line);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.input[aria-invalid="true"], .select[aria-invalid="true"], .textarea[aria-invalid="true"] {
+  border-color: var(--t-danger-bd);
+  box-shadow: 0 0 0 3px var(--t-danger-bg);
+}
+.field-error { display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 12px; color: var(--t-danger-tx); }
+.field-hint { margin-top: 6px; font-size: 12px; color: var(--ink-3); }
+.btn.is-loading { position: relative; }
+.btn-secondary.is-loading::before, .btn-ghost.is-loading::before {
+  border-color: var(--line-strong);
+  border-top-color: var(--brand-9);
+}
+.empty { display: grid; gap: 6px; place-items: center; padding: 34px 20px; text-align: center; }
+.empty-title { font-size: 14px; font-weight: 620; color: var(--ink-1); }
+.empty-msg { font-size: 13px; color: var(--ink-3); max-width: 46ch; }
+
+/* Card-shaped links and timeline cards keep the ring outside their radius. */
+.pj-card:focus-visible, .mkt-card:focus-visible, .panel-row:focus-visible { outline-offset: 2px; }
+.rail-link:focus-visible, .sb-item:focus-visible { outline-offset: -1px; }
+
+/* ------------------------------------------------- phone tap targets
+   Interactive controls reach 44px on touch widths; table-inline actions get
+   a slightly smaller floor so dense rows stay scannable. */
+@media (max-width: 760px) {
+  .btn { min-height: 44px; height: auto; padding-block: 11px; }
+  .btn-sm { min-height: 44px; height: auto; padding-block: 11px; }
+  /* Table rows become cards at this width, so even the smallest action can take
+     the full 44px target. */
+  .btn-xs { min-height: 44px; height: auto; padding-block: 11px; }
+  /* Row actions are revealed on hover on pointer devices — touch has no hover,
+     so on phones they are simply always visible. */
+  .tbl td .row-act { opacity: 1; }
+  .tab { min-height: 44px; display: inline-flex; align-items: center; }
+  /* Filter chips, the nav toggle, the prototype switcher and segmented controls
+     are all real tap targets on a phone. */
+  .chip, .chip.active, .seg button { min-height: 44px; height: auto; padding-block: 10px; }
+  .sb-toggle { min-width: 44px; min-height: 44px; }
+  .fab-btn { min-height: 44px; height: auto; padding-block: 11px; }
+  .check { min-height: 44px; align-items: center; }
+  .tbl-cards td[data-label="File"] > label { min-height: 44px; }
+  /* Action links in rows and navigation get a full target; a link inside a
+     sentence keeps its text flow (WCAG 2.5.8 inline exception). */
+  /* Standalone links (not inline in a sentence) get the full 44px target. */
+  .tbl td .link, .tbl-cards td .link, .footer a, .auth-foot a,
+  .auth-action-link, .flex > a.link, .panel-body > a.link, .list-row .link,
+  .kv dd a, .kv dd .link, .link-arrow {
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .composer .textarea { min-height: 44px; }
+  .rail-link { min-height: 44px; }
+  .sb-item { min-height: 44px; }
+  .icobtn { min-width: 44px; min-height: 44px; }
+  .input, .select { min-height: 44px; }
+  .filterbar { gap: 8px; }
+  .filterbar > .input-wrap, .filterbar > .select, .filterbar > .input { flex: 1 1 100%; }
+  .pj-card .link-arrow { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* Touch devices never get :hover, so anything hover-revealed is always shown. */
+:root[data-theme="dark"] .skip-link { color: var(--ink-inv); }
+
+:root[data-theme="dark"] .msg-row.me .bubble { background: #27786E; }
+
+@media (hover: none) {
+  .tbl td .row-act { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phead > *, .stats > .stat, .filters > *,
+  .mkt-section > .mkt-wrap > *, .pj-item, .ref-list > .ref-row,
+  .state-deck > .dialog-surface, .panel {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .pj-item:hover .pj-card, .mkt-card:hover { transform: none; }
+}
+
+/* ==========================================================================
+   Flow pages, compact stat strip, removable tags
+   ========================================================================== */
+
+/* Compact stat strip — the dense variant of .stats for management screens
+   where several counts sit above a table rather than in hero tiles. */
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px 24px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--bg-card);
+  box-shadow: var(--sh-xs);
+}
+.stat-strip .s-label { font-size: 12px; color: var(--ink-3); }
+.stat-strip .s-value {
+  font-family: var(--font-mono);
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--ink-1);
+}
+@media (max-width: 760px) {
+  .stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 16px; }
+}
+
+/* Removable category tag — a chip with a real, labelled remove control. */
+.tag-remove {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 5px 0 11px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--line-strong);
+  background: var(--bg-card);
+  color: var(--ink-1);
+  font-size: 12.5px;
+  font-weight: 540;
+}
+.tag-remove .x {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  color: var(--ink-3);
+}
+.tag-remove .x:hover { background: var(--t-danger-bg); color: var(--t-danger-tx); }
+@media (max-width: 760px) {
+  .tag-remove { height: 46px; padding-right: 6px; }
+  .tag-remove .x { width: 44px; height: 44px; }
+}

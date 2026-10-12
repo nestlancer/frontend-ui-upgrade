@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Client workspace navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Client workspace navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -43,6 +37,7 @@
 </aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Payment details</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
@@ -51,7 +46,7 @@
     <a class="icobtn" href="../../notifications/index.html" title="Notifications"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg><span class="bdg">32</span></a>
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
 <div class="flex items-start justify-between flex-wrap gap-3 mb-2 mt-4">
   <div><h1 class="ptitle">Payment details</h1><p class="psub">Payment has been requested. Proceed to secure checkout to complete it.</p></div>
@@ -86,25 +81,52 @@
 </div>
     
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (4)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/001-payment-details-completed-payment.webp</span></div><p>Priya Nair deposit ₹15,660.00, Completed, Corporate LMS for 200 Employees. Proto payment page shows a different payment (₹14,400, Ananya) — needs correcting. Payment details (Priya Nair), status Completed. Order summary: Corporate LMS for 200 Employees, Deposit, Paid, Amount due ₹15,660.00, Currency INR, Reference 01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2, Created 10/5/2026, 3:47:22 AM. Status steps Created, Pending, Processing, Completed (current), Refunded. Recorded-payment note; Receipt and Invoice buttons; File a payment dispute; Download invoice / Download receipt.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/002-payment-details-not-due-yet.webp</span></div><p>Payment details (Priya Nair), status Not due yet. Order summary: Corporate LMS for 200 Employees, Final payment, Not Due Yet, Amount due ₹15,660.00, INR, Reference 01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5, Created 10/5/2026, 3:47:22 AM. Steps Not due yet, Pending (current), Processing, Completed, Refunded. Notice: &quot;Checkout not available yet — complete the current milestone (payment or delivery review) before moving to later milestones.&quot; Cancel pending payment (status panel), Cancel payment (bottom).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/010-payments-details.webp</span></div><p>Ananya Iyer. Checkout PENDING: Razorpay Settlement Reconciliation Engine, Mid-project payment, amount due ₹19,200.00, INR, reference 01a10a2c-2d0e-7499-b769-967d17a42197, created 10/5/2026 3:47:09 AM. Pay online / Bank-UPI transfer toggle; Proceed to secure checkout; UPI QR note; Cancel pending payment; Test mode checkout note; How checkout works 1-3. (This is the state the generic payments/[id] link should show.)</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Payment · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/042-payment-details-bank-and-upi-transfer.webp</span></div><p>Checkout (Arjun Mehta): project Khandesh Spice D2C E-Commerce Store, Mid-project payment, status Pending, amount ₹30,000.00, INR, Reference 01a10a2b-5ed2-73bc-8aee-d1c6262906e9, Created 10/5/2026, 3:46:16 AM. Tabs Pay online / Bank / UPI transfer (selected). Primary settlement account Nestlancer Pvt Ltd, HDFC Bank, A/C 50200012345678, IFSC HDFC0001234, UPI nestlancer@hdfcbank. UTR / UPI reference, Notes (optional), receipt upload, Submit for verification. Cancel pending payment; Cancel payment; Invoice; Download invoice. Note: Test mode — this environment uses Razorpay test keys.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>account aee-d amount ananya arjun available bank-upi bottom buttons cancel checkout complete completed corporate correcting created currency current delivery deposit details different dispute download e-commerce employees engine environment final generic hdfcbank invoice khandesh later mehta mid-project milestone milestones moving needs nestlancer notes notice online optional order panel payment payments pending primary priya proceed processing project proto razorpay receipt reconciliation recorded-payment reference refunded review secure selected settlement shows spice state steps store submit summary toggle transfer upload verification works 0001234 14400 15660.00 19200.00 200 2026 30000.00 42197 50200012345678 610 6262906 6621 7499 769 967</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">4 states recorded for this route — values as captured in the clients screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>payments/… — Payment details — Completed payment</b><span class="ref-tag mono">001</span></div><ul class="ref-facts"><li></li><li>Priya Nair deposit ₹15,660.00, Completed, Corporate LMS for 200 Employees. Proto payment page shows a different payment (₹14,400, Ananya) — needs correcting. Payment details (Priya Nair), status Completed. Order summary: Corporate LMS for 200 Employees, Deposit, Paid, Amount due ₹15,660.00, Currency INR, Reference 01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2, Created 10/5/2026, 3:47:22 AM. Status steps Created, Pending, Processing, Completed (current), Refunded. Recorded-payment note</li><li>Receipt and Invoice buttons; File a payment dispute; Download invoice / Download receipt</li></ul></li><li class="ref-row"><div class="ref-head"><b>payments/… — Payment details — Not due yet</b><span class="ref-tag mono">002</span></div><ul class="ref-facts"><li></li><li>Payment details (Priya Nair), status Not due yet. Order summary: Corporate LMS for 200 Employees, Final payment, Not Due Yet, Amount due ₹15,660.00, INR, Reference 01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5, Created 10/5/2026, 3:47:22 AM. Steps Not due yet, Pending (current), Processing, Completed, Refunded. Notice: &quot;Checkout not available yet — complete the current milestone (payment or delivery review) before moving to later milestones.&quot; Cancel pending payment (status panel), Cancel payment (bottom)</li></ul></li><li class="ref-row"><div class="ref-head"><b>payments/… — payments/details</b><span class="ref-tag mono">010</span></div><ul class="ref-facts"><li></li><li>Ananya Iyer. Checkout PENDING: Razorpay Settlement Reconciliation Engine, Mid-project payment, amount due ₹19,200.00, INR, reference 01a10a2c-2d0e-7499-b769-967d17a42197, created 10/5/2026 3:47:09 AM. Pay online / Bank-UPI transfer toggle</li><li>Proceed to secure checkout; UPI QR note; Cancel pending payment; Test mode checkout note; How checkout works 1-3. (This is the state the generic payments/[id] link should show.)</li></ul></li><li class="ref-row"><div class="ref-head"><b>payments/… — Payment details — Bank and UPI transfer</b><span class="ref-tag mono">042</span></div><ul class="ref-facts"><li></li><li>Checkout (Arjun Mehta): project Khandesh Spice D2C E-Commerce Store, Mid-project payment, status Pending, amount ₹30,000.00, INR, Reference 01a10a2b-5ed2-73bc-8aee-d1c6262906e9, Created 10/5/2026, 3:46:16 AM. Tabs Pay online / Bank / UPI transfer (selected). Primary settlement account Nestlancer Pvt Ltd, HDFC Bank, A/C 50200012345678, IFSC HDFC0001234, UPI nestlancer@hdfcbank. UTR / UPI reference, Notes (optional), receipt upload, Submit for verification. Cancel pending payment</li><li>Cancel payment; Invoice; Download invoice. Note: Test mode — this environment uses Razorpay test keys</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
+<!-- PROTO-STATES-PAY -->
+<section id="states-payment" class="mb-5" aria-labelledby="states-payment-h"><div class="sec-head">
+    <div class="min-w-0">
+      <div class="sec-eyebrow">Client states · 4 screens</div>
+      <h2 class="sec-title" id="states-payment-h">Checkout states</h2>
+      <p class="sec-sub">Pay online, bank/UPI transfer, completed and not-due-yet — the four checkout states captured for this payment route.</p>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap"><span class="badge tone-neutral mono">001 completed</span><span class="badge tone-neutral mono">002 not due yet</span><span class="badge tone-neutral mono">010 checkout pending</span><span class="badge tone-neutral mono">042 bank / UPI transfer</span></div>
+  </div><div class="state-deck"><section class="dialog-surface" id="py-transfer" aria-labelledby="py-transfer-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="py-transfer-h">Bank / UPI transfer</h3>
+      <div class="panel-sub">Pay the settlement account, then submit the reference for verification</div>
+    </div>
+    <span class="badge tone-neutral mono">042</span>
+  </div>
+  <div class="dialog-body"><dl class="kv"><dt>Project</dt><dd>Khandesh Spice D2C E-Commerce Store</dd><dt>Installment</dt><dd>Mid-project payment</dd><dt>Amount due</dt><dd>₹30,000.00</dd><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd>01a10a2b-5ed2-73bc-8aee-d1c6262906e9</dd><dt>Created</dt><dd>10/5/2026, 3:46:16 AM</dd><dt>Status</dt><dd><span class="badge tone-warning"><span class="dot"></span>Pending</span></dd></dl><div class="mt-3"><div class="flex items-center gap-2 flex-wrap"><span class="chip">Pay online</span><span class="chip active">Bank / UPI transfer</span></div></div><div class="mt-3"><dl class="kv"><dt>Primary settlement account</dt><dd>Nestlancer Pvt Ltd</dd><dt>Bank</dt><dd>HDFC Bank</dd><dt>A/C</dt><dd>50200012345678</dd><dt>IFSC</dt><dd>HDFC0001234</dd><dt>UPI</dt><dd>nestlancer@hdfcbank</dd></dl></div><div class="mt-3"><div class="field"><label class="label" for="py-utr">UTR / UPI reference</label><input class="input mono" id="py-utr" placeholder="e.g. NEFT UTR 123456789012"></div></div><div class="mt-3"><div class="field"><label class="label" for="py-note">Notes</label><textarea class="textarea" id="py-note" rows="2" placeholder="Anything the finance team should know?"></textarea></div></div><div class="mt-3"><div class="field"><label class="label" for="payment-receipt">Payment receipt</label><div class="dropzone" style="padding:14px"><b class="text-sm">Drop files or choose from the media library</b><span class="text-xs">Optional — screenshot or bank receipt</span><input id="payment-receipt" type="file" multiple tabindex="-1" aria-hidden="true"><button class="btn btn-secondary btn-sm dz-pick" type="button" onclick="document.getElementById('payment-receipt').click()">Choose files</button></div></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-primary btn-sm" type="button">Submit for verification</button><button class="btn btn-secondary btn-sm" type="button">Cancel pending payment</button><button class="btn btn-secondary btn-sm" type="button">Download invoice</button></div><div class="mt-3"><div class="note"><span class="text-xs">Test mode — this environment uses Razorpay test keys. The primary CTA becomes <b>Proceed to secure checkout</b> when Pay online is selected.</span></div></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Invoice NL-INV-2026-000001 v1 attached</span></div>
+</section><section class="dialog-surface" id="py-status" aria-labelledby="py-status-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="py-status-h">Payment status</h3>
+      <div class="panel-sub">Corporate LMS for 200 Employees · Deposit · Completed</div>
+    </div>
+    <span class="badge tone-neutral mono">001</span>
+  </div>
+  <div class="dialog-body"><dl class="kv"><dt>Amount due</dt><dd>₹15,660.00</dd><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd>01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2</dd><dt>Created</dt><dd>10/5/2026, 3:47:22 AM</dd><dt>Recorded payment</dt><dd>Yes — offline payment recorded by the studio</dd></dl><div class="mt-3"><div class="tline"><div class="tline-item"><div class="tline-card"><b class="text-sm">Created</b><div class="text-xs dim mono mt-1">10/5/2026, 3:47:22 AM</div></div></div><div class="tline-item"><div class="tline-card"><b class="text-sm">Pending</b><div class="text-xs dim mono mt-1">waiting on your payment</div></div></div><div class="tline-item"><div class="tline-card"><b class="text-sm">Processing</b><div class="text-xs dim mono mt-1">verification in progress</div></div></div><div class="tline-item"><div class="tline-card"><b class="text-sm">Completed</b><div class="text-xs dim mono mt-1">receipt issued automatically</div></div></div><div class="tline-item mut"><div class="tline-card"><b class="text-sm">Refunded</b><div class="text-xs dim mono mt-1">only if the studio cancels</div></div></div></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Download receipt</button><button class="btn btn-secondary btn-sm" type="button">Download invoice</button><button class="btn btn-secondary btn-sm" type="button">File a payment dispute</button></div></div>
+  
+</section><section class="dialog-surface" id="py-notdue" aria-labelledby="py-notdue-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="py-notdue-h">Not due yet</h3>
+      <div class="panel-sub">Corporate LMS for 200 Employees · Final payment</div>
+    </div>
+    <span class="badge tone-neutral mono">002</span>
+  </div>
+  <div class="dialog-body"><dl class="kv"><dt>Amount due</dt><dd>₹15,660.00</dd><dt>Currency</dt><dd>INR</dd><dt>Reference</dt><dd>01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5</dd><dt>Created</dt><dd>10/5/2026, 3:47:22 AM</dd><dt>Checkout</dt><dd>locked</dd></dl><div class="mt-3"><div class="note warn"><span class="text-xs">Checkout not available yet — complete the current milestone (payment or delivery review) before moving to later milestones.</span></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Cancel pending payment</button><button class="btn btn-secondary btn-sm" type="button">Cancel payment</button></div></div>
+  
+</section></div></section>
 </main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>

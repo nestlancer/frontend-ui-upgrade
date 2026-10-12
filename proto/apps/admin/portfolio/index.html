@@ -7,16 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  main#main, main.content { min-height: 1330px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -54,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Portfolio</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -63,101 +60,230 @@
     <a class="userchip" href="../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <div class="phead">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>SHOWCASE</div>
   <h1 class="ptitle">Portfolio</h1>
-  <p class="psub">Public work shown on nestlancer.com and the marketing site. Featured drives the Home grid.</p>
+  <p class="psub">Manage showcase projects. The live timeline below mirrors what visitors see on the public site.</p>
 </div>
-<div class="phead-actions"><a class="btn btn-primary" href="./new/index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New project</a></div>
+<div class="phead-actions"><a class="btn btn-ghost" href="../../web/work/index.html">View public page</a><a class="btn btn-primary" href="./new/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New item</a></div>
 </div>
-<div class="stats" style="grid-template-columns:repeat(3,1fr)"><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>Published</div>
-  <div class="stat-value">6</div>
-  <div class="stat-note ">Public on both sites</div>
-</div><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Featured</div>
-  <div class="stat-value">3</div>
-  <div class="stat-note ">Home showcase grid</div>
-</div><div class="stat">
-  <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg>Drafts</div>
-  <div class="stat-value">2</div>
-  <div class="stat-note ">Awaiting media or copy</div>
-</div></div>
-<div class="grid g3 gap-5 mt-5">
-  
-  <a class="panel" href="./[id]/edit/index.html" style="display:block;overflow:hidden;position:relative">
-    <div class="cover v2" style="padding-top:56%"><span>CASE STUDY · E-COMMERCE PLATFORM</span></div>
-    <span class="badge tone-default" style="position:absolute;top:10px;left:10px;background:var(--bg-card)">Published</span>
-    <span class="badge tone-info" style="position:absolute;top:10px;right:10px">Featured</span>
-    <div class="panel-body">
-      <b style="font-size:14px">E-Commerce Platform</b>
-      <div class="text-xs dim mt-1 mono">24 views · Case study live</div>
-    </div>
-  </a>
-  <a class="panel" href="./[id]/edit/index.html" style="display:block;overflow:hidden;position:relative">
-    <div class="cover" style="padding-top:56%"><span>CASE STUDY · LAUNDRY EVERYWHERE</span></div>
-    <span class="badge tone-default" style="position:absolute;top:10px;left:10px;background:var(--bg-card)">Published</span>
-    
-    <div class="panel-body">
-      <b style="font-size:14px">Laundry Everywhere</b>
-      <div class="text-xs dim mt-1 mono">95 views · Case study live</div>
-    </div>
-  </a>
-  <a class="panel" href="./[id]/edit/index.html" style="display:block;overflow:hidden;position:relative">
-    <div class="cover v3" style="padding-top:56%"><span>CASE STUDY · CHOPSTICKS MKT</span></div>
-    <span class="badge tone-default" style="position:absolute;top:10px;left:10px;background:var(--bg-card)">Published</span>
-    <span class="badge tone-info" style="position:absolute;top:10px;right:10px">Featured</span>
-    <div class="panel-body">
-      <b style="font-size:14px">Chopsticks MKT</b>
-      <div class="text-xs dim mt-1 mono">12 views · Case study live</div>
-    </div>
-  </a>
-  <a class="panel" href="./[id]/edit/index.html" style="display:block;overflow:hidden;position:relative">
-    <div class="cover v6" style="padding-top:56%"><span>CASE STUDY · BANKING DASHBOARD</span></div>
-    <span class="badge tone-default" style="position:absolute;top:10px;left:10px;background:var(--bg-card)">Draft</span>
-    
-    <div class="panel-body">
-      <b style="font-size:14px">Banking Dashboard</b>
-      <div class="text-xs dim mt-1 mono">0 views · Case study hidden</div>
-    </div>
-  </a>
-  <a class="panel" href="./[id]/edit/index.html" style="display:block;overflow:hidden;position:relative">
-    <div class="cover v4" style="padding-top:56%"><span>CASE STUDY · EDTECH PLATFORM</span></div>
-    <span class="badge tone-default" style="position:absolute;top:10px;left:10px;background:var(--bg-card)">Published</span>
-    
-    <div class="panel-body">
-      <b style="font-size:14px">EdTech Platform</b>
-      <div class="text-xs dim mt-1 mono">372 views · Case study live</div>
-    </div>
-  </a>
-  <a class="panel" href="./[id]/edit/index.html" style="display:block;overflow:hidden;position:relative">
-    <div class="cover v4" style="padding-top:56%"><span>CASE STUDY · HOMELY AI REAL ESTATE</span></div>
-    <span class="badge tone-default" style="position:absolute;top:10px;left:10px;background:var(--bg-card)">Draft</span>
-    
-    <div class="panel-body">
-      <b style="font-size:14px">Homely AI Real Estate</b>
-      <div class="text-xs dim mt-1 mono">0 views · Case study hidden</div>
-    </div>
-  </a>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
+<div class="stat-strip mb-5">
+    <div><div class="s-label">On this page</div><div class="s-value">8</div></div>
+    <div><div class="s-label">Published</div><div class="s-value">8</div></div>
+    <div><div class="s-label">Draft</div><div class="s-value">0</div></div>
+    <div><div class="s-label">Featured</div><div class="s-value">4</div></div>
   </div>
-  <div class="state-matrix-body is-expanded">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Portfolio · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/048-portfolio-listing.webp</span></div><p>Content &gt; Portfolio: On this page 8; Published 8; Draft 0; Featured 4. Categories: Web Development, Mobile App, UI/UX Design, E-Commerce (Remove / Add). Analytics: total views 11; likes 0; top B2B Client Portal UX 4 views, others 1 each (SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign). Items in order: B2B Client Portal UX, Fitness Tracking App, Marketplace Redesign, Brand Identity System, Fintech Payments Hub, SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard — all PUBLISHED, Oct 2026, updated 10/8/2026. Actions Analytics, Edit, Unpublish, Delete.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Portfolio · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/082-portfolio-item-analytics-panel.webp</span></div><p>Content &gt; Portfolio &gt; Item analytics panel: total views 11, total likes 0, top item 8. Per-item views: B2B Client Portal UX 4; SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign 1 each; likes 0. &quot;No engagement data yet.&quot; (second crop) Manage items table: all 8 PUBLISHED, Oct 2026, updated 10/8/2026; Analytics/Edit/Unpublish/Delete actions; live timeline preview lists the 8 items.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>analytics brand categories client content dashboard delete design development draft e-commerce engagement featured fintech fitness healthtech identity items likes lists manage marketplace mobile order others panel payments per-item platform portal portfolio preview published redesign remove second system timeline total tracking unpublish updated views 2026</p></div>
+<!-- admin-portfolio:captured-components -->
+<div class="panel mb-5">
+  <div class="panel-head"><div class="min-w-0">
+    <h2 class="panel-title">Categories</h2>
+    <div class="panel-sub">Labels clients filter by on the public work page.</div>
+  </div></div>
+  <div class="panel-body">
+    <div class="flex items-center gap-2" style="flex-wrap:wrap"><span class="tag-remove">Web Development<button type="button" class="x" aria-label="Remove category Web Development"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></span><span class="tag-remove">Mobile App<button type="button" class="x" aria-label="Remove category Mobile App"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></span><span class="tag-remove">UI/UX Design<button type="button" class="x" aria-label="Remove category UI/UX Design"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></span><span class="tag-remove">E-Commerce<button type="button" class="x" aria-label="Remove category E-Commerce"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button></span></div>
+    <div class="filterbar mt-4">
+      <div class="input-wrap" style="min-width:220px;flex:0 1 260px">
+        <input class="input" id="pf-cat-new" placeholder="New category name" aria-label="New category name">
+      </div>
+      <button class="btn btn-primary btn-sm" type="button">Add category</button>
+    </div>
   </div>
+</div>
+<div class="panel mb-5">
+  <div class="panel-head"><div class="min-w-0">
+    <h2 class="panel-title">Analytics</h2>
+    <div class="panel-sub">Views and likes across the published showcase. Total views 11 · total likes 0 · top items 8.</div>
+  </div></div>
+  <div class="panel-body">
+    <div class="grid g3 gap-4 mb-4">
+      <div><div class="s-label">Total views</div><div class="s-value">11</div></div>
+      <div><div class="s-label">Total likes</div><div class="s-value">0</div></div>
+      <div><div class="s-label">Top items</div><div class="s-value">8</div></div>
+    </div>
+    <div class="tbl-wrap"><table class="tbl tbl-compact tbl-cards">
+      <thead><tr><th id="nl-th-1">Item</th><th id="nl-th-2">Views</th><th id="nl-th-3">Likes</th></tr></thead>
+      <tbody>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">B2B Client Portal UX</a></td><td data-label="Views" class="mono text-xs">4</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">Fitness Tracking App</a></td><td data-label="Views" class="mono text-xs">1</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">Marketplace Redesign</a></td><td data-label="Views" class="mono text-xs">1</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">Brand Identity System</a></td><td data-label="Views" class="mono text-xs">1</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">Fintech Payments Hub</a></td><td data-label="Views" class="mono text-xs">1</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">SaaS Analytics Platform</a></td><td data-label="Views" class="mono text-xs">1</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">E-Commerce Mobile App</a></td><td data-label="Views" class="mono text-xs">1</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+    <tr><td data-label="Item"><a class="link" href="./[id]/edit/index.html">HealthTech Dashboard</a></td><td data-label="Views" class="mono text-xs">1</td><td data-label="Likes" class="mono text-xs">0</td></tr>
+      </tbody>
+    </table></div>
+    <h3 class="panel-title mt-4">Item analytics</h3>
+    <div class="grid g3 gap-4 mt-2">
+      <div><div class="s-label">Top item</div><div class="s-value" style="font-size:14px">B2B Client Portal UX</div></div>
+      <div><div class="s-label">Views</div><div class="s-value">4</div></div>
+      <div><div class="s-label">Likes</div><div class="s-value">0</div></div>
+    </div>
+    <div class="empty mt-3" style="padding:18px 16px">
+      <b>No engagement data yet.</b>
+      <div class="text-sm dim">Likes appear here once visitors react to a published case study.</div>
+    </div>
+  </div>
+</div>
+<div class="panel mb-5">
+  <div class="panel-head"><div class="min-w-0">
+    <h2 class="panel-title">Manage items</h2>
+    <div class="panel-sub">Create, edit, publish, and remove portfolio entries.</div>
+  </div></div>
+  <div class="panel-body">
+    <div class="filterbar mb-4">
+      <div class="input-wrap" style="min-width:240px;flex:1 1 280px">
+        <span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+        <input class="input" placeholder="Search portfolio…" aria-label="Search portfolio">
+      </div>
+    </div>
+    <div class="tbl-wrap"><table class="tbl tbl-compact tbl-cards">
+      <thead><tr><th id="nl-th-4">Title</th><th id="nl-th-5">Status</th><th id="nl-th-6">Project date</th><th id="nl-th-7">Updated</th><th id="nl-th-8">Actions</th></tr></thead>
+      <tbody>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">B2B Client Portal UX</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">Fitness Tracking App</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">Marketplace Redesign</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">Brand Identity System</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">Fintech Payments Hub</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">SaaS Analytics Platform</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">E-Commerce Mobile App</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+    <tr><td data-label="Title"><a class="link font-semibold" href="./[id]/edit/index.html">HealthTech Dashboard</a></td>
+      <td data-label="Status"><span class="badge tone-success">Published</span></td>
+      <td data-label="Project date" class="mono text-xs">Oct 2026</td>
+      <td data-label="Updated" class="mono text-xs">10/8/2026</td>
+      <td data-label="Actions"><div class="flex items-center gap-3">
+        <a class="link text-xs" href="./[id]/edit/index.html">Analytics</a>
+        <a class="link text-xs" href="./[id]/edit/index.html">Edit</a>
+        <button class="link text-xs" type="button">Unpublish</button>
+        <button class="link text-xs" type="button" style="color:var(--t-danger-tx)">Delete</button>
+      </div></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+<div class="panel mb-5">
+  <div class="panel-head"><div class="min-w-0">
+    <h2 class="panel-title">Live timeline preview</h2>
+    <div class="panel-sub">Compact date and title preview of the public project timeline.</div>
+  </div></div>
+  <div class="panel-body">
+    <div class="eyebrow mb-2"><span class="dot"></span>OCT 2026</div>
+    <div class="grid g2 gap-x-6" style="align-items:start">
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">B2B Client Portal UX</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">Fitness Tracking App</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">Marketplace Redesign</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">Brand Identity System</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">Fintech Payments Hub</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">SaaS Analytics Platform</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">E-Commerce Mobile App</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+      <div class="flex items-center justify-between gap-3" style="padding:8px 0;border-bottom:1px solid var(--line)">
+        <div class="flex items-center gap-2 min-w-0"><span class="dot" style="background:var(--brand-9)"></span>
+          <a class="link truncate" href="./[id]/edit/index.html">HealthTech Dashboard</a></div>
+        <span class="badge tone-success">Published</span>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">2 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>portfolio — Portfolio listing</b><span class="ref-tag mono">048</span></div><ul class="ref-facts"><li>Content &gt; Portfolio: On this page 8; Published 8; Draft 0; Featured 4. Categories: Web Development, Mobile App, UI/UX Design, E-Commerce (Remove / Add). Analytics: total views 11; likes 0</li><li>top B2B Client Portal UX 4 views, others 1 each (SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign). Items in order: B2B Client Portal UX, Fitness Tracking App, Marketplace Redesign, Brand Identity System, Fintech Payments Hub, SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard — all PUBLISHED, Oct 2026, updated 10/8/2026. Actions Analytics, Edit, Unpublish, Delete</li></ul></li><li class="ref-row"><div class="ref-head"><b>portfolio — Portfolio — Item analytics panel</b><span class="ref-tag mono">082</span></div><ul class="ref-facts"><li>Content &gt; Portfolio &gt; Item analytics panel: total views 11, total likes 0, top item 8. Per-item views: B2B Client Portal UX 4</li><li>SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign 1 each</li><li>likes 0. &quot;No engagement data yet.&quot; (second crop) Manage items table: all 8 PUBLISHED, Oct 2026, updated 10/8/2026; Analytics/Edit/Unpublish/Delete actions</li><li>live timeline preview lists the 8 items</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

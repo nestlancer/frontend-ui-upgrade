@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -56,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Conversation</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -65,7 +60,7 @@
     <a class="userchip" href="../../../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
+<main id="main" class="content" tabindex="-1">
 <a href="../../inbox/index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Inbox</a>
 <div class="phead">
 <div class="min-w-0">
@@ -127,25 +122,52 @@
   <textarea class="textarea flex-1" rows="1" placeholder="Reply to Karthik…"></textarea>
   <button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg><span>Send</span></button>
 </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (4)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Message thread · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/026-messages-thread-details.webp</span></div><p>Messages thread: group &quot;Payments ops — Razorpay settlement and webhooks&quot;, 3 members (Riya Kapoor admin, Karthik Menon, Ananya Iyer). Messages: Riya Kapoor &quot;Karthik, Ananya — this thread is for settlement and webhook questions…&quot; (Oct 5, 3:49 AM); Karthik Menon &quot;Useful. Our UPI adapter is still in staging…&quot;; Ananya Iyer &quot;Happy to share the webhook idempotency notes…&quot;. Quick replies: Checking availability…, Confirmed for Thursday, Need more details.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Message thread · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/078-messages-edit-message-form.webp</span></div><p>Messages &gt; group thread &quot;Payments ops — Razorpay settlement and webhooks&quot;: Riya Kapoor&#x27;s message from Oct 5, 3:49 AM opened for inline edit (textarea with Save and Cancel buttons). Edit is available on own messages only.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Message thread · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/079-messages-group-members-panel.webp</span></div><p>Messages &gt; group info panel for &quot;Payments ops — Razorpay settlement and webhooks&quot; (Group · 3 members): Group info with Archive group; Add members (search clients to add; Add to group disabled); Members: Riya Kapoor (Admin, admin@nestlancer.com), Karthik Menon (Client, karthik…; Remove), Ananya Iyer (Client, ananya.i…; Remove). Search in conversation box.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Message thread · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/080-messages-reply-composer.webp</span></div><p>Messages &gt; reply composer: &quot;Replying to you&quot; banner quoting Riya Kapoor&#x27;s message (&quot;Karthik, Ananya — this thread is for settlement and webhook questions…&quot;); close (×) control; composer placeholder &quot;Reply as operator…&quot;; attach and Send (Send disabled until text entered).</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>adapter admin ananya archive attach availability available banner buttons cancel checking client clients close composer confirmed control conversation details disabled entered group happy idempotency inline kapoor kapoor&#x27;s karthik members menon message messages nestlancer notes opened operator panel payments placeholder questions quick quoting razorpay remove replies reply replying settlement share staging still textarea thread thursday until useful webhook webhooks </p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">4 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>messages/thread/… — messages/thread/details</b><span class="ref-tag mono">026</span></div><ul class="ref-facts"><li></li><li>Messages thread: group &quot;Payments ops — Razorpay settlement and webhooks&quot;, 3 members (Riya Kapoor admin, Karthik Menon, Ananya Iyer). Messages: Riya Kapoor &quot;Karthik, Ananya — this thread is for settlement and webhook questions…&quot; (Oct 5, 3:49 AM)</li><li>Karthik Menon &quot;Useful. Our UPI adapter is still in staging…&quot;</li><li>Ananya Iyer &quot;Happy to share the webhook idempotency notes…&quot;. Quick replies: Checking availability…, Confirmed for Thursday, Need more details</li></ul></li><li class="ref-row"><div class="ref-head"><b>messages/thread/… — Messages — Edit message form</b><span class="ref-tag mono">078</span></div><ul class="ref-facts"><li></li><li>Messages &gt; group thread &quot;Payments ops — Razorpay settlement and webhooks&quot;: Riya Kapoor&#x27;s message from Oct 5, 3:49 AM opened for inline edit (textarea with Save and Cancel buttons). Edit is available on own messages only</li></ul></li><li class="ref-row"><div class="ref-head"><b>messages/thread/… — Messages — Group members panel</b><span class="ref-tag mono">079</span></div><ul class="ref-facts"><li>Messages &gt; group info panel for &quot;Payments ops — Razorpay settlement and webhooks&quot; (Group; 3 members): Group info with Archive group; Add members (search clients to add; Add to group disabled)</li><li>Members: Riya Kapoor (Admin, admin@nestlancer.com), Karthik Menon (Client, karthik…; Remove), Ananya Iyer (Client, ananya.i…; Remove). Search in conversation box</li></ul></li><li class="ref-row"><div class="ref-head"><b>messages/thread/… — Messages — Reply composer</b><span class="ref-tag mono">080</span></div><ul class="ref-facts"><li>Messages &gt; reply composer: &quot;Replying to you&quot; banner quoting Riya Kapoor&#x27;s message (&quot;Karthik, Ananya — this thread is for settlement and webhook questions…&quot;); close (×) control</li><li>composer placeholder &quot;Reply as operator…&quot;; attach and Send (Send disabled until text entered)</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
+<!-- PROTO-STATES-MSG -->
+<section id="states-messages" class="mb-5" aria-labelledby="states-messages-h"><div class="sec-head">
+    <div class="min-w-0">
+      <div class="sec-eyebrow">Operator states · 3 screens</div>
+      <h2 class="sec-title" id="states-messages-h">Thread states</h2>
+      <p class="sec-sub">Reply composer, message editing and group membership for this conversation.</p>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap"><span class="badge tone-neutral mono">078 edit message</span><span class="badge tone-neutral mono">079 group members</span><span class="badge tone-neutral mono">080 reply composer</span></div>
+  </div><div class="state-deck"><section class="dialog-surface" id="ms-reply" aria-labelledby="ms-reply-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="ms-reply-h">Reply composer</h3>
+      <div class="panel-sub">Direct conversation with Arjun Mehta · Karthik Menon</div>
+    </div>
+    <span class="badge tone-neutral mono">080</span>
+  </div>
+  <div class="dialog-body"><div class="field"><label class="label" for="ms-reply">Message</label><textarea class="textarea" id="ms-reply" rows="3" placeholder="Write a message…"></textarea></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Attach file</button><button class="btn btn-secondary btn-sm" type="button">Insert template</button><button class="btn btn-primary btn-sm" type="button">Send</button></div><div class="mt-3"><div class="flex items-center gap-2 flex-wrap"><span class="chip active">Direct</span><span class="chip">Group</span><span class="chip">Internal note</span></div></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Message is sent to 2 participants</span></div>
+</section><section class="dialog-surface" id="ms-edit" aria-labelledby="ms-edit-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="ms-edit-h">Edit message</h3>
+      <div class="panel-sub">Edits are visible to everyone in the thread</div>
+    </div>
+    <span class="badge tone-neutral mono">078</span>
+  </div>
+  <div class="dialog-body"><div class="field"><label class="label" for="ms-edit">Message</label><textarea class="textarea" id="ms-edit" rows="3">Reconciliation checklist posted to the shared workspace — replay UI is next.</textarea></div><div class="mt-3"><div class="note"><span class="text-xs">Edited messages keep an “edited” marker; the original text stays in the audit log.</span></div></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Last edited Oct 5, 2026 3:52 AM</span><button class="btn btn-secondary btn-sm" type="button">Cancel</button><button class="btn btn-primary btn-sm" type="button">Save changes</button></div>
+</section><section class="dialog-surface" id="ms-members" aria-labelledby="ms-members-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="ms-members-h">Group members</h3>
+      <div class="panel-sub">3 participants · 1 operator, 2 clients</div>
+    </div>
+    <span class="badge tone-neutral mono">079</span>
+  </div>
+  <div class="dialog-body"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-1">Participant</th><th id="nl-th-2">Role</th><th id="nl-th-3">Actions</th></tr></thead><tbody><tr><td data-label="Participant" class="min-w-0"><b>Riya Kapoor</b><div class="text-xs dim">admin@nestlancer.com</div></td><td data-label="Role" class="min-w-0"><span class="badge tone-brand mono">ADMIN</span></td><td data-label="Actions" class="min-w-0"><span class="text-xs dim">owner</span></td></tr><tr><td data-label="Participant" class="min-w-0"><b>Arjun Mehta</b><div class="text-xs dim">arjun.mehta@nestlancer.com</div></td><td data-label="Role" class="min-w-0"><span class="badge tone-neutral mono">CLIENT</span></td><td data-label="Actions" class="min-w-0"><button class="btn btn-secondary btn-xs" type="button">Remove</button></td></tr><tr><td data-label="Participant" class="min-w-0"><b>Karthik Menon</b><div class="text-xs dim">karthik.menon@nestlancer.com</div></td><td data-label="Role" class="min-w-0"><span class="badge tone-neutral mono">CLIENT</span></td><td data-label="Actions" class="min-w-0"><button class="btn btn-secondary btn-xs" type="button">Remove</button></td></tr></tbody></table></div><div class="mt-3"><div class="field"><label class="label" for="ms-add">Add participant</label><input class="input" id="ms-add" placeholder="Search by name or email…"></div></div></div>
+  
+</section></div></section>
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

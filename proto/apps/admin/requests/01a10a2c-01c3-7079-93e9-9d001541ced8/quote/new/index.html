@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -56,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>New quote</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -65,8 +60,8 @@
     <a class="userchip" href="../../../../profile/index.html"><span class="avatar" style="background:#123A37;color:#fff">RK</span><span class="nm">Riya Kapoor</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a>
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
-<main id="main" class="content">
-<a href="../../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to request</a>
+<main id="main" class="content" tabindex="-1">
+<a href="../../../[id]/index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to request</a>
 <div class="phead">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>QUOTE BUILDER</div>
@@ -81,9 +76,9 @@
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Line items</h2></div><div class="flex items-center gap-2 shrink-0"><button class="btn btn-secondary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Add item</button></div></div>
   <div class="">
-      <div class="tbl-wrap"><table class="tbl tbl-compact ">
-<thead><tr><th>Description</th><th style="text-align:right">Qty</th><th style="text-align:right">Unit price</th><th style="text-align:right">Total</th></tr></thead>
-<tbody><tr><td><input class="input sm" value="Quote-builder regression pack — seed data + Playwright suite"></td><td style="text-align:right"><input class="input sm mono" style="width:56px" value="1"></td><td style="text-align:right"><input class="input sm mono" style="width:110px" value="1500.00"></td><td style="text-align:right"><span class="mono">₹1,500.00</span></td></tr><tr><td><input class="input sm" placeholder="Describe another deliverable…"></td><td style="text-align:right"><input class="input sm mono" style="width:56px" value="1"></td><td style="text-align:right"><input class="input sm mono" style="width:110px" value="0.00"></td><td style="text-align:right"><span class="mono dim">₹0.00</span></td></tr></tbody></table></div>
+      <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
+<thead><tr><th id="nl-th-1">Description</th><th id="nl-th-2" style="text-align:right">Qty</th><th id="nl-th-3" style="text-align:right">Unit price</th><th id="nl-th-4" style="text-align:right">Total</th></tr></thead>
+<tbody><tr><td data-label="Description"><input class="input sm" value="Quote-builder regression pack — seed data + Playwright suite" aria-labelledby="nl-th-1"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1" aria-labelledby="nl-th-2"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="1500.00" aria-labelledby="nl-th-3"></td><td data-label="Total" style="text-align:right"><span class="mono">₹1,500.00</span></td></tr><tr><td data-label="Description"><input class="input sm" placeholder="Describe another deliverable…"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1" aria-labelledby="nl-th-2"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="0.00" aria-labelledby="nl-th-3"></td><td data-label="Total" style="text-align:right"><span class="mono dim">₹0.00</span></td></tr></tbody></table></div>
       <div class="panel-foot">
         <dl class="kv"><dt>Subtotal</dt><dd><span class="mono">₹1,500.00</span></dd><dt>GST (18%)</dt><dd><span class="mono">₹270.00</span></dd><dt>Total</dt><dd><span class="mono font-bold" style="font-size:18px">₹1,770.00</span></dd></dl>
       </div></div>
@@ -94,9 +89,9 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Payment schedule</h2></div></div>
   <div class="panel-body">
       <div class="flex gap-2 mb-4"><span class="chip active">50 / 50</span><span class="chip">30 / 40 / 30</span><span class="chip">100% on completion</span></div>
-      <div class="tbl-wrap"><table class="tbl tbl-compact ">
-<thead><tr><th>Milestone</th><th style="text-align:right">Share</th><th style="text-align:right">Amount</th><th>Due</th></tr></thead>
-<tbody><tr><td><b>Deposit</b></td><td style="text-align:right"><span class="mono">50%</span></td><td style="text-align:right"><span class="mono">₹885.00</span></td><td><select class="select sm"><option>Upon acceptance</option></select></td></tr><tr><td><b>Final payment</b></td><td style="text-align:right"><span class="mono">50%</span></td><td style="text-align:right"><span class="mono">₹885.00</span></td><td><select class="select sm"><option>Upon milestone approval</option></select></td></tr></tbody></table></div></div>
+      <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
+<thead><tr><th id="nl-th-5">Milestone</th><th id="nl-th-6" style="text-align:right">Share</th><th id="nl-th-7" style="text-align:right">Amount</th><th id="nl-th-8">Due</th></tr></thead>
+<tbody><tr><td data-label="Milestone"><b>Deposit</b></td><td data-label="Share" style="text-align:right"><span class="mono">50%</span></td><td data-label="Amount" style="text-align:right"><span class="mono">₹885.00</span></td><td data-label="Due"><select aria-label="Payment trigger" class="select sm"><option>Upon acceptance</option></select></td></tr><tr><td data-label="Milestone"><b>Final payment</b></td><td data-label="Share" style="text-align:right"><span class="mono">50%</span></td><td data-label="Amount" style="text-align:right"><span class="mono">₹885.00</span></td><td data-label="Due"><select aria-label="Payment trigger" class="select sm"><option>Upon milestone approval</option></select></td></tr></tbody></table></div></div>
   
 </div>
     
@@ -105,17 +100,17 @@
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Validity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option selected>10 days</option><option>14 days</option><option>30 days</option></select>
+  <label for="nl-validity" class="label">Validity <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-validity" class="select"><option selected>10 days</option><option>14 days</option><option>30 days</option></select>
   
 </div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Project-specific terms <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="3" placeholder="One term per line — appended after standard terms.">AUDIT-P23 project-specific term: client supplies approvals within two business days.</textarea>
+  <label for="nl-project-specific-terms" class="label">Project-specific terms <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-project-specific-terms" class="textarea" rows="3" placeholder="One term per line — appended after standard terms.">AUDIT-P23 project-specific term: client supplies approvals within two business days.</textarea>
   
 </div></div>
-      <div class="check mt-3"><input type="checkbox" checked> <span>Attach standard Nestlancer terms (v3.2)</span></div></div>
+      <label class="check mt-3"><input type="checkbox" checked> <span>Attach standard Nestlancer terms (v3.2)</span></label></div>
   
 </div>
   </div>
@@ -123,37 +118,45 @@
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Context</h2></div></div>
-  <div class="panel-body"><dl class="kv"><dt>Client</dt><dd><b>Arjun Mehta</b></dd><dt>Request</dt><dd><a class="link mono" style="font-size:11px" href="../../index.html">01a10fa4…</a></dd><dt>Budget signaled</dt><dd><span class="mono">₹1.5L – ₹2.2L</span></dd><dt>Quote ID</dt><dd><span class="mono">#01a10f80 (draft)</span></dd><dt>Engineer rec.</dt><dd><span class="mono">₹1,770 pilot</span></dd></dl></div>
+  <div class="panel-body"><dl class="kv"><dt>Client</dt><dd><b>Arjun Mehta</b></dd><dt>Request</dt><dd><a class="link mono" style="font-size:11px" href="../../../[id]/index.html">01a10fa4…</a></dd><dt>Budget signaled</dt><dd><span class="mono">₹1.5L – ₹2.2L</span></dd><dt>Quote ID</dt><dd><span class="mono">#01a10f80 (draft)</span></dd><dt>Engineer rec.</dt><dd><span class="mono">₹1,770 pilot</span></dd></dl></div>
   
 </div>
     <div class="panel"><div class="panel-head"><h2 class="panel-title">Send</h2></div>
       <div class="panel-body">
-        <div class="check mb-3"><input type="checkbox" checked> <span>Email client on send</span></div>
-        <div class="check mb-4"><input type="checkbox" checked> <span>Attach PDF + service agreement</span></div>
+        <label class="check mb-3"><input type="checkbox" checked> <span>Email client on send</span></label>
+        <label class="check mb-4"><input type="checkbox" checked> <span>Attach PDF + service agreement</span></label>
         <button class="btn btn-primary w-full btn-lg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg> Send quote</button>
         <button class="btn btn-secondary w-full mt-2">Save as draft</button>
         <div class="text-xs dim mt-3">Sending marks the request <b>QUOTED</b> and notifies the client in-app and by email.</div>
       </div>
     </div>
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (3)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Create quote · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/058-requests-details-quote-new.webp</span></div><p>Requests &gt; Quote builder (Live Shipment Tracking Dashboard): client rahul.desai@nestlancer.com; category Web Development; budget ₹30,00,000.00 – ₹60,00,000.00; deadline Sep 15, 2026. Brief: customer-facing and internal shipment dashboard with WebSocket live updates from PostgreSQL dispatch warehouse, RBAC, Delhivery + Blue Dart AWB integration, CSV export. Requirements: WebSocket live status updates; Delhivery + Blue Dart AWB lookup; Client portal with shipment history; Daily MIS CSV export; RBAC for ops vs client users. Builder steps: 1 Scope, 2 Pricing, 3 Terms; Phase 1 with one blank deliverable row (qty 1, unit ₹500); quote total ₹0.00; valid until 2026-10-24; buttons Apply phase template, Line-item library, Add phase, Create quote.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Create quote · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/095-quote-builder-pricing-and-schedule.webp</span></div><p>Requests &gt; Quote builder, step 2 Pricing (Live Shipment Tracking Dashboard, rahul.desai): Payment schedule presets 50/50 (selected), 30/70, 30/40/30, 25% × 4 milestones, 100% upfront; Custom % option; installments Deposit 50% (₹0.00, on accept) and Final payment 50% (₹0.00, on prior approved); Currency INR; Tax 0; Valid until 10/24/2026. Quote summary ₹0.00 (0 priced lines, 1 phase); client budget ₹30,00,000.00–₹60,00,000.00. Buttons Back, Next, Create quote.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Create quote · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/096-quote-builder-terms-and-review.webp</span></div><p>Requests &gt; Quote builder, step 3 Terms (Live Shipment Tracking Dashboard): Standard Nestlancer terms (always included), 10 numbered clauses: 1 Validity, 2 Acceptance, 3 Payment, 4 Scope, 5 Revisions, 6 Client responsibilities, 7 Intellectual property, 8 Confidentiality, 9 Limitation of liability, 10 Governing law (India). Snapshotted onto quote. Project-specific terms optional (0/2000); &quot;Require signed service agreement&quot; checkbox; Create quote.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>accept acceptance agreement always apply approved blank brief budget builder buttons category checkbox clauses client confidentiality create currency custom customer-facing daily dashboard deadline delhivery deliverable deposit desai development dispatch export final governing history included india installments integration intellectual internal liability library limitation line-item lines lookup milestones nestlancer numbered option optional payment phase portal postgresql presets priced pricing prior project-specific property quote rahul requests require requirements responsibilities revisions schedule scope selected service shipment signed snapshotted standard steps summary template terms total tracking until updates upfront users valid validity warehouse websocket 100 2000 2026 3000000.00 500 6000000.00</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">3 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>requests/…/quote/new — requests/details/quote/new</b><span class="ref-tag mono">058</span></div><ul class="ref-facts"><li>Requests &gt; Quote builder (Live Shipment Tracking Dashboard): client rahul.desai@nestlancer.com; category Web Development; budget ₹30,00,000.00 – ₹60,00,000.00</li><li>deadline Sep 15, 2026. Brief: customer-facing and internal shipment dashboard with WebSocket live updates from PostgreSQL dispatch warehouse, RBAC, Delhivery + Blue Dart AWB integration, CSV export. Requirements: WebSocket live status updates</li><li>Delhivery + Blue Dart AWB lookup; Client portal with shipment history; Daily MIS CSV export; RBAC for ops vs client users. Builder steps: 1 Scope, 2 Pricing, 3 Terms</li><li>Phase 1 with one blank deliverable row (qty 1, unit ₹500); quote total ₹0.00; valid until 2026-10-24; buttons Apply phase template, Line-item library, Add phase, Create quote</li></ul></li><li class="ref-row"><div class="ref-head"><b>requests/…/quote/new — Quote builder — Pricing and schedule</b><span class="ref-tag mono">095</span></div><ul class="ref-facts"><li>Requests &gt; Quote builder, step 2 Pricing (Live Shipment Tracking Dashboard, rahul.desai): Payment schedule presets 50/50 (selected), 30/70, 30/40/30, 25% × 4 milestones, 100% upfront</li><li>Custom % option; installments Deposit 50% (₹0.00, on accept) and Final payment 50% (₹0.00, on prior approved); Currency INR; Tax 0</li><li>Valid until 10/24/2026. Quote summary ₹0.00 (0 priced lines, 1 phase); client budget ₹30,00,000.00–₹60,00,000.00. Buttons Back, Next, Create quote</li></ul></li><li class="ref-row"><div class="ref-head"><b>requests/…/quote/new — Quote builder — Terms and review</b><span class="ref-tag mono">096</span></div><ul class="ref-facts"><li></li><li>Requests &gt; Quote builder, step 3 Terms (Live Shipment Tracking Dashboard): Standard Nestlancer terms (always included), 10 numbered clauses: 1 Validity, 2 Acceptance, 3 Payment, 4 Scope, 5 Revisions, 6 Client responsibilities, 7 Intellectual property, 8 Confidentiality, 9 Limitation of liability, 10 Governing law (India). Snapshotted onto quote. Project-specific terms optional (0/2000)</li><li>&quot;Require signed service agreement&quot; checkbox; Create quote</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
+<!-- PROTO-STATES-QB -->
+<section id="states-quote-builder" class="mb-5" aria-labelledby="states-quote-builder-h"><div class="sec-head">
+    <div class="min-w-0">
+      <div class="sec-eyebrow">Operator states · 3 screens</div>
+      <h2 class="sec-title" id="states-quote-builder-h">Quote builder steps</h2>
+      <p class="sec-sub">Scope, pricing and terms as captured for the Live Shipment Tracking Dashboard brief — with the standard clause set snapshotted onto the quote.</p>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap"><span class="badge tone-neutral mono">058 scope</span><span class="badge tone-neutral mono">095 pricing</span><span class="badge tone-neutral mono">096 terms</span></div>
+  </div><div class="state-deck"><section class="dialog-surface" id="rq-quote-builder" aria-labelledby="rq-quote-builder-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="rq-quote-builder-h">Quote builder</h3>
+      <div class="panel-sub">Live Shipment Tracking Dashboard · step 1 Scope, step 2 Pricing, step 3 Terms</div>
+    </div>
+    <span class="badge tone-neutral mono">058 · 095 · 096</span>
+  </div>
+  <div class="dialog-body"><div class="flex items-center gap-2 flex-wrap"><span class="chip active">1 Scope</span><span class="chip">2 Pricing</span><span class="chip">3 Terms</span><span class="chip">Apply phase template</span><span class="chip">Line-item library</span><span class="chip">Add phase</span></div><div class="mt-3"><dl class="kv"><dt>Client</dt><dd>rahul.desai@nestlancer.com</dd><dt>Category</dt><dd>Web Development</dd><dt>Client budget</dt><dd>₹30,00,000.00 – ₹60,00,000.00</dd><dt>Deadline</dt><dd>Sep 15, 2026</dd><dt>Quote total</dt><dd>₹0.00 · 0 priced lines, 1 phase</dd><dt>Valid until</dt><dd>10/24/2026</dd><dt>Currency / tax</dt><dd>INR · 0%</dd></dl></div><div class="mt-3"><div class="sec-eyebrow">Brief</div><p class="text-sm muted">Customer-facing and internal shipment dashboard with WebSocket live updates from PostgreSQL dispatch warehouse, RBAC, Delhivery + Blue Dart AWB integration, CSV export.</p></div><div class="mt-3"><div class="sec-eyebrow">Requirements</div><ul class="prose-list"><li>WebSocket live status updates</li><li>Delhivery + Blue Dart AWB lookup</li><li>Client portal with shipment history</li><li>Daily MIS CSV export</li><li>RBAC for ops vs client users</li></ul></div><div class="mt-3"><div class="grid g2 gap-3"><div class="field"><label class="label" for="payment-schedule">Payment schedule</label><select class="select" id="payment-schedule"><option selected>50/50 (selected)</option><option>30/70</option><option>30/40/30</option><option>25% × 4 milestones</option><option>100% upfront</option><option>Custom %</option></select></div><div class="field"><label class="label" for="qb-valid">Valid until</label><input class="input mono" id="qb-valid" value="10/24/2026"></div></div></div><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-9">Phase / line</th><th id="nl-th-10">Qty</th><th id="nl-th-11">Unit</th><th id="nl-th-12">Amount</th></tr></thead><tbody><tr><td data-label="Phase / line" class="min-w-0">Phase 1 — Deliverables</td><td data-label="Qty" class="min-w-0 mono">1</td><td data-label="Unit" class="min-w-0 mono">₹500</td><td data-label="Amount" class="min-w-0 mono">₹0.00</td></tr><tr><td data-label="Phase / line" class="min-w-0"><span class="dim">— blank deliverable row</span></td><td data-label="Qty" class="min-w-0 mono">1</td><td data-label="Unit" class="min-w-0 mono">₹500</td><td data-label="Amount" class="min-w-0 mono">₹0.00</td></tr></tbody></table></div><div class="mt-4"><div class="note"><span class="text-xs">Standard Nestlancer terms (always included) — 10 clauses snapshotted onto the quote: 1 Validity · 2 Acceptance · 3 Payment · 4 Scope · 5 Revisions · 6 Client responsibilities · 7 Intellectual property · 8 Confidentiality · 9 Limitation of liability · 10 Governing law (India).</span></div></div><div class="mt-3"><div class="field"><label class="label" for="qb-terms">Project-specific terms</label><textarea class="textarea" id="qb-terms" rows="2" placeholder="Client provides brand assets within 5 business days of kickoff. Two revision rounds per milestone."></textarea></div></div><div class="mt-3"><label class="check"><input type="checkbox" checked> Require signed service agreement</label></div><div class="mt-3"><dl class="kv"><dt>Deposit 50%</dt><dd>₹0.00 · on accept</dd><dt>Final payment 50%</dt><dd>₹0.00 · on prior approved</dd></dl></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Presets: 50/50 · 30/70 · 30/40/30 · 25% × 4 · 100% upfront</span><button class="btn btn-secondary btn-sm" type="button">Back</button><button class="btn btn-secondary btn-sm" type="button">Next</button><button class="btn btn-primary btn-sm" type="button">Create quote</button></div>
+</section></div></section>
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

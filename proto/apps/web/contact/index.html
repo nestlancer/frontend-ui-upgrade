@@ -7,11 +7,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  main#main, main.content { min-height: 1255px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
 <body class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -26,7 +21,7 @@
   <a class="btn btn-ghost btn-icon" href="../blog/bookmarks/index.html" title="Bookmarks"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg></a>
   <a class="btn btn-ghost btn-sm" href="../login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="./index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-</div></div></header><main id="main" >
+</div></div></header><main id="main"  tabindex="-1">
 
 <section style="padding:52px 0 34px"><div class="mkt-wrap">
   <div class="mkt-eyebrow mb-3"><span class="dot"></span>CONTACT</div>
@@ -36,14 +31,14 @@
 <div class="mkt-wrap" style="padding-bottom:72px"><div class="grid gap-8" style="grid-template-columns:7fr 5fr">
   <div class="mkt-card" style="padding:26px">
     <div class="grid g2 gap-4 mb-4">
-      <div class="field"><label class="label">Your name <span class="req">*</span></label><input class="input" placeholder="Arjun Mehta"></div>
-      <div class="field"><label class="label">Email <span class="req">*</span></label><input class="input" placeholder="arjun@company.com"></div>
+      <div class="field"><label for="nl-your-name" class="label">Your name <span class="req">*</span></label><input id="nl-your-name" class="input" placeholder="Arjun Mehta"></div>
+      <div class="field"><label for="nl-email" class="label">Email <span class="req">*</span></label><input id="nl-email" class="input" placeholder="arjun@company.com"></div>
     </div>
     <div class="grid g2 gap-4 mb-4">
-      <div class="field"><label class="label">Company</label><input class="input" placeholder="Mehta Consulting Group"></div>
-      <div class="field"><label class="label">Topic</label><select class="select"><option>New project inquiry</option><option>Existing project</option><option>Partnership</option><option>Press</option></select></div>
+      <div class="field"><label for="nl-company" class="label">Company</label><input id="nl-company" class="input" placeholder="Mehta Consulting Group"></div>
+      <div class="field"><label for="nl-topic" class="label">Topic</label><select id="nl-topic" class="select"><option>New project inquiry</option><option>Existing project</option><option>Partnership</option><option>Press</option></select></div>
     </div>
-    <div class="field mb-4"><label class="label">Message <span class="req">*</span></label><textarea class="textarea" rows="5" placeholder="What should we know before replying?"></textarea></div>
+    <div class="field mb-4"><label for="nl-message" class="label">Message <span class="req">*</span></label><textarea id="nl-message" class="textarea" rows="5" placeholder="What should we know before replying?"></textarea></div>
     <div class="flex items-center gap-3"><button class="btn btn-primary">Send message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button><span class="text-xs dim">Replies within 1 business day</span></div>
   </div>
   <div class="flex-col gap-5">
@@ -61,22 +56,13 @@
   
 </div>
   </div>
-</div></div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body is-expanded">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Contact · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">public/004-contact.webp</span></div><p>Contact page (app form): &quot;Contact&quot;, Sales/support/partnership inquiries, respond within one business day. Fields: Your name, Email, Subject (default General), Message; Send message. Side card: Studio contact@nestlancer.com, Typical reply &lt; 24h. Chips: Reply in 24h, Fixed-price, Made in India.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>business chips contact default email fields fixed-price general india inquiries message nestlancer partnership reply respond sales studio subject support typical </p></div>
-  </div>
+</div></div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">1 states recorded for this route — values as captured in the public screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>contact</b><span class="ref-tag mono">004</span></div><ul class="ref-facts"><li>Contact page (app form): &quot;Contact&quot;, Sales/support/partnership inquiries, respond within one business day. Fields: Your name, Email, Subject (default General), Message</li><li>Send message. Side card: Studio contact@nestlancer.com, Typical reply &lt; 24h. Chips: Reply in 24h, Fixed-price, Made in India</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main><footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
   <div class="flex-col gap-3">
@@ -87,9 +73,9 @@
 </svg><span>Nestlancer<span class="tld">.</span></span></a>
     <p class="text-sm muted" style="max-width:32ch;line-height:1.6">Product studio + client portal. Fixed-price quotes, Razorpay milestones, live Project Hub.</p>
   </div>
-  <div><h5>Product</h5><a href="../dashboard/index.html">Project Hub</a><a href="../../landing/pricing/index.html">Pricing</a><a href="../../landing/services/index.html">Services</a><a href="../portfolio/index.html">Portfolio</a></div>
-  <div><h5>Company</h5><a href="../about/index.html">About</a><a href="../blog/index.html">Blog</a><a href="./index.html">Contact</a><a href="../register/index.html">Start a project</a></div>
-  <div><h5>Legal</h5><a href="../terms/index.html">Terms</a><a href="../privacy/index.html">Privacy</a><a href="../verify-document/index.html">Verify document</a></div>
+  <div><h3>Product</h3><a href="../dashboard/index.html">Project Hub</a><a href="../../landing/pricing/index.html">Pricing</a><a href="../../landing/services/index.html">Services</a><a href="../portfolio/index.html">Portfolio</a></div>
+  <div><h3>Company</h3><a href="../about/index.html">About</a><a href="../blog/index.html">Blog</a><a href="./index.html">Contact</a><a href="../register/index.html">Start a project</a></div>
+  <div><h3>Legal</h3><a href="../terms/index.html">Terms</a><a href="../privacy/index.html">Privacy</a><a href="../verify-document/index.html">Verify document</a></div>
 </div>
 <div class="footer-base"><span>© 2026 Nestlancer. Made in India. All rights reserved.</span></div>
 </div></footer>
