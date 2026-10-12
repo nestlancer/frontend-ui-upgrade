@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 1050px !important; max-height: 1050px !important; overflow: hidden !important; }
-  .shell { height: 1050px !important; max-height: 1050px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 1050px !important; max-height: 1050px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Client workspace navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Client workspace navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -43,6 +37,7 @@
 </aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Files</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
@@ -108,25 +103,13 @@
 </div>
   </div>
 </div>
-<div class="actionbar"><span class="text-xs dim mr-auto">Unsaved changes stay local until you save</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (4)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Files · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/027-settings-files.webp</span></div><p>Vikram Shah. Files: storage 20.6 KB of 5 GB; All 2, Documents 1, Archives 1. Files: vikram-shah-export-portal-nestlan… (ZIP, 319 B, 10/5/2026); vikram-shah-export-portal-milesto… (PDF, 20.3 KB, 10/5/2026). Generated documents, B2B Textile Export Order Portal (request 01a10a2c, 8 documents): RECEIPT NL-RCPT-2026-000010, NL-RCPT-2026-000009, NL-RCPT-2026-000008; INVOICE NL-INV-2026-000016, NL-INV-2026-000015, NL-INV-2026-000014; CONTRACT NL-CTR-2026-000006 (locked); QUOTE NL-QTE-2026-000007.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Files · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/034-files-archive-preview-dialog.webp</span></div><p>Files preview dialog (Settings &gt; Files, Arjun Mehta): title arjun-mehta-marketplace-web-app-nestlancer-marketplace-v1.0.zip; Open and Close buttons; &quot;No in-app preview for this file type.&quot; with &quot;Open in new tab&quot; button.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Files · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/035-files-file-actions-menu.webp</span></div><p>Files (Vikram Shah) file action menu on vikram-shah-export-portal ZIP: Preview, Download; &quot;Shared with you · Nestlancer&quot;. Storage 20.6 KB / 5 GB. Generated documents block (B2B Textile Export Order Portal, request 01a10a2c, 8 documents) matches row 027.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Files · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/036-files-list-view.webp</span></div><p>Files list view (Arjun Mehta): Storage 41.1 KB / 5 GB; All 3, Documents 2, Archive 1. Files: arjun-mehta-marketplace-web-app-nestlancer-marketplace-v1.0.zip (474 B, READY, Preview, Download); arjun-mehta-marketplace-web-app-milestone-1-handoff.pdf (20.3 KB); arjun-mehta-e-commerce-platform-milestone-1-wireframes.pdf (20.3 KB). Generated documents list: AUDIT-P25-20261005-73dhk Project Fixture (2), AUDIT-P24-20261005-6y6fa-sent Request (1), AUDIT-P24-20261005-6v891-sent Request (1), AUDIT-P23-20261005-6rdsf Request to Quote Builder (1), AUDIT-P25-20261005-f611o Project Fixture (3), Other documents (not tied to a request, 1), AUDIT-P24-20261005-03ipf-sent Request (1), AUDIT-P23-20261005-zvc6j Request to Quote Builder (1), AUDIT-P25-20261005-uk6ic Project Fixture (2), AUDIT-P24-20261005-uc3d4 (1), AUDIT-P23-20261005-u7d0j (1), B2B Wholesale Ordering Portal (6 docs), Khandesh Spice D2C E-Commerce Store (5 docs).</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>archive archives arjun arjun-mehta-e-commerce-platform-milestone- arjun-mehta-marketplace-web-app-milestone- arjun-mehta-marketplace-web-app-nestlancer-marketplace-v audit-p block builder buttons close contract documents download e-commerce export fa-sent files fixture generated handoff in-app invoice ipf-sent khandesh locked matches mehta nestlancer nl-ctr- nl-inv- nl-qte- nl-rcpt- order ordering other portal preview project quote ready receipt request settings shared spice storage store textile title vikram vikram-shah-export-portal vikram-shah-export-portal-milesto vikram-shah-export-portal-nestlan wholesale wireframes 000006 000007 000008 000009 000010 000014 000015 000016 027 2026 20261005 319 474 611 891</p></div>
-  </div>
+<div class="actionbar"><span class="text-xs dim mr-auto">Unsaved changes stay local until you save</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">4 states recorded for this route — values as captured in the clients screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>settings/files</b><span class="ref-tag mono">027</span></div><ul class="ref-facts"><li>Vikram Shah. Files: storage 20.6 KB of 5 GB; All 2, Documents 1, Archives 1. Files: vikram-shah-export-portal-nestlan… (ZIP, 319 B, 10/5/2026)</li><li>vikram-shah-export-portal-milesto… (PDF, 20.3 KB, 10/5/2026). Generated documents, B2B Textile Export Order Portal (request 01a10a2c, 8 documents): RECEIPT NL-RCPT-2026-000010, NL-RCPT-2026-000009, NL-RCPT-2026-000008</li><li>INVOICE NL-INV-2026-000016, NL-INV-2026-000015, NL-INV-2026-000014; CONTRACT NL-CTR-2026-000006 (locked); QUOTE NL-QTE-2026-000007</li></ul></li><li class="ref-row"><div class="ref-head"><b>settings/files — Files — Archive preview dialog</b><span class="ref-tag mono">034</span></div><ul class="ref-facts"><li>Files preview dialog (Settings &gt; Files, Arjun Mehta): title arjun-mehta-marketplace-web-app-nestlancer-marketplace-v1.0.zip; Open and Close buttons</li><li>&quot;No in-app preview for this file type.&quot; with &quot;Open in new tab&quot; button</li></ul></li><li class="ref-row"><div class="ref-head"><b>settings/files — Files — File actions menu</b><span class="ref-tag mono">035</span></div><ul class="ref-facts"><li>Files (Vikram Shah) file action menu on vikram-shah-export-portal ZIP: Preview, Download; &quot;Shared with you</li><li>Nestlancer&quot;. Storage 20.6 KB / 5 GB. Generated documents block (B2B Textile Export Order Portal, request 01a10a2c, 8 documents) matches row 027</li></ul></li><li class="ref-row"><div class="ref-head"><b>settings/files — Files — List view</b><span class="ref-tag mono">036</span></div><ul class="ref-facts"><li>Files list view (Arjun Mehta): Storage 41.1 KB / 5 GB; All 3, Documents 2, Archive 1. Files: arjun-mehta-marketplace-web-app-nestlancer-marketplace-v1.0.zip (474 B, READY, Preview, Download)</li><li>arjun-mehta-marketplace-web-app-milestone-1-handoff.pdf (20.3 KB)</li><li>arjun-mehta-e-commerce-platform-milestone-1-wireframes.pdf (20.3 KB). Generated documents list: AUDIT-P25-20261005-73dhk Project Fixture (2), AUDIT-P24-20261005-6y6fa-sent Request (1), AUDIT-P24-20261005-6v891-sent Request (1), AUDIT-P23-20261005-6rdsf Request to Quote Builder (1), AUDIT-P25-20261005-f611o Project Fixture (3), Other documents (not tied to a request, 1), AUDIT-P24-20261005-03ipf-sent Request (1), AUDIT-P23-20261005-zvc6j Request to Quote Builder (1), AUDIT-P25-20261005-uk6ic Project Fixture (2), AUDIT-P24-20261005-uc3d4 (1), AUDIT-P23-20261005-u7d0j (1), B2B Wholesale Ordering Portal (6 docs), Khandesh Spice D2C E-Commerce Store (5 docs)</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>

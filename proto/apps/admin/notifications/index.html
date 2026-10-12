@@ -7,16 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  main#main, main.content { min-height: 1830px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -54,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Notifications</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -123,23 +120,23 @@
 <div class="grid g2 gap-5 mb-5">
   <section id="notif-report" class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Delivery report · By Channel</h2><div class="panel-sub">Total 1298 · Sent 962 · Read 30 · Failed 306 · Delivery Rate 74.1% · Read Rate 3.1%</div></div></div>
-    <div class="tbl-wrap"><table class="tbl tbl-compact">
+    <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
       <thead><tr><th>Channel</th><th style="text-align:right">Sent</th><th style="text-align:right">Read</th><th style="text-align:right">Failed</th></tr></thead>
       <tbody>
-        <tr><td class="mono font-semibold">IN_APP</td><td class="mono" style="text-align:right">962</td><td class="mono" style="text-align:right">30</td><td class="mono" style="text-align:right">0</td></tr>
-        <tr><td class="mono font-semibold">PUSH</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">306</td></tr>
-        <tr><td class="mono font-semibold">EMAIL</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">0</td><td class="mono" style="text-align:right">0</td></tr>
+        <tr><td data-label="Channel" class="mono font-semibold">IN_APP</td><td data-label="Sent" class="mono" style="text-align:right">962</td><td data-label="Read" class="mono" style="text-align:right">30</td><td data-label="Failed" class="mono" style="text-align:right">0</td></tr>
+        <tr><td data-label="Channel" class="mono font-semibold">PUSH</td><td data-label="Sent" class="mono" style="text-align:right">0</td><td data-label="Read" class="mono" style="text-align:right">0</td><td data-label="Failed" class="mono" style="text-align:right">306</td></tr>
+        <tr><td data-label="Channel" class="mono font-semibold">EMAIL</td><td data-label="Sent" class="mono" style="text-align:right">0</td><td data-label="Read" class="mono" style="text-align:right">0</td><td data-label="Failed" class="mono" style="text-align:right">0</td></tr>
       </tbody>
     </table></div>
   </section>
 
   <section id="notif-log" class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Platform log</h2><div class="panel-sub">Page 1 of 65 (1,298 total) — Per-user delivery events</div></div></div>
-    <div class="tbl-wrap"><table class="tbl tbl-compact">
+    <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
       <thead><tr><th>User UUID</th><th>Channel</th><th>Status</th><th>Event</th></tr></thead>
       <tbody>
-        <tr><td class="mono text-xs">01a10a2a-a99a-7578-825a-c7de8bce4d2b</td><td class="mono text-xs">IN_APP</td><td><span class="badge tone-success">SENT</span></td><td class="text-xs">Milestone completed: Production launch &amp; handover</td></tr>
-        <tr><td class="mono text-xs">01a10a2a-a99a-7578-825a-c7de8bce4d2b</td><td class="mono text-xs">PUSH</td><td><span class="badge tone-danger">FAILED</span></td><td class="text-xs">AUDIT-P25-20261005-75dhk Project Fixture · AUDIT-P23-20261005-7rdj Request · AUDIT-P23-SUPP-20261005-bgra Request · Account status updated · UAE per-client exports and handover lane</td></tr>
+        <tr><td data-label="User UUID" class="mono text-xs">01a10a2a-a99a-7578-825a-c7de8bce4d2b</td><td data-label="Channel" class="mono text-xs">IN_APP</td><td data-label="Status"><span class="badge tone-success">SENT</span></td><td data-label="Event" class="text-xs">Milestone completed: Production launch &amp; handover</td></tr>
+        <tr><td data-label="User UUID" class="mono text-xs">01a10a2a-a99a-7578-825a-c7de8bce4d2b</td><td data-label="Channel" class="mono text-xs">PUSH</td><td data-label="Status"><span class="badge tone-danger">FAILED</span></td><td data-label="Event" class="text-xs">AUDIT-P25-20261005-75dhk Project Fixture · AUDIT-P23-20261005-7rdj Request · AUDIT-P23-SUPP-20261005-bgra Request · Account status updated · UAE per-client exports and handover lane</td></tr>
       </tbody>
     </table></div>
   </section>
@@ -203,27 +200,72 @@
   <button class="btn btn-ghost btn-sm" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> <span>Prev</span></button>
   <span class="page-cur">1</span>
   <button class="btn btn-ghost btn-sm"><span>Next</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
-</div></div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (6)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body is-expanded">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/029-notifications.webp</span></div><p>Operator notifications (Riya Kapoor): total 576; unread 574. Tabs: My notifications, Send, Broadcast, Segment, Delivery report, Platform log. Filters: All, Unread, Quotes, Payments, Messages, Projects, Requests, Account. Entries include: data export ready (×5, yesterday); Revenue export ready; New contact inquiry (many); New request submitted by Arjun Mehta (AUDIT-A03-…, consulting); Project export ready AUDIT-P25-20261005-73dhk Project Fixture; Quote accepted by Arjun Mehta for AUDIT-P25-20261005-73dhk Project Fixture (4 days ago).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/030-notifications-broadcast.webp</span></div><p>Notifications &gt; Broadcast to all users: Title (required, placeholder &quot;e.g. Scheduled maintenance tonight&quot;); Message (required, placeholder &quot;Short message shown in every user&#x27;s inbox.&quot;); Broadcast to all users (disabled until filled).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/031-notifications-delivery-report.webp</span></div><p>Notifications &gt; Delivery report (operator): choose a recent notification or paste ID under Advanced; &quot;Select a recent notification above to load delivery channel results.&quot; Total 576, unread 574.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/032-notifications-platform-log.webp</span></div><p>Notifications &gt; Platform log: 576 total records, 24 pages. Columns Title, Message, Recipient, Type, Sent, Read. Mostly export.ready (admin@nestlancer.com ADMIN and arjun.mehta@nestlancer.com USER), contact.inquiry, request.submitted; read states No/Yes. Filters Audience, Type, Read state, Sort Newest first.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/033-notifications-segment.webp</span></div><p>Notifications &gt; Send to segment: Audience &quot;Clients only&quot; (USER role, not staff); Title (e.g. Quote ready for review); Message; button &quot;Send to clients only&quot; (disabled until filled).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Notifications · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/034-notifications-send.webp</span></div><p>Notifications &gt; Send to user: Recipient search by name or email; Title; Message; &quot;Send notification&quot; (disabled until filled).</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>above accepted account admin advanced arjun audience audit-a audit-p broadcast channel choose clients columns consulting contact delivery disabled email entries every export filled filters first fixture inbox include inquiry kapoor maintenance mehta message messages mostly nestlancer newest notification notifications operator pages paste payments placeholder platform project projects quote quotes ready recent recipient records report request requests required results revenue review scheduled segment select short shown staff state states submitted title tonight total unread until user&#x27;s users yesterday 20261005 574 576</p></div>
-  </div>
+</div></div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">6 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>notifications</b><span class="ref-tag mono">029</span></div><ul class="ref-facts"><li>Operator notifications (Riya Kapoor): total 576</li><li>unread 574. Tabs: My notifications, Send, Broadcast, Segment, Delivery report, Platform log. Filters: All, Unread, Quotes, Payments, Messages, Projects, Requests, Account. Entries include: data export ready (×5, yesterday)</li><li>Revenue export ready; New contact inquiry (many); New request submitted by Arjun Mehta (AUDIT-A03-…, consulting); Project export ready AUDIT-P25-20261005-73dhk Project Fixture</li><li>Quote accepted by Arjun Mehta for AUDIT-P25-20261005-73dhk Project Fixture (4 days ago)</li></ul></li><li class="ref-row"><div class="ref-head"><b>notifications · broadcast — notifications — Broadcast</b><span class="ref-tag mono">030</span></div><ul class="ref-facts"><li>Notifications &gt; Broadcast to all users: Title (required, placeholder &quot;e.g. Scheduled maintenance tonight&quot;); Message (required, placeholder &quot;Short message shown in every user&#x27;s inbox.&quot;)</li><li>Broadcast to all users (disabled until filled)</li></ul></li><li class="ref-row"><div class="ref-head"><b>notifications · delivery — notifications — Delivery report</b><span class="ref-tag mono">031</span></div><ul class="ref-facts"><li>Notifications &gt; Delivery report (operator): choose a recent notification or paste ID under Advanced</li><li>&quot;Select a recent notification above to load delivery channel results.&quot; Total 576, unread 574</li></ul></li><li class="ref-row"><div class="ref-head"><b>notifications · log — notifications — Platform log</b><span class="ref-tag mono">032</span></div><ul class="ref-facts"><li></li><li>Notifications &gt; Platform log: 576 total records, 24 pages. Columns Title, Message, Recipient, Type, Sent, Read. Mostly export.ready (admin@nestlancer.com ADMIN and arjun.mehta@nestlancer.com USER), contact.inquiry, request.submitted</li><li>read states No/Yes. Filters Audience, Type, Read state, Sort Newest first</li></ul></li><li class="ref-row"><div class="ref-head"><b>notifications · segment — notifications — Segment</b><span class="ref-tag mono">033</span></div><ul class="ref-facts"><li>Notifications &gt; Send to segment: Audience &quot;Clients only&quot; (USER role, not staff); Title (e.g. Quote ready for review); Message; button &quot;Send to clients only&quot; (disabled until filled)</li></ul></li><li class="ref-row"><div class="ref-head"><b>notifications · send — notifications — Send</b><span class="ref-tag mono">034</span></div><ul class="ref-facts"><li>Notifications &gt; Send to user: Recipient search by name or email; Title; Message; &quot;Send notification&quot; (disabled until filled)</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
+<!-- PROTO-STATES-NOTIFICATIONS -->
+<section id="states-notifications" class="mb-5" aria-labelledby="states-notifications-h"><div class="sec-head">
+    <div class="min-w-0">
+      <div class="sec-eyebrow">Operator states · 6 screens</div>
+      <h2 class="sec-title" id="states-notifications-h">Notification states</h2>
+      <p class="sec-sub">Send, broadcast, segment, delivery report and the platform delivery log — the five operator states behind the notifications centre.</p>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap"><span class="badge tone-neutral mono">029 my notifications</span><span class="badge tone-neutral mono">030 broadcast</span><span class="badge tone-neutral mono">031 delivery report</span><span class="badge tone-neutral mono">032 platform log</span><span class="badge tone-neutral mono">033 segment</span><span class="badge tone-neutral mono">034 send</span></div>
+  </div><div class="state-deck"><section class="dialog-surface" id="nt-send" aria-labelledby="nt-send-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="nt-send-h">Send notification</h3>
+      <div class="panel-sub">Queue a notification to one user — delivery is recorded in the platform log</div>
+    </div>
+    <span class="badge tone-neutral mono">034</span>
+  </div>
+  <div class="dialog-body"><div class="grid g2 gap-3"><div class="field"><label class="label" for="channel">Channel</label><select class="select" id="channel"><option selected>In-app</option><option>Email</option><option>Push</option></select></div><div class="field"><label class="label" for="nt-to">Recipient</label><input class="input mono" id="nt-to" value="arjun.mehta@nestlancer.com"></div></div><div class="mt-3"><div class="field"><label class="label" for="nt-title">Title <span class='req'>*</span></label><input class="input" id="nt-title" value="Action required on your quote"></div></div><div class="mt-3"><div class="field"><label class="label" for="nt-msg">Message</label><textarea class="textarea" id="nt-msg" rows="3">Your quote AUDIT-P23-SUPP-20261005-6grw is ready to review. Open the Work Hub to accept or request changes.</textarea></div></div><div class="mt-3"><label class="check"><input type="checkbox" checked> Send a copy by email</label></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Delivery rate 74.1% · read rate 3.1%</span><button class="btn btn-secondary btn-sm" type="button">Cancel</button><button class="btn btn-primary btn-sm" type="button">Send notification</button></div>
+</section><section class="dialog-surface" id="nt-broadcast" aria-labelledby="nt-broadcast-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="nt-broadcast-h">Broadcast to all users</h3>
+      <div class="panel-sub">Queue an in-app notification for every active user. Use sparingly for platform-wide announcements.</div>
+    </div>
+    <span class="badge tone-neutral mono">030</span>
+  </div>
+  <div class="dialog-body"><div class="field"><label class="label" for="nt-b-title">Title <span class='req'>*</span></label><input class="input" id="nt-b-title" value="Scheduled maintenance tonight"></div><div class="mt-3"><div class="field"><label class="label" for="nt-b-msg">Message</label><textarea class="textarea" id="nt-b-msg" rows="3">Short message shown in every user inbox — the platform is read-only between 11:30 PM and 12:15 AM IST.</textarea></div></div><div class="mt-3"><div class="note"><span class="text-xs">962 sent · 30 read · 306 failed across the last broadcast.</span></div></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Reaches every active account</span><button class="btn btn-secondary btn-sm" type="button">Cancel</button><button class="btn btn-primary btn-sm" type="button">Broadcast to all users</button></div>
+</section><section class="dialog-surface" id="nt-segment" aria-labelledby="nt-segment-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="nt-segment-h">Segment broadcast</h3>
+      <div class="panel-sub">Target a specific cohort of users</div>
+    </div>
+    <span class="badge tone-neutral mono">033</span>
+  </div>
+  <div class="dialog-body"><div class="field"><label class="label" for="segment">Segment</label><select class="select" id="segment"><option>All users</option><option>Active clients</option><option selected>Users with pending quotes</option><option>Users with overdue payments</option><option>Administrators</option></select></div><div class="mt-3"><div class="field"><label class="label" for="nt-s-title">Title <span class='req'>*</span></label><input class="input" id="nt-s-title" value="Action required on your quote"></div></div><div class="mt-3"><div class="field"><label class="label" for="nt-s-msg">Message</label><textarea class="textarea" id="nt-s-msg" rows="3">Explain what changed and what the user should do next.</textarea></div></div><div class="mt-3"><dl class="kv"><dt>Matched users</dt><dd>142</dd><dt>Channels</dt><dd>In-app + email</dd></dl></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Segment preview recalculates on change</span><button class="btn btn-secondary btn-sm" type="button">Cancel</button><button class="btn btn-primary btn-sm" type="button">Send to segment</button></div>
+</section><section class="dialog-surface" id="nt-report" aria-labelledby="nt-report-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="nt-report-h">Delivery report</h3>
+      <div class="panel-sub">1298 platform notifications · delivery 74.1% · read 3.1%</div>
+    </div>
+    <span class="badge tone-neutral mono">031</span>
+  </div>
+  <div class="dialog-body"><div class="kpi-grid"><div class="kpi"><div class="k-label">Sent</div><div class="k-value">962</div><div class="k-delta ">in-app queue</div></div><div class="kpi"><div class="k-label">Read</div><div class="k-value">30</div><div class="k-delta ">3.1% read rate</div></div><div class="kpi"><div class="k-label">Failed</div><div class="k-value">306</div><div class="k-delta down">retry scheduled</div></div><div class="kpi"><div class="k-label">Delivery rate</div><div class="k-value">74.1%</div><div class="k-delta up">last 30 days</div></div></div><div class="mt-3"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th>Channel</th><th>Sent</th><th>Read</th><th>Failed</th></tr></thead><tbody><tr><td data-label="Channel" class="min-w-0">In-app</td><td data-label="Sent" class="min-w-0 mono">962</td><td data-label="Read" class="min-w-0 mono">30</td><td data-label="Failed" class="min-w-0 mono">306</td></tr><tr><td data-label="Channel" class="min-w-0">Email</td><td data-label="Sent" class="min-w-0 mono">268</td><td data-label="Read" class="min-w-0 mono">12</td><td data-label="Failed" class="min-w-0 mono">41</td></tr><tr><td data-label="Channel" class="min-w-0">Push</td><td data-label="Sent" class="min-w-0 mono">68</td><td data-label="Read" class="min-w-0 mono">1</td><td data-label="Failed" class="min-w-0 mono">33</td></tr></tbody></table></div></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Page 1 of 29 (576 items)</span></div>
+</section><section class="dialog-surface" id="nt-log" aria-labelledby="nt-log-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="nt-log-h">Platform log</h3>
+      <div class="panel-sub">Every delivery attempt with its provider response</div>
+    </div>
+    <span class="badge tone-neutral mono">032</span>
+  </div>
+  <div class="dialog-body"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th>When</th><th>Channel</th><th>Recipient</th><th>Result</th></tr></thead><tbody><tr><td data-label="When" class="min-w-0 mono">Oct 10, 2026 7:26 AM</td><td data-label="Channel" class="min-w-0">in-app</td><td data-label="Recipient" class="min-w-0">arjun.mehta@nestlancer.com</td><td data-label="Result" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>delivered</span></td></tr><tr><td data-label="When" class="min-w-0 mono">Oct 10, 2026 7:24 AM</td><td data-label="Channel" class="min-w-0">push</td><td data-label="Recipient" class="min-w-0">karthik.menon@nestlancer.com</td><td data-label="Result" class="min-w-0"><span class="badge tone-danger"><span class="dot"></span>failed · no token</span></td></tr><tr><td data-label="When" class="min-w-0 mono">Oct 10, 2026 7:19 AM</td><td data-label="Channel" class="min-w-0">email</td><td data-label="Recipient" class="min-w-0">priya.nair@nestlancer.com</td><td data-label="Result" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>delivered</span></td></tr><tr><td data-label="When" class="min-w-0 mono">Oct 10, 2026 7:11 AM</td><td data-label="Channel" class="min-w-0">in-app</td><td data-label="Recipient" class="min-w-0">samira.patel@nestlancer.com</td><td data-label="Result" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>delivered</span></td></tr></tbody></table></div></div>
+  
+</section></div></section>
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

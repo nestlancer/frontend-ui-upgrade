@@ -7,16 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  main#main, main.content { min-height: 1280px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -54,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Edit post</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -198,24 +195,13 @@ The team inherited single pipeline building every service on each commit. The tr
 </div>
     <button class="btn btn-danger w-full"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></svg> Unpublish &amp; archive</button>
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (3)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body is-expanded">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Edit post · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/067-blog-editor-preview-mode.webp</span></div><p>Blog &gt; Edit post, Preview mode: post &quot;Cutting Deploy Time from 45 Minutes to Five&quot; (Case Studies, 2 min read, Nestlancer), unsaved draft, not public, responsive preview. Renders headings, bullets, a code sketch (BlogGatewayController), results and lesson, tags #NestJS #Node.js. Settings below: Category Case Studies, slug cutting-deploy-time-from-45-minutes-to-five, Tags NestJS, Node.js, Status Published, meta description 80 chars, 383 words. Save changes / Cancel.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Edit post · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/068-blog-editor-split-mode.webp</span></div><p>Blog &gt; Edit post, Split mode: left editor shows Title, Excerpt, Markdown content (raw **bold** and ## headings); right instant preview renders the same post. Preview matches markdown rendering; Save changes shown in header and footer.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Edit post · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/069-blog-editor-write-mode.webp</span></div><p>Blog &gt; Edit post, Write mode: &quot;Netflix: Seven Years from Monolith to Microservices&quot;; category Case Studies; slug netflix-seven-years-from-monolith-to-microservices; tags NestJS, Node.js; Status Published; excerpt &quot;Lessons from incremental AWS migration, chaos engineering, and tooling born from production pain.&quot;; meta description 97/160; 411 words, 3 min read. Content begins with the Markdown body (headings ## Where we started, ## Architecture before).</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>architecture begins below bloggatewaycontroller bullets cancel category changes chaos chars content cutting cutting-deploy-time-from- deploy description draft editor engineering excerpt footer header headings incremental instant lesson lessons markdown matches microservices migration minutes minutes-to-five monolith nestjs nestlancer netflix netflix-seven-years-from-monolith-to-microservices preview production public published rendering renders responsive results right settings seven shown shows sketch split started studies title tooling unsaved words write years 160 383 411</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">3 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>content/posts/…/edit — Blog editor — Preview mode</b><span class="ref-tag mono">067</span></div><ul class="ref-facts"><li></li><li>Blog &gt; Edit post, Preview mode: post &quot;Cutting Deploy Time from 45 Minutes to Five&quot; (Case Studies, 2 min read, Nestlancer), unsaved draft, not public, responsive preview. Renders headings, bullets, a code sketch (BlogGatewayController), results and lesson, tags #NestJS #Node.js. Settings below: Category Case Studies, slug cutting-deploy-time-from-45-minutes-to-five, Tags NestJS, Node.js, Status Published, meta description 80 chars, 383 words. Save changes / Cancel</li></ul></li><li class="ref-row"><div class="ref-head"><b>content/posts/…/edit — Blog editor — Split mode</b><span class="ref-tag mono">068</span></div><ul class="ref-facts"><li>Blog &gt; Edit post, Split mode: left editor shows Title, Excerpt, Markdown content (raw **bold** and ## headings)</li><li>right instant preview renders the same post. Preview matches markdown rendering; Save changes shown in header and footer</li></ul></li><li class="ref-row"><div class="ref-head"><b>content/posts/…/edit — Blog editor — Write mode</b><span class="ref-tag mono">069</span></div><ul class="ref-facts"><li>Blog &gt; Edit post, Write mode: &quot;Netflix: Seven Years from Monolith to Microservices&quot;; category Case Studies; slug netflix-seven-years-from-monolith-to-microservices; tags NestJS, Node.js</li><li>Status Published; excerpt &quot;Lessons from incremental AWS migration, chaos engineering, and tooling born from production pain.&quot;; meta description 97/160</li><li>411 words, 3 min read. Content begins with the Markdown body (headings ## Where we started, ## Architecture before)</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

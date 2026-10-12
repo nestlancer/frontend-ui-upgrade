@@ -7,16 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  main#main, main.content { min-height: 1330px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -54,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Portfolio</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -141,23 +138,13 @@
       <div class="text-xs dim mt-1 mono">0 views · Case study hidden</div>
     </div>
   </a>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body is-expanded">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Portfolio · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/048-portfolio-listing.webp</span></div><p>Content &gt; Portfolio: On this page 8; Published 8; Draft 0; Featured 4. Categories: Web Development, Mobile App, UI/UX Design, E-Commerce (Remove / Add). Analytics: total views 11; likes 0; top B2B Client Portal UX 4 views, others 1 each (SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign). Items in order: B2B Client Portal UX, Fitness Tracking App, Marketplace Redesign, Brand Identity System, Fintech Payments Hub, SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard — all PUBLISHED, Oct 2026, updated 10/8/2026. Actions Analytics, Edit, Unpublish, Delete.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Portfolio · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/082-portfolio-item-analytics-panel.webp</span></div><p>Content &gt; Portfolio &gt; Item analytics panel: total views 11, total likes 0, top item 8. Per-item views: B2B Client Portal UX 4; SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign 1 each; likes 0. &quot;No engagement data yet.&quot; (second crop) Manage items table: all 8 PUBLISHED, Oct 2026, updated 10/8/2026; Analytics/Edit/Unpublish/Delete actions; live timeline preview lists the 8 items.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>analytics brand categories client content dashboard delete design development draft e-commerce engagement featured fintech fitness healthtech identity items likes lists manage marketplace mobile order others panel payments per-item platform portal portfolio preview published redesign remove second system timeline total tracking unpublish updated views 2026</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">2 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>portfolio — Portfolio listing</b><span class="ref-tag mono">048</span></div><ul class="ref-facts"><li>Content &gt; Portfolio: On this page 8; Published 8; Draft 0; Featured 4. Categories: Web Development, Mobile App, UI/UX Design, E-Commerce (Remove / Add). Analytics: total views 11; likes 0</li><li>top B2B Client Portal UX 4 views, others 1 each (SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign). Items in order: B2B Client Portal UX, Fitness Tracking App, Marketplace Redesign, Brand Identity System, Fintech Payments Hub, SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard — all PUBLISHED, Oct 2026, updated 10/8/2026. Actions Analytics, Edit, Unpublish, Delete</li></ul></li><li class="ref-row"><div class="ref-head"><b>portfolio — Portfolio — Item analytics panel</b><span class="ref-tag mono">082</span></div><ul class="ref-facts"><li>Content &gt; Portfolio &gt; Item analytics panel: total views 11, total likes 0, top item 8. Per-item views: B2B Client Portal UX 4</li><li>SaaS Analytics Platform, E-Commerce Mobile App, HealthTech Dashboard, Fintech Payments Hub, Brand Identity System, Fitness Tracking App, Marketplace Redesign 1 each</li><li>likes 0. &quot;No engagement data yet.&quot; (second crop) Manage items table: all 8 PUBLISHED, Oct 2026, updated 10/8/2026; Analytics/Edit/Unpublish/Delete actions</li><li>live timeline preview lists the 8 items</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

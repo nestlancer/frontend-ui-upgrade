@@ -7,25 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-@media (min-width: 961px) {
-  .sidebar { background: #FAFDFC !important; border-color: #F0F5F4 !important; }
-  .sidebar .sb-item:not(.active) { color: #98A6A3 !important; }
-  .sidebar .sb-label { color: #B0BDBA !important; }
-  .panel, .stats, .stat, .chip { border-color: #EFF4F3 !important; box-shadow: none !important; }
-  .cover { background: #F2F7F6 !important; color: #3D4A46 !important; border: 1px solid #E6EEEE !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="./index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -63,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="./index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Command center</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -148,17 +136,17 @@
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent requests</h2><div class="panel-sub">Newest inbound work</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../requests/index.html">View all →</a></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl  ">
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th>Request</th><th>Customer</th><th>Subject</th><th>Status</th></tr></thead>
-<tbody><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa4…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P23-LINE-20261005-7r0l Request</td><td><span class="badge tone-warning">Submitted</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa3…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P23-SUPP-20261005-6grw Request</td><td><span class="badge tone-warning">Submitted</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f87…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P25-20261005-73dhk Project Fixture</td><td><span class="badge tone-info">Converted To Project</span></td></tr><tr><td><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f84…</span></td><td><b>Arjun Mehta</b></td><td>AUDIT-P24-20261005-6y6fa-draft Request</td><td><span class="badge tone-warning">Submitted</span></td></tr></tbody></table></div></div>
+<tbody><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa4…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P23-LINE-20261005-7r0l Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa3…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P23-SUPP-20261005-6grw Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f87…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P25-20261005-73dhk Project Fixture</td><td data-label="Status"><span class="badge tone-info">Converted To Project</span></td></tr><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f84…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P24-20261005-6y6fa-draft Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr></tbody></table></div></div>
   
 </div>
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent payments</h2><div class="panel-sub">16 pending · ₹2,60,790.00</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../payments/index.html">View all →</a></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl  ">
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th>Client</th><th>Project</th><th style="text-align:right">Amount</th><th>Paid</th></tr></thead>
-<tbody><tr><td><b>Sandeep Chopra</b></td><td>GPS Fleet Tracking Portal</td><td style="text-align:right"><span class="mono">₹21,600.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td><b>Karthik Menon</b></td><td>UPI Switch Integration Layer</td><td style="text-align:right"><span class="mono">₹36,000.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td><b>Pooja Kulkarni</b></td><td>Multi-Branch Clinic Booking</td><td style="text-align:right"><span class="mono">₹19,500.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td><b>Pooja Kulkarni</b></td><td>Multi-Branch Clinic Booking</td><td style="text-align:right"><span class="mono">₹26,000.00</span></td><td><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr></tbody></table></div></div>
+<tbody><tr><td data-label="Client"><b>Sandeep Chopra</b></td><td data-label="Project">GPS Fleet Tracking Portal</td><td data-label="Amount" style="text-align:right"><span class="mono">₹21,600.00</span></td><td data-label="Paid"><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td data-label="Client"><b>Karthik Menon</b></td><td data-label="Project">UPI Switch Integration Layer</td><td data-label="Amount" style="text-align:right"><span class="mono">₹36,000.00</span></td><td data-label="Paid"><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td data-label="Client"><b>Pooja Kulkarni</b></td><td data-label="Project">Multi-Branch Clinic Booking</td><td data-label="Amount" style="text-align:right"><span class="mono">₹19,500.00</span></td><td data-label="Paid"><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr><tr><td data-label="Client"><b>Pooja Kulkarni</b></td><td data-label="Project">Multi-Branch Clinic Booking</td><td data-label="Amount" style="text-align:right"><span class="mono">₹26,000.00</span></td><td data-label="Paid"><span class="text-xs dim">Oct 5, 2026 AM</span></td></tr></tbody></table></div></div>
   
 </div>
 </div>
@@ -178,23 +166,13 @@
     <a class="panel-row" href="../payments/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><b style="font-size:13px" class="flex-1">Pending settlements</b><span class="mono font-semibold">16</span></a>
     <a class="panel-row" href="../messages/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><b style="font-size:13px" class="flex-1">Message center</b><span class="mono font-semibold">→</span></a>
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (2)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Command center · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/015-dashboard.webp</span></div><p>Operator Command center (Riya Kapoor), 30d window to Oct 10, 2026. Needs attention: pending requests 11; open quotes 7; pending pay 16; flagged msgs 0; contact new 17; alerts 0; system healthy. Revenue (month) ₹7,08,160.00 (₹2,60,790.00 awaiting). Total users 34; active projects 4; completed projects 10; pending requests 11. Project mix: In Progress 4 (24%), Pending Payment 3 (18%), Completed 10 (59%). Recent payments: Sandeep Chopra, GPS Fleet Tracking Portal ₹21,600.00; Karthik Menon, UPI Switch Integration Layer ₹36,000.00; Pooja Kulkarni, Multi-Branch Clinic Booking ₹19,500.00 / ₹26,000.00 / ₹19,500.00. Moderation queues: flagged 0; new contact mail 17; pending settlements 16.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Command center · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/072-global-search-admin-dialog.webp</span></div><p>Global search (command palette, ⌘K) opened over dashboard: &quot;Search or jump to…&quot;. Groups: Operations (Dashboard, Pipelines, Pipeline · User hub, Pipeline · Project hub, Inquiries, Requests, Quotes, Projects, Users, Payments, Settlement accounts, Company legal identity, Messages, Moderation, Analytics); Content (Blog, Portfolio, Media Library); System (System Config, Webhooks, Audit Logs); Quick actions (Create blog post, New portfolio item, Message client, New group chat, Switch to dark mode). Keyboard hints navigate / select / close.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>accounts active alerts analytics attention audit awaiting booking center chopra client clinic close command company completed config contact content create dashboard flagged fleet global group groups healthy hints identity inquiries integration kapoor karthik keyboard kulkarni layer legal library media menon message messages moderation month multi-branch navigate needs opened operations operator palette payment payments pending pipeline pipelines pooja portal portfolio progress project projects queues quick quotes recent requests revenue sandeep select settlement settlements switch system total tracking users webhooks window 19500.00 2026 21600.00 26000.00 260790.00 36000.00 708160.00</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">2 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>dashboard</b><span class="ref-tag mono">015</span></div><ul class="ref-facts"><li>Operator Command center (Riya Kapoor), 30d window to Oct 10, 2026. Needs attention: pending requests 11; open quotes 7; pending pay 16; flagged msgs 0; contact new 17; alerts 0</li><li>system healthy. Revenue (month) ₹7,08,160.00 (₹2,60,790.00 awaiting). Total users 34; active projects 4; completed projects 10</li><li>pending requests 11. Project mix: In Progress 4 (24%), Pending Payment 3 (18%), Completed 10 (59%). Recent payments: Sandeep Chopra, GPS Fleet Tracking Portal ₹21,600.00</li><li>Karthik Menon, UPI Switch Integration Layer ₹36,000.00; Pooja Kulkarni, Multi-Branch Clinic Booking ₹19,500.00 / ₹26,000.00 / ₹19,500.00. Moderation queues: flagged 0; new contact mail 17</li><li>pending settlements 16</li></ul></li><li class="ref-row"><div class="ref-head"><b>dashboard — Global search — Admin dialog</b><span class="ref-tag mono">072</span></div><ul class="ref-facts"><li>Global search (command palette, ⌘K) opened over dashboard: &quot;Search or jump to…&quot;. Groups: Operations (Dashboard, Pipelines, Pipeline; User hub, Pipeline</li><li>Project hub, Inquiries, Requests, Quotes, Projects, Users, Payments, Settlement accounts, Company legal identity, Messages, Moderation, Analytics); Content (Blog, Portfolio, Media Library)</li><li>System (System Config, Webhooks, Audit Logs)</li><li>Quick actions (Create blog post, New portfolio item, Message client, New group chat, Switch to dark mode). Keyboard hints navigate / select / close</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

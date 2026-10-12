@@ -7,36 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-  main#main, main.content { padding: 40px 56px !important; max-width: 1140px !important; }
-  .phead, .flex.items-start.justify-between { margin-bottom: 36px !important; }
-  .stats { margin-top: 32px !important; margin-bottom: 48px !important; }
-  .stat { padding: 22px 16px !important; min-width: 0 !important; }
-  .stat-value { font-size: 13.5px !important; font-weight: 600 !important; overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important; }
-  .tabs { margin-top: 32px !important; margin-bottom: 44px !important; }
-  .panel { margin-bottom: 48px !important; border-color: #EEF3F2 !important; box-shadow: none !important; }
-  .panel-head { padding: 24px 28px !important; }
-  .panel-body { padding: 28px !important; min-height: 360px !important; }
-  .sidebar { background: #FAFDFC !important; border-color: #EEF3F2 !important; }
-  .sidebar .sb-item:not(.active) { color: #BDC9C6 !important; }
-  .sidebar .sb-item:not(.active) svg { opacity: 0.25 !important; }
-  .sidebar .sb-label, .sidebar .sb-foot .dim { color: #C8D3D0 !important; }
-  .psub, .dim, .muted, .stat-label, .stat-note, .panel-sub, .eyebrow { color: #C2CECB !important; }
-  .btn-primary { background: #EAF7F4 !important; color: #0B7A71 !important; border: 1px solid #DCEEE9 !important; box-shadow: none !important; }
-  .btn-secondary { color: #8A9995 !important; border-color: #EEF3F2 !important; }
-  .fab-btn { background: #FAFDFC !important; color: #9BA8A5 !important; border: 1px solid #EEF3F2 !important; box-shadow: none !important; }
-  .avatar, .bdg, .sb-count { background: #EEF6F4 !important; color: #687571 !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -74,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Project ops</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -112,11 +89,11 @@
 </div>
 
 <div class="tabs mb-5">
-  <a class="tab active" href="#" data-tab-target="proj-overview">Overview</a>
-  <a class="tab" href="#" data-tab-target="proj-milestones">Milestones &amp; files</a>
-  <a class="tab" href="#" data-tab-target="proj-progress">Daily progress</a>
-  <a class="tab" href="#" data-tab-target="proj-analytics">Analytics</a>
-  <a class="tab" href="#" data-tab-target="proj-dialogs">Operator dialogs</a>
+  <a class="tab active" href="#proj-overview" data-tab-target="proj-overview">Overview</a>
+  <a class="tab" href="#proj-milestones" data-tab-target="proj-milestones">Milestones &amp; files</a>
+  <a class="tab" href="#proj-progress" data-tab-target="proj-progress">Daily progress</a>
+  <a class="tab" href="#proj-analytics" data-tab-target="proj-analytics">Analytics</a>
+  <a class="tab" href="#proj-dialogs" data-tab-target="proj-dialogs">Operator dialogs <span class="count">10</span></a>
 </div>
 
 <section id="proj-overview" class="grid g2 gap-5 mb-5">
@@ -145,15 +122,15 @@
 
 <section id="proj-milestones" class="panel mb-5">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Milestones &amp; files · Milestone timeline (7) &amp; Deliverables (1)</h2><div class="panel-sub">Khandesh Spice D2C E-Commerce Store — Milestone 1 Specification &amp; Handoff (6 milestones · ₹45,000.00)</div></div><div class="flex gap-2"><button class="btn btn-secondary btn-xs" type="button">Upload deliverable</button><button class="btn btn-primary btn-xs" type="button">Add milestone</button></div></div>
-  <div class="tbl-wrap"><table class="tbl tbl-compact">
+  <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
     <thead><tr><th>Milestone / Deliverable</th><th>Schedule / Date</th><th>Amount / Details</th><th>Status</th></tr></thead>
     <tbody>
-      <tr><td><b>Deposit</b></td><td class="mono text-xs">10/5/2026</td><td class="mono font-semibold">₹13,500</td><td><span class="badge tone-success">Paid</span></td></tr>
-      <tr><td><b>Mid-project payment</b></td><td class="mono text-xs">11/4/2026</td><td class="mono font-semibold">₹18,000</td><td><span class="badge tone-warning">Pending</span></td></tr>
-      <tr><td><b>Final payment</b></td><td class="mono text-xs">12/4/2026</td><td class="mono font-semibold">₹13,500</td><td><span class="badge tone-warning">Pending</span></td></tr>
-      <tr><td><b>Project delivery</b> · <b>Design &amp; Architecture</b> (Oct 19, 2026) · <b>Storefront &amp; Checkout</b> (Nov 9, 2026) · <b>QA, SEO &amp; Launch</b> (Nov 24, 2026)</td><td class="mono text-xs">10/5/2027</td><td class="text-xs">5/7 completed</td><td><span class="badge tone-success">Completed · Approved</span></td></tr>
-      <tr><td><b>Deliverable:</b> Milestone 1 wireframes — homepage, PLP, PDP, cart, checkout (Figma export)</td><td class="mono text-xs">specification.pdf (16 B)</td><td class="text-xs">Khandesh Spice D2C E-Commerce Store — Milestone 1 Specification &amp; Handoff</td><td><span class="badge tone-success">Approved</span></td></tr>
-      <tr><td><b>Time entries (4h logged):</b> 2026-10-03</td><td class="mono text-xs">4h billable</td><td class="text-xs">Razorpay test-mode integration, cart-to-order state machine, and GST invoice line breakdown</td><td><span class="badge tone-info">Logged</span></td></tr>
+      <tr><td data-label="Milestone / Deliverable"><b>Deposit</b></td><td data-label="Schedule / Date" class="mono text-xs">10/5/2026</td><td data-label="Amount / Details" class="mono font-semibold">₹13,500</td><td data-label="Status"><span class="badge tone-success">Paid</span></td></tr>
+      <tr><td data-label="Milestone / Deliverable"><b>Mid-project payment</b></td><td data-label="Schedule / Date" class="mono text-xs">11/4/2026</td><td data-label="Amount / Details" class="mono font-semibold">₹18,000</td><td data-label="Status"><span class="badge tone-warning">Pending</span></td></tr>
+      <tr><td data-label="Milestone / Deliverable"><b>Final payment</b></td><td data-label="Schedule / Date" class="mono text-xs">12/4/2026</td><td data-label="Amount / Details" class="mono font-semibold">₹13,500</td><td data-label="Status"><span class="badge tone-warning">Pending</span></td></tr>
+      <tr><td data-label="Milestone / Deliverable"><b>Project delivery</b> · <b>Design &amp; Architecture</b> (Oct 19, 2026) · <b>Storefront &amp; Checkout</b> (Nov 9, 2026) · <b>QA, SEO &amp; Launch</b> (Nov 24, 2026)</td><td data-label="Schedule / Date" class="mono text-xs">10/5/2027</td><td data-label="Amount / Details" class="text-xs">5/7 completed</td><td data-label="Status"><span class="badge tone-success">Completed · Approved</span></td></tr>
+      <tr><td data-label="Milestone / Deliverable"><b>Deliverable:</b> Milestone 1 wireframes — homepage, PLP, PDP, cart, checkout (Figma export)</td><td data-label="Schedule / Date" class="mono text-xs">specification.pdf (16 B)</td><td data-label="Amount / Details" class="text-xs">Khandesh Spice D2C E-Commerce Store — Milestone 1 Specification &amp; Handoff</td><td data-label="Status"><span class="badge tone-success">Approved</span></td></tr>
+      <tr><td data-label="Milestone / Deliverable"><b>Time entries (4h logged):</b> 2026-10-03</td><td data-label="Schedule / Date" class="mono text-xs">4h billable</td><td data-label="Amount / Details" class="text-xs">Razorpay test-mode integration, cart-to-order state machine, and GST invoice line breakdown</td><td data-label="Status"><span class="badge tone-info">Logged</span></td></tr>
     </tbody>
   </table></div>
 </section>
@@ -181,22 +158,445 @@
   </section>
 </div>
 
-<section id="proj-dialogs" class="state-deck mb-5">
-  <div class="dialog-surface">
-    <div class="dialog-head"><h3 class="panel-title">Add milestone · Upload deliverable</h3></div>
-    <div class="dialog-body text-xs">
-      <div class="mb-2"><b>Add milestone:</b> Schedule a new payment or delivery phase · Name (<span class="mono">e.g. Kickoff / Design / Launch</span>) · Start <span class="mono">10/10/2026</span> · End <span class="mono">10/24/2026</span> · Amount (₹) <span class="mono">5000</span> · <b>Create milestone</b></div>
-      <div><b>Upload deliverable:</b> Selected file <span class="mono">specification.pdf (16 B)</span> · Deliverable note (<span class="mono">e.g. Staging build v1.2 — ready for client review</span>) · <b>Upload &amp; attach</b></div>
+<section id="proj-dialogs" class="mb-5">
+  <div class="sec-head">
+    <div>
+      <div class="sec-eyebrow">Operator states · 10 captured screens</div>
+      <h2 class="sec-title">Project delivery dialogs</h2>
+      <p class="sec-sub">Every modal, preview and log form an operator touches while running this delivery. Static surfaces, real field values and real disabled logic — sign off the state, not just the page.</p>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap">
+      <span class="badge tone-neutral mono">083 add milestone</span>
+      <span class="badge tone-neutral mono">085 upload deliverable</span>
+      <span class="badge tone-neutral mono">089 daily progress</span>
+      <span class="badge tone-neutral mono">091 update status</span>
     </div>
   </div>
-  <div class="dialog-surface">
-    <div class="dialog-head"><h3 class="panel-title">Update status · Change operator · Use as template · Archive</h3></div>
-    <div class="dialog-body text-xs">
-      <div class="mb-1"><b>Update project status:</b> In Progress / On Hold / Under Review / Completed / Revision Requested / Cancelled + Reason / note</div>
-      <div class="mb-1"><b>Change operator:</b> Current: Riya Kapoor · <span class="mono">admin@nestlancer.com</span> (Role ADMIN)</div>
-      <div class="mb-1"><b>Use as template:</b> Template name <span class="mono">Khandesh Spice D2C E-Commerce Store (Copy)</span> · Category <span class="mono">webDevelopment</span> · Client ID</div>
-      <div><b>Archive confirmation:</b> Confirm archiving project to read-only state.</div>
-    </div>
+
+  <div class="state-deck">
+
+    <!-- 083 · Add milestone -->
+    <section class="dialog-surface" id="state-add-milestone" aria-labelledby="dlg-add-ms">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-add-ms">Add milestone</h3>
+          <div class="panel-sub">Schedule a delivery phase and its payment</div>
+        </div>
+        <span class="badge tone-neutral mono">083</span>
+      </div>
+      <div class="dialog-body">
+        <div class="field mb-3">
+          <label class="label" for="ms-name">Name <span class="req">*</span></label>
+          <input class="input" id="ms-name" placeholder="e.g. Kickoff / Design / Launch">
+        </div>
+        <div class="grid g2 gap-3">
+          <div class="field">
+            <label class="label" for="ms-start">Start</label>
+            <input class="input mono" id="ms-start" value="10/10/2026">
+          </div>
+          <div class="field">
+            <label class="label" for="ms-end">End</label>
+            <input class="input mono" id="ms-end" value="10/24/2026">
+          </div>
+        </div>
+        <div class="field mt-3">
+          <label class="label" for="ms-amt">Amount (₹)</label>
+          <input class="input mono" id="ms-amt" placeholder="5000">
+          <div class="hint">Zero-value milestones are allowed for delivery-only phases.</div>
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <span class="text-xs dim mr-auto">Create milestone unlocks once a name and amount are entered.</span>
+        <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+        <button class="btn btn-primary btn-sm" type="button" aria-disabled="true" disabled>Create milestone</button>
+      </div>
+    </section>
+
+    <!-- 085 · Upload deliverable -->
+    <section class="dialog-surface" id="state-upload-deliverable" aria-labelledby="dlg-up-del">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-up-del">Upload deliverable</h3>
+          <div class="panel-sub">Attach files to a milestone and notify the client</div>
+        </div>
+        <span class="badge tone-neutral mono">085</span>
+      </div>
+      <div class="dialog-body">
+        <div class="field mb-3">
+          <label class="label" for="dl-milestone">Milestone</label>
+          <select class="select" id="dl-milestone">
+            <option selected>Deposit</option>
+            <option>Mid-project payment</option>
+            <option>Final payment</option>
+            <option>Project delivery</option>
+            <option>Design &amp; Architecture</option>
+            <option>Storefront &amp; Checkout</option>
+            <option>QA, SEO &amp; Launch</option>
+          </select>
+        </div>
+        <div class="field mb-3">
+          <label class="label" for="dl-files">Files</label>
+          <div class="dropzone" style="padding:16px">
+            <b>Choose files or drop them here</b>
+            <span class="text-xs">Multiple files supported · PDF, ZIP, PNG up to 25 MB each</span>
+            <input id="dl-files" type="file" multiple tabindex="-1" aria-hidden="true">
+            <button class="btn btn-secondary btn-sm dz-pick" type="button" onclick="document.getElementById('dl-files').click()">Choose files</button>
+          </div>
+          <div class="hint">Or paste media UUIDs (comma-separated) to attach items already in the media library.</div>
+          <input class="input mono mt-2" placeholder="01a10a2c-2d0e-…, 01a10a2c-5d1c-…" aria-label="Media UUIDs, comma separated">
+        </div>
+        <div class="field">
+          <label class="label" for="dl-desc">Description</label>
+          <textarea class="textarea" id="dl-desc" rows="2" placeholder="Optional — what changed in this upload?"></textarea>
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <span class="text-xs dim mr-auto">Upload deliverable stays disabled until a file or media UUID is provided.</span>
+        <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+        <button class="btn btn-primary btn-sm" type="button" aria-disabled="true" disabled>Upload deliverable</button>
+      </div>
+    </section>
+
+    <!-- 084 / 090 · Deliverable preview -->
+    <section class="dialog-surface" id="state-deliverable-preview" aria-labelledby="dlg-preview">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-preview">Deliverable preview</h3>
+          <div class="panel-sub">Milestone 1 · Design &amp; Architecture</div>
+        </div>
+        <span class="badge tone-success"><span class="dot"></span>Approved</span>
+      </div>
+      <div class="dialog-body">
+        <p class="text-sm" style="font-weight:560">Milestone 1 wireframes — homepage, PLP, PDP, cart, checkout (Hindi + English).</p>
+        <div class="text-xs dim mono mt-1">Submitted Oct 5, 2026 3:46 AM · Khandesh Spice D2C E-Commerce Store</div>
+        <div class="panel-row mt-3" style="padding:11px 0;border-top:1px solid var(--line)">
+          <span class="l flex items-center gap-2 min-w-0" style="display:flex">
+            <span class="avatar sq" style="background:var(--t-danger-bg);color:var(--t-danger-tx)">PDF</span>
+            <span class="min-w-0">
+              <b class="text-sm truncate" style="display:block">arjun-mehta-e-commerce-platform-milestone-1-wireframes.pdf</b>
+              <span class="text-xs dim">1.8 MB · v1</span>
+            </span>
+          </span>
+          <span class="flex items-center gap-2 shrink-0">
+            <button class="btn btn-secondary btn-xs" type="button">Download</button>
+            <button class="btn btn-danger btn-xs" type="button">Delete</button>
+          </span>
+        </div>
+        <div class="note mt-3">
+          <span class="text-xs">Approving this deliverable releases the linked milestone payment request to the client.</span>
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <span class="text-xs dim mr-auto">084 · deliverable preview · 090 · milestones &amp; files</span>
+        <button class="btn btn-secondary btn-sm" type="button">Close</button>
+      </div>
+    </section>
+
+    <!-- 090 · Time entries -->
+    <section class="dialog-surface" id="state-time-entries" aria-labelledby="dlg-time">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-time">Time entries</h3>
+          <div class="panel-sub">Admin time logged against this project</div>
+        </div>
+        <button class="btn btn-ghost btn-xs" type="button">Hide</button>
+      </div>
+      <div class="dialog-body">
+        <div class="grid g3 gap-3" style="align-items:end">
+          <div class="field">
+            <label class="label" for="te-hours">Hours</label>
+            <input class="input mono" id="te-hours" value="1">
+          </div>
+          <div class="field">
+            <label class="label" for="te-date">Date</label>
+            <input class="input mono" id="te-date" value="10/10/2026">
+          </div>
+          <div class="field">
+            <label class="label" for="te-note">Note</label>
+            <input class="input" id="te-note" placeholder="Optional">
+          </div>
+        </div>
+        <button class="btn btn-secondary btn-sm mt-3" type="button">Log time</button>
+        <div class="tbl-wrap mt-3">
+          <table class="tbl tbl-compact tbl-cards">
+            <thead><tr><th>Date</th><th>Hours</th><th>Operator</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Date" class="mono nowrap">Oct 5, 2026</td><td data-label="Hours" class="mono">1.00</td><td data-label="Operator" class="nowrap">Riya Kapoor</td><td data-label="Note" class="muted">Wireframe review</td></tr>
+              <tr><td data-label="Date" class="mono nowrap">Oct 3, 2026</td><td data-label="Hours" class="mono">2.50</td><td data-label="Operator" class="nowrap">Riya Kapoor</td><td data-label="Note" class="muted">Checkout spec pass</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text-xs dim mt-2 mono">4.00 h logged · 0 of 4 billable hours invoiced</div>
+      </div>
+    </section>
+
+    <!-- 091 · Update project status -->
+    <section class="dialog-surface" id="state-update-status" aria-labelledby="dlg-status">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-status">Update project status</h3>
+          <div class="panel-sub">Every change is written to the project status history</div>
+        </div>
+        <span class="badge tone-neutral mono">091</span>
+      </div>
+      <div class="dialog-body">
+        <div class="field mb-3">
+          <label class="label" for="st-status">Status</label>
+          <select class="select" id="st-status">
+            <option>Pending Payment</option>
+            <option selected>In Progress</option>
+            <option>On Hold</option>
+            <option>Under Review</option>
+            <option>Revision Requested</option>
+            <option>Completed</option>
+            <option>Cancelled</option>
+          </select>
+        </div>
+        <div class="field mb-4">
+          <label class="label" for="st-reason">Reason</label>
+          <textarea class="textarea" id="st-reason" rows="2" placeholder="Why this change?"></textarea>
+        </div>
+        <div class="sec-eyebrow">Status history</div>
+        <div class="tline">
+          <div class="tline-item">
+            <div class="tline-card">
+              <b class="text-sm">Pending Payment → In Progress</b>
+              <div class="text-xs dim mono mt-1">Oct 5, 2026 3:46 AM · payment_completed</div>
+            </div>
+          </div>
+          <div class="tline-item mut">
+            <div class="tline-card">
+              <b class="text-sm">Created as Pending Payment</b>
+              <div class="text-xs dim mono mt-1">Oct 5, 2026 3:46 AM · project_created</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+        <button class="btn btn-primary btn-sm" type="button">Update status</button>
+      </div>
+    </section>
+
+    <!-- 088 · Change operator -->
+    <section class="dialog-surface" id="state-change-operator" aria-labelledby="dlg-operator">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-operator">Change operator</h3>
+          <div class="panel-sub">Current operator · Riya Kapoor</div>
+        </div>
+        <span class="badge tone-neutral mono">088</span>
+      </div>
+      <div class="dialog-body">
+        <div class="field mb-3">
+          <label class="label" for="op-search">Search admin by name or email…</label>
+          <div class="input-wrap">
+            <span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+            <input class="input" id="op-search" placeholder="Search admin by name or email…">
+          </div>
+        </div>
+        <div class="panel" style="box-shadow:none">
+          <div class="panel-row">
+            <span class="flex items-center gap-2 min-w-0">
+              <span class="avatar" style="background:#123A37;color:#fff">RK</span>
+              <span class="min-w-0">
+                <b class="text-sm" style="display:block">admin@nestlancer.com</b>
+                <span class="text-xs dim">Riya Kapoor · suggestion</span>
+              </span>
+            </span>
+            <span class="badge tone-brand mono">ADMIN</span>
+          </div>
+          <div class="panel-row">
+            <span class="flex items-center gap-2 min-w-0">
+              <span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AS</span>
+              <span class="min-w-0">
+                <b class="text-sm" style="display:block">anita.singh@nestlancer.com</b>
+                <span class="text-xs dim">Anita Singh · 12 open projects</span>
+              </span>
+            </span>
+            <span class="badge tone-neutral mono">ADMIN</span>
+          </div>
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <span class="text-xs dim mr-auto">Save unlocks once a different operator is selected.</span>
+        <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+        <button class="btn btn-primary btn-sm" type="button" aria-disabled="true" disabled>Save</button>
+      </div>
+    </section>
+
+    <!-- 092 · Use as template -->
+    <section class="dialog-surface" id="state-use-as-template" aria-labelledby="dlg-template">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-template">Use as template</h3>
+          <div class="panel-sub">Step 1 of 5 · Client</div>
+        </div>
+        <span class="badge tone-neutral mono">092</span>
+      </div>
+      <div class="dialog-body">
+        <div class="flex items-center gap-2 flex-wrap mb-3" role="list" aria-label="Template steps">
+          <span class="chip active" role="listitem" aria-current="step">1 Client</span>
+          <span class="chip" role="listitem">2 Request</span>
+          <span class="chip" role="listitem">3 Quote</span>
+          <span class="chip" role="listitem">4 Milestones</span>
+          <span class="chip" role="listitem">5 Review</span>
+        </div>
+        <div class="note mb-3">
+          <span class="text-xs">Create a similar engagement for a client. You will get a draft quote to review and send — no payments or messages are copied.</span>
+        </div>
+        <div class="text-xs dim mb-3">Template from client <b class="muted">Arjun Mehta</b> · Khandesh Spice D2C E-Commerce Store</div>
+        <div class="field mb-3">
+          <label class="label" for="tpl-client">Client for new project <span class="req">*</span></label>
+          <input class="input" id="tpl-client" placeholder="Search client by name or email…">
+        </div>
+        <div class="field">
+          <label class="label" for="tpl-admin">Assigned admin</label>
+          <input class="input mono" id="tpl-admin" value="31cde339-67d8-4bd8-994d-4584523a8ba3">
+          <div class="hint">Optional — defaults to the operator creating the project.</div>
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <button class="btn btn-ghost btn-sm mr-auto" type="button">Back</button>
+        <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+        <button class="btn btn-primary btn-sm" type="button" aria-disabled="true" disabled>Next</button>
+      </div>
+    </section>
+
+    <!-- 087 · Archive project -->
+    <section class="dialog-surface" id="state-archive" aria-labelledby="dlg-archive">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-archive">Archive project</h3>
+          <div class="panel-sub">Read-only — reversible by a platform administrator</div>
+        </div>
+        <span class="badge tone-neutral mono">087</span>
+      </div>
+      <div class="dialog-body">
+        <p class="text-sm">Archive this project? It will be hidden from active lists.</p>
+        <div class="note warn mt-3">
+          <span class="text-xs">Milestone payments, deliverables and message history are preserved. Clients keep read-only access to files and receipts.</span>
+        </div>
+        <div class="field mt-3">
+          <label class="label" for="ar-reason">Internal note</label>
+          <input class="input" id="ar-reason" placeholder="e.g. Superseded by the 2027 rebuild">
+        </div>
+      </div>
+      <div class="dialog-foot">
+        <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+        <button class="btn btn-danger-solid btn-sm" type="button">Archive</button>
+      </div>
+    </section>
+
+    <!-- 089 · Daily progress -->
+    <section class="dialog-surface" id="state-daily-progress" aria-labelledby="dlg-daily">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-daily">Daily progress</h3>
+          <div class="panel-sub">End-of-day updates for the client · In Progress</div>
+        </div>
+        <span class="badge tone-neutral mono">089</span>
+      </div>
+      <div class="dialog-body">
+        <div class="note warn mb-3">
+          <span class="text-xs">No progress update posted today.</span>
+        </div>
+        <div class="flex items-center gap-2 flex-wrap mb-4">
+          <button class="btn btn-primary btn-sm" type="button">Post today's update</button>
+          <button class="btn btn-secondary btn-sm" type="button">Use daily template</button>
+          <button class="btn btn-ghost btn-sm" type="button">Post internal note</button>
+        </div>
+        <div class="sec-eyebrow">Progress history</div>
+        <div class="tline">
+          <div class="tline-item">
+            <div class="tline-card">
+              <div class="flex items-start justify-between gap-2">
+                <b class="text-sm">Wireframe pack uploaded for review</b>
+                <span class="flex items-center gap-1 shrink-0">
+                  <button class="btn btn-ghost btn-xs" type="button">Edit</button>
+                  <button class="btn btn-ghost btn-xs" type="button">Delete</button>
+                </span>
+              </div>
+              <div class="text-xs dim mt-1">Deliverable upload · Milestone 1 wireframes · Oct 5, 2026 3:46 AM</div>
+            </div>
+          </div>
+          <div class="tline-item">
+            <div class="tline-card">
+              <b class="text-sm">Daily update — homepage and PLP wireframes</b>
+              <div class="text-xs muted mt-1">Homepage hero, product listing with variant swatches 50g / 200g / 500g, mobile-first nav, Hindi toggle.</div>
+              <div class="text-xs dim mt-1">Daily update · Oct 4, 2026 · Riya Kapoor</div>
+            </div>
+          </div>
+          <div class="tline-item">
+            <div class="tline-card">
+              <b class="text-sm">Internal — Shiprocket v2 rates API spike</b>
+              <div class="text-xs muted mt-1">Confirmed pincode checker; keeping COD threshold at ₹2,000 per Arjun's note.</div>
+              <div class="text-xs dim mt-1">Internal note · Oct 3, 2026 · not visible to client</div>
+            </div>
+          </div>
+          <div class="tline-item mut">
+            <div class="tline-card"><b class="text-sm">Milestone Approved</b><div class="text-xs dim mt-1">QA, SEO &amp; Launch · Storefront &amp; Checkout · Design &amp; Architecture (×2) · Project delivery · Sep 2026</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 094 · Post today's update -->
+    <section class="dialog-surface" id="state-daily-template" aria-labelledby="dlg-daily-tpl">
+      <div class="dialog-head">
+        <div class="min-w-0">
+          <h3 class="panel-title" id="dlg-daily-tpl">Post today's update</h3>
+          <div class="panel-sub">Pre-filled from the daily template</div>
+        </div>
+        <span class="badge tone-neutral mono">094</span>
+      </div>
+      <div class="dialog-body">
+        <div class="grid g2 gap-3 mb-3">
+          <div class="field">
+            <label class="label" for="du-type">Type</label>
+            <select class="select" id="du-type">
+              <option selected>Daily update</option>
+              <option>Milestone update</option>
+              <option>Internal note</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="label" for="du-milestone">Milestone</label>
+            <select class="select" id="du-milestone">
+              <option selected>Deposit</option>
+              <option>Design &amp; Architecture</option>
+              <option>Storefront &amp; Checkout</option>
+            </select>
+          </div>
+        </div>
+        <div class="field mb-3">
+          <label class="label" for="du-title">Title</label>
+          <input class="input" id="du-title" value="Daily update — Sat, Oct 10, 2026">
+        </div>
+        <div class="field mb-3">
+          <label class="label" for="du-body">Description</label>
+          <textarea class="textarea" id="du-body" rows="5">**Done today**
+- Homepage hero and PLP wireframes finalised for review.
+
+**Blockers**
+- None. Awaiting client sign-off on the wireframe pack.</textarea>
+        </div>
+        <div class="field mb-3">
+          <label class="label" for="du-files">Attachments</label>
+          <div class="dropzone" style="padding:14px">
+            <b class="text-sm">Drop files or choose from the media library</b>
+            <span class="text-xs">Optional · max 25 MB per file</span>
+            <input id="du-files" type="file" multiple tabindex="-1" aria-hidden="true">
+            <button class="btn btn-secondary btn-sm dz-pick" type="button" onclick="document.getElementById('du-files').click()">Choose files</button>
+          </div>
+        </div>
+        <label class="check"><input type="checkbox" checked> Notify client when posted</label>
+      </div>
+      <div class="dialog-foot">
+        <button class="btn btn-secondary btn-sm" type="button">Cancel</button>
+        <button class="btn btn-primary btn-sm" type="button">Post update</button>
+      </div>
+    </section>
   </div>
 </section>
 <div class="grid gap-5" style="grid-template-columns:2fr 1fr">
@@ -236,33 +636,13 @@
   <div class="panel-body"><dl class="kv"><dt>Started</dt><dd>Aug 3, 2026</dd><dt>Target</dt><dd>Oct 31, 2026</dd><dt>Buffer</dt><dd><b class="mono" style="color:var(--t-warning-tx)">5 days</b></dd><dt>Defect window</dt><dd>30 days post-handover</dd></dl></div>
   
 </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (12)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/053-projects-details.webp</span></div><p>Projects &gt; Razorpay Settlement Reconciliation Engine (Revision Requested): client ananya.iyer@nestlancer.com, target end Oct 5, 2027, milestones 5, deliverables 1, operator Riya Kapoor (admin@nestlancer.com). Created and last updated Oct 5, 2026 3:47 AM; overall progress 40%. Description: Node.js microservice to reconcile Razorpay settlement reports with internal ledger — idempotent webhook ingestion for payment.captured and settlement.processed events, transactional outbox, admin replay UI for failed settlements after the 18 June payout outage. Quote ID 01a10a2c-26a7-727f-9252-a3154d836492. Tabs Overview, Milestones &amp; files, Daily progress, Analytics. Actions Archive, Use as template, Export, Update status, Change operator, Remove.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/083-project-delivery-add-milestone-dialog.webp</span></div><p>Projects &gt; Khandesh Spice D2C E-Commerce Store &gt; Milestones &amp; files &gt; Add milestone dialog: Name (placeholder &quot;e.g. Kickoff / Design / Launch&quot;); Start 10/10/2026; End 10/24/2026; Amount (₹) placeholder 5000; Cancel; Create milestone (disabled until name and amount entered).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/084-project-delivery-deliverable-preview.webp</span></div><p>Projects &gt; Khandesh Spice D2C E-Commerce Store &gt; Milestones &amp; files (In Progress, arjun.mehta client, 7 milestones, 1 deliverable): milestone timeline Deposit (Paid), Mid-project payment (Payment due), Final payment (Payment due), Project delivery (Approved, due Oct 5, 2027), Design &amp; Architecture (Approved, due Jul 15, 2026), Storefront &amp; Checkout (Approved, Aug 15, 2026), QA, SEO &amp; Launch (Approved, Sep 30, 2026). Deliverable &quot;Milestone 1 wireframes — homepage, PLP, PDP, cart, checkout (Hindi + English).&quot; submitted Oct 5, 2026 3:46 AM, Approved; Download arjun-mehta-e-commerce-platform-milestone-1-wireframes.pdf; Delete. Time entries log form (hours 1, date 10/10/2026, Log time).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/085-project-delivery-upload-deliverable-form.webp</span></div><p>Projects &gt; Upload deliverable dialog: Milestone select (default Deposit); Files (file chooser, multiple) or paste media UUIDs (comma-separated); Description (optional); Upload deliverable disabled until file or UUID provided; Cancel.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/086-project-details-analytics.webp</span></div><p>Projects &gt; Khandesh Spice D2C E-Commerce Store &gt; Analytics: Progress 57%; budget spent ₹22,500.00; project ID 01a10a2b-5eaa-769e-a5d9-0d58fcca6924; milestones completed 4. Activity breakdown (total updates 7): Storefront &amp; Checkout 1, Project delivery 1, QA, SEO &amp; Launch 1, Design &amp; Architecture 4.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/087-project-details-archive-confirmation.webp</span></div><p>Projects &gt; Archive project dialog: &quot;Archive this project? It will be hidden from active lists.&quot; Cancel / Archive.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/088-project-details-change-operator-dialog.webp</span></div><p>Projects &gt; Change operator dialog: Operator search &quot;Search admin by name or email…&quot;; suggestion admin@nestlancer.com; Save disabled until a different operator selected.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/089-project-details-daily-progress.webp</span></div><p>Projects &gt; Khandesh Spice &gt; Daily progress (In Progress): End-of-day updates for the client. Banner &quot;No progress update posted today.&quot; Buttons Post today&#x27;s update, Use daily template, Post internal note. Entries: &quot;Wireframe pack uploaded for review&quot; (Deliverable upload, Milestone 1 wireframes, Oct 5, 3:46 AM); &quot;Milestone Approved&quot; entries for QA, SEO &amp; Launch; Storefront &amp; Checkout; Design &amp; Architecture (×2); Project delivery; internal note &quot;Internal — Shiprocket v2 rates API spike: confirmed pincode checker; keeping COD threshold at ₹2,000 per Arjun&#x27;s note.&quot;; &quot;Daily update — homepage and PLP wireframes&quot; (homepage hero, product listing with variant swatches 50g/200g/500g, mobile-first nav, Hindi toggle). Edit / Delete per entry.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/090-project-details-milestones-and-files.webp</span></div><p>Projects &gt; Khandesh Spice &gt; Milestones &amp; files, lower section: Time entries (Admin time logged against this project, Show/Hide); milestone list and deliverables as in admin 084; page footer. Milestone 1 wireframes Approved; Download link present.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/091-project-details-update-status-dialog.webp</span></div><p>Projects &gt; Update project status dialog: Status select In Progress; Reason (optional, &quot;Why this change?&quot;); Status history: Pending Payment → In Progress (Oct 5, 2026 3:46 AM, payment_completed); Created as Pending Payment (Oct 5, 2026 3:46 AM). Cancel / Update status.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/092-project-details-use-as-template-dialog.webp</span></div><p>Projects &gt; Use as template dialog (step 1 of 5: Client, Request, Quote, Milestones, Review): &quot;Create a similar engagement for a client. You will get a draft quote to review and send — no payments or messages are copied.&quot; Template from client Arjun Mehta; Client for new project search (required); Assigned admin 31cde339-67d8-4bd8-994d-4584523a8ba3 (optional); Back / Cancel / Next.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Project detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/094-project-progress-daily-template-form.webp</span></div><p>Projects &gt; Khandesh Spice &gt; Post today&#x27;s update dialog: Type select Daily update; Milestone (optional) Deposit; Title pre-filled &quot;Daily update — Sat, Oct 10, 2026&quot;; Description template &quot;**Done today**&quot; / &quot;**Blockers**&quot;; Attachments optional; &quot;Notify client when posted&quot; checked; Cancel / Post update.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>active activity admin against amount analytics ananya approved architecture archive arjun arjun&#x27;s arjun-mehta-e-commerce-platform-milestone- assigned attachments banner blockers breakdown budget buttons cancel captured change checked checker checkout chooser client comma-separated completed confirmed copied create created daily default delete deliverable deliverables delivery deposit description design different disabled download draft e-commerce email end-of-day engagement engine english entered entries entry events export failed files final footer hidden hindi history homepage hours idempotent ingestion internal kapoor keeping khandesh kickoff launch ledger listing lists logged lower media mehta messages microservice mid-project milestone milestones mobile-first multiple nestlancer notify operator optional outage outbox overall overview paste payment payments payout pending pincode placeholder posted pre-filled present processed product progress project projects provided quote rates razorpay reason reconcile reconciliation remove replay reports request requested required review revision section select selected settlement settlements shiprocket similar spent spice spike start store storefront submitted suggestion swatches target template threshold timeline title today today&#x27;s toggle total transactional until update updated updates upload uploaded uuids variant webhook wireframe wireframes 084 200 2000 2026 2027 22500.00 3154 339 4584523 500 5000 6924 727 769 836492 9252 994</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">12 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>projects/… — projects/details</b><span class="ref-tag mono">053</span></div><ul class="ref-facts"><li></li><li>Projects &gt; Razorpay Settlement Reconciliation Engine (Revision Requested): client ananya.iyer@nestlancer.com, target end Oct 5, 2027, milestones 5, deliverables 1, operator Riya Kapoor (admin@nestlancer.com). Created and last updated Oct 5, 2026 3:47 AM</li><li>overall progress 40%. Description: Node.js microservice to reconcile Razorpay settlement reports with internal ledger — idempotent webhook ingestion for payment.captured and settlement.processed events, transactional outbox, admin replay UI for failed settlements after the 18 June payout outage. Quote ID 01a10a2c-26a7-727f-9252-a3154d836492. Tabs Overview, Milestones &amp; files, Daily progress, Analytics. Actions Archive, Use as template, Export, Update status, Change operator, Remove</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… · delivery — Project delivery — Add milestone dialog</b><span class="ref-tag mono">083</span></div><ul class="ref-facts"><li>Projects &gt; Khandesh Spice D2C E-Commerce Store &gt; Milestones &amp; files &gt; Add milestone dialog: Name (placeholder &quot;e.g. Kickoff / Design / Launch&quot;); Start 10/10/2026; End 10/24/2026</li><li>Amount (₹) placeholder 5000; Cancel; Create milestone (disabled until name and amount entered)</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… · delivery — Project delivery — Deliverable preview</b><span class="ref-tag mono">084</span></div><ul class="ref-facts"><li></li><li>Projects &gt; Khandesh Spice D2C E-Commerce Store &gt; Milestones &amp; files (In Progress, arjun.mehta client, 7 milestones, 1 deliverable): milestone timeline Deposit (Paid), Mid-project payment (Payment due), Final payment (Payment due), Project delivery (Approved, due Oct 5, 2027), Design &amp; Architecture (Approved, due Jul 15, 2026), Storefront &amp; Checkout (Approved, Aug 15, 2026), QA, SEO &amp; Launch (Approved, Sep 30, 2026). Deliverable &quot;Milestone 1 wireframes — homepage, PLP, PDP, cart, checkout (Hindi + English).&quot; submitted Oct 5, 2026 3:46 AM, Approved</li><li>Download arjun-mehta-e-commerce-platform-milestone-1-wireframes.pdf; Delete. Time entries log form (hours 1, date 10/10/2026, Log time)</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… · delivery — Project delivery — Upload deliverable form</b><span class="ref-tag mono">085</span></div><ul class="ref-facts"><li>Projects &gt; Upload deliverable dialog: Milestone select (default Deposit); Files (file chooser, multiple) or paste media UUIDs (comma-separated); Description (optional)</li><li>Upload deliverable disabled until file or UUID provided; Cancel</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… · analytics — Project details — Analytics</b><span class="ref-tag mono">086</span></div><ul class="ref-facts"><li>Projects &gt; Khandesh Spice D2C E-Commerce Store &gt; Analytics: Progress 57%; budget spent ₹22,500.00; project ID 01a10a2b-5eaa-769e-a5d9-0d58fcca6924</li><li>milestones completed 4. Activity breakdown (total updates 7): Storefront &amp; Checkout 1, Project delivery 1, QA, SEO &amp; Launch 1, Design &amp; Architecture 4</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… — Project details — Archive confirmation</b><span class="ref-tag mono">087</span></div><ul class="ref-facts"><li>Projects &gt; Archive project dialog: &quot;Archive this project? It will be hidden from active lists.&quot; Cancel / Archive</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… — Project details — Change operator dialog</b><span class="ref-tag mono">088</span></div><ul class="ref-facts"><li>Projects &gt; Change operator dialog: Operator search &quot;Search admin by name or email…&quot;; suggestion admin@nestlancer.com; Save disabled until a different operator selected</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… · progress — Project details — Daily progress</b><span class="ref-tag mono">089</span></div><ul class="ref-facts"><li></li><li>Projects &gt; Khandesh Spice &gt; Daily progress (In Progress): End-of-day updates for the client. Banner &quot;No progress update posted today.&quot; Buttons Post today&#x27;s update, Use daily template, Post internal note. Entries: &quot;Wireframe pack uploaded for review&quot; (Deliverable upload, Milestone 1 wireframes, Oct 5, 3:46 AM)</li><li>&quot;Milestone Approved&quot; entries for QA, SEO &amp; Launch; Storefront &amp; Checkout; Design &amp; Architecture (×2); Project delivery</li><li>internal note &quot;Internal — Shiprocket v2 rates API spike: confirmed pincode checker; keeping COD threshold at ₹2,000 per Arjun&#x27;s note.&quot;</li><li>&quot;Daily update — homepage and PLP wireframes&quot; (homepage hero, product listing with variant swatches 50g/200g/500g, mobile-first nav, Hindi toggle). Edit / Delete per entry</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… · delivery — Project details — Milestones and files</b><span class="ref-tag mono">090</span></div><ul class="ref-facts"><li>Projects &gt; Khandesh Spice &gt; Milestones &amp; files, lower section: Time entries (Admin time logged against this project, Show/Hide); milestone list and deliverables as in admin 084</li><li>page footer. Milestone 1 wireframes Approved; Download link present</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… — Project details — Update status dialog</b><span class="ref-tag mono">091</span></div><ul class="ref-facts"><li>Projects &gt; Update project status dialog: Status select In Progress; Reason (optional, &quot;Why this change?&quot;)</li><li>Status history: Pending Payment → In Progress (Oct 5, 2026 3:46 AM, payment_completed); Created as Pending Payment (Oct 5, 2026 3:46 AM). Cancel / Update status</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… — Project details — Use as template dialog</b><span class="ref-tag mono">092</span></div><ul class="ref-facts"><li></li><li>Projects &gt; Use as template dialog (step 1 of 5: Client, Request, Quote, Milestones, Review): &quot;Create a similar engagement for a client. You will get a draft quote to review and send — no payments or messages are copied.&quot; Template from client Arjun Mehta</li><li>Client for new project search (required); Assigned admin 31cde339-67d8-4bd8-994d-4584523a8ba3 (optional); Back / Cancel / Next</li></ul></li><li class="ref-row"><div class="ref-head"><b>projects/… · progress — Project progress — Daily template form</b><span class="ref-tag mono">094</span></div><ul class="ref-facts"><li>Projects &gt; Khandesh Spice &gt; Post today&#x27;s update dialog: Type select Daily update; Milestone (optional) Deposit; Title pre-filled &quot;Daily update — Sat, Oct 10, 2026&quot;</li><li>Description template &quot;**Done today**&quot; / &quot;**Blockers**&quot;; Attachments optional; &quot;Notify client when posted&quot; checked; Cancel / Post update</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

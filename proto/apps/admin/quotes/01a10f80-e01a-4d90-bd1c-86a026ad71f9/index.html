@@ -7,18 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 900px !important; max-height: 900px !important; overflow: hidden !important; }
-  .shell { height: 900px !important; max-height: 900px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 900px !important; max-height: 900px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -56,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Quote detail</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -95,9 +90,9 @@
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Client view</h2><div class="panel-sub">Exactly what the client sees in their portal — signature flow included.</div></div></div>
   <div class="">
-      <div class="tbl-wrap"><table class="tbl  ">
+      <div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th>Description</th><th style="text-align:right">Qty</th><th style="text-align:right">Total</th></tr></thead>
-<tbody><tr><td>AUDIT-P23 edited deliverable: quote builder regression package</td><td style="text-align:right"><span class="mono">1</span></td><td style="text-align:right"><span class="mono">₹1,500.00</span></td></tr><tr><td><span class="dim">GST (18%)</span></td><td style="text-align:right"></td><td style="text-align:right"><span class="mono">₹270.00</span></td></tr><tr><td><b>Total</b></td><td style="text-align:right"></td><td style="text-align:right"><span class="mono font-bold">₹1,770.00</span></td></tr></tbody></table></div>
+<tbody><tr><td data-label="Description">AUDIT-P23 edited deliverable: quote builder regression package</td><td data-label="Qty" style="text-align:right"><span class="mono">1</span></td><td data-label="Total" style="text-align:right"><span class="mono">₹1,500.00</span></td></tr><tr><td data-label="Description"><span class="dim">GST (18%)</span></td><td data-label="Qty" style="text-align:right"></td><td data-label="Total" style="text-align:right"><span class="mono">₹270.00</span></td></tr><tr><td data-label="Description"><b>Total</b></td><td data-label="Qty" style="text-align:right"></td><td data-label="Total" style="text-align:right"><span class="mono font-bold">₹1,770.00</span></td></tr></tbody></table></div>
       <div class="panel-foot flex items-center justify-between"><span class="text-xs dim">Schedule: 50% on acceptance · 50% on milestone approval</span><a class="link text-xs" href="../../../web/quotes/[id]/index.html">Open client view →</a></div></div>
   
 </div>
@@ -140,27 +135,52 @@
   
 </div>
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (6)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Quote detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/055-quotes-details.webp</span></div><p>Quotes &gt; Corporate LMS for 200 Employees, status ACCEPTED, read-only. Overview: total ₹52,200.00; subtotal ₹52,200.00; tax 0% (₹0.00); valid until Oct 5, 2027; created Oct 5, 2026 3:47 AM. History: Viewed Oct 10, 2026 7:56 AM; Accepted, Sent, Revision created, Changes requested, Created (all Oct 5, 2026 3:47 AM). Documents: contract NL-CTR-2026-000005 v1 latest, Signed, quote accepted by client (10/5/2026 3:49:42 AM); quote NL-QTE-2026-000006 v1 latest, sent to client (3:49:36 AM). Actions Download quote PDF, Resend to client, Duplicate quote, Generate &amp; download latest quote PDF, Download signed service agreement, View source request.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Quote detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/097-quote-editor-custom-payment-schedule.webp</span></div><p>Quotes &gt; AUDIT-P23-SUPP-20261005-6grw Request, status DRAFT, Pricing step with Custom % selected: Deposit 50% on accept (₹625.00); Final payment 50% after prior (₹625.00); Add installment; Total 100%; tax 0%; currency INR; valid until 10/20/2026; live total ₹1,250.00. Buttons Save changes and Send to client; &quot;Open quote editor with client brief&quot; tip. Quote history: Created Oct 6, 2026 5:17 AM.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Quote detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/098-quote-editor-line-item-library.webp</span></div><p>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Scope step with Line-item library open: blocks Discovery &amp; Scoping (Discovery, 1 × ₹15,000.00), Frontend Development (Frontend, 1 × ₹35,000.00), Backend &amp; API (Backend, 1 × ₹40,000.00), QA &amp; Testing (Qa, 1 × ₹12,000.00), DevOps &amp; Deployment (Devops, 1 × ₹15,000.00), Project Management (Pm, 1 × ₹10,000.00). Each block has Insert and Deactivate; Show inactive; New block. Note: &quot;Reusable quote blocks. Quote templates API is retired (410) — use this library instead.&quot; Phase &quot;Deliverables&quot; with line &quot;AUDIT-P23 browser-back-after-save edited line item.&quot; 1 × ₹1,250.00.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Quote detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/099-quote-editor-pricing-and-schedule.webp</span></div><p>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Pricing step, Preset view: presets 50% deposit / 50% on completion (selected), 30/70, 30/40/30, 25% × 4 milestones, 100% upfront. Installments Deposit 50% ₹625.00 on accept; Final payment 50% ₹625.00 on prior approved; currency INR; tax 0%; valid until 10/20/2026; Back / Next / Save changes / Send; quote history Created Oct 6, 2026 5:17 AM.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Quote detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/100-quote-editor-scope-and-line-items.webp</span></div><p>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Scope step: Line-item library (Hide library), Add phase; single phase &quot;Deliverables&quot; subtotal ₹1,250.00 with row 1 &quot;AUDIT-P23 browser-back-after-save edited line item.&quot; qty 1 × ₹1,250; Add line to Deliverables; Back disabled; Next, Save changes, Send.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Quote detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/101-quote-editor-terms-and-review.webp</span></div><p>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Terms step: Standard Nestlancer terms (fixed for this quote version; create a revised quote if platform terms change) 10 clauses as in admin 096; project-specific terms optional (placeholder &quot;Client provides brand assets within 5 business days of kickoff. Two revision rounds per milestone.&quot;); &quot;Require signed service agreement&quot; checked; Internal notes (not sent to client); Back, Save changes, Send.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>accept accepted admin agreement approved assets audit-p backend block blocks brand brief browser-back-after-save business buttons change changes checked clauses client completion contract corporate create created currency custom deactivate deliverables deployment deposit development devops disabled discovery documents download draft duplicate edited editor employees final fixed frontend generate history inactive insert installment installments instead internal kickoff latest library line-item management milestone milestones nestlancer nl-ctr- nl-qte- notes optional overview payment phase placeholder platform preset presets pricing prior project project-specific provides quote quotes read-only request requested require resend retired reusable revised revision rounds scope scoping selected service signed single source standard subtotal supp- templates terms testing total until upfront valid version viewed 000005 000006 096 100 10000.00 12000.00 1250 1250.00 15000.00 200 2026 20261005 2027 35000.00 40000.00 410 52200.00 625.00</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">6 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>quotes/… — quotes/details</b><span class="ref-tag mono">055</span></div><ul class="ref-facts"><li>Quotes &gt; Corporate LMS for 200 Employees, status ACCEPTED, read-only. Overview: total ₹52,200.00; subtotal ₹52,200.00; tax 0% (₹0.00); valid until Oct 5, 2027</li><li>created Oct 5, 2026 3:47 AM. History: Viewed Oct 10, 2026 7:56 AM</li><li>Accepted, Sent, Revision created, Changes requested, Created (all Oct 5, 2026 3:47 AM). Documents: contract NL-CTR-2026-000005 v1 latest, Signed, quote accepted by client (10/5/2026 3:49:42 AM)</li><li>quote NL-QTE-2026-000006 v1 latest, sent to client (3:49:36 AM). Actions Download quote PDF, Resend to client, Duplicate quote, Generate &amp; download latest quote PDF, Download signed service agreement, View source request</li></ul></li><li class="ref-row"><div class="ref-head"><b>quotes/… — Quote editor — Custom payment schedule</b><span class="ref-tag mono">097</span></div><ul class="ref-facts"><li>Quotes &gt; AUDIT-P23-SUPP-20261005-6grw Request, status DRAFT, Pricing step with Custom % selected: Deposit 50% on accept (₹625.00); Final payment 50% after prior (₹625.00); Add installment</li><li>Total 100%; tax 0%; currency INR; valid until 10/20/2026; live total ₹1,250.00. Buttons Save changes and Send to client</li><li>&quot;Open quote editor with client brief&quot; tip. Quote history: Created Oct 6, 2026 5:17 AM</li></ul></li><li class="ref-row"><div class="ref-head"><b>quotes/… — Quote editor — Line-item library</b><span class="ref-tag mono">098</span></div><ul class="ref-facts"><li></li><li>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Scope step with Line-item library open: blocks Discovery &amp; Scoping (Discovery, 1 × ₹15,000.00), Frontend Development (Frontend, 1 × ₹35,000.00), Backend &amp; API (Backend, 1 × ₹40,000.00), QA &amp; Testing (Qa, 1 × ₹12,000.00), DevOps &amp; Deployment (Devops, 1 × ₹15,000.00), Project Management (Pm, 1 × ₹10,000.00). Each block has Insert and Deactivate</li><li>Show inactive</li><li>New block. Note: &quot;Reusable quote blocks. Quote templates API is retired (410) — use this library instead.&quot; Phase &quot;Deliverables&quot; with line &quot;AUDIT-P23 browser-back-after-save edited line item.&quot; 1 × ₹1,250.00</li></ul></li><li class="ref-row"><div class="ref-head"><b>quotes/… — Quote editor — Pricing and schedule</b><span class="ref-tag mono">099</span></div><ul class="ref-facts"><li></li><li>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Pricing step, Preset view: presets 50% deposit / 50% on completion (selected), 30/70, 30/40/30, 25% × 4 milestones, 100% upfront. Installments Deposit 50% ₹625.00 on accept</li><li>Final payment 50% ₹625.00 on prior approved; currency INR; tax 0%; valid until 10/20/2026; Back / Next / Save changes / Send; quote history Created Oct 6, 2026 5:17 AM</li></ul></li><li class="ref-row"><div class="ref-head"><b>quotes/… — Quote editor — Scope and line items</b><span class="ref-tag mono">100</span></div><ul class="ref-facts"><li>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Scope step: Line-item library (Hide library), Add phase</li><li>single phase &quot;Deliverables&quot; subtotal ₹1,250.00 with row 1 &quot;AUDIT-P23 browser-back-after-save edited line item.&quot; qty 1 × ₹1,250; Add line to Deliverables; Back disabled</li><li>Next, Save changes, Send</li></ul></li><li class="ref-row"><div class="ref-head"><b>quotes/… — Quote editor — Terms and review</b><span class="ref-tag mono">101</span></div><ul class="ref-facts"><li>Quotes &gt; AUDIT-P23-SUPP-…-6grw, Terms step: Standard Nestlancer terms (fixed for this quote version; create a revised quote if platform terms change) 10 clauses as in admin 096</li><li>project-specific terms optional (placeholder &quot;Client provides brand assets within 5 business days of kickoff. Two revision rounds per milestone.&quot;); &quot;Require signed service agreement&quot; checked</li><li>Internal notes (not sent to client); Back, Save changes, Send</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
+<!-- PROTO-STATES-QUOTE -->
+<section id="states-quote" class="mb-5" aria-labelledby="states-quote-h"><div class="sec-head">
+    <div class="min-w-0">
+      <div class="sec-eyebrow">Operator states · 1 screen</div>
+      <h2 class="sec-title" id="states-quote-h">Quote documents &amp; history</h2>
+      <p class="sec-sub">Accepted quotes are read-only: documents, audit trail and the revision path sit together.</p>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap"><span class="badge tone-neutral mono">055 quotes details</span></div>
+  </div><div class="state-deck"><section class="dialog-surface" id="qt-overview" aria-labelledby="qt-overview-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="qt-overview-h">Overview</h3>
+      <div class="panel-sub">Corporate LMS for 200 Employees · ACCEPTED</div>
+    </div>
+    <span class="badge tone-neutral mono">055</span>
+  </div>
+  <div class="dialog-body"><dl class="kv"><dt>Total</dt><dd>₹52,200.00</dd><dt>Subtotal</dt><dd>₹52,200.00</dd><dt>Tax 0%</dt><dd>₹0.00</dd><dt>Valid until</dt><dd>Oct 5, 2027</dd><dt>Created</dt><dd>Oct 5, 2026 3:47 AM</dd><dt>Status</dt><dd>ACCEPTED — read-only</dd></dl><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Resend to client</button><button class="btn btn-secondary btn-sm" type="button">Duplicate quote</button><button class="btn btn-secondary btn-sm" type="button">View source request</button><button class="btn btn-primary btn-sm" type="button">Revise (v2)</button></div></div>
+  
+</section><section class="dialog-surface" id="qt-docs" aria-labelledby="qt-docs-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="qt-docs-h">Documents</h3>
+      <div class="panel-sub">Generated and signed artefacts for this quote version</div>
+    </div>
+    <span class="badge tone-neutral mono">055</span>
+  </div>
+  <div class="dialog-body"><div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact"><thead><tr><th>Document</th><th>Number</th><th>Version</th><th>Status</th><th>Sent</th></tr></thead><tbody><tr><td data-label="Document" class="min-w-0">Service agreement</td><td data-label="Number" class="min-w-0 mono">NL-CTR-2026-000005</td><td data-label="Version" class="min-w-0">v1 latest</td><td data-label="Status" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>Signed</span></td><td data-label="Sent" class="min-w-0">Oct 5, 2026 3:49:42 AM</td></tr><tr><td data-label="Document" class="min-w-0">Quote</td><td data-label="Number" class="min-w-0 mono">NL-QTE-2026-000006</td><td data-label="Version" class="min-w-0">v1 latest</td><td data-label="Status" class="min-w-0"><span class="badge tone-info"><span class="dot"></span>Sent to client</span></td><td data-label="Sent" class="min-w-0">Oct 5, 2026 3:49:36 AM</td></tr></tbody></table></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Download quote PDF</button><button class="btn btn-secondary btn-sm" type="button">Download signed service agreement</button><button class="btn btn-secondary btn-sm" type="button">Generate &amp; download latest quote PDF</button></div></div>
+  <div class="dialog-foot"><span class="text-xs dim mr-auto">Accepted by client 10/5/2026 3:49:42 AM</span></div>
+</section><section class="dialog-surface" id="qt-history" aria-labelledby="qt-history-h">
+  <div class="dialog-head">
+    <div class="min-w-0">
+      <h3 class="panel-title" id="qt-history-h">History</h3>
+      <div class="panel-sub">Read-only for an accepted quote — create a revision to change anything</div>
+    </div>
+    <span class="badge tone-neutral mono">055</span>
+  </div>
+  <div class="dialog-body"><div class="tline"><div class="tline-item"><div class="tline-card"><b class="text-sm">Viewed</b><div class="text-xs dim mono mt-1">Oct 10, 2026 7:56 AM</div></div></div><div class="tline-item"><div class="tline-card"><b class="text-sm">Accepted</b><div class="text-xs dim mono mt-1">Oct 5, 2026 3:47 AM</div></div></div><div class="tline-item"><div class="tline-card"><b class="text-sm">Sent</b><div class="text-xs dim mono mt-1">Oct 5, 2026 3:47 AM</div></div></div><div class="tline-item"><div class="tline-card"><b class="text-sm">Revision created</b><div class="text-xs dim mono mt-1">Oct 5, 2026 3:47 AM</div></div></div><div class="tline-item"><div class="tline-card"><b class="text-sm">Changes requested</b><div class="text-xs dim mono mt-1">Oct 5, 2026 3:47 AM</div></div></div><div class="tline-item mut"><div class="tline-card"><b class="text-sm">Created</b><div class="text-xs dim mono mt-1">Oct 5, 2026 3:47 AM</div></div></div></div></div>
+  
+</section></div></section>
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

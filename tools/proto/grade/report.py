@@ -49,7 +49,8 @@ L.append(f"- **{a} of {n} screens reach A.** B: {b}, C: {c}, D: {d}, F: {f}.")
 rec=[x['recall'] for x in s if x.get('recall') is not None]
 L.append(f"- Median score: **{sorted(x['score'] for x in s)[n//2]}** (target 90). Median content coverage against the audit notes is **{round(sorted(rec)[len(rec)//2]*100)}%**, so the main gap is content and states, followed by mobile layout and health.")
 L.append(f"- Main systemic gaps: {', '.join(f'{k} ({v})' for k,v in iss.most_common(6))}.")
-L.append("- The 4 A grades are: public login, public pricing, public register and the admin dashboard. Operator console and client detail screens are mostly D or F.\n")
+worst=sorted(s,key=lambda r:r['score'])[:5]
+L.append("- The 5 weakest screens: "+"; ".join(f"{r['file'].split('/')[-1]} {r['score']}" for r in worst)+".\n")
 L.append("## 2. Grade summary\n")
 L.append("| Grade | Score | Meaning | Screens |\n|---|---|---|---|")
 meaning={'A':'Ready to sign off: content matches, renders clean, usable at mobile width','B':'Close: minor gaps (copy, density, responsive)','C':'Partial: key content or states missing','D':'Weak: large content gap or layout/health issues','F':'Not usable as a screen match (missing page, render failure, or near-empty)'}

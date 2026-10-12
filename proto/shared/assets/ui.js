@@ -1,96 +1,167 @@
-/* Nestlancer prototype UI runtime: theme toggle, interactive tabs/drawers, reveal motion & hygiene */
-(() => {
-  const root = document.documentElement;
-  const saved = localStorage.getItem('nl-proto-theme');
-  if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+// ============================================================================
+// Nestlancer prototype — shared runtime (offline-safe, no dependencies)
+//   1. theme toggle (light/dark, persisted)
+//   2. off-canvas navigation for <=900px (replaces the old "sidebar: none")
+//   3. tab / segmented panel switching ([data-tab-target])
+//   4. topbar back button
+//   5. "/" focuses the top search
+//   6. scroll reveal for .reveal, reduced-motion safe
+// ============================================================================
+(function () {
+  var root = document.documentElement;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function syncLabels() {
-    const t = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-    document.querySelectorAll('[data-theme-label]').forEach(el => {
-      el.textContent = t === 'dark' ? 'Dark' : 'Light';
+  /* ---------------------------------------------------------------- theme */
+  try { var t = localStorage.getItem('nl-theme'); if (t) root.setAttribute('data-theme', t); } catch (e) {}
+  function syncLabel() {
+    document.querySelectorAll('[data-theme-label]').forEach(function (n) {
+      n.textContent = root.getAttribute('data-theme') === 'dark' ? 'Dark' : 'Light';
+    });
+    document.querySelectorAll('[data-theme-toggle]').forEach(function (b) {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      b.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      b.setAttribute('title', dark ? 'Switch to light theme' : 'Switch to dark theme');
     });
   }
+  syncLabel();
 
-  document.addEventListener('click', (e) => {
-    const t = e.target.closest('[data-theme-toggle]');
-    if (t) {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('nl-proto-theme', next);
-      syncLabels();
+  /* ------------------------------------------------- off-canvas navigation */
+  var shell = document.getElementById('app-shell');
+  function setNav(open) {
+    if (!shell) return;
+    shell.classList.toggle('sb-open', open);
+    document.querySelectorAll('[data-sb-toggle]').forEach(function (b) {
+      b.setAttribute('aria-expanded', open ? 'true' : 'false');
+      b.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+    if (open) {
+      var first = shell.querySelector('.sb-item');
+      if (first) first.focus({ preventScroll: true });
+    }
+  }
+  var isOpen = function () { return shell && shell.classList.contains('sb-open'); };
+
+  /* ------------------------------------------------------------ delegation */
+  document.addEventListener('click', function (ev) {
+    var theme = ev.target.closest('[data-theme-toggle]');
+    if (theme) {
+      var cur = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', cur);
+      try { localStorage.setItem('nl-theme', cur); } catch (e) {}
+      syncLabel();
       return;
     }
 
-    const tab = e.target.closest('.tabs .tab, .seg button');
-    if (tab && tab.getAttribute('href') === '#') {
-      e.preventDefault();
-      const group = tab.parentElement;
-      if (group) {
-        group.querySelectorAll('.tab, button').forEach(sib => sib.classList.remove('active'));
-        tab.classList.add('active');
+    if (ev.target.closest('[data-sb-toggle]')) { setNav(!isOpen()); return; }
+    if (ev.target.closest('[data-sb-close]')) { setNav(false); return; }
+    if (shell && isOpen() && ev.target.closest('.sidebar a')) { setNav(false); }
+
+    var back = ev.target.closest('.topbar .btn-icon[title="Back"], [data-back]');
+    if (back) { history.length > 1 ? history.back() : back.blur(); }
+
+    var tab = ev.target.closest('[data-tab-target]');
+    if (tab) {
+      var group = tab.parentElement;
+      var id = tab.getAttribute('data-tab-target');
+      var panels = document.querySelectorAll('[data-tab-panel]');
+      var hasPanels = false;
+      panels.forEach(function (p) { if (p.getAttribute('data-tab-panel') === id) hasPanels = true; });
+      group.querySelectorAll('[data-tab-target]').forEach(function (a) {
+        a.classList.toggle('active', a === tab);
+        a.setAttribute('aria-selected', a === tab ? 'true' : 'false');
+      });
+      if (hasPanels) {
+        ev.preventDefault();
+        panels.forEach(function (p) { p.hidden = p.getAttribute('data-tab-panel') !== id; });
+        if (history.replaceState) history.replaceState(null, '', '#' + id);
+      } else {
+        /* section navigation: every panel stays visible for sign-off */
+        var target = document.getElementById(id);
+        if (target) {
+          ev.preventDefault();
+          target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+          if (history.replaceState) history.replaceState(null, '', '#' + id);
+        }
       }
-      const targetId = tab.getAttribute('data-tab-target');
-      if (targetId) {
-        const target = document.getElementById(targetId);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
+      return;
     }
 
-    const fab = document.getElementById('fab');
-    if (fab && fab.classList.contains('open') && !e.target.closest('#fab')) {
-      fab.classList.remove('open');
+    var fab = document.getElementById('fab');
+    if (fab && !ev.target.closest('#fab')) fab.classList.remove('open');
+  });
+
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape' && isOpen()) { setNav(false); }
+    if (ev.key === '/' && !/^(INPUT|TEXTAREA|SELECT)$/.test(ev.target.tagName) && !ev.target.isContentEditable) {
+      var s = document.querySelector('.topsearch input');
+      if (s) { ev.preventDefault(); s.focus(); }
     }
   });
 
-  function applyHygiene() {
-    // Clean any accidental "undefined" text inside SVG icons
-    document.querySelectorAll('svg').forEach(svg => {
-      if (svg.textContent && svg.textContent.trim() === 'undefined') {
-        svg.innerHTML = '<circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/>';
-      }
-    });
-
-    // Clamp any inline font-size < 11px
-    document.querySelectorAll('[style*="font-size"]').forEach(el => {
-      const fs = parseFloat(el.style.fontSize);
-      if (!isNaN(fs) && fs > 0 && fs < 11) {
-        el.style.fontSize = '11px';
-      }
-    });
+  /* ------------------------------------------------------------- tab state */
+  var panels = document.querySelectorAll('[data-tab-panel]');
+  if (panels.length) {
+    var shown = document.querySelector('[data-tab-panel]:not([hidden])');
+    if (!shown) panels[0].hidden = false;
+    var hash = (location.hash || '').replace('#', '');
+    var wanted = hash && document.querySelector('[data-tab-target="' + hash + '"]');
+    if (wanted && wanted.getAttribute('data-tab-target') !== ((shown || panels[0]).getAttribute('data-tab-panel'))) wanted.click();
   }
 
-  function initReveal() {
-    const candidates = document.querySelectorAll(
-      '.mkt-section .mkt-card, .mkt-section .panel, .hub-app, .main .stats > .stat'
-    );
-    candidates.forEach((el, i) => {
-      el.classList.add('reveal');
-      el.style.setProperty('--d', `${(i % 6) * 45}ms`);
-    });
-    if (!('IntersectionObserver' in window)) {
-      candidates.forEach(el => el.classList.add('is-in'));
+  /* ---------------------------------------------------------- scroll reveal */
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window) || reduce) {
+    els.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  }
+
+  /* --------------------------------------------------------------- dialogs */
+  document.addEventListener('click', function (ev) {
+    var opener = ev.target.closest ? ev.target.closest('[data-dialog-open]') : null;
+    if (opener) {
+      var d = document.getElementById(opener.getAttribute('data-dialog-open'));
+      if (d && typeof d.showModal === 'function') d.showModal();
       return;
     }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(en => {
-        if (en.isIntersecting) {
-          en.target.classList.add('is-in');
-          io.unobserve(en.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
-    candidates.forEach(el => io.observe(el));
-  }
+    var closer = ev.target.closest ? ev.target.closest('[data-dialog-close]') : null;
+    if (closer) {
+      var host = closer.closest('dialog');
+      if (host) host.close();
+    }
+  });
+  document.addEventListener('click', function (ev) {
+    // click on the backdrop closes the dialog
+    if (ev.target.tagName === 'DIALOG') ev.target.close();
+  });
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      syncLabels();
-      applyHygiene();
-      initReveal();
-    });
-  } else {
-    syncLabels();
-    applyHygiene();
-    initReveal();
+  /* ------------------------------------------------- collapsed <details> */
+  /* Deep links and in-page buttons should still land on content inside a
+     collapsed disclosure, so open any <details> on the path to the target. */
+  function openAncestors(el) {
+    for (var n = el; n; n = n.parentElement) {
+      if (n.tagName === 'DETAILS') n.open = true;
+    }
   }
+  function revealFromHash() {
+    var id = (location.hash || '').replace('#', '');
+    if (!id) return;
+    var t = document.getElementById(id);
+    if (t) openAncestors(t);
+  }
+  revealFromHash();
+  window.addEventListener('hashchange', revealFromHash);
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var t = document.getElementById(a.getAttribute('href').slice(1));
+    if (t) openAncestors(t);
+  });
+
+  window.__nl = { version: 'dir-html/2.0' };
 })();

@@ -7,16 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  main#main, main.content { min-height: 2030px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Client workspace navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Client workspace navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -41,6 +37,7 @@
 </aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>Activity</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search"><span class="kbd">⌘K</span></div>
@@ -60,13 +57,13 @@
 </div>
 <div class="tabs mb-5"><a class="tab" href="../account/index.html">Account</a><a class="tab" href="../security/index.html">Security</a><a class="tab" href="../sessions/index.html">Sessions</a><a class="tab" href="../notifications/index.html">Notifications</a><a class="tab" href="../billing/index.html">Billing</a><a class="tab" href="../files/index.html">Files</a><a class="tab active" href="./index.html">Activity</a></div>
 <div class="flex-col gap-5">
-  <div class="filterbar mb-4"><select class="select sm"><option selected>All categories</option><option>Auth</option><option>Billing</option><option>Content</option><option>Settings</option></select><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search events…"></div><button class="btn btn-secondary btn-sm ml-auto"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export CSV</button></div>
+  <div class="filterbar mb-4"><select class="select sm"><option selected>All categories</option><option>Auth</option><option>Billing</option><option>Content</option><option>Settings</option></select><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search events…"></div><button class="btn btn-primary btn-sm ml-auto" type="button"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export CSV</button></div>
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Account activity</h2><div class="panel-sub">Sign-ins, exports, and sensitive changes on your account. Operators can audit these too.</div></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl  ">
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th>When</th><th>Event</th><th>Category</th><th>Detail</th><th>IP</th></tr></thead>
-<tbody><tr><td><span class="mono text-xs">Oct 10, 7:42 AM</span></td><td><b>SIGNED_IN</b></td><td>auth</td><td>Chrome · Chennai</td><td><span class="mono text-xs">103.216.44.19</span></td></tr><tr><td><span class="mono text-xs">Oct 9, 6:15 PM</span></td><td><b>EXPORT_REQUESTED</b></td><td>data</td><td>Account data export queued</td><td><span class="mono text-xs">103.216.44.19</span></td></tr><tr><td><span class="mono text-xs">Oct 8, 10:04 AM</span></td><td><b>PAYMENT_METHOD_ADDED</b></td><td>billing</td><td>UPI ananya@okicici verified</td><td><span class="mono text-xs">103.216.52.8</span></td></tr><tr><td><span class="mono text-xs">Oct 7, 9:31 AM</span></td><td><b>PASSWORD_CHANGED</b></td><td>auth</td><td>Password rotation completed</td><td><span class="mono text-xs">49.37.201.6</span></td></tr><tr><td><span class="mono text-xs">Oct 6, 4:20 PM</span></td><td><b>PROFILE_UPDATED</b></td><td>account</td><td>Company title changed</td><td><span class="mono text-xs">103.216.44.19</span></td></tr><tr><td><span class="mono text-xs">Oct 5, 3:47 AM</span></td><td><b>LOGIN_FAILED</b></td><td>auth</td><td>Failed sign-in (wrong password)</td><td><span class="mono text-xs">185.220.101.4</span></td></tr></tbody></table></div></div>
+<tbody><tr><td data-label="When"><span class="mono text-xs">Oct 10, 7:42 AM</span></td><td data-label="Event"><b>SIGNED_IN</b></td><td data-label="Category">auth</td><td data-label="Detail">Chrome · Chennai</td><td data-label="IP"><span class="mono text-xs">103.216.44.19</span></td></tr><tr><td data-label="When"><span class="mono text-xs">Oct 9, 6:15 PM</span></td><td data-label="Event"><b>EXPORT_REQUESTED</b></td><td data-label="Category">data</td><td data-label="Detail">Account data export queued</td><td data-label="IP"><span class="mono text-xs">103.216.44.19</span></td></tr><tr><td data-label="When"><span class="mono text-xs">Oct 8, 10:04 AM</span></td><td data-label="Event"><b>PAYMENT_METHOD_ADDED</b></td><td data-label="Category">billing</td><td data-label="Detail">UPI ananya@okicici verified</td><td data-label="IP"><span class="mono text-xs">103.216.52.8</span></td></tr><tr><td data-label="When"><span class="mono text-xs">Oct 7, 9:31 AM</span></td><td data-label="Event"><b>PASSWORD_CHANGED</b></td><td data-label="Category">auth</td><td data-label="Detail">Password rotation completed</td><td data-label="IP"><span class="mono text-xs">49.37.201.6</span></td></tr><tr><td data-label="When"><span class="mono text-xs">Oct 6, 4:20 PM</span></td><td data-label="Event"><b>PROFILE_UPDATED</b></td><td data-label="Category">account</td><td data-label="Detail">Company title changed</td><td data-label="IP"><span class="mono text-xs">103.216.44.19</span></td></tr><tr><td data-label="When"><span class="mono text-xs">Oct 5, 3:47 AM</span></td><td data-label="Event"><b>LOGIN_FAILED</b></td><td data-label="Category">auth</td><td data-label="Detail">Failed sign-in (wrong password)</td><td data-label="IP"><span class="mono text-xs">185.220.101.4</span></td></tr></tbody></table></div></div>
   
 </div>
   
@@ -76,22 +73,13 @@
   <span class="page-cur">1</span>
   <button class="btn btn-ghost btn-sm"><span>Next</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
 </div></div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (1)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><a class="btn btn-primary btn-sm" href="#proto-state-matrix">Review workspace state</a><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body is-expanded">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>Activity · Nestlancer</h3><span class="badge tone-neutral" style="font-size:11px">clients/026-settings-activity.webp</span></div><p>Settings &gt; Activity (Rahul Desai): &quot;Recent actions on your account.&quot; LOGIN entries &quot;User signed in successfully&quot; from 1m ago, 20h ago, 2d, 3d, 4d; final entry LOGOUT &quot;User signed out&quot; 4d ago.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>account activity desai entries entry final login logout rahul recent settings signed successfully </p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">1 states recorded for this route — values as captured in the clients screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>settings/activity</b><span class="ref-tag mono">026</span></div><ul class="ref-facts"><li>Settings &gt; Activity (Rahul Desai): &quot;Recent actions on your account.&quot; LOGIN entries &quot;User signed in successfully&quot; from 1m ago, 20h ago, 2d, 3d, 4d; final entry LOGOUT &quot;User signed out&quot; 4d ago</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>

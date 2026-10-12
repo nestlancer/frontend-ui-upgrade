@@ -7,25 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
-<!-- PROTO-STYLE-START --><style>
-@media (min-width: 961px) {
-  html, body { height: 975px !important; max-height: 975px !important; overflow: hidden !important; }
-  .shell { height: 975px !important; max-height: 975px !important; min-height: 0 !important; overflow: hidden !important; }
-  .main { height: 975px !important; max-height: 975px !important; overflow-y: auto !important; overflow-x: hidden !important; }
-}
-@media (min-width: 961px) {
-  .sidebar { background: #FAFDFC !important; border-color: #F0F5F4 !important; }
-  .sidebar .sb-item:not(.active) { color: #98A6A3 !important; }
-  .sidebar .sb-label { color: #B0BDBA !important; }
-  .panel, .stats, .stat, .chip { border-color: #EFF4F3 !important; box-shadow: none !important; }
-  .cover { background: #F2F7F6 !important; color: #3D4A46 !important; border: 1px solid #E6EEEE !important; }
-}
-</style><!-- PROTO-STYLE-END -->
 </head>
-<body class="">
+<body class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
-<div class="shell">
-<aside class="sidebar" aria-label="Operator console navigation">
+<div class="shell" id="app-shell">
+<button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
+<aside class="sidebar" id="app-sidebar" aria-label="Operator console navigation">
 <div class="sb-head">
   <a href="../../dashboard/index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
   <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
@@ -63,6 +50,7 @@
 </div></aside>
 <div class="main">
 <header class="topbar">
+  <button class="sb-toggle" type="button" data-sb-toggle aria-label="Open navigation" aria-expanded="false" aria-controls="app-sidebar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
   <button class="btn-icon btn sm" title="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="../../dashboard/index.html">Dashboard</a><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><b>User detail</b></nav>
   <div class="flex items-center gap-1 ml-auto shrink-0"><div class="topsearch"><span class="in-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input placeholder="Search pages…"><span class="kbd">⌘K</span></div>
@@ -138,12 +126,12 @@
 
 <section class="panel mb-5">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Active sessions (6 devices) &amp; Activity log (602 events)</h2><div class="panel-sub">Page 1 of 2 (6 total) · Page 1 of 61 (602 total) — User signed in successfully (LOGIN · auth)</div></div></div>
-  <div class="tbl-wrap"><table class="tbl tbl-compact">
+  <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
     <thead><tr><th>Device</th><th>IP Address</th><th>Started</th><th>Action</th></tr></thead>
     <tbody>
-      <tr><td>Chrome on Linux</td><td class="mono text-xs">136.86.144.132</td><td class="text-xs dim">Oct 10, 2026, 11:57 AM · 11:51 AM</td><td><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke · Confirm / Cancel</span></td></tr>
-      <tr><td>Chrome on Linux</td><td class="mono text-xs">34.83.1.1</td><td class="text-xs dim">Oct 10, 2026, 10:55 AM · 10:25 AM</td><td><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke</span></td></tr>
-      <tr><td>Chrome on Linux</td><td class="mono text-xs">34.168.44.144</td><td class="text-xs dim">Oct 10, 2026, 8:16 AM</td><td><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke</span></td></tr>
+      <tr><td data-label="Device">Chrome on Linux</td><td data-label="IP Address" class="mono text-xs">136.86.144.132</td><td data-label="Started" class="text-xs dim">Oct 10, 2026, 11:57 AM · 11:51 AM</td><td data-label="Action"><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke · Confirm / Cancel</span></td></tr>
+      <tr><td data-label="Device">Chrome on Linux</td><td data-label="IP Address" class="mono text-xs">34.83.1.1</td><td data-label="Started" class="text-xs dim">Oct 10, 2026, 10:55 AM · 10:25 AM</td><td data-label="Action"><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke</span></td></tr>
+      <tr><td data-label="Device">Chrome on Linux</td><td data-label="IP Address" class="mono text-xs">34.168.44.144</td><td data-label="Started" class="text-xs dim">Oct 10, 2026, 8:16 AM</td><td data-label="Action"><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke</span></td></tr>
     </tbody>
   </table></div>
 </section>
@@ -169,9 +157,9 @@
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent requests</h2></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../../requests/index.html">All requests →</a></div></div>
-  <div class=""><div class="tbl-wrap"><table class="tbl  ">
+  <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th>Request</th><th>Status</th><th>Updated</th></tr></thead>
-<tbody><tr><td>AUDIT-P23-LINE-20261005-7r0l Request</td><td><span class="badge tone-warning">Submitted</span></td><td><span class="text-xs dim">Oct 6</span></td></tr><tr><td>AUDIT-P23-SUPP-20261005-6grw Request</td><td><span class="badge tone-warning">Submitted</span></td><td><span class="text-xs dim">Oct 6</span></td></tr><tr><td>AUDIT-P25-20261005-73dhk Project Fixture</td><td><span class="badge tone-info">Converted To Project</span></td><td><span class="text-xs dim">Oct 5</span></td></tr></tbody></table></div></div>
+<tbody><tr><td data-label="Request">AUDIT-P23-LINE-20261005-7r0l Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td><td data-label="Updated"><span class="text-xs dim">Oct 6</span></td></tr><tr><td data-label="Request">AUDIT-P23-SUPP-20261005-6grw Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td><td data-label="Updated"><span class="text-xs dim">Oct 6</span></td></tr><tr><td data-label="Request">AUDIT-P25-20261005-73dhk Project Fixture</td><td data-label="Status"><span class="badge tone-info">Converted To Project</span></td><td data-label="Updated"><span class="text-xs dim">Oct 5</span></td></tr></tbody></table></div></div>
   
 </div>
     
@@ -238,28 +226,13 @@
 </div>
     <div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div>Suspension blocks sign-in immediately and hides the client from new intake. Their data and documents are never deleted automatically.</div></div>
   </div>
-</div><!-- PROTO-UPGRADE-START -->
-
-<section class="state-matrix" id="proto-state-matrix" aria-label="Interactive Screen States &amp; Specifications">
-  <div class="state-matrix-head">
-    <div>
-      <h2 class="panel-title" style="font-size:14px;margin:0">Interactive Screen States &amp; Reference Specifications (7)</h2>
-      <div class="panel-sub" style="font-size:12px">Verified 2030 UI state coverage and audit data for this route.</div>
-    </div>
-    <div class="flex items-center gap-2"><span class="badge tone-success">Synced</span></div>
-  </div>
-  <div class="state-matrix-body">
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>User detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/002-user-details-sole-administrator-safeguards.webp</span></div><p>Operator user detail (Riya Kapoor, ADMIN, ACTIVE): &quot;This is the only administrator account. Role demotion, suspension, and deletion are blocked.&quot; Requests 0, Projects 0, Total paid ₹0. Actions: View media, Pipeline hub, Force password reset, Set password, End all sessions, Export data, Deactivate user (disabled; admins cannot be impersonated). Active sessions 8 devices. Activity log 510 events.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>User detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/108-user-details-deactivation-confirmation.webp</span></div><p>Users &gt; Arjun Mehta (client) &gt; Deactivate user confirmation: &quot;This soft-deletes the account (sets deletedAt). The user can be restored later.&quot; Cancel / Deactivate.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>User detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/109-user-details-edit-profile-dialog.webp</span></div><p>Users &gt; Arjun Mehta &gt; Edit profile dialog: firstName Arjun; lastName Mehta; email arjun.mehta@nestlancer.com; Cancel / Save.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>User detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/110-user-details-impersonation-reason-dialog.webp</span></div><p>Users &gt; Arjun Mehta &gt; Impersonate, &quot;Open this client account&quot; dialog: enter reason for impersonation (placeholder &quot;Reason for this action (audit log)&quot;); client tab opens only after confirm; session lasts 60 minutes and is audited; Cancel / Open client account (disabled until reason entered).</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>User detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/111-user-details-populated-client-account.webp</span></div><p>Users &gt; Arjun Mehta (USER, ACTIVE, arjun.mehta@nestlancer.com): Requests 26; Projects 5; Total paid ₹81,500.00; Lifetime paid ₹81,500.00; registered Oct 5, 2026; last active —. Role USER; status ACTIVE. Admin actions: View media, Pipeline hub, Force password reset, Set password, End all sessions, Export data, Impersonate, Deactivate user. Active sessions 6 devices (Chrome on Linux; IPs 136.86.144.132 and 34.83.1.1; 34.168.44.144). Activity log 602 events (LOGIN, auth, &quot;User signed in successfully&quot;; page 1 of 61). Operator notes: none on file.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>User detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/112-user-details-revoke-session-confirmation.webp</span></div><p>Users &gt; Arjun Mehta &gt; Revoke session dialog: &quot;This will sign the user out of this device.&quot; Cancel / Confirm.</p></article>
-    <article class="state-card"><div class="flex items-center justify-between gap-2 mb-1"><h3>User detail · Admin</h3><span class="badge tone-neutral" style="font-size:11px">admin/113-user-details-set-password-dialog.webp</span></div><p>Users &gt; Arjun Mehta &gt; Set new password dialog: New password and Confirm password fields; &quot;Minimum 8 characters. Updating the password ends all sessions.&quot;; Cancel / Update password.</p></article>
-    <div class="state-card" style="grid-column:1/-1;font-size:11.5px;color:var(--ink-3)"><h3>Audit Token Index</h3><p>account active activity admin administrator admins arjun audit audited blocked cancel cannot characters chrome client confirm confirmation deactivate deletedat deletion demotion detail device devices disabled email enter entered events export fields firstname force impersonate impersonated impersonation kapoor lastname lasts later lifetime linux login media mehta minimum minutes nestlancer notes opens operator password pipeline placeholder profile projects reason registered requests reset restored revoke session sessions signed soft-deletes successfully suspension total until update updating users 136.86 144 144.132 168.44 2026 510 602 81500.00</p></div>
-  </div>
+</div><section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
+<div class="ref-panel-head">
+  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
+  <p class="ref-sum-sub">7 states recorded for this route — values as captured in the admin screenshots</p>
+</div>
+<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>users/… — User details — Sole administrator safeguards</b><span class="ref-tag mono">002</span></div><ul class="ref-facts"><li></li><li>Operator user detail (Riya Kapoor, ADMIN, ACTIVE): &quot;This is the only administrator account. Role demotion, suspension, and deletion are blocked.&quot; Requests 0, Projects 0, Total paid ₹0. Actions: View media, Pipeline hub, Force password reset, Set password, End all sessions, Export data, Deactivate user (disabled</li><li>admins cannot be impersonated). Active sessions 8 devices. Activity log 510 events</li></ul></li><li class="ref-row"><div class="ref-head"><b>users/… — User details — Deactivation confirmation</b><span class="ref-tag mono">108</span></div><ul class="ref-facts"><li>Users &gt; Arjun Mehta (client) &gt; Deactivate user confirmation: &quot;This soft-deletes the account (sets deletedAt). The user can be restored later.&quot; Cancel / Deactivate</li></ul></li><li class="ref-row"><div class="ref-head"><b>users/… — User details — Edit profile dialog</b><span class="ref-tag mono">109</span></div><ul class="ref-facts"><li>Users &gt; Arjun Mehta &gt; Edit profile dialog: firstName Arjun; lastName Mehta; email arjun.mehta@nestlancer.com; Cancel / Save</li></ul></li><li class="ref-row"><div class="ref-head"><b>users/… — User details — Impersonation reason dialog</b><span class="ref-tag mono">110</span></div><ul class="ref-facts"><li>Users &gt; Arjun Mehta &gt; Impersonate, &quot;Open this client account&quot; dialog: enter reason for impersonation (placeholder &quot;Reason for this action (audit log)&quot;); client tab opens only after confirm</li><li>session lasts 60 minutes and is audited; Cancel / Open client account (disabled until reason entered)</li></ul></li><li class="ref-row"><div class="ref-head"><b>users/… — User details — Populated client account</b><span class="ref-tag mono">111</span></div><ul class="ref-facts"><li>Users &gt; Arjun Mehta (USER, ACTIVE, arjun.mehta@nestlancer.com): Requests 26; Projects 5; Total paid ₹81,500.00; Lifetime paid ₹81,500.00; registered Oct 5, 2026; last active —. Role USER</li><li>status ACTIVE. Admin actions: View media, Pipeline hub, Force password reset, Set password, End all sessions, Export data, Impersonate, Deactivate user. Active sessions 6 devices (Chrome on Linux</li><li>IPs 136.86.144.132 and 34.83.1.1; 34.168.44.144). Activity log 602 events (LOGIN, auth, &quot;User signed in successfully&quot;; page 1 of 61). Operator notes: none on file</li></ul></li><li class="ref-row"><div class="ref-head"><b>users/… — User details — Revoke session confirmation</b><span class="ref-tag mono">112</span></div><ul class="ref-facts"><li>Users &gt; Arjun Mehta &gt; Revoke session dialog: &quot;This will sign the user out of this device.&quot; Cancel / Confirm</li></ul></li><li class="ref-row"><div class="ref-head"><b>users/… — User details — Set password dialog</b><span class="ref-tag mono">113</span></div><ul class="ref-facts"><li>Users &gt; Arjun Mehta &gt; Set new password dialog: New password and Confirm password fields; &quot;Minimum 8 characters. Updating the password ends all sessions.&quot;; Cancel / Update password</li></ul></li></ul>
 </section>
-<!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
