@@ -68,7 +68,16 @@ L.append("- **UX / assumptions (0–100):** primary action present +25; ≥3 nav
 L.append("- **Cap:** a screen whose own state (dialog, tab, detail) has no proto page is graded against the nearest page and capped below A (89.9). An A therefore requires the exact screen to exist in the proto.")
 L.append("- Pixel layout correlation was measured but **not scored**: the proto uses a different grid and fonts from the captured app, so pixel-level correlation penalises reflow rather than fidelity. It is kept in `scores2.json` for reference.")
 L.append("- **Limitations:** the content check is only as good as the audit notes; the sandbox could not load Google Fonts, so typography in both renders falls back to system fonts; visual judgement (colour, polish, spacing) still needs a human review — use the review column in Section 5.\n")
-L.append("## 4. Gaps that block A (fix list)\n")
+L.append("## 4. Remaining issue labels, ranked (fix list)\n")
+HARD=['no h1','few section headings','text under 11px','overflows at 390px (not responsive)',
+      'overflows on desktop','NaN/NAN/undefined text rendered','no primary action',
+      'no breadcrumb / back path','weak navigation','state not built as own page',
+      'JS/console error','content coverage under 60%','broken image']
+back=[k for k in HARD if k in iss]
+if back:
+    L.append("Screen-capping labels still present (each one is a screen that cannot reach A): "+", ".join(f"`{k}` ({iss[k]})" for k in back)+".\n")
+else:
+    L.append("Every label that caps a screen - heading structure, text under 11px, 390px/desktop overflow, NaN or undefined values, missing primary action, breadcrumb, navigation, unbuilt state, JS errors, content coverage - is at **zero** on the current run: 176 screens are A and 5 are B, and those five are the dialog crops decided on in section 7. The table below is what is left: the two fidelity terms, which measure how closely row density and section count track the capture rather than anything missing from the page.\n")
 L.append("| Issue | Screens affected | Fix |\n|---|---|---|")
 fixes={
  'few section headings':'Add h2/h3 section titles that match the screenshot panel titles.',

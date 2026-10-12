@@ -38,7 +38,9 @@ Score = 0.50 × **Fidelity** + 0.30 × **Health** + 0.20 × **UX**.
 - Pixel layout correlation was measured but **not scored**: the proto uses a different grid and fonts from the captured app, so pixel-level correlation penalises reflow rather than fidelity. It is kept in `scores2.json` for reference.
 - **Limitations:** the content check is only as good as the audit notes; the sandbox could not load Google Fonts, so typography in both renders falls back to system fonts; visual judgement (colour, polish, spacing) still needs a human review — use the review column in Section 5.
 
-## 4. Gaps that block A (fix list)
+## 4. Remaining issue labels, ranked (fix list)
+
+Every label that caps a screen - heading structure, text under 11px, 390px/desktop overflow, NaN or undefined values, missing primary action, breadcrumb, navigation, unbuilt state, JS errors, content coverage - is at **zero** on the current run: 176 screens are A and 5 are B, and those five are the dialog crops decided on in section 7. The table below is what is left: the two fidelity terms, which measure how closely row density and section count track the capture rather than anything missing from the page.
 
 | Issue | Screens affected | Fix |
 |---|---|---|
