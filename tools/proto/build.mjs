@@ -62,6 +62,21 @@ const appOf = (e) => {
   return e.path.startsWith('apps/landing') ? 'landing' : 'web';
 };
 
+// Design rule: every screen carries one primary action. When a page header action
+// row has no primary button, promote its last secondary action (label/href unchanged).
+function promotePrimary(body) {
+  if (/btn-primary/.test(body)) return body;
+  const at = body.indexOf('class="phead-actions"');
+  if (at < 0) return body;
+  const end = body.indexOf('</div>', at);
+  if (end < 0) return body;
+  const seg = body.slice(at, end);
+  const k = seg.lastIndexOf('btn btn-secondary');
+  if (k < 0) return body;
+  const seg2 = seg.slice(0, k) + 'btn btn-primary' + seg.slice(k + 'btn btn-secondary'.length);
+  return body.slice(0, at) + seg2 + body.slice(end);
+}
+
 function render(e) {
   const route = e.path;
   const desc = e.desc || `Nestlancer ${appOf(e)} prototype — ${e.title}`;
@@ -84,7 +99,7 @@ function render(e) {
     html = authCenterPage({ route, title: e.title, desc, card: e.card(e), foot: e.foot ? e.foot(e) : '' });
   } else if (e.app) {
     html = appPage({
-      route, title: e.title, desc, body: e.body(e), app: e.app,
+      route, title: e.title, desc, body: promotePrimary(e.body(e)), app: e.app,
       crumbs: [
         { l: 'Dashboard', href: dashHome(e.app) },
         { l: e.crumb || e.title.split('·')[0].trim() },
@@ -225,7 +240,8 @@ const hubHtml = mktPage({
     .hub-list{padding:6px 8px}.hub-row{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:8px}
     .hub-row:hover{background:var(--bg-hover)}.hub-dot{width:6px;height:6px;border-radius:99px;flex-shrink:0}
     .hub-p{font-size:11.5px;color:var(--ink-1);min-width:280px}.hub-t{font-size:11.5px;color:var(--ink-3);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    .hub-tag{font-size:9.5px;font-family:var(--font-mono);color:var(--brand-11);background:var(--brand-1);border:1px solid var(--brand-4);padding:1px 6px;border-radius:5px}
+    .hub-tag{font-size:11px;font-family:var(--font-mono);color:var(--brand-11);background:var(--brand-1);border:1px solid var(--brand-4);padding:1px 6px;border-radius:5px}
+  @media (max-width:720px){.hub-p{min-width:0;font-size:11px}.hub-t{display:none}}
   </style>
 </div>`,
 });

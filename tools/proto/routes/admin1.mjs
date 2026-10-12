@@ -12,7 +12,7 @@ const hexId = (s) => `<span class="mono" style="font-size:11px;color:var(--ink-3
 
 const capacityPanel = `
 <div class="panel mb-5">
-  <div class="panel-head"><div><div class="panel-title">Capacity dashboard</div><div class="panel-sub">Studio load vs configured limits. Adjust thresholds when intake should slow down.</div></div><span class="badge tone-success">Intake open</span></div>
+  <div class="panel-head"><div><h3 class="panel-title">Capacity dashboard</h3><div class="panel-sub">Studio load vs configured limits. Adjust thresholds when intake should slow down.</div></div><span class="badge tone-success">Intake open</span></div>
   <div class="panel-body" style="padding-top:4px">
     <div class="grid g4 gap-4 mb-4">
       ${[['Active projects','7'],['Queued requests','16'],['Capacity used','28%'],['Max active','25']].map(([l,v])=>`<div style="padding:12px 14px;border-right:1px solid var(--line)"><div class="text-xs dim">${l}</div><div class="mono font-bold mt-1" style="font-size:19px">${v}</div></div>`).join('')}
@@ -27,7 +27,7 @@ const capacityPanel = `
 </div>`;
 
 const reqRows = REQ_LIST.map((q) => [
-  `<span class="mono" style="font-size:11.5px">${q.id.slice(0, 8)}…</span> <button class="btn btn-ghost btn-xs mono" style="height:20px;font-size:9.5px;padding:0 5px">COPY</button>`,
+  `<span class="mono" style="font-size:11.5px">${q.id.slice(0, 8)}…</span> <button class="btn btn-ghost btn-xs mono" style="height:20px;font-size:11px;padding:0 5px">COPY</button>`,
   `<b style="font-size:12.8px">${q.t}</b>`,
   badge(q.status, q.tone),
   `<span class="dim">${q.cat}</span>`,
@@ -48,7 +48,7 @@ export default [
     path: 'apps/admin/login/', title: 'Operator sign-in · Admin', auth: 'center', app: 'admin',
     card: (r) => `
 <div class="auth-card">
-  <div class="flex items-center gap-2 mb-5">${icon('shield',16)}<b style="font-size:14px;letter-spacing:-.01em">Operator sign-in</b></div>
+  <div class="flex items-center gap-2 mb-5">${icon('shield',16)}<h1 style="font-size:14px;font-weight:650;letter-spacing:-.01em">Operator sign-in</h1></div>
   <div class="field mb-4"><label class="label">Work email <span class="req">*</span></label><input class="input" type="email" placeholder="admin@nestlancer.com" autocomplete="username"></div>
   <div class="field mb-4"><label class="label">Password <span class="req">*</span></label><input class="input" type="password" placeholder="Enter your operator password" autocomplete="current-password"></div>
   <label class="check mb-5"><input type="checkbox"> <span>Trust this device for 12 hours</span></label>
@@ -107,7 +107,7 @@ ${stats([
 </div>
 <div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
   ${panel({ title: 'Request volume over time', sub: 'Inbound briefs · last 30 days · live', actions: '<span class="badge tone-info">46 total</span>', pad: true, body: barChart({ data: [3,2,4,3,5,4,3,2,4,6,3,2,4,3,5,22,9,4,3,2,3,4,2,3], labels: ['09-11','09-18','09-26','10-03','10-10'] }) + '<div class="text-xs dim mono mt-2">30 points · latest 0</div>' })}
-  <div class="panel"><div class="panel-head"><div><div class="panel-title">Moderation queues</div><div class="panel-sub">Flagged + contact inbox</div></div></div>
+  <div class="panel"><div class="panel-head"><div><h3 class="panel-title">Moderation queues</h3><div class="panel-sub">Flagged + contact inbox</div></div></div>
     ${[['shield','Flagged messages','0','apps/admin/moderation/'],['inbox','New contact mail','17','apps/admin/contact/'],['clock','Pending settlements','16','apps/admin/payments/'],['message','Message center','→','apps/admin/messages/']].map(([i,t,v,h])=>`
     <a class="panel-row" href="${LT(r,h)}"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)">${icon(i,13)}</span><b style="font-size:13px" class="flex-1">${t}</b><span class="mono font-semibold">${v}</span></a>`).join('')}
   </div>
@@ -235,7 +235,7 @@ ${phead({ eyebrow: 'QUOTE BUILDER', title: 'Create quote', sub: 'Price the reque
       ['Quote ID','<span class="mono">#01a10f80 (draft)</span>'],
       ['Engineer rec.','<span class="mono">₹1,770 pilot</span>'],
     ])})}
-    <div class="panel"><div class="panel-head"><div class="panel-title">Send</div></div>
+    <div class="panel"><div class="panel-head"><h3 class="panel-title">Send</h3></div>
       <div class="panel-body">
         <div class="check mb-3"><input type="checkbox" checked> <span>Email client on send</span></div>
         <div class="check mb-4"><input type="checkbox" checked> <span>Attach PDF + service agreement</span></div>

@@ -56,7 +56,7 @@ const workCard = (r, w, i) => `
 <a href="${LT(r, 'apps/landing/portfolio/[id]/')}" class="mkt-card reveal" style="overflow:hidden;display:block;--d:${i * 60}ms">
   ${cover(w.sector.toUpperCase(), w.v, 'padding-top:50%')}
   <div style="padding:16px 18px">
-    <div class="eyebrow" style="font-size:10px">${w.sector.toUpperCase()}</div>
+    <div class="eyebrow" style="font-size:11px">${w.sector.toUpperCase()}</div>
     <div class="font-bold mt-1" style="font-size:15px;letter-spacing:-.02em">${w.t}</div>
     <div class="text-sm muted mt-1" style="line-height:1.55">${w.result}</div>
     <div class="text-xs dim mono mt-3" style="letter-spacing:.04em">${w.tags.join(' · ')}</div>
@@ -87,8 +87,8 @@ const home = (r) => `
           <div class="font-bold mt-2" style="font-size:15px;letter-spacing:-.02em">Frontend development — SaaS Landing Redesign</div>
           <div class="flex gap-2 mt-2 mb-3"><span class="badge tone-info">In progress</span><span class="badge tone-success">Deposit paid</span><span class="mono font-semibold ml-auto">Due Fri · ₹48,000</span></div>
           <div class="prog grad mb-4"><i class="bar" style="width:68%"></i></div>
-          <div class="panel-row" style="padding:10px 2px"><span class="avatar" style="width:24px;height:24px;font-size:9px;background:#DCF3EF;color:#0B6660">NL</span><div class="min-w-0"><b style="font-size:12.5px">Staging build pushed</b><div class="text-xs dim">14 min ago · deliverable linked</div></div></div>
-          <div class="panel-row" style="padding:10px 2px"><span class="avatar" style="width:24px;height:24px;font-size:9px;background:#F3E8D7;color:#8A5A1D">RH</span><div class="min-w-0"><b style="font-size:12.5px">Rahul: Hero CTA above the fold?</b><div class="text-xs dim">1h ago · thread</div></div></div>
+          <div class="panel-row" style="padding:10px 2px"><span class="avatar" style="width:24px;height:24px;font-size:11px;background:#DCF3EF;color:#0B6660">NL</span><div class="min-w-0"><b style="font-size:12.5px">Staging build pushed</b><div class="text-xs dim">14 min ago · deliverable linked</div></div></div>
+          <div class="panel-row" style="padding:10px 2px"><span class="avatar" style="width:24px;height:24px;font-size:11px;background:#F3E8D7;color:#8A5A1D">RH</span><div class="min-w-0"><b style="font-size:12.5px">Rahul: Hero CTA above the fold?</b><div class="text-xs dim">1h ago · thread</div></div></div>
         </div>
         <div style="padding:18px">
           <div class="eyebrow mb-3">nl status — NL-204</div>
@@ -110,7 +110,7 @@ const home = (r) => `
        ['02.2 Quote','Fixed-price line items with milestones','Transparent breakdown. Accept locks scope. Revisions stay attached to the milestone that owns them.','receipt'],
        ['02.3 Build','Live progress, files, and messages','Stakeholders see status without chasing updates. Studio ships; clients approve in context.','activity'],
        ['02.4 Pay & release','Milestone pay with Razorpay / UPI','Deposit → milestone → final. Invoice PDFs at every payment gate.','card']]
-      .map(([k, t, d, i], ix) => `<div class="mkt-card reveal" style="padding:22px;--d:${ix * 80}ms"><span class="avatar sq" style="width:34px;height:34px;border-radius:9px;background:var(--brand-2);color:var(--brand-11)">${icon(i, 15)}</span><div class="eyebrow mt-4" style="font-size:10px">${k}</div><div class="font-bold mt-2" style="font-size:15px;letter-spacing:-.015em">${t}</div><p class="text-sm muted mt-2" style="line-height:1.6">${d}</p></div>`).join('')}
+      .map(([k, t, d, i], ix) => `<div class="mkt-card reveal" style="padding:22px;--d:${ix * 80}ms"><span class="avatar sq" style="width:34px;height:34px;border-radius:9px;background:var(--brand-2);color:var(--brand-11)">${icon(i, 15)}</span><div class="eyebrow mt-4" style="font-size:11px">${k}</div><div class="font-bold mt-2" style="font-size:15px;letter-spacing:-.015em">${t}</div><p class="text-sm muted mt-2" style="line-height:1.6">${d}</p></div>`).join('')}
   </div>
   <div class="grid g2 gap-6 mt-8">
     <div class="mkt-card" style="padding:22px">
@@ -254,7 +254,7 @@ ${pageHero('FIG · Work', 'Selected work', 'Case studies in sequence — product
     <a href="${LT(r, 'apps/landing/portfolio/[id]/')}" class="mkt-card reveal" style="overflow:hidden;display:block;--d:${(i % 3) * 70}ms">
       ${cover(w.sector.toUpperCase(), w.v, 'padding-top:52%', '0' + (i + 1))}
       <div style="padding:18px">
-        <div class="flex items-center justify-between"><span class="eyebrow" style="font-size:10px">${w.sector.toUpperCase()}</span><span class="mono text-xs dim">${w.date}${w.featured ? ' · Featured' : ''}</span></div>
+        <div class="flex items-center justify-between"><span class="eyebrow" style="font-size:11px">${w.sector.toUpperCase()}</span><span class="mono text-xs dim">${w.date}${w.featured ? ' · Featured' : ''}</span></div>
         <div class="font-bold mt-2" style="font-size:15px;letter-spacing:-.02em">${w.t}</div>
         <div class="text-sm muted mt-2" style="line-height:1.55">${w.result}</div>
         <div class="flex gap-2 mt-3 flex-wrap">${w.tags.map((t) => `<span class="chip" style="height:22px;font-size:11px">${t}</span>`).join('')}</div>
@@ -335,7 +335,7 @@ const blogList = (r) => `
       ${POSTS.slice(1).map((p, i) => `<a href="${LT(r, 'apps/landing/blog/[slug]/')}" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:${(i % 3) * 60}ms">
         ${cover(p.cat.toUpperCase(), (i % 6) + 1, 'padding-top:50%')}
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:10px">${p.cat.toUpperCase()}</div>
+          <div class="eyebrow" style="font-size:11px">${p.cat.toUpperCase()}</div>
           <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">${p.t}</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">${p.excerpt}</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">${p.min} min read · ${p.views || 1} views</span></div>
@@ -380,7 +380,7 @@ const article = (r) => `
 </article></section>
 <section class="mkt-section"><div class="mkt-wrap">
   <h2 class="h3 mb-4">Related posts</h2>
-  <div class="grid g3 gap-4">${POSTS.slice(1, 4).map((p) => `<a class="mkt-card" style="padding:18px;display:block" href="${LT(r, 'apps/landing/blog/[slug]/')}"><div class="eyebrow" style="font-size:10px">${p.cat.toUpperCase()}</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">${p.t}</div><div class="text-xs dim mono mt-2">${p.min} min read</div></a>`).join('')}</div>
+  <div class="grid g3 gap-4">${POSTS.slice(1, 4).map((p) => `<a class="mkt-card" style="padding:18px;display:block" href="${LT(r, 'apps/landing/blog/[slug]/')}"><div class="eyebrow" style="font-size:11px">${p.cat.toUpperCase()}</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">${p.t}</div><div class="text-xs dim mono mt-2">${p.min} min read</div></a>`).join('')}</div>
 </div></section>`;
 
 // ---------------------------------------------------------------- export

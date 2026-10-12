@@ -28,7 +28,7 @@ const postCard = (r,p,i) => `
 <a href="${LT(r,'apps/web/blog/[slug]/')}" class="mkt-card" style="overflow:hidden;display:block">
   ${cover(p.cat.toUpperCase(),(i%6)+1,'padding-top:44%')}
   <div style="padding:14px 16px">
-    <div class="eyebrow" style="font-size:9.5px">${p.cat.toUpperCase()}</div>
+    <div class="eyebrow" style="font-size:11px">${p.cat.toUpperCase()}</div>
     <b style="font-size:13.5px;letter-spacing:-.015em;line-height:1.35;display:block;margin-top:4px">${p.t}</b>
     <div class="text-xs dim mono mt-2">Nestlancer Editorial · ${p.min} min</div>
   </div>
@@ -57,7 +57,7 @@ export default [
       </div>
       <div class="grid" style="grid-template-columns:repeat(5,1fr)">
         ${[['Open requests','1','in your pipeline'],['Active projects','1','0 completed'],['Pending quotes','0','awaiting decision'],['Unread messages','6','waiting for you'],['Notifications','32','latest updates']].map(([l,v,n])=>`
-        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">${l}</div><div class="mono" style="font-size:21px;font-weight:700;margin-top:2px">${v}</div><div class="text-xs dim" style="font-size:10px">${n}</div></div>`).join('')}
+        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">${l}</div><div class="mono" style="font-size:21px;font-weight:700;margin-top:2px">${v}</div><div class="text-xs dim" style="font-size:11px">${n}</div></div>`).join('')}
       </div>
       <div class="panel-row" style="border-top:1px solid var(--paper-line)">
         <span class="avatar hue-2">AI</span>
@@ -245,7 +245,7 @@ ${hero('NESTLANCER JOURNAL','Latest articles','Hiring playbooks, engineering dee
   <div class="divider my-8"></div>
   <div class="grid g3 gap-4">${POSTS.slice(1,4).map((p,i)=>`
     <a class="mkt-card" style="padding:16px;display:block" href="${LT(r,'apps/web/blog/[slug]/')}">
-    <div class="eyebrow" style="font-size:9.5px">${p.cat.toUpperCase()}</div>
+    <div class="eyebrow" style="font-size:11px">${p.cat.toUpperCase()}</div>
     <b style="font-size:13px;line-height:1.4;display:block;margin-top:4px">${p.t}</b>
     <div class="text-xs dim mono mt-2">${p.min} min read</div></a>`).join('')}
   </div>
@@ -290,7 +290,7 @@ ${hero('READING LIST','Your bookmarks','Saved articles sync to your client accou
     <div class="mkt-card" style="padding:18px;display:flex;gap:16px;align-items:center">
       ${cover(p.cat.toUpperCase(),(i%6)+1,'width:120px;height:76px;flex-shrink:0')}
       <div class="min-w-0 flex-1">
-        <div class="eyebrow" style="font-size:9.5px">${p.cat.toUpperCase()}</div>
+        <div class="eyebrow" style="font-size:11px">${p.cat.toUpperCase()}</div>
         <b style="font-size:14px;letter-spacing:-.015em">${p.t}</b>
         <div class="text-xs dim mono mt-1">Saved Oct 9, 2026 · ${p.min} min read</div>
       </div>
@@ -386,7 +386,7 @@ ${hero('TRUST','Verify a Nestlancer document','Every quote, contract, invoice, a
   <div class="panel mb-6" style="border-color:var(--t-success-bd)">
     <div class="panel-head" style="background:var(--t-success-bg);border-bottom-color:var(--t-success-bd)">
       <div class="flex items-center gap-3"><span class="avatar sq" style="background:#fff;color:var(--t-success-tx)">${icon('check-circle',18)}</span>
-      <div><div class="panel-title" style="color:var(--t-success-tx)">Authentic · issued by Nestlancer</div><div class="panel-sub">Signature chain and content hash verified 41 seconds ago.</div></div></div>
+      <div><h3 class="panel-title" style="color:var(--t-success-tx)">Authentic · issued by Nestlancer</h3><div class="panel-sub">Signature chain and content hash verified 41 seconds ago.</div></div></div>
       <span class="badge tone-success">Verified</span>
     </div>
     <div class="panel-body">

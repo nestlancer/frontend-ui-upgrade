@@ -48,7 +48,7 @@ ${backlink(r, 'apps/admin/payments/', 'Back to payments')}
 ${phead({ eyebrow: 'FINANCE', title: 'Payout accounts', sub: 'Where client money settles and how refunds flow out. Changes require two-operator approval.' })}
 <div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="panel">
-    <div class="panel-head"><div class="panel-title">Settlement accounts</div><span class="badge tone-success">2 active</span></div>
+    <div class="panel-head"><h3 class="panel-title">Settlement accounts</h3><span class="badge tone-success">2 active</span></div>
     ${[['HDFC Bank — Current ···· 8821','Primary settlement · Nestlancer Studio Pvt Ltd · HDFC0001232','Primary','success'],
        ['ICICI Bank — Current ···· 7712','Refund float account · ICIC0000442','Refund float','info'],
        ['RazorpayX — VAN 919900001234','Gateway-linked virtual account for NEFT matching','Gateway','neutral']].map(([t,s,l,tn])=>`
@@ -106,7 +106,7 @@ ${backlink(r, 'apps/admin/payments/', 'Back to payments')}
   <div class="flex-col gap-5">
     ${note('warn','alert-triangle','<b>Verification needed.</b> The client reported a bank transfer with UTR <span class="mono">PUNB1023456</span>. Match against the HDFC ···· 8821 statement before marking paid — the client portal shows “Processing” until then.')}
     <div class="panel">
-      <div class="panel-head"><div class="panel-title">Statement match</div><span class="text-xs dim">Last sync today, 6:00 AM</span></div>
+      <div class="panel-head"><h3 class="panel-title">Statement match</h3><span class="text-xs dim">Last sync today, 6:00 AM</span></div>
       <div class="panel-body">
         ${table({ cols: [{l:'Bank entry'},{l:'Date'},{l:'Amount',r:1},{l:'Match'}], rows: [
           [`<span class="mono" style="font-size:11.5px">NEFT PUNB1023456 · KARTHIK MENON SELF</span>`,'<span class="text-xs">Oct 10</span>','<span class="mono font-semibold">₹36,000.00</span>',badge('Exact UTR match','success')],
@@ -150,7 +150,7 @@ ${stats([
   { label: 'Avg resolution', value: '11d', note: 'Razorpay window: 15d', icon: 'clock' },
 ], 4)}
 <div class="panel mt-5">
-  <div class="panel-head"><div class="panel-title">Open dispute — ₹4,200.00</div><span class="badge tone-danger">Response due Oct 14</span></div>
+  <div class="panel-head"><h3 class="panel-title">Open dispute — ₹4,200.00</h3><span class="badge tone-danger">Response due Oct 14</span></div>
   <div class="panel-body">
     <div class="grid gap-5" style="grid-template-columns:1fr 1fr">
       ${kv([['Reason','Service not rendered (client claims)'],['Charge','NL-RCPT-2026-000011 · card ···· 7712'],['Client','Divya Sharma — Wellness suite'],['Opened','Sep 29, 2026 · Razorpay']])}
@@ -237,7 +237,7 @@ ${panel({ pad: true, body: `
   </div>
   <div class="flex gap-2 mt-3 flex-wrap">${['Role: client','Role: operator','Has: open requests','Has: outstanding dues','Joined < 30d','State: suspended'].map((c,i)=>`<span class="chip${i<2?' active':''}">${c}</span>`).join('')}</div>` })}
 <div class="panel mt-5">
-  <div class="panel-head"><div class="panel-title">Results — “nair”</div><span class="text-xs dim">2 matches · 30 ms</span></div>
+  <div class="panel-head"><h3 class="panel-title">Results — “nair”</h3><span class="text-xs dim">2 matches · 30 ms</span></div>
   ${table({ cols: [{l:'User'},{l:'Matched on'},{l:'Status'},{l:''}], rows: [
     [`<div class="flex items-center gap-2"><span class="avatar hue-1">PN</span><b>Priya Nair</b></div>`,'Name · 5 requests · NL-204 active',badge('Active','success'),`<a class="link text-xs font-semibold" href="${LT(r,'apps/admin/users/[id]/')}">View →</a>`],
     [`<div class="flex items-center gap-2"><span class="avatar hue-4">SN</span><b>Sandeep Nair</b></div>`,'Email snair@… · IT approver at NLS',badge('Invited','warning'),`<a class="link text-xs font-semibold" href="${LT(r,'apps/admin/users/[id]/')}">View →</a>`],

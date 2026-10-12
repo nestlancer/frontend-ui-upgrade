@@ -67,7 +67,7 @@ ${phead({ eyebrow: 'SUPPORT', title: 'Messages', sub: 'Review your inbox at a gl
   actions: `<span class="pill mr-1"><span class="dot"></span> Live</span><a class="btn btn-secondary" href="${LT(r,'apps/web/messages/new/')}">Message support</a><a class="btn btn-primary" href="${LT(r,'apps/web/messages/inbox/')}">Open messaging panel</a>` })}
 ${stats(msgHubStats, 3)}
 <div class="panel mt-5">
-  <div class="panel-head"><div><div class="panel-title">Recent conversations</div><div class="panel-sub">Latest activity in your inbox</div></div><a class="btn btn-primary btn-sm" href="${LT(r,'apps/web/messages/inbox/')}">Open messaging panel</a></div>
+  <div class="panel-head"><div><h3 class="panel-title">Recent conversations</h3><div class="panel-sub">Latest activity in your inbox</div></div><a class="btn btn-primary btn-sm" href="${LT(r,'apps/web/messages/inbox/')}">Open messaging panel</a></div>
   ${CONVOS.slice(0, 3).map((c) => convItem(c.name, c.kind, c.s, c.t, { unread: c.unread, hue: c.hue })).join('')}
 </div>`;
 
@@ -582,7 +582,7 @@ ${settingsTabs(r, 'account')}
     ${switchRow('Show phone on profile','')}
   ` })}
   <div class="panel" style="border-color:var(--t-danger-bd);background:linear-gradient(180deg,var(--t-danger-bg) 0%,var(--bg-card) 42%)">
-    <div class="panel-head" style="border-bottom-color:var(--t-danger-bd)"><div><div class="panel-title" style="color:var(--t-danger-tx)">Danger zone</div><div class="panel-sub">Export your data or permanently delete your account.</div></div></div>
+    <div class="panel-head" style="border-bottom-color:var(--t-danger-bd)"><div><h3 class="panel-title" style="color:var(--t-danger-tx)">Danger zone</h3><div class="panel-sub">Export your data or permanently delete your account.</div></div></div>
     <div class="panel-body grid gap-6" style="grid-template-columns:1fr 1fr">
       <div><b style="font-size:13.5px">Data export</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Request a copy of your account data. Processing may take a few minutes.</p><button class="btn btn-secondary btn-sm">${icon('download',13)} Request data export</button></div>
       <div><b style="font-size:13.5px">Delete account</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Schedules permanent deletion. You can cancel while it is still pending.</p>
@@ -610,7 +610,7 @@ ${settingsTabs(r, 'security')}
     <button class="btn btn-primary btn-sm mt-3">${icon('key',13)} Update password</button>` })}
   ${panel({ title: 'Two-factor authentication', actions: badge('Not enabled','warning'), body: `
     <div class="grid gap-4" style="grid-template-columns:auto 1fr">
-      <div style="width:120px;height:120px;border-radius:12px;background:var(--ink-1);display:flex;align-items:center;justify-content:center"><span class="mono" style="color:#7FE8DA;font-size:10px;letter-spacing:.1em">QR · TOTP</span></div>
+      <div style="width:120px;height:120px;border-radius:12px;background:var(--ink-1);display:flex;align-items:center;justify-content:center"><span class="mono" style="color:#7FE8DA;font-size:11px;letter-spacing:.1em">QR · TOTP</span></div>
       <div><b style="font-size:13.5px">Authenticator app (TOTP)</b>
       <p class="text-xs muted mt-1" style="line-height:1.6">Scan with 1Password, Authy, or Google Authenticator. Required for payouts over ₹1L once enabled.</p>
       <button class="btn btn-primary btn-sm mt-3">${icon('shield-check',13)} Enable 2FA</button></div>

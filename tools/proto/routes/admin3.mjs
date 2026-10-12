@@ -345,7 +345,7 @@ ${backlink(r, 'apps/admin/media/', 'Media center')}
 ${phead({ eyebrow: 'SAFETY', title: 'Quarantine', sub: 'Uploads held by the scanner until an operator clears or deletes them. They cannot be served anywhere.' })}
 ${empty('shield-alert', '1 file in quarantine', 'Held 12 days — review or it auto-purges at day 30.', `<button class="btn btn-secondary btn-sm">Notify uploader</button>`)}
 <div class="panel mt-5">
-  <div class="panel-head"><div class="panel-title">Held files</div><span class="badge tone-warning">1 pending</span></div>
+  <div class="panel-head"><h3 class="panel-title">Held files</h3><span class="badge tone-warning">1 pending</span></div>
   <div class="panel-row" style="align-items:flex-start">
     <span class="avatar sq shrink-0" style="width:40px;height:40px;background:var(--t-danger-bg);color:var(--t-danger-tx)">${icon('file-text',17)}</span>
     <div class="min-w-0 flex-1">
@@ -434,7 +434,7 @@ ${stats([
     ${[['Inquiries','23'],['Qualified','9'],['Quoted','6'],['Accepted','4']].map(([l,v],i)=>`
     <div class="mb-3"><div class="flex justify-between text-xs mb-1"><span>${l}</span><b class="mono">${v}</b></div><div class="prog"><i style="width:${[100,39,26,17][i]}%;background:${['var(--line-strong)','var(--t-info-dot)','var(--brand-8)','var(--t-success-dot)'][i]}"></i></div></div>`).join('')}` })}
   ${panel({ title: 'Client cohort retention', sub: 'First-year, monthly', pad: true, body: `
-    <div class="grid" style="grid-template-columns:auto repeat(5,1fr);gap:3px;font-size:10px;font-family:var(--font-mono)">
+    <div class="grid" style="grid-template-columns:auto repeat(5,1fr);gap:3px;font-size:11px;font-family:var(--font-mono)">
       ${['Cohort','M1','M2','M3','M4','M5','2025-Q2','100%','95%','91%','91%','88%','2025-Q3','100%','97%','94%','92%','—','2025-Q4','100%','96%','96%','—','—','2026-Q1','100%','98%','—','—','—'].map((c,i)=>{
         const head = i<6; const pct = /^[\d—]/.test(c) && c!=='2025-Q2'&&c!=='2025-Q3'&&c!=='2025-Q4'&&c!=='2026-Q1';
         const n = parseInt(c); const strong = pct && !isNaN(n) && n>=95;
@@ -492,7 +492,7 @@ ${stats([
   { label: 'Rotations due', value: '1', note: 'Read-only reporting key', icon: 'clock' },
 ], 3)}
 <div class="panel mt-5">
-  <div class="panel-head"><div class="panel-title">Keys</div><span class="text-xs dim">5 active · 2 revoked</span></div>
+  <div class="panel-head"><h3 class="panel-title">Keys</h3><span class="text-xs dim">5 active · 2 revoked</span></div>
   ${table({ cols: [{l:'Key'},{l:'Scope'},{l:'Created by'},{l:'Last used'},{l:'State'},{l:''}], rows: [
     ...[['nl_live_reports_…3f8a','read:collections, read:users','Sunita Rao','37 min ago','Rotating in 6d','warning'],
        ['nl_live_etl_…9c21','read:collections, write:audit','System','Live now','Active','success'],
@@ -503,7 +503,7 @@ ${stats([
     .map(([k,sc,cr,lu,st,tn])=>{
       const eyeIcon = icon('eye',12);
       return [`<span class="mono" style="font-size:11.5px">${k}</span> <button class="btn-icon btn sm" title="Reveal" onclick="void 0" style="vertical-align:middle">${eyeIcon}</button>`,
-      `<span class="mono" style="font-size:10.5px">${sc}</span>`,`<span class="dim">${cr}</span>`,
+      `<span class="mono" style="font-size:11px">${sc}</span>`,`<span class="dim">${cr}</span>`,
       `<span class="text-xs${lu.startsWith('Live')?' brand-text font-semibold':' dim'}">${lu}</span>`,
       badge(st,tn),
       `<div class="flex gap-1"><button class="btn btn-ghost btn-xs">Rotate</button><button class="btn btn-ghost btn-xs" style="color:var(--t-danger-tx)">Revoke</button></div>`];
@@ -841,7 +841,7 @@ ${phead({ eyebrow: 'ADMINISTRATION', title: 'Email templates', sub: 'Every trans
       <div class="mt-3">${field('Preview text', input({ val: 'Regards from {{operator.name}} — quote total {{quote.total}}.' }), { req: false })}</div>
       <div class="mt-3">${field('Body (markdown)', textarea('', 'Hi {{client.first_name}},\n\n{{operator.name}} has prepared your quote for **{{request.title}}**.\n\n**Total: {{quote.total}}** (valid until {{quote.valid_until}})\n\n[Review and sign]({{quote.url}})\n\n— The Nestlancer studio', 9), { req: false })}</div>
       <div class="flex gap-2 mt-4"><button class="btn btn-primary">Save template</button><button class="btn btn-secondary">Send test to self</button></div>` })}
-    <div class="panel"><div class="panel-head"><div class="panel-title">Preview · latest event payload</div></div>
+    <div class="panel"><div class="panel-head"><h3 class="panel-title">Preview · latest event payload</h3></div>
       <div class="panel-body mono" style="font-size:11.5px;background:var(--bg-sunken)">
         <span style="color:var(--t-success-tx)">Subject:</span> Your quote from Nestlancer Studio — Q-2026-000112<br><br>
         Hi Neha,<br><br>Riya Kapoor has prepared your quote for <b>HR onboarding automation</b>.<br><br><b>Total: ₹1,44,000.00</b> (valid until Oct 24, 2026)<br><br><span style="color:#3FA9F5">[Review and sign]</span><br><br><span style="color:var(--ink-3)">— The Nestlancer studio</span>

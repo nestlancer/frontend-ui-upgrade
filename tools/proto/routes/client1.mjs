@@ -43,14 +43,14 @@ ${stats([
     ${[['Active','var(--brand-8)',82,1],['Done','var(--brand-5)',8,0],['Requests','var(--t-warning-dot)',64,1],['Quotes','var(--line-strong)',14,0]].map(([l,c,w,n])=>`
     <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:62px">${l}</span><div class="prog flex-1"><i style="width:${w}%;background:${c}"></i></div><b class="mono" style="font-size:12.5px">${n}</b></div>`).join('')}
     <div class="flex gap-10 mt-5">
-      <div><div class="eyebrow" style="font-size:9.5px">COLLECTED</div><div class="mono font-semibold mt-1" style="color:var(--brand-11);font-size:16px">₹14,400.00</div></div>
+      <div><div class="eyebrow" style="font-size:11px">COLLECTED</div><div class="mono font-semibold mt-1" style="color:var(--brand-11);font-size:16px">₹14,400.00</div></div>
       <div class="p-3" style="background:var(--t-warning-bg);border:1px solid var(--t-warning-bd);border-radius:8px">
-        <div class="eyebrow" style="font-size:9.5px;color:var(--t-warning-tx)">PENDING</div>
+        <div class="eyebrow" style="font-size:11px;color:var(--t-warning-tx)">PENDING</div>
         <div class="mono font-semibold mt-1" style="color:var(--t-warning-tx);font-size:16px">₹19,200.00</div>
         <a class="link text-xs" href="${LT(r,'apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/')}" style="color:var(--t-warning-tx)">Complete checkout →</a>
       </div>
     </div>` })}
-  <div class="panel"><div class="panel-head"><div class="panel-title">Awaiting you</div></div>
+  <div class="panel"><div class="panel-head"><h3 class="panel-title">Awaiting you</h3></div>
     ${[['card','Pending payment','₹19,200.00','apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/'],['message','Unread messages','6 messages','apps/web/messages/inbox/'],['bell','Notifications','32 new','apps/web/notifications/']].map(([i,t,s,h])=>`
     <a class="panel-row" href="${LT(r,h)}"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)">${icon(i,13)}</span>
     <div class="min-w-0 flex-1"><b style="font-size:13px">${t}</b><div class="text-xs dim">${s}</div></div>${icon('chevron-right',14)}</a>`).join('')}
@@ -268,9 +268,9 @@ ${backlink(r, 'apps/web/projects/', 'Back to Projects')}
   <div class="flex gap-2">${badge('In progress','info')}${badge('40% complete','neutral')}</div>
 </div>
 <div class="grid g3 gap-4 mt-4" style="max-width:760px">
-  <div class="chip" style="height:44px;border-radius:10px">${icon('layers',14)}<div class="text-left"><div class="text-xs dim" style="font-size:10px;line-height:1.2">Delivery milestones</div><b class="mono" style="font-size:13px">2/2 completed</b></div></div>
-  <div class="chip" style="height:44px;border-radius:10px">${icon('check-circle',14)}<div class="text-left"><div class="text-xs dim" style="font-size:10px;line-height:1.2">Deliverables approved</div><b class="mono" style="font-size:13px">1/1</b></div></div>
-  <div class="chip" style="height:44px;border-radius:10px">${icon('clock',14)}<div class="text-left"><div class="text-xs dim" style="font-size:10px;line-height:1.2">Started</div><b class="mono" style="font-size:13px">Aug 3, 2026</b></div></div>
+  <div class="chip" style="height:44px;border-radius:10px">${icon('layers',14)}<div class="text-left"><div class="text-xs dim" style="font-size:11px;line-height:1.2">Delivery milestones</div><b class="mono" style="font-size:13px">2/2 completed</b></div></div>
+  <div class="chip" style="height:44px;border-radius:10px">${icon('check-circle',14)}<div class="text-left"><div class="text-xs dim" style="font-size:11px;line-height:1.2">Deliverables approved</div><b class="mono" style="font-size:13px">1/1</b></div></div>
+  <div class="chip" style="height:44px;border-radius:10px">${icon('clock',14)}<div class="text-left"><div class="text-xs dim" style="font-size:11px;line-height:1.2">Started</div><b class="mono" style="font-size:13px">Aug 3, 2026</b></div></div>
 </div>
 <div class="flex items-center justify-between mt-4 mb-1"><span class="text-xs muted font-semibold">Overall progress</span><span class="mono text-xs dim">40%</span></div>
 ${progress(40,'grad')}
@@ -293,9 +293,9 @@ ${tabs([
       ${[['FOLDER','PROJECT',badge('In progress','info'),'Set by your delivery team for the whole engagement.',''],
          ['LAYERS','MILESTONES','<b class="mono" style="font-size:16px">2/2 approved</b>','Delivery milestones (payment schedule excluded) — All delivery milestones approved','View all milestones'],
          ['CHECK','DELIVERABLES','<b class="mono" style="font-size:16px">1/1 approved</b>','','View deliverables']]
-        .map(([ix,t,v,d,lnk])=>`<div class="panel" style="padding:14px"><div class="eyebrow" style="font-size:9.5px">${t}</div><div class="mt-2 mb-2">${v}</div>${d?`<div class="text-xs muted" style="line-height:1.5">${d}</div>`:''}${lnk?`<a class="link text-xs mt-2 inline-block" href="#">${lnk}</a>`:''}</div>`).join('')}
+        .map(([ix,t,v,d,lnk])=>`<div class="panel" style="padding:14px"><div class="eyebrow" style="font-size:11px">${t}</div><div class="mt-2 mb-2">${v}</div>${d?`<div class="text-xs muted" style="line-height:1.5">${d}</div>`:''}${lnk?`<a class="link text-xs mt-2 inline-block" href="#">${lnk}</a>`:''}</div>`).join('')}
     </div>
-    <div class="panel mt-4" style="padding:14px"><div class="eyebrow" style="font-size:9.5px">DAILY PROGRESS</div><b class="mt-2 block" style="font-size:14px">Team updates</b><div class="text-xs muted mt-1">End-of-day work logs and delivery notes from your team.</div><a class="link text-xs mt-2 inline-block" href="#">View progress timeline</a></div>` })}
+    <div class="panel mt-4" style="padding:14px"><div class="eyebrow" style="font-size:11px">DAILY PROGRESS</div><b class="mt-2 block" style="font-size:14px">Team updates</b><div class="text-xs muted mt-1">End-of-day work logs and delivery notes from your team.</div><a class="link text-xs mt-2 inline-block" href="#">View progress timeline</a></div>` })}
   ${panel({ title: 'Latest progress', sub: 'Recent daily updates from your delivery team.', actions: `<a class="link text-xs" href="#">View all progress</a>`, pad: false, body: `
     ${[['check-circle','Milestone Approved',badge('Daily update','info'),'Milestone: Okta SAML &amp; HR Dashboard','Reconciled after deliverable approval'],
        ['check-circle','Milestone Approved',badge('Daily update','info'),'Milestone: LMS Platform Setup','Reconciled after deliverable approval'],

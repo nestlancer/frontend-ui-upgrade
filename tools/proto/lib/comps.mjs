@@ -22,7 +22,7 @@ export const btn = (label, { href = '#', variant = 'primary', size = '', i, ir, 
 // ------------------------------------------------------------------- panel
 export const panel = ({ title, sub, actions, body, foot, pad = true, cls = '' }) => `
 <div class="panel ${cls}">
-  ${title ? `<div class="panel-head"><div class="min-w-0"><div class="panel-title">${title}</div>${sub ? `<div class="panel-sub">${sub}</div>` : ''}</div>${actions ? `<div class="flex items-center gap-2 shrink-0">${actions}</div>` : ''}</div>` : ''}
+  ${title ? `<div class="panel-head"><div class="min-w-0"><h3 class="panel-title">${title}</h3>${sub ? `<div class="panel-sub">${sub}</div>` : ''}</div>${actions ? `<div class="flex items-center gap-2 shrink-0">${actions}</div>` : ''}</div>` : ''}
   <div class="${pad ? 'panel-body' : ''}">${body}</div>
   ${foot ? `<div class="panel-foot">${foot}</div>` : ''}
 </div>`;
@@ -120,7 +120,7 @@ export const timeline = (items) => `
       (t) => `<div class="tline-item${t.mut ? ' mut' : ''}">
   <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">${t.title}</span>${t.badge || ''}</div>
   ${t.sub ? `<div class="text-xs muted">${t.sub}</div>` : ''}
-  <div class="text-xs dim mono mt-1">${t.time}</div>
+  <div class="text-xs dim mono mt-1">${t.time ?? '—'}</div>
 </div>`
     )
     .join('')}</div>`;
@@ -187,7 +187,7 @@ export const convItem = (name, kind, snippet, time, { active = false, unread = f
 <div class="conv${active ? ' active' : ''}">
   ${av || avBy(name, hue, 'lg')}
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">${esc(name)}${kind ? ` <span class="badge tone-${kind === 'GROUP' ? 'info' : 'neutral'} no-dot" style="height:16px;padding:0 5px;font-size:9px">${kind}</span>` : ''}</div><span class="tm">${time}</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">${esc(name)}${kind ? ` <span class="badge tone-${kind === 'GROUP' ? 'info' : 'neutral'} no-dot" style="height:16px;padding:0 5px;font-size:11px">${kind}</span>` : ''}</div><span class="tm">${time}</span></div>
     <div class="s">${esc(snippet)}</div>
   </div>
   ${unread ? '<i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>' : ''}

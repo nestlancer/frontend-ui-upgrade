@@ -65,7 +65,7 @@
   <h1 class="ptitle">Audit log</h1>
   <p class="psub">Every authenticated mutation across the platform. Immutable, exportable, and your first stop for “who did what”.</p>
 </div>
-<div class="phead-actions"><button class="btn btn-secondary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export CSV</button></div>
+<div class="phead-actions"><button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export CSV</button></div>
 </div>
 <div class="filterbar mb-4"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search actor, meta, id…"></div><select class="select sm"><option>All categories</option><option>Auth</option><option>Admin</option><option>Billing</option><option>Content</option><option>Media</option><option>Messaging</option></select><select class="select sm"><option>All levels</option><option>Info</option><option>Warning</option><option>Critical</option></select><input class="input sm" type="date" style="width:150px"></div>
 <div class="panel">
@@ -83,7 +83,7 @@
 <div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Events per hour</div><div class="panel-sub">Today</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h3 class="panel-title">Events per hour</h3><div class="panel-sub">Today</div></div></div>
   <div class="panel-body"><svg viewBox="0 0 560 170" width="100%" height="170" preserveAspectRatio="none" style="display:block">
   <defs><linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--brand-8)" stop-opacity=".22"/><stop offset="1" stop-color="var(--brand-8)" stop-opacity="0"/></linearGradient></defs>
   <line x1="4" x2="556" y1="42.5" y2="42.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="85" y2="85" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/><line x1="4" x2="556" y1="127.5" y2="127.5" stroke="var(--line)" stroke-dasharray="3 4" stroke-width="1"/>
@@ -95,7 +95,7 @@
 </div>
   
 <div class="panel ">
-  <div class="panel-head"><div class="min-w-0"><div class="panel-title">Top categories</div></div></div>
+  <div class="panel-head"><div class="min-w-0"><h3 class="panel-title">Top categories</h3></div></div>
   <div class="panel-body"><svg viewBox="0 0 560 170" width="100%" height="170" style="display:block">
   <rect x="24.6" y="26.8" width="58.9" height="125.2" rx="4" fill="var(--brand-8)"/><rect x="116.6" y="94.6" width="58.9" height="57.4" rx="4" fill="var(--t-warning-dot)"/><rect x="208.6" y="110.3" width="58.9" height="41.7" rx="4" fill="var(--t-info-dot)"/><rect x="300.6" y="120.7" width="58.9" height="31.3" rx="4" fill="var(--line-strong)"/><rect x="392.6" y="128.5" width="58.9" height="23.5" rx="4" fill="var(--line-strong)"/><rect x="484.6" y="139.0" width="58.9" height="13.0" rx="4" fill="var(--t-danger-dot)"/>
 </svg><div class="flex justify-between text-xs dim mono"><span style="width:16.666666666666668%;text-align:center">auth</span><span style="width:16.666666666666668%;text-align:center">billing</span><span style="width:16.666666666666668%;text-align:center">admin</span><span style="width:16.666666666666668%;text-align:center">media</span><span style="width:16.666666666666668%;text-align:center">messaging</span><span style="width:16.666666666666668%;text-align:center">system</span></div></div>
