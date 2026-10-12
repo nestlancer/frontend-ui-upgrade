@@ -127,23 +127,38 @@ widths) was prototyped and measured before being reverted:\n
 and it would introduce a second desktop layout mode for every future page. The app frame stays a single
 system-wide decision, and this table is the evidence behind it.\n""")
 L.append("\n## 8. The ten ship gates, machine-checked on every page\n")
-L.append("""The work order ends with ten per-page gates. They are no longer a manual checklist: `tools/proto/upgrade/gate_sweep.mjs` (puppeteer, no dependencies beyond the render pipeline) walks every graded page and asserts them, and `tools/proto/upgrade/links.py` covers the link graph.
-\n| Gate | How it is checked | Result |
+L.append("""The work order ends with ten per-page gates. They are no longer a manual checklist: `tools/proto/upgrade/gate_sweep.mjs --all` checks every proto `index.html` route (including ungraded state pages and the sign-off hub); `tools/proto/upgrade/links.py` checks the internal link graph.
+
+The all-route sweep covers **188/188 pages**: 82 routes carry the 181 screenshot-grade rows; `--all` adds the other 105 app routes plus the sign-off hub. The first all-app pass found 18 findings across 16 ungraded routes. Batch J closed them; the final sweep is green at every route.
+
+| Gate | How it is checked | Result |
 |---|---|---|
-| One h1 per page | count of rendered `h1` | 82/82 pass |
-| No skipped heading level | outline order of rendered h1-h3 | 0 skips (was 13) |
+| One h1 per page | count of rendered, visible `h1` elements | 188/188 pass |
+| No skipped heading level | rendered heading order, `h1` through `h6` | 0 skips (was 13 on the graded-route baseline) |
 | No text below 11px | every text node's `font-size` at 1440px | 0 findings |
-| >= 44px touch targets | every button/link/input at 390px | 0 under floor (was 82) |
-| Every field labelled | `label[for]` / `aria-label` / wrapping label / title / placeholder | 0 unlabelled (was 111 across 35 pages) |
+| >= 44px touch targets | visible buttons, links, and inputs at 390px; checkbox/radio through carrier label | 0 under floor |
+| Every field labelled | `label[for]` / `aria-label` / `aria-labelledby` / wrapping label / title / placeholder | 0 unlabelled |
 | Every image has alt | `img[alt]` | 0 missing |
 | No horizontal overflow | `scrollWidth > clientWidth` at 1440px and 390px | 0 at both widths |
-| Motion safe | reload with `prefers-reduced-motion: reduce`, assert nothing animating in | 0 findings |
-| Dark theme paints dark | surface luminance sweep in the dark theme | 0 light leaks |
+| Motion safe | reload with `prefers-reduced-motion: reduce`, assert nothing remains mid-animation | 0 findings |
+| Dark theme responds | force `data-theme=light`, then `dark`; assert both `--bg-app` and computed body background change | 188/188 pass |
 | Links resolve | `links.py`: every internal href/asset path on disk | 0 missing of 7,047 across 188 pages |
-\nTwo scripts do the repair work, both idempotent and both derived only from markup that already exists:
-\n| Script | Pass | Count | Rule |
+
+Batch J follow-up, based on the first all-app sweep:
+
+| Fix | Result |
+|---|---|
+| Two filterbar wrappers had an extra closing `</div>` that collapsed their admin content panes | Fixed nesting; the Browse and Logs h1s render visibly again |
+| Conversation, project-empty and quote-empty routes had no h1 | Promoted their existing visible title copy to h1; no mock text changed |
+| Eight public/client footers started at h3 after a lone h1 | Promoted the three peer footer headings to h2 on those routes; added the matching shared style |
+| Verification digits and the planned-window end field had no accessible names | Named all 12 OTP digits and the planned window controls |
+| Eight media-row checkboxes and the reset cancel link were below 44px at 390px | Raised their carrier/action targets to 44px in the mobile-only rule |
+
+The `a11y_fix.py` repair passes that closed the graded-route findings are idempotent and derived only from markup that already exists:
+
+| Script | Pass | Count | Rule |
 |---|---|---|---|
-| `a11y_fix.py` | headings | 94 | footer `<h5>Product \| Company \| Legal</h5>` after an `<h2>`, and `.rail-title` sidebar labels, become `<h3>`; the footer rule in `proto.css` covers both tags |
+| `a11y_fix.py` | headings | 94 | footer h5s after an h2 and `.rail-title` labels become correctly leveled headings; shared footer styling keeps them visually stable |
 | | label pairs | 213 | `<label class="label">Title *</label>` next to its control with no `for`/`id` |
 | | check rows | 15 | `<div class="check">` becomes `<label class="check">`, so the row is the checkbox's target |
 | | filter selects | 41 | `aria-label` from the select's own first option ("All statuses" -> "Filter by status"); a page-scoped table covers the rest |
@@ -151,9 +166,11 @@ L.append("""The work order ends with ten per-page gates. They are no longer a ma
 | | table fields | 90 | `<td>` inputs take `aria-labelledby` from their `<th>` id |
 | | indexed rows | 8 | `[n] <input>` rows named from the panel title ("Footnotes" 1 -> "Footnote 1") |
 | | named fields | 1 | the audit date filter, listed explicitly |
-| `proto.css` | mobile floors | — | inside `@media (max-width: 760px)`: `.chip`/`.seg`/`.sb-toggle`/`.fab-btn`/`.check`/`.btn-xs`/`.tag-remove`/`.x`/`.textarea` at 44px, plus standalone links in table cells, footers, `kv` rows and arrow links. Desktop density is untouched -- grades are captured at 1440px. |
-\nThe probe deliberately exempts three classes that are not defects: checkbox/radio measured through their carrier label, links inline in a sentence (WCAG 2.5.8), and `aria-hidden`/`tabindex="-1"` proxies.
-\nRe-run: `cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/ && cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ node gate_sweep.mjs` (about 4 minutes for 82 pages: a 1440px probe, a 390px probe and a reduced-motion reload each).""" )
+| `proto.css` | mobile floors | — | inside `@media (max-width: 760px)`: control floors and standalone action links at 44px; desktop density remains untouched |
+
+The probe deliberately exempts three classes that are not defects: checkbox/radio measured through their carrier label, links inline in a sentence (WCAG 2.5.8), and `aria-hidden`/`tabindex="-1"` proxies.
+
+Re-run all routes: `cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/ && cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ LD_LIBRARY_PATH=/tmp/nsswrap/lib node gate_sweep.mjs --all` (about 9 minutes for 188 pages: a 1440px probe, a 390px probe and a reduced-motion reload each).""" )
 
 open('/home/user/frontend-ui-upgrade/tools/proto/UI_GRADE_REPORT.md','w').write('\n'.join(L)+'\n')
 print('written', len(L), 'lines; grades', dict(cnt)); print(iss.most_common(12))

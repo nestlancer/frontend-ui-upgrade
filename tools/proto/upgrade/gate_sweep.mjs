@@ -11,25 +11,59 @@
  *   overflow      0 horizontal overflow at 1440px and 390px
  *   reduced       with prefers-reduced-motion: reduce forced, nothing is left
  *                 mid-animation (no non-none animation running on entry)
- *   theme         the dark theme paints dark surfaces (no light leak)
+ *   theme         forcing light and dark changes both --bg-app and the body surface
+ *
+ * Default scope is the screenshot-mapped pages in pairs.json. `--all` adds
+ * every proto index.html, including the sign-off hub and ungraded state routes;
+ * `--only=route1,route2` runs a fast targeted regression subset.
  *
  * Usage (from the scratch dir that owns node_modules):
  *   cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/
- *   cd /tmp/shot && LD_LIBRARY_PATH=/tmp/nsswrap/lib node gate_sweep.mjs [--limit N]
+ *   cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ LD_LIBRARY_PATH=/tmp/nsswrap/lib node gate_sweep.mjs --all
  */
 import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
 import fs from 'node:fs';
 
 const BASE = process.env.PROTO_BASE || 'http://127.0.0.1:8765/';
+// Default: the pages that carry a screenshot (pairs.json). `--all` adds every
+// other proto page, so the state/template routes are held to the same gates.
+const ROOT = '/home/user/frontend-ui-upgrade/proto';
 const pairs = JSON.parse(fs.readFileSync('/home/user/grade/pairs.json', 'utf8'));
-const pages = [...new Set(pairs.map(p => p.proto))].filter(Boolean).sort();
+const graded = [...new Set(pairs.map(p => p.proto))].filter(Boolean).sort();
+let pages = graded;
+if (process.argv.includes('--all')) {
+  const ROOT_PAGE = '__proto_root__';
+  const walk = (dir, base = '') => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => {
+    const rel = base ? base + '/' + e.name : e.name;
+    if (e.isDirectory()) return walk(dir + '/' + e.name, rel);
+    return e.name === 'index.html' ? [base || ROOT_PAGE] : [];
+  });
+  pages = [...new Set([...walk(ROOT), ...graded])].sort();
+}
+const onlyArg = process.argv.find(arg => arg.startsWith('--only='));
+if (onlyArg) {
+  const wanted = new Set(onlyArg.slice('--only='.length).split(',').filter(Boolean));
+  pages = pages.filter(p => wanted.has(p === '__proto_root__' ? 'index.html' : p));
+}
+
 
 const PROBE = `(() => {
   const vis = el => { const s = getComputedStyle(el); const b = el.getBoundingClientRect();
     return s.display !== 'none' && s.visibility !== 'hidden' && b.width > 0 && b.height > 0; };
   const out = { h1: 0, skips: [], minFont: 99, small: 0, targets: [], imgs: 0, noAlt: 0, fields: 0, unlabeled: 0,
                 ov: document.documentElement.scrollWidth - window.innerWidth };
+  const root = document.documentElement;
+  const originalTheme = root.getAttribute('data-theme');
+  root.setAttribute('data-theme', 'light');
+  const lightCanvas = getComputedStyle(root).getPropertyValue('--bg-app').trim();
+  const lightSurface = getComputedStyle(document.body).backgroundColor;
+  root.setAttribute('data-theme', 'dark');
+  const darkCanvas = getComputedStyle(root).getPropertyValue('--bg-app').trim();
+  const darkSurface = getComputedStyle(document.body).backgroundColor;
+  out.darkTheme = !!darkCanvas && darkCanvas !== lightCanvas && darkSurface !== lightSurface;
+  if (originalTheme === null) root.removeAttribute('data-theme');
+  else root.setAttribute('data-theme', originalTheme);
   out.h1 = [...document.querySelectorAll('h1')].filter(vis).length;
   let prev = 0;
   const hs = [...document.querySelectorAll('h1,h2,h3,h4,h5,h6')].filter(vis);
@@ -93,9 +127,11 @@ const fails = [];
 let checked = 0;
 for (const p of pages) {
   const page = await browser.newPage();
-  const row = { page: p };
+  const pageName = p === '__proto_root__' ? 'index.html' : p;
+  const route = p === '__proto_root__' ? '' : p + '/';
+  const row = { page: pageName };
   try {
-    await page.goto(BASE + p + '/', { waitUntil: 'networkidle0', timeout: 20000 });
+    await page.goto(BASE + route, { waitUntil: 'networkidle0', timeout: 20000 });
     await new Promise(r => setTimeout(r, 300));
     const d = await page.evaluate(PROBE);
     Object.assign(row, d);
@@ -122,16 +158,18 @@ for (const p of pages) {
   if (row.h1 !== 1) problems.push(`h1=${row.h1}`);
   if (row.skips && row.skips.length) problems.push(`heading skip ${row.skips.slice(0,2).join(',')}`);
   if (row.small > 0) problems.push(`${row.small} text run(s) below 11px (min ${row.minFont}px)`);
+  if (row.ov > 2) problems.push(`1440px overflow +${row.ov}px`);
   if (row.mobileOverflow > 2) problems.push(`390px overflow +${row.mobileOverflow}px`);
+  if (!row.darkTheme) problems.push('light/dark body surface did not change');
   if (row.mobileTargets && row.mobileTargets.length) problems.push(`${row.mobileTargets.length} control(s) under 44px`);
   if (row.noAlt > 0) problems.push(`${row.noAlt}/${row.imgs} image(s) without alt`);
   if (row.unlabeled > 0) problems.push(`${row.unlabeled}/${row.fields} field(s) unlabeled`);
   if (row.animating > 0) problems.push(`${row.animating} element(s) still animating under reduced-motion`);
   if (row.error) problems.push(row.error);
-  if (problems.length) fails.push({ page: p, problems, detail: row });
+  if (problems.length) fails.push({ page: pageName, problems, detail: row });
 }
 
-console.log(`gate sweep — ${checked}/${pages.length} page(s) checked\n`);
+console.log(`gate sweep — ${checked}/${pages.length} page(s) checked${pages.length > graded.length ? ' (--all)' : ''}\n`);
 if (!fails.length) console.log('all gates pass on every page');
 for (const f of fails) {
   console.log(`  ${f.page}`);
