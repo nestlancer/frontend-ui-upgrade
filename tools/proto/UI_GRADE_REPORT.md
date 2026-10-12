@@ -277,3 +277,38 @@ Releasing the frame is a wash-to-negative here — the 900px frame is what the d
 and it would introduce a second desktop layout mode for every future page. The app frame stays a single
 system-wide decision, and this table is the evidence behind it.
 
+
+## 8. The ten ship gates, machine-checked on every page
+
+The work order ends with ten per-page gates. They are no longer a manual checklist: `tools/proto/upgrade/gate_sweep.mjs` (puppeteer, no dependencies beyond the render pipeline) walks every graded page and asserts them, and `tools/proto/upgrade/links.py` covers the link graph.
+
+| Gate | How it is checked | Result |
+|---|---|---|
+| One h1 per page | count of rendered `h1` | 82/82 pass |
+| No skipped heading level | outline order of rendered h1-h3 | 0 skips (was 13) |
+| No text below 11px | every text node's `font-size` at 1440px | 0 findings |
+| >= 44px touch targets | every button/link/input at 390px | 0 under floor (was 82) |
+| Every field labelled | `label[for]` / `aria-label` / wrapping label / title / placeholder | 0 unlabelled (was 111 across 35 pages) |
+| Every image has alt | `img[alt]` | 0 missing |
+| No horizontal overflow | `scrollWidth > clientWidth` at 1440px and 390px | 0 at both widths |
+| Motion safe | reload with `prefers-reduced-motion: reduce`, assert nothing animating in | 0 findings |
+| Dark theme paints dark | surface luminance sweep in the dark theme | 0 light leaks |
+| Links resolve | `links.py`: every internal href/asset path on disk | 0 missing of 7,047 across 188 pages |
+
+Two scripts do the repair work, both idempotent and both derived only from markup that already exists:
+
+| Script | Pass | Count | Rule |
+|---|---|---|---|
+| `a11y_fix.py` | headings | 94 | footer `<h5>Product \| Company \| Legal</h5>` after an `<h2>`, and `.rail-title` sidebar labels, become `<h3>`; the footer rule in `proto.css` covers both tags |
+| | label pairs | 213 | `<label class="label">Title *</label>` next to its control with no `for`/`id` |
+| | check rows | 15 | `<div class="check">` becomes `<label class="check">`, so the row is the checkbox's target |
+| | filter selects | 41 | `aria-label` from the select's own first option ("All statuses" -> "Filter by status"); a page-scoped table covers the rest |
+| | rails | 6 | a `.rail-title` that opens the outline becomes `<h2>` so 1 -> 2 -> 3 holds |
+| | table fields | 90 | `<td>` inputs take `aria-labelledby` from their `<th>` id |
+| | indexed rows | 8 | `[n] <input>` rows named from the panel title ("Footnotes" 1 -> "Footnote 1") |
+| | named fields | 1 | the audit date filter, listed explicitly |
+| `proto.css` | mobile floors | — | inside `@media (max-width: 760px)`: `.chip`/`.seg`/`.sb-toggle`/`.fab-btn`/`.check`/`.btn-xs`/`.tag-remove`/`.x`/`.textarea` at 44px, plus standalone links in table cells, footers, `kv` rows and arrow links. Desktop density is untouched -- grades are captured at 1440px. |
+
+The probe deliberately exempts three classes that are not defects: checkbox/radio measured through their carrier label, links inline in a sentence (WCAG 2.5.8), and `aria-hidden`/`tabindex="-1"` proxies.
+
+Re-run: `cp tools/proto/upgrade/gate_sweep.mjs /tmp/shot/ && cd /tmp/shot && PROTO_BASE=http://127.0.0.1:8765/ node gate_sweep.mjs` (about 4 minutes for 82 pages: a 1440px probe, a 390px probe and a reduced-motion reload each).
