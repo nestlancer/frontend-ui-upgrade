@@ -1071,7 +1071,9 @@ table.tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
 
 .footer { border-top: 1px solid var(--paper-line); background: var(--bg-card); margin-top: 40px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; padding: 44px 0 36px; }
-.footer h5 { font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); margin-bottom: 12px; }
+/* Column titles are h3 so the heading level follows the page (an h5 after
+   an h2 skips levels); the visual is unchanged. */
+.footer h5, .footer h3 { font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-3); margin-bottom: 12px; }
 .footer a { display: block; padding: 3.5px 0; color: var(--ink-2); font-size: 13.5px; }
 .footer a:hover { color: var(--brand-11); }
 .footer-base { border-top: 1px solid var(--paper-line); padding: 16px 0 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 12px; color: var(--ink-3); }
@@ -1757,7 +1759,7 @@ body::before {
 .state-deck { align-items: start; }
 .state-deck .dialog-surface { display: flex; flex-direction: column; }
 .state-deck .dialog-surface .dialog-body { flex: 1 1 auto; }
-.dropzone .input[type="file"] { display: none; }
+.dropzone input[type="file"] { display: none; }
 .dropzone .dz-pick { margin-top: 2px; }
 .tbl td.nowrap, .tbl th.nowrap { white-space: nowrap; }
 .btn-primary:disabled, .btn-primary[aria-disabled="true"] {
@@ -2081,13 +2083,28 @@ dialog.dialog > .dialog-foot { display: flex; align-items: center; justify-conte
 @media (max-width: 760px) {
   .btn { min-height: 44px; height: auto; padding-block: 11px; }
   .btn-sm { min-height: 44px; height: auto; padding-block: 11px; }
-  /* Only the smallest inline action drops just under 44px, so table rows stay
-     scannable; every named button and control keeps the full target. */
-  .btn-xs { min-height: 40px; height: auto; padding-block: 9px; }
+  /* Table rows become cards at this width, so even the smallest action can take
+     the full 44px target. */
+  .btn-xs { min-height: 44px; height: auto; padding-block: 11px; }
   /* Row actions are revealed on hover on pointer devices — touch has no hover,
      so on phones they are simply always visible. */
   .tbl td .row-act { opacity: 1; }
   .tab { min-height: 44px; display: inline-flex; align-items: center; }
+  /* Filter chips, the nav toggle, the prototype switcher and segmented controls
+     are all real tap targets on a phone. */
+  .chip, .chip.active, .seg button { min-height: 44px; height: auto; padding-block: 10px; }
+  .sb-toggle { min-width: 44px; min-height: 44px; }
+  .fab-btn { min-height: 44px; height: auto; padding-block: 11px; }
+  .check { min-height: 44px; align-items: center; }
+  /* Action links in rows and navigation get a full target; a link inside a
+     sentence keeps its text flow (WCAG 2.5.8 inline exception). */
+  /* Standalone links (not inline in a sentence) get the full 44px target. */
+  .tbl td .link, .tbl-cards td .link, .footer a, .auth-foot a,
+  .flex > a.link, .panel-body > a.link, .list-row .link,
+  .kv dd a, .kv dd .link, .link-arrow {
+    min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .composer .textarea { min-height: 44px; }
   .rail-link { min-height: 44px; }
   .sb-item { min-height: 44px; }
   .icobtn { min-width: 44px; min-height: 44px; }
@@ -2171,6 +2188,6 @@ dialog.dialog > .dialog-foot { display: flex; align-items: center; justify-conte
 }
 .tag-remove .x:hover { background: var(--t-danger-bg); color: var(--t-danger-tx); }
 @media (max-width: 760px) {
-  .tag-remove { height: 42px; padding-right: 8px; }
-  .tag-remove .x { width: 32px; height: 32px; }
+  .tag-remove { height: 46px; padding-right: 6px; }
+  .tag-remove .x { width: 44px; height: 44px; }
 }

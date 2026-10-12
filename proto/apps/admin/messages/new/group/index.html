@@ -76,10 +76,10 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">New group conversation form</h2><div class="panel-sub">Group name + Participant User IDs (comma-separated) + Initial message</div></div></div>
   <div class="panel-body">
     <div class="grid g2 gap-3 mb-3">
-      <div class="field"><label class="label">Group name <span class="req">*</span></label><input class="input" value="Group conversation: Admin + Arjun + Priya"></div>
-      <div class="field"><label class="label">Participant User IDs (comma-separated) <span class="req">*</span></label><input class="input mono" value="01a10a2a-a99a-7578-825a-c7de8bce4d2b, 01a10a2a-b11c-7580-9012-3456789abcde"></div>
+      <div class="field"><label for="nl-group-name" class="label">Group name <span class="req">*</span></label><input id="nl-group-name" class="input" value="Group conversation: Admin + Arjun + Priya"></div>
+      <div class="field"><label for="nl-participant-user-ids-comma-separ" class="label">Participant User IDs (comma-separated) <span class="req">*</span></label><input id="nl-participant-user-ids-comma-separ" class="input mono" value="01a10a2a-a99a-7578-825a-c7de8bce4d2b, 01a10a2a-b11c-7580-9012-3456789abcde"></div>
     </div>
-    <div class="field mb-3"><label class="label">Initial message <span class="req">*</span></label><textarea class="textarea" rows="2">Welcome to the group thread for Milestone 1 &amp; Razorpay integration.</textarea></div>
+    <div class="field mb-3"><label for="nl-initial-message" class="label">Initial message <span class="req">*</span></label><textarea id="nl-initial-message" class="textarea" rows="2">Welcome to the group thread for Milestone 1 &amp; Razorpay integration.</textarea></div>
   </div>
 </section>
 
@@ -88,20 +88,20 @@
   <div class="panel-body">
   
 <div class="field">
-  <label class="label">Thread name <span class="req">*</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <input class="input " type="text" placeholder="e.g. Payments ops — Razorpay settlement and webhooks">
+  <label for="nl-thread-name" class="label">Thread name <span class="req">*</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <input id="nl-thread-name" class="input " type="text" placeholder="e.g. Payments ops — Razorpay settlement and webhooks">
   
 </div>
   <div class="mt-4">
 <div class="field">
-  <label class="label">Purpose (visible to members) <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="3" placeholder="What belongs here, what does not."></textarea>
+  <label for="nl-purpose-visible-to-members" class="label">Purpose (visible to members) <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-purpose-visible-to-members" class="textarea" rows="3" placeholder="What belongs here, what does not."></textarea>
   
 </div></div>
-  <div class="mt-4"><label class="label">Members <span class="req">*</span></label>
+  <div class="mt-4"><label for="nl-members" class="label">Members <span class="req">*</span></label>
     <div class="grid g3 gap-2">
       
-      <label class="check panel" style="padding:10px 12px;margin:0;gap:10px"><input type="checkbox" checked> <span style="font-size:12.5px"><b>Riya Kapoor</b> <span class="dim text-xs">· ops</span></span></label>
+      <label class="check panel" style="padding:10px 12px;margin:0;gap:10px"><input id="nl-members" type="checkbox" checked> <span style="font-size:12.5px"><b>Riya Kapoor</b> <span class="dim text-xs">· ops</span></span></label>
       <label class="check panel" style="padding:10px 12px;margin:0;gap:10px"><input type="checkbox" checked> <span style="font-size:12.5px"><b>Arjun Nair</b> <span class="dim text-xs">· delivery</span></span></label>
       <label class="check panel" style="padding:10px 12px;margin:0;gap:10px"><input type="checkbox"> <span style="font-size:12.5px"><b>Dev Malhotra</b> <span class="dim text-xs">· engineering</span></span></label>
       <label class="check panel" style="padding:10px 12px;margin:0;gap:10px"><input type="checkbox"> <span style="font-size:12.5px"><b>Sunita Rao</b> <span class="dim text-xs">· finance</span></span></label>

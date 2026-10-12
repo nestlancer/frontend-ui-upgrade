@@ -92,8 +92,8 @@
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Issue refund &amp; Record manual payment dialogs</h2><div class="panel-sub">Inline operator forms for refunds and offline bank transfer verification</div></div></div>
     <div class="panel-body">
       <div class="grid g2 gap-3">
-        <div class="field"><label class="label">Refund Amount (₹)</label><input class="input sm mono" value="3000"></div>
-        <div class="field"><label class="label">Method</label><select class="select sm"><option>Bank transfer NEFT/RTGS/IMPS</option><option>UPI</option></select></div>
+        <div class="field"><label for="nl-refund-amount" class="label">Refund Amount (₹)</label><input id="nl-refund-amount" class="input sm mono" value="3000"></div>
+        <div class="field"><label for="nl-method" class="label">Method</label><select id="nl-method" class="select sm"><option>Bank transfer NEFT/RTGS/IMPS</option><option>UPI</option></select></div>
       </div>
     </div>
   </section>
@@ -105,7 +105,7 @@
       <div class="panel-head"><h2 class="panel-title">Statement match</h2><span class="text-xs dim">Last sync today, 6:00 AM</span></div>
       <div class="panel-body">
         <div class="tbl-wrap"><table class="tbl tbl-cards  ">
-<thead><tr><th>Bank entry</th><th>Date</th><th style="text-align:right">Amount</th><th>Match</th></tr></thead>
+<thead><tr><th id="nl-th-1">Bank entry</th><th id="nl-th-2">Date</th><th id="nl-th-3" style="text-align:right">Amount</th><th id="nl-th-4">Match</th></tr></thead>
 <tbody><tr><td data-label="Bank entry"><span class="mono" style="font-size:11.5px">NEFT PUNB1023456 · KARTHIK MENON SELF</span></td><td data-label="Date"><span class="text-xs">Oct 10</span></td><td data-label="Amount" style="text-align:right"><span class="mono font-semibold">₹36,000.00</span></td><td data-label="Match"><span class="badge tone-success">Exact UTR match</span></td></tr><tr><td data-label="Bank entry"><span class="mono" style="font-size:11.5px">IMPS 0000342189 · KARTHIK M</span></td><td data-label="Date"><span class="text-xs">Oct 8</span></td><td data-label="Amount" style="text-align:right"><span class="mono">₹2,500.00</span></td><td data-label="Match"><span class="dim text-xs">No match</span></td></tr></tbody></table></div>
         <div class="flex gap-2 mt-4">
           <button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Verify &amp; mark paid</button>

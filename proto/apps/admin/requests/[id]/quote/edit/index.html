@@ -78,8 +78,8 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Line items (v2 draft)</h2></div></div>
   <div class="">
       <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
-<thead><tr><th>Description</th><th style="text-align:right">Qty</th><th style="text-align:right">Unit price</th><th style="text-align:right">Total</th></tr></thead>
-<tbody><tr><td data-label="Description"><input class="input sm" value="AUDIT-P23 edited deliverable: quote builder regression package"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="1500.00"></td><td data-label="Total" style="text-align:right"><span class="mono">₹1,500.00</span></td></tr><tr><td data-label="Description"><input class="input sm" value="Added in v2: CI wiring on client runners"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="800.00" style="border-color:var(--t-warning-bd)"></td><td data-label="Total" style="text-align:right"><span class="mono" style="color:var(--t-warning-tx)">+₹800.00</span></td></tr></tbody></table></div>
+<thead><tr><th id="nl-th-1">Description</th><th id="nl-th-2" style="text-align:right">Qty</th><th id="nl-th-3" style="text-align:right">Unit price</th><th id="nl-th-4" style="text-align:right">Total</th></tr></thead>
+<tbody><tr><td data-label="Description"><input class="input sm" value="AUDIT-P23 edited deliverable: quote builder regression package" aria-labelledby="nl-th-1"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1" aria-labelledby="nl-th-2"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="1500.00" aria-labelledby="nl-th-3"></td><td data-label="Total" style="text-align:right"><span class="mono">₹1,500.00</span></td></tr><tr><td data-label="Description"><input class="input sm" value="Added in v2: CI wiring on client runners" aria-labelledby="nl-th-1"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1" aria-labelledby="nl-th-2"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="800.00" style="border-color:var(--t-warning-bd)" aria-labelledby="nl-th-3"></td><td data-label="Total" style="text-align:right"><span class="mono" style="color:var(--t-warning-tx)">+₹800.00</span></td></tr></tbody></table></div>
       <div class="panel-foot"><dl class="kv"><dt>Subtotal</dt><dd><span class="mono">₹2,300.00</span></dd><dt>GST (18%)</dt><dd><span class="mono">₹414.00</span></dd><dt>Total</dt><dd><span class="mono font-bold" style="font-size:18px">₹2,714.00</span> <span class="badge tone-warning" style="margin-left:6px">v1 ₹1,770</span></dd></dl></div></div>
   
 </div>
@@ -88,8 +88,8 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Change note (sent to client)</h2></div></div>
   <div class="panel-body">
 <div class="field">
-  <label class="label">Why the revision? <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="3" placeholder="Shown in the client notification and stored in audit.">Scope grew: CI wiring now includes self-hosted runner setup.</textarea>
+  <label for="nl-why-the-revision" class="label">Why the revision? <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-why-the-revision" class="textarea" rows="3" placeholder="Shown in the client notification and stored in audit.">Scope grew: CI wiring now includes self-hosted runner setup.</textarea>
   
 </div></div>
   

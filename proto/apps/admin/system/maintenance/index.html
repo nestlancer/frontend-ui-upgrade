@@ -88,20 +88,20 @@
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Mode <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option>Read-only (browsing works, writes blocked)</option><option>Full standstill (everything except this console pauses)</option></select>
+  <label for="nl-mode" class="label">Mode <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-mode" class="select"><option>Read-only (browsing works, writes blocked)</option><option>Full standstill (everything except this console pauses)</option></select>
   
 </div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Public message <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="3" placeholder="Shown on the platform-wide banner…">We are upgrading our payment stack. Everything is safe — quoting, messaging, and uploads pause for about 30 minutes starting 02:00 IST on Oct 18.</textarea>
+  <label for="nl-public-message" class="label">Public message <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-public-message" class="textarea" rows="3" placeholder="Shown on the platform-wide banner…">We are upgrading our payment stack. Everything is safe — quoting, messaging, and uploads pause for about 30 minutes starting 02:00 IST on Oct 18.</textarea>
   
 </div></div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Planned window <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <div class="grid g2 gap-3"><input class="input" type="datetime-local"><input class="input" type="datetime-local"></div>
+  <label for="nl-planned-window" class="label">Planned window <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <div class="grid g2 gap-3"><input id="nl-planned-window" class="input" type="datetime-local"><input class="input" type="datetime-local"></div>
   
 </div></div>
       <div class="flex gap-2 mt-4"><button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l14-6v14L3 13v-2z"/><path d="M17 6a4 4 0 010 12"/><path d="M7 13v6a1 1 0 001 1h2"/></svg> Schedule announcement + window</button><button class="btn btn-danger">Engage now</button></div>
@@ -124,7 +124,7 @@
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">History</h2></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
-<thead><tr><th>When</th><th>Mode</th><th>Duration</th><th>Outcome</th></tr></thead>
+<thead><tr><th id="nl-th-1">When</th><th id="nl-th-2">Mode</th><th id="nl-th-3">Duration</th><th id="nl-th-4">Outcome</th></tr></thead>
 <tbody><tr><td data-label="When">Sep 14, 2026</td><td data-label="Mode">Read-only</td><td data-label="Duration">22 min</td><td data-label="Outcome"><span class="text-xs">No incidents</span></td></tr><tr><td data-label="When">Jul 30, 2026</td><td data-label="Mode">Full</td><td data-label="Duration">38 min</td><td data-label="Outcome"><span class="text-xs">1 retry on payout lock</span></td></tr><tr><td data-label="When">May 02, 2026</td><td data-label="Mode">Read-only</td><td data-label="Duration">14 min</td><td data-label="Outcome"><span class="text-xs">Smooth</span></td></tr></tbody></table></div></div>
   
 </div>

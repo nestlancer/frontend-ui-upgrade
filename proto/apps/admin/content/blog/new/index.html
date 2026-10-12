@@ -84,26 +84,26 @@
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Title <span class="req">*</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <input class="input " type="text" placeholder="Sentence case, no trailing period…">
+  <label for="nl-title" class="label">Title <span class="req">*</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <input id="nl-title" class="input " type="text" placeholder="Sentence case, no trailing period…">
   
 </div>
       <div class="mt-4">
 <div class="field">
-  <label class="label">Slug <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <div class="input-wrap"><span class="in-icon text-xs dim" style="width:auto;padding:0 10px">/blog/</span><input class="input mono" style="padding-left:64px" placeholder="designing-for-trust"></div>
+  <label for="nl-slug" class="label">Slug <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <div class="input-wrap"><span class="in-icon text-xs dim" style="width:auto;padding:0 10px">/blog/</span><input id="nl-slug" class="input mono" style="padding-left:64px" placeholder="designing-for-trust"></div>
   <span class="hint">Auto-generated from title; must stay unique.</span>
 </div></div>
       <div class="mt-4">
 <div class="field">
-  <label class="label">Excerpt <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="2" placeholder="Shown in cards, SEO description, and social shares."></textarea>
+  <label for="nl-excerpt" class="label">Excerpt <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-excerpt" class="textarea" rows="2" placeholder="Shown in cards, SEO description, and social shares."></textarea>
   
 </div></div>
       <div class="mt-4">
 <div class="field">
-  <label class="label">Body (markdown) <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="14" placeholder="# Heading
+  <label for="nl-body-markdown" class="label">Body (markdown) <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-body-markdown" class="textarea" rows="14" placeholder="# Heading
 
 Write here…"></textarea>
   
@@ -119,26 +119,26 @@ Write here…"></textarea>
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Category <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option>Engineering</option><option>Design</option><option>Finance</option><option>Guides</option><option>Lifestyle</option><option>Insights</option></select>
+  <label for="nl-category" class="label">Category <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-category" class="select"><option>Engineering</option><option>Design</option><option>Finance</option><option>Guides</option><option>Lifestyle</option><option>Insights</option></select>
   
 </div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Tags <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <input class="input " type="text" placeholder="comma, separated, tags">
+  <label for="nl-tags" class="label">Tags <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <input id="nl-tags" class="input " type="text" placeholder="comma, separated, tags">
   
 </div></div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Author <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option>Nestlancer Team</option><option>Riya Kapoor</option><option>Arjun Nair</option></select>
+  <label for="nl-author" class="label">Author <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-author" class="select"><option>Nestlancer Team</option><option>Riya Kapoor</option><option>Arjun Nair</option></select>
   
 </div></div>
       <div class="mt-3">
 <div class="field">
-  <label class="label">Schedule <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <input class="input " type="date" placeholder="">
+  <label for="nl-schedule" class="label">Schedule <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <input id="nl-schedule" class="input " type="date" placeholder="">
   
 </div></div>
       <div class="mt-4">

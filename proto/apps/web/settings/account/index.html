@@ -62,7 +62,7 @@
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Privacy <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></h2><div class="panel-sub">Control who can see your profile and contact details.</div></div></div>
   <div class="panel-body">
-    <div class="field mb-2" style="max-width:420px"><label class="label font-semibold">Profile visibility</label><select class="select"><option selected>Public</option><option>Workspace only</option><option>Hidden</option></select></div>
+    <div class="field mb-2" style="max-width:420px"><label for="nl-profile-visibility" class="label font-semibold">Profile visibility</label><select id="nl-profile-visibility" class="select"><option selected>Public</option><option>Workspace only</option><option>Hidden</option></select></div>
     
 <div class="switch-row">
   <div class="min-w-0"><div class="font-semibold" style="font-size:13px">Show email on profile</div></div>
@@ -81,7 +81,7 @@
     <div class="panel-body grid gap-6" style="grid-template-columns:1fr 1fr">
       <div><b style="font-size:13.5px">Data export</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Request a copy of your account data. Processing may take a few minutes.</p><button class="btn btn-secondary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Request data export</button></div>
       <div><b style="font-size:13.5px">Delete account</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Schedules permanent deletion. You can cancel while it is still pending.</p>
-        <div class="field"><label class="label">Password to confirm deletion <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label><input class="input" type="password" placeholder="Enter your password"></div>
+        <div class="field"><label for="nl-password-to-confirm-deletion" class="label">Password to confirm deletion <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label><input id="nl-password-to-confirm-deletion" class="input" type="password" placeholder="Enter your password"></div>
         <div class="flex items-center gap-3 mt-3"><button class="btn btn-danger-solid btn-sm" disabled>Delete account</button><a class="link text-xs" href="#">Cancel pending deletion</a></div>
         <div class="text-xs dim mt-2">Enter your password above to enable account deletion.</div>
       </div>

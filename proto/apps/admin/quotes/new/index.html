@@ -79,14 +79,14 @@
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Client account <span class="req">*</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option>Neha Gupta — Gupta HR Cloud</option><option>Kavya Reddy — Reddy AgroTech</option><option>Amit Verma — Verma Properties</option></select>
+  <label for="nl-client-account" class="label">Client account <span class="req">*</span> <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-client-account" class="select"><option>Neha Gupta — Gupta HR Cloud</option><option>Kavya Reddy — Reddy AgroTech</option><option>Amit Verma — Verma Properties</option></select>
   
 </div>
       <div class="mt-4">
 <div class="field">
-  <label class="label">Linked request (optional) <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option>None</option><option>HR onboarding automation — Neha Gupta</option></select>
+  <label for="nl-linked-request-optional" class="label">Linked request (optional) <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-linked-request-optional" class="select"><option>None</option><option>HR onboarding automation — Neha Gupta</option></select>
   
 </div></div></div>
   
@@ -96,8 +96,8 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Line items</h2></div></div>
   <div class="">
       <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
-<thead><tr><th>Description</th><th style="text-align:right">Qty</th><th style="text-align:right">Unit price</th><th style="text-align:right">Total</th></tr></thead>
-<tbody><tr><td data-label="Description"><input class="input sm" placeholder="Deliverable description…"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="0.00"></td><td data-label="Total" style="text-align:right"><span class="mono dim">₹0.00</span></td></tr><tr><td data-label="Description"><input class="input sm" placeholder="Deliverable description…"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="0.00"></td><td data-label="Total" style="text-align:right"><span class="mono dim">₹0.00</span></td></tr></tbody></table></div>
+<thead><tr><th id="nl-th-1">Description</th><th id="nl-th-2" style="text-align:right">Qty</th><th id="nl-th-3" style="text-align:right">Unit price</th><th id="nl-th-4" style="text-align:right">Total</th></tr></thead>
+<tbody><tr><td data-label="Description"><input class="input sm" placeholder="Deliverable description…"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1" aria-labelledby="nl-th-2"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="0.00" aria-labelledby="nl-th-3"></td><td data-label="Total" style="text-align:right"><span class="mono dim">₹0.00</span></td></tr><tr><td data-label="Description"><input class="input sm" placeholder="Deliverable description…"></td><td data-label="Qty" style="text-align:right"><input class="input sm mono" style="width:56px" value="1" aria-labelledby="nl-th-2"></td><td data-label="Unit price" style="text-align:right"><input class="input sm mono" style="width:110px" value="0.00" aria-labelledby="nl-th-3"></td><td data-label="Total" style="text-align:right"><span class="mono dim">₹0.00</span></td></tr></tbody></table></div>
       <div class="panel-foot flex items-center justify-between"><button class="btn btn-secondary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Add item</button><dl class="kv"><dt>Total</dt><dd><span class="mono font-bold">₹0.00 + GST</span></dd></dl></div></div>
   
 </div>
@@ -108,8 +108,8 @@
       <div class="flex gap-2 mb-4"><span class="chip">50 / 50</span><span class="chip active">30 / 40 / 30</span><span class="chip">100% on completion</span></div>
       
 <div class="field">
-  <label class="label">Project-specific terms <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <textarea class="textarea" rows="3" placeholder="One per line…"></textarea>
+  <label for="nl-project-specific-terms" class="label">Project-specific terms <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <textarea id="nl-project-specific-terms" class="textarea" rows="3" placeholder="One per line…"></textarea>
   
 </div></div>
   

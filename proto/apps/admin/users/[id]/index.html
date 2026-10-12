@@ -96,8 +96,8 @@
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Access management &amp; Administrative actions</h2><div class="panel-sub">Role, account status, security, data export, and elevated access</div></div></div>
     <div class="panel-body">
       <div class="grid g2 gap-3 mb-3">
-        <div class="field"><label class="label">ROLE</label><select class="select sm"><option>USER</option><option>ADMIN</option></select></div>
-        <div class="field"><label class="label">ACCOUNT STATUS</label><select class="select sm"><option>ACTIVE</option><option>SUSPENDED</option></select></div>
+        <div class="field"><label for="nl-role" class="label">ROLE</label><select id="nl-role" class="select sm"><option>USER</option><option>ADMIN</option></select></div>
+        <div class="field"><label for="nl-account-status" class="label">ACCOUNT STATUS</label><select id="nl-account-status" class="select sm"><option>ACTIVE</option><option>SUSPENDED</option></select></div>
       </div>
       <div class="flex flex-wrap gap-2 mb-3">
         <button class="btn btn-secondary btn-xs" type="button">View media</button>
@@ -116,7 +116,7 @@
   <section class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Impersonate user &amp; Account dialogs</h2><div class="panel-sub">Session lasts 60 minutes and is audited · Operator notes</div></div><button class="btn btn-secondary btn-xs" type="button">Impersonate</button></div>
     <div class="panel-body text-xs">
-      <div class="field mb-2"><label class="label">Impersonation reason (mandatory)</label><input class="input sm" value="e.g. Investigating support ticket #1422 — client cannot see milestone invoice"></div>
+      <div class="field mb-2"><label for="nl-impersonation-reason-mandatory" class="label">Impersonation reason (mandatory)</label><input id="nl-impersonation-reason-mandatory" class="input sm" value="e.g. Investigating support ticket #1422 — client cannot see milestone invoice"></div>
       <div class="mb-2"><b>Edit profile dialog:</b> First Name <span class="mono">Arjun</span> · Last Name <span class="mono">Mehta</span> · Email <span class="mono">arjun.mehta@nestlancer.com</span> · Phone <span class="mono">+919820112233</span> · Role <span class="mono">USER</span></div>
       <div class="mb-2"><b>Set password dialog:</b> New password · Confirm password · Min. 8 characters</div>
       <div><b>Deactivation confirmation:</b> Reason for deactivation required · <b>Operator notes:</b> No operator notes on file. Use the pipeline hub or request notes for client context.</div>
@@ -127,7 +127,7 @@
 <section class="panel mb-5">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Active sessions (6 devices) &amp; Activity log (602 events)</h2><div class="panel-sub">Page 1 of 2 (6 total) · Page 1 of 61 (602 total) — User signed in successfully (LOGIN · auth)</div></div></div>
   <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
-    <thead><tr><th>Device</th><th>IP Address</th><th>Started</th><th>Action</th></tr></thead>
+    <thead><tr><th id="nl-th-1">Device</th><th id="nl-th-2">IP Address</th><th id="nl-th-3">Started</th><th id="nl-th-4">Action</th></tr></thead>
     <tbody>
       <tr><td data-label="Device">Chrome on Linux</td><td data-label="IP Address" class="mono text-xs">136.86.144.132</td><td data-label="Started" class="text-xs dim">Oct 10, 2026, 11:57 AM · 11:51 AM</td><td data-label="Action"><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke · Confirm / Cancel</span></td></tr>
       <tr><td data-label="Device">Chrome on Linux</td><td data-label="IP Address" class="mono text-xs">34.83.1.1</td><td data-label="Started" class="text-xs dim">Oct 10, 2026, 10:55 AM · 10:25 AM</td><td data-label="Action"><span class="mono text-xs" style="color:var(--t-danger-tx)">Revoke</span></td></tr>
@@ -158,7 +158,7 @@
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent requests</h2></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../../requests/index.html">All requests →</a></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
-<thead><tr><th>Request</th><th>Status</th><th>Updated</th></tr></thead>
+<thead><tr><th id="nl-th-5">Request</th><th id="nl-th-6">Status</th><th id="nl-th-7">Updated</th></tr></thead>
 <tbody><tr><td data-label="Request">AUDIT-P23-LINE-20261005-7r0l Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td><td data-label="Updated"><span class="text-xs dim">Oct 6</span></td></tr><tr><td data-label="Request">AUDIT-P23-SUPP-20261005-6grw Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td><td data-label="Updated"><span class="text-xs dim">Oct 6</span></td></tr><tr><td data-label="Request">AUDIT-P25-20261005-73dhk Project Fixture</td><td data-label="Status"><span class="badge tone-info">Converted To Project</span></td><td data-label="Updated"><span class="text-xs dim">Oct 5</span></td></tr></tbody></table></div></div>
   
 </div>
@@ -166,7 +166,7 @@
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Sessions &amp; security</h2></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
-<thead><tr><th>Device</th><th>Location</th><th>Last seen</th><th></th></tr></thead>
+<thead><tr><th id="nl-th-8">Device</th><th id="nl-th-9">Location</th><th id="nl-th-10">Last seen</th><th></th></tr></thead>
 <tbody><tr><td data-label="Device">Chrome 141 · macOS</td><td data-label="Location">Mumbai, IN</td><td data-label="Last seen"><span class="mono text-xs">Now</span></td><td><span class="badge tone-success">Current</span></td></tr><tr><td data-label="Device">Safari · iPhone</td><td data-label="Location">Mumbai, IN</td><td data-label="Last seen"><span class="mono text-xs">Oct 9</span></td><td><button class="btn btn-ghost btn-xs" style="color:var(--t-danger-tx)">Revoke</button></td></tr><tr><td data-label="Device">Firefox 143 · Windows</td><td data-label="Location">Pune, IN</td><td data-label="Last seen"><span class="mono text-xs">Sep 30</span></td><td><button class="btn btn-ghost btn-xs" style="color:var(--t-danger-tx)">Revoke</button></td></tr></tbody></table></div></div>
   
 </div>
@@ -201,14 +201,14 @@
   <div class="panel-body">
       
 <div class="field">
-  <label class="label">Role <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option selected>Client</option><option>Operator — CX</option></select>
+  <label for="nl-role-2" class="label">Role <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-role-2" class="select"><option selected>Client</option><option>Operator — CX</option></select>
   
 </div>
       
 <div class="field">
-  <label class="label">Operator assignment <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
-  <select class="select"><option selected>Riya Kapoor</option><option>Arjun Nair</option></select>
+  <label for="nl-operator-assignment" class="label">Operator assignment <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label>
+  <select id="nl-operator-assignment" class="select"><option selected>Riya Kapoor</option><option>Arjun Nair</option></select>
   
 </div>
       <div class="mt-2">
