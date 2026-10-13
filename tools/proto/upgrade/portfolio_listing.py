@@ -106,8 +106,8 @@ def main():
         print('portfolio listing already rebuilt — nothing to do')
         return
     block = build()
-    i = s.find('<section class="ref-panel"')
-    assert i > 0, 'reference panel not found'
+    i = s.find('</main>')
+    assert i > 0, '</main> not found'
     out = s[:i] + block + s[i:]
     assert out.count('<section') == s.count('<section') + 2
     open(f, 'w', encoding='utf-8').write(out)

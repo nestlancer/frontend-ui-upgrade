@@ -228,10 +228,10 @@ def main():
     se = block_end(out, s)
     out = out[:s] + stat_strip() + out[se:]
 
-    # 4. the captured components, in capture order, before the reference panel
+    # 4. the captured components, in capture order, before </main>
     block = (MARKER + '\n' + categories_panel() + '\n' + analytics_panel() + '\n'
              + manage_panel() + '\n' + timeline_panel() + '\n')
-    anchor = out.index('<section class="ref-panel"')
+    anchor = out.index('</main>')
     out = out[:anchor] + block + out[anchor:]
 
     # 5. this route's captures are long documents: release the app frame

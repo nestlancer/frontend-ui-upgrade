@@ -144,14 +144,14 @@ def main():
         block = section(eyebrow, 'On this page', 'Every section of this document, in order.',
                         table(['Section', 'Covers'], rows) + '<!-- PUBLIC-TOC -->\n')
         s = read(rel)
-        i = s.find('<section class="ref-panel"')
+        i = s.find('</main>')
         assert i > 0, rel
         write(rel, s[:i] + block + s[i:])
         done.append(rel)
 
     # ── 5. marketing home: the captured payments preview, as a table ────────
     if insert('apps/landing',
-              '<section class="ref-panel"',
+              '</main>',
               section('PAYMENTS PREVIEW', 'Money in one place.',
                       'A preview of the payment schedule clients follow — deposit, milestones, final release. '
                       'Figures below are illustrative, not a live checkout.',
@@ -168,7 +168,7 @@ def main():
 
     # ── 6. about: the captured workflow, as a table ─────────────────────────
     if insert('apps/landing/about',
-              '<section class="ref-panel"',
+              '</main>',
               section('HOW WE WORK', 'Request, quote, build, pay.',
                       'One operator, one workflow, four steps — each one visible in your Project Hub.',
                       table(['Step', 'What happens', 'Where it lives'],
@@ -183,7 +183,7 @@ def main():
 
     # ── 7. contact: what to send and how fast we reply (no form here on purpose)
     if insert('apps/landing/contact',
-              '<section class="ref-panel"',
+              '</main>',
               section('WHAT TO SEND', 'Send a brief that can be quoted.',
                       'The secure form opens inside the Nestlancer app — these are the details that turn a brief '
                       'into a fixed-price quote.',
@@ -199,7 +199,7 @@ def main():
 
     # ── 8. pricing: engagement comparison ───────────────────────────────────
     if insert('apps/landing/pricing',
-              '<section class="ref-panel"',
+              '</main>',
               section('COMPARE ENGAGEMENTS', 'What each package includes.',
                       'Web Application MVP is the studio standard; everything else is scoped per brief.',
                       table(['Engagement', 'From', 'Timeline', 'Includes'],
@@ -218,7 +218,7 @@ def main():
 
     # ── 9. services: the same three packages as a scan-friendly table ───────
     if insert('apps/landing/services',
-              '<section class="ref-panel"',
+              '</main>',
               section('SERVICE PACKAGES', 'Pick a starting point.',
                       'The same studio packages as Pricing — request one and the brief becomes a fixed-price quote.',
                       table(['Service', 'From', 'Timeline'],

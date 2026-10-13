@@ -142,13 +142,6 @@
   </section>
 <!-- PROTO-UPGRADE-START -->
 <nav class="crumbs" aria-label="Breadcrumb" style="margin-bottom:8px"><a href="../index.html">Home</a><span>·</span><a href="../portfolio/index.html">Portfolio</a><span>·</span><a href="../content/index.html">Blog</a><span>·</span><a href="../contact/index.html">Contact</a></nav>
-<section class="ref-panel" id="proto-state-matrix" aria-labelledby="ref-h">
-<div class="ref-panel-head">
-  <h2 class="ref-sum-title" id="ref-h">Captured screen reference</h2>
-  <p class="ref-sum-sub">1 states recorded for this route — values as captured in the public screenshots</p>
-</div>
-<ul class="ref-list"><li class="ref-row"><div class="ref-head"><b>login — Admin login</b><span class="ref-tag mono">001</span></div><ul class="ref-facts"><li>Operator sign-in (OPS; Operator auth; zero-trust posture): &quot;Verify identity before console access&quot;. Left cards: Access Operators only; Portal Admin console; Session TTL 8h / 30d</li><li>Role gate ADMIN only. Pre-auth posture 2 / 3 ready: Transport security PASS (HTTPS + HSTS, mixed content blocked); Network policy PASS (CSP nonce, admin cookies HttpOnly / SameSite)</li><li>Operator identity PENDING (email + password, then TOTP when enrolled). Form: &quot;INTERNAL ONLY&quot; tag, &quot;Operator sign-in&quot;, Work email (you@company.com), Password (Show), Keep me signed in, Enter console. Footer: Client account? Client sign-in</li><li>&quot;Client accounts cannot finish sign-in here.&quot; Failed attempts are rate-limited and audited with IP and user-agent. Header link &quot;← gate&quot; and &quot;clients use app.nestlancer.com&quot;. Terms; Privacy</li></ul></li></ul>
-</section>
 <!-- PROTO-UPGRADE-END -->
 </main>
 
