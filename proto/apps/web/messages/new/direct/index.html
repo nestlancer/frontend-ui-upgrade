@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../../shared/assets/proto.css">
+<script src="../../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,17 +48,17 @@
     <a class="userchip" href="../../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<a href="../../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Messages</a>
-<div class="phead">
+<div class="pband"><a href="../../index.html" class="link-arrow mb-3 fs-13"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Messages</a>
+<div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>DIRECT MESSAGE</div>
   <h1 class="ptitle">New direct message</h1>
   <p class="psub">Chat one-to-one with a studio member or a workspace user.</p>
 </div>
 <div class="phead-actions"><a class="btn btn-primary" href="../../[conversationId]/index.html">Start conversation</a></div>
-</div>
+</div></div>
 
-<div class="panel ">
+<div class="panel reveal">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Pick a person</h2></div></div>
   <div class="panel-body">
   <div class="input-wrap mb-4"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search people…"></div>
@@ -65,28 +66,28 @@
     
     <a class="panel-row" href="../../[conversationId]/index.html" style="border:1px solid var(--line);border-radius:10px;padding:12px 14px">
       <span class="avatar hue-2 lg">RK</span>
-      <div class="min-w-0 flex-1"><b style="font-size:13.5px">Riya Kapoor</b><div class="text-xs dim">Operations lead · Studio</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Online now</div></div>
+      <div class="min-w-0 flex-1"><b class="fs-14">Riya Kapoor</b><div class="text-xs dim">Operations lead · Studio</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Online now</div></div>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
     </a>
     <a class="panel-row" href="../../[conversationId]/index.html" style="border:1px solid var(--line);border-radius:10px;padding:12px 14px">
       <span class="avatar hue-4 lg">AN</span>
-      <div class="min-w-0 flex-1"><b style="font-size:13.5px">Arjun Nair</b><div class="text-xs dim">Delivery lead · NL-204</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Replies under 2h</div></div>
+      <div class="min-w-0 flex-1"><b class="fs-14">Arjun Nair</b><div class="text-xs dim">Delivery lead · NL-204</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Replies under 2h</div></div>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
     </a>
     <a class="panel-row" href="../../[conversationId]/index.html" style="border:1px solid var(--line);border-radius:10px;padding:12px 14px">
       <span class="avatar hue-3 lg">SR</span>
-      <div class="min-w-0 flex-1"><b style="font-size:13.5px">Sunita Rao</b><div class="text-xs dim">Finance desk</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Workdays 10–18 IST</div></div>
+      <div class="min-w-0 flex-1"><b class="fs-14">Sunita Rao</b><div class="text-xs dim">Finance desk</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Workdays 10–18 IST</div></div>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
     </a>
     <a class="panel-row" href="../../[conversationId]/index.html" style="border:1px solid var(--line);border-radius:10px;padding:12px 14px">
       <span class="avatar hue-1 lg">DM</span>
-      <div class="min-w-0 flex-1"><b style="font-size:13.5px">Dev Malhotra</b><div class="text-xs dim">Engineering · SSO &amp; integrations</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Currently in review</div></div>
+      <div class="min-w-0 flex-1"><b class="fs-14">Dev Malhotra</b><div class="text-xs dim">Engineering · SSO &amp; integrations</div><div class="text-xs mt-1" style="color:var(--t-success-tx)"><i class="dot" style="background:var(--t-success-dot)"></i> Currently in review</div></div>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
     </a>
   </div></div>
   
 </div>
-<div class="note info"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div>Direct messages are still workspace records — operators can audit them for abuse reports.</div></div>
+<div class="note info reveal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div>Direct messages are still workspace records — operators can audit them for abuse reports.</div></div>
 </main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>

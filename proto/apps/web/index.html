@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../shared/assets/proto.css">
+<script src="../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="mkt-body">
+<body data-surface="public" class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <header class="mkt-header"><div class="mkt-wrap mkt-nav">
 <a href="./index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -22,11 +23,11 @@
   <a class="btn btn-ghost btn-sm" href="./login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="./contact/index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div></div></header><main id="main"  tabindex="-1">
-<section class="mkt-section" style="padding-top:60px"><div class="mkt-wrap">
+<section class="mkt-section mkt-hero" style="padding-top:60px"><div class="mkt-wrap">
   <div class="grid g2 gap-10 items-center">
-    <div>
+    <div class="anim-in">
       <div class="pill mb-5"><span class="dot"></span> Client portal · live</div>
-      <h1 class="h-display" style="font-size:clamp(36px,4.2vw,54px)">Your delivery OS —<br><span class="grad">from brief to payout.</span></h1>
+      <h1 class="h-display fs-display">Your delivery OS —<br><span class="grad">from brief to payout.</span></h1>
       <p class="lead mt-5" style="max-width:48ch">Submit a brief, review a line-item quote, fund milestones via Razorpay or bank rails, and approve deliverables in one auditable surface.</p>
       <div class="flex gap-3 mt-6 flex-wrap">
         <a class="btn btn-primary btn-lg" href="./register/index.html">Create client account <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
@@ -40,25 +41,25 @@
       </div>
       <div class="grid" style="grid-template-columns:repeat(5,1fr)">
         
-        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Open requests</div><div class="mono" style="font-size:21px;font-weight:700;margin-top:2px">1</div><div class="text-xs dim" style="font-size:11px">in your pipeline</div></div>
-        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Active projects</div><div class="mono" style="font-size:21px;font-weight:700;margin-top:2px">1</div><div class="text-xs dim" style="font-size:11px">0 completed</div></div>
-        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Pending quotes</div><div class="mono" style="font-size:21px;font-weight:700;margin-top:2px">0</div><div class="text-xs dim" style="font-size:11px">awaiting decision</div></div>
-        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Unread messages</div><div class="mono" style="font-size:21px;font-weight:700;margin-top:2px">6</div><div class="text-xs dim" style="font-size:11px">waiting for you</div></div>
-        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Notifications</div><div class="mono" style="font-size:21px;font-weight:700;margin-top:2px">32</div><div class="text-xs dim" style="font-size:11px">latest updates</div></div>
+        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Open requests</div><div class="mono fs-20" style="font-weight:700;margin-top:2px">1</div><div class="text-xs dim fs-11">in your pipeline</div></div>
+        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Active projects</div><div class="mono fs-20" style="font-weight:700;margin-top:2px">1</div><div class="text-xs dim fs-11">0 completed</div></div>
+        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Pending quotes</div><div class="mono fs-20" style="font-weight:700;margin-top:2px">0</div><div class="text-xs dim fs-11">awaiting decision</div></div>
+        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Unread messages</div><div class="mono fs-20" style="font-weight:700;margin-top:2px">6</div><div class="text-xs dim fs-11">waiting for you</div></div>
+        <div style="padding:14px 12px;border-right:1px solid var(--paper-line)"><div class="text-xs dim truncate">Notifications</div><div class="mono fs-20" style="font-weight:700;margin-top:2px">32</div><div class="text-xs dim fs-11">latest updates</div></div>
       </div>
       <div class="panel-row" style="border-top:1px solid var(--paper-line)">
         <span class="avatar hue-2">AI</span>
-        <div class="min-w-0"><b style="font-size:13px">Ananya Iyer — Nair Learning Systems</b><div class="text-xs dim">Dashboard · Client workspace preview</div></div>
+        <div class="min-w-0"><b class="fs-13">Ananya Iyer — Nair Learning Systems</b><div class="text-xs dim">Dashboard · Client workspace preview</div></div>
         <a class="btn btn-secondary btn-sm ml-auto" href="./dashboard/index.html">Open demo workspace</a>
       </div>
     </div>
   </div>
 </div></section>
 <section class="mkt-section" style="padding-top:24px"><div class="mkt-wrap">
-  <div class="grid g3 gap-6">
-    <div class="mkt-card" style="padding:22px"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span><div class="h3 mt-4" style="font-size:16.5px">Submitted brief → quote in days</div><p class="text-sm muted mt-2" style="line-height:1.65">Briefs become line-item quotes with acceptance criteria — sign electronically in the portal.</p></div><div class="mkt-card" style="padding:22px"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><div class="h3 mt-4" style="font-size:16.5px">Milestones funded in escrow</div><p class="text-sm muted mt-2" style="line-height:1.65">Deposit, mid-project, final. Funds move when you approve work, never before.</p></div><div class="mkt-card" style="padding:22px"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg></span><div class="h3 mt-4" style="font-size:16.5px">One auditable thread</div><p class="text-sm muted mt-2" style="line-height:1.65">Files, messages, decisions, and invoices share the same project timeline.</p></div>
+  <div class="grid g3 gap-6 reveal stagger">
+    <div class="mkt-card" style="padding:22px"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span><div class="h3 mt-4 fs-16">Submitted brief → quote in days</div><p class="text-sm muted mt-2" style="line-height:1.65">Briefs become line-item quotes with acceptance criteria — sign electronically in the portal.</p></div><div class="mkt-card" style="padding:22px"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><div class="h3 mt-4 fs-16">Milestones funded in escrow</div><p class="text-sm muted mt-2" style="line-height:1.65">Deposit, mid-project, final. Funds move when you approve work, never before.</p></div><div class="mkt-card" style="padding:22px"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg></span><div class="h3 mt-4 fs-16">One auditable thread</div><p class="text-sm muted mt-2" style="line-height:1.65">Files, messages, decisions, and invoices share the same project timeline.</p></div>
   </div>
-  <div class="mkt-card mt-6" style="padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+  <div class="mkt-card mt-6 reveal" style="padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
     <div><b class="h3">Looking for the marketing site?</b><p class="text-sm muted mt-1">nestlancer.com covers services, pricing, and the studio story.</p></div>
     <a class="btn btn-secondary" href="../landing/index.html">Visit nestlancer.com <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
   </div>

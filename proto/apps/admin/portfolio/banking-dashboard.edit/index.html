@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,16 +62,16 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to portfolio</a>
-<div class="phead">
+<div class="pband"><a href="../index.html" class="link-arrow mb-3 fs-13"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to portfolio</a>
+<div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>SHOWCASE</div>
   <h1 class="ptitle">Edit: Banking Dashboard</h1>
   <p class="psub">Published Nov 2025 · 142 views · featured on Home</p>
 </div>
 <div class="phead-actions"><a class="btn btn-secondary btn-sm" href="../../../web/portfolio/[id]/index.html" target="_blank"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg> View public</a><button class="btn btn-primary btn-sm">Save changes</button></div>
-</div>
-<div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
+</div></div>
+<div class="grid gap-5 reveal" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="flex-col gap-5">
     
 <div class="panel ">
@@ -123,12 +124,12 @@
   <div class="panel-body">
       
 <div class="switch-row">
-  <div class="min-w-0"><div class="font-semibold" style="font-size:13px">Published</div></div>
+  <div class="min-w-0"><div class="font-semibold fs-13">Published</div></div>
   <label class="switch"><input type="checkbox" checked><i></i></label>
 </div>
       
 <div class="switch-row">
-  <div class="min-w-0"><div class="font-semibold" style="font-size:13px">Featured on home</div></div>
+  <div class="min-w-0"><div class="font-semibold fs-13">Featured on home</div></div>
   <label class="switch"><input type="checkbox" checked><i></i></label>
 </div>
       <div class="text-xs dim mt-3">Removing “Featured” frees a home slot instantly — the case study remains live.</div></div>

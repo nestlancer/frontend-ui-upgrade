@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,26 +48,26 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
-<div class="phead">
+<div class="pband"><a href="../index.html" class="link-arrow mb-3 fs-13"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
+<div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>BILLING</div>
   <h1 class="ptitle">Payment methods</h1>
   <p class="psub">Cards, UPI handles, and bank accounts used for milestone payments and refunds.</p>
 </div>
 <div class="phead-actions"></div>
-</div>
-<div class="grid gap-5" style="grid-template-columns:1fr 1fr;align-items:start">
+</div></div>
+<div class="grid gap-5 reveal" style="grid-template-columns:1fr 1fr;align-items:start">
   <div class="flex-col gap-5">
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Saved methods</h2></div><div class="flex items-center gap-2 shrink-0"><button class="btn btn-primary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> Add method</button></div></div>
   <div class="">
       <div class="panel-row"><span class="avatar sq" style="width:38px;height:38px;background:#EDEBFF;color:#46399B"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span>
-        <div class="min-w-0 flex-1"><b style="font-size:13.5px">HDFC Bank Visa ···· 4492</b><div class="text-xs dim mt-1">Expires 08/29 · Ananya Iyer</div></div>
+        <div class="min-w-0 flex-1"><b class="fs-14">HDFC Bank Visa ···· 4492</b><div class="text-xs dim mt-1">Expires 08/29 · Ananya Iyer</div></div>
         <span class="badge tone-success">Default</span><button class="btn-icon btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div>
       <div class="panel-row"><span class="avatar sq" style="width:38px;height:38px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-        <div class="min-w-0 flex-1"><b style="font-size:13.5px">ananya@okicici</b><div class="text-xs dim mt-1">UPI · verified Sep 2026 · collect requests enabled</div></div>
+        <div class="min-w-0 flex-1"><b class="fs-14">ananya@okicici</b><div class="text-xs dim mt-1">UPI · verified Sep 2026 · collect requests enabled</div></div>
         <span class="badge tone-info">UPI</span><button class="btn-icon btn sm"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div></div>
   
 </div>
@@ -75,7 +76,7 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Bank accounts for transfer &amp; refunds</h2></div></div>
   <div class="">
       <div class="panel-row"><span class="avatar sq" style="width:38px;height:38px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21v-8"/><path d="M9 21v-8"/><path d="M15 21v-8"/><path d="M19 21v-8"/><path d="m12 2 9 5H3Z"/></svg></span>
-      <div class="min-w-0 flex-1"><b style="font-size:13.5px">ICICI Bank current ···· 7712</b><div class="text-xs dim mono mt-1">ICIC0000442 · Nair Learning Systems Pvt Ltd</div></div>
+      <div class="min-w-0 flex-1"><b class="fs-14">ICICI Bank current ···· 7712</b><div class="text-xs dim mono mt-1">ICIC0000442 · Nair Learning Systems Pvt Ltd</div></div>
       <span class="badge tone-success">Verified</span></div></div>
   
 </div>

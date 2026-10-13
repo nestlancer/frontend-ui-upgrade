@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,26 +62,26 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to quotes</a>
-<div class="phead">
+<div class="pband"><a href="../index.html" class="link-arrow mb-3 fs-13"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to quotes</a>
+<div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>CONVERSION ANALYTICS</div>
   <h1 class="ptitle">Quote stats</h1>
   <p class="psub">From first draft to signature — the funnel, the leak points, and per-operator performance.</p>
 </div>
 <div class="phead-actions"></div>
-</div>
-<div class="grid gap-5" style="grid-template-columns:2fr 1fr">
+</div></div>
+<div class="grid gap-5 reveal" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">90-day funnel</h2><div class="panel-sub">Quotes in each stage (of 36 created)</div></div></div>
   <div class="panel-body">
     
-    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Drafted</span><div class="prog grow"><i style="width:100%;background:var(--line-strong)"></i></div><b class="mono" style="font-size:12.5px;width:30px;text-align:right">36</b></div>
-    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Sent</span><div class="prog grow"><i style="width:81%;background:var(--t-info-dot)"></i></div><b class="mono" style="font-size:12.5px;width:30px;text-align:right">29</b></div>
-    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Viewed</span><div class="prog grow"><i style="width:67%;background:var(--brand-8)"></i></div><b class="mono" style="font-size:12.5px;width:30px;text-align:right">24</b></div>
-    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Accepted</span><div class="prog grow"><i style="width:44%;background:var(--t-success-dot)"></i></div><b class="mono" style="font-size:12.5px;width:30px;text-align:right">16</b></div>
-    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Declined / expired</span><div class="prog grow"><i style="width:19%;background:var(--t-danger-dot)"></i></div><b class="mono" style="font-size:12.5px;width:30px;text-align:right">7</b></div></div>
+    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Drafted</span><div class="prog grow"><i style="width:100%;background:var(--line-strong)"></i></div><b class="mono fs-13" style="width:30px;text-align:right">36</b></div>
+    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Sent</span><div class="prog grow"><i style="width:81%;background:var(--t-info-dot)"></i></div><b class="mono fs-13" style="width:30px;text-align:right">29</b></div>
+    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Viewed</span><div class="prog grow"><i style="width:67%;background:var(--brand-8)"></i></div><b class="mono fs-13" style="width:30px;text-align:right">24</b></div>
+    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Accepted</span><div class="prog grow"><i style="width:44%;background:var(--t-success-dot)"></i></div><b class="mono fs-13" style="width:30px;text-align:right">16</b></div>
+    <div class="flex items-center gap-3 mb-3"><span class="text-xs muted" style="width:110px">Declined / expired</span><div class="prog grow"><i style="width:19%;background:var(--t-danger-dot)"></i></div><b class="mono fs-13" style="width:30px;text-align:right">7</b></div></div>
   
 </div>
   
@@ -88,11 +89,11 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Time in stage (median)</h2><div class="panel-sub">Days</div></div></div>
   <div class="panel-body"><div class="flex items-center gap-5">
 <svg width="120" height="120" viewBox="0 0 120 120"><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--bg-subtle)" stroke-width="14"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--line-strong)" stroke-width="14" stroke-dasharray="75.40 175.93" stroke-dashoffset="0.00"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--brand-8)" stroke-width="14" stroke-dasharray="25.13 226.19" stroke-dashoffset="-75.40"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-success-dot)" stroke-width="14" stroke-dasharray="150.80 100.53" stroke-dashoffset="-100.53"/></svg>
-<div class="flex-col gap-2"><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--line-strong);width:8px;height:8px"></i><span class="muted">Draft → sent</span><b class="mono ml-auto" style="font-size:12px">1.2d</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--brand-8);width:8px;height:8px"></i><span class="muted">Sent → viewed</span><b class="mono ml-auto" style="font-size:12px">0.4d</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-success-dot);width:8px;height:8px"></i><span class="muted">Viewed → accepted</span><b class="mono ml-auto" style="font-size:12px">2.4d</b></div></div></div></div>
+<div class="flex-col gap-2"><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:var(--line-strong);width:8px;height:8px"></i><span class="muted">Draft → sent</span><b class="mono ml-auto fs-12">1.2d</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:var(--brand-8);width:8px;height:8px"></i><span class="muted">Sent → viewed</span><b class="mono ml-auto fs-12">0.4d</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:var(--t-success-dot);width:8px;height:8px"></i><span class="muted">Viewed → accepted</span><b class="mono ml-auto fs-12">2.4d</b></div></div></div></div>
   
 </div>
 </div>
-<div class="grid gap-5 mt-5" style="grid-template-columns:1fr 1fr">
+<div class="grid gap-5 mt-5 reveal" style="grid-template-columns:1fr 1fr">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Acceptance trend</h2><div class="panel-sub">Rolling 8 weeks</div></div></div>

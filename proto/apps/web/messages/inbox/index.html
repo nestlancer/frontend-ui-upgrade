@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,19 +48,19 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>SUPPORT</div>
   <h1 class="ptitle">Messaging panel</h1>
   <p class="psub">Triage on the left, the open thread on the right. Your delivery lead reads everything here.</p>
 </div>
 <div class="phead-actions"><a class="btn btn-secondary btn-sm" href="../index.html">Inbox health</a><a class="btn btn-primary btn-sm" href="../new/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New message</a></div>
-</div>
+</div></div>
 
-<div class="chat-grid pane3" style="margin-top:4px">
+<div class="chat-grid pane3 reveal" style="margin-top:4px">
   
 <div class="chat-col">
-  <div class="chat-head"><b style="font-size:13px">Mailbox</b><button class="btn-icon btn sm" title="Compose"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg></button></div>
+  <div class="chat-head"><b class="fs-13">Mailbox</b><button class="btn-icon btn sm" title="Compose"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg></button></div>
   
   <a class="conv" href="./index.html" style="background:var(--brand-1);box-shadow:inset 2.5px 0 0 var(--brand-9)">
     <span style="color:var(--ink-3);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span><div class="flex-1"><div class="t">Inbox</div></div><span class="sb-count">6</span>
@@ -82,7 +83,7 @@
 <div class="conv">
   <span class="avatar hue-1 lg">PO</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Payments ops — Razorpay settlement and webhooks <span class="badge tone-info no-dot" style="height:16px;padding:0 5px;font-size:11px">GROUP</span></div><span class="tm">5 days ago</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Payments ops — Razorpay settlement and webhooks <span class="badge tone-info no-dot fs-11" style="height:16px;padding:0 5px">GROUP</span></div><span class="tm">5 days ago</span></div>
     <div class="s">I'll post the shared retry checklist here after tomorrow's reconciliation review. Production changes still go through each project milestone.</div>
   </div>
   <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
@@ -90,7 +91,7 @@
 <div class="conv active">
   <span class="avatar hue-2 lg">RK</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Riya Kapoor <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">DIRECT</span></div><span class="tm">5 days ago</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Riya Kapoor <span class="badge tone-neutral no-dot fs-11" style="height:16px;padding:0 5px">DIRECT</span></div><span class="tm">5 days ago</span></div>
     <div class="s">Thanks. Our finance team confirmed the duplicate NEFT on their end too. Replay UI remains the priority for month-end.</div>
   </div>
   
@@ -98,7 +99,7 @@
 <div class="conv">
   <span class="avatar hue-4 lg">LD</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">LMS delivery — NL-204 <span class="badge tone-info no-dot" style="height:16px;padding:0 5px;font-size:11px">GROUP</span></div><span class="tm">2 days ago</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">LMS delivery — NL-204 <span class="badge tone-info no-dot fs-11" style="height:16px;padding:0 5px">GROUP</span></div><span class="tm">2 days ago</span></div>
     <div class="s">Quiz engine thresholds deployed to staging. Two question types pending copy review.</div>
   </div>
   <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
@@ -106,7 +107,7 @@
 <div class="conv">
   <span class="avatar hue-3 lg">SA</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Studio announcements <span class="badge tone-info no-dot" style="height:16px;padding:0 5px;font-size:11px">GROUP</span></div><span class="tm">Oct 4</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Studio announcements <span class="badge tone-info no-dot fs-11" style="height:16px;padding:0 5px">GROUP</span></div><span class="tm">Oct 4</span></div>
     <div class="s">Scheduled maintenance Sun 02:00–03:30 IST. Read-only mode expected for 20 minutes.</div>
   </div>
   
@@ -116,7 +117,7 @@
 <div class="chat-col flex-col" style="display:flex">
   <div class="chat-head" style="padding:12px 16px">
     <div class="flex items-center gap-3 min-w-0">
-      <div class="min-w-0"><b class="block truncate" style="font-size:13.5px">Riya Kapoor</b><div class="text-xs dim"><i class="dot" style="background:var(--t-success-dot);display:inline-block;margin-right:4px"></i>Online · replies under 2h</div></div>
+      <div class="min-w-0"><b class="block truncate fs-14">Riya Kapoor</b><div class="text-xs dim"><i class="dot" style="background:var(--t-success-dot);display:inline-block;margin-right:4px"></i>Online · replies under 2h</div></div>
     </div>
     <div class="flex gap-1"><button class="btn-icon btn sm" title="Details"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></button><button class="btn-icon btn sm" title="More"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg></button></div>
   </div>

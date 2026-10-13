@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,22 +48,22 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>SUPPORT</div>
   <h1 class="ptitle">Threads</h1>
   <p class="psub">Every conversation as a record — participants, scope, and last activity in one table.</p>
 </div>
 <div class="phead-actions"></div>
-</div>
-<div class="filterbar mb-4"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search threads…"></div><select aria-label="Filter by type" class="select sm"><option>All types</option><option>Direct</option><option>Group</option><option>Project</option></select><select aria-label="Filter by state" class="select sm"><option>Any state</option><option>Unread</option><option>Awaiting reply</option><option>Resolved</option></select></div>
-<div class="panel">
+</div></div>
+<div class="filterbar mb-4 reveal"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search threads…"></div><select aria-label="Filter by type" class="select sm"><option>All types</option><option>Direct</option><option>Group</option><option>Project</option></select><select aria-label="Filter by state" class="select sm"><option>Any state</option><option>Unread</option><option>Awaiting reply</option><option>Resolved</option></select></div>
+<div class="panel reveal">
 <div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th id="nl-th-1">Thread</th><th id="nl-th-2">Type</th><th id="nl-th-3">Participants</th><th id="nl-th-4">Last activity</th><th id="nl-th-5">State</th><th></th></tr></thead>
 <tbody><tr><td data-label="Thread"><b>Payments ops — Razorpay settlement and webhooks</b><div class="text-xs dim mono mt-1">th_01a10a2e-42f8</div></td><td data-label="Type"><span class="badge tone-info">Group</span></td><td data-label="Participants">5</td><td data-label="Last activity"><span class="text-xs dim">5 days ago</span></td><td data-label="State"><span class="badge tone-warning">Unread 6</span></td><td><a class="link text-xs" href="../thread/[threadId]/index.html">Open →</a></td></tr><tr><td data-label="Thread"><b>LMS delivery — NL-204</b><div class="text-xs dim mono mt-1">th_01a0c9d1-77ab</div></td><td data-label="Type"><span class="badge tone-info">Group</span></td><td data-label="Participants">4</td><td data-label="Last activity"><span class="text-xs dim">2 days ago</span></td><td data-label="State"><span class="badge tone-info">Awaiting reply</span></td><td><a class="link text-xs" href="../thread/[threadId]/index.html">Open →</a></td></tr><tr><td data-label="Thread"><b>Riya Kapoor</b><div class="text-xs dim mono mt-1">dm_01a0f2e4-1c90</div></td><td data-label="Type"><span class="badge tone-neutral">Direct</span></td><td data-label="Participants">2</td><td data-label="Last activity"><span class="text-xs dim">5 days ago</span></td><td data-label="State"><span class="badge tone-muted">Read</span></td><td><a class="link text-xs" href="../[conversationId]/index.html">Open →</a></td></tr><tr><td data-label="Thread"><b>Studio announcements</b><div class="text-xs dim mono mt-1">th_00f8b2a1-3e55</div></td><td data-label="Type"><span class="badge tone-info">Group</span></td><td data-label="Participants">34</td><td data-label="Last activity"><span class="text-xs dim">Oct 4</span></td><td data-label="State"><span class="badge tone-muted">Read</span></td><td><a class="link text-xs" href="../thread/[threadId]/index.html">Open →</a></td></tr></tbody></table></div>
 </div>
 
-<div class="pager mt-4"><span>Showing 1–4 of 4</span>
+<div class="pager mt-4 reveal"><span>Showing 1–4 of 4</span>
 <div class="pager-btns">
   <button class="btn btn-ghost btn-sm" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> <span>Prev</span></button>
   <span class="page-cur">1</span>

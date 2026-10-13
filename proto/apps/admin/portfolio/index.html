@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,22 +62,22 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>SHOWCASE</div>
   <h1 class="ptitle">Portfolio</h1>
   <p class="psub">Manage showcase projects. The live timeline below mirrors what visitors see on the public site.</p>
 </div>
 <div class="phead-actions"><a class="btn btn-ghost" href="../../web/work/index.html">View public page</a><a class="btn btn-primary" href="./new/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New item</a></div>
-</div>
-<div class="stat-strip mb-5">
+</div></div>
+<div class="stat-strip mb-5 reveal stagger">
     <div><div class="s-label">On this page</div><div class="s-value">8</div></div>
     <div><div class="s-label">Published</div><div class="s-value">8</div></div>
     <div><div class="s-label">Draft</div><div class="s-value">0</div></div>
     <div><div class="s-label">Featured</div><div class="s-value">4</div></div>
   </div>
 <!-- admin-portfolio:captured-components -->
-<div class="panel mb-5">
+<div class="panel mb-5 reveal">
   <div class="panel-head"><div class="min-w-0">
     <h2 class="panel-title">Categories</h2>
     <div class="panel-sub">Labels clients filter by on the public work page.</div>
@@ -91,7 +92,7 @@
     </div>
   </div>
 </div>
-<div class="panel mb-5">
+<div class="panel mb-5 reveal">
   <div class="panel-head"><div class="min-w-0">
     <h2 class="panel-title">Analytics</h2>
     <div class="panel-sub">Views and likes across the published showcase. Total views 11 · total likes 0 · top items 8.</div>
@@ -117,7 +118,7 @@
     </table></div>
     <h3 class="panel-title mt-4">Item analytics</h3>
     <div class="grid g3 gap-4 mt-2">
-      <div><div class="s-label">Top item</div><div class="s-value" style="font-size:14px">B2B Client Portal UX</div></div>
+      <div><div class="s-label">Top item</div><div class="s-value fs-14">B2B Client Portal UX</div></div>
       <div><div class="s-label">Views</div><div class="s-value">4</div></div>
       <div><div class="s-label">Likes</div><div class="s-value">0</div></div>
     </div>
@@ -127,7 +128,7 @@
     </div>
   </div>
 </div>
-<div class="panel mb-5">
+<div class="panel mb-5 reveal">
   <div class="panel-head"><div class="min-w-0">
     <h2 class="panel-title">Manage items</h2>
     <div class="panel-sub">Create, edit, publish, and remove portfolio entries.</div>
@@ -226,7 +227,7 @@
     </table></div>
   </div>
 </div>
-<div class="panel mb-5">
+<div class="panel mb-5 reveal">
   <div class="panel-head"><div class="min-w-0">
     <h2 class="panel-title">Live timeline preview</h2>
     <div class="panel-sub">Compact date and title preview of the public project timeline.</div>

@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,7 +62,7 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>SUPPORT · MESSAGES INBOX</div>
   <h1 class="ptitle">Operator inbox</h1>
@@ -69,20 +70,20 @@
 </div>
 <div class="phead-actions"><a class="btn btn-secondary btn-sm" href="../index.html">Center</a><a class="btn btn-primary btn-sm" href="../new-direct/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New message</a></div>
 </div>
-<div class="tabs mb-4" role="tablist">
+<div class="tabs mb-4 reveal" role="tablist">
   <button class="tab active" type="button">All <span class="tab-count">20</span></button>
   <button class="tab" type="button">Unread</button>
   <button class="tab" type="button">Direct</button>
   <button class="tab" type="button">Group</button>
   <button class="tab" type="button">Project</button>
   <button class="tab" type="button">Archived</button>
-</div>
-<section class="panel mb-4">
+</div></div>
+<section class="panel mb-4 reveal">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Active conversations (All 20)</h2><div class="panel-sub">Direct conversation with Arjun Mehta · Group conversation: Admin + Arjun + Priya · AUDIT-P25-20261005-73dhk Project Fixture · E-Commerce Storefront with Razorpay Checkout · Clinic Appointment &amp; Telemedicine Portal · B2B SaaS Analytics Dashboard · Logistics Fleet Tracking Mobile App</div></div></div>
 </section>
-<div class="chat-grid pane3" style="margin-top:4px">
+<div class="chat-grid pane3 reveal" style="margin-top:4px">
   <div class="chat-col">
-    <div class="chat-head"><b style="font-size:13px">Mailbox</b><span class="badge tone-danger" style="font-family:var(--font-mono)">12</span></div>
+    <div class="chat-head"><b class="fs-13">Mailbox</b><span class="badge tone-danger" style="font-family:var(--font-mono)">12</span></div>
     
     <a class="conv" href="../threads/index.html" style=""><span style="color:var(--ink-3);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span><div class="flex-1"><div class="t">All threads</div></div><span class="sb-count">5</span></a>
     <a class="conv" href="../new/direct/index.html" style=""><span style="color:var(--ink-3);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><div class="flex-1"><div class="t">Direct</div></div><span class="sb-count">2</span></a>
@@ -97,7 +98,7 @@
 <div class="conv active">
   <span class="avatar hue-1 lg">PN</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Priya Nair — LMS delivery · NL-204 <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">2h ago</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Priya Nair — LMS delivery · NL-204 <span class="badge tone-neutral no-dot fs-11" style="height:16px;padding:0 5px">Thread</span></div><span class="tm">2h ago</span></div>
     <div class="s">“Confirming Oct 13 review slot works?”</div>
   </div>
   <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
@@ -105,7 +106,7 @@
 <div class="conv">
   <span class="avatar hue-4 lg">KM</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Karthik Menon <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">4h ago</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Karthik Menon <span class="badge tone-neutral no-dot fs-11" style="height:16px;padding:0 5px">Thread</span></div><span class="tm">4h ago</span></div>
     <div class="s">“UTR posted on the payment page…”</div>
   </div>
   <i class="dot" style="background:var(--brand-9);width:8px;height:8px;margin-top:8px"></i>
@@ -113,7 +114,7 @@
 <div class="conv">
   <span class="avatar hue-3 lg">AP</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Agency partner coordination <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">Yesterday</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Agency partner coordination <span class="badge tone-neutral no-dot fs-11" style="height:16px;padding:0 5px">Thread</span></div><span class="tm">Yesterday</span></div>
     <div class="s">“Landing copy freeze moved to Monday.”</div>
   </div>
   
@@ -121,7 +122,7 @@
 <div class="conv">
   <span class="avatar hue-5 lg">PP</span>
   <div class="flex-1 min-w-0">
-    <div class="flex items-center justify-between gap-2"><div class="t truncate">Pain point capture thread <span class="badge tone-neutral no-dot" style="height:16px;padding:0 5px;font-size:11px">Thread</span></div><span class="tm">Oct 8</span></div>
+    <div class="flex items-center justify-between gap-2"><div class="t truncate">Pain point capture thread <span class="badge tone-neutral no-dot fs-11" style="height:16px;padding:0 5px">Thread</span></div><span class="tm">Oct 8</span></div>
     <div class="s">“Client asked for sandbox keys twice…”</div>
   </div>
   
@@ -129,7 +130,7 @@
   </div>
   <div class="chat-col flex-col" style="display:flex">
     <div class="chat-head" style="padding:12px 16px">
-      <div class="flex items-center gap-2 min-w-0"><span class="avatar hue-1">PN</span><div class="min-w-0"><b class="block truncate" style="font-size:13.5px">Priya Nair — LMS delivery · NL-204</b><div class="text-xs dim">Project thread · 5 participants</div></div></div>
+      <div class="flex items-center gap-2 min-w-0"><span class="avatar hue-1">PN</span><div class="min-w-0"><b class="block truncate fs-14">Priya Nair — LMS delivery · NL-204</b><div class="text-xs dim">Project thread · 5 participants</div></div></div>
       <span class="badge tone-warning shrink-0">Client waiting</span>
     </div>
     <div class="grow" style="overflow-y:auto;padding-bottom:12px">

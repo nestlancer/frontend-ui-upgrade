@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,79 +62,79 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>PLATFORM</div>
   <h1 class="ptitle">Integrations</h1>
   <p class="psub">Where the platform talks to the outside world — payments, email, LLMs, and notifications.</p>
 </div>
 <div class="phead-actions"><button class="btn btn-primary" type="button" data-dialog-open="dlg-webhook">Add webhook</button></div>
-</div>
-<div class="panel mb-5">
+</div></div>
+<div class="panel mb-5 reveal">
   <div class="panel-row">
     <span class="avatar sq" style="width:38px;height:38px;background:var(--t-info-bg);color:#3FA9F5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>
-    <div class="flex-1"><b style="font-size:13.5px">Slack bot</b><div class="text-xs dim mt-1">Posting to <span class="mono">#nl-ops</span>, <span class="mono">#nl-leads</span></div></div>
+    <div class="flex-1"><b class="fs-14">Slack bot</b><div class="text-xs dim mt-1">Posting to <span class="mono">#nl-ops</span>, <span class="mono">#nl-leads</span></div></div>
     <span class="badge tone-success">Live</span>
   </div>
 </div>
-<div class="grid g3 gap-5">
+<div class="grid g3 gap-5 reveal">
   
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--t-warning-bg);color:var(--t-warning-tx)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><span class="badge tone-warning">Attention</span></div>
-    <b class="h3" style="font-size:14px">Razorpay</b><div class="text-xs dim mt-1">Payments gateway</div>
+    <b class="h3 fs-14">Razorpay</b><div class="text-xs dim mt-1">Payments gateway</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">Test keys active · flip before GA</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">Resend</b><div class="text-xs dim mt-1">Transactional & marketing email</div>
+    <b class="h3 fs-14">Resend</b><div class="text-xs dim mt-1">Transactional & marketing email</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">Verified domain: nestlancer.com</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">Anthropic</b><div class="text-xs dim mt-1">Intake summaries, auto-tagging</div>
+    <b class="h3 fs-14">Anthropic</b><div class="text-xs dim mt-1">Intake summaries, auto-tagging</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">Claude Haiku · 12k req/mo</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">Google Drive</b><div class="text-xs dim mt-1">External deliverable archive</div>
+    <b class="h3 fs-14">Google Drive</b><div class="text-xs dim mt-1">External deliverable archive</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">Service account scoped to /deliverables</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">S3 — uploads bucket</b><div class="text-xs dim mt-1">Media origin for the CDN</div>
+    <b class="h3 fs-14">S3 — uploads bucket</b><div class="text-xs dim mt-1">Media origin for the CDN</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">Lifecycle: quarantine bucket is private</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">Sentry</b><div class="text-xs dim mt-1">Error tracking + release health</div>
+    <b class="h3 fs-14">Sentry</b><div class="text-xs dim mt-1">Error tracking + release health</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">0 unresolved · native tracing on</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">Vercel Cron</b><div class="text-xs dim mt-1">Hourly jobs + digests</div>
+    <b class="h3 fs-14">Vercel Cron</b><div class="text-xs dim mt-1">Hourly jobs + digests</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">us-east · 21 routes</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">SMS Gupshup</b><div class="text-xs dim mt-1">India SMS for payment nudges</div>
+    <b class="h3 fs-14">SMS Gupshup</b><div class="text-xs dim mt-1">India SMS for payment nudges</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">Sender ID NSTLAN · DLT registered</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
   <div class="panel panel-pad">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></span><span class="badge tone-success">Connected</span></div>
-    <b class="h3" style="font-size:14px">Webhooks</b><div class="text-xs dim mt-1">Outbound events to client systems</div>
+    <b class="h3 fs-14">Webhooks</b><div class="text-xs dim mt-1">Outbound events to client systems</div>
     <div class="text-xs dim mono mt-3" style="line-height:1.5">14 active endpoints</div>
     <div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs">Configure</button><button class="btn btn-ghost btn-xs">Docs</button></div>
   </div>
 </div>
-<div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div>Razorpay is in <b>test mode</b>. No real money moves until production keys replace the current test pair — keep client comms aligned.</div></div>
+<div class="note warn reveal"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div>Razorpay is in <b>test mode</b>. No real money moves until production keys replace the current test pair — keep client comms aligned.</div></div>
 
 <dialog class="dialog" id="dlg-webhook" aria-labelledby="dlg-webhook-h">
   <div class="dialog-head">

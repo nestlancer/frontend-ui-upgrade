@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,31 +62,31 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>OPERATIONS</div>
   <h1 class="ptitle">Command center</h1>
   <p class="psub">Live revenue, queues, and what needs action — refreshed every 30s.</p>
 </div>
 <div class="phead-actions"><a class="btn btn-secondary" href="../pipeline/index.html">Pipelines</a><a class="btn btn-secondary" href="../analytics/index.html">Analytics</a><a class="btn btn-primary" href="../messages/inbox/index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg> Inbox</a></div>
-</div>
-<div class="panel mb-5">
-  <div class="panel-row" style="padding:12px 18px"><span class="font-semibold" style="font-size:13px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg> Needs attention</span><span class="badge tone-success">Live</span><span class="badge tone-success ml-auto" style="margin-left:auto">System healthy</span></div>
-  <div class="grid g6" style="padding:4px 0">
+</div></div>
+<div class="panel mb-5 reveal">
+  <div class="panel-row" style="padding:12px 18px"><span class="font-semibold fs-13"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg> Needs attention</span><span class="badge tone-success">Live</span><span class="badge tone-success ml-auto" style="margin-left:auto">System healthy</span></div>
+  <div class="grid g6 att-grid stagger" style="padding:4px 0">
     
-    <div style="padding:12px 16px;border-left:3px solid var(--t-warning-dot)"><div class="text-xs dim">Pending requests</div><div class="mono font-bold" style="font-size:20px">11</div></div>
-    <div style="padding:12px 16px;border-left:3px solid var(--t-info-dot)"><div class="text-xs dim">Open quotes</div><div class="mono font-bold" style="font-size:20px">7</div></div>
-    <div style="padding:12px 16px;border-left:3px solid var(--t-warning-dot)"><div class="text-xs dim">Pending pay</div><div class="mono font-bold" style="font-size:20px">16</div></div>
-    <div style="padding:12px 16px;border-left:3px solid var(--t-success-dot)"><div class="text-xs dim">Flagged msgs</div><div class="mono font-bold" style="font-size:20px">0</div></div>
-    <div style="padding:12px 16px;border-left:3px solid var(--brand-8)"><div class="text-xs dim">Contact new</div><div class="mono font-bold" style="font-size:20px">17</div></div>
-    <div style="padding:12px 16px;border-left:3px solid var(--t-success-dot)"><div class="text-xs dim">Alerts</div><div class="mono font-bold" style="font-size:20px">0</div></div>
+    <div class="att" style="--tone:var(--t-warning-dot)"><div class="text-xs dim">Pending requests</div><div class="mono font-bold att-v fs-20">11</div></div>
+    <div class="att" style="--tone:var(--t-info-dot)"><div class="text-xs dim">Open quotes</div><div class="mono font-bold att-v fs-20">7</div></div>
+    <div class="att" style="--tone:var(--t-warning-dot)"><div class="text-xs dim">Pending pay</div><div class="mono font-bold att-v fs-20">16</div></div>
+    <div class="att" style="--tone:var(--t-success-dot)"><div class="text-xs dim">Flagged msgs</div><div class="mono font-bold att-v fs-20">0</div></div>
+    <div class="att" style="--tone:var(--brand-8)"><div class="text-xs dim">Contact new</div><div class="mono font-bold att-v fs-20">17</div></div>
+    <div class="att" style="--tone:var(--t-success-dot)"><div class="text-xs dim">Alerts</div><div class="mono font-bold att-v fs-20">0</div></div>
   </div>
 </div>
-<div class="flex items-center justify-between mb-2">
+<div class="flex items-center justify-between mb-2 reveal">
   <span class="text-xs dim">Period metrics · Sep 11, 2026, 12:00 AM — Oct 10, 2026, 7:26 AM · 30d window</span>
   <div class="seg"><button class="">7 days</button><button class="active">30 days</button><button class="">90 days</button><button class="">1 year</button></div>
 </div>
-<div class="stats" style="grid-template-columns:repeat(6,1fr)"><div class="stat">
+<div class="stats reveal stagger" style="grid-template-columns:repeat(6,1fr)"><div class="stat">
   <div class="stat-label">Revenue (month)</div>
   <div class="stat-value">₹7,08,160.00</div>
   <div class="stat-note up">INR · ₹2,60,790.00 awaiting</div>
@@ -110,7 +111,7 @@
   <div class="stat-value">11</div>
   <div class="stat-note ">↑ new</div>
 </div></div>
-<div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
+<div class="grid gap-5 mt-5 reveal" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Revenue trajectory</h2><div class="panel-sub">Sep 11 — Oct 10 · 30d window</div></div><div class="flex items-center gap-2 shrink-0"><div class="seg"><button class="">7 days</button><button class="active">30 days</button><button class="">90 days</button><button class="">1 year</button></div></div></div>
@@ -128,17 +129,17 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Project mix</h2><div class="panel-sub">Lifecycle share</div></div></div>
   <div class="panel-body"><div class="flex items-center gap-5">
 <svg width="120" height="120" viewBox="0 0 120 120"><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--bg-subtle)" stroke-width="14"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--brand-8)" stroke-width="14" stroke-dasharray="59.14 192.19" stroke-dashoffset="0.00"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-info-dot)" stroke-width="14" stroke-dasharray="44.35 206.98" stroke-dashoffset="-59.14"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--t-warning-dot)" stroke-width="14" stroke-dasharray="147.84 103.49" stroke-dashoffset="-103.49"/></svg>
-<div class="flex-col gap-2"><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--brand-8);width:8px;height:8px"></i><span class="muted">In Progress</span><b class="mono ml-auto" style="font-size:12px">4 · 24%</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-info-dot);width:8px;height:8px"></i><span class="muted">Pending Payment</span><b class="mono ml-auto" style="font-size:12px">3 · 18%</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:var(--t-warning-dot);width:8px;height:8px"></i><span class="muted">Completed</span><b class="mono ml-auto" style="font-size:12px">10 · 59%</b></div></div></div></div>
+<div class="flex-col gap-2"><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:var(--brand-8);width:8px;height:8px"></i><span class="muted">In Progress</span><b class="mono ml-auto fs-12">4 · 24%</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:var(--t-info-dot);width:8px;height:8px"></i><span class="muted">Pending Payment</span><b class="mono ml-auto fs-12">3 · 18%</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:var(--t-warning-dot);width:8px;height:8px"></i><span class="muted">Completed</span><b class="mono ml-auto fs-12">10 · 59%</b></div></div></div></div>
   
 </div>
 </div>
-<div class="grid gap-5 mt-5" style="grid-template-columns:1fr 1fr">
+<div class="grid gap-5 mt-5 reveal" style="grid-template-columns:1fr 1fr">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent requests</h2><div class="panel-sub">Newest inbound work</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="../requests/index.html">View all →</a></div></div>
   <div class=""><div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th id="nl-th-1">Request</th><th id="nl-th-2">Customer</th><th id="nl-th-3">Subject</th><th id="nl-th-4">Status</th></tr></thead>
-<tbody><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa4…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P23-LINE-20261005-7r0l Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10fa3…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P23-SUPP-20261005-6grw Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f87…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P25-20261005-73dhk Project Fixture</td><td data-label="Status"><span class="badge tone-info">Converted To Project</span></td></tr><tr><td data-label="Request"><span class="mono" style="font-size:11px;color:var(--ink-3)">01a10f84…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P24-20261005-6y6fa-draft Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr></tbody></table></div></div>
+<tbody><tr><td data-label="Request"><span class="mono fs-11" style="color:var(--ink-3)">01a10fa4…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P23-LINE-20261005-7r0l Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr><tr><td data-label="Request"><span class="mono fs-11" style="color:var(--ink-3)">01a10fa3…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P23-SUPP-20261005-6grw Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr><tr><td data-label="Request"><span class="mono fs-11" style="color:var(--ink-3)">01a10f87…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P25-20261005-73dhk Project Fixture</td><td data-label="Status"><span class="badge tone-info">Converted To Project</span></td></tr><tr><td data-label="Request"><span class="mono fs-11" style="color:var(--ink-3)">01a10f84…</span></td><td data-label="Customer"><b>Arjun Mehta</b></td><td data-label="Subject">AUDIT-P24-20261005-6y6fa-draft Request</td><td data-label="Status"><span class="badge tone-warning">Submitted</span></td></tr></tbody></table></div></div>
   
 </div>
   
@@ -150,7 +151,7 @@
   
 </div>
 </div>
-<div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
+<div class="grid gap-5 mt-5 reveal" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Request volume over time</h2><div class="panel-sub">Inbound briefs · last 30 days · live</div></div><div class="flex items-center gap-2 shrink-0"><span class="badge tone-info">46 total</span></div></div>
@@ -161,10 +162,10 @@
 </div>
   <div class="panel"><div class="panel-head"><div><h2 class="panel-title">Moderation queues</h2><div class="panel-sub">Flagged + contact inbox</div></div></div>
     
-    <a class="panel-row" href="../moderation/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span><b style="font-size:13px" class="flex-1">Flagged messages</b><span class="mono font-semibold">0</span></a>
-    <a class="panel-row" href="../contact/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span><b style="font-size:13px" class="flex-1">New contact mail</b><span class="mono font-semibold">17</span></a>
-    <a class="panel-row" href="../payments/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><b style="font-size:13px" class="flex-1">Pending settlements</b><span class="mono font-semibold">16</span></a>
-    <a class="panel-row" href="../messages/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><b style="font-size:13px" class="flex-1">Message center</b><span class="mono font-semibold">→</span></a>
+    <a class="panel-row" href="../moderation/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span><b class="flex-1 fs-13">Flagged messages</b><span class="mono font-semibold">0</span></a>
+    <a class="panel-row" href="../contact/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></span><b class="flex-1 fs-13">New contact mail</b><span class="mono font-semibold">17</span></a>
+    <a class="panel-row" href="../payments/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><b class="flex-1 fs-13">Pending settlements</b><span class="mono font-semibold">16</span></a>
+    <a class="panel-row" href="../messages/index.html"><span class="avatar sq" style="width:30px;height:30px;background:var(--bg-subtle);color:var(--ink-2)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span><b class="flex-1 fs-13">Message center</b><span class="mono font-semibold">→</span></a>
   </div>
 </div>
 </main>

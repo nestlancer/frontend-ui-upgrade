@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../../../shared/assets/proto.css">
+<script src="../../../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../../../../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,17 +62,17 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<a href="../../../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to content</a>
-<div class="phead">
+<div class="pband"><a href="../../../index.html" class="link-arrow mb-3 fs-13"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to content</a>
+<div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>BLOG · CMS</div>
   <h1 class="ptitle">Edit post</h1>
   <p class="psub">Refine the story, tune SEO, and publish when it reads well. “Cutting Deploy Time from 45 Minutes to Five” &amp; “Why Your Business Needs a Custom CRM in 2025” — published Oct 12, 2025 · v14</p>
 </div>
 <div class="phead-actions"><a class="btn btn-secondary btn-sm" href="../../../index.html">← Back to blog</a><a class="btn btn-secondary btn-sm" href="../../../../../web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html" target="_blank">Open live post · View public</a><button class="btn btn-primary btn-sm">Save changes</button></div>
-</div>
+</div></div>
 
-<div class="panel mb-5">
+<div class="panel mb-5 reveal">
   <div class="panel-head">
     <div class="min-w-0">
       <h2 class="panel-title">Editor view · Write / Split / Preview</h2>
@@ -96,7 +97,7 @@
       </div>
       <div class="field">
         <label for="nl-content-markdown" class="label">Content (Markdown)</label>
-        <textarea id="nl-content-markdown" class="textarea mono" rows="10" style="font-size:12.5px">CI caching, smaller artifacts, and service-level pipelines after monolith split. The team prioritized **operational ownership** while migrating on a Nestlancer-style stack—gateway at the edge, domain NestJS services, Prisma on Postgres, async work through RabbitMQ, and media on Backblaze B2.
+        <textarea id="nl-content-markdown" class="textarea mono fs-13" rows="10">CI caching, smaller artifacts, and service-level pipelines after monolith split. The team prioritized **operational ownership** while migrating on a Nestlancer-style stack—gateway at the edge, domain NestJS services, Prisma on Postgres, async work through RabbitMQ, and media on Backblaze B2.
 
 ## Where we started
 The team inherited single pipeline building every service on each commit. The triggering incident was clear: hotfix queue depth grew while waiting for unrelated image builds. Leadership funded the refactor when customer-visible latency and support load rose together—not when the diagram looked messy.
@@ -111,7 +112,7 @@ The team inherited single pipeline building every service on each commit. The tr
 ### Discovery · Strangler cutover · Reliability hardening · Stabilize and learn</textarea>
       </div>
     </div>
-    <div class="panel-body prose" style="font-size:13.5px">
+    <div class="panel-body prose fs-14">
       <div class="flex items-center justify-between mb-2">
         <h3 class="panel-title">Instant preview (Preview mode)</h3>
         <span class="badge tone-brand">2 min read · Case Studies</span>
@@ -127,12 +128,12 @@ The team inherited single pipeline building every service on each commit. The tr
   </div>
 </div>
 
-<div class="grid g3 gap-4 mb-5">
+<div class="grid g3 gap-4 mb-5 reveal">
   <div class="panel"><div class="panel-head"><h2 class="panel-title">Settings</h2></div><div class="panel-body"><dl class="kv"><dt>Category *</dt><dd>Case Studies</dd><dt>Slug</dt><dd class="mono text-xs">cutting-deploy-time-from-45-minutes-to-five</dd><dt>Tags (comma-separated)</dt><dd class="mono text-xs">NestJS, Node.js</dd><dt>Status</dt><dd><span class="badge tone-success">Published</span></dd></dl></div></div>
   <div class="panel"><div class="panel-head"><h2 class="panel-title">SEO &amp; discovery</h2></div><div class="panel-body"><div class="text-xs mb-2"><b>Meta title:</b> Cutting Deploy Time from 45 Minutes to Five</div><div class="text-xs dim"><b>Meta description (80 / 160 characters):</b> CI caching, smaller artifacts, and service-level pipelines after monolith split.</div></div></div>
   <div class="panel"><div class="panel-head"><h2 class="panel-title">Writing stats</h2></div><div class="panel-body"><dl class="kv"><dt>Words</dt><dd class="mono font-bold">363</dd><dt>Est. read</dt><dd class="mono font-bold">2 min</dd><dt>Excerpt length</dt><dd class="mono font-bold">80 chars</dd></dl><div class="text-xs dim mt-2">Lead with a clear promise in the title. Keep excerpts under 200 characters for cards and social previews.</div></div></div>
 </div>
-<div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
+<div class="grid gap-5 reveal" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="flex-col gap-5">
     
 <div class="panel ">
@@ -197,7 +198,7 @@ The team inherited single pipeline building every service on each commit. The tr
   </div>
 </div>
 <!-- PROTO-STATES-EDITOR -->
-<section id="states-editor" class="mb-5" aria-labelledby="states-editor-h"><div class="sec-head">
+<section id="states-editor" class="mb-5 reveal" aria-labelledby="states-editor-h"><div class="sec-head">
     <div class="min-w-0">
       <div class="sec-eyebrow">Operator states · 3 screens</div>
       <h2 class="sec-title" id="states-editor-h">Editor modes</h2>
@@ -224,7 +225,7 @@ The team inherited single pipeline building every service on each commit. The tr
     </div>
     <span class="badge tone-neutral mono">068</span>
   </div>
-  <div class="dialog-body"><div class="grid g2 gap-3"><div class="field"><label class="label" for="ed-left">Markdown</label><textarea class="textarea" id="ed-left" rows="4">**Bold** text and ## headings render instantly on the right.</textarea></div><div class="panel" style="box-shadow:none"><div class="panel-head"><h3 class="panel-title">Instant preview</h3></div><div class="panel-body prose"><h2 style="font-size:17px;margin-top:0">Where we started</h2><p class="text-sm">The pipeline built every service on each commit — hotfix queue depth grew while waiting for it.</p><p class="text-sm"><b>Bold</b> markdown renders here; the split view never needs a save.</p></div></div></div></div>
+  <div class="dialog-body"><div class="grid g2 gap-3"><div class="field"><label class="label" for="ed-left">Markdown</label><textarea class="textarea" id="ed-left" rows="4">**Bold** text and ## headings render instantly on the right.</textarea></div><div class="panel" style="box-shadow:none"><div class="panel-head"><h3 class="panel-title">Instant preview</h3></div><div class="panel-body prose"><h2 class="fs-18" style="margin-top:0">Where we started</h2><p class="text-sm">The pipeline built every service on each commit — hotfix queue depth grew while waiting for it.</p><p class="text-sm"><b>Bold</b> markdown renders here; the split view never needs a save.</p></div></div></div></div>
   <div class="dialog-foot"><span class="text-xs dim mr-auto">Preview renders Markdown headings, bullets, code sketches and tags</span><button class="btn btn-primary btn-sm" type="button">Save changes</button></div>
 </section><section class="dialog-surface" id="ed-preview" aria-labelledby="ed-preview-h">
   <div class="dialog-head">
@@ -234,7 +235,7 @@ The team inherited single pipeline building every service on each commit. The tr
     </div>
     <span class="badge tone-neutral mono">067</span>
   </div>
-  <div class="dialog-body"><div class="note"><span class="text-xs">Unsaved draft — not public until you publish.</span></div><div class="mt-3"><div class="kpi-grid"><div class="kpi"><div class="k-label">Words</div><div class="k-value">383</div><div class="k-delta ">current draft</div></div><div class="kpi"><div class="k-label">Meta description</div><div class="k-value">80</div><div class="k-delta ">chars</div></div><div class="kpi"><div class="k-label">Status</div><div class="k-value">Published</div><div class="k-delta ">live version</div></div><div class="kpi"><div class="k-label">Unsaved draft</div><div class="k-value">Yes</div><div class="k-delta up">preview only</div></div></div></div><div class="mt-3"><div class="flex items-center gap-2 flex-wrap"><span class="chip active">#NestJS</span><span class="chip">#Node.js</span><span class="chip">headings</span><span class="chip">bullets</span><span class="chip">code sketch · BlogGatewayController</span></div></div></div>
+  <div class="dialog-body"><div class="note"><span class="text-xs">Unsaved draft — not public until you publish.</span></div><div class="mt-3"><div class="kpi-grid stagger"><div class="kpi"><div class="k-label">Words</div><div class="k-value">383</div><div class="k-delta ">current draft</div></div><div class="kpi"><div class="k-label">Meta description</div><div class="k-value">80</div><div class="k-delta ">chars</div></div><div class="kpi"><div class="k-label">Status</div><div class="k-value">Published</div><div class="k-delta ">live version</div></div><div class="kpi"><div class="k-label">Unsaved draft</div><div class="k-value">Yes</div><div class="k-delta up">preview only</div></div></div></div><div class="mt-3"><div class="flex items-center gap-2 flex-wrap"><span class="chip active">#NestJS</span><span class="chip">#Node.js</span><span class="chip">headings</span><span class="chip">bullets</span><span class="chip">code sketch · BlogGatewayController</span></div></div></div>
   <div class="dialog-foot"><span class="text-xs dim mr-auto">Responsive preview · desktop, tablet, phone</span></div>
 </section></div></section>
 </main>

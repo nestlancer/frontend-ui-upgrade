@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,7 +48,7 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   
   <h1 class="ptitle">Settings</h1>
@@ -55,8 +56,8 @@
 </div>
 <div class="phead-actions"></div>
 </div>
-<div class="tabs mb-5"><a class="tab" href="../account/index.html">Account</a><a class="tab active" href="./index.html">Security</a><a class="tab" href="../sessions/index.html">Sessions</a><a class="tab" href="../notifications/index.html">Notifications</a><a class="tab" href="../billing/index.html">Billing</a><a class="tab" href="../files/index.html">Files</a><a class="tab" href="../activity/index.html">Activity</a></div>
-<div class="flex-col gap-5" style="max-width:820px">
+<div class="tabs mb-5 reveal"><a class="tab" href="../account/index.html">Account</a><a class="tab active" href="./index.html">Security</a><a class="tab" href="../sessions/index.html">Sessions</a><a class="tab" href="../notifications/index.html">Notifications</a><a class="tab" href="../billing/index.html">Billing</a><a class="tab" href="../files/index.html">Files</a><a class="tab" href="../activity/index.html">Activity</a></div></div>
+<div class="flex-col gap-5 reveal" style="max-width:820px">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Password</h2></div><div class="flex items-center gap-2 shrink-0"><span class="badge tone-success">Good rotation</span></div></div>
@@ -84,8 +85,8 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Two-factor authentication</h2></div><div class="flex items-center gap-2 shrink-0"><span class="badge tone-warning">Not enabled</span></div></div>
   <div class="panel-body">
     <div class="grid gap-4" style="grid-template-columns:auto 1fr">
-      <div style="width:120px;height:120px;border-radius:12px;background:var(--ink-1);display:flex;align-items:center;justify-content:center"><span class="mono" style="color:#7FE8DA;font-size:11px;letter-spacing:.1em">QR · TOTP</span></div>
-      <div><b style="font-size:13.5px">Authenticator app (TOTP)</b>
+      <div style="width:120px;height:120px;border-radius:12px;background:var(--ink-1);display:flex;align-items:center;justify-content:center"><span class="mono fs-11" style="color:#7FE8DA;letter-spacing:.1em">QR · TOTP</span></div>
+      <div><b class="fs-14">Authenticator app (TOTP)</b>
       <p class="text-xs muted mt-1" style="line-height:1.6">Scan with 1Password, Authy, or Google Authenticator. Required for payouts over ₹1L once enabled.</p>
       <button class="btn btn-primary btn-sm mt-3"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Enable 2FA</button></div>
     </div></div>
@@ -96,7 +97,7 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recovery codes</h2><div class="panel-sub">One-time codes for when your phone is lost. Generated when 2FA is enabled.</div></div></div>
   <div class="panel-body">
     <div class="flex items-center justify-between"><span class="text-xs dim">8 codes remaining (demo)</span><button class="btn btn-secondary btn-sm" disabled><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> Regenerate</button></div>
-    <div class="grid g4 gap-2 mt-3"><code class="mono chip justify-center" style="font-size:11px">3K9F-2LAD</code><code class="mono chip justify-center" style="font-size:11px">7HQW-9MZX</code><code class="mono chip justify-center" style="font-size:11px">P4T8-61CN</code><code class="mono chip justify-center" style="font-size:11px">X2VB-77QJ</code><code class="mono chip justify-center" style="font-size:11px">A9D3-K2LR</code><code class="mono chip justify-center" style="font-size:11px">5W8E-1BBF</code><code class="mono chip justify-center" style="font-size:11px">M6N4-90XZ</code><code class="mono chip justify-center" style="font-size:11px">C1T7-4HDF</code></div></div>
+    <div class="grid g4 gap-2 mt-3"><code class="mono chip justify-center fs-11">3K9F-2LAD</code><code class="mono chip justify-center fs-11">7HQW-9MZX</code><code class="mono chip justify-center fs-11">P4T8-61CN</code><code class="mono chip justify-center fs-11">X2VB-77QJ</code><code class="mono chip justify-center fs-11">A9D3-K2LR</code><code class="mono chip justify-center fs-11">5W8E-1BBF</code><code class="mono chip justify-center fs-11">M6N4-90XZ</code><code class="mono chip justify-center fs-11">C1T7-4HDF</code></div></div>
   
 </div>
   
@@ -104,7 +105,7 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Sign-in alerts</h2></div></div>
   <div class="panel-body">
 <div class="switch-row">
-  <div class="min-w-0"><div class="font-semibold" style="font-size:13px">Email me about new sign-ins</div><div class="text-xs dim mt-1">Includes device, IP, and approximate location</div></div>
+  <div class="min-w-0"><div class="font-semibold fs-13">Email me about new sign-ins</div><div class="text-xs dim mt-1">Includes device, IP, and approximate location</div></div>
   <label class="switch"><input type="checkbox" checked><i></i></label>
 </div></div>
   

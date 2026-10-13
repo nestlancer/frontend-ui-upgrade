@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,15 +48,15 @@
     <a class="userchip" href="../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   
   <h1 class="ptitle">Quotes</h1>
   <p class="psub">Fixed-price proposals from the studio. Review, negotiate, sign — all here.</p>
 </div>
 <div class="phead-actions"><a class="btn btn-primary" href="../requests/new/index.html">Request a quote</a><a class="btn btn-secondary" href="./templates/index.html">Templates</a></div>
-</div>
-<div class="stats" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
+</div></div>
+<div class="stats reveal stagger" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
   <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg>Open</div>
   <div class="stat-value">1</div>
   <div class="stat-note ">Awaiting your decision</div>
@@ -72,40 +73,40 @@
   <div class="stat-value">4</div>
   <div class="stat-note ">Common scopes</div>
 </div></div>
-<div class="mt-5"><div class="tabs mb-5"><a class="tab active" href="#">All <span class="count">3</span></a><a class="tab" href="#">Open <span class="count">1</span></a><a class="tab" href="#">Accepted <span class="count">2</span></a><a class="tab" href="./drafts/index.html">Drafts <span class="count">1</span></a><a class="tab" href="./templates/index.html">Templates <span class="count">4</span></a></div></div>
-<div class="filterbar mb-4"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search quotes…"></div><select aria-label="Filter by statuse" class="select sm"><option>All statuses</option><option>Sent</option><option>Viewed</option><option>Accepted</option><option>Declined</option><option>Expired</option></select></div>
-<div class="panel">
+<div class="mt-5 reveal"><div class="tabs mb-5"><a class="tab active" href="#">All <span class="count">3</span></a><a class="tab" href="#">Open <span class="count">1</span></a><a class="tab" href="#">Accepted <span class="count">2</span></a><a class="tab" href="./drafts/index.html">Drafts <span class="count">1</span></a><a class="tab" href="./templates/index.html">Templates <span class="count">4</span></a></div></div>
+<div class="filterbar mb-4 reveal"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search quotes…"></div><select aria-label="Filter by statuse" class="select sm"><option>All statuses</option><option>Sent</option><option>Viewed</option><option>Accepted</option><option>Declined</option><option>Expired</option></select></div>
+<div class="panel reveal">
   
   <a class="panel-row" href="./[id]/index.html" style="align-items:flex-start">
     <span class="avatar sq" style="width:34px;height:34px;border-radius:9px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg></span>
     <div class="min-w-0 flex-1">
-      <b style="font-size:13.5px">Quote #01a10f80</b>
+      <b class="fs-14">Quote #01a10f80</b>
       <div class="text-xs muted mt-1">For: AUDIT-P23-20261005-6rdsf Request to Quote Builder</div>
       <div class="text-xs dim mono mt-1">Oct 5, 2026 · Valid until Oct 20, 2026</div>
     </div>
-    <div class="text-right shrink-0"><div class="mono font-bold" style="font-size:15px">₹1,770.00</div><div class="mt-1"><span class="badge tone-warning">Viewed</span></div></div>
+    <div class="text-right shrink-0"><div class="mono font-bold fs-15">₹1,770.00</div><div class="mt-1"><span class="badge tone-warning">Viewed</span></div></div>
   </a>
   <a class="panel-row" href="./[id]/index.html" style="align-items:flex-start">
     <span class="avatar sq" style="width:34px;height:34px;border-radius:9px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg></span>
     <div class="min-w-0 flex-1">
-      <b style="font-size:13.5px">Quote NL-QTO-2026-000098</b>
+      <b class="fs-14">Quote NL-QTO-2026-000098</b>
       <div class="text-xs muted mt-1">Corporate LMS for 200 Employees — Custom build</div>
       <div class="text-xs dim mono mt-1">Sep 30, 2026 · Converted to NL-204</div>
     </div>
-    <div class="text-right shrink-0"><div class="mono font-bold" style="font-size:15px">₹52,200.00</div><div class="mt-1"><span class="badge tone-success">Accepted</span></div></div>
+    <div class="text-right shrink-0"><div class="mono font-bold fs-15">₹52,200.00</div><div class="mt-1"><span class="badge tone-success">Accepted</span></div></div>
   </a>
   <a class="panel-row" href="./[id]/index.html" style="align-items:flex-start">
     <span class="avatar sq" style="width:34px;height:34px;border-radius:9px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M13 16H8"/></svg></span>
     <div class="min-w-0 flex-1">
-      <b style="font-size:13.5px">Quote NL-QTO-2026-000077</b>
+      <b class="fs-14">Quote NL-QTO-2026-000077</b>
       <div class="text-xs muted mt-1">Festive Season Campaign Landing Pages</div>
       <div class="text-xs dim mono mt-1">Sep 2, 2026 · Fully delivered &amp; billed</div>
     </div>
-    <div class="text-right shrink-0"><div class="mono font-bold" style="font-size:15px">₹6,000.00</div><div class="mt-1"><span class="badge tone-muted">Completed</span></div></div>
+    <div class="text-right shrink-0"><div class="mono font-bold fs-15">₹6,000.00</div><div class="mt-1"><span class="badge tone-muted">Completed</span></div></div>
   </a>
 </div>
 
-<div class="pager mt-4"><span>Showing 1–3 of 3</span>
+<div class="pager mt-4 reveal"><span>Showing 1–3 of 3</span>
 <div class="pager-btns">
   <button class="btn btn-ghost btn-sm" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> <span>Prev</span></button>
   <span class="page-cur">1</span>

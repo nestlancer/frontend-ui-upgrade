@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,15 +62,15 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>OPERATIONS</div>
   <h1 class="ptitle">Projects</h1>
   <p class="psub">Active delivery work across every client — stage, health, and money in one table.</p>
 </div>
 <div class="phead-actions"></div>
-</div>
-<div class="stats" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
+</div></div>
+<div class="stats reveal stagger" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
   <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></svg>Active</div>
   <div class="stat-value">4</div>
   <div class="stat-note ">7 with queued work</div>
@@ -86,15 +87,15 @@
   <div class="stat-value">10</div>
   <div class="stat-note ">On-time rate 88%</div>
 </div></div>
-<div class="mt-5"><div class="tabs mb-5"><a class="tab active" href="#">Active <span class="count">4</span></a><a class="tab" href="./completed/index.html">Completed <span class="count">10</span></a><a class="tab" href="./archive/index.html">Archive <span class="count">3</span></a><a class="tab" href="./stats/index.html">Stats</a></div>
+<div class="mt-5 reveal"><div class="tabs mb-5"><a class="tab active" href="#">Active <span class="count">4</span></a><a class="tab" href="./completed/index.html">Completed <span class="count">10</span></a><a class="tab" href="./archive/index.html">Archive <span class="count">3</span></a><a class="tab" href="./stats/index.html">Stats</a></div>
 <div class="filterbar mb-4"><div class="input-wrap" style="width:240px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search projects…"></div><select aria-label="Filter by stage" class="select sm"><option>All stages</option><option>Discovery</option><option>Design</option><option>Frontend</option><option>QA</option><option>Handover</option></select><select aria-label="Filter by client" class="select sm"><option>All clients</option></select><a class="btn btn-primary btn-sm ml-auto" href="./new/index.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg> New project</a></div></div>
-<div class="panel">
+<div class="panel reveal">
 <div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th id="nl-th-1">Project</th><th id="nl-th-2">Client</th><th id="nl-th-3">Stage</th><th id="nl-th-4">Progress</th><th id="nl-th-5" style="text-align:right">Outstanding</th><th id="nl-th-6">State</th><th></th></tr></thead>
 <tbody><tr><td data-label="Project"><b>Corporate LMS for 200 Employees</b><div class="text-xs dim mono mt-1">NL-204</div></td><td data-label="Client">Priya Nair</td><td data-label="Stage"><span class="badge tone-info">QA</span></td><td data-label="Progress"><div class="flex items-center gap-2" style="min-width:130px"><div class="prog "><i style="width:40%"></i></div><span class="mono text-xs">40%</span></div></td><td style="text-align:right" data-label="Outstanding"><span class="mono">₹20,880</span></td><td data-label="State"><span class="badge tone-warning">Review pending</span></td><td><a class="link text-xs font-semibold" href="./[id]/index.html">Open →</a></td></tr><tr><td data-label="Project"><b>Razorpay Settlement Reconciliation Engine</b><div class="text-xs dim mono mt-1">NL-198</div></td><td data-label="Client">Ananya Iyer</td><td data-label="Stage"><span class="badge tone-info">Handover</span></td><td data-label="Progress"><div class="flex items-center gap-2" style="min-width:130px"><div class="prog "><i style="width:92%"></i></div><span class="mono text-xs">92%</span></div></td><td style="text-align:right" data-label="Outstanding"><span class="mono">₹0</span></td><td data-label="State"><span class="badge tone-success">Healthy</span></td><td><a class="link text-xs font-semibold" href="./[id]/index.html">Open →</a></td></tr><tr><td data-label="Project"><b>GPS Fleet Tracking Portal</b><div class="text-xs dim mono mt-1">NL-187</div></td><td data-label="Client">Sandeep Chopra</td><td data-label="Stage"><span class="badge tone-info">Frontend</span></td><td data-label="Progress"><div class="flex items-center gap-2" style="min-width:130px"><div class="prog "><i style="width:54%"></i></div><span class="mono text-xs">54%</span></div></td><td style="text-align:right" data-label="Outstanding"><span class="mono">₹21,600</span></td><td data-label="State"><span class="badge tone-warning">Payment due</span></td><td><a class="link text-xs font-semibold" href="./[id]/index.html">Open →</a></td></tr><tr><td data-label="Project"><b>Multi-Branch Clinic Booking</b><div class="text-xs dim mono mt-1">NL-181</div></td><td data-label="Client">Pooja Kulkarni</td><td data-label="Stage"><span class="badge tone-info">Design</span></td><td data-label="Progress"><div class="flex items-center gap-2" style="min-width:130px"><div class="prog "><i style="width:34%"></i></div><span class="mono text-xs">34%</span></div></td><td style="text-align:right" data-label="Outstanding"><span class="mono">₹45,500</span></td><td data-label="State"><span class="badge tone-danger">At risk</span></td><td><a class="link text-xs font-semibold" href="./[id]/index.html">Open →</a></td></tr><tr><td data-label="Project"><b>Freelance Marketplace MVP</b><div class="text-xs dim mono mt-1">NL-166</div></td><td data-label="Client">Amit Verma</td><td data-label="Stage"><span class="badge tone-info">Discovery</span></td><td data-label="Progress"><div class="flex items-center gap-2" style="min-width:130px"><div class="prog "><i style="width:12%"></i></div><span class="mono text-xs">12%</span></div></td><td style="text-align:right" data-label="Outstanding"><span class="mono">₹58,000</span></td><td data-label="State"><span class="badge tone-warning">Awaiting deposit</span></td><td><a class="link text-xs font-semibold" href="./[id]/index.html">Open →</a></td></tr></tbody></table></div>
 </div>
 
-<div class="pager mt-4"><span>Showing 1–5 of 4 stages</span>
+<div class="pager mt-4 reveal"><span>Showing 1–5 of 4 stages</span>
 <div class="pager-btns">
   <button class="btn btn-ghost btn-sm" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> <span>Prev</span></button>
   <span class="page-cur">1</span>

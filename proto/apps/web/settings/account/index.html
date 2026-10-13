@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,17 +48,17 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   
   <h1 class="ptitle">Settings</h1>
   
 </div>
 <div class="phead-actions"></div>
-</div>
-<div class="text-sm muted mb-5" style="max-width:76ch">Privacy, data export, and account deletion. Delivery channels live under <a class="link" href="../notifications/index.html">Notification settings</a>. Update your public identity from <a class="link" href="../../profile/index.html">Profile</a>.</div>
-<div class="tabs mb-5"><a class="tab active" href="./index.html">Account</a><a class="tab" href="../security/index.html">Security</a><a class="tab" href="../sessions/index.html">Sessions</a><a class="tab" href="../notifications/index.html">Notifications</a><a class="tab" href="../billing/index.html">Billing</a><a class="tab" href="../files/index.html">Files</a><a class="tab" href="../activity/index.html">Activity</a></div>
-<div class="flex-col gap-5" style="max-width:820px">
+</div></div>
+<div class="text-sm muted mb-5 reveal" style="max-width:76ch">Privacy, data export, and account deletion. Delivery channels live under <a class="link" href="../notifications/index.html">Notification settings</a>. Update your public identity from <a class="link" href="../../profile/index.html">Profile</a>.</div>
+<div class="tabs mb-5 reveal"><a class="tab active" href="./index.html">Account</a><a class="tab" href="../security/index.html">Security</a><a class="tab" href="../sessions/index.html">Sessions</a><a class="tab" href="../notifications/index.html">Notifications</a><a class="tab" href="../billing/index.html">Billing</a><a class="tab" href="../files/index.html">Files</a><a class="tab" href="../activity/index.html">Activity</a></div>
+<div class="flex-col gap-5 reveal" style="max-width:820px">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Privacy <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></h2><div class="panel-sub">Control who can see your profile and contact details.</div></div></div>
@@ -65,12 +66,12 @@
     <div class="field mb-2" style="max-width:420px"><label for="nl-profile-visibility" class="label font-semibold">Profile visibility</label><select id="nl-profile-visibility" class="select"><option selected>Public</option><option>Workspace only</option><option>Hidden</option></select></div>
     
 <div class="switch-row">
-  <div class="min-w-0"><div class="font-semibold" style="font-size:13px">Show email on profile</div></div>
+  <div class="min-w-0"><div class="font-semibold fs-13">Show email on profile</div></div>
   <label class="switch"><input type="checkbox"><i></i></label>
 </div>
     
 <div class="switch-row">
-  <div class="min-w-0"><div class="font-semibold" style="font-size:13px">Show phone on profile</div></div>
+  <div class="min-w-0"><div class="font-semibold fs-13">Show phone on profile</div></div>
   <label class="switch"><input type="checkbox"><i></i></label>
 </div>
   </div>
@@ -79,8 +80,8 @@
   <div class="panel" style="border-color:var(--t-danger-bd);background:linear-gradient(180deg,var(--t-danger-bg) 0%,var(--bg-card) 42%)">
     <div class="panel-head" style="border-bottom-color:var(--t-danger-bd)"><div><h2 class="panel-title" style="color:var(--t-danger-tx)">Danger zone</h2><div class="panel-sub">Export your data or permanently delete your account.</div></div></div>
     <div class="panel-body grid gap-6" style="grid-template-columns:1fr 1fr">
-      <div><b style="font-size:13.5px">Data export</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Request a copy of your account data. Processing may take a few minutes.</p><button class="btn btn-secondary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Request data export</button></div>
-      <div><b style="font-size:13.5px">Delete account</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Schedules permanent deletion. You can cancel while it is still pending.</p>
+      <div><b class="fs-14">Data export</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Request a copy of your account data. Processing may take a few minutes.</p><button class="btn btn-secondary btn-sm"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Request data export</button></div>
+      <div><b class="fs-14">Delete account</b><p class="text-xs muted mt-1 mb-3" style="line-height:1.6">Schedules permanent deletion. You can cancel while it is still pending.</p>
         <div class="field"><label for="nl-password-to-confirm-deletion" class="label">Password to confirm deletion <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></label><input id="nl-password-to-confirm-deletion" class="input" type="password" placeholder="Enter your password"></div>
         <div class="flex items-center gap-3 mt-3"><button class="btn btn-danger-solid btn-sm" disabled>Delete account</button><a class="link text-xs" href="#">Cancel pending deletion</a></div>
         <div class="text-xs dim mt-2">Enter your password above to enable account deletion.</div>
@@ -88,7 +89,7 @@
     </div>
   </div>
 </div>
-<div class="actionbar"><span class="text-xs dim mr-auto">Unsaved changes stay local until you save</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div>
+<div class="actionbar reveal"><span class="text-xs dim mr-auto">Unsaved changes stay local until you save</span><button class="btn btn-ghost">Discard</button><button class="btn btn-primary">Save changes</button></div>
 </main>
 <footer class="page-foot">© 2026 Nestlancer · Prototype build dir-html/1.0</footer>
 </div></div>

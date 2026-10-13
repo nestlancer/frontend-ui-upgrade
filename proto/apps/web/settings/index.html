@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,49 +48,49 @@
     <a class="userchip" href="../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   
   <h1 class="ptitle">Settings</h1>
   <p class="psub">Manage account preferences, security, notifications, files, and activity.</p>
 </div>
 <div class="phead-actions"></div>
-</div>
-<div class="grid g3 gap-5">
+</div></div>
+<div class="grid g3 gap-5 reveal">
   
   <a class="panel panel-pad" href="./security/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span><span class="badge tone-warning">2FA not enabled</span></div>
-    <b class="h3" style="font-size:15px">Security</b><div class="text-sm muted mt-1">Password, 2FA, recovery codes</div>
+    <b class="h3 fs-15">Security</b><div class="text-sm muted mt-1">Password, 2FA, recovery codes</div>
     <div class="link text-sm mt-3 inline-flex items-center gap-1">Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
   </a>
   <a class="panel panel-pad" href="./sessions/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg></span><span class="badge tone-info">1 new this week</span></div>
-    <b class="h3" style="font-size:15px">Sessions</b><div class="text-sm muted mt-1">3 active devices, revoke any</div>
+    <b class="h3 fs-15">Sessions</b><div class="text-sm muted mt-1">3 active devices, revoke any</div>
     <div class="link text-sm mt-3 inline-flex items-center gap-1">Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
   </a>
   <a class="panel panel-pad" href="./notifications/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg></span><span class="badge tone-neutral">37 unread now</span></div>
-    <b class="h3" style="font-size:15px">Notifications</b><div class="text-sm muted mt-1">Channels per category</div>
+    <b class="h3 fs-15">Notifications</b><div class="text-sm muted mt-1">Channels per category</div>
     <div class="link text-sm mt-3 inline-flex items-center gap-1">Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
   </a>
   <a class="panel panel-pad" href="./billing/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></span><span class="badge tone-neutral">Visa ···· 4492 default</span></div>
-    <b class="h3" style="font-size:15px">Billing</b><div class="text-sm muted mt-1">Default method, GST details</div>
+    <b class="h3 fs-15">Billing</b><div class="text-sm muted mt-1">Default method, GST details</div>
     <div class="link text-sm mt-3 inline-flex items-center gap-1">Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
   </a>
   <a class="panel panel-pad" href="./files/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/><line x1="6" y1="16" x2="6.01" y2="16"/><line x1="10" y1="16" x2="10.01" y2="16"/></svg></span><span class="badge tone-neutral">2.1 GB of 5 GB used</span></div>
-    <b class="h3" style="font-size:15px">Files</b><div class="text-sm muted mt-1">Storage quota and retention</div>
+    <b class="h3 fs-15">Files</b><div class="text-sm muted mt-1">Storage quota and retention</div>
     <div class="link text-sm mt-3 inline-flex items-center gap-1">Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
   </a>
   <a class="panel panel-pad" href="./activity/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg></span><span class="badge tone-neutral">Export available</span></div>
-    <b class="h3" style="font-size:15px">Activity</b><div class="text-sm muted mt-1">Sign-ins and account events</div>
+    <b class="h3 fs-15">Activity</b><div class="text-sm muted mt-1">Sign-ins and account events</div>
     <div class="link text-sm mt-3 inline-flex items-center gap-1">Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
   </a>
   <a class="panel panel-pad" href="./account/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></div>
-    <b class="h3" style="font-size:15px">Account</b><div class="text-sm muted mt-1">Privacy, data export, deletion</div>
+    <b class="h3 fs-15">Account</b><div class="text-sm muted mt-1">Privacy, data export, deletion</div>
     <div class="link text-sm mt-3 inline-flex items-center gap-1">Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
   </a>
 </div></main>

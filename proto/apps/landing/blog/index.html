@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="mkt-body">
+<body data-surface="marketing" class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <header class="mkt-header"><div class="mkt-wrap mkt-nav">
 <a href="../index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -22,8 +23,8 @@
   <a class="btn btn-ghost btn-sm" href="../../web/login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="../contact/index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div></div></header><main id="main"  tabindex="-1">
-<section style="padding:44px 0 24px"><div class="mkt-wrap" style="display:grid;grid-template-columns:200px 1fr;gap:40px">
-  <aside>
+<section class="mkt-hero" style="padding:44px 0 24px"><div class="mkt-wrap" style="display:grid;grid-template-columns:200px 1fr;gap:40px">
+  <aside class="reveal">
     <div class="eyebrow mb-3">Categories</div>
     <div class="flex justify-between text-sm" style="padding:8px 10px;border-radius:8px;background:var(--brand-1);font-weight:600"><span>All articles</span><span class="mono text-xs dim">110</span></div><div class="flex justify-between text-sm" style="padding:8px 10px;border-radius:8px;color:var(--ink-2)"><span>Business</span><span class="mono text-xs dim">27</span></div><div class="flex justify-between text-sm" style="padding:8px 10px;border-radius:8px;color:var(--ink-2)"><span>Case Studies</span><span class="mono text-xs dim">26</span></div><div class="flex justify-between text-sm" style="padding:8px 10px;border-radius:8px;color:var(--ink-2)"><span>Design</span><span class="mono text-xs dim">27</span></div><div class="flex justify-between text-sm" style="padding:8px 10px;border-radius:8px;color:var(--ink-2)"><span>Technology</span><span class="mono text-xs dim">30</span></div>
     <div class="eyebrow mt-6 mb-3">Tools</div>
@@ -31,7 +32,7 @@
   </aside>
   <div>
     <div class="flex items-end justify-between flex-wrap gap-4">
-      <div><h1 class="h1">Latest articles</h1><p class="lead mt-3" style="max-width:60ch">Hiring playbooks, engineering deep-dives, and studio insights — filtered by category.</p></div>
+      <div class="anim-in"><h1 class="h1">Latest articles</h1><p class="lead mt-3" style="max-width:60ch">Hiring playbooks, engineering deep-dives, and studio insights — filtered by category.</p></div>
       <input class="input" placeholder="Search posts…" style="width:260px">
     </div>
     <div class="mkt-card mt-6" style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
@@ -44,97 +45,97 @@
       <div style="padding:22px 24px">
         <span class="badge tone-danger">Featured</span>
         <div class="eyebrow mt-3">CASE STUDIES</div>
-        <div class="h2 mt-2" style="font-size:24px">Cutting Deploy Time from 45 Minutes to Five</div>
+        <div class="h2 mt-2 fs-24">Cutting Deploy Time from 45 Minutes to Five</div>
         <p class="text-sm muted mt-2">CI caching, smaller artifacts, and service-level pipelines after monolith split.</p>
         <div class="flex justify-between mt-4 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 4 views</span></div>
       </div>
     </a>
-    <div class="grid g3 gap-4 mt-5">
+    <div class="grid g3 gap-4 mt-5 stagger">
       <a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:0ms">
         <div class="cover" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Scaling a Freelance Marketplace Architecture</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Scaling a Freelance Marketplace Architecture</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Matching algorithms, escrow flows, and dispute resolution at growing GMV.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">3 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:60ms">
         <div class="cover v2" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">GDPR Compliance Platform Rebuild</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">GDPR Compliance Platform Rebuild</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Data maps, deletion workflows, and consent logging across microservices.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:120ms">
         <div class="cover v3" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Migrating from WebSockets to SSE</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Migrating from WebSockets to SSE</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Simpler infra, CDN friendliness, and trade-offs for one-way realtime feeds.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 2 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:0ms">
         <div class="cover v4" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Elasticsearch Migration for Search Features</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Elasticsearch Migration for Search Features</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Reindex strategies, zero-downtime aliases, and relevance tuning.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:60ms">
         <div class="cover v5" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">API Versioning Without Breaking Mobile Clients</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">API Versioning Without Breaking Mobile Clients</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Sunset headers, parallel versions, and contract tests with consumer teams.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:120ms">
         <div class="cover v6" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Multi-Region Deployment Case Study</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Multi-Region Deployment Case Study</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Latency goals, data residency, and failover drills across EU and US.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:0ms">
         <div class="cover" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Event Sourcing for Order Management</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Event Sourcing for Order Management</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Auditability wins, projection rebuilds, and complexity costs in production.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">3 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:60ms">
         <div class="cover v2" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Kubernetes Migration Cost Analysis</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Kubernetes Migration Cost Analysis</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Real infra bills, engineer time, and when managed services beat self-hosted clusters.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">3 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:120ms">
         <div class="cover v3" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Building an Incident Response Culture</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Building an Incident Response Culture</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Blameless postmortems, severity definitions, and action item tracking.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 2 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:0ms">
         <div class="cover v4" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Splitting a Monorepo into Microservices</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Splitting a Monorepo into Microservices</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Repository boundaries, CI pipelines, and contract tests during extraction.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 1 views</span></div>
         </div>
       </a><a href="./[slug]/index.html" class="mkt-card reveal" style="display:block;overflow:hidden;padding:0;--d:60ms">
         <div class="cover v5" style="padding-top:50%"><span>CASE STUDIES</span></div>
         <div style="padding:16px 18px">
-          <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-          <div class="font-bold mt-1" style="font-size:15px;line-height:1.35">Legacy PHP to NestJS Migration Story</div>
+          <div class="eyebrow fs-11">CASE STUDIES</div>
+          <div class="font-bold mt-1 fs-15" style="line-height:1.35">Legacy PHP to NestJS Migration Story</div>
           <div class="text-sm muted mt-2" style="line-height:1.55">Strangling admin APIs first, shared database phase, and team retraining.</div>
           <div class="flex justify-between mt-3 text-xs dim"><span>Nestlancer Editorial</span><span class="mono">2 min read · 1 views</span></div>
         </div>
@@ -143,7 +144,7 @@
     <div class="flex gap-2 mt-8 justify-center"><span class="btn btn-secondary btn-sm" style="min-width:36px;background:var(--brand-9);color:#fff">1</span><span class="btn btn-secondary btn-sm" style="min-width:36px;">2</span><span class="btn btn-secondary btn-sm" style="min-width:36px;">3</span><span class="btn btn-secondary btn-sm" style="min-width:36px;">4</span><span class="btn btn-secondary btn-sm" style="min-width:36px;">5</span><span class="btn btn-secondary btn-sm" style="min-width:36px;">6</span><span class="btn btn-secondary btn-sm" style="min-width:36px;">7</span><span class="btn btn-secondary btn-sm">Next</span></div>
     <div class="mkt-card mt-10" style="padding:26px 28px">
       <div class="eyebrow">Stay in the loop</div>
-      <div class="h2 mt-2" style="font-size:24px">Ideas for product teams and studio clients</div>
+      <div class="h2 mt-2 fs-24">Ideas for product teams and studio clients</div>
       <p class="text-sm muted mt-2" style="max-width:60ch">Get practical playbooks on hiring, delivery, and growing your practice. We publish sparingly — only when there is something worth your time.</p>
       <div class="flex gap-3 mt-4"><a class="btn btn-primary" href="../contact/index.html">Get in touch</a><span class="btn btn-secondary">RSS feed</span></div>
     </div>

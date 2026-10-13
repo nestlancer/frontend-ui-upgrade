@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="mkt-body">
+<body data-surface="public" class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <header class="mkt-header"><div class="mkt-wrap mkt-nav">
 <a href="../../index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -22,19 +23,19 @@
   <a class="btn btn-ghost btn-sm" href="../../login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="../../contact/index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div></div></header><main id="main"  tabindex="-1">
-<section style="padding:48px 0 24px"><div class="mkt-wrap" style="max-width:880px">
-  <a href="../index.html" class="link-arrow mb-4" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Blog</a>
+<section class="mkt-hero" style="padding:48px 0 24px"><div class="mkt-wrap anim-in" style="max-width:880px">
+  <a href="../index.html" class="link-arrow mb-4 fs-13"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Blog</a>
   <div class="eyebrow mb-3">CASE STUDIES · OCT 5, 2026</div>
   <h1 class="h1">Cutting Deploy Time from 45 Minutes to Five</h1>
   <div class="flex items-center gap-3 mt-5">
     <span class="avatar hue-2 lg">NE</span>
-    <div><b style="font-size:13.5px">Nestlancer Editorial</b><div class="text-xs dim">8 min read · Engineering practice</div></div>
+    <div><b class="fs-14">Nestlancer Editorial</b><div class="text-xs dim">8 min read · Engineering practice</div></div>
     <div class="ml-auto flex gap-2"><button class="btn-icon btn sm" title="Bookmark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg></button><button class="btn-icon btn sm" title="Copy link"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></button></div>
   </div>
 </div></section>
 <div class="mkt-wrap" style="max-width:880px;padding-bottom:72px">
-  <div class="cover" style="padding-top:34%;margin-bottom:32px"><span>DEPLOY PIPELINE · BEFORE/AFTER</span></div>
-  <div class="prose">
+  <div class="cover reveal" style="padding-top:34%;margin-bottom:32px"><span>DEPLOY PIPELINE · BEFORE/AFTER</span></div>
+  <div class="prose reveal">
     <p>CI caching, smaller artifacts, and service-level pipelines after monolith split. The team prioritized <b>operational ownership</b> while migrating on a Nestlancer-style stack — gateway at the edge, domain NestJS services, Prisma on Postgres, async work through RabbitMQ, and media on Backblaze B2.</p>
     <p>A 45-minute deploy is not a tooling problem — it is a feedback problem. Here is how we took a NestJS monolith from 45 minutes to five, in the order that actually mattered.</p>
     <h2>Where we started</h2>
@@ -84,25 +85,25 @@
     <h2>Lesson</h2>
     <p>Microservices did not arrive on day one. The team earned splits by proving <b>operational ownership</b> per domain — not by copying a reference diagram. The Nestlancer patterns above were adopted only after metrics justified the coordination cost.</p>
   </div>
-  <div class="flex gap-2 mt-5 flex-wrap">
+  <div class="flex gap-2 mt-5 flex-wrap reveal">
     <span class="chip">#NestJS</span><span class="chip">#Node.js</span><span class="chip">Channel: Web3/DeFi</span><span class="chip">Copy link</span><span class="chip">LinkedIn</span><span class="chip">X / Twitter</span>
   </div>
-  <div class="panel mt-6" style="padding:24px;text-align:center;background:var(--brand-1);border-color:var(--brand-3)">
+  <div class="panel mt-6 reveal" style="padding:24px;text-align:center;background:var(--brand-1);border-color:var(--brand-3)">
     <span class="badge tone-success mb-2">Intake open</span>
-    <h2 style="font-size:18px;font-weight:700;margin:4px 0">Ready to work with the studio?</h2>
+    <h2 class="fs-18" style="font-weight:700;margin:4px 0">Ready to work with the studio?</h2>
     <p class="text-sm muted mb-4">Post a project request in a few minutes — milestone quotes, scheduled payments, and delivery in one workspace.</p>
     <a class="btn btn-primary btn-sm" href="../../contact/index.html">Start a project →</a>
   </div>
-  <div class="panel mt-6">
+  <div class="panel mt-6 reveal">
     <div class="panel-head"><h2 class="panel-title">Comments (2)</h2><div class="flex gap-2"><button class="btn btn-secondary btn-xs">♥ Like</button><button class="btn btn-secondary btn-xs">Bookmark</button></div></div>
     <div class="panel-body flex-col gap-3">
       <div class="panel" style="padding:12px;background:var(--bg-subtle)">
-        <b style="font-size:13px">Arjun Mehta</b>
+        <b class="fs-13">Arjun Mehta</b>
         <p class="text-sm mt-1" style="margin-bottom:4px">AUDIT-SEED demo comment on cutting-deploy-time-from-45-minutes-to-five. Clear and practical guidance for shipping faster with Nestlancer.</p>
         <span class="text-xs dim mono">Oct 5, 2026, 5:35 AM</span>
       </div>
       <div class="panel" style="padding:12px;background:var(--bg-subtle)">
-        <b style="font-size:13px">Arjun Mehta</b>
+        <b class="fs-13">Arjun Mehta</b>
         <p class="text-sm mt-1" style="margin-bottom:4px">AUDIT demo comment</p>
         <span class="text-xs dim mono">Oct 6, 2026, 3:21 AM</span>
       </div>
@@ -113,31 +114,31 @@
       <div><button class="btn btn-primary btn-sm">Post comment</button></div>
     </div>
   </div>
-  <div class="divider my-8"></div>
-  <h2 class="h3 mb-4">Related posts</h2>
-  <div class="grid g2 gap-4">
+  <div class="divider my-8 reveal"></div>
+  <h2 class="h3 mb-4 reveal">Related posts</h2>
+  <div class="grid g2 gap-4 reveal stagger">
     <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">Scaling a Freelance Marketplace Architecture</b>
+    <div class="eyebrow fs-11">CASE STUDIES</div>
+    <b class="fs-14" style="line-height:1.4;display:block;margin-top:4px">Scaling a Freelance Marketplace Architecture</b>
     <p class="text-xs muted mt-1">Matching algorithms, escrow flows, and dispute resolution at growing GMV.</p>
     <div class="text-xs dim mono mt-2">Nestlancer Editorial · 3 min read</div></a>
     <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">GDPR Compliance Platform Rebuild</b>
+    <div class="eyebrow fs-11">CASE STUDIES</div>
+    <b class="fs-14" style="line-height:1.4;display:block;margin-top:4px">GDPR Compliance Platform Rebuild</b>
     <p class="text-xs muted mt-1">Data maps, deletion workflows, and consent logging across microservices.</p>
     <div class="text-xs dim mono mt-2">Nestlancer Editorial · 2 min read</div></a>
     <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">Migrating from WebSockets to SSE</b>
+    <div class="eyebrow fs-11">CASE STUDIES</div>
+    <b class="fs-14" style="line-height:1.4;display:block;margin-top:4px">Migrating from WebSockets to SSE</b>
     <p class="text-xs muted mt-1">Simpler infra, CDN friendliness, and trade-offs for one-way realtime feeds.</p>
     <div class="text-xs dim mono mt-2">Nestlancer Editorial · 2 min read</div></a>
     <a class="mkt-card" style="padding:16px;display:block" href="./index.html">
-    <div class="eyebrow" style="font-size:11px">CASE STUDIES</div>
-    <b style="font-size:14px;line-height:1.4;display:block;margin-top:4px">Elasticsearch Migration for Search Features</b>
+    <div class="eyebrow fs-11">CASE STUDIES</div>
+    <b class="fs-14" style="line-height:1.4;display:block;margin-top:4px">Elasticsearch Migration for Search Features</b>
     <p class="text-xs muted mt-1">Reindex strategies, zero-downtime aliases, and relevance tuning.</p>
     <div class="text-xs dim mono mt-2">Nestlancer Editorial · 2 min read</div></a>
   </div>
-  <div class="panel mt-6" style="padding:24px;background:var(--bg-subtle)">
+  <div class="panel mt-6 reveal" style="padding:24px;background:var(--bg-subtle)">
     <div class="eyebrow">STAY IN THE LOOP</div>
     <h2 class="h3 mt-1">Ideas for product teams and studio clients</h2>
     <p class="text-sm muted mt-1">Get practical playbooks on scoping, delivery, and growing your practice. We publish sparingly — only when there is something worth your time.</p>

@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,23 +62,23 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>SYSTEM · ADMINISTRATION</div>
   <h1 class="ptitle">System Configuration · System</h1>
   <p class="psub">Runtime health, platform settings, feature flags, jobs, templates, and operator controls. Config, feature flags, jobs, logs, templates — the whole back office.</p>
 </div>
 <div class="phead-actions"><button class="btn btn-secondary btn-sm" type="button">Load diagnostics</button><button class="btn btn-primary btn-sm" type="button">Send announcement</button></div>
-</div>
+</div></div>
 
-<div class="stats mb-5" style="grid-template-columns:repeat(4,1fr)">
+<div class="stats mb-5 reveal stagger" style="grid-template-columns:repeat(4,1fr)">
   <div class="stat"><div class="stat-label">Service</div><div class="stat-value">Healthy</div><div class="stat-note">admin · Uptime 5d 8h 5m · Memory 88 MB · Heap 42 MB</div></div>
   <div class="stat"><div class="stat-label">Config keys</div><div class="stat-value">14</div><div class="stat-note">All saved</div></div>
   <div class="stat"><div class="stat-label">Feature flags</div><div class="stat-value">5/12</div><div class="stat-note">Enabled / total</div></div>
   <div class="stat"><div class="stat-label">Templates</div><div class="stat-value">62</div><div class="stat-note">10 email · 52 notification</div></div>
 </div>
 
-<div class="tabs mb-5">
+<div class="tabs mb-5 reveal">
   <a class="tab active" href="#" data-tab-target="sys-health">Health</a>
   <a class="tab" href="#" data-tab-target="sys-config">Config <span class="count">14</span></a>
   <a class="tab" href="#" data-tab-target="sys-features">Features <span class="count">12</span></a>
@@ -86,7 +87,7 @@
   <a class="tab" href="#" data-tab-target="sys-operations">Operations</a>
 </div>
 
-<div id="sys-operations" class="grid g2 gap-5 mb-5">
+<div id="sys-operations" class="grid g2 gap-5 mb-5 reveal">
   <section class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Platform announcements</h2><div class="panel-sub">Broadcast a banner notification to all active users. Delivery is written immediately, then queued for push/email channels.</div></div></div>
     <div class="panel-body">
@@ -113,7 +114,7 @@
   </section>
 </div>
 
-<div id="sys-health" class="grid g2 gap-5 mb-5">
+<div id="sys-health" class="grid g2 gap-5 mb-5 reveal">
   <section class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Runtime Health &amp; Loaded Diagnostics</h2><div class="panel-sub">Dependencies · Outbox &amp; workers · System overview · Cache statistics · Error logs</div></div><span class="badge tone-success">HEALTHY</span></div>
     <div class="panel-body">
@@ -138,7 +139,7 @@
   </section>
 </div>
 
-<div class="grid g2 gap-5 mb-5">
+<div class="grid g2 gap-5 mb-5 reveal">
   <section id="sys-features" class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Feature flags (12)</h2><div class="panel-sub">5 enabled · Staged rollouts and target roles</div></div></div>
     <div class="panel-body mono text-xs" style="line-height:1.65">
@@ -158,7 +159,7 @@
   </section>
 </div>
 
-<section id="sys-templates" class="panel mb-5">
+<section id="sys-templates" class="panel mb-5 reveal">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Templates (62) · Email templates (10) &amp; Notification templates (52)</h2><div class="panel-sub">Edit and preview transactional email &amp; in-app notification templates</div></div></div>
   <div class="grid g2">
     <div class="panel-body" style="border-right:1px solid var(--line)">
@@ -174,14 +175,14 @@
   </div>
 </section>
 
-<div class="grid g4 gap-4">
+<div class="grid g4 gap-4 reveal">
 
   <a class="panel panel-pad" href="./staff/index.html" style="display:block">
     <div class="flex items-center justify-between mb-3">
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
       <span class="badge tone-neutral">4 staff</span>
     </div>
-    <b class="h3" style="font-size:14px">Staff & roles</b>
+    <b class="h3 fs-14">Staff & roles</b>
     <div class="text-xs dim mt-1 mb-3">Who can do what in this console</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -190,7 +191,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4L17 12H5"/></svg></span>
       <span class="badge tone-success">2 flags on</span>
     </div>
-    <b class="h3" style="font-size:14px">Feature flags</b>
+    <b class="h3 fs-14">Feature flags</b>
     <div class="text-xs dim mt-1 mb-3">Kill-switches and staged rollouts</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -199,7 +200,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--t-warning-bg);color:var(--t-warning-tx)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg></span>
       <span class="badge tone-warning">Degraded: jobs-Q</span>
     </div>
-    <b class="h3" style="font-size:14px">Health</b>
+    <b class="h3 fs-14">Health</b>
     <div class="text-xs dim mt-1 mb-3">DB, cache, queues, edge</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -208,7 +209,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--t-danger-bg);color:var(--t-danger-tx)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
       <span class="badge tone-danger">1 failing</span>
     </div>
-    <b class="h3" style="font-size:14px">Jobs</b>
+    <b class="h3 fs-14">Jobs</b>
     <div class="text-xs dim mt-1 mb-3">Cron, retries, dead-letters</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -217,7 +218,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span>
       <span class="badge tone-success">Warm: 96.8% hits</span>
     </div>
-    <b class="h3" style="font-size:14px">Cache</b>
+    <b class="h3 fs-14">Cache</b>
     <div class="text-xs dim mt-1 mb-3">Fast paths for reads</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -226,7 +227,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
       <span class="badge tone-neutral">—</span>
     </div>
-    <b class="h3" style="font-size:14px">Logs</b>
+    <b class="h3 fs-14">Logs</b>
     <div class="text-xs dim mt-1 mb-3">Recent runtime output</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -235,7 +236,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v8"/><path d="M7 5.5a8 8 0 1010 0"/></svg></span>
       <span class="badge tone-muted">Off</span>
     </div>
-    <b class="h3" style="font-size:14px">Maintenance</b>
+    <b class="h3 fs-14">Maintenance</b>
     <div class="text-xs dim mt-1 mb-3">Read-only & offline modes</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -244,7 +245,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l14-6v14L3 13v-2z"/><path d="M17 6a4 4 0 010 12"/><path d="M7 13v6a1 1 0 001 1h2"/></svg></span>
       <span class="badge tone-info">1 scheduled</span>
     </div>
-    <b class="h3" style="font-size:14px">Announcements</b>
+    <b class="h3 fs-14">Announcements</b>
     <div class="text-xs dim mt-1 mb-3">Site-wide banners and digest copy</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -253,7 +254,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
       <span class="badge tone-neutral">6 live</span>
     </div>
-    <b class="h3" style="font-size:14px">Email templates</b>
+    <b class="h3 fs-14">Email templates</b>
     <div class="text-xs dim mt-1 mb-3">Every transactional email</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -262,7 +263,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 01-3.4 0"/></svg></span>
       <span class="badge tone-info">24 events</span>
     </div>
-    <b class="h3" style="font-size:14px">Notification templates</b>
+    <b class="h3 fs-14">Notification templates</b>
     <div class="text-xs dim mt-1 mb-3">In-app event copy</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -271,7 +272,7 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></span>
       <span class="badge tone-neutral">5 active</span>
     </div>
-    <b class="h3" style="font-size:14px">API keys</b>
+    <b class="h3 fs-14">API keys</b>
     <div class="text-xs dim mt-1 mb-3">Scoped programmatic access</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
@@ -280,13 +281,13 @@
       <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--t-warning-bg);color:var(--t-warning-tx)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
       <span class="badge tone-warning">1 attention</span>
     </div>
-    <b class="h3" style="font-size:14px">Integrations</b>
+    <b class="h3 fs-14">Integrations</b>
     <div class="text-xs dim mt-1 mb-3">Payment, email, LLM, storage</div>
     <span class="link text-sm inline-flex items-center gap-1">Open <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></span>
   </a>
 </div>
 <!-- PROTO-STATES-SYSTEM -->
-<section id="states-system" class="mb-5" aria-labelledby="states-system-h"><div class="sec-head">
+<section id="states-system" class="mb-5 reveal" aria-labelledby="states-system-h"><div class="sec-head">
     <div class="min-w-0">
       <div class="sec-eyebrow">Operator states · 8 screens</div>
       <h2 class="sec-title" id="states-system-h">System configuration states</h2>
@@ -301,7 +302,7 @@
     </div>
     <span class="badge tone-neutral mono">059 · 105</span>
   </div>
-  <div class="dialog-body"><div class="kpi-grid"><div class="kpi"><div class="k-label">Service</div><div class="k-value">Healthy</div><div class="k-delta ">admin worker</div></div><div class="kpi"><div class="k-label">Config keys</div><div class="k-value">14</div><div class="k-delta ">all saved</div></div><div class="kpi"><div class="k-label">Feature flags</div><div class="k-value">5/12</div><div class="k-delta ">enabled</div></div><div class="kpi"><div class="k-label">Templates</div><div class="k-value">62</div><div class="k-delta ">10 email · 52 notification</div></div></div><div class="mt-3"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-1">Dependency</th><th id="nl-th-2">State</th></tr></thead><tbody><tr><td data-label="Dependency" class="min-w-0">database</td><td data-label="State" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>connected: true</span></td></tr><tr><td data-label="Dependency" class="min-w-0">cache</td><td data-label="State" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>connected: true</span></td></tr><tr><td data-label="Dependency" class="min-w-0">queue</td><td data-label="State" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>connected: true</span></td></tr></tbody></table></div></div><div class="mt-3"><dl class="kv"><dt>Status / timestamp</dt><dd>healthy · 2026-10-10T12:01:22.083Z</dd><dt>Flags live</dt><dd>newDashboard true · advancedAnalytics false · betaFeatures true</dd></dl></div><div class="mt-3"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-3">Cache action</th><th id="nl-th-4">Scope</th></tr></thead><tbody><tr><td data-label="Cache action" class="min-w-0">Clear all cache</td><td data-label="Scope" class="min-w-0">every key</td></tr><tr><td data-label="Cache action" class="min-w-0">Clear key</td><td data-label="Scope" class="min-w-0">exact cache key</td></tr></tbody></table></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Hide diagnostics</button><button class="btn btn-secondary btn-sm" type="button">Download logs (CSV)</button></div></div>
+  <div class="dialog-body"><div class="kpi-grid stagger"><div class="kpi"><div class="k-label">Service</div><div class="k-value">Healthy</div><div class="k-delta ">admin worker</div></div><div class="kpi"><div class="k-label">Config keys</div><div class="k-value">14</div><div class="k-delta ">all saved</div></div><div class="kpi"><div class="k-label">Feature flags</div><div class="k-value">5/12</div><div class="k-delta ">enabled</div></div><div class="kpi"><div class="k-label">Templates</div><div class="k-value">62</div><div class="k-delta ">10 email · 52 notification</div></div></div><div class="mt-3"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-1">Dependency</th><th id="nl-th-2">State</th></tr></thead><tbody><tr><td data-label="Dependency" class="min-w-0">database</td><td data-label="State" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>connected: true</span></td></tr><tr><td data-label="Dependency" class="min-w-0">cache</td><td data-label="State" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>connected: true</span></td></tr><tr><td data-label="Dependency" class="min-w-0">queue</td><td data-label="State" class="min-w-0"><span class="badge tone-success"><span class="dot"></span>connected: true</span></td></tr></tbody></table></div></div><div class="mt-3"><dl class="kv"><dt>Status / timestamp</dt><dd>healthy · 2026-10-10T12:01:22.083Z</dd><dt>Flags live</dt><dd>newDashboard true · advancedAnalytics false · betaFeatures true</dd></dl></div><div class="mt-3"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-3">Cache action</th><th id="nl-th-4">Scope</th></tr></thead><tbody><tr><td data-label="Cache action" class="min-w-0">Clear all cache</td><td data-label="Scope" class="min-w-0">every key</td></tr><tr><td data-label="Cache action" class="min-w-0">Clear key</td><td data-label="Scope" class="min-w-0">exact cache key</td></tr></tbody></table></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Hide diagnostics</button><button class="btn btn-secondary btn-sm" type="button">Download logs (CSV)</button></div></div>
   
 </section><section class="dialog-surface" id="sys-flags" aria-labelledby="sys-flags-h">
   <div class="dialog-head">

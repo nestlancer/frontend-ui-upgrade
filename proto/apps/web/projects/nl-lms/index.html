@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,21 +48,21 @@
     <a class="userchip" href="../../profile/index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="flex items-start justify-between gap-4 flex-wrap">
+<div class="pband"><div class="flex items-start justify-between gap-4 flex-wrap reveal">
   <div class="min-w-0" style="max-width:76ch">
-    <h1 class="ptitle" style="font-size:24px">Corporate LMS for 200 Employees</h1>
-    <p class="psub" style="font-size:12.8px">Internal learning platform for Nair Learning Systems staff across Kochi, Bangalore, and Chennai — course builder with video modules, quiz engine, completion tracking, PDF certificate generation, and SAML SSO via our existing Okta tenant. Must support Malayalam subtitles on select compliance courses.</p>
+    <h1 class="ptitle fs-24">Corporate LMS for 200 Employees</h1>
+    <p class="psub fs-13">Internal learning platform for Nair Learning Systems staff across Kochi, Bangalore, and Chennai — course builder with video modules, quiz engine, completion tracking, PDF certificate generation, and SAML SSO via our existing Okta tenant. Must support Malayalam subtitles on select compliance courses.</p>
   </div>
   <div class="flex gap-2"><span class="badge tone-info">In progress</span><span class="badge tone-neutral">40% complete</span></div>
 </div>
-<div class="grid g3 gap-4 mt-4" style="max-width:760px">
-  <div class="chip" style="height:44px;border-radius:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><div class="text-left"><div class="text-xs dim" style="font-size:11px;line-height:1.2">Delivery milestones</div><b class="mono" style="font-size:13px">2/2 completed</b></div></div>
-  <div class="chip" style="height:44px;border-radius:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><div class="text-left"><div class="text-xs dim" style="font-size:11px;line-height:1.2">Deliverables approved</div><b class="mono" style="font-size:13px">1/1</b></div></div>
-  <div class="chip" style="height:44px;border-radius:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div class="text-left"><div class="text-xs dim" style="font-size:11px;line-height:1.2">Started</div><b class="mono" style="font-size:13px">Aug 3, 2026</b></div></div>
+<div class="grid g3 gap-4 mt-4 reveal" style="max-width:760px">
+  <div class="chip" style="height:44px;border-radius:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><div class="text-left"><div class="text-xs dim fs-11" style="line-height:1.2">Delivery milestones</div><b class="mono fs-13">2/2 completed</b></div></div>
+  <div class="chip" style="height:44px;border-radius:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><div class="text-left"><div class="text-xs dim fs-11" style="line-height:1.2">Deliverables approved</div><b class="mono fs-13">1/1</b></div></div>
+  <div class="chip" style="height:44px;border-radius:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div class="text-left"><div class="text-xs dim fs-11" style="line-height:1.2">Started</div><b class="mono fs-13">Aug 3, 2026</b></div></div>
 </div>
-<div class="flex items-center justify-between mt-4 mb-1"><span class="text-xs muted font-semibold">Overall progress</span><span class="mono text-xs dim">40%</span></div>
-<div class="prog grad"><i style="width:40%"></i></div>
-<div class="panel mt-4"><div class="panel-row" style="gap:14px">
+<div class="flex items-center justify-between mt-4 mb-1 reveal"><span class="text-xs muted font-semibold">Overall progress</span><span class="mono text-xs dim">40%</span></div>
+<div class="prog grad reveal"><i style="width:40%"></i></div>
+<div class="panel mt-4 reveal"><div class="panel-row" style="gap:14px">
   <span class="badge tone-info">In progress</span><span class="mono text-xs dim">40% complete</span><span class="dim">·</span>
   <span class="text-sm">Next: <b>Mid-project payment</b></span><span class="mono text-sm muted">₹20,880.00</span>
   <div class="ml-auto flex gap-2">
@@ -70,16 +71,16 @@
     <button class="btn btn-primary btn-sm">View milestones</button>
   </div>
 </div></div>
-<div class="tabs mb-5"><a class="tab active" href="../[id]/index.html">Overview</a><a class="tab" href="#">Progress</a><a class="tab" href="#">Milestones</a><a class="tab" href="#">Deliverables</a><a class="tab" href="#">Messages</a><a class="tab" href="#">Files</a></div>
-<div class="flex-col gap-5">
+<div class="tabs mb-5 reveal"><a class="tab active" href="../[id]/index.html">Overview</a><a class="tab" href="#">Progress</a><a class="tab" href="#">Milestones</a><a class="tab" href="#">Deliverables</a><a class="tab" href="#">Messages</a><a class="tab" href="#">Files</a></div></div>
+<div class="flex-col gap-5 reveal">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Project status</h2><div class="panel-sub">Overall contract status, milestone delivery, and file reviews are tracked separately.</div></div></div>
   <div class="panel-body">
     <div class="grid g3 gap-4">
-      <div class="panel" style="padding:14px"><div class="eyebrow" style="font-size:11px">PROJECT</div><div class="mt-2 mb-2"><span class="badge tone-info">In progress</span></div><div class="text-xs muted" style="line-height:1.5">Set by your delivery team for the whole engagement.</div></div><div class="panel" style="padding:14px"><div class="eyebrow" style="font-size:11px">MILESTONES</div><div class="mt-2 mb-2"><b class="mono" style="font-size:16px">2/2 approved</b></div><div class="text-xs muted" style="line-height:1.5">Delivery milestones (payment schedule excluded) — All delivery milestones approved</div><a class="link text-xs mt-2 inline-block" href="#">View all milestones</a></div><div class="panel" style="padding:14px"><div class="eyebrow" style="font-size:11px">DELIVERABLES</div><div class="mt-2 mb-2"><b class="mono" style="font-size:16px">1/1 approved</b></div><a class="link text-xs mt-2 inline-block" href="#">View deliverables</a></div>
+      <div class="panel" style="padding:14px"><div class="eyebrow fs-11">PROJECT</div><div class="mt-2 mb-2"><span class="badge tone-info">In progress</span></div><div class="text-xs muted" style="line-height:1.5">Set by your delivery team for the whole engagement.</div></div><div class="panel" style="padding:14px"><div class="eyebrow fs-11">MILESTONES</div><div class="mt-2 mb-2"><b class="mono fs-16">2/2 approved</b></div><div class="text-xs muted" style="line-height:1.5">Delivery milestones (payment schedule excluded) — All delivery milestones approved</div><a class="link text-xs mt-2 inline-block" href="#">View all milestones</a></div><div class="panel" style="padding:14px"><div class="eyebrow fs-11">DELIVERABLES</div><div class="mt-2 mb-2"><b class="mono fs-16">1/1 approved</b></div><a class="link text-xs mt-2 inline-block" href="#">View deliverables</a></div>
     </div>
-    <div class="panel mt-4" style="padding:14px"><div class="eyebrow" style="font-size:11px">DAILY PROGRESS</div><b class="mt-2 block" style="font-size:14px">Team updates</b><div class="text-xs muted mt-1">End-of-day work logs and delivery notes from your team.</div><a class="link text-xs mt-2 inline-block" href="#">View progress timeline</a></div></div>
+    <div class="panel mt-4" style="padding:14px"><div class="eyebrow fs-11">DAILY PROGRESS</div><b class="mt-2 block fs-14">Team updates</b><div class="text-xs muted mt-1">End-of-day work logs and delivery notes from your team.</div><a class="link text-xs mt-2 inline-block" href="#">View progress timeline</a></div></div>
   
 </div>
   
@@ -89,21 +90,21 @@
     <div class="panel-row" style="align-items:flex-start">
         <span style="color:var(--brand-8);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
         <div class="min-w-0 flex-1">
-          <div class="flex items-center gap-2"><b style="font-size:13px">Milestone Approved</b><span class="badge tone-info">Daily update</span></div>
+          <div class="flex items-center gap-2"><b class="fs-13">Milestone Approved</b><span class="badge tone-info">Daily update</span></div>
           <div class="text-xs muted mt-1">Milestone: Okta SAML &amp; HR Dashboard</div>
           <div class="text-xs dim mt-1" style="line-height:1.55">Reconciled after deliverable approval</div>
           <div class="text-xs dim mono mt-1">Oct 5, 2026, 3:47 AM</div>
         </div></div><div class="panel-row" style="align-items:flex-start">
         <span style="color:var(--brand-8);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
         <div class="min-w-0 flex-1">
-          <div class="flex items-center gap-2"><b style="font-size:13px">Milestone Approved</b><span class="badge tone-info">Daily update</span></div>
+          <div class="flex items-center gap-2"><b class="fs-13">Milestone Approved</b><span class="badge tone-info">Daily update</span></div>
           <div class="text-xs muted mt-1">Milestone: LMS Platform Setup</div>
           <div class="text-xs dim mt-1" style="line-height:1.55">Reconciled after deliverable approval</div>
           <div class="text-xs dim mono mt-1">Oct 5, 2026, 3:47 AM</div>
         </div></div><div class="panel-row" style="align-items:flex-start">
         <span style="color:var(--brand-8);margin-top:2px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></span>
         <div class="min-w-0 flex-1">
-          <div class="flex items-center gap-2"><b style="font-size:13px">Daily update — course builder and video pipeline</b><span class="badge tone-muted">Daily update</span></div>
+          <div class="flex items-center gap-2"><b class="fs-13">Daily update — course builder and video pipeline</b><span class="badge tone-muted">Daily update</span></div>
           <div class="text-xs muted mt-1">Milestone: LMS Platform Setup</div>
           <div class="text-xs dim mt-1" style="line-height:1.55">Course builder with SCORM import scaffolded. Video upload pipeline supports Malayalam subtitle track on compliance modules.</div>
           <div class="text-xs dim mono mt-1">Oct 5, 2026, 3:47 AM</div>
@@ -116,9 +117,9 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Recent updates</h2><div class="panel-sub">Summary from the progress feed.</div></div></div>
   <div class="">
       
-      <div class="panel-row" style="align-items:flex-start"><div class="min-w-0"><b style="font-size:12.8px">Milestone Approved</b><div class="text-xs dim mt-1" style="line-height:1.5">Reconciled after deliverable approval</div><div class="text-xs dim mono mt-1">10/5/26, 3:47 AM</div></div></div>
-      <div class="panel-row" style="align-items:flex-start"><div class="min-w-0"><b style="font-size:12.8px">Milestone Approved</b><div class="text-xs dim mt-1" style="line-height:1.5">Reconciled after deliverable approval</div><div class="text-xs dim mono mt-1">10/5/26, 3:47 AM</div></div></div>
-      <div class="panel-row" style="align-items:flex-start"><div class="min-w-0"><b style="font-size:12.8px">Daily update — course builder and video pipeline</b><div class="text-xs dim mt-1" style="line-height:1.5">Course builder with SCORM import scaffolded. Video upload pipeline supports Malayalam subtitle tracks.</div><div class="text-xs dim mono mt-1">10/5/26, 3:47 AM</div></div></div></div>
+      <div class="panel-row" style="align-items:flex-start"><div class="min-w-0"><b class="fs-13">Milestone Approved</b><div class="text-xs dim mt-1" style="line-height:1.5">Reconciled after deliverable approval</div><div class="text-xs dim mono mt-1">10/5/26, 3:47 AM</div></div></div>
+      <div class="panel-row" style="align-items:flex-start"><div class="min-w-0"><b class="fs-13">Milestone Approved</b><div class="text-xs dim mt-1" style="line-height:1.5">Reconciled after deliverable approval</div><div class="text-xs dim mono mt-1">10/5/26, 3:47 AM</div></div></div>
+      <div class="panel-row" style="align-items:flex-start"><div class="min-w-0"><b class="fs-13">Daily update — course builder and video pipeline</b><div class="text-xs dim mt-1" style="line-height:1.5">Course builder with SCORM import scaffolded. Video upload pipeline supports Malayalam subtitle tracks.</div><div class="text-xs dim mono mt-1">10/5/26, 3:47 AM</div></div></div></div>
   
 </div>
     

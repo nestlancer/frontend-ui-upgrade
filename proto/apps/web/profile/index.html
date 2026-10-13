@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="client" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -47,15 +48,15 @@
     <a class="userchip" href="./index.html"><span class="avatar" style="background:var(--brand-3);color:var(--brand-11)">AI</span><span class="nm">Ananya Iyer</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></a></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>ACCOUNT</div>
   <h1 class="ptitle">Profile</h1>
   <p class="psub">How the studio and other workspace members see you.</p>
 </div>
 <div class="phead-actions"><a class="btn btn-primary" href="./edit/index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg> Edit profile</a></div>
-</div>
-<div class="grid gap-5" style="grid-template-columns:5fr 7fr;align-items:start">
+</div></div>
+<div class="grid gap-5 reveal" style="grid-template-columns:5fr 7fr;align-items:start">
   <div class="panel">
     <div class="panel-body text-center" style="padding:28px">
       <span class="avatar hue-1 xl mx-auto">AI</span>
@@ -72,9 +73,9 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Public profile preview</h2><div class="panel-sub">Visible to studio members on your projects — never on the public internet.</div></div></div>
   <div class="panel-body">
       <div class="panel" style="padding:16px;background:var(--bg-hover)">
-        <div class="flex items-center gap-3 mb-3"><span class="avatar hue-1 lg">AI</span><div><b style="font-size:14px">Ananya Iyer</b><div class="text-xs dim">Founder — Iyer FinTech Solutions · Chennai, IN</div></div></div>
+        <div class="flex items-center gap-3 mb-3"><span class="avatar hue-1 lg">AI</span><div><b class="fs-14">Ananya Iyer</b><div class="text-xs dim">Founder — Iyer FinTech Solutions · Chennai, IN</div></div></div>
         <p class="text-sm muted" style="line-height:1.65">Fintech founder building settlement tooling for co-op banks. TFino Fridays host, incorrigible filter-coffee person.</p>
-        <div class="flex gap-2 mt-3"><span class="chip" style="height:22px;font-size:11px">Fintech</span><span class="chip" style="height:22px;font-size:11px">Settlement</span><span class="chip" style="height:22px;font-size:11px">NestJS</span><span class="chip" style="height:22px;font-size:11px">Founder</span></div>
+        <div class="flex gap-2 mt-3"><span class="chip fs-11" style="height:22px">Fintech</span><span class="chip fs-11" style="height:22px">Settlement</span><span class="chip fs-11" style="height:22px">NestJS</span><span class="chip fs-11" style="height:22px">Founder</span></div>
       </div></div>
   
 </div>
@@ -89,7 +90,7 @@
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Workspace identity</h2></div></div>
-  <div class="panel-body"><dl class="kv"><dt>User ID</dt><dd><span class="mono" style="font-size:11px">8b3f1c02-77e4-4a1d…</span></dd><dt>Auth method</dt><dd>Email + password · TOTP ready</dd><dt>Sessions</dt><dd><a class="link" href="../settings/sessions/index.html">3 active devices</a></dd></dl></div>
+  <div class="panel-body"><dl class="kv"><dt>User ID</dt><dd><span class="mono fs-11">8b3f1c02-77e4-4a1d…</span></dd><dt>Auth method</dt><dd>Email + password · TOTP ready</dd><dt>Sessions</dt><dd><a class="link" href="../settings/sessions/index.html">3 active devices</a></dd></dl></div>
   
 </div>
   </div>

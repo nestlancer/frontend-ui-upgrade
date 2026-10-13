@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,22 +62,22 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>FINANCE · PAYMENTS &amp; FINANCE</div>
   <h1 class="ptitle">Payments &amp; Finance</h1>
   <p class="psub">Settlements across every contract — Total revenue ₹2,35,500 across 12 completed payments · Total payments 29 · Pending / Created 17.</p>
 </div>
 <div class="phead-actions"><a class="btn btn-secondary" href="./disputes/index.html">Disputes</a><a class="btn btn-primary" href="./accounts/index.html">+ Add bank account · Payout accounts</a></div>
-</div>
-<div class="stats" style="grid-template-columns:repeat(5,1fr)">
+</div></div>
+<div class="stats reveal stagger" style="grid-template-columns:repeat(5,1fr)">
   <div class="stat"><div class="stat-label">Total revenue · Completed</div><div class="stat-value">₹2,35,500</div><div class="stat-note">12 completed · 30d ₹7,08,160</div></div>
   <div class="stat"><div class="stat-label">Total payments</div><div class="stat-value">29</div><div class="stat-note">12 Completed · 17 Pending / Created</div></div>
   <div class="stat"><div class="stat-label">Pending / Created</div><div class="stat-value">17</div><div class="stat-note">Awaiting verification ₹36,000 · Issued ₹45,500</div></div>
   <div class="stat"><div class="stat-label">Refunded</div><div class="stat-value">0</div><div class="stat-note">No reversals</div></div>
   <div class="stat"><div class="stat-label">Disputes</div><div class="stat-value">0 / 1</div><div class="stat-note">₹4,200 held</div></div>
 </div>
-<div class="tabs mb-4" role="tablist">
+<div class="tabs mb-4 reveal" role="tablist">
   <button class="tab active" type="button">All payments <span class="tab-count">29</span></button>
   <button class="tab" type="button">Pending verification</button>
   <button class="tab" type="button">Disputes</button>
@@ -84,7 +85,7 @@
   <button class="tab" type="button">Bank accounts</button>
   <button class="tab" type="button">Ledger</button>
 </div>
-<div class="grid g2 gap-4 mb-4">
+<div class="grid g2 gap-4 mb-4 reveal">
   <section class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Payment methods &amp; Bank accounts</h2><div class="panel-sub">Saved payment methods · Platform bank accounts</div></div></div>
     <div class="panel-body text-xs">
@@ -101,20 +102,20 @@
     </div>
   </section>
 </div>
-<div class="filterbar mb-4"><div class="input-wrap" style="width:260px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search by UTR, client, invoice…"></div><select aria-label="Filter by state" class="select sm"><option>All states</option><option>Paid</option><option>Unverified UTR</option><option>Issued</option><option>Overdue</option><option>Refunded</option><option>Disputed</option></select></div>
-<div class="panel">
+<div class="filterbar mb-4 reveal"><div class="input-wrap" style="width:260px"><span class="in-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span><input class="input" placeholder="Search by UTR, client, invoice…"></div><select aria-label="Filter by state" class="select sm"><option>All states</option><option>Paid</option><option>Unverified UTR</option><option>Issued</option><option>Overdue</option><option>Refunded</option><option>Disputed</option></select></div>
+<div class="panel reveal">
 <div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th id="nl-th-1">Payment</th><th id="nl-th-2">Client / project</th><th id="nl-th-3">Rail</th><th id="nl-th-4" style="text-align:right">Amount</th><th id="nl-th-5">When</th><th id="nl-th-6">State</th><th></th></tr></thead>
-<tbody><tr><td data-label="Payment"><span class="mono" style="font-size:11.5px">NEFT · UTR PUNB1023456</span></td><td data-label="Client / project"><span style="font-size:12px">Karthik Menon · UPI Switch Integration Layer</span></td><td data-label="Rail"><span class="dim text-xs">Bank transfer</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹36,000.00</span></td><td data-label="When"><span class="text-xs dim">Oct 10, 6:58 AM</span></td><td data-label="State"><span class="badge tone-warning">Unverified UTR</span></td><td><a class="btn btn-primary btn-xs" href="./[id]/index.html">Verify</a></td></tr><tr><td data-label="Payment"><span class="mono" style="font-size:11.5px">NL-INV-2026-000009</span></td><td data-label="Client / project"><span style="font-size:12px">Priya Nair · Corporate LMS (NL-204)</span></td><td data-label="Rail"><span class="dim text-xs">Razorpay</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹19,200.00</span></td><td data-label="When"><span class="text-xs dim">Issued Oct 8</span></td><td data-label="State"><span class="badge tone-info">Awaiting payment</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr><tr><td data-label="Payment"><span class="mono" style="font-size:11.5px">NEFT · UTR HDFCR5202610058</span></td><td data-label="Client / project"><span style="font-size:12px">Iyer FinTech · Settlement Engine</span></td><td data-label="Rail"><span class="dim text-xs">Bank transfer</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹14,400.00</span></td><td data-label="When"><span class="text-xs dim">Verified Oct 5</span></td><td data-label="State"><span class="badge tone-success">Paid</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr><tr><td data-label="Payment"><span class="mono" style="font-size:11.5px">Razorpay · pay_PvTXXX</span></td><td data-label="Client / project"><span style="font-size:12px">Sandeep Chopra · GPS Fleet Tracking</span></td><td data-label="Rail"><span class="dim text-xs">Card ···· 8811</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹21,600.00</span></td><td data-label="When"><span class="text-xs dim">Oct 5</span></td><td data-label="State"><span class="badge tone-success">Paid</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr><tr><td data-label="Payment"><span class="mono" style="font-size:11.5px">NL-INV-2026-000107</span></td><td data-label="Client / project"><span style="font-size:12px">Pooja Kulkarni · Clinic Booking</span></td><td data-label="Rail"><span class="dim text-xs">Razorpay</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹45,500.00</span></td><td data-label="When"><span class="text-xs dim">Due Oct 6</span></td><td data-label="State"><span class="badge tone-danger">Overdue</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr></tbody></table></div>
+<tbody><tr><td data-label="Payment"><span class="mono fs-12">NEFT · UTR PUNB1023456</span></td><td data-label="Client / project"><span class="fs-12">Karthik Menon · UPI Switch Integration Layer</span></td><td data-label="Rail"><span class="dim text-xs">Bank transfer</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹36,000.00</span></td><td data-label="When"><span class="text-xs dim">Oct 10, 6:58 AM</span></td><td data-label="State"><span class="badge tone-warning">Unverified UTR</span></td><td><a class="btn btn-primary btn-xs" href="./[id]/index.html">Verify</a></td></tr><tr><td data-label="Payment"><span class="mono fs-12">NL-INV-2026-000009</span></td><td data-label="Client / project"><span class="fs-12">Priya Nair · Corporate LMS (NL-204)</span></td><td data-label="Rail"><span class="dim text-xs">Razorpay</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹19,200.00</span></td><td data-label="When"><span class="text-xs dim">Issued Oct 8</span></td><td data-label="State"><span class="badge tone-info">Awaiting payment</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr><tr><td data-label="Payment"><span class="mono fs-12">NEFT · UTR HDFCR5202610058</span></td><td data-label="Client / project"><span class="fs-12">Iyer FinTech · Settlement Engine</span></td><td data-label="Rail"><span class="dim text-xs">Bank transfer</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹14,400.00</span></td><td data-label="When"><span class="text-xs dim">Verified Oct 5</span></td><td data-label="State"><span class="badge tone-success">Paid</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr><tr><td data-label="Payment"><span class="mono fs-12">Razorpay · pay_PvTXXX</span></td><td data-label="Client / project"><span class="fs-12">Sandeep Chopra · GPS Fleet Tracking</span></td><td data-label="Rail"><span class="dim text-xs">Card ···· 8811</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹21,600.00</span></td><td data-label="When"><span class="text-xs dim">Oct 5</span></td><td data-label="State"><span class="badge tone-success">Paid</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr><tr><td data-label="Payment"><span class="mono fs-12">NL-INV-2026-000107</span></td><td data-label="Client / project"><span class="fs-12">Pooja Kulkarni · Clinic Booking</span></td><td data-label="Rail"><span class="dim text-xs">Razorpay</span></td><td style="text-align:right" data-label="Amount"><span class="mono font-semibold">₹45,500.00</span></td><td data-label="When"><span class="text-xs dim">Due Oct 6</span></td><td data-label="State"><span class="badge tone-danger">Overdue</span></td><td><a class="btn btn-ghost btn-xs" href="./[id]/index.html">Viewer</a></td></tr></tbody></table></div>
 </div>
 
-<div class="pager mt-4"><span>Showing 1–5 of 28</span>
+<div class="pager mt-4 reveal"><span>Showing 1–5 of 28</span>
 <div class="pager-btns">
   <button class="btn btn-ghost btn-sm" disabled><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg> <span>Prev</span></button>
   <span class="page-cur">1</span>
   <button class="btn btn-ghost btn-sm"><span>Next</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
 </div></div>
-<div class="mt-5"><div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div><b>Verify before you act.</b> Offline transfers sit in "Unverified UTR" until you match them against the bank statement — invoices only clear after verification.</div></div></div>
+<div class="mt-5 reveal"><div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div><b>Verify before you act.</b> Offline transfers sit in "Unverified UTR" until you match them against the bank statement — invoices only clear after verification.</div></div></div>
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>

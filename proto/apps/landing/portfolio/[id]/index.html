@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="mkt-body">
+<body data-surface="marketing" class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <header class="mkt-header"><div class="mkt-wrap mkt-nav">
 <a href="../../index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -22,16 +23,16 @@
   <a class="btn btn-ghost btn-sm" href="../../../web/login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="../../contact/index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div></div></header><main id="main"  tabindex="-1">
-<section style="padding:40px 0 20px"><div class="mkt-wrap" style="max-width:920px">
+<section class="mkt-hero" style="padding:40px 0 20px"><div class="mkt-wrap anim-in" style="max-width:920px">
   <a class="link-arrow" href="../index.html">← Portfolio</a>
   <div class="eyebrow mt-6">E-Commerce</div>
   <h1 class="h1 mt-2">Fintech Payments Hub</h1>
   <p class="lead mt-3">Unified payouts and reconciliation for a lending platform.</p>
-  <div class="text-xs dim mono mt-3">Oct 2026 / PayFlow Lending</div>
-  <div class="flex gap-2 mt-4 flex-wrap"><span class="chip">nestjs</span><span class="chip">razorpay</span><span class="chip">postgresql</span><span class="chip">queues</span></div>
+  <div class="text-xs dim mono mt-3 reveal">Oct 2026 / PayFlow Lending</div>
+  <div class="flex gap-2 mt-4 flex-wrap reveal"><span class="chip">nestjs</span><span class="chip">razorpay</span><span class="chip">postgresql</span><span class="chip">queues</span></div>
 </div></section>
 <section class="mkt-section" style="padding-top:12px"><div class="mkt-wrap" style="max-width:920px">
-  <div class="mkt-card" style="padding:28px">
+  <div class="mkt-card reveal" style="padding:28px">
     <div class="eyebrow mb-2">Overview</div>
     <h2 class="h3">What we shipped</h2>
     <p class="muted mt-2" style="line-height:1.7">Designed and shipped a payments hub that normalizes Razorpay webhooks, idempotent payouts, and daily reconciliation exports for finance ops.</p>
@@ -42,11 +43,11 @@
       <li>Clear audit trail for every ledger movement</li>
     </ul>
   </div>
-  <div class="grid g2 gap-5 mt-5">
-    <div class="mkt-card" style="padding:24px"><div class="eyebrow mb-2">Client review</div><p style="font-size:16px;line-height:1.6">“Reconciliation stopped being a weekly fire drill.”</p><div class="text-xs dim mt-3">VP Engineering, PayFlow</div></div>
+  <div class="grid g2 gap-5 mt-5 reveal">
+    <div class="mkt-card" style="padding:24px"><div class="eyebrow mb-2">Client review</div><p class="fs-16" style="line-height:1.6">“Reconciliation stopped being a weekly fire drill.”</p><div class="text-xs dim mt-3">VP Engineering, PayFlow</div></div>
     <div class="mkt-card" style="padding:24px"><div class="eyebrow mb-2">Client</div><div class="font-bold">PayFlow Lending</div><div class="text-sm muted mt-1">Fintech</div><div class="eyebrow mt-4 mb-2">Tech stack</div><div class="text-sm muted">NestJS · PostgreSQL · RabbitMQ · Razorpay</div></div>
   </div>
-  <div class="mkt-card mt-5" style="padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+  <div class="mkt-card mt-5 reveal" style="padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
     <div><b class="h3">Interested in similar work?</b><p class="text-sm muted mt-1">Tell us about your project — we can scope something inspired by this case study.</p></div>
     <a class="btn btn-primary" href="../../contact/index.html">Start a similar project</a>
   </div>

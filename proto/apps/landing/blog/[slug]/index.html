@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="mkt-body">
+<body data-surface="marketing" class="mkt-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <header class="mkt-header"><div class="mkt-wrap mkt-nav">
 <a href="../../index.html" class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -22,34 +23,34 @@
   <a class="btn btn-ghost btn-sm" href="../../../web/login/index.html">Sign in</a>
   <a class="btn btn-primary btn-sm" href="../../contact/index.html">Start a project <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
 </div></div></header><main id="main"  tabindex="-1">
-<section style="padding:40px 0 10px"><div class="mkt-wrap" style="max-width:780px">
+<section class="mkt-hero" style="padding:40px 0 10px"><div class="mkt-wrap anim-in" style="max-width:780px">
   <div class="flex justify-between text-xs dim"><a class="link-arrow" href="../index.html">← Back to articles</a><span class="mono">2 min read · 4 views</span></div>
   <h1 class="h1 mt-6">Cutting Deploy Time from 45 Minutes to Five</h1>
   <p class="lead mt-4">CI caching, smaller artifacts, and service-level pipelines after monolith split.</p>
-  <div class="flex items-center gap-3 mt-5"><span class="avatar" style="background:var(--brand-2);color:var(--brand-11)">NE</span><div><b style="font-size:14px">Nestlancer Editorial</b><div class="text-xs dim">Oct 5, 2026 · 2 min read · 2 comments</div></div></div>
-  <div class="mt-6 cover" style="padding-top:46%"><span>CASE STUDIES</span></div>
+  <div class="flex items-center gap-3 mt-5"><span class="avatar" style="background:var(--brand-2);color:var(--brand-11)">NE</span><div><b class="fs-14">Nestlancer Editorial</b><div class="text-xs dim">Oct 5, 2026 · 2 min read · 2 comments</div></div></div>
+  <div class="mt-6 cover reveal" style="padding-top:46%"><span>CASE STUDIES</span></div>
 </div></section>
-<section class="mkt-section" style="padding-top:8px"><article class="mkt-wrap" style="max-width:780px;line-height:1.75;font-size:16px">
-  <p class="muted">The team prioritized <b>operational ownership</b> while migrating on a Nestlancer-style stack — gateway at the edge, domain NestJS services, Prisma on Postgres, async work through RabbitMQ, and media on Backblaze B2.</p>
-  <h2 class="h3 mt-8">Where we started</h2>
-  <p class="muted">The team inherited a single pipeline building every service on each commit. The triggering incident was clear: hotfix queue depth grew while waiting for unrelated image builds. Leadership funded the refactor when customer-visible latency and support load rose together — not when the diagram looked messy.</p>
-  <h2 class="h3 mt-8">Architecture before</h2>
-  <ul class="muted"><li>Single deploy artifact coupling unrelated domains</li><li>Synchronous cross-module HTTP with partial timeouts</li><li>Mixed read/write traffic on one database primary</li><li>Ad-hoc file storage complicating virus scan and CDN caching</li></ul>
-  <h2 class="h3 mt-8">Migration timeline</h2>
-  <p class="muted"><b>Discovery.</b> Mapped the single pipeline and inventoried which routes could move behind the gateway without user-visible changes.</p>
-  <p class="muted"><b>Strangler cutover.</b> Routed new traffic through NestJS handlers while legacy paths drained over 12 weeks.</p>
-  <p class="muted"><b>Reliability hardening.</b> Added gateway, Prisma with explicit SLOs owned by a 9-engineer platform squad.</p>
-  <p class="muted"><b>Stabilize and learn.</b> Ran game days for DLQ replay, replica lag failover, and presigned upload expiry edge cases.</p>
-  <h2 class="h3 mt-8">Results</h2>
-  <ul class="muted"><li>Path-filtered CI and per-service images cut deploy time to five minutes</li><li>On-call pages for queue backlog fell after outbox lag dashboards went live</li><li>Product teams could ship blog and portfolio changes without redeploying payments</li><li>Support tickets citing 'stale listings' dropped once read paths moved to replicas</li></ul>
-  <h2 class="h3 mt-8">Lesson</h2>
-  <p class="muted">Microservices did not arrive on day one. The team earned splits by proving <b>operational ownership</b> per domain — not by copying a reference diagram.</p>
-  <div class="flex gap-2 mt-6"><span class="chip">#NestJS</span><span class="chip">#Node.js</span></div>
-  <div class="flex gap-3 mt-6 text-sm dim"><span>Like</span><span>Bookmark</span></div>
+<section class="mkt-section" style="padding-top:8px"><article class="mkt-wrap fs-16" style="max-width:780px;line-height:1.75">
+  <p class="muted reveal">The team prioritized <b>operational ownership</b> while migrating on a Nestlancer-style stack — gateway at the edge, domain NestJS services, Prisma on Postgres, async work through RabbitMQ, and media on Backblaze B2.</p>
+  <h2 class="h3 mt-8 reveal">Where we started</h2>
+  <p class="muted reveal">The team inherited a single pipeline building every service on each commit. The triggering incident was clear: hotfix queue depth grew while waiting for unrelated image builds. Leadership funded the refactor when customer-visible latency and support load rose together — not when the diagram looked messy.</p>
+  <h2 class="h3 mt-8 reveal">Architecture before</h2>
+  <ul class="muted reveal"><li>Single deploy artifact coupling unrelated domains</li><li>Synchronous cross-module HTTP with partial timeouts</li><li>Mixed read/write traffic on one database primary</li><li>Ad-hoc file storage complicating virus scan and CDN caching</li></ul>
+  <h2 class="h3 mt-8 reveal">Migration timeline</h2>
+  <p class="muted reveal"><b>Discovery.</b> Mapped the single pipeline and inventoried which routes could move behind the gateway without user-visible changes.</p>
+  <p class="muted reveal"><b>Strangler cutover.</b> Routed new traffic through NestJS handlers while legacy paths drained over 12 weeks.</p>
+  <p class="muted reveal"><b>Reliability hardening.</b> Added gateway, Prisma with explicit SLOs owned by a 9-engineer platform squad.</p>
+  <p class="muted reveal"><b>Stabilize and learn.</b> Ran game days for DLQ replay, replica lag failover, and presigned upload expiry edge cases.</p>
+  <h2 class="h3 mt-8 reveal">Results</h2>
+  <ul class="muted reveal"><li>Path-filtered CI and per-service images cut deploy time to five minutes</li><li>On-call pages for queue backlog fell after outbox lag dashboards went live</li><li>Product teams could ship blog and portfolio changes without redeploying payments</li><li>Support tickets citing 'stale listings' dropped once read paths moved to replicas</li></ul>
+  <h2 class="h3 mt-8 reveal">Lesson</h2>
+  <p class="muted reveal">Microservices did not arrive on day one. The team earned splits by proving <b>operational ownership</b> per domain — not by copying a reference diagram.</p>
+  <div class="flex gap-2 mt-6 reveal"><span class="chip">#NestJS</span><span class="chip">#Node.js</span></div>
+  <div class="flex gap-3 mt-6 text-sm dim reveal"><span>Like</span><span>Bookmark</span></div>
 </article></section>
 <section class="mkt-section"><div class="mkt-wrap">
-  <h2 class="h3 mb-4">Related posts</h2>
-  <div class="grid g3 gap-4"><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow" style="font-size:11px">CASE STUDIES</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">Scaling a Freelance Marketplace Architecture</div><div class="text-xs dim mono mt-2">3 min read</div></a><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow" style="font-size:11px">CASE STUDIES</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">GDPR Compliance Platform Rebuild</div><div class="text-xs dim mono mt-2">2 min read</div></a><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow" style="font-size:11px">CASE STUDIES</div><div class="font-bold mt-2" style="font-size:14.5px;line-height:1.35">Migrating from WebSockets to SSE</div><div class="text-xs dim mono mt-2">2 min read</div></a></div>
+  <h2 class="h3 mb-4 reveal">Related posts</h2>
+  <div class="grid g3 gap-4 reveal stagger"><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow fs-11">CASE STUDIES</div><div class="font-bold mt-2 fs-15" style="line-height:1.35">Scaling a Freelance Marketplace Architecture</div><div class="text-xs dim mono mt-2">3 min read</div></a><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow fs-11">CASE STUDIES</div><div class="font-bold mt-2 fs-15" style="line-height:1.35">GDPR Compliance Platform Rebuild</div><div class="text-xs dim mono mt-2">2 min read</div></a><a class="mkt-card" style="padding:18px;display:block" href="./index.html"><div class="eyebrow fs-11">CASE STUDIES</div><div class="font-bold mt-2 fs-15" style="line-height:1.35">Migrating from WebSockets to SSE</div><div class="text-xs dim mono mt-2">2 min read</div></a></div>
 </div></section></main><footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
   <div class="flex-col gap-3">

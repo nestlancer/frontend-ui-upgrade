@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../shared/assets/proto.css">
+<script src="../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,7 +62,7 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<div class="phead">
+<div class="pband"><div class="phead anim-in">
 <div class="min-w-0">
   <div class="eyebrow"><span class="dot"></span>CONTENT · ASSETS</div>
   <h1 class="ptitle">Media Library · Media center</h1>
@@ -70,13 +71,13 @@
 <div class="phead-actions"><a class="btn btn-secondary" href="./browse/index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg> Browse all</a><a class="btn btn-secondary" href="./folders/index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6a1 1 0 011-1h5l2 2h9a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V6z"/><path d="M12 10v6M9 13h6"/></svg> New folder</a><button class="btn btn-primary" type="button">+ Browse files</button></div>
 </div>
 
-<div class="tabs mb-5">
+<div class="tabs mb-5 reveal">
   <a class="tab active" href="#" data-tab-target="media-storage">Storage <span class="count">146</span></a>
   <a class="tab" href="#" data-tab-target="media-quarantine">Quarantine <span class="count">0</span></a>
   <a class="tab" href="#" data-tab-target="media-analytics">Analytics <span class="count">19.3 MB</span></a>
-</div>
+</div></div>
 
-<section id="media-storage" class="panel mb-5">
+<section id="media-storage" class="panel mb-5 reveal">
   <div class="panel-head">
     <div class="min-w-0">
       <h2 class="panel-title">Storage · All buckets</h2>
@@ -123,10 +124,10 @@
   </table></div>
 </section>
 
-<div class="state-deck mb-5">
+<div class="state-deck mb-5 reveal">
   <section class="dialog-surface" aria-label="Asset details and preview">
     <div class="dialog-head">
-      <h3 class="panel-title mono" style="font-size:13px">sandeep-chopra-gps-fleet-gps-fleet-staging-review.zip</h3>
+      <h3 class="panel-title mono fs-13">sandeep-chopra-gps-fleet-gps-fleet-staging-review.zip</h3>
       <span class="badge tone-success"><span class="dot"></span>READY · PRIVATE · 353 B</span>
     </div>
     <div class="dialog-body">
@@ -141,7 +142,7 @@
         <div><dt>Uploaded</dt><dd class="mono text-xs">10/5/2026, 3:49:36 AM</dd></div>
         <div style="grid-column:1 / -1"><dt>Media ID</dt><dd class="mono text-xs">01a10a2e-6a69-71b8-a419-f5eb4e083e2f</dd></div>
       </dl>
-      <div class="note warn mb-2" style="padding:8px 10px;font-size:12px"><b>2 references</b> · This file is linked elsewhere. Deleting without force may fail or break content.</div>
+      <div class="note warn mb-2 fs-12" style="padding:8px 10px"><b>2 references</b> · This file is linked elsewhere. Deleting without force may fail or break content.</div>
       <div class="text-xs mono dim mb-1">1. project: 01a10a2e-4f64-740a-b4ca-0d9ab8dc1899</div>
       <div class="text-xs mono dim">2. Deliverable: Staging build shared for progress review (work in progress; not final delivery) · deliverable: 01a10a2e-6efe-71e5-ab46-a7328d4436bc</div>
     </div>
@@ -185,7 +186,7 @@
   </section>
 </div>
 
-<div class="grid g2 gap-5 mb-5">
+<div class="grid g2 gap-5 mb-5 reveal">
   <section id="media-analytics" class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Storage Analytics · By MIME type</h2><div class="panel-sub">Total files 146 · Storage used 19.3 MB · Public library 118 files (19 MB) · Private storage 28 files (309.1 KB)</div></div></div>
     <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact">
@@ -209,7 +210,7 @@
     </div>
   </section>
 </div>
-<div class="stats" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
+<div class="stats reveal stagger" style="grid-template-columns:repeat(4,1fr)"><div class="stat">
   <div class="stat-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Files</div>
   <div class="stat-value">80</div>
   <div class="stat-note ">11.5 MB library</div>
@@ -226,7 +227,7 @@
   <div class="stat-value">79</div>
   <div class="stat-note ">ClamAV on every upload</div>
 </div></div>
-<div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
+<div class="grid gap-5 mt-5 reveal" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Storage · last 30 days</h2></div></div>
@@ -244,19 +245,19 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">By file type</h2></div></div>
   <div class="panel-body"><div class="flex items-center gap-5">
 <svg width="120" height="120" viewBox="0 0 120 120"><circle r="40" cx="60" cy="60" fill="transparent" stroke="var(--bg-subtle)" stroke-width="14"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="#4CE0B3" stroke-width="14" stroke-dasharray="78.19 173.14" stroke-dashoffset="0.00"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="#02CED1" stroke-width="14" stroke-dasharray="67.02 184.31" stroke-dashoffset="-78.19"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="#3FA9F5" stroke-width="14" stroke-dasharray="33.51 217.82" stroke-dashoffset="-145.21"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="#FDEB92" stroke-width="14" stroke-dasharray="27.93 223.40" stroke-dashoffset="-178.72"/><circle r="40" cx="60" cy="60" fill="transparent" stroke="#FF9DDA" stroke-width="14" stroke-dasharray="44.68 206.65" stroke-dashoffset="-206.65"/></svg>
-<div class="flex-col gap-2"><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:#4CE0B3;width:8px;height:8px"></i><span class="muted">PDF</span><b class="mono ml-auto" style="font-size:12px">23 files</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:#02CED1;width:8px;height:8px"></i><span class="muted">PNG</span><b class="mono ml-auto" style="font-size:12px">18 files</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:#3FA9F5;width:8px;height:8px"></i><span class="muted">ZIP</span><b class="mono ml-auto" style="font-size:12px">17 files</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:#FDEB92;width:8px;height:8px"></i><span class="muted">VIDEO</span><b class="mono ml-auto" style="font-size:12px">10 files</b></div><div class="flex items-center gap-2" style="font-size:12px"><i class="dot" style="background:#FF9DDA;width:8px;height:8px"></i><span class="muted">JPG</span><b class="mono ml-auto" style="font-size:12px">12 files</b></div></div></div><div class="text-xs dim mono mt-2">Across File &amp; Media · last week</div></div>
+<div class="flex-col gap-2"><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:#4CE0B3;width:8px;height:8px"></i><span class="muted">PDF</span><b class="mono ml-auto fs-12">23 files</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:#02CED1;width:8px;height:8px"></i><span class="muted">PNG</span><b class="mono ml-auto fs-12">18 files</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:#3FA9F5;width:8px;height:8px"></i><span class="muted">ZIP</span><b class="mono ml-auto fs-12">17 files</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:#FDEB92;width:8px;height:8px"></i><span class="muted">VIDEO</span><b class="mono ml-auto fs-12">10 files</b></div><div class="flex items-center gap-2 fs-12"><i class="dot" style="background:#FF9DDA;width:8px;height:8px"></i><span class="muted">JPG</span><b class="mono ml-auto fs-12">12 files</b></div></div></div><div class="text-xs dim mono mt-2">Across File &amp; Media · last week</div></div>
   
 </div>
 </div>
-<div class="grid gap-5 mt-5" style="grid-template-columns:2fr 1fr">
+<div class="grid gap-5 mt-5 reveal" style="grid-template-columns:2fr 1fr">
   
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Top files by storage</h2><div class="panel-sub">Largest single files</div></div><div class="flex items-center gap-2 shrink-0"><a class="btn btn-secondary btn-sm" href="./browse/index.html">Browse all →</a></div></div>
   <div class="">
-    <div class="flex flex-wrap gap-2" style="padding:14px 18px;border-bottom:1px solid var(--line)"><span class="chip active" style="font-size:11px">All</span><span class="chip" style="font-size:11px">Documents</span><span class="chip" style="font-size:11px">Archives</span><span class="chip" style="font-size:11px">Images</span><span class="chip" style="font-size:11px">Code</span><span class="chip" style="font-size:11px">Spreadsheets</span><span class="chip" style="font-size:11px">Text</span><span class="chip" style="font-size:11px">Video</span><span class="chip" style="font-size:11px">Audio</span><span class="chip" style="font-size:11px">Other</span></div>
+    <div class="flex flex-wrap gap-2" style="padding:14px 18px;border-bottom:1px solid var(--line)"><span class="chip active fs-11">All</span><span class="chip fs-11">Documents</span><span class="chip fs-11">Archives</span><span class="chip fs-11">Images</span><span class="chip fs-11">Code</span><span class="chip fs-11">Spreadsheets</span><span class="chip fs-11">Text</span><span class="chip fs-11">Video</span><span class="chip fs-11">Audio</span><span class="chip fs-11">Other</span></div>
     <div class="tbl-wrap"><table class="tbl tbl-cards tbl-compact ">
 <thead><tr><th id="nl-th-11">File</th><th id="nl-th-12">Kind</th><th id="nl-th-13">Uploader</th><th id="nl-th-14" style="text-align:right">Size</th><th id="nl-th-15" style="text-align:right">Views</th></tr></thead>
-<tbody><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate" style="max-width:230px;font-size:11.5px">1_GTSiMaCAderv0Xi6AyOtmw.webp</span></div></td><td data-label="Kind"><span class="badge tone-neutral">Code</span></td><td data-label="Uploader">Sandeep Chopra</td><td data-label="Size" style="text-align:right">1.0 MB</td><td data-label="Views" style="text-align:right">6</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate" style="max-width:230px;font-size:11.5px">RentFair_Architecture_Diagram (9).png</span></div></td><td data-label="Kind"><span class="badge tone-neutral">PNG file</span></td><td data-label="Uploader">Priya Nair</td><td data-label="Size" style="text-align:right">950.0 KB</td><td data-label="Views" style="text-align:right">3</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate" style="max-width:230px;font-size:11.5px">Nestlancer Services Content.png</span></div></td><td data-label="Kind"><span class="badge tone-neutral">PNG file</span></td><td data-label="Uploader">Riya Kapoor</td><td data-label="Size" style="text-align:right">581.3 KB</td><td data-label="Views" style="text-align:right">4</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate" style="max-width:230px;font-size:11.5px">ContractTemplatePreview.tsx</span></div></td><td data-label="Kind"><span class="badge tone-neutral">Code</span></td><td data-label="Uploader">Ananya Iyer</td><td data-label="Size" style="text-align:right">309.4 KB</td><td data-label="Views" style="text-align:right">2</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate" style="max-width:230px;font-size:11.5px">SEO_ANALYSIS.md</span></div></td><td data-label="Kind"><span class="badge tone-neutral">Text file</span></td><td data-label="Uploader">Arjun Nair</td><td data-label="Size" style="text-align:right">196.4 KB</td><td data-label="Views" style="text-align:right">3</td></tr></tbody></table></div></div>
+<tbody><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate fs-12" style="max-width:230px">1_GTSiMaCAderv0Xi6AyOtmw.webp</span></div></td><td data-label="Kind"><span class="badge tone-neutral">Code</span></td><td data-label="Uploader">Sandeep Chopra</td><td data-label="Size" style="text-align:right">1.0 MB</td><td data-label="Views" style="text-align:right">6</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate fs-12" style="max-width:230px">RentFair_Architecture_Diagram (9).png</span></div></td><td data-label="Kind"><span class="badge tone-neutral">PNG file</span></td><td data-label="Uploader">Priya Nair</td><td data-label="Size" style="text-align:right">950.0 KB</td><td data-label="Views" style="text-align:right">3</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate fs-12" style="max-width:230px">Nestlancer Services Content.png</span></div></td><td data-label="Kind"><span class="badge tone-neutral">PNG file</span></td><td data-label="Uploader">Riya Kapoor</td><td data-label="Size" style="text-align:right">581.3 KB</td><td data-label="Views" style="text-align:right">4</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate fs-12" style="max-width:230px">ContractTemplatePreview.tsx</span></div></td><td data-label="Kind"><span class="badge tone-neutral">Code</span></td><td data-label="Uploader">Ananya Iyer</td><td data-label="Size" style="text-align:right">309.4 KB</td><td data-label="Views" style="text-align:right">2</td></tr><tr><td data-label="File"><div class="flex items-center gap-2"><span class="avatar sq" style="width:26px;height:26px;background:var(--bg-subtle);color:var(--ink-3)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><span class="mono truncate fs-12" style="max-width:230px">SEO_ANALYSIS.md</span></div></td><td data-label="Kind"><span class="badge tone-neutral">Text file</span></td><td data-label="Uploader">Arjun Nair</td><td data-label="Size" style="text-align:right">196.4 KB</td><td data-label="Views" style="text-align:right">3</td></tr></tbody></table></div></div>
   
 </div>
   
@@ -269,7 +270,7 @@
 </div>
 </div>
 <!-- PROTO-STATES-MEDIA -->
-<section id="states-media" class="mb-5" aria-labelledby="states-media-h"><div class="sec-head">
+<section id="states-media" class="mb-5 reveal" aria-labelledby="states-media-h"><div class="sec-head">
     <div class="min-w-0">
       <div class="sec-eyebrow">Operator states · 8 screens</div>
       <h2 class="sec-title" id="states-media-h">Library states</h2>
@@ -324,7 +325,7 @@
     </div>
     <span class="badge tone-neutral mono">019</span>
   </div>
-  <div class="dialog-body"><div class="kpi-grid"><div class="kpi"><div class="k-label">Total files</div><div class="k-value">146</div><div class="k-delta ">public 118 · private 28</div></div><div class="kpi"><div class="k-label">Storage</div><div class="k-value">19.3 MB</div><div class="k-delta ">of 5 GB</div></div><div class="kpi"><div class="k-label">Quarantined</div><div class="k-value">0</div><div class="k-delta up">all clear</div></div><div class="kpi"><div class="k-label">Processing</div><div class="k-value">0</div><div class="k-delta ">queue empty</div></div></div><div class="mt-3"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-19">Type</th><th id="nl-th-20">Files</th><th id="nl-th-21">Size</th></tr></thead><tbody><tr><td data-label="Type" class="min-w-0">image/jpeg</td><td data-label="Files" class="min-w-0 mono">118</td><td data-label="Size" class="min-w-0 mono">19 MB</td></tr><tr><td data-label="Type" class="min-w-0">application/pdf</td><td data-label="Files" class="min-w-0 mono">15</td><td data-label="Size" class="min-w-0 mono">304.5 KB</td></tr><tr><td data-label="Type" class="min-w-0">application/zip</td><td data-label="Files" class="min-w-0 mono">12</td><td data-label="Size" class="min-w-0 mono">4.2 KB</td></tr><tr><td data-label="Type" class="min-w-0">text/markdown</td><td data-label="Files" class="min-w-0 mono">1</td><td data-label="Size" class="min-w-0 mono">431 B</td></tr></tbody></table></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Preview cleanup</button><button class="btn btn-primary btn-sm" type="button">Run cleanup</button></div></div>
+  <div class="dialog-body"><div class="kpi-grid stagger"><div class="kpi"><div class="k-label">Total files</div><div class="k-value">146</div><div class="k-delta ">public 118 · private 28</div></div><div class="kpi"><div class="k-label">Storage</div><div class="k-value">19.3 MB</div><div class="k-delta ">of 5 GB</div></div><div class="kpi"><div class="k-label">Quarantined</div><div class="k-value">0</div><div class="k-delta up">all clear</div></div><div class="kpi"><div class="k-label">Processing</div><div class="k-value">0</div><div class="k-delta ">queue empty</div></div></div><div class="mt-3"><div class="tbl-wrap"><table class="tbl tbl-cards"><thead><tr><th id="nl-th-19">Type</th><th id="nl-th-20">Files</th><th id="nl-th-21">Size</th></tr></thead><tbody><tr><td data-label="Type" class="min-w-0">image/jpeg</td><td data-label="Files" class="min-w-0 mono">118</td><td data-label="Size" class="min-w-0 mono">19 MB</td></tr><tr><td data-label="Type" class="min-w-0">application/pdf</td><td data-label="Files" class="min-w-0 mono">15</td><td data-label="Size" class="min-w-0 mono">304.5 KB</td></tr><tr><td data-label="Type" class="min-w-0">application/zip</td><td data-label="Files" class="min-w-0 mono">12</td><td data-label="Size" class="min-w-0 mono">4.2 KB</td></tr><tr><td data-label="Type" class="min-w-0">text/markdown</td><td data-label="Files" class="min-w-0 mono">1</td><td data-label="Size" class="min-w-0 mono">431 B</td></tr></tbody></table></div></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" type="button">Preview cleanup</button><button class="btn btn-primary btn-sm" type="button">Run cleanup</button></div></div>
   <div class="dialog-foot"><span class="text-xs dim mr-auto">Buckets: all storage · public library · private</span></div>
 </section><section class="dialog-surface" id="md-folders" aria-labelledby="md-folders-h">
   <div class="dialog-head">

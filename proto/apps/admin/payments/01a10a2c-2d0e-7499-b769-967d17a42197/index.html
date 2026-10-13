@@ -7,8 +7,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../../../shared/assets/proto.css">
+<script src="../../../../shared/assets/proto-motion.js"></script>
 </head>
-<body class="app-body">
+<body data-surface="admin" class="app-body">
 <a href="#main" class="skip-link">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button class="sb-backdrop" type="button" tabindex="-1" aria-hidden="true" data-sb-close></button>
@@ -44,7 +45,7 @@
 <div class="sb-foot">
   <div class="flex items-center gap-2" style="padding:4px 4px 10px">
     <span class="avatar" style="background:var(--brand-9);color:#fff">A</span>
-    <div class="min-w-0"><div class="truncate" style="font-size:12px;font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
+    <div class="min-w-0"><div class="truncate fs-12" style="font-weight:600">admin@nestlancer.com</div><div class="text-xs dim">Administrator</div></div>
   </div>
   <a class="sb-item" href="../../login/index.html"><span class="l"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg><span>Sign out</span></span></a>
 </div></aside>
@@ -61,20 +62,20 @@
     <button class="icobtn" data-theme-toggle title="Theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button></div>
 </header>
 <main id="main" class="content" tabindex="-1">
-<a href="../index.html" class="link-arrow mb-3" style="font-size:12.5px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
-<div class="flex items-start justify-between flex-wrap gap-3 mb-4">
+<div class="pband"><a href="../index.html" class="link-arrow mb-3 fs-13"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg> Back to payments</a>
+<div class="flex items-start justify-between flex-wrap gap-3 mb-4 reveal">
   <div>
     <div class="eyebrow"><span class="dot"></span>PAYMENT DETAIL · 01a10a2c-2d0e-7499-b769-967d17a42197</div>
-    <h1 class="ptitle" style="font-size:22px">₹3,000.00 COMPLETED · ₹36,000.00 — UTR PUNB1023456</h1>
+    <h1 class="ptitle fs-24">₹3,000.00 COMPLETED · ₹36,000.00 — UTR PUNB1023456</h1>
     <p class="psub">Client Arjun Mehta · Project AUDIT-P25-20261005-73dhk Project Fixture · Milestone 1 — Initial Fixture Setup (UPI, Paid Oct 5, 2026)</p>
   </div>
   <div class="flex gap-2">
     <span class="badge tone-success">COMPLETED</span>
     <span class="badge tone-warning">Unverified UTR</span>
   </div>
-</div>
+</div></div>
 
-<div class="grid g2 gap-5 mb-5">
+<div class="grid g2 gap-5 mb-5 reveal">
   <section class="panel">
     <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Gateway details &amp; Administrative actions</h2><div class="panel-sub">Razorpay Order order_P25Fixture0001 · Payment ID pay_P25Fixture0001 · Refund history: No refunds issued</div></div></div>
     <div class="panel-body text-xs">
@@ -98,7 +99,7 @@
     </div>
   </section>
 </div>
-<div class="grid gap-5" style="grid-template-columns:7fr 5fr;align-items:start">
+<div class="grid gap-5 reveal" style="grid-template-columns:7fr 5fr;align-items:start">
   <div class="flex-col gap-5">
     <div class="note warn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg><div><b>Verification needed.</b> The client reported a bank transfer with UTR <span class="mono">PUNB1023456</span>. Match against the HDFC ···· 8821 statement before marking paid — the client portal shows “Processing” until then.</div></div>
     <div class="panel">
@@ -106,7 +107,7 @@
       <div class="panel-body">
         <div class="tbl-wrap"><table class="tbl tbl-cards  ">
 <thead><tr><th id="nl-th-1">Bank entry</th><th id="nl-th-2">Date</th><th id="nl-th-3" style="text-align:right">Amount</th><th id="nl-th-4">Match</th></tr></thead>
-<tbody><tr><td data-label="Bank entry"><span class="mono" style="font-size:11.5px">NEFT PUNB1023456 · KARTHIK MENON SELF</span></td><td data-label="Date"><span class="text-xs">Oct 10</span></td><td data-label="Amount" style="text-align:right"><span class="mono font-semibold">₹36,000.00</span></td><td data-label="Match"><span class="badge tone-success">Exact UTR match</span></td></tr><tr><td data-label="Bank entry"><span class="mono" style="font-size:11.5px">IMPS 0000342189 · KARTHIK M</span></td><td data-label="Date"><span class="text-xs">Oct 8</span></td><td data-label="Amount" style="text-align:right"><span class="mono">₹2,500.00</span></td><td data-label="Match"><span class="dim text-xs">No match</span></td></tr></tbody></table></div>
+<tbody><tr><td data-label="Bank entry"><span class="mono fs-12">NEFT PUNB1023456 · KARTHIK MENON SELF</span></td><td data-label="Date"><span class="text-xs">Oct 10</span></td><td data-label="Amount" style="text-align:right"><span class="mono font-semibold">₹36,000.00</span></td><td data-label="Match"><span class="badge tone-success">Exact UTR match</span></td></tr><tr><td data-label="Bank entry"><span class="mono fs-12">IMPS 0000342189 · KARTHIK M</span></td><td data-label="Date"><span class="text-xs">Oct 8</span></td><td data-label="Amount" style="text-align:right"><span class="mono">₹2,500.00</span></td><td data-label="Match"><span class="dim text-xs">No match</span></td></tr></tbody></table></div>
         <div class="flex gap-2 mt-4">
           <button class="btn btn-primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> Verify &amp; mark paid</button>
           <button class="btn btn-secondary">Ask client for proof</button>
@@ -119,15 +120,15 @@
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Timeline</h2></div></div>
   <div class="panel-body">
 <div class="tline"><div class="tline-item">
-  <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">UTR submitted by client</span></div>
+  <div class="flex items-center gap-2 mb-1"><span class="font-semibold fs-13">UTR submitted by client</span></div>
   <div class="text-xs muted">Via checkout page on Oct 10, 6:58 AM</div>
   <div class="text-xs dim mono mt-1">Payment ID · 01a10a2c-2d0e-7499-b769-967d17a42197 · Razorpay / Bank transfer / UPI</div>
 </div><div class="tline-item">
-  <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">Statement sync</span></div>
+  <div class="flex items-center gap-2 mb-1"><span class="font-semibold fs-13">Statement sync</span></div>
   <div class="text-xs muted">HDFC ···· 8821 — exact match found</div>
   <div class="text-xs dim mono mt-1">6:00 AM</div>
 </div><div class="tline-item">
-  <div class="flex items-center gap-2 mb-1"><span class="font-semibold" style="font-size:13px">Ops assignment</span></div>
+  <div class="flex items-center gap-2 mb-1"><span class="font-semibold fs-13">Ops assignment</span></div>
   <div class="text-xs muted">Auto-routed to Sunita Rao (Finance)</div>
   <div class="text-xs dim mono mt-1">7:05 AM</div>
 </div></div></div>
@@ -144,7 +145,7 @@
     
 <div class="panel ">
   <div class="panel-head"><div class="min-w-0"><h2 class="panel-title">On verify</h2></div></div>
-  <div class="panel-body"><ol style="padding-left:18px;list-style:decimal;font-size:12.8px;color:var(--ink-2);line-height:1.7"><li>Invoice NL-INV-2026-000110 marked paid.</li><li>Client notified in-app + email receipt.</li><li>Ledger posts an immutable credit entry.</li></ol></div>
+  <div class="panel-body"><ol class="fs-13" style="padding-left:18px;list-style:decimal;color:var(--ink-2);line-height:1.7"><li>Invoice NL-INV-2026-000110 marked paid.</li><li>Client notified in-app + email receipt.</li><li>Ledger posts an immutable credit entry.</li></ol></div>
   
 </div>
   </div>
