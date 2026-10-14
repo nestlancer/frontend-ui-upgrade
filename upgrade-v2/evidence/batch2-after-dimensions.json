@@ -1,0 +1,98 @@
+[
+  {
+    "path": "apps/landing/about/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/landing/about/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/landing/contact/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/landing/contact/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/landing/portfolio/[id]/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/landing/portfolio/[id]/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/landing/blog/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/landing/blog/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/landing/blog/[slug]/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/landing/blog/[slug]/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/web/contact/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/web/contact/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  }
+]

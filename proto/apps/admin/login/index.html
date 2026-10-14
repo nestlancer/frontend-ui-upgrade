@@ -1,167 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Nestlancer admin prototype — Operator sign-in · Admin zero-trust posture boundary">
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Nestlancer admin prototype — Operator sign-in · Admin zero-trust posture boundary" name="description"/>
 <title>Operator sign-in · Admin</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="../../../shared/assets/proto.css">
+
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E" rel="icon"/>
+<link href="../../../shared/assets/proto.css" rel="stylesheet"/>
 <script src="../../../shared/assets/proto-motion.js"></script>
-</head>
-<body data-surface="auth" class="">
-<a href="#main" class="skip-link">Skip to main content</a>
-
+<link href="../../../shared/assets/studio.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/studio.js"></script><link href="../../../shared/assets/public-flow.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/public-flow.js"></script></head>
+<body class="upgrade-v2 operator-auth-v2 flow-v2 batch-five" data-page="admin-login" data-surface="auth">
+<a class="skip-link" href="#main">Skip to main content</a>
 <header class="topbar" style="justify-content:space-between;padding:0 24px">
-  <div class="flex items-center gap-2 mono fs-12" style="color:var(--ink-2)">
-    <span class="badge tone-brand" style="font-family:var(--font-mono)">OPS</span>
-    <span>Operator auth · zero-trust posture</span>
-  </div>
-  <nav class="flex items-center gap-4 fs-13" aria-label="Operator gate navigation">
-    <a class="link mono" href="../../../index.html">← gate</a>
-    <a class="muted mono" href="../../web/login/index.html">clients use app.nestlancer.com</a>
-    <a class="muted" href="../../web/terms/index.html">Terms</a>
-    <a class="muted" href="../../web/privacy/index.html">Privacy</a>
-    <button class="icobtn" data-theme-toggle title="Toggle theme" aria-label="Toggle theme"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
-  </nav>
+<div class="flex items-center gap-2 mono fs-12" style="color:var(--ink-2)">
+<span class="badge tone-brand" style="font-family:var(--font-mono)">OPS</span>
+<span>Operator auth · zero-trust posture</span>
+</div>
+<nav aria-label="Operator gate navigation" class="flex items-center gap-4 fs-13">
+<a class="link mono" href="../../../index.html">← gate</a>
+<a class="muted mono" href="../../web/login/index.html">clients use app.nestlancer.com</a>
+<a class="muted" href="../../web/terms/index.html">Terms</a>
+<a class="muted" href="../../web/privacy/index.html">Privacy</a>
+<button aria-label="Toggle theme" class="icobtn" data-theme-toggle="" title="Toggle theme"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button>
+</nav>
 </header>
-
-<main id="main" class="auth-split" style="min-height:calc(100vh - 96px)" tabindex="-1">
-  <section class="auth-left" style="background:linear-gradient(155deg,var(--bg-sidebar),var(--bg-app));border-right:1px solid var(--line);justify-content:space-between;padding:40px 48px">
-    <div>
-      <div class="flex items-center gap-3 mb-5">
-        <a href="./index.html" class="brand">
-          <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"/>
-            <path d="M4 20c6-3 12-3 24-7.5-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.5-15-2.5Z" fill="#32998C" opacity=".85"/>
-            <path d="M4 26.5c6-3 12-3 24-6.5-1 3.5-4 6.5-8 7.8-3.8 1.1-9-.2-16-1.3Z" fill="#86D0C6" opacity=".8"/>
-          </svg>
-          <div>
-            <div class="fs-15" style="font-weight:700;line-height:1.1">Nestlancer Admin</div>
-            <div class="mono dim fs-11" style="letter-spacing:.08em">OPERATOR IDENTITY BOUNDARY · OPERATOR CONSOLE</div>
-          </div>
-        </a>
-      </div>
-
-      <h1 class="h1 fs-36" style="margin-bottom:12px">Verify <span class="grad">identity</span> before console access</h1>
-      <p class="psub fs-15" style="max-width:52ch;margin-bottom:24px">Built for internal operators — dense, auditable, and deliberately unfriendly to public portal branding. Credentials alone are not enough when MFA is challenged.</p>
-
-      <div class="grid g2 gap-3 mb-5">
-        <div class="card card-pad" style="padding:14px 16px">
-          <div class="mono dim fs-11" style="letter-spacing:.08em">ACCESS</div>
-          <div class="font-semibold mt-1 fs-15" style="color:var(--brand-9)">Operators only</div>
-        </div>
-        <div class="card card-pad" style="padding:14px 16px">
-          <div class="mono dim fs-11" style="letter-spacing:.08em">PORTAL</div>
-          <div class="font-semibold mt-1 fs-15">Admin console</div>
-        </div>
-        <div class="card card-pad" style="padding:14px 16px">
-          <div class="mono dim fs-11" style="letter-spacing:.08em">SESSION TTL</div>
-          <div class="font-semibold mono mt-1 fs-15">8h / 30d</div>
-        </div>
-        <div class="card card-pad" style="padding:14px 16px">
-          <div class="mono dim fs-11" style="letter-spacing:.08em">ROLE GATE</div>
-          <div class="font-semibold mono mt-1 fs-15">ADMIN only</div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-head">
-          <h2 class="panel-title mono fs-13">pre-auth posture</h2>
-          <span class="mono dim fs-12">2 / 3 ready</span>
-        </div>
-        <div class="panel-row">
-          <div>
-            <div class="flex items-center gap-2 font-semibold"><span class="dot" style="background:var(--t-success-dot)"></span>Transport security</div>
-            <div class="text-xs dim mt-1">HTTPS + HSTS on admin host. Mixed content blocked.</div>
-          </div>
-          <span class="badge tone-success mono">PASS</span>
-        </div>
-        <div class="panel-row">
-          <div>
-            <div class="flex items-center gap-2 font-semibold"><span class="dot" style="background:var(--t-success-dot)"></span>Network policy</div>
-            <div class="text-xs dim mt-1">CSP nonce active. Admin cookies scoped HttpOnly / SameSite.</div>
-          </div>
-          <span class="badge tone-success mono">PASS</span>
-        </div>
-        <div class="panel-row">
-          <div>
-            <div class="flex items-center gap-2 font-semibold"><span class="dot" style="background:var(--t-warning-dot)"></span>Operator identity</div>
-            <div class="text-xs dim mt-1">Email + password, then TOTP challenge when enrolled.</div>
-          </div>
-          <span class="badge tone-warning mono">PENDING</span>
-        </div>
-      </div>
-    </div>
-
-    <p class="text-xs dim mt-6" style="line-height:1.55">
-      <b style="color:var(--ink-2)">Client accounts cannot finish sign-in here.</b> Failed attempts are rate-limited and written to the audit log with IP and user-agent.
+<main class="auth-split" id="main" style="min-height:calc(100vh - 96px)" tabindex="-1">
+<section class="auth-left" style="background:linear-gradient(155deg,var(--bg-sidebar),var(--bg-app));border-right:1px solid var(--line);justify-content:space-between;padding:40px 48px">
+<div>
+<div class="flex items-center gap-3 mb-5">
+<a class="brand" href="./index.html">
+<svg aria-hidden="true" fill="none" height="26" viewBox="0 0 32 32" width="26">
+<path d="M4 13.5C10 10.5 16 10.5 28 6c-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.8-15-2.5Z" fill="#0B7A71"></path>
+<path d="M4 20c6-3 12-3 24-7.5-1.5 4.5-4.5 8.5-9 10-3.5 1.2-8.5.5-15-2.5Z" fill="#32998C" opacity=".85"></path>
+<path d="M4 26.5c6-3 12-3 24-6.5-1 3.5-4 6.5-8 7.8-3.8 1.1-9-.2-16-1.3Z" fill="#86D0C6" opacity=".8"></path>
+</svg>
+<div>
+<div class="fs-15" style="font-weight:700;line-height:1.1">Nestlancer Admin</div>
+<div class="mono dim fs-11" style="letter-spacing:.08em">OPERATOR IDENTITY BOUNDARY · OPERATOR CONSOLE</div>
+</div>
+</a>
+</div>
+<h1 class="h1 fs-36" style="margin-bottom:12px">Verify <span class="grad">identity</span> before console access</h1>
+<p class="psub fs-15" style="max-width:52ch;margin-bottom:24px">Built for internal operators — dense, auditable, and deliberately unfriendly to public portal branding. Credentials alone are not enough when MFA is challenged.</p>
+<figure class="flow-figure operator-art" data-signature=""><img alt="Illustration of an operator console behind an identity check with a shield and audit trail." height="520" src="../../../shared/assets/art/operator-console.svg" width="760"/><figcaption>Illustrative operator boundary · local prototype</figcaption></figure><div class="grid g2 gap-3 mb-5">
+<div class="card card-pad" style="padding:14px 16px">
+<div class="mono dim fs-11" style="letter-spacing:.08em">ACCESS</div>
+<div class="font-semibold mt-1 fs-15" style="color:var(--brand-9)">Operators only</div>
+</div>
+<div class="card card-pad" style="padding:14px 16px">
+<div class="mono dim fs-11" style="letter-spacing:.08em">PORTAL</div>
+<div class="font-semibold mt-1 fs-15">Admin console</div>
+</div>
+<div class="card card-pad" style="padding:14px 16px">
+<div class="mono dim fs-11" style="letter-spacing:.08em">SESSION TTL</div>
+<div class="font-semibold mono mt-1 fs-15">8h / 30d</div>
+</div>
+<div class="card card-pad" style="padding:14px 16px">
+<div class="mono dim fs-11" style="letter-spacing:.08em">ROLE GATE</div>
+<div class="font-semibold mono mt-1 fs-15">ADMIN only</div>
+</div>
+</div>
+<div class="panel">
+<div class="panel-head">
+<h2 class="panel-title mono fs-13">pre-auth posture</h2>
+<span class="mono dim fs-12">2 / 3 ready</span>
+</div>
+<div class="panel-row">
+<div>
+<div class="flex items-center gap-2 font-semibold"><span class="dot" style="background:var(--t-success-dot)"></span>Transport security</div>
+<div class="text-xs dim mt-1">HTTPS + HSTS on admin host. Mixed content blocked.</div>
+</div>
+<span class="badge tone-success mono">PASS</span>
+</div>
+<div class="panel-row">
+<div>
+<div class="flex items-center gap-2 font-semibold"><span class="dot" style="background:var(--t-success-dot)"></span>Network policy</div>
+<div class="text-xs dim mt-1">CSP nonce active. Admin cookies scoped HttpOnly / SameSite.</div>
+</div>
+<span class="badge tone-success mono">PASS</span>
+</div>
+<div class="panel-row">
+<div>
+<div class="flex items-center gap-2 font-semibold"><span class="dot" style="background:var(--t-warning-dot)"></span>Operator identity</div>
+<div class="text-xs dim mt-1">Email + password, then TOTP challenge when enrolled.</div>
+</div>
+<span class="badge tone-warning mono">PENDING</span>
+</div>
+</div>
+</div>
+<p class="text-xs dim mt-6" style="line-height:1.55">
+<b style="color:var(--ink-2)">Client accounts cannot finish sign-in here.</b> Failed attempts are rate-limited and written to the audit log with IP and user-agent.
     </p>
-  </section>
-
-  <section class="flex-col items-center justify-center" style="padding:40px 24px;background:radial-gradient(60% 60% at 50% 40%,rgba(11,122,113,.07),transparent 70%)">
-    <div class="auth-card anim-in" style="max-width:420px">
-      <div class="eyebrow mb-2" style="color:var(--t-warning-tx)"><span class="dot" style="background:var(--t-warning-dot)"></span>INTERNAL ONLY</div>
-      <h2 class="h3 fs-24" style="margin-bottom:6px">Operator sign-in</h2>
-      <p class="text-sm muted mb-5">For Nestlancer administrators and internal operators only. Client accounts use the main app.</p>
-
-      <form action="../dashboard/index.html" method="get">
-        <div class="field mb-4">
-          <label class="label" for="op-email">Work email <span class="req">*</span></label>
-          <input id="op-email" class="input" type="email" placeholder="you@company.com" value="admin@nestlancer.com" autocomplete="username">
-        </div>
-        <div class="field mb-4">
-          <div class="flex items-center justify-between">
-            <label class="label" for="op-pass">Password <span class="req">*</span></label>
-            <span class="mono text-xs muted">Show</span>
-          </div>
-          <input id="op-pass" class="input" type="password" placeholder="Enter your password" value="Admin123!@#" autocomplete="current-password">
-        </div>
-        <label class="check mb-5">
-          <input type="checkbox" checked>
-          <span>Keep me signed in · Trust this device for 12 hours</span>
-        </label>
-        <button class="btn btn-primary btn-lg w-full" type="submit">Enter console · Sign in to console</button>
-      </form>
-
-      <div class="note warn mt-4">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-        <div>Staff only. Sign-ins from unrecognized networks require an email challenge. Every session is audit-logged.</div>
-      </div>
-
-      <div class="text-center text-sm muted mt-4">
+</section>
+<section class="flex-col items-center justify-center" style="padding:40px 24px;background:radial-gradient(60% 60% at 50% 40%,rgba(11,122,113,.07),transparent 70%)">
+<div class="auth-card anim-in" style="max-width:420px">
+<div class="eyebrow mb-2" style="color:var(--t-warning-tx)"><span class="dot" style="background:var(--t-warning-dot)"></span>INTERNAL ONLY</div>
+<h2 class="h3 fs-24" style="margin-bottom:6px">Operator sign-in</h2>
+<p class="text-sm muted mb-5">For Nestlancer administrators and internal operators only. Client accounts use the main app.</p>
+<form action="../dashboard/index.html" aria-describedby="operator-note" class="flow-auth-form" data-flow-form="Prototype only: operator credentials were not checked and no session was created." data-flow-next="Open the sample command center" method="get">
+<div class="field mb-4">
+<label class="label" for="op-email">Work email <span class="req">*</span></label>
+<input autocomplete="username" class="input" id="op-email" placeholder="you@company.com" required="" type="email" value="admin@nestlancer.com"/>
+</div>
+<div class="field mb-4">
+<div class="flex items-center justify-between">
+<label class="label" for="op-pass">Password <span class="req">*</span></label>
+<button aria-controls="op-pass" aria-label="Show password" aria-pressed="false" class="reveal-inline mono text-xs" data-flow-reveal="" disabled="" type="button">Show</button>
+</div>
+<input autocomplete="current-password" class="input" id="op-pass" placeholder="Enter your password" required="" type="password" value="Admin123!@#"/>
+</div>
+<label class="check mb-5">
+<input checked="" id="op-trust" type="checkbox"/>
+<span>Keep me signed in · Trust this device for 12 hours</span>
+</label>
+<button class="btn btn-primary btn-lg w-full" disabled="" type="submit">Enter console · Sign in to console</button>
+<p class="demo-note" id="operator-note">Local prototype only. Sample values are pre-filled; nothing is sent, stored or authenticated. Requires JavaScript.</p><p class="form-feedback" data-flow-result="" role="status" tabindex="-1"></p></form>
+<div class="note warn mt-4">
+<svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="14"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+<div>Staff only. Sign-ins from unrecognized networks require an email challenge. Every session is audit-logged.</div>
+</div>
+<div class="text-center text-sm muted mt-4">
         Client account? <a class="link" href="../../web/login/index.html">Client sign-in · Use the client portal sign-in</a>
-      </div>
-
-      <div class="sep"></div>
-      <div class="mono text-xs dim" style="line-height:1.6">
-        <div>host · admin.nestlancer.com</div>
-        <div>policy · ADMIN role · MFA when enrolled · audited session</div>
-      </div>
-    </div>
-    <a class="link-arrow text-sm muted mt-4" href="../../../index.html">← Back to operator gate</a>
-  </section>
+</div>
+<div class="sep"></div>
+<div class="mono text-xs dim" style="line-height:1.6">
+<div>host · admin.nestlancer.com</div>
+<div>policy · ADMIN role · MFA when enrolled · audited session</div>
+</div>
+</div>
+<a class="link-arrow text-sm muted mt-4" href="../../../index.html">← Back to operator gate</a>
+</section>
 <!-- PROTO-UPGRADE-START -->
-<nav class="crumbs" aria-label="Breadcrumb" style="margin-bottom:8px"><a href="../index.html">Home</a><span>·</span><a href="../portfolio/index.html">Portfolio</a><span>·</span><a href="../content/index.html">Blog</a><span>·</span><a href="../contact/index.html">Contact</a></nav>
+<nav aria-label="Breadcrumb" class="crumbs" style="margin-bottom:8px"><a href="../index.html">Home</a><span>·</span><a href="../portfolio/index.html">Portfolio</a><span>·</span><a href="../content/index.html">Blog</a><span>·</span><a href="../contact/index.html">Contact</a></nav>
 <!-- PROTO-UPGRADE-END -->
 </main>
-
 <footer class="page-foot text-center">
-  <a class="link" href="../../web/terms/index.html">Terms</a> · <a class="link" href="../../web/privacy/index.html">Privacy</a>
+<a class="link" href="../../web/terms/index.html">Terms</a> · <a class="link" href="../../web/privacy/index.html">Privacy</a>
 </footer>
-
 <div class="fab" id="fab">
-<button class="fab-btn" onclick="document.getElementById('fab').classList.toggle('open')" aria-label="Prototype menu"><i class="dot"></i><span>Prototype</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button>
+<button aria-label="Prototype menu" class="fab-btn" onclick="document.getElementById('fab').classList.toggle('open')"><i class="dot"></i><span>Prototype</span><svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="13"><path d="m7 15 5 5 5-5"></path><path d="m7 9 5-5 5 5"></path></svg></button>
 <div class="fab-menu">
-  <div class="fab-lab">Jump to surface</div>
-  <a class="fx" href="../../../index.html">Sign-off hub <small>hub</small></a>
-  <a class="fx" href="../../landing/index.html">Marketing — nestlancer.com <small>9020</small></a>
-  <a class="fx" href="../../web/index.html">Public app — app.nestlancer.com <small>9000</small></a>
-  <a class="fx" href="../../web/dashboard/index.html">Client portal <small>web</small></a>
-  <a class="fx" href="../dashboard/index.html">Admin console <small>admin</small></a>
-  <div class="fab-sep"></div>
-  <button class="fx" data-theme-toggle><span>Theme</span> <small data-theme-label>Light</small></button>
+<div class="fab-lab">Jump to surface</div>
+<a class="fx" href="../../../index.html">Sign-off hub <small>hub</small></a>
+<a class="fx" href="../../landing/index.html">Marketing — nestlancer.com <small>9020</small></a>
+<a class="fx" href="../../web/index.html">Public app — app.nestlancer.com <small>9000</small></a>
+<a class="fx" href="../../web/dashboard/index.html">Client portal <small>web</small></a>
+<a class="fx" href="../dashboard/index.html">Admin console <small>admin</small></a>
+<div class="fab-sep"></div>
+<button class="fx" data-theme-toggle=""><span>Theme</span> <small data-theme-label="">Light</small></button>
 </div></div>
-<script src="../../../shared/assets/ui.js" defer></script>
+<script defer="" src="../../../shared/assets/ui.js"></script>
 </body>
 </html>

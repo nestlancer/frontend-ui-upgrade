@@ -1,0 +1,122 @@
+[
+ {
+  "path": "proto/apps/web/register/index.html",
+  "notes": [
+   "form wraps fields; required/autocomplete; password match; reveal toggles; steps; account-access art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/forgot-password/index.html",
+  "notes": [
+   "form wraps email; required; steps; account-access art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/reset-password/index.html",
+  "notes": [
+   "form; minlength/pattern from stated requirements; match; reveal; steps; art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/verify-email/index.html",
+  "notes": [
+   "otp fieldset with advance/paste; resend cooldown; steps; verification-seal art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/verify/index.html",
+  "notes": [
+   "otp form with original prefilled digits; resend; verification-seal art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/verify-document/index.html",
+  "notes": [
+   "doc lookup form with local result/format checks; hero art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/impersonate/index.html",
+  "notes": [
+   "facts dl; restricted note role; operator-console art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/share/[token]/index.html",
+  "notes": [
+   "share head with art; table caption/scope"
+  ]
+ },
+ {
+  "path": "proto/apps/web/index.html",
+  "notes": [
+   "delivery-system art; responsive vitals; section reveal"
+  ]
+ },
+ {
+  "path": "proto/apps/web/about/index.html",
+  "notes": [
+   "hero art"
+  ]
+ },
+ {
+  "path": "proto/apps/web/portfolio/index.html",
+  "notes": [
+   "work art covers; local search + sector filter; unmatched sectors disabled: Retail, Education, Logistics"
+  ]
+ },
+ {
+  "path": "proto/apps/web/work/index.html",
+  "notes": [
+   "work art covers + caption"
+  ]
+ },
+ {
+  "path": "proto/apps/web/blog/category/[slug]/index.html",
+  "notes": [
+   "hero art; journal covers; RSS disclosed as not connected"
+  ]
+ },
+ {
+  "path": "proto/apps/web/blog/tag/[slug]/index.html",
+  "notes": [
+   "hero art; journal covers; RSS disclosed as not connected"
+  ]
+ },
+ {
+  "path": "proto/apps/web/blog/bookmarks/index.html",
+  "notes": [
+   "hero art; journal covers; local remove with undo"
+  ]
+ },
+ {
+  "path": "proto/apps/web/terms/index.html",
+  "notes": [
+   "rail anchors + active section; missing: "
+  ]
+ },
+ {
+  "path": "proto/apps/web/privacy/index.html",
+  "notes": [
+   "rail anchors + active section; missing: Cookies not in this version, Retention not in this version"
+  ]
+ },
+ {
+  "path": "proto/apps/admin/login/index.html",
+  "notes": [
+   "operator-console art; reveal; required; local result"
+  ]
+ },
+ {
+  "path": "proto/apps/web/blog/[slug]/index.html",
+  "notes": [
+   "baseline-identical to web/blog/cutting-deploy-time-from-45-minutes-to-five; upgraded output reused"
+  ]
+ },
+ {
+  "path": "proto/apps/web/portfolio/[id]/index.html",
+  "notes": [
+   "baseline-identical to web/portfolio/fintech-payments-hub; upgraded output reused"
+  ]
+ }
+]

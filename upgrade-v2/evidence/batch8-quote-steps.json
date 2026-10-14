@@ -1,0 +1,299 @@
+{
+  "browser": "HeadlessChrome/153.0.8010.0",
+  "url": "http://localhost:8000/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html",
+  "results": [
+    {
+      "name": "100 scope: step 1 shown, steps 2–3 hidden, Back disabled",
+      "pass": true,
+      "detail": {
+        "tabsVisible": true,
+        "panels": [
+          true,
+          false,
+          false
+        ],
+        "selected": [
+          "true",
+          "false",
+          "false"
+        ],
+        "prevDisabled": true,
+        "nextDisabled": false,
+        "nextHidden": false,
+        "live": "Step 1 of 3: Scope & line items.",
+        "active": "Skip to main content\n\n\n\n\n\n\n\n\nN",
+        "current": "1Scope & line items",
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "100 scope: recorded data present",
+      "pass": true
+    },
+    {
+      "name": "axe light-1440 step1",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "098 library: disclosure opens with honest empty-fixture note",
+      "pass": true,
+      "detail": {
+        "open": true,
+        "expanded": "true",
+        "label": "Hide library",
+        "text": "Line-item library · No reusable quote blocks are included in this prototype fixture, so there is nothing to insert. The recorded phase and rows below are unchanged."
+      }
+    },
+    {
+      "name": "axe light-1440 library",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "099 pricing: Next shows step 2, focus on heading, announced, progress updated",
+      "pass": true,
+      "detail": {
+        "tabsVisible": true,
+        "panels": [
+          false,
+          true,
+          false
+        ],
+        "selected": [
+          "false",
+          "true",
+          "false"
+        ],
+        "prevDisabled": false,
+        "nextDisabled": false,
+        "nextHidden": false,
+        "live": "Step 2 of 3: Pricing & schedule.",
+        "active": "qs-step-2-h",
+        "current": "2Pricing & schedule",
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "099 pricing: Preset mode, stored 50/50 selected",
+      "pass": true,
+      "detail": {
+        "pressed": "true",
+        "customHidden": true,
+        "sched": "50/50",
+        "sel": "50/50 (selected)"
+      }
+    },
+    {
+      "name": "axe light-1440 step2 preset",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "preset change: summary updates, preview-only note, stored installments unchanged",
+      "pass": true,
+      "detail": {
+        "sched": "30/70",
+        "prev": "Preview only: “30/70” is selected locally. The stored installments above are unchanged and nothing is saved in this prototype.",
+        "stored": "Deposit 50%₹0.00 · on acceptFinal payment 50%₹0.00 · on prior approved"
+      }
+    },
+    {
+      "name": "097 custom: editor opens from stored installments, select synced, total 100%",
+      "pass": true,
+      "detail": {
+        "hidden": false,
+        "sel": "Custom %",
+        "rows": [
+          [
+            "Deposit",
+            "50",
+            "on accept"
+          ],
+          [
+            "Final payment",
+            "50",
+            "on prior approved"
+          ]
+        ],
+        "total": "Total 100%"
+      }
+    },
+    {
+      "name": "axe light-1440 step2 custom",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "097 custom: 40/50 reports 90% and marks fields invalid",
+      "pass": true,
+      "detail": {
+        "total": "Total 90% · must equal 100%",
+        "invalid": "true",
+        "sched": "Custom 40/50"
+      }
+    },
+    {
+      "name": "Create quote with invalid custom total: returns to step 2, focuses %, nothing saved",
+      "pass": true,
+      "detail": {
+        "s": {
+          "tabsVisible": true,
+          "panels": [
+            false,
+            true,
+            false
+          ],
+          "selected": [
+            "false",
+            "true",
+            "false"
+          ],
+          "prevDisabled": false,
+          "nextDisabled": false,
+          "nextHidden": false,
+          "live": "Custom installments must add up to 100% before the quote can be checked. Nothing was saved.",
+          "active": "qs-pct-1",
+          "current": "2Pricing & schedule",
+          "scroll": 1440
+        },
+        "status": ""
+      }
+    },
+    {
+      "name": "Add installment: third row, focus in name, total flags 100% + 0",
+      "pass": true,
+      "detail": {
+        "rows": 3,
+        "focus": "qs-name-3",
+        "total": "Total 100%"
+      }
+    },
+    {
+      "name": "Create quote with an incomplete new installment: back to step 2, focus on the empty name",
+      "pass": true,
+      "detail": {
+        "step2": true,
+        "focus": "qs-name-3",
+        "live": "Complete each installment name and percentage (at least 1%) before the quote can be checked. Nothing was saved."
+      }
+    },
+    {
+      "name": "Remove installment: back to 2 rows, total 100%, focus kept in editor",
+      "pass": true,
+      "detail": {
+        "rows": 2,
+        "total": "Total 100%",
+        "focus": "qs-name-2"
+      }
+    },
+    {
+      "name": "101 terms via ArrowRight: tab 3 selected + focused, Next hidden",
+      "pass": true,
+      "detail": {
+        "tabsVisible": true,
+        "panels": [
+          false,
+          false,
+          true
+        ],
+        "selected": [
+          "false",
+          "false",
+          "true"
+        ],
+        "prevDisabled": false,
+        "nextDisabled": true,
+        "nextHidden": true,
+        "live": "Step 3 of 3: Terms & review.",
+        "active": "qs-tab-3",
+        "current": "3Terms & review",
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "Home key returns to step 1",
+      "pass": true,
+      "detail": [
+        "true",
+        "false",
+        "false"
+      ]
+    },
+    {
+      "name": "101 terms: character count live",
+      "pass": true,
+      "detail": "20 characters"
+    },
+    {
+      "name": "101 terms: standard terms + signed agreement present",
+      "pass": true
+    },
+    {
+      "name": "axe light-1440 step3",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Back from step 3 shows step 2 and focuses heading",
+      "pass": true,
+      "detail": {
+        "tabsVisible": true,
+        "panels": [
+          false,
+          true,
+          false
+        ],
+        "selected": [
+          "false",
+          "true",
+          "false"
+        ],
+        "prevDisabled": false,
+        "nextDisabled": false,
+        "nextHidden": false,
+        "live": "Step 2 of 3: Pricing & schedule.",
+        "active": "qs-step-2-h",
+        "current": "2Pricing & schedule",
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "dark 390: no page overflow, no clipped step controls",
+      "pass": true,
+      "detail": {
+        "scroll": 390,
+        "over": 0
+      }
+    },
+    {
+      "name": "axe dark-390 step2 custom",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reduced motion: step change has no animation",
+      "pass": true,
+      "detail": "none"
+    },
+    {
+      "name": "no-JS: all three steps visible, step controls hidden/disabled",
+      "pass": true,
+      "detail": {
+        "tabs": true,
+        "panels": [
+          true,
+          true,
+          true
+        ],
+        "disabled": true,
+        "mode": true
+      }
+    },
+    {
+      "name": "no runtime/network errors",
+      "pass": true,
+      "detail": []
+    }
+  ]
+}

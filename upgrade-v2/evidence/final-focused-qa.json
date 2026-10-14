@@ -1,0 +1,103 @@
+[
+  {
+    "path": "apps/landing/services/index.html",
+    "width": 390,
+    "theme": "light",
+    "scroll": 390,
+    "axe": []
+  },
+  {
+    "path": "apps/landing/services/index.html",
+    "width": 390,
+    "theme": "dark",
+    "scroll": 390,
+    "axe": []
+  },
+  {
+    "path": "apps/landing/services/index.html",
+    "width": 1440,
+    "theme": "light",
+    "scroll": 1440,
+    "axe": []
+  },
+  {
+    "path": "apps/landing/services/index.html",
+    "width": 1440,
+    "theme": "dark",
+    "scroll": 1440,
+    "axe": []
+  },
+  {
+    "path": "apps/web/projects/index.html",
+    "width": 390,
+    "theme": "light",
+    "scroll": 390,
+    "axe": []
+  },
+  {
+    "path": "apps/web/projects/index.html",
+    "width": 390,
+    "theme": "dark",
+    "scroll": 390,
+    "axe": []
+  },
+  {
+    "path": "apps/web/projects/index.html",
+    "width": 1440,
+    "theme": "light",
+    "scroll": 1440,
+    "axe": []
+  },
+  {
+    "path": "apps/web/projects/index.html",
+    "width": 1440,
+    "theme": "dark",
+    "scroll": 1440,
+    "axe": []
+  },
+  {
+    "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+    "width": 390,
+    "theme": "light",
+    "scroll": 390,
+    "axe": []
+  },
+  {
+    "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+    "width": 390,
+    "theme": "dark",
+    "scroll": 390,
+    "axe": []
+  },
+  {
+    "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+    "width": 1440,
+    "theme": "light",
+    "scroll": 1440,
+    "axe": []
+  },
+  {
+    "name": "admin-internal-scroll",
+    "value": {
+      "top": 465,
+      "unrevealed": 0
+    }
+  },
+  {
+    "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+    "width": 1440,
+    "theme": "dark",
+    "scroll": 1440,
+    "axe": []
+  },
+  {
+    "name": "prototype-menu-Escape",
+    "expanded": "true",
+    "closed": true
+  },
+  {
+    "name": "missing-motion-runtime",
+    "rootClass": "studio-js",
+    "hidden": 0
+  }
+]

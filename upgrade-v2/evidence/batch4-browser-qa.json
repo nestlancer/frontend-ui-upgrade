@@ -1,0 +1,462 @@
+{
+  "browser": "HeadlessChrome/153.0.8010.0",
+  "layouts": [
+    {
+      "theme": "light",
+      "width": 320,
+      "scroll": 320,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "scroll": 768,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "light",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "dark",
+      "width": 320,
+      "scroll": 320,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "scroll": 768,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "scroll": 1440,
+      "h1": 1,
+      "clipped": []
+    },
+    {
+      "theme": "dark",
+      "width": 1920,
+      "scroll": 1920,
+      "h1": 1,
+      "clipped": []
+    }
+  ],
+  "axe": [
+    {
+      "state": "base",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "state": "dialog",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "state": "base",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "state": "dialog",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "state": "base",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "state": "dialog",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "state": "base",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "state": "dialog",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "interactions": [
+    {
+      "name": "dialog-layout",
+      "theme": "light",
+      "width": 390,
+      "dialog": {
+        "open": true,
+        "width": 358,
+        "scroll": 356,
+        "height": 825.59375
+      }
+    },
+    {
+      "name": "dialog-layout",
+      "theme": "light",
+      "width": 1440,
+      "dialog": {
+        "open": true,
+        "width": 640,
+        "scroll": 638,
+        "height": 825.59375
+      }
+    },
+    {
+      "name": "dialog-layout",
+      "theme": "dark",
+      "width": 390,
+      "dialog": {
+        "open": true,
+        "width": 358,
+        "scroll": 356,
+        "height": 825.59375
+      }
+    },
+    {
+      "name": "dialog-layout",
+      "theme": "dark",
+      "width": 1440,
+      "dialog": {
+        "open": true,
+        "width": 640,
+        "scroll": 638,
+        "height": 825.59375
+      }
+    },
+    {
+      "name": "search-empty",
+      "count": 0,
+      "message": "No matching page. Try payments, pipeline or portfolio."
+    },
+    {
+      "name": "search-filter",
+      "links": [
+        "Payments"
+      ]
+    },
+    {
+      "name": "arrow-focus",
+      "text": "Payments"
+    },
+    {
+      "name": "tab-containment",
+      "inside": true
+    },
+    {
+      "name": "escape-return",
+      "closed": true,
+      "focus": true
+    },
+    {
+      "name": "shortcut-open",
+      "open": true,
+      "focus": "operator-search-query"
+    },
+    {
+      "name": "immutable-dashboard",
+      "unchanged": true,
+      "ranges": true,
+      "charts": 3
+    },
+    {
+      "name": "internal-scroll",
+      "top": 857,
+      "hidden": 0
+    },
+    {
+      "name": "reduced-dialog",
+      "running": []
+    },
+    {
+      "name": "no-js-search-disabled",
+      "value": true
+    },
+    {
+      "name": "destination-navigation",
+      "url": "http://localhost:8000/apps/admin/payments/accounts/index.html"
+    }
+  ],
+  "visibility": [
+    {
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "mode": "fresh-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "mode": "no-js",
+      "hidden": 0,
+      "running": []
+    }
+  ],
+  "early": [
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "nl-pill",
+      "duration": 520
+    },
+    {
+      "name": "nl-ind",
+      "duration": 700
+    },
+    {
+      "name": "nl-crumb",
+      "duration": 460
+    },
+    {
+      "name": "nl-block",
+      "duration": 640
+    },
+    {
+      "name": "nl-head",
+      "duration": 560
+    },
+    {
+      "name": "nl-head",
+      "duration": 560
+    },
+    {
+      "name": "nl-head",
+      "duration": 560
+    },
+    {
+      "name": "nl-head",
+      "duration": 560
+    },
+    {
+      "name": "nl-head",
+      "duration": 560
+    },
+    {
+      "name": "nl-head",
+      "duration": 560
+    },
+    {
+      "name": "nl-head",
+      "duration": 560
+    },
+    {
+      "name": "nl-block",
+      "duration": 640
+    },
+    {
+      "name": "nl-block",
+      "duration": 640
+    },
+    {
+      "name": "nl-row",
+      "duration": 520
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-block",
+      "duration": 640
+    },
+    {
+      "name": "nl-block",
+      "duration": 640
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-rise",
+      "duration": 560
+    },
+    {
+      "name": "nl-count",
+      "duration": 720
+    },
+    {
+      "name": "nl-block",
+      "duration": 640
+    },
+    {
+      "name": "nl-area",
+      "duration": 1100
+    },
+    {
+      "name": "nl-draw",
+      "duration": 1300
+    },
+    {
+      "name": "nl-sweep",
+      "duration": 1200
+    }
+  ],
+  "settled": [],
+  "dialogAnimation": [
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "transition",
+      "duration": 150
+    },
+    {
+      "name": "transition",
+      "duration": 200
+    },
+    {
+      "name": "operator-dialog",
+      "duration": 160
+    }
+  ]
+}

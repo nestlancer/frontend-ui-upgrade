@@ -1,0 +1,8 @@
+[
+ {
+  "path": "apps/web/settings/security/index.html",
+  "f": [
+   "axe@dark390:color-contrast(div:nth-child(1) > .mono.fs-11)"
+  ]
+ }
+]

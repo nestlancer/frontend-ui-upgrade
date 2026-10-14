@@ -1,3 +1,6 @@
+/* Locally hosted original Geist family (SIL OFL, fonts/OFL.txt). Offline-safe. */
+@font-face { font-family:'Geist'; src:url('./fonts/Geist-Variable.woff2') format('woff2'); font-weight:100 900; font-style:normal; font-display:swap; }
+@font-face { font-family:'Geist Mono'; src:url('./fonts/GeistMono-Variable.woff2') format('woff2'); font-weight:100 900; font-style:normal; font-display:swap; }
 /* ==========================================================================
    Nestlancer · 2030 Spatial Precision Design System (Light-first + Dark)
    Brand Teal (#0B7A71) · Geist Sans & Geist Mono · Zero-overflow responsive
@@ -19,7 +22,7 @@
   --ink-1:         #0D1715;
   --ink-2:         #3D4A46;
   --ink-3:         #5E6B67;
-  --ink-4:         #7C8985;
+  --ink-4:         #64736E;
   --ink-inv:       #F7FAF9;
 
   --line:          #EAEFEE;

@@ -1,0 +1,10 @@
+[
+  {
+    "reference": "https://ui.aceternity.com/live-preview/timeline-demo",
+    "blocked": "net::ERR_CONNECTION_CLOSED at https://ui.aceternity.com/live-preview/timeline-demo"
+  },
+  {
+    "reference": "https://magicui.design/docs/components/animated-beam",
+    "blocked": "net::ERR_CONNECTION_CLOSED at https://magicui.design/docs/components/animated-beam"
+  }
+]
