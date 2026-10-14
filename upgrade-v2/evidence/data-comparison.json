@@ -149,6 +149,569 @@
     ]
   },
   {
+    "page": "proto/apps/landing/about/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Explore the workflow ↓": 1,
+      "An illustration of a shared studio workspace.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "about"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#studio-workflow"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/studio-collaboration.svg"
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/blog/[slug]/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Illustrative pipeline sketch, not a production architecture diagram.": 1,
+      "In this article": 1,
+      "Where we started": 1,
+      "Architecture before": 1,
+      "Migration timeline": 1,
+      "Results": 1,
+      "Lesson": 1,
+      "Preview-only reactions. Nothing is saved to an account.": 1,
+      "Related links currently use the same prototype article template.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "article"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#article-section-1"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#article-section-2"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#article-section-3"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#article-section-4"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#article-section-5"
+      },
+      {
+        "attribute": "data-preview-toggle",
+        "tag": "button",
+        "value": "Like"
+      },
+      {
+        "attribute": "data-preview-toggle",
+        "tag": "button",
+        "value": "Bookmark"
+      },
+      {
+        "attribute": "data-reaction-result",
+        "tag": "p",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/blog/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Search these articles": 1,
+      "The category totals describe the full collection. This local preview contains the 12 articles shown here; other pages and RSS are not available. Article links open a shared article template. Covers are illustrations.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "journal"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-blog-category",
+        "tag": "button",
+        "value": "All articles"
+      },
+      {
+        "attribute": "data-blog-category",
+        "tag": "button",
+        "value": "Business"
+      },
+      {
+        "attribute": "data-blog-category",
+        "tag": "button",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-blog-category",
+        "tag": "button",
+        "value": "Design"
+      },
+      {
+        "attribute": "data-blog-category",
+        "tag": "button",
+        "value": "Technology"
+      },
+      {
+        "attribute": "data-blog-search",
+        "tag": "input",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "search"
+      },
+      {
+        "attribute": "data-blog-summary",
+        "tag": "span",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-result",
+        "tag": "p",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-list",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-blog-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-commerce.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/studio-collaboration.svg"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/contact/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Illustrative correspondence · no message is sent here.": 1,
+      "Prototype note: the next page is a local form preview. Spam checks, file attachments and message delivery are not connected.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "contact-handoff"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/studio-correspondence.svg"
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      }
+    ]
+  },
+  {
     "page": "proto/apps/landing/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
@@ -275,6 +838,87 @@
         "attribute": "src",
         "tag": "img",
         "value": "../../shared/assets/art/work-analytics.svg"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/portfolio/[id]/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Overview": 1,
+      "Outcomes": 1,
+      "Client review": 1,
+      "Illustrative interface concept — not a customer screenshot or measured chart.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "case-study"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#case-overview"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#case-outcomes"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#case-review"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
       }
     ]
   },
@@ -696,6 +1340,92 @@
     ]
   },
   {
+    "page": "proto/apps/web/contact/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Your message": 1,
+      "Local prototype only. Use sample details. Nothing is sent, uploaded or saved; spam protection and delivery are not connected.": 1,
+      "JavaScript is needed for local validation. Sending is disabled; no message can be submitted from this prototype.": 1,
+      "A local form preview — not a sent message.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "contact-form"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-demo-contact",
+        "tag": "form",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "text"
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "text"
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "email"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "submit"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/studio-correspondence.svg"
+      }
+    ]
+  },
+  {
     "page": "proto/apps/web/login/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
@@ -860,7 +1590,13 @@
       "Portfolio ↗": 1,
       "Client sign-in ↗": 1,
       "Client projects ↗": 1,
-      "Payment review ↗": 1
+      "Payment review ↗": 1,
+      "About ↗": 1,
+      "Contact handoff ↗": 1,
+      "Case study ↗": 1,
+      "Journal ↗": 1,
+      "Article ↗": 1,
+      "Contact form ↗": 1
     },
     "removed_attributes": [
       {
@@ -884,6 +1620,11 @@
         "attribute": "href",
         "tag": "link",
         "value": "shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/web/contact/index.html"
       },
       {
         "attribute": "href",
@@ -919,6 +1660,31 @@
         "attribute": "href",
         "tag": "a",
         "value": "./apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/about/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/contact/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/portfolio/[id]/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/blog/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/blog/[slug]/index.html"
       }
     ]
   }

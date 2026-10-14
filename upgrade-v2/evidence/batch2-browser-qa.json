@@ -1,0 +1,1215 @@
+{
+  "browser": "HeadlessChrome/153.0.8010.0",
+  "layout": [
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "light",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "light",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "light",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "light",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "dark",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "dark",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "dark",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "light",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "light",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "light",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "light",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "dark",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "dark",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "dark",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "light",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "light",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "light",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "light",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "dark",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "dark",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "dark",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "light",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "light",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "light",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "light",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "dark",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "dark",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "dark",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "light",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "light",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "light",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "light",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "dark",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "dark",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "dark",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "light",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "light",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "light",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "light",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "light",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "dark",
+      "width": 320,
+      "scroll": 320,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "dark",
+      "width": 390,
+      "scroll": 390,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "dark",
+      "width": 768,
+      "scroll": 768,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "scroll": 1440,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "dark",
+      "width": 1920,
+      "scroll": 1920,
+      "headings": 1,
+      "clipped": [],
+      "images": []
+    }
+  ],
+  "axe": [
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "light",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "light",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "dark",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "theme": "dark",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "motion": [
+    {
+      "path": "apps/landing/about/index.html",
+      "early": [
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "mkt-eyebrow mb-4"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "h1"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "lead mt-4"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "btn btn-primary mt-6"
+        },
+        {
+          "name": "studio-unfold",
+          "duration": 1050,
+          "target": "about-art"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "eyebrow mb-3 reveal is-in"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "h2 mb-4 reveal is-in"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "muted reveal fs-15 is-in"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "grid g3 gap-5 mt-7 reveal stagger is-in"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card"
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "mkt-eyebrow mb-3 reveal",
+        "after": "mkt-eyebrow mb-3 reveal is-in",
+        "animations": [
+          "nl-block"
+        ]
+      }
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "early": [
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "mkt-eyebrow mb-4"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "h1"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "lead mt-4"
+        },
+        {
+          "name": "studio-letter",
+          "duration": 850,
+          "target": "contact-art"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "grid g2 gap-8 reveal is-in"
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "mkt-eyebrow mb-3 reveal",
+        "after": "mkt-eyebrow mb-3 reveal is-in",
+        "animations": [
+          "nl-block"
+        ]
+      }
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "early": [
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "link-arrow"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "eyebrow mt-6"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "h1 mt-2"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "lead mt-3"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "text-xs dim mono mt-3 reveal is-in"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "flex gap-2 mt-4 flex-wrap reveal is-in"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "case-nav"
+        },
+        {
+          "name": "studio-unfold",
+          "duration": 950,
+          "target": "case-art"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "mkt-card reveal case-overview is-in"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "grid g2 gap-5 mt-5 reveal is-in"
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "mkt-card mt-5 reveal",
+        "after": "mkt-card mt-5 reveal is-in",
+        "animations": [
+          "nl-block"
+        ]
+      }
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "early": [
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "reveal journal-sidebar is-in"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "h1"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "lead mt-3"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560,
+          "target": "mkt-card reveal journal-card"
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "mkt-card reveal journal-card",
+        "after": "mkt-card reveal journal-card is-in",
+        "animations": [
+          "nl-rise"
+        ]
+      }
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "early": [
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "flex justify-between text-xs dim"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "h1 mt-6"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "lead mt-4"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "flex items-center gap-3 mt-5"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "mt-6 cover reveal article-cover is-in"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "art-caption"
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "h3 mb-4 reveal",
+        "after": "h3 mb-4 reveal is-in",
+        "animations": [
+          "nl-block"
+        ]
+      }
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "early": [
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "mkt-eyebrow mb-3"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "h1"
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900,
+          "target": "lead mt-4"
+        },
+        {
+          "name": "nl-block",
+          "duration": 640,
+          "target": "grid gap-8 reveal contact-form-layout is-in"
+        },
+        {
+          "name": "studio-letter",
+          "duration": 750,
+          "target": "contact-support-art"
+        }
+      ],
+      "settled": [],
+      "scroll": null
+    }
+  ],
+  "visibility": [
+    {
+      "path": "apps/landing/about/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "mode": "fresh-reduced",
+      "sample": "after two committed frames",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/about/index.html",
+      "mode": "no-js-normal",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "mode": "fresh-reduced",
+      "sample": "after two committed frames",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/contact/index.html",
+      "mode": "no-js-normal",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "mode": "fresh-reduced",
+      "sample": "after two committed frames",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/portfolio/[id]/index.html",
+      "mode": "no-js-normal",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "mode": "fresh-reduced",
+      "sample": "after two committed frames",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/blog/index.html",
+      "mode": "no-js-normal",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "mode": "fresh-reduced",
+      "sample": "after two committed frames",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/landing/blog/[slug]/index.html",
+      "mode": "no-js-normal",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "mode": "fresh-reduced",
+      "sample": "after two committed frames",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/contact/index.html",
+      "mode": "no-js-normal",
+      "hidden": 0,
+      "running": []
+    }
+  ],
+  "interactions": [
+    {
+      "name": "no-js-contact-submit-disabled",
+      "value": true
+    },
+    {
+      "name": "about-workflow-link",
+      "hash": "#studio-workflow"
+    },
+    {
+      "name": "contact-faq-keyboard",
+      "open": true
+    },
+    {
+      "name": "contact-handoff-destination",
+      "url": "http://localhost:8000/apps/web/contact/index.html"
+    },
+    {
+      "name": "contact-empty-errors",
+      "focus": "nl-your-name",
+      "invalid": [
+        "nl-your-name",
+        "nl-email",
+        "nl-message"
+      ]
+    },
+    {
+      "name": "contact-invalid-email",
+      "value": "Enter a valid email address."
+    },
+    {
+      "name": "contact-local-only-result",
+      "url": "http://localhost:8000/apps/web/contact/index.html",
+      "text": "Local preview checked. No message was sent or saved. You can edit your details and check them again.",
+      "focus": "contact-result"
+    },
+    {
+      "name": "contact-no-network-or-storage",
+      "noSubmission": true,
+      "unchangedStorage": true
+    },
+    {
+      "name": "article-search",
+      "visible": [
+        "Kubernetes Migration Cost Analysis"
+      ]
+    },
+    {
+      "name": "article-category-empty",
+      "text": "No matching articles in this local preview. Try All articles or clear your search."
+    },
+    {
+      "name": "article-reset",
+      "count": 12
+    },
+    {
+      "name": "article-toc",
+      "hash": "#article-section-4"
+    },
+    {
+      "name": "preview-bookmark",
+      "pressed": "true",
+      "result": "Bookmark selected for this preview only. Nothing was saved to an account."
+    },
+    {
+      "name": "preview-bookmark-reset",
+      "pressed": "false"
+    },
+    {
+      "name": "case-navigation",
+      "hash": "#case-outcomes"
+    }
+  ]
+}

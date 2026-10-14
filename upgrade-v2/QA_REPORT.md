@@ -10,7 +10,7 @@ Live process: **Nestlancer prototype**, port 8000, bound to 0.0.0.0.
 - Restart: `python3 -m http.server 8000 --bind 0.0.0.0 --directory proto` from repository root, using the environment's long-running process tool.
 - No browser-facing localhost API URLs were added. Localhost URLs in the QA scripts are sandbox-side browser automation only.
 
-## Focused matrix: eight changed HTML pages
+## Initial slice matrix: eight pages (rerun after batch 2)
 `evidence/browser-qa.json`: **62 viewport/theme combinations**, zero measured document overflow, zero measured clipping in sampled text/action/money elements, zero local network/JS errors. 32 axe runs (eight pages × 390/1440 × light/dark) reported zero violations in the final main pass.
 
 | Index | Actual page | Browser widths | Themes | Page/state outcome |
@@ -36,6 +36,26 @@ Additional `final-focused-qa.json`: 12 checks on services/client projects/admin 
 - Superseding detail captures: footer-final-mobile.webp and client-final-mobile.webp.
 - Rendered critique fixed: gradient word background specificity; faint sector captions; auth eyebrow contrast/landmarks; 320px CTA shrink; mobile footer links running together; client metrics consuming an entire phone screen; dialog focus escaping at Tab boundary.
 
+## Batch 2 matrix and tested interactions
+`evidence/batch2-browser-qa.json`: **60 layouts** (6 pages × 320/390/768/1440/1920 × light/dark); **24 axe checks** at 390/1440; final results: no measured overflow, sampled clipping, broken eager images, local HTTP errors, JS errors or axe violations. Local screenshot review covered all six pages at 390/1440, plus six selected dark-theme viewports.
+
+Indices from `batch-2-paths.json`:
+0 About; 1 marketing Contact; 2 landing case-study template; 3 landing blog listing; 4 landing article template; 5 app Contact.
+
+- Before/after full-page scroll captures: `batch2-before-{0..5}-{390,1440}.webp`, `batch2-after-{0..5}-{390,1440}.webp`. Source reference extracts: `batch2-original-*`.
+- Theme viewports: `batch2-qa-{0..5}-{light,dark}-{390,1440}.webp`.
+- Actual assertions: workflow anchor; Contact FAQ via Enter; marketing handoff destination; three required-field errors and first-invalid focus; invalid email; local-only result focus; no document/fetch/XHR/non-GET requests or web-storage changes during form interaction; one-result Kubernetes search; empty Business category; reset to 12; article Results anchor; Bookmark toggle and reset on reload; case Outcomes anchor.
+- `batch2-contact-errors.webp` and `batch2-contact-local-result.webp` capture the form states. They are not delivery success states.
+- All original headline/value/default text was compared independently against the 188-page baseline.
+- Source public 004 uses Subject/General; existing app Contact uses Company plus Topic/New project inquiry. Base page passes; exact source state remains **BLOCKED** and page **IMPLEMENTED_UNVERIFIED**. Public 014/015 states are verified. Public 002/003/008 map to separate web siblings and remain NOT_STARTED, despite related landing templates being upgraded.
+
+### Batch 2 defects found and fixed
+Dark-theme inline pricing/services links on marketing Contact relied only on color. Explicit underlines now distinguish them; final axe rerun has no link-in-text-block violations. The first attempted selector targeted a paragraph but the links actually lived inside a div; the corrected selector was tested, not just assumed.
+
+One immediate-load fresh-reduced sample caught three unnamed CSS transitions. The batch-level reduction now includes the body itself as well as descendants, and the fresh-load sample runs after two committed animation frames rather than before style/frame settlement. Final 18 visibility samples have no hidden essential targets; both fresh/live reduced samples report no running animations. This is a post-frame measurement, not a claim about every pre-paint engine event.
+
+The final batch-2 QA runner uses assertions and returns nonzero on failed layout/accessibility/visibility/interaction checks. Earlier failed attempts were fixed and rerun; raw final evidence is not presented as an all-attempts success history.
+
 ## Motion evidence (not inferred from screenshots)
 Fresh-load `getAnimations()` sampled at approximately 100ms; settled sample at approximately 2300ms. Offscreen `.reveal` class/animations measured after scrolling. See raw named animations in browser-qa.json and MOTION_REGISTER.csv.
 - Home: **studio-scene + studio-trace**, inherited hero/section reveal.
@@ -53,18 +73,28 @@ Fresh-load `getAnimations()` sampled at approximately 100ms; settled sample at a
 - Prototype-menu aria-expanded and Escape focus restoration passed.
 - Persisted `pageshow` event simulation produces no hidden blocks. **A real browser back/forward-cache restore was not exercised**; do not claim otherwise.
 
+### Batch 2 motion / quiet reading
+- About: `studio-unfold` scene entrance, inherited hero/scroll reveal; working workflow anchor.
+- Marketing Contact: `studio-letter` entrance, existing section reveals and native FAQ interaction.
+- Case template: `studio-unfold`, section links, existing lower-section reveals.
+- Journal: inherited title/stagger/reveal, restrained cover response, actual-data filters.
+- Article: title/media entrance only; prose paragraphs are deliberately static. Contents links and local reactions are actual controls, not animations.
+- App Contact: quiet hero/form reveal and `studio-letter`; validation changes do not move the entire form.
+- Six normal-motion early/settled samples, five offscreen-reveal samples (form fits near the initial viewport, so none claimed there), and **18 live/fresh-reduced/no-JS checks**. No new continuous loop.
+- No-JS app form submission stays disabled. Existing content and native anchors/disclosures remain readable/usable. JavaScript-only search/reaction behavior is not claimed to operate without its runtime.
+
 ## Shared regression, separate from page completion
-`regression.cjs` tested **all 188 pages at 390 and 1440** under reduced motion, **376 rendered checks**: zero document overflow, zero local network/JS errors. This is a smoke test, not visual/state verification of 188 pages.
+`regression.cjs` was rerun after batch 2 on **all 188 pages at 390 and 1440** under reduced motion, **376 rendered checks**: zero document overflow, zero local network/JS errors. This is a smoke test, not visual/state verification of 188 pages.
 
 `validate.py` parsed all 188 HTML files and checked local href/src/action targets, fragments, literal bracket directories, duplicate IDs, input labeling, h1 count, missing alt, text/default/data preservation and original progress styles:
 - Zero missing local targets or fragments.
-- Zero static issues on the eight edited pages.
-- Remaining inherited issues elsewhere: **209 unlabeled controls**, **six duplicate-ID groups across three files**, **one h1-count issue**. Exact paths/selectors in `static-validation.json`.
+- Zero static issues on all fourteen edited pages.
+- Remaining inherited issues elsewhere: **208 unlabeled controls**, **six duplicate-ID groups across three files**, **one h1-count issue**. Exact paths/selectors in `static-validation.json`.
 - Original headings/data preserved; no new rendered undefined/NaN or lorem-ipsum text was introduced by the implementation. Existing placeholder attributes remain legitimate form hints.
 
 ## Limits / failed completion gates
-- **180 pages have no page-level implementation**; shared changes do not close those pages.
-- 4 of 181 original screenshot states verified; 3 fixture-mismatched states blocked from sign-off; 174 not reviewed/implemented in this run.
+- **174 pages have no page-level implementation**; shared changes do not close those pages.
+- 6 of 181 original screenshot states verified; 4 fixture-mismatched states blocked from sign-off; 171 not implemented/reviewed for state sign-off.
 - No full A+ score, official grade, or WCAG compliance claim. Human review used local screenshots/DOM, not a screen-reader session or physical mobile device.
 - Remote reference demo browser access failed. Actual search/doc fetch research succeeded; remote visual-reference gate remains incomplete.
 - Outstanding pages/states, theme/a11y problems on untouched pages, and exact screenshot-data reconstruction remain real work.
@@ -75,6 +105,8 @@ Tool dependencies are installed outside the repository at `/home/user/.cache/nl-
 ```sh
 /home/user/.cache/nl-qa/venv/bin/python upgrade-v2/validate.py
 LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/qa.cjs
+LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/qa-batch-2.cjs
+PATHS=upgrade-v2/batch-2-paths.json LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/capture.cjs batch2-after
 LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/regression.cjs
 LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/final-check.cjs
 ```

@@ -33,3 +33,17 @@ Then portfolio landing and client projects to advance other lanes. Remaining rou
 
 ## QA strategy
 Static all-page links/IDs/labels/facts; browser changed pages 390/1440 light/dark, public 320/768/1920; screenshots selective. Motion early getAnimations, scroll, reduced/live change, no JS. Native interactions and axe, disclose unresolved inherited problems. Full screenshot-state verification remains independent of page testing.
+
+## Batch 2 executed — 2026-10-14
+The original first queue is historical, not a pending plan. Commit `cd09e90` was pushed and draft PR [#6](https://github.com/nestlancer/frontend-ui-upgrade/pull/6) opened after explicit authorization. Batch 2 continues that PR on the same branch.
+
+1. About: preserve studio story; original collaboration art, ordered workflow and value hierarchy.
+2. Landing Contact: preserve handoff to app form; original correspondence art, useful brief checklist and native FAQs. **No duplicate form.**
+3. Landing case-study template: preserve supplied Fintech/PayFlow facts; conceptual dashboard cover, section anchors, quote hierarchy.
+4. Landing blog listing: original local cards with editorial covers, accessible actual-data search/category controls; unavailable pagination/RSS disclosed.
+5. Landing article: original text/metadata, illustrative deployment sketch, linked contents, quiet reading body, nonpersistent preview reactions.
+6. App Contact: preserve current fields/options/defaults; native local-only validation, associated errors and explicit no-send behavior.
+
+Scoped optional `editorial.css` is wired only to these six pages; `studio.js` adds opt-in behavior. No framework, endpoint, duplicate route or build step. Reference R7 was fetched before edits; R2/R4/R5/R6 reused as documented in REFERENCE_RESEARCH.md.
+
+All nine landing routes now have substantive implementation. App Contact passes base-page QA but its screenshot field/default differs; exact state remains BLOCKED. See PROGRESS.md for cumulative counts and the precise next balanced queue.

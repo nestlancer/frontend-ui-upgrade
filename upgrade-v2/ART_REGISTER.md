@@ -1,6 +1,6 @@
 # Original artwork and local resources
 
-All six SVGs were hand-authored for this implementation on 2026-10-14. They use only original vector geometry; no stock, scraped, generated-photographic, or third-party template assets. No customer screenshot/result claims. Source generator: `make-art.py`. Total SVG payload: 9,747 bytes; largest: 3,398 bytes. No base64 art, external images, or additional animation library.
+All nine SVGs were hand-authored for this implementation on 2026-10-14. They use only original vector geometry; no stock, scraped, generated-photographic, or third-party template assets. No customer screenshot/result claims. Source generators: `make-art.py` and `batch-2-art.py`. Total SVG payload: 14,270 bytes; largest: 3,398 bytes. No base64 art, external images, or additional animation library.
 
 Paths below are relative to `proto/shared/assets/art/`.
 
@@ -12,6 +12,17 @@ Paths below are relative to `proto/shared/assets/art/`.
 | A4 | work-mobile.svg | Original authored SVG | Fitness/mobile product concept | landing/index.html, landing/portfolio/index.html | Intrinsic 640×420 | Empty alt alongside project title; clearly illustrative | M1/M6 |
 | A5 | work-commerce.svg | Original authored SVG | Product / commerce checkout concept | landing/index.html, landing/portfolio/index.html | Intrinsic 640×420 | Empty alt alongside project title; illustrative, not a deployed storefront | M1/M6 |
 | A6 | work-analytics.svg | Original authored SVG | Analytical / operational dashboard concept | landing/index.html, landing/portfolio/index.html | Intrinsic 640×420 | Empty alt alongside project title; paths are decorative, not invented metrics | M1/M6 |
+
+## Batch 2 additions
+| Art ID | File | Provenance / terms | Meaning and integration | Mobile / alternative treatment | Motion |
+|---|---|---|---|---|---|
+| A7 | studio-collaboration.svg | Original hand-authored geometry | Shared product canvas with brief/review notes; About hero and incident-response article cover | Fluid 760×520; descriptive About alt and caption; decorative cover alt next to article title | M9/M12 |
+| A8 | studio-correspondence.svg | Original hand-authored geometry | Brief/envelope motif ties marketing Contact to the actual app form | Fluid 760×520; stacked under copy or form, useful alt; no sent-message claim | M10/M14 |
+| A9 | deployment-pipeline.svg | Original hand-authored geometry | Coupled build splitting into service pipelines; featured journal item and article hero | Fluid 960×440; explicit illustrative-not-production caption | M12/M13 |
+
+A3/A5/A6 also supply conceptual journal covers. A6 supplies the Fintech Payments Hub cover, with a clear illustrative-not-customer-chart caption and descriptive alt. The supplied client quote/outcomes are original fixture content, not claims inferred from the illustration. New SVGs load through image elements, not inline chart selectors.
+
+Batch-2 artwork payload is **4,523 bytes total**. Local light/dark and 390/1440 captures: `evidence/batch2-after-*` and `batch2-qa-*`. Browser matrix verifies assets; scroll captures load lazy journal covers.
 
 ## Resources
 Geist Sans and Geist Mono variable WOFF2 fonts copied from the official `geist` npm package fetched from registry.npmjs.org. Copyright Vercel, in collaboration with basement.studio. SIL Open Font License 1.1 checked and retained in `proto/shared/assets/fonts/OFL.txt`. Two font files total about 139 KB. These refine the existing font family, not a new dependency. Shared CSS includes local @font-face definitions; system fallbacks remain.

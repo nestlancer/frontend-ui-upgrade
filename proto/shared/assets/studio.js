@@ -85,6 +85,70 @@
     search.addEventListener('input', filter); category.addEventListener('change', filter);
     filter();
   }
+  // The app contact destination remains a local-only form; the marketing
+  // handoff does not duplicate submissions. Never serialize or persist input.
+  const contact = document.querySelector('[data-demo-contact]');
+  if (contact) {
+    const fields = [...contact.querySelectorAll('[required]')];
+    const result = document.getElementById('contact-result');
+    function validateField(field) {
+      const empty = !field.value.trim();
+      const message = empty ? 'Please complete this field.' : field.validity.typeMismatch ? 'Enter a valid email address.' : '';
+      field.setAttribute('aria-invalid', String(Boolean(message)));
+      document.getElementById(field.id + '-error').textContent = message;
+      return !message;
+    }
+    contact.addEventListener('submit', event => {
+      event.preventDefault();
+      const valid = fields.map(validateField);
+      if (valid.includes(false)) {
+        result.textContent = 'Please check the highlighted fields. No message has been sent.';
+        fields[valid.indexOf(false)].focus();
+        return;
+      }
+      result.textContent = 'Local preview checked. No message was sent or saved. You can edit your details and check them again.';
+      result.focus();
+    });
+    fields.forEach(field => field.addEventListener('input', () => {
+      if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+      result.textContent = '';
+    }));
+    contact.noValidate = true;
+    contact.querySelector('button[type="submit"]').disabled = false;
+  }
+  const journal = document.querySelector('[data-blog-list]');
+  if (journal) {
+    const cards = [...journal.querySelectorAll('[data-blog-item]')];
+    const search = document.querySelector('[data-blog-search]');
+    const categories = [...document.querySelectorAll('[data-blog-category]')];
+    const result = document.querySelector('[data-blog-result]');
+    const summary = document.querySelector('[data-blog-summary]');
+    let category = 'All articles';
+    function filterArticles() {
+      const query = search.value.trim().toLocaleLowerCase();
+      let count = 0;
+      cards.forEach(card => {
+        const visible = (category === 'All articles' || category === 'Case Studies') && card.textContent.toLocaleLowerCase().includes(query);
+        card.hidden = !visible; if (visible) count++;
+      });
+      summary.hidden = count !== cards.length;
+      result.textContent = count ? `${count} of ${cards.length} local articles shown.` : 'No matching articles in this local preview. Try All articles or clear your search.';
+    }
+    categories.forEach(button => button.addEventListener('click', () => {
+      category = button.getAttribute('data-blog-category');
+      categories.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+      filterArticles();
+    }));
+    search.addEventListener('input', filterArticles);
+    filterArticles();
+  }
+  document.querySelectorAll('[data-preview-toggle]').forEach(button => {
+    button.addEventListener('click', () => {
+      const selected = button.getAttribute('aria-pressed') !== 'true';
+      button.setAttribute('aria-pressed', String(selected));
+      document.querySelector('[data-reaction-result]').textContent = `${button.getAttribute('data-preview-toggle')} ${selected ? 'selected' : 'cleared'} for this preview only. Nothing was saved to an account.`;
+    });
+  });
   // Supplemental section choreography owns only the outer section. Existing
   // reveal runtime owns its children; do not animate both at once.
   const mq = matchMedia('(prefers-reduced-motion: reduce)');

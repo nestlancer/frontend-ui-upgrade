@@ -1,16 +1,17 @@
 {
   "status": {
-    "NOT_STARTED": 180,
-    "IMPLEMENTED_UNVERIFIED": 2,
-    "VERIFIED": 6
+    "NOT_STARTED": 174,
+    "IMPLEMENTED_UNVERIFIED": 3,
+    "VERIFIED": 11
   },
   "surfaces": {
     "public": {
       "total": 35,
-      "edited": 6,
+      "edited": 12,
       "status": {
-        "NOT_STARTED": 29,
-        "VERIFIED": 6
+        "NOT_STARTED": 23,
+        "VERIFIED": 11,
+        "IMPLEMENTED_UNVERIFIED": 1
       }
     },
     "client": {
@@ -30,11 +31,11 @@
       }
     }
   },
-  "html_changed": 8,
-  "shared_only": 180,
+  "html_changed": 14,
+  "shared_only": 174,
   "states": {
-    "BLOCKED": 3,
-    "NOT_STARTED": 174,
-    "VERIFIED": 4
+    "BLOCKED": 4,
+    "NOT_STARTED": 171,
+    "VERIFIED": 6
   }
 }

@@ -1251,13 +1251,7 @@
   },
   {
     "page": "proto/apps/landing/blog/index.html",
-    "issues": [
-      {
-        "kind": "unlabeled-control",
-        "tag": "input",
-        "placeholder": "Search posts…"
-      }
-    ]
+    "issues": []
   },
   {
     "page": "proto/apps/landing/contact/index.html",

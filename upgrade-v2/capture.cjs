@@ -1,7 +1,7 @@
 const puppeteer=require('/home/user/.cache/nl-qa/node_modules/puppeteer-core');
 const chromium=require('/home/user/.cache/nl-qa/node_modules/@sparticuz/chromium/build/index.js').default;
 const fs=require('fs');
-const paths=process.env.EXTRA ? ['apps/landing/portfolio/index.html','apps/web/projects/index.html'] : JSON.parse(fs.readFileSync('upgrade-v2/test-paths.json','utf8'));
+const paths=process.env.PATHS ? JSON.parse(fs.readFileSync(process.env.PATHS,'utf8')) : process.env.EXTRA ? ['apps/landing/portfolio/index.html','apps/web/projects/index.html'] : JSON.parse(fs.readFileSync('upgrade-v2/test-paths.json','utf8'));
 (async()=>{const browser=await puppeteer.launch({args:chromium.args,executablePath:await chromium.executablePath(),headless:true});
 let phase=process.argv[2]||'baseline', results=[];
 for(let i=0;i<paths.length;i++){const p=await browser.newPage();await p.setRequestInterception(true);p.on('request',r=>r.url().startsWith('http://localhost:8000')||r.url().startsWith('data:')?r.continue():r.abort());

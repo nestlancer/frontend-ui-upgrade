@@ -76,3 +76,24 @@ Initial search-result discovery links (not proof of fetch/render):
 - CodePen: [1](https://codepen.io/CMA-Designer/pen/ByovJoR)
 - shadcn: [2](https://ui.shadcn.com/docs/components/base/data-table)
 - GSAP: [1](https://gsap.com/docs/v3/GSAP/gsap.matchMedia()/)
+
+## Batch 2 accessible field reference (R7)
+- Focused search executed before design edits: `site:ui.shadcn.com/docs/components field description validation error accessible form`.
+- Exact/final fetched URL: https://ui.shadcn.com/docs/components/base/field (chunk 1 read), 2026-10-14. Status: FETCHED; remote visual inspection not claimed.
+- Observed patterns: label/control association, adjacent descriptions and errors, `aria-invalid`, responsive field layouts, optional semantic field grouping.
+- Applied native subset: original name/email/company/topic/message controls remain, with required semantics, descriptive associations, adjacent validation errors, first-invalid focus and a local-only result. No fieldset was added for unrelated fields; no React/shadcn code or dependency was copied.
+- Target: `proto/apps/web/contact/index.html`, `[data-demo-contact]`, `.field-error`, `studio.js`, `editorial.css`.
+- Rejected: fabricated submission success, live endpoint, credential/PII persistence, duplicate form on marketing Contact.
+- License: UNKNOWN; conceptual adaptation only, original native implementation.
+- Local evidence: `batch2-browser-qa.json` contact-empty-errors, contact-invalid-email, contact-local-only-result, contact-no-network-or-storage, no-js-contact-submit-disabled; corresponding state captures.
+
+### Batch 2 reference contract / verification
+| Pattern | Adaptation | Local evidence |
+|---|---|---|
+| R2 staged workflow | About ordered steps and existing four-step table; native Contact FAQ | About full-page capture; workflow anchor and keyboard FAQ assertions |
+| R4 conditional motion | One-shot illustration entry, inherited reduced-motion lifecycle; quiet article body | Early/settled animation samples and 18 visibility checks |
+| R5 restrained response | Journal-cover hover/focus, contact CTA and native details | Actual controls + light/dark screenshots; no perpetual movement |
+| R6 actual-data filtering | 12 preserved local cards; category totals kept, unavailable collection pages disclosed | Search → Kubernetes, empty Business, All reset → 12 |
+| R7 accessible errors | Labeled original fields, error relationships and honest local result | Empty/email validation + focus + no transmission/storage |
+
+Original screenshot inspection includes 014/015 marketing pages and 004 contact. 002/003/008 are visual references for sibling content, **not** state verification of the unedited web blog/case-study routes. Every batch-2 original HTML was inspected and captured before editing.

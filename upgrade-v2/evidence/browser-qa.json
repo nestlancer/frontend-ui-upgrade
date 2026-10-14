@@ -627,6 +627,486 @@
       "path": "apps/landing/index.html",
       "early": [
         {
+          "name": "transition",
+          "target": "mkt-header",
+          "duration": 260,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary btn-lg",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary btn-lg",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "mkt-card reveal",
+          "duration": 220,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary btn-lg",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary btn-lg",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "min-w-0",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "min-w-0",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "min-w-0",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "min-w-0",
+          "duration": 180,
+          "playState": "running"
+        },
+        {
           "name": "nl-hero",
           "target": "pill mb-5",
           "duration": 900,
@@ -1085,90 +1565,6 @@
     {
       "path": "apps/web/login/index.html",
       "early": [
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "input",
-          "duration": 150,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "btn btn-primary w-full btn-lg",
-          "duration": 160,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "btn btn-primary w-full btn-lg",
-          "duration": 160,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "btn btn-primary w-full btn-lg",
-          "duration": 160,
-          "playState": "running"
-        },
-        {
-          "name": "transition",
-          "target": "btn btn-primary w-full btn-lg",
-          "duration": 160,
-          "playState": "running"
-        },
         {
           "name": "nl-head",
           "target": "mb-7",
@@ -2039,6 +2435,342 @@
       "path": "apps/web/projects/index.html",
       "early": [
         {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item active",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "sb-item",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "topbar",
+          "duration": 260,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn-icon btn sm",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "icobtn",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "icobtn",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "icobtn",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-primary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-primary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-primary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-primary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "tab active",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "tab active",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "tab",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "tab",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "tab",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "tab",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "select sm",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "select sm",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "select sm",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "select sm",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "select sm",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "input",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "input",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "input",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "input",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "input",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "panel-row reveal project-card",
+          "duration": 150,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": {},
+          "duration": 160,
+          "playState": "running"
+        },
+        {
           "name": "nl-pill",
           "target": "sb-item active",
           "duration": 520,
@@ -2231,6 +2963,258 @@
         {
           "name": "transition",
           "target": "btn btn-primary btn-sm",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 160,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
+          "duration": 200,
+          "playState": "running"
+        },
+        {
+          "name": "transition",
+          "target": "btn btn-secondary",
           "duration": 160,
           "playState": "running"
         },
@@ -2912,9 +3896,7 @@
       "value": {
         "open": true,
         "focusInside": true,
-        "animations": [
-          "studio-dialog"
-        ]
+        "animations": []
       }
     },
     {

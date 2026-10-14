@@ -25,3 +25,14 @@ This folder contains selective evidence for the implemented slice, not a second 
 - `catalog-access.json`, `reference-browser-attempts.json`: real failed direct reference requests and demo navigation attempts. Successful fetch-tool research is described in ../REFERENCE_RESEARCH.md; do not treat these failed requests as remote visual inspection.
 
 Baseline/after captures establish composition. Animation proof is in sampled browser animation/state results, not the static images. No videos, online grades or real bfcache trace were produced.
+
+## Batch 2 (separate index namespace)
+`batch-2-paths.json` order: **0 About / 1 marketing Contact / 2 landing case-study template / 3 landing journal / 4 landing article / 5 app Contact**.
+
+- `batch2-before-*`, `batch2-after-*`: six routes × 390/1440, full-page before/after scroll captures and dimension JSON.
+- `batch2-original-*`: six compact source references inspected. The web 002/003/008 screenshots do not map to the newly edited landing templates; those web sibling states remain unverified.
+- `batch2-qa-*`: light/dark viewport captures at 390/1440.
+- `batch2-browser-qa.json`: 60 layout/theme measurements, 24 final axe passes, early/settled/scroll motion, 18 visibility checks and asserted interactions. See QA_REPORT for defects found/fixed and measurement timing.
+- `batch2-contact-errors.webp`, `batch2-contact-local-result.webp`: local validation/error/result. No actual delivery, uploads, persistence or production success.
+
+Initial-slice `browser-qa.json`, `shared-regression.json`, `final-focused-qa.json` and applicable viewport images were refreshed after the batch-2 runtime changes. Older full-page `final-*` captures remain initial composition evidence (the hub's current quick links are additionally covered by refreshed qa-7 images).

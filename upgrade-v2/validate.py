@@ -47,5 +47,5 @@ for path,old in base['pages'].items():
 print('Pages:',len(results),'issues:',dict(Counter(i['kind'] for p in results for i in p['issues'])))
 print('New rendered placeholder defects:',[(x['page'],t) for x in preservation for t in x['added_text'] if re.search(r'\b(undefined|NaN|lorem ipsum)\b',t,re.I)])
 print('Missing protected text:',[(x['page'],x['missing_text']) for x in preservation if x['missing_text']])
-changed=subprocess.check_output(['git','diff','--name-only'],cwd=ROOT,text=True).splitlines()
+changed=subprocess.check_output(['git','diff','--name-only',base['commit'],'--'],cwd=ROOT,text=True).splitlines()
 print('Changed-page issues:',[(x['page'],x['issues']) for x in results if x['page'] in changed and x['issues']])
