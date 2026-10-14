@@ -121,12 +121,32 @@ for row in states:
  else:
   inpage=row['verdict']=='VERIFIED-STATE'
   row.update(status='IMPLEMENTED_UNVERIFIED' if f else 'VERIFIED',trigger_or_url=url,evidence=ev(path),blocker=('; '.join(f)[:300] if f else '')+('In-page state (preview/section) rendered at the page URL.' if inpage and not f else ''))
+# Batch 8 (resumed run): quote-builder steps made functional on the preserved quote/new page
+# (quote-steps.js). Evidence: qa-quote-steps.cjs → batch8-quote-steps.json + batch8-state-*.webp.
+QPATH='proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html'
+b8=json.loads((OUT/'evidence/batch8-quote-steps.json').read_text())['results'];assert b8 and all(x['pass'] for x in b8),[x for x in b8 if not x['pass']]
+B8REC=' Interaction state reproduced over the preserved fixture record (Live Shipment Tracking Dashboard, ₹0.00 draft); the source screenshot record (AUDIT-P23 edit, ₹1,250.00) is not substituted.'
+B8={'100-quote-editor-scope-and-line-items':('VERIFIED',' → step 1 Scope (default)','100-scope','Step 1 Scope & line items: tablist, summary rail and progress.'+B8REC),
+ '099-quote-editor-pricing-and-schedule':('VERIFIED',' → Next / tab 2 Pricing','099-pricing','Step 2 Pricing & schedule in Preset mode with the stored 50/50 installments.'+B8REC),
+ '097-quote-editor-custom-payment-schedule':('VERIFIED',' → tab 2 Pricing → Custom %','097-custom','Custom % editor seeded from the stored installments; add/remove rows; live 100% total check blocks Create quote.'+B8REC),
+ '101-quote-editor-terms-and-review':('VERIFIED',' → tab 3 Terms','101-terms','Step 3 Terms & review: standard terms snapshot, project-specific terms with live count, signed-agreement option.'+B8REC),
+ '098-quote-editor-line-item-library':('BLOCKED',' → step 1 → Line-item library','098-library','Library disclosure opens, but the preserved fixture contains no reusable blocks (source shows six: Discovery & Scoping … Project Management); an honest empty note is shown and no blocks are invented.')}
+for row in states:
+ if row['state_name'] in B8:
+  st,trig,shot,note=B8[row['state_name']]
+  row.update(status=st,trigger_or_url='/'+QPATH.removeprefix('proto/')+trig,evidence=f'upgrade-v2/evidence/batch8-state-{shot}-light-1440.webp'+(';upgrade-v2/evidence/batch8-state-097-custom-dark-390.webp' if shot=='097-custom' else '')+';upgrade-v2/evidence/batch8-quote-steps.json',blocker=note)
+for row in pages:
+ if row['page_path']==QPATH:
+  if 'M22' not in row['motion_ids']:row['motion_ids']=(row['motion_ids']+';M22').strip(';')
+  if 'QUOTE_STEPS_PASS' not in row['qa_status']:row['qa_status']+=';QUOTE_STEPS_PASS'
+savecsv(OUT/'PAGE_COVERAGE.csv',pages)
 savecsv(OUT/'STATE_COVERAGE.csv',states)
-motions=[x for x in motions if x['motion_id'] not in ('M20','M21')]
+motions=[x for x in motions if x['motion_id'] not in ('M20','M21','M22')]
 client_admin=';'.join(p for p in lane_pages if '/apps/web/' in p or '/apps/admin/' in p if p not in [r['page_path'] for r in pages if r['surface']=='public'] and p!='proto/apps/admin/index.html')
 public5=';'.join(r['page_path'] for r in pages if r['surface']=='public' and r['page_path'] in lane_pages)
 motions.append(dict(motion_id='M20',page_paths=client_admin,selector='dialog.wb-dialog; #wb-status; [data-wb-sections] a; #operator-search; inherited .reveal/.prog/.nl-chart',trigger='load/scroll/click/keyboard(Ctrl+K,/,Escape,Space)/input',property='opacity/transform (dialog 160ms, toast 180ms); inherited reveal/progress/CTA motion',duration_ms='160-2400',delay_ms='0-1500',easing='var(--ease-out); inherited --ease-expo',repeat='one-shot; inherited bounded nl-shine x2 / nl-cta x3 end <9s; no infinite loops',mobile_behavior='card tables, wrapping tabs/actions, full-width dialogs',reduced_motion_behavior='no dialog/toast animation; inherited motion disabled; content visible; JS-only controls disabled without JS',owner_file='proto/shared/assets/workbench.css;proto/shared/assets/workbench.js;proto/shared/assets/operator.css;proto/shared/assets/operator.js;proto/shared/assets/proto-motion.js',status='VERIFIED_BASE_PAGE',evidence='upgrade-v2/evidence/final-1-browser-qa.json;upgrade-v2/evidence/final-2-browser-qa.json;upgrade-v2/evidence/final-3-browser-qa.json'))
 motions.append(dict(motion_id='M21',page_paths=public5,selector='.flow-figure; .auth-art; [data-reading-rail] .rail-link; [data-section-reveal]; inherited .reveal/.anim-in',trigger='load/scroll/click/input/keyboard',property='opacity/transform; color/background on rail active state (160ms)',duration_ms='160-1050',delay_ms='0-240',easing='var(--ease-out); inherited --ease-expo',repeat='one-shot; no running animations in settled sample',mobile_behavior='art stacks or hides below 600px; OTP cells shrink; forms single column',reduced_motion_behavior='rail transition off; inherited choreography off; content visible',owner_file='proto/shared/assets/public-flow.css;proto/shared/assets/public-flow.js;proto/shared/assets/studio.css;proto/shared/assets/studio.js;proto/shared/assets/proto-motion.js',status='VERIFIED_BASE_PAGE',evidence='upgrade-v2/evidence/final-1-browser-qa.json;upgrade-v2/evidence/batch-5-interactions.json'))
+motions.append(dict(motion_id='M22',page_paths=QPATH,selector='#rq-quote-builder .qsteps-panel; [role=tab]; .qsteps-progress',trigger='click/keyboard (Arrow/Home/End, Back/Next)',property='opacity/transform on the entering step panel',duration_ms='170',delay_ms='0',easing='var(--ease-out)',repeat='one-shot per step change',mobile_behavior='rail stacks under the steps; custom rows wrap to two lines',reduced_motion_behavior='no panel animation (verified animationName none); focus/announcement unchanged',owner_file='proto/shared/assets/workbench.css;proto/shared/assets/quote-steps.js',status='VERIFIED_BASE_PAGE',evidence='upgrade-v2/evidence/batch8-quote-steps.json'))
 savecsv(OUT/'MOTION_REGISTER.csv',motions)
 counts={'status':dict(Counter(r['status'] for r in pages)),'surfaces':{},'html_changed':sum(r['html_changed']=='true' for r in pages),'shared_only':sum(r['shared_only']=='true' for r in pages),'states':dict(Counter(r['status'] for r in states))}
 for surface in ['public','client','admin']:

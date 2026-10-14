@@ -9,7 +9,7 @@
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E" rel="icon"/>
 <link href="../../../../../../shared/assets/proto.css" rel="stylesheet"/>
 <script src="../../../../../../shared/assets/proto-motion.js"></script>
-<link href="../../../../../../shared/assets/operator.css" rel="stylesheet"/><link href="../../../../../../shared/assets/workbench.css" rel="stylesheet"/><script defer="" src="../../../../../../shared/assets/workbench.js"></script><script defer="" src="../../../../../../shared/assets/operator.js"></script></head>
+<link href="../../../../../../shared/assets/operator.css" rel="stylesheet"/><link href="../../../../../../shared/assets/workbench.css" rel="stylesheet"/><script defer="" src="../../../../../../shared/assets/workbench.js"></script><script defer="" src="../../../../../../shared/assets/quote-steps.js"></script><script defer="" src="../../../../../../shared/assets/operator.js"></script></head>
 <body class="app-body upgrade-v2 workbench-v2 workbench-admin operator-v2" data-page="requests" data-surface="admin">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="shell" id="app-shell">
@@ -131,7 +131,7 @@
 <p class="sec-sub">Scope, pricing and terms as captured for the Live Shipment Tracking Dashboard brief — with the standard clause set snapshotted onto the quote.</p>
 </div>
 <div class="flex items-center gap-2 flex-wrap"><span class="badge tone-neutral mono">058 scope</span><span class="badge tone-neutral mono">095 pricing</span><span class="badge tone-neutral mono">096 terms</span></div>
-</div><div class="state-deck"><section aria-labelledby="rq-quote-builder-h" class="dialog-surface" id="rq-quote-builder">
+</div><div class="state-deck"><section aria-labelledby="rq-quote-builder-h" class="dialog-surface qsteps" data-qsteps="" id="rq-quote-builder">
 <div class="dialog-head">
 <div class="min-w-0">
 <h3 class="panel-title" id="rq-quote-builder-h">Quote builder</h3>
@@ -139,8 +139,50 @@
 </div>
 <span class="badge tone-neutral mono">058 · 095 · 096</span>
 </div>
-<div class="dialog-body"><div class="flex items-center gap-2 flex-wrap"><span class="chip active">1 Scope</span><span class="chip">2 Pricing</span><span class="chip">3 Terms</span><span class="chip">Apply phase template</span><span class="chip">Line-item library</span><span class="chip">Add phase</span></div><div class="mt-3"><dl class="kv"><dt>Client</dt><dd>rahul.desai@nestlancer.com</dd><dt>Category</dt><dd>Web Development</dd><dt>Client budget</dt><dd>₹30,00,000.00 – ₹60,00,000.00</dd><dt>Deadline</dt><dd>Sep 15, 2026</dd><dt>Quote total</dt><dd>₹0.00 · 0 priced lines, 1 phase</dd><dt>Valid until</dt><dd>10/24/2026</dd><dt>Currency / tax</dt><dd>INR · 0%</dd></dl></div><div class="mt-3"><div class="sec-eyebrow">Brief</div><p class="text-sm muted">Customer-facing and internal shipment dashboard with WebSocket live updates from PostgreSQL dispatch warehouse, RBAC, Delhivery + Blue Dart AWB integration, CSV export.</p></div><div class="mt-3"><div class="sec-eyebrow">Requirements</div><ul class="prose-list"><li>WebSocket live status updates</li><li>Delhivery + Blue Dart AWB lookup</li><li>Client portal with shipment history</li><li>Daily MIS CSV export</li><li>RBAC for ops vs client users</li></ul></div><div class="mt-3"><div class="grid g2 gap-3"><div class="field"><label class="label" for="payment-schedule">Payment schedule</label><select class="select" id="payment-schedule"><option selected="">50/50 (selected)</option><option>30/70</option><option>30/40/30</option><option>25% × 4 milestones</option><option>100% upfront</option><option>Custom %</option></select></div><div class="field"><label class="label" for="qb-valid">Valid until</label><input class="input mono" id="qb-valid" value="10/24/2026"/></div></div></div><div class="tbl-wrap"><table aria-labelledby="rq-quote-builder-h" class="tbl tbl-cards"><thead><tr><th id="nl-th-9" scope="col">Phase / line</th><th id="nl-th-10" scope="col">Qty</th><th id="nl-th-11" scope="col">Unit</th><th id="nl-th-12" scope="col">Amount</th></tr></thead><tbody><tr><td class="min-w-0" data-label="Phase / line">Phase 1 — Deliverables</td><td class="min-w-0 mono" data-label="Qty">1</td><td class="min-w-0 mono" data-label="Unit">₹500</td><td class="min-w-0 mono" data-label="Amount">₹0.00</td></tr><tr><td class="min-w-0" data-label="Phase / line"><span class="dim">— blank deliverable row</span></td><td class="min-w-0 mono" data-label="Qty">1</td><td class="min-w-0 mono" data-label="Unit">₹500</td><td class="min-w-0 mono" data-label="Amount">₹0.00</td></tr></tbody></table></div><div class="mt-4"><div class="note"><span class="text-xs">Standard Nestlancer terms (always included) — 10 clauses snapshotted onto the quote: 1 Validity · 2 Acceptance · 3 Payment · 4 Scope · 5 Revisions · 6 Client responsibilities · 7 Intellectual property · 8 Confidentiality · 9 Limitation of liability · 10 Governing law (India).</span></div></div><div class="mt-3"><div class="field"><label class="label" for="qb-terms">Project-specific terms</label><textarea class="textarea" id="qb-terms" placeholder="Client provides brand assets within 5 business days of kickoff. Two revision rounds per milestone." rows="2"></textarea></div></div><div class="mt-3"><label class="check"><input checked="" type="checkbox"/> Require signed service agreement</label></div><div class="mt-3"><dl class="kv"><dt>Deposit 50%</dt><dd>₹0.00 · on accept</dd><dt>Final payment 50%</dt><dd>₹0.00 · on prior approved</dd></dl></div></div>
-<div class="dialog-foot"><span class="text-xs dim mr-auto">Presets: 50/50 · 30/70 · 30/40/30 · 25% × 4 · 100% upfront</span><button class="btn btn-secondary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Back</button><button class="btn btn-secondary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Next</button><button class="btn btn-primary btn-sm" data-wb-action="check" data-wb-js="" disabled="" type="button">Create quote</button></div>
+<div class="dialog-body">
+<div aria-label="Quote builder steps" class="qsteps-tabs" data-qsteps-tabs="" hidden="" role="tablist"><button aria-controls="qs-step-1" aria-selected="true" class="chip active" data-qsteps-tab="1" id="qs-tab-1" role="tab" type="button">1 Scope</button><button aria-controls="qs-step-2" aria-selected="false" class="chip" data-qsteps-tab="2" id="qs-tab-2" role="tab" tabindex="-1" type="button">2 Pricing</button><button aria-controls="qs-step-3" aria-selected="false" class="chip" data-qsteps-tab="3" id="qs-tab-3" role="tab" tabindex="-1" type="button">3 Terms</button></div>
+<p aria-live="polite" class="wb-sr" data-qsteps-live=""></p>
+<div class="qsteps-layout">
+<div class="qsteps-main">
+<section aria-labelledby="qs-step-1-h" class="qsteps-panel" data-qsteps-panel="1" id="qs-step-1">
+<h4 class="qsteps-h" id="qs-step-1-h" tabindex="-1"><span class="qsteps-n">1</span> Scope &amp; line items</h4>
+<div class="qsteps-tools"><button class="btn btn-secondary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Apply phase template</button><button aria-controls="qs-library" aria-expanded="false" class="btn btn-secondary btn-sm" data-qs-js="" data-qsteps-library="" disabled="" type="button">Line-item library</button><button class="btn btn-primary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Add phase</button></div>
+<div class="note info qsteps-library" hidden="" id="qs-library" role="note"><div><b>Line-item library</b> · No reusable quote blocks are included in this prototype fixture, so there is nothing to insert. The recorded phase and rows below are unchanged.</div></div>
+<div class="mt-3"><dl class="kv"><dt>Client</dt><dd>rahul.desai@nestlancer.com</dd><dt>Category</dt><dd>Web Development</dd><dt>Client budget</dt><dd>₹30,00,000.00 – ₹60,00,000.00</dd><dt>Deadline</dt><dd>Sep 15, 2026</dd><dt>Quote total</dt><dd>₹0.00 · 0 priced lines, 1 phase</dd><dt>Valid until</dt><dd>10/24/2026</dd><dt>Currency / tax</dt><dd>INR · 0%</dd></dl></div>
+<div class="mt-3"><div class="sec-eyebrow">Brief</div><p class="text-sm muted">Customer-facing and internal shipment dashboard with WebSocket live updates from PostgreSQL dispatch warehouse, RBAC, Delhivery + Blue Dart AWB integration, CSV export.</p></div>
+<div class="mt-3"><div class="sec-eyebrow">Requirements</div><ul class="prose-list"><li>WebSocket live status updates</li><li>Delhivery + Blue Dart AWB lookup</li><li>Client portal with shipment history</li><li>Daily MIS CSV export</li><li>RBAC for ops vs client users</li></ul></div>
+<div class="tbl-wrap mt-3"><table aria-labelledby="rq-quote-builder-h" class="tbl tbl-cards"><thead><tr><th id="nl-th-9" scope="col">Phase / line</th><th id="nl-th-10" scope="col">Qty</th><th id="nl-th-11" scope="col">Unit</th><th id="nl-th-12" scope="col">Amount</th></tr></thead><tbody><tr><td class="min-w-0" data-label="Phase / line">Phase 1 — Deliverables</td><td class="min-w-0 mono" data-label="Qty">1</td><td class="min-w-0 mono" data-label="Unit">₹500</td><td class="min-w-0 mono" data-label="Amount">₹0.00</td></tr><tr><td class="min-w-0" data-label="Phase / line"><span class="dim">— blank deliverable row</span></td><td class="min-w-0 mono" data-label="Qty">1</td><td class="min-w-0 mono" data-label="Unit">₹500</td><td class="min-w-0 mono" data-label="Amount">₹0.00</td></tr></tbody></table></div>
+</section>
+<section aria-labelledby="qs-step-2-h" class="qsteps-panel" data-qsteps-panel="2" id="qs-step-2">
+<h4 class="qsteps-h" id="qs-step-2-h" tabindex="-1"><span class="qsteps-n">2</span> Pricing &amp; schedule</h4>
+<div aria-label="Schedule mode" class="qsteps-mode" data-qsteps-mode="" hidden="" role="group"><button aria-pressed="true" class="btn btn-sm" data-qsteps-mode-btn="preset" type="button">Preset</button><button aria-pressed="false" class="btn btn-sm" data-qsteps-mode-btn="custom" type="button">Custom %</button></div>
+<div class="mt-3"><div class="grid g2 gap-3"><div class="field"><label class="label" for="payment-schedule">Payment schedule</label><select class="select" id="payment-schedule"><option selected="">50/50 (selected)</option><option>30/70</option><option>30/40/30</option><option>25% × 4 milestones</option><option>100% upfront</option><option>Custom %</option></select></div><div class="field"><label class="label" for="qb-valid">Valid until</label><input class="input mono" id="qb-valid" value="10/24/2026"/></div></div></div>
+<fieldset aria-describedby="qs-custom-help" class="qsteps-custom" data-qsteps-custom="" hidden="">
+<legend class="label">Custom installments</legend>
+<p class="text-xs dim" id="qs-custom-help">Starts from the stored installments. Percentages must add up to 100%. Amounts follow the quote total (₹0.00).</p>
+<div data-qsteps-rows=""></div>
+<div class="qsteps-custom-foot"><button class="btn btn-secondary btn-sm" data-qsteps-add="" type="button">Add installment</button><output aria-live="polite" class="qsteps-total mono" data-qsteps-total="">Total 100%</output></div>
+</fieldset>
+<div class="mt-3"><div class="sec-eyebrow">Stored installments</div><dl class="kv"><dt>Deposit 50%</dt><dd>₹0.00 · on accept</dd><dt>Final payment 50%</dt><dd>₹0.00 · on prior approved</dd></dl></div>
+<p class="text-xs dim mt-2" data-qsteps-preview="" hidden=""></p>
+</section>
+<section aria-labelledby="qs-step-3-h" class="qsteps-panel" data-qsteps-panel="3" id="qs-step-3">
+<h4 class="qsteps-h" id="qs-step-3-h" tabindex="-1"><span class="qsteps-n">3</span> Terms &amp; review</h4>
+<div class="mt-3"><div class="note"><span class="text-xs">Standard Nestlancer terms (always included) — 10 clauses snapshotted onto the quote: 1 Validity · 2 Acceptance · 3 Payment · 4 Scope · 5 Revisions · 6 Client responsibilities · 7 Intellectual property · 8 Confidentiality · 9 Limitation of liability · 10 Governing law (India).</span></div></div>
+<div class="mt-3"><div class="field"><label class="label" for="qb-terms">Project-specific terms</label><textarea aria-describedby="qb-terms-count" class="textarea" id="qb-terms" placeholder="Client provides brand assets within 5 business days of kickoff. Two revision rounds per milestone." rows="2"></textarea><div class="text-xs dim mt-1 mono" data-qsteps-count="" id="qb-terms-count">0 characters</div></div></div>
+<div class="mt-3"><label class="check"><input checked="" type="checkbox"/> Require signed service agreement</label></div>
+</section>
+</div>
+<div aria-labelledby="qs-rail-h" class="qsteps-rail" role="group">
+<div class="sec-eyebrow" id="qs-rail-h">Quote summary</div>
+<div class="qsteps-rail-total mono">₹0.00</div>
+<div class="text-xs dim">0 priced lines · 1 phase · INR · 0%</div>
+<div class="text-xs mt-2"><span class="dim">Schedule</span> <b data-qsteps-sched="">50/50</b></div>
+<ol aria-label="Progress" class="qsteps-progress"><li aria-current="step" data-qsteps-prog="1"><span class="qsteps-dot" aria-hidden="true">1</span>Scope &amp; line items</li><li data-qsteps-prog="2"><span class="qsteps-dot" aria-hidden="true">2</span>Pricing &amp; schedule</li><li data-qsteps-prog="3"><span class="qsteps-dot" aria-hidden="true">3</span>Terms &amp; review</li></ol>
+</div>
+</div>
+</div>
+<div class="dialog-foot"><span class="text-xs dim mr-auto">Presets: 50/50 · 30/70 · 30/40/30 · 25% × 4 · 100% upfront</span><button class="btn btn-secondary btn-sm" data-qs-js="" data-qsteps-prev="" disabled="" type="button">Back</button><button class="btn btn-secondary btn-sm" data-qs-js="" data-qsteps-next="" disabled="" type="button">Next</button><button class="btn btn-primary btn-sm" data-wb-action="check" data-wb-js="" disabled="" type="button">Create quote</button></div>
 </section></div></section>
 </main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>

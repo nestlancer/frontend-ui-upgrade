@@ -134,3 +134,49 @@ html.nl-still dialog.wb-dialog[open] { animation: none; }
 
 /* Light theme: hard-coded log service tag #3FA9F5 is 2.44:1 on the panel; keep the blue coding at ≈5.6:1. */
 :root[data-theme="light"] main [style*="color:#3FA9F5"] { color: #0B67A8 !important; }
+
+/* ==========================================================================
+   Quote builder steps (admin quote/new, states 097–101) — quote-steps.js
+   ========================================================================== */
+.qsteps-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.qsteps-tabs [role="tab"] { cursor: pointer; font: inherit; }
+.qsteps-tabs [role="tab"]:focus-visible { outline: 2px solid var(--brand-9, #0B7A71); outline-offset: 2px; }
+.qsteps-layout { display: grid; gap: 18px; }
+@media (min-width: 1000px) { .qsteps-layout { grid-template-columns: minmax(0, 1fr) 232px; align-items: start; } }
+.qsteps-panel + .qsteps-panel { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line, rgba(0,0,0,.08)); }
+.qsteps-on .qsteps-panel + .qsteps-panel { margin-top: 0; padding-top: 0; border-top: 0; }
+.qsteps-h { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; margin: 0 0 10px; color: var(--ink-1); }
+.qsteps-h:focus { outline: none; }
+.qsteps-h:focus-visible { outline: 2px solid var(--brand-9, #0B7A71); outline-offset: 3px; border-radius: 4px; }
+.qsteps-n, .qsteps-dot { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 999px; font-size: 11px; font-weight: 600; background: var(--bg-subtle); color: var(--ink-2); flex: none; }
+.qsteps-h .qsteps-n { background: var(--brand-9, #0B7A71); color: #fff; }
+.qsteps-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+.qsteps-library { margin-top: 10px; }
+.qsteps-mode { display: inline-flex; gap: 6px; margin-bottom: 2px; }
+.qsteps-custom { border: 1px solid var(--line, rgba(0,0,0,.1)); border-radius: 10px; padding: 12px; margin: 14px 0 0; min-width: 0; }
+.qsteps-custom legend { padding: 0 4px; }
+.qsteps-row { display: grid; grid-template-columns: minmax(0, 1fr) 88px minmax(0, 190px) auto; gap: 8px; align-items: center; margin-top: 8px; }
+.qsteps-pct { position: relative; display: block; }
+.qsteps-pct input { padding-right: 22px; width: 100%; }
+.qsteps-pct > span { position: absolute; right: 9px; top: 50%; transform: translateY(-50%); color: var(--ink-3); font-size: 12px; pointer-events: none; }
+.qsteps-custom-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.qsteps-total { font-size: 12px; color: var(--ink-2); }
+.qsteps-total.bad { color: var(--t-danger-tx, #B42318); font-weight: 600; }
+.qsteps-rail { border: 1px solid var(--line, rgba(0,0,0,.08)); border-radius: 12px; padding: 14px; background: var(--bg-card); }
+.qsteps-rail-total { font-size: 24px; font-weight: 600; margin-top: 4px; color: var(--ink-1); }
+.qsteps-progress { list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 1px solid var(--line, rgba(0,0,0,.08)); display: grid; gap: 8px; font-size: 12px; color: var(--ink-3); }
+.qsteps-progress li { display: flex; align-items: center; gap: 8px; }
+.qsteps-progress li[aria-current="step"] { color: var(--ink-1); font-weight: 600; }
+.qsteps-progress li[aria-current="step"] .qsteps-dot { background: var(--brand-9, #0B7A71); color: #fff; }
+.qsteps-progress li.done .qsteps-dot { background: var(--t-success-bg, #E3F4EC); color: var(--t-success-tx, #11663F); }
+.qsteps-progress li.done .qsteps-dot::before { content: "✓"; }
+.qsteps-progress li.done .qsteps-dot { font-size: 0; }
+.qsteps-progress li.done .qsteps-dot::before { font-size: 11px; }
+.qsteps-on .qsteps-panel:not([hidden]) { animation: qsteps-in 170ms var(--ease-out, ease-out) both; }
+@keyframes qsteps-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+@media (max-width: 560px) {
+  .qsteps-row { grid-template-columns: minmax(0, 1fr) 84px; }
+  .qsteps-row select { grid-column: 1; }
+  .qsteps-row [data-qsteps-remove] { grid-column: 2; justify-self: end; }
+}
+@media (prefers-reduced-motion: reduce) { .qsteps-on .qsteps-panel:not([hidden]) { animation: none; } }

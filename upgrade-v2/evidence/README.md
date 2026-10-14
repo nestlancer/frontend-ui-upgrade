@@ -59,3 +59,8 @@ Indices: **0 web journal / 1 full web article / 2 full web Fintech case study / 
 - `workbench-*-wiring.json`, `workbench-fixes.json`: what `implement-workbench.py` / `implement-workbench-fixes.py` changed per client/admin page.
 - `batch6-state-search-{light-1440,dark-390}.webp`: the page-search dialog state (source 037) opened, focused, filtered to "inv".
 - `shared-regression.json`, `static-validation.json`, `data-comparison.json`, `coverage-summary.json`: regenerated after these batches over all 188 pages.
+
+## Batch 8
+- `batch8-quote-steps.json`: `qa-quote-steps.cjs` assertions (27) for source states 097–101.
+- `batch8-state-{100-scope,098-library,099-pricing,097-custom,101-terms}-light-1440.webp`, `batch8-state-097-custom-dark-390.webp`: element captures of the quote-builder steps.
+- `final-fix-*` now covers 15 pages (index 14 = quote/new); its first-pass `final-3-29-*` screenshots were removed.

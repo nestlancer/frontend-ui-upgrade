@@ -182,3 +182,14 @@ Harness: `qa-lanes.cjs` (puppeteer-core + @sparticuz/chromium + axe-core, local 
 Targeted rerun (`final-fix`, 14 pages): **0 failing**. Afterwards: `validate.py` reported 188 pages, 0 issues, no missing protected text, no placeholder defects. `regression.cjs` reported 188 pages × 390/1440, 0 errors, 0 overflow, 6/6 shared interactions. `qa-batch-5.cjs` passed 33/33. Visual spot checks: invoice mobile cards (AMOUNT aligned at 390), portfolio covers at 1440, logs and security fixes.
 
 **Limits:** automated axe and probes are not screen-reader or physical-device certification. In-page states are verified at their page URL. 35 screenshot states remain BLOCKED where the source record or UI differs from the preserved fixture; nothing was invented to match. The stepped quote-editor wizard (097–101) is IMPLEMENTED_UNVERIFIED.
+
+## Batch 8 QA: quote-builder steps (states 097–101)
+`qa-quote-steps.cjs` on `admin/requests/01a10a2c-…/quote/new/`: **27/27 pass**, recorded in `evidence/batch8-quote-steps.json`.
+- **Step states:** default step 1 (Back disabled); Next to step 2 with focus on the heading, an announcement and updated progress; ArrowRight, Home and End on tabs; step 3 hides Next; Back focuses the heading.
+- **Pricing:** Preset mode shows the stored 50/50. Choosing 30/70 updates the summary, shows a preview-only note and leaves the stored installments unchanged. Custom % is seeded with Deposit 50 · on accept and Final payment 50 · on prior approved, and the select syncs to "Custom %".
+- **Validation:** 40/50 shows "Total 90% · must equal 100%" with `aria-invalid`. Create quote from step 3 returns to step 2, focuses the field and reports nothing saved. A new empty row is caught the same way (focus moves to its name). Removing a row keeps focus in the editor.
+- **Library:** opens an honest empty-fixture note (`aria-expanded`, "Hide library").
+- **Terms:** live count ("20 characters"); the standard terms and checked signed-agreement option are present.
+- **Accessibility and layout:** 6 axe scans (light 1440 for each step, library and custom; dark 390 custom) with 0 violations. Dark 390 has no overflow or clipped controls. Reduced motion sets `animationName: none`. No-JS shows all three steps with controls hidden or disabled. 0 runtime/network errors.
+- **Reruns:** the page's `qa-lanes` rerun (in `final-fix`, now 15 pages) has 0 failing. `validate.py` is clean on 188 pages.
+- **Test fix:** a first run showed 3 test-harness failures (triple-click does not select a number input in headless Chromium). The harness was corrected; the page behaved correctly throughout.
