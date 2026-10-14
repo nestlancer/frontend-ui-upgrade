@@ -34,3 +34,16 @@ Images render locally in Chromium; width/height attributes reserve space. Lazy c
 **A10 — `payment-flow.svg`**: original hand-authored SVG geometry (source is the SVG itself), 960×300. Web case-study Gallery depicts the supplied webhook → queue → reconciliation-ledger → CSV-export narrative. Descriptive alt, visible ordered labels and explicit illustrative-not-production caption. No logos, figures, customer screens or third-party imagery fabricated. Fluid image; labels become two columns on phones. M17; `batch3-after-2-*` and browser QA.
 
 A3/A5/A6/A7/A9 reused as clearly illustrative web journal covers; A9 full-article media; A6 web case-study hero. No new artwork in the client inbox. Ten local SVGs remain small; no animation/image dependency added.
+
+## Batch 5–7 additions (resumed run)
+Five further SVGs were hand-authored on 2026-10-14 for the remaining public flows and operator surfaces. Original vector geometry only (no stock, scraped, generated-photographic or third-party template assets; no logos, people, customer screens or invented metrics). 760×520 viewBox, fluid, `width`/`height` reserve space. Payload **12,847 bytes** total.
+
+| Art ID | File | Meaning and integration | Mobile / alternative treatment | Motion |
+|---|---|---|---|---|
+| A11 | account-access.svg | Identity card, key and protected form panel — account creation / recovery. web/register, web/forgot-password, web/reset-password auth rails (`.auth-art`) | Rail stacks below the form on phones; descriptive alt per route; "Illustrative … · local prototype" caption | M21 |
+| A12 | verification-seal.svg | Envelope, six-cell code card and check seal — verification. web/verify-email rail, web/verify beside the code card, web/verify-document hero | Hidden below 600 px on verify (card first), stacked above on verify-document; descriptive alt; "not a live service" caption | M21 |
+| A13 | operator-console.svg | Operator console behind a lock — internal boundary. admin/login left column, web/impersonate restricted-session panel | Hidden below 600 px on admin login; stacked on impersonate; descriptive alt | M21 |
+| A14 | editorial-journal.svg | Stacked article cards with a bookmark ribbon — reading/journal lists. web/blog/category/[slug], web/blog/tag/[slug], web/blog/bookmarks heroes | Stacks below the hero copy; descriptive alt; decorative caption | M21 |
+| A15 | shared-quote.svg | Read-only quote sheet with lock and expiry tag. web/share/[token] header | Hidden below 600 px (quote first); descriptive alt; "Illustrative read-only snapshot" caption | M21 |
+
+Reuse: A1 (web home delivery system), A7 (web About hero), A3–A6 (web portfolio/work concept covers with "Illustrative product concepts — not customer screenshots" caption), A3/A5/A6/A9/A2/A10 (decorative journal covers on category/tag/bookmarks; empty alt next to the real article title). Client and admin workbench pages (Batches 6–7) add no artwork — they are dense operational screens where illustration would displace data.

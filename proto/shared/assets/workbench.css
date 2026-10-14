@@ -1,0 +1,136 @@
+/* Workbench v2 — shared client + operator refinements (upgrade v2).
+   Scoped to body.workbench-v2; density differs by .workbench-client / .workbench-admin.
+   Opaque data panels, readable numerals, honest controls. No marketing effects. */
+
+/* ---------- page header + rhythm */
+.workbench-v2 .pband { position: relative; }
+.workbench-v2 .ptitle, .workbench-v2 .phead h1 { text-wrap: balance; }
+.workbench-v2 .psub { max-width: 72ch; line-height: 1.6; }
+.workbench-v2 .phead-actions { flex-wrap: wrap; row-gap: 8px; }
+.workbench-v2 .panel-head { flex-wrap: wrap; row-gap: 8px; }
+.workbench-v2 .panel-sub { line-height: 1.55; }
+.workbench-v2 :is(.stat-value, .tbl td.num, .mono, .kv b) { font-variant-numeric: tabular-nums; }
+.workbench-v2 .tbl td { overflow-wrap: anywhere; }
+.workbench-v2 .tbl th[aria-sort] { color: var(--ink-1); }
+.workbench-v2 :is(a, button, summary, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand-9); outline-offset: 2px;
+}
+
+/* Client: calmer surfaces, roomier rows, clear next action */
+.workbench-client .panel { border-radius: var(--r-lg); }
+.workbench-client .tbl td, .workbench-client .tbl th { padding-block: 13px; }
+.workbench-client .panel-row { padding-block: 14px; }
+.workbench-client .phead .btn-primary { box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 6px 18px -10px var(--brand-9); }
+
+/* Admin: dense, precise */
+.workbench-admin .tbl td, .workbench-admin .tbl th { padding-block: 10px; }
+.workbench-admin .panel { border-radius: var(--r-md); }
+.workbench-admin .btn-icon svg { flex-shrink: 0; }
+
+/* ---------- filters */
+.workbench-v2 .filterbar { flex-wrap: wrap; row-gap: 8px; }
+.workbench-v2 .filterbar .wb-search { flex: 1 1 240px; max-width: 340px; min-width: 0; }
+.workbench-v2 .filterbar .wb-search .input { width: 100%; }
+.workbench-v2 select[data-wb-unavailable] { opacity: .62; cursor: not-allowed; }
+.wb-filter-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: -4px 0 12px; font-size: 12.5px; color: var(--ink-2); min-height: 18px; }
+.wb-filter-meta:has([data-wb-result]:empty):not(:has(.wb-unavailable-note)) { min-height: 0; margin: 0; }
+.wb-filter-meta [data-wb-result]:empty { display: none; }
+.wb-unavailable-note { color: var(--ink-3); }
+.wb-empty { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 22px 20px; margin: 10px 0; border: 1px dashed var(--line-strong); border-radius: var(--r-md); background: var(--bg-subtle); color: var(--ink-2); font-size: 13.5px; line-height: 1.6; }
+.wb-empty[hidden] { display: none; }
+.wb-empty b { color: var(--ink-1); }
+[data-wb-item][hidden] { display: none !important; }
+.wb-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.workbench-v2 .tabs button.tab[aria-pressed] { background: none; border-top: 0; border-left: 0; border-right: 0; cursor: pointer; font: inherit; }
+.workbench-v2 .tabs button.tab:disabled { cursor: default; }
+
+/* ---------- pager */
+.workbench-v2 nav.pager { display: flex; }
+.wb-pager-note { font-size: 12px; color: var(--ink-3); margin-top: 6px; }
+
+/* ---------- actions */
+.workbench-v2 [data-wb-action="danger"]:not(:disabled):hover { color: var(--t-danger-tx); border-color: var(--t-danger-bd); }
+.workbench-v2 a[data-wb-action] { cursor: pointer; }
+.wb-ref-note { font-size: 12px; color: var(--ink-3); line-height: 1.6; margin-top: 10px; }
+
+/* ---------- status toast (polite live region) */
+.wb-status { position: fixed; z-index: 90; left: 50%; bottom: 24px; transform: translate(-50%, 12px); max-width: min(560px, calc(100vw - 32px)); padding: 12px 16px; border-radius: var(--r-md); background: var(--ink-1); color: var(--ink-inv); font-size: 13.5px; line-height: 1.5; box-shadow: var(--sh-lg); opacity: 0; pointer-events: none; transition: opacity 180ms ease, transform 220ms var(--ease-out); }
+.wb-status.is-visible { opacity: 1; transform: translate(-50%, 0); }
+.wb-status:empty { visibility: hidden; }
+
+/* ---------- action dialog */
+dialog.wb-dialog { width: min(480px, calc(100vw - 32px)); max-width: none; padding: 0; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--bg-card); color: var(--ink-1); box-shadow: 0 24px 70px rgba(0,0,0,.25); }
+dialog.wb-dialog[open] { animation: wb-dialog-in 180ms var(--ease-out); }
+dialog.wb-dialog::backdrop { background: rgba(12,25,22,.5); }
+.wb-dialog-body { padding: 22px 22px 6px; }
+.wb-dialog-eyebrow { font: 600 11px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--brand-11); margin: 0 0 8px; }
+.wb-dialog.is-danger .wb-dialog-eyebrow { color: var(--t-danger-tx); }
+.wb-dialog h2 { font-size: 19px; letter-spacing: -.02em; margin: 0 0 10px; }
+.wb-dialog p { font-size: 14px; line-height: 1.6; color: var(--ink-2); margin: 0 0 10px; }
+.wb-dialog [data-wb-context] { padding: 10px 12px; border-radius: var(--r-sm); background: var(--bg-subtle); color: var(--ink-1); font-size: 13px; overflow-wrap: anywhere; }
+.wb-dialog [data-wb-outcome]:empty { display: none; }
+.wb-dialog [data-wb-outcome] { padding: 10px 12px; border-left: 3px solid var(--brand-9); background: var(--brand-1); color: var(--ink-1); outline: none; }
+.wb-dialog-foot { display: flex; justify-content: flex-end; gap: 8px; padding: 14px 22px 20px; flex-wrap: wrap; }
+.wb-dialog.is-danger [data-wb-confirm] { background: var(--t-danger-tx); border-color: var(--t-danger-tx); color: #fff; }
+@keyframes wb-dialog-in { from { opacity: 0; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: none; } }
+
+/* Client page search reuses the operator dialog markup */
+.workbench-client dialog.operator-search { padding: 0; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--bg-card); color: var(--ink-1); width: min(640px, calc(100vw - 32px)); max-width: none; max-height: min(86dvh, 880px); box-shadow: 0 20px 65px rgba(0,0,0,.23); }
+.workbench-v2 .topsearch input[readonly] { cursor: pointer; }
+
+/* ---------- progress semantics: no visual change, keep inline business widths */
+.workbench-v2 .prog[role="progressbar"] { position: relative; }
+
+/* ---------- responsive */
+@media (max-width: 720px) {
+  .workbench-v2 .filterbar .wb-search { max-width: none; flex-basis: 100%; }
+  .workbench-v2 .phead-actions .btn { min-height: 40px; }
+  .wb-status { bottom: 84px; }
+}
+
+/* ---------- reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  dialog.wb-dialog[open] { animation: none; }
+  .wb-status { transition: none; }
+}
+html.nl-still dialog.wb-dialog[open] { animation: none; }
+
+/* ---------- print: used by the PDF actions */
+@media print {
+  .sidebar, .topbar, #fab, .sb-backdrop, .skip-link, .wb-status, .filterbar, .pager, .phead-actions, dialog { display: none !important; }
+  .shell, .main { display: block !important; height: auto !important; overflow: visible !important; }
+  .workbench-v2 .panel { break-inside: avoid; box-shadow: none; }
+}
+
+/* Mobile card tables: label/value rows stay left-aligned and compact. */
+@media (max-width: 760px) {
+  .workbench-v2 .tbl-cards tbody td { text-align: left; height: auto; min-height: 0; padding: 3px 0; line-height: 1.45; }
+  .workbench-v2 .tbl-cards tbody td::before { text-align: left; }
+  .workbench-v2 .tbl-cards tbody td[style*="text-align"] { text-align: left !important; }
+  .workbench-v2 .tbl-cards tbody tr { gap: 2px 10px; padding: 12px 16px; }
+  .workbench-v2 .tbl-cards tbody td.num > * { justify-self: start; }
+}
+
+/* Action rows wrap instead of squeezing buttons below their label width. */
+.workbench-v2 main .flex:has(> .btn):not(.tabs):not(.seg):not(.nowrap) { flex-wrap: wrap; }
+.workbench-v2 main .flex > .btn { flex-shrink: 0; max-width: 100%; }
+@media (max-width: 420px) {
+  .workbench-v2 main .btn { white-space: normal; height: auto; min-height: 36px; padding-block: 7px; line-height: 1.25; text-align: center; }
+}
+/* Narrow screens: tab rows wrap rather than becoming a scroll region that
+   keyboard users cannot reach when its views are unavailable. */
+@media (max-width: 760px) {
+  .workbench-v2 .tabs { flex-wrap: wrap; overflow-x: visible; row-gap: 2px; }
+}
+.workbench-v2 .wb-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.workbench-v2 [data-wb-scroll]:focus-visible { outline: 2px solid var(--brand-9); outline-offset: 2px; }
+
+/* Dark sent-bubble attachment chip: a white overlay on #27786E drops white mono text to 3.98:1.
+   Darken the chip instead (≈7:1) — same shape/data, readable. */
+:root[data-theme="dark"] .msg-row.me .bubble [style*="rgba(255,255,255,.14)"] { background: rgba(0,0,0,.22) !important; }
+
+/* Dark theme flips --ink-1 to a light tone, turning the TOTP QR placeholder pale; keep its #7FE8DA label readable (≈7:1). */
+:root[data-theme="dark"] [style*="background:var(--ink-1)"] > [style*="#7FE8DA"] { color: #0B5E57 !important; }
+
+/* Light theme: hard-coded log service tag #3FA9F5 is 2.44:1 on the panel; keep the blue coding at ≈5.6:1. */
+:root[data-theme="light"] main [style*="color:#3FA9F5"] { color: #0B67A8 !important; }

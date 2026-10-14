@@ -102,3 +102,12 @@ Original screenshot inspection includes 014/015 marketing pages and 004 contact.
 No new framework/source-code import. Reuse of previously fetched patterns: R4 native reduced-motion lifecycle (settled/no-JS tests); R5 restrained cover/control response; R6 supplied-record-only filters for ten articles and four conversation previews; R7 labeled input, adjacent explanatory/error text, focusable feedback. Article contents links and inbox previews use native links/buttons, not a simulated tab widget. Copy handlers catch permission/secure-context failures and reveal manually selectable content.
 
 All four route HTML bodies and 390/1440 before renders were inspected independently. Existing compact public 002/003/008 source references and full client 005 source screenshot were reviewed; no landing-page body was copied into a web sibling. Local evidence: `batch3-browser-qa.json`, `batch3-before-*`, `batch3-after-*`. Remote visual-reference gate remains blocked; no additional remote visual inspection claim.
+
+## Batches 5–7 (resumed session) — application of established references
+No new external fetch (sandbox egress is limited to package/GitHub hosts). Patterns reused, adapted natively without copied components:
+| Ref | Applied to | Verified by |
+|---|---|---|
+| R4 native reduced-motion lifecycle | `workbench.css`/`public-flow.css` reduced-motion rules; JS-only controls ship `disabled` and are enabled by script | `qa-lanes.cjs` live/fresh reduced-motion + no-JS passes per page |
+| R5 restrained control response | Work/journal covers, rail active state, dialog/toast 160–180 ms | settled-motion checks (no infinite loops, finite motion ends < 9 s) |
+| R6 supplied-record-only filters | Client/admin list search/filters/chips and web portfolio filter operate only over records on the page; options without sample matches are disabled with a note | interaction checks: zero-match empty state, Clear restores all, select results contain the option |
+| R7 labelled fields + honest local result | Auth/verification forms (required, password match, stated reset rules, OTP fieldset), operator sign-in, document lookup, workbench action dialog ("Preview action… nothing changed") | `qa-batch-5.cjs` 33/33; `validate.py` 0 unlabeled controls across 188 pages |

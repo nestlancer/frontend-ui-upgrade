@@ -13,7 +13,10 @@
     entries.forEach(entry => entry.hidden = !entry.textContent.toLocaleLowerCase().includes(text));
     dialog.querySelectorAll('.operator-search-group').forEach(group => group.hidden = !group.querySelector('[data-search-entry]:not([hidden])'));
     const count = entries.filter(entry => !entry.hidden).length;
-    result.textContent = count ? `${count} local destinations and actions.` : 'No matching page. Try payments, pipeline or portfolio.';
+    // Suggestions come from this page's own destinations (client and admin differ).
+    const names = entries.map(entry => entry.textContent.trim()).filter(name => !/^dashboard$/i.test(name)).slice(0, 3);
+    const hint = names.length ? ` Try ${names.slice(0, -1).join(', ')}${names.length > 1 ? ' or ' : ''}${names[names.length - 1]}.` : '';
+    result.textContent = count ? `${count} local ${count === 1 ? 'destination' : 'destinations and actions'}.` : `No matching page.${hint}`;
   }
   function open(button) {
     if (dialog.open) { query.focus(); return; }

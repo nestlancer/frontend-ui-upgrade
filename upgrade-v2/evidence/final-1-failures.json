@@ -1,0 +1,48 @@
+[
+ {
+  "path": "apps/web/forgot-password/index.html",
+  "f": [
+   "axe@light1440:region(.brand > span, .text-center.text-sm.dim)",
+   "axe@dark390:region(.brand > span, .text-center.text-sm.dim)"
+  ]
+ },
+ {
+  "path": "apps/web/impersonate/index.html",
+  "f": [
+   "clipped@320:Continue to portal"
+  ]
+ },
+ {
+  "path": "apps/web/register/index.html",
+  "f": [
+   "axe@light1440:region(.brand > span, .text-center.text-sm.dim)",
+   "axe@dark390:region(.brand > span, .text-center.text-sm.dim)"
+  ]
+ },
+ {
+  "path": "apps/web/reset-password/index.html",
+  "f": [
+   "axe@light1440:region(.brand > span, .text-center.dim.text-sm)",
+   "axe@dark390:region(.brand > span, .text-center.dim.text-sm)"
+  ]
+ },
+ {
+  "path": "apps/web/verify-email/index.html",
+  "f": [
+   "axe@light1440:region(.brand > span, .text-sm.dim.text-center)",
+   "axe@dark390:region(.brand > span, .text-sm.dim.text-center)"
+  ]
+ },
+ {
+  "path": "apps/web/messages/new/direct/index.html",
+  "f": [
+   "live-reduced-running:box-shadow@INPUT"
+  ]
+ },
+ {
+  "path": "apps/web/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8/index.html",
+  "f": [
+   "axe@dark390:color-contrast(.mt-2.items-center.gap-2 > .mono.text-xs)"
+  ]
+ }
+]

@@ -1,4 +1,4 @@
-# Browser QA — PARTIAL implementation, measured results
+# Browser QA — measured results (188 pages implemented; exact-state gaps remain)
 
 Date 2026-10-14. Real local Chromium (version in `evidence/browser-qa.json`), Puppeteer and axe-core. No online grader or WCAG certification. All traffic to production was avoided; browser QA intercepted external requests. Static server serves **only `proto/`**, not reports/credentials/repository root.
 
@@ -157,3 +157,28 @@ Shared regression after the `proto-motion.js` change: 188 pages × 390/1440 (red
 Evidence: `evidence/batch4-{light,dark}-{390,1440}.webp`, `evidence/batch4-search-{light,dark}-{390,1440}.webp`, `evidence/batch4-desktop-bottom.webp`, `evidence/batch4-browser-qa.json`.
 
 **Evidence gap:** WebP screenshots from the initial slice and batches 2–3 were not carried by the restoration patch and are absent. Their JSON results are intact. Recapture them before external review if image proof for those batches is required.
+
+## Batches 5–7 QA (resumed session): the remaining 169 pages
+Harness: `qa-lanes.cjs` (puppeteer-core + @sparticuz/chromium + axe-core, local server on port 8000 serving only `proto/`). Run **sequentially**; an earlier 3-way parallel run thrashed the 2-CPU sandbox and crashed, and its partial output was discarded.
+
+| Measure | Result |
+|---|---:|
+| Pages | 169 (20 public, 50 client, 99 admin incl. redirect stub) |
+| Layout probes (light 1440 / dark 390 / light 320 / light 768) | 676: 0 document overflow, 0 clipped controls, 0 broken images, 0 remote fonts, 1 h1 each |
+| axe runs (light 1440, dark 390) | 338: **0 violations** after fixes |
+| Visibility checks (live-reduced, fresh-reduced, no-JS) | 507: 0 hidden content, 0 enabled JS-only controls without JS |
+| Interaction assertions | 369: page search 149, action dialog 105 (opens, honest "nothing changed" outcome, Escape, focus return), checks 42, filters 22, selects 20, print 10, reset 9, file 9, copy 3 |
+| Runtime / local network errors | 0 |
+| Motion | No infinite loops; inherited bounded motion ends < 9 s |
+
+**First-pass failures (9 pages) and fixes:**
+- Forgot/register/reset/verify-email: brand row and Terms·Privacy row were outside landmarks. Now `header`/`footer`, as on the verified login page.
+- Impersonate at 320 px: "Continue to portal" clipped. The action row now wraps.
+- Client project thread (dark): white mono text on a 14% white overlay over the sent bubble was 3.98:1. A dark-theme override darkens the chip (≈7:1).
+- Client security settings (dark): `--ink-1` flips light, so the TOTP QR tile's `#7FE8DA` label was 1.29:1. The label is darkened in dark theme.
+- Admin system logs (light): hard-coded `#3FA9F5` service tags were 2.44:1. They use `#0B67A8` in light theme (applies to all 11 `color:#3FA9F5` uses on 6 admin pages; dark unchanged).
+- `messages/new/direct` reported one live-reduced `box-shadow` transition on an INPUT. It did not reproduce on rerun. Reduced motion forces 1 ms transitions, so this was a sampling race, not a defect.
+
+Targeted rerun (`final-fix`, 14 pages): **0 failing**. Afterwards: `validate.py` reported 188 pages, 0 issues, no missing protected text, no placeholder defects. `regression.cjs` reported 188 pages × 390/1440, 0 errors, 0 overflow, 6/6 shared interactions. `qa-batch-5.cjs` passed 33/33. Visual spot checks: invoice mobile cards (AMOUNT aligned at 390), portfolio covers at 1440, logs and security fixes.
+
+**Limits:** automated axe and probes are not screen-reader or physical-device certification. In-page states are verified at their page URL. 35 screenshot states remain BLOCKED where the source record or UI differs from the preserved fixture; nothing was invented to match. The stepped quote-editor wizard (097–101) is IMPLEMENTED_UNVERIFIED.

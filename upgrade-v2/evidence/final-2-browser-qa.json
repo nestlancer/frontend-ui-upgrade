@@ -1,0 +1,5971 @@
+{
+ "browser": "HeadlessChrome/153.0.8010.0",
+ "pages": [
+  {
+   "path": "apps/web/requests/4b8110f3-1d0e-4f8c-a111-3e0a1/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "request-brief.pdf",
+     "outcome": "Preview complete — “request-brief.pdf” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/requests/[id]/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "request-brief.pdf",
+     "outcome": "Preview complete — “request-brief.pdf” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/requests/archive/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Restore",
+     "outcome": "Preview complete — “Restore” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "filter": {
+     "total": 4,
+     "shown": 0,
+     "empty": true,
+     "reset": 4
+    },
+    "select": {
+     "option": "Converted",
+     "shown": 1,
+     "total": 4,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 17,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/requests/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-cta@btn btn-primary"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "filter": {
+     "total": 3,
+     "shown": 0,
+     "empty": true,
+     "reset": 3
+    },
+    "select": {
+     "option": "Draft",
+     "shown": 1,
+     "total": 3,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 27,
+    "runningAt2_3s": [
+     "nl-cta"
+    ],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/requests/new/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Browse files",
+     "outcome": "Preview complete — “Browse files” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 13,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/account/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Cancel pending deletion",
+     "outcome": "Preview complete — “Cancel pending deletion” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Request data export” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 10,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/activity/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "filter": {
+     "total": 6,
+     "shown": 0,
+     "empty": true,
+     "reset": 6
+    },
+    "select": {
+     "option": "Auth",
+     "shown": 3,
+     "total": 6,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 12,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/billing/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Discard",
+     "outcome": "Preview complete — “Discard” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 7,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/files/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 7,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Manage in project files",
+     "outcome": "Preview complete — “Manage in project files” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 17,
+    "runningAt2_3s": [
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine"
+    ],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 7,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/notifications/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Discard",
+     "outcome": "Preview complete — “Discard” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 14,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/security/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": [
+      {
+       "id": "color-contrast",
+       "impact": "serious",
+       "nodes": [
+        {
+         "target": [
+          "div:nth-child(1) > .mono.fs-11"
+         ],
+         "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.29 (foreground color: #7fe8da, background color: #ecf3f1, font size: 8.3pt (11px), font weight: normal). Expected contrast rati"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Enable 2FA",
+     "outcome": "Preview complete — “Enable 2FA” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Please complete the highlighted fields. Nothing was saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 6,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/web/settings/sessions/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 13,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "End all other sessions",
+     "outcome": "Preview complete — “End all other sessions” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 9,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/analytics/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 8,
+     "names": [
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Schedule report…",
+     "outcome": "Preview complete — “Schedule report…” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 64,
+    "runningAt2_3s": [
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine"
+    ],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/api-keys/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Create key",
+     "outcome": "Preview complete — “Create key” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 23,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/audit/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Verify & Export Audit Trail",
+     "outcome": "Preview complete — “Verify & Export Audit Trail” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "filter": {
+     "total": 10,
+     "shown": 0,
+     "empty": true,
+     "reset": 10
+    },
+    "select": {
+     "option": "Auth",
+     "shown": 2,
+     "total": 10,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 35,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/contact/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Reply",
+     "outcome": "Preview complete — “Reply” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "filter": {
+     "total": 5,
+     "shown": 0,
+     "empty": true,
+     "reset": 5
+    },
+    "select": {
+     "option": "New",
+     "shown": 2,
+     "total": 5,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 23,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/content/blog/[id]/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Save changes",
+     "outcome": "Preview complete — “Save changes” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Add reference” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 14,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/content/blog/new/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Publish post",
+     "outcome": "Preview complete — “Publish post” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Publish” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 15,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/content/blog/post-custom-crm/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Save changes",
+     "outcome": "Preview complete — “Save changes” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Add reference” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/content/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Unpublish",
+     "outcome": "Preview complete — “Unpublish” was not executed. Cutting Deploy Time from 45 Minutes to Five/cutting-deploy-time-from-45-minutes-to-five · live is unchanged.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "filter": {
+     "total": 11,
+     "shown": 0,
+     "empty": true,
+     "reset": 11
+    },
+    "select": {
+     "option": "Published",
+     "shown": 11,
+     "total": 11,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 34,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Save changes",
+     "outcome": "Preview complete — “Save changes” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Add reference” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    },
+    "reset": {
+     "status": "Local edits discarded. The original values are restored.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 14,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/content/posts/[id]/edit/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Save changes",
+     "outcome": "Preview complete — “Save changes” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Add reference” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 14,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/content/posts/new/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Publish post",
+     "outcome": "Preview complete — “Publish post” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Publish” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 15,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 28,
+     "closed": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 48,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/integrations/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Configure",
+     "outcome": "Preview complete — “Configure” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/media/analytics/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 27,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/media/browse/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "filter": {
+     "total": 8,
+     "shown": 0,
+     "empty": true,
+     "reset": 8
+    },
+    "select": {
+     "option": "Images",
+     "shown": 0,
+     "total": 8,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 19,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/media/folders/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "New folder",
+     "outcome": "Preview complete — “New folder” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 10,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/media/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "+ Browse files",
+     "outcome": "Preview complete — “+ Browse files” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Save metadata” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    },
+    "reset": {
+     "status": "Local edits discarded. The original values are restored.",
+     "printed": 0
+    },
+    "file": {
+     "status": "File downloads are not included in this prototype. The file name and size above are the original record.",
+     "printed": 0
+    },
+    "filter": {
+     "total": 16,
+     "shown": 0,
+     "empty": true,
+     "reset": 16
+    },
+    "select": {
+     "option": "READY",
+     "shown": 16,
+     "total": 16,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 27,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/media/quarantine/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Notify uploader",
+     "outcome": "Preview complete — “Notify uploader” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 12,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/media/storage/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 7,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I",
+      "nl-shine@I"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Save storage settings",
+     "outcome": "Preview complete — “Save storage settings” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 21,
+    "runningAt2_3s": [
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine",
+     "nl-shine"
+    ],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/media/upload/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-shine@I"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Browse files",
+     "outcome": "Preview complete — “Browse files” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [
+     "nl-shine"
+    ],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/[id]/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Attach",
+     "outcome": "Preview complete — “Attach” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 15,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/archived/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Unarchive",
+     "outcome": "Preview complete — “Unarchive” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 15,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/inbox/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Snoozed",
+     "outcome": "Preview complete — “Snoozed” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 15,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 27,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/new/direct/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Start conversation",
+     "outcome": "Preview complete — “Start conversation” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Start conversation” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/new/group/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Create group",
+     "outcome": "Preview complete — “Create group” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/new/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "check": {
+     "status": "Please complete the highlighted fields. Nothing was saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 9,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/new-direct/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Start conversation",
+     "outcome": "Preview complete — “Start conversation” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Start conversation” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/new-group/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Create group",
+     "outcome": "Preview complete — “Create group” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 11,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/project/[projectId]/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Archive",
+     "outcome": "Preview complete — “Archive” was not executed. AUDIT-P25-20261005-73dhk Project Fixture · LMS delivery — NL-204 is unchanged.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 12,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Attach",
+     "outcome": "Preview complete — “Attach” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Attach file” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    },
+    "reset": {
+     "status": "Local edits discarded. The original values are restored.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 15,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/thread/[threadId]/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Attach",
+     "outcome": "Preview complete — “Attach” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 15,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/messages/threads/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "filter": {
+     "total": 6,
+     "shown": 0,
+     "empty": true,
+     "reset": 6
+    },
+    "select": {
+     "option": "Direct",
+     "shown": 1,
+     "total": 6,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 19,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/moderation/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 25,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/notifications/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Mark all read",
+     "outcome": "Preview complete — “Mark all read” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Send to segment” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    },
+    "reset": {
+     "status": "Local edits discarded. The original values are restored.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 22,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/[id]/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Issue refund",
+     "outcome": "Preview complete — “Issue refund” was not executed. Gateway details & Administrative actions is unchanged.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 12,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/accounts/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 0,
+     "names": [],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "+ Add bank account",
+     "outcome": "Preview complete — “+ Add bank account” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 13,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/company-legal/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Discard",
+     "outcome": "Preview complete — “Discard” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "file": {
+     "status": "File downloads are not included in this prototype. The file name and size above are the original record.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 10,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/disputes/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Contact client",
+     "outcome": "Preview complete — “Contact client” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    },
+    "check": {
+     "status": "Checked locally — “Submit evidence to Razorpay” is not connected in this prototype. Nothing was sent or saved.",
+     "printed": 0
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 19,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "filter": {
+     "total": 5,
+     "shown": 0,
+     "empty": true,
+     "reset": 5
+    },
+    "select": {
+     "option": "Paid",
+     "shown": 2,
+     "total": 5,
+     "allContain": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 32,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "+ Record offline payment",
+     "outcome": "Preview complete — “+ Record offline payment” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 21,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/projects/[id]/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "+ Record offline payment",
+     "outcome": "Preview complete — “+ Record offline payment” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 21,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/payments/projects/nl-lms/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 1,
+     "names": [
+      "nl-ind@sb-item active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    },
+    "action": {
+     "open": true,
+     "title": "Record offline payment",
+     "outcome": "Preview complete — “Record offline payment” is not connected in this prototype. Nothing was sent, saved or changed.",
+     "closed": true,
+     "focusReturned": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 20,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  },
+  {
+   "path": "apps/admin/pipeline/index.html",
+   "layouts": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "scroll": 1440,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "scroll": 390,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 320,
+     "scroll": 320,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    },
+    {
+     "theme": "light",
+     "width": 768,
+     "scroll": 768,
+     "h1": 1,
+     "clipped": [],
+     "brokenImages": [],
+     "remoteFonts": 0,
+     "smallText": 0
+    }
+   ],
+   "axe": [
+    {
+     "theme": "light",
+     "width": 1440,
+     "violations": []
+    },
+    {
+     "theme": "dark",
+     "width": 390,
+     "violations": []
+    }
+   ],
+   "visibility": [
+    {
+     "mode": "live-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "fresh-reduced",
+     "hidden": 0,
+     "running": 0,
+     "names": []
+    },
+    {
+     "mode": "no-js",
+     "hidden": 0,
+     "running": 2,
+     "names": [
+      "nl-ind@sb-item active",
+      "nl-tab@tab active"
+     ],
+     "enabledJsOnly": 0
+    }
+   ],
+   "interactions": {
+    "search": {
+     "open": true,
+     "focus": "operator-search-query",
+     "entries": 20,
+     "closed": true
+    }
+   },
+   "errors": [],
+   "motion": {
+    "early": 12,
+    "runningAt2_3s": [],
+    "infinite": [],
+    "overNineSeconds": []
+   }
+  }
+ ]
+}

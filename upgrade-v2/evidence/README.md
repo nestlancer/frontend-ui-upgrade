@@ -50,3 +50,12 @@ Indices: **0 web journal / 1 full web article / 2 full web Fintech case study / 
 
 ## Batch 4
 `batch4-{light,dark}-{390,1440}.webp` dashboard; `batch4-search-*` open local page-search dialog; `batch4-desktop-bottom.webp` internal scroll end; `batch4-browser-qa.json` full results.
+
+## Batches 5–7 (resumed session): remaining 169 pages
+- `final-{1,2,3}-browser-qa.json` / `-failures.json`: `qa-lanes.cjs` results for the 169 previously NOT_STARTED pages, run sequentially in thirds (57 public+client / 57 client+admin / 55 admin). Per page: light-1440, dark-390, light-320, light-768 layout probes; axe at light-1440 and dark-390 (after finite entry animations finish); live-reduced, fresh-reduced and no-JS visibility; motion sampling; runtime/network errors; page-specific interactions.
+- `final-{k}-{i}-{light-1440,dark-390}.webp`: screenshots, where `i` is the index of the page within `final-{k}-browser-qa.json` `pages[]`.
+- `final-fix-browser-qa.json` / `-failures.json` / `final-fix-{j}-*.webp`: targeted rerun of the 10 pages that failed the first pass (plus 4 other pages sharing the changed colour rule), after fixes. These **replace** the first-pass screenshots of the same pages (removed, so no stale pre-fix image remains).
+- `batch-5-wiring.json`, `batch-5-interactions.json`: public-flow wiring per page, and `qa-batch-5.cjs` 33/33 interaction assertions (forms, OTP, document lookup, filters, bookmarks, reading rail).
+- `workbench-*-wiring.json`, `workbench-fixes.json`: what `implement-workbench.py` / `implement-workbench-fixes.py` changed per client/admin page.
+- `batch6-state-search-{light-1440,dark-390}.webp`: the page-search dialog state (source 037) opened, focused, filtered to "inv".
+- `shared-regression.json`, `static-validation.json`, `data-comparison.json`, `coverage-summary.json`: regenerated after these batches over all 188 pages.
