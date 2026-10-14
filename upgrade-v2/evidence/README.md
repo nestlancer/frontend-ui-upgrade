@@ -1,5 +1,7 @@
 # Evidence index
 
+> **Resumed-session note:** WebP files listed for the initial slice and batches 2–3 were lost in the patch-based restoration (binary content not included). JSON results remain. Batch 4 images are present.
+
 This folder contains selective evidence for the implemented slice, not a second copy of the original screenshot collections. See ../QA_REPORT.md for limits and measured results.
 
 ## Page indices used in filenames
@@ -45,3 +47,6 @@ Indices: **0 web journal / 1 full web article / 2 full web Fintech case study / 
 - `batch3-inbox-preview.webp`, `batch3-inbox-draft.webp`, `batch3-inbox-desktop-bottom.webp`: actual local states/internal scrolling, no sent-message claims.
 - Source public images reuse `batch2-original-002/003/008-*`; source inbox was read from its original screenshot tree, not duplicated.
 - `shared-regression.json` refreshed for this batch. Full article mobile capture is composed from real scrolled viewports after a Chromium >8192px capture artifact; no original content edited to fix the screenshot.
+
+## Batch 4
+`batch4-{light,dark}-{390,1440}.webp` dashboard; `batch4-search-*` open local page-search dialog; `batch4-desktop-bottom.webp` internal scroll end; `batch4-browser-qa.json` full results.

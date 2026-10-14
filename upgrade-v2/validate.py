@@ -6,6 +6,11 @@ from urllib.parse import urlsplit,unquote
 from baseline import ROOT,facts,sha
 import json,re,subprocess
 base=json.loads((ROOT/'upgrade-v2/data-baseline.json').read_text()); results=[]; preservation=[]
+# The recorded baseline commit lived on an earlier session branch. main@dfc0f42 carries
+# byte-identical originals for all 188 pages (checked against PAGE_COVERAGE baseline_sha256).
+import os
+if subprocess.run(['git','cat-file','-e',base['commit']],cwd=ROOT,capture_output=True).returncode:
+ base['commit']=os.environ.get('NL_BASE_COMMIT','dfc0f4296503d2d7946b9126bf7f6782f45fab7e')
 for path,old in base['pages'].items():
  p=ROOT/path; s=BeautifulSoup(p.read_text(),'html.parser'); issues=[]
  for n in s.select('[href],[src],[action]'):

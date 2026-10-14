@@ -6,6 +6,8 @@ import csv,json,hashlib,subprocess
 from collections import Counter
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'upgrade-v2'
 BASE=json.loads((OUT/'data-baseline.json').read_text())['commit']
+# Recorded baseline lived on an earlier session branch; main@dfc0f42 has byte-identical originals.
+if subprocess.run(['git','cat-file','-e',BASE],cwd=ROOT,capture_output=True).returncode:BASE='dfc0f4296503d2d7946b9126bf7f6782f45fab7e'
 def savecsv(path,rows):
  with path.open('w',newline='') as f:
   w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n");w.writeheader();w.writerows(rows)
@@ -46,6 +48,24 @@ for j,(purpose,sel,trigger,prop,duration,delay) in enumerate(spec):
 motions=[x for x in motions if x['motion_id'] not in ['M15','M16','M17','M18']]
 for j,sel in enumerate(['.web-journal .journal-card; [data-content-filter]','.web-article .article-heading; .article-toc; [data-content-toggle]','.web-case-figure; .web-case-gallery; .case-nav','.inbox-workspace; [data-conversation]; [data-local-draft]']):
  motions.append(dict(motion_id=f'M{j+15}',page_paths=edited[j+14],selector=sel,trigger='load/scroll/hover/focus/keyboard/input',property='opacity/transform',duration_ms='180-950',delay_ms='0-240',easing='var(--ease-out/--ease-expo)',repeat='one-shot; no running animations in settled sample',mobile_behavior='responsive stacking; focus and return navigation',reduced_motion_behavior='no running motion; visible content; JS-only controls disabled without JS',owner_file='proto/shared/assets/editorial.css;proto/shared/assets/inbox.css;proto/shared/assets/content-tools.js;proto/shared/assets/proto-motion.js',status='VERIFIED_BASE_PAGE',evidence='upgrade-v2/evidence/batch3-browser-qa.json;upgrade-v2/evidence/batch3-after-'+str(j)+'-390.webp'))
+savecsv(OUT/'MOTION_REGISTER.csv',motions)
+# Batch 4 (resumed run): admin dashboard + local page-search dialog (source 015 / 072).
+qa4=json.loads((OUT/'evidence/batch4-browser-qa.json').read_text())
+assert len(qa4['layouts'])==10 and len(qa4['axe'])==8 and not qa4['errors']
+assert not any(x['violations'] for x in qa4['axe'])
+assert not any(x['hidden'] or ('reduced' in x['mode'] and x['running']) for x in qa4['visibility'])
+dash='proto/apps/admin/dashboard/index.html'
+for row in pages:
+ if row['page_path']==dash:row.update(status='VERIFIED',motion_ids='M19',reference_ids='R4;R5;R7',qa_status='BROWSER_REVIEW_PASS',blocker='',next_action='Continue admin siblings; retain regression coverage')
+savecsv(OUT/'PAGE_COVERAGE.csv',pages)
+notes={'015-dashboard':'','072-global-search-admin-dialog':'State opened via Search pages button, top search field, Ctrl/Cmd+K or /. Groups and destinations match source; additionally lists Notifications from the existing sidebar.'}
+for row in states:
+ if row['proto_path']==dash and row['state_name'] in notes:
+  dialog=row['state_name'].startswith('072')
+  row.update(status='VERIFIED',trigger_or_url='/apps/admin/dashboard/index.html'+(' + click [data-operator-search-open] or Ctrl/Cmd+K' if dialog else ''),evidence='upgrade-v2/evidence/batch4-'+('search-' if dialog else '')+'light-1440.webp;upgrade-v2/evidence/batch4-'+('search-' if dialog else '')+'dark-390.webp;upgrade-v2/evidence/batch4-browser-qa.json',blocker=notes[row['state_name']])
+savecsv(OUT/'STATE_COVERAGE.csv',states)
+motions=[x for x in motions if x['motion_id']!='M19']
+motions.append(dict(motion_id='M19',page_paths=dash,selector='.operator-metrics; .operator-charts svg.nl-chart; #operator-search',trigger='load/scroll/click/keyboard(Ctrl+K,/,Arrow,Escape)',property='opacity/transform; stroke-dashoffset on existing charts',duration_ms='150-1300',delay_ms='0-240',easing='var(--ease-out/--ease-expo)',repeat='one-shot; settled sample has no running animations',mobile_behavior='stacked metrics; full-width dialog inside viewport',reduced_motion_behavior='no running animations incl. dialog; content visible; search disabled without JS',owner_file='proto/shared/assets/operator.css;proto/shared/assets/operator.js;proto/shared/assets/proto-motion.js',status='VERIFIED_BASE_PAGE',evidence='upgrade-v2/evidence/batch4-browser-qa.json'))
 savecsv(OUT/'MOTION_REGISTER.csv',motions)
 counts={'status':dict(Counter(r['status'] for r in pages)),'surfaces':{},'html_changed':sum(r['html_changed']=='true' for r in pages),'shared_only':sum(r['shared_only']=='true' for r in pages),'states':dict(Counter(r['status'] for r in states))}
 for surface in ['public','client','admin']:

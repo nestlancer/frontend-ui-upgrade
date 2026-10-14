@@ -134,3 +134,26 @@ Source 002 journal, 003 article and client 005 inbox differ from preserved fixtu
 All-page `regression.cjs` rerun: 188 × 390/1440 = 376 smoke checks, no overflow/local errors; dialog Tab containment, chart isolation and persisted-pageshow simulation still pass. Final scoped icon adjustments are covered by the four-page matrix; earlier pages do not load the new runtime/inbox CSS. Earlier focused matrices remain historical evidence, not newly repeated axe runs.
 
 Rerun: `LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/qa-batch-3.cjs`. Full captures: `PATHS=upgrade-v2/batch-3-paths.json LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/capture.cjs batch3-after`.
+
+## Batch 4 QA (resumed session): admin dashboard
+Tooling recreated after the interruption (see PROGRESS.md). Run with `LD_LIBRARY_PATH=/tmp/chromelibs/lib node upgrade-v2/qa-batch-4.cjs` while the static server serves `proto/` on port 8000.
+
+| Check | Result |
+|---|---|
+| Layouts 320/390/768/1440/1920 × light/dark | 10/10: no document overflow, no clipped headings/values, one h1 |
+| axe (base + open search dialog, 390/1440 × light/dark) | 8 runs, 0 violations |
+| Runtime / local network errors | 0 |
+| Search: empty state, filter, ArrowDown focus, Tab containment, Escape + return focus, Ctrl+K open/focus | pass (Escape failed first; fixed in `operator.js`) |
+| Dashboard immutability (text unchanged, unavailable ranges disabled, 3 existing charts tagged) | pass |
+| Internal `.main` scroll reveals | pass (one false hidden `<noscript>` fixed in `proto-motion.js`) |
+| Live/fresh reduced motion, reduced-motion dialog | no running animations, content visible |
+| No-JS | content visible, search openers disabled with noscript guidance |
+| Destination navigation | `settlement accounts` → `/apps/admin/payments/accounts/index.html` |
+
+Motion sampled at 100 ms: nl-rise/nl-count/nl-block entrance, nl-area/nl-draw/nl-sweep on existing charts; settled sample at 3.3 s has none running. Dialog opens with a 160 ms `operator-dialog` transition.
+
+Shared regression after the `proto-motion.js` change: 188 pages × 390/1440 (reduced motion), 0 errors, 0 overflow; CTA focus/press, art/chart isolation, dialog containment and persisted-pageshow checks pass. `validate.py`: no missing protected text on any page.
+
+Evidence: `evidence/batch4-{light,dark}-{390,1440}.webp`, `evidence/batch4-search-{light,dark}-{390,1440}.webp`, `evidence/batch4-desktop-bottom.webp`, `evidence/batch4-browser-qa.json`.
+
+**Evidence gap:** WebP screenshots from the initial slice and batches 2–3 were not carried by the restoration patch and are absent. Their JSON results are intact. Recapture them before external review if image proof for those batches is required.

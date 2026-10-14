@@ -68,7 +68,7 @@
     // covers pages a future build emits without them.
     if (main && main.classList.contains('content')) {
       Array.prototype.forEach.call(main.children, function (el) {
-        if (!el.classList.contains('phead') && !/^(SCRIPT|STYLE|DIALOG|TEMPLATE)$/.test(el.tagName)) el.classList.add('reveal');
+        if (!el.classList.contains('phead') && !/^(SCRIPT|STYLE|DIALOG|TEMPLATE|NOSCRIPT)$/.test(el.tagName)) el.classList.add('reveal');
       });
     }
 

@@ -43,6 +43,8 @@
   });
   dialog.addEventListener('keydown', event => {
     const visible = entries.filter(entry => !entry.hidden);
+    // Explicit Escape: Chromium's close-watcher can ignore Escape after prevented Tab keydowns.
+    if (event.key === 'Escape') { event.preventDefault(); dialog.close(); return; }
     if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
       event.preventDefault();
       if (!visible.length) return;

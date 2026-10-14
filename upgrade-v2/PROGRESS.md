@@ -1,10 +1,10 @@
 # Nestlancer UI upgrade — PARTIAL
 
-**Batch 3 checkpoint: 2026-10-14.** Full scope remains **188 original HTML files / 181 screenshot-state pairings**. This is an implemented, tested partial delivery—not completion of the entire prototype.
+**Batch 4 checkpoint (resumed session): 2026-10-14.** Full scope remains **188 original HTML files / 181 screenshot-state pairings**. This is an implemented, tested partial delivery—not completion of the entire prototype.
 
 ## Repository / preview / PR
-- Repository: `/home/user/frontend-ui-upgrade`; branch: `arena/27579574-frontend-ui-upgrade`.
-- Original baseline: `5066dcade38c0bbb570576ffdca9a542b33b1665`.
+- Repository: `/home/user/frontend-ui-upgrade`; current branch: `arena/56822e1c-frontend-ui-upgrade` (resumed from `main@dfc0f42`). Earlier session branch: `arena/27579574-frontend-ui-upgrade`.
+- Original baseline: `5066dcade38c0bbb570576ffdca9a542b33b1665` (earlier branch only). `main@dfc0f42` carries byte-identical originals for all 188 pages and is used as the equivalent baseline by `validate.py`/`checkpoint.py` when the recorded commit is absent.
 - Initial checkpoint `cd09e90` committed and pushed after explicit authorization.
 - Existing draft PR: **[#6 — public-first implementation](https://github.com/nestlancer/frontend-ui-upgrade/pull/6)**. Batch 2 continues the same branch/PR; no second PR or production deployment.
 - Live preview: **Nestlancer prototype**, port **8000**, bound to `0.0.0.0`, serving only `proto/`.
@@ -16,14 +16,27 @@
 |---|---:|---:|---:|---:|---:|
 | Public/auth/entry | 35 | 15 | 12 | 3 | 20 |
 | Client | 52 | 2 | 0 | 2 | 50 |
-| Admin | 101 | 1 | 0 | 1 | 100 |
-| **Total** | **188** | **18** | **12** | **6** | **170** |
+| Admin | 101 | 2 | 1 | 1 | 99 |
+| **Total** | **188** | **19** | **13** | **6** | **169** |
 
 - All **9 landing routes** have substantive HTML implementation and base-page browser review.
-- Shared-only inherited changes: **170**, not page implementation. Verified protected/no-change: **0**.
-- Original screenshot states: **7 VERIFIED / 7 BLOCKED / 167 NOT_STARTED** (181 total).
+- Shared-only inherited changes: **169**, not page implementation. Verified protected/no-change: **0**.
+- Original screenshot states: **9 VERIFIED / 7 BLOCKED / 165 NOT_STARTED** (181 total).
 - Base-page QA passes on the six implemented-but-unverified pages. Exact screenshot fixtures differ; source screenshots are available, not missing.
 - Landing templates were not used as proxies for the web siblings. Batch 3 upgrades those independently; web case-study state is verified, while the web journal/article source-data mismatches remain blocked.
+
+## Session resume (2026-10-14): restoration from patch-file
+The earlier run was interrupted during batch 4. Its work arrived as `patch-file/01a1385c-a878-70d5-a165-da4227579574.patch` (279 diffs).
+- All **95 text diffs** applied cleanly to `main@dfc0f42`; every recorded application/ledger file matches the previous `DELIVERY_MANIFEST.csv` SHA-256.
+- The patch held **184 binary files without content** (`Binary files differ`). The two Geist woff2 fonts were restored byte-identically from `geist@1.7.2` (SHA-256 matches). **182 earlier evidence WebP screenshots are not recoverable**; their JSON results remain, and references to those images in older sections are historical. Batch 4 evidence below is freshly captured.
+- `qa-batch-4.cjs` was truncated mid-edit (unclosed loop) and was repaired.
+- QA toolchain recreated outside the repo (`/home/user/.cache/nl-qa`: puppeteer-core, @sparticuz/chromium, @axe-core/puppeteer). Chromium needs `LD_LIBRARY_PATH` pointing at the NSS libs extracted from `@sparticuz/chromium/bin/al2023.tar.br`.
+
+## Batch 4: admin dashboard (VERIFIED)
+- `proto/apps/admin/dashboard/index.html`: operator hierarchy, explicit snapshot notice, attention cards became real links to existing queues, unavailable 7/90/365-day ranges honestly disabled (30-day data unchanged), labeled charts/tables (`scope=col`, `aria-labelledby`), a native `<dialog>` local page search (source 072) opened from the button, the top search field, Ctrl/Cmd+K or `/`, with arrow navigation, Tab containment, Escape, return focus and a no-JS fallback. Search covers local prototype routes only, not server records.
+- Fixes found during resumed QA: (1) **Escape did not close the dialog after Tab cycling** (Chromium close-watcher ignores Escape after prevented Tab keydowns); `operator.js` now handles Escape explicitly. (2) `proto-motion.js` auto-tagged `<noscript>` as `.reveal`; NOSCRIPT is now excluded (shared, regression-tested).
+- QA: **10 layouts** (320/390/768/1440/1920 × light/dark), **8 axe checks** (base + open dialog) with 0 violations, 0 runtime/network errors, 11 interaction assertions, live/fresh reduced-motion and no-JS visibility. Source states 015 and 072 compared and VERIFIED (072 additionally lists Notifications from the existing sidebar).
+- All-page reruns: `validate.py` (188 pages: no missing protected text, no placeholder defects, no issues on changed pages; inherited issues now 203 unlabeled controls / 6 duplicate-ID groups / 1 h1-count) and `regression.cjs` (188 × 390/1440 reduced-motion: 0 errors, 0 overflow).
 
 ## Batch 3: four independently upgraded routes
 - `proto/apps/web/blog/index.html`: keeps its own ten cards and original conflicting totals (filter 110 / rail 106); real local search/category filtering, editorial cover system, semantic heading repair, explicit unavailable pagination/RSS. Source 002 has twelve cards: exact state remains blocked.
@@ -76,10 +89,10 @@ Three original vectors added: collaboration, correspondence and deployment pipel
 - No physical-device/screen-reader certification, production success, real bfcache restoration trace, remote visual-demo verification or A+ claim.
 
 ## Next exact balanced batch
-1. `proto/apps/admin/dashboard/index.html` — operator hierarchy and actual local global-search dialog; original screenshot 072 must be reviewed separately.
-2. `proto/apps/web/quotes/index.html` and `proto/apps/web/requests/index.html` — return to client work with existing records only.
-3. `proto/apps/admin/portfolio/index.html` — review source 082 analytics-panel state without inventing chart data.
-Then remaining public/auth/recovery/legal/verification siblings. Resolve seven blocked source states independently: admin 040/081, client 014/005, public 004/002/003. Keep current fixtures/defaults intact.
+1. `proto/apps/web/quotes/index.html` and `proto/apps/web/requests/index.html`: return to client work with existing records only.
+2. `proto/apps/admin/portfolio/index.html`: review source 082 analytics-panel state without inventing chart data.
+3. Public lane: `proto/apps/web/register/index.html`, `proto/apps/web/forgot-password/index.html`, `proto/apps/admin/login/index.html`, then recovery/legal/verification siblings.
+Resolve seven blocked source states independently: admin 040/081, client 014/005, public 004/002/003. Keep current fixtures/defaults intact.
 
 ## Delivery accounting
 - Full page/state ledgers: `PAGE_COVERAGE.csv`, `STATE_COVERAGE.csv`.
@@ -88,4 +101,4 @@ Then remaining public/auth/recovery/legal/verification siblings. Resolve seven b
 - Evidence is compact WebP/JSON. Dependency/browser caches live outside the repository. No original screenshot tree was duplicated wholesale.
 - One-shot migrations are historical recipes, not scripts to rerun on already upgraded pages. Continue with direct edits and fresh evidence.
 
-**Unmet full-completion gates:** 170 page implementations; 174 unverified screenshot states (including seven blocked); remote visual-reference gate; remaining accessibility and exact-state work.
+**Unmet full-completion gates:** 169 page implementations; 172 unverified screenshot states (including seven blocked); remote visual-reference gate; remaining accessibility and exact-state work.
