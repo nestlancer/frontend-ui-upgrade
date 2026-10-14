@@ -50,7 +50,7 @@
 ## Session resume (2026-10-14): restoration from patch-file
 The earlier run was interrupted during batch 4. Its work arrived as `patch-file/01a1385c-a878-70d5-a165-da4227579574.patch` (279 diffs).
 - All **95 text diffs** applied cleanly to `main@dfc0f42`; every recorded application/ledger file matches the previous `DELIVERY_MANIFEST.csv` SHA-256.
-- The patch held **184 binary files without content** (`Binary files differ`). The two Geist woff2 fonts were restored byte-identically from `geist@1.7.2` (SHA-256 matches). **182 earlier evidence WebP screenshots are not recoverable**; their JSON results remain, and references to those images in older sections are historical. Batch 4 evidence below is freshly captured.
+- The patch held **184 binary files without content** (`Binary files differ`). The two Geist woff2 fonts were restored byte-identically from `geist@1.7.2` (SHA-256 matches). **The earlier evidence WebP screenshots were later recovered from draft PR #6 (`43efb34`): 179 files, each matching the SHA-256 in the earlier manifest; `client-final-mobile.webp` was regenerated.** (Original note: these were initially unrecoverable from the patch alone); their JSON results remain, and references to those images in older sections are historical. Batch 4 evidence below is freshly captured.
 - `qa-batch-4.cjs` was truncated mid-edit (unclosed loop) and was repaired.
 - QA toolchain recreated outside the repo (`/home/user/.cache/nl-qa`: puppeteer-core, @sparticuz/chromium, @axe-core/puppeteer). Chromium needs `LD_LIBRARY_PATH` pointing at the NSS libs extracted from `@sparticuz/chromium/bin/al2023.tar.br`.
 
