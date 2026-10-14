@@ -1,0 +1,116 @@
+[
+  {
+    "url": "https://codepen.io",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://codemyui.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://uiverse.io",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://bootsnipp.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://animate.style",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://animista.net",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://gsap.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://ianlunn.github.io/Hover",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://michalsnik.github.io/aos",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://lottiefiles.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://minimamente.com/project/magic",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://keyframes.app",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://magicui.design",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://ui-layout.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://ui.shadcn.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://ui.aceternity.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://cssgradient.io",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://glassmorphism.com",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  },
+  {
+    "url": "https://neumorphism.io",
+    "status": "BLOCKED",
+    "reason": "<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>",
+    "transport": "sandbox urllib"
+  }
+]

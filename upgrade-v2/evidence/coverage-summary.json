@@ -1,0 +1,41 @@
+{
+  "status": {
+    "NOT_STARTED": 170,
+    "IMPLEMENTED_UNVERIFIED": 6,
+    "VERIFIED": 12
+  },
+  "surfaces": {
+    "public": {
+      "total": 35,
+      "edited": 15,
+      "status": {
+        "NOT_STARTED": 20,
+        "VERIFIED": 12,
+        "IMPLEMENTED_UNVERIFIED": 3
+      }
+    },
+    "client": {
+      "total": 52,
+      "edited": 2,
+      "status": {
+        "NOT_STARTED": 50,
+        "IMPLEMENTED_UNVERIFIED": 2
+      }
+    },
+    "admin": {
+      "total": 101,
+      "edited": 1,
+      "status": {
+        "NOT_STARTED": 100,
+        "IMPLEMENTED_UNVERIFIED": 1
+      }
+    }
+  },
+  "html_changed": 18,
+  "shared_only": 170,
+  "states": {
+    "BLOCKED": 7,
+    "NOT_STARTED": 167,
+    "VERIFIED": 7
+  }
+}

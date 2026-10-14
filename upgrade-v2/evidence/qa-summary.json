@@ -1,0 +1,236 @@
+{
+  "layouts": 62,
+  "overflow": [],
+  "clipping": [],
+  "errors": [],
+  "axe": [
+    {
+      "path": "apps/landing/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/services/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/services/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/services/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/services/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/pricing/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/pricing/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/pricing/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/pricing/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/web/login/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/web/login/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/web/login/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/web/login/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/landing/portfolio/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/web/projects/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/web/projects/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "apps/web/projects/index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "apps/web/projects/index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "index.html",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "index.html",
+      "width": 390,
+      "violations": []
+    },
+    {
+      "path": "index.html",
+      "width": 1440,
+      "violations": []
+    }
+  ],
+  "interactions": [
+    {
+      "name": "mobile-menu-open",
+      "value": "true"
+    },
+    {
+      "name": "menu-Escape-return-focus",
+      "value": true
+    },
+    {
+      "name": "service-disclosure-keyboard",
+      "closed": true
+    },
+    {
+      "name": "faq-keyboard",
+      "open": true
+    },
+    {
+      "name": "login-required",
+      "value": true
+    },
+    {
+      "name": "password-toggle",
+      "value": "text"
+    },
+    {
+      "name": "login-demo-only",
+      "url": "http://localhost:8000/apps/web/login/index.html",
+      "feedback": "This prototype cannot authenticate an account. Explore the sample client dashboard"
+    },
+    {
+      "name": "refund-dialog-open",
+      "value": {
+        "open": true,
+        "focusInside": true,
+        "animations": [
+          "studio-dialog"
+        ]
+      }
+    },
+    {
+      "name": "refund-preview",
+      "value": "Local preview reviewed. No action was executed and the original payment data is unchanged."
+    },
+    {
+      "name": "refund-Escape-return-focus",
+      "value": true
+    },
+    {
+      "name": "process-stage",
+      "value": "Frontend + backend API"
+    },
+    {
+      "name": "portfolio-filter",
+      "value": [
+        "Fitness Tracking App"
+      ]
+    },
+    {
+      "name": "project-empty-filter",
+      "value": "No matching projects on this page. Clear your search or choose another status or discipline.",
+      "visible": 0
+    },
+    {
+      "name": "project-filter-reset",
+      "visible": 1
+    }
+  ]
+}

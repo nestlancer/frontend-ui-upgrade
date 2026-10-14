@@ -1,0 +1,8 @@
+[
+  "apps/landing/about/index.html",
+  "apps/landing/contact/index.html",
+  "apps/landing/portfolio/[id]/index.html",
+  "apps/landing/blog/index.html",
+  "apps/landing/blog/[slug]/index.html",
+  "apps/web/contact/index.html"
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "apps/admin/dashboard/index.html",
+    "width": 1440,
+    "captureMode": "full-page",
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/admin/dashboard/index.html",
+    "width": 390,
+    "captureMode": "full-page",
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  }
+]

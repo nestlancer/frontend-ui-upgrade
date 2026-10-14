@@ -23,8 +23,25 @@
 (function () {
   var d = document, root = d.documentElement;
   var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
-  if (mq && mq.matches) { root.classList.add('nl-still'); return; }
-  root.classList.add('nl-motion');
+  if (mq && mq.matches) root.classList.add('nl-still');
+  else root.classList.add('nl-motion');
+  var observers = [];
+  // Preference changes stop all choreography immediately. Do not replay a page
+  // when motion is re-enabled; leave content in its settled, readable state.
+  if (mq) mq.addEventListener('change', function () {
+    root.classList.remove('nl-motion');
+    root.classList.add('nl-still');
+    observers.forEach(function (io) { io.disconnect(); });
+    revealAll();
+  });
+  window.addEventListener('pageshow', function (ev) {
+    if (ev.persisted) { revealAll(); root.classList.remove('nl-motion'); }
+  });
+  window.addEventListener('pagehide', function () {
+    observers.forEach(function (io) { io.disconnect(); });
+  });
+  // Fail open even if initialization is interrupted before nl-live is applied.
+  setTimeout(function () { if (!root.classList.contains('nl-live')) { revealAll(); root.classList.remove('nl-motion'); } }, 2500);
 
   var ENTRANCE = /^nl-(block|rise|row|fill|count|draw|area|grow|sweep|pop|head|hero|tile|ind|pill)/;
   var VIEW_FILL = 0.94;            // share of the viewport treated as "first screen"
@@ -87,6 +104,7 @@
   /* ---------------------------------------------------------------- charts */
   function tagCharts() {
     each('svg', d, function (svg) {
+      if (svg.closest('[data-artwork]')) return; // original artwork is never a chart
       if (svg.getAttribute('stroke') === 'currentColor') return;          // icon
       var vb = svg.getAttribute('viewBox') || '';
       if (vb === '0 0 32 32' || vb === '0 0 24 24') return;              // logo / glyph
@@ -124,6 +142,7 @@
 
   /* --------------------------------------------------------- choreography */
   function choreograph() {
+    if (mq && mq.matches) { revealAll(); return; }
     // Only outermost .reveal blocks animate; nested ones play with their parent.
     var blocks = Array.prototype.filter.call(d.querySelectorAll('.reveal'), function (el) {
       return !(el.parentElement && el.parentElement.closest('.reveal'));
@@ -154,7 +173,8 @@
         en.target.classList.add('is-in');
         io.unobserve(en.target);
       });
-    }, { threshold: 0.06, rootMargin: '0px 0px -4% 0px' });
+    }, { root: (function () { var pane = d.querySelector('body.app-body .main'); return pane && pane.scrollHeight > pane.clientHeight + 4 && /auto|scroll/.test(getComputedStyle(pane).overflowY) ? pane : null; })(), threshold: 0.06, rootMargin: '0px 0px -4% 0px' });
+    observers.push(io);
     later.forEach(function (el) { io.observe(el); });
   }
 
