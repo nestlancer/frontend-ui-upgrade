@@ -9,10 +9,10 @@
 
 ### Results
 - 188 original pages compared; all still exist at their original routes.
-- Fourteen HTML files changed; no original text nodes lost on any of the 188 pages.
+- Eighteen HTML files changed; no original text nodes lost on any of the 188 pages.
 - No original progress-bar business styles removed.
 - Every original business link, form action, source image, input value, and domain data attribute retained. Original route/fragment validation reports zero missing targets.
-- The only removed resource mappings are Google Fonts/preconnect links on the fourteen edited pages. Same font family now loads from local OFL-licensed WOFF2 assets through shared CSS.
+- The only removed resource mappings are Google Fonts/preconnect links on the eighteen edited pages. Same font family now loads from local OFL-licensed WOFF2 assets through shared CSS.
 - Original ₹59,000 plan, ≈30 days, 2 revision rounds, custom quote / free consult semantics remain intact.
 - Original NL-204 68% public preview, 40% client completion, ₹20,880 next payment and all admin payment amounts/IDs remain verbatim. Counters never animate through fabricated values.
 
@@ -44,7 +44,15 @@ Full additions are enumerated by page in `evidence/data-comparison.json`:
 
 - Public `004-contact.webp`: source uses Subject with General selected and no Company field; existing HTML uses Company and Topic with New project inquiry selected. Existing fields/options/default are retained. A separate source-matching form state has not been reconstructed.
 
-Source screenshots are available and inspected. The unresolved issue is separate state/fixture reconstruction and provenance—not permission to replace the current record. These four mapped states are not verified; their pages remain IMPLEMENTED_UNVERIFIED despite passing base-page browser checks. No record has been invented to close this gap.
+Source screenshots are available and inspected. The unresolved issue is separate state/fixture reconstruction and provenance—not permission to replace the current record. These seven mapped states are not verified; their pages remain IMPLEMENTED_UNVERIFIED despite passing base-page browser checks. No record has been invented to close this gap.
 
 ## Limits
 Text-node preservation can establish retained facts, not their original correctness or live-system validity. Full screenshot-state data reconstruction, endpoint behavior, and production authentication are outside the delivered partial slice. Remaining page-specific accessibility/data associations need implementation, not just preservation.
+
+## Batch 3 preservation and newly reviewed mismatches
+All 188 pages compared again: zero missing original text, business link/default/progress losses. Only external Google Fonts resource links removed on the four newly edited routes; local licensed font files remain.
+- Web journal: all ten original cards and template hrefs retained. Filter totals 110/30 and rail totals 106/26 remain inconsistent by design of the original fixture; the UI explicitly discloses this, rather than silently correcting values. Screenshot 002 has twelve cards / 110 total, so source state is BLOCKED.
+- Full web article: retains **8 min read**, **6-engineer squad**, 19/14/8/4 timing breakdown, median **4m 40s**, p95 **6m 10s**, **9 → 34** deploys and **31%** change-failure reduction, every code line and two Arjun comments/dates. Screenshot 003's **2 min** differs; source state BLOCKED.
+- Web case study: original **14 weeks**, **30/40/30**, **42%**, **₹6.2Cr**, **11 days**, **0** audit findings, **NL-CTR-2026-000031**, **30-day** defect window and client quote retained. These are original fixture claims, not newly invented or independently validated production results. New Gallery is explicitly an original illustrative workflow, not a customer photograph.
+- Inbox: original **Ananya Iyer**, all four previews, four Riya thread messages, message times/date, 6/2 mailbox counts and 9/32 chrome counts retained. Screenshot 005 shows Samira Patel / two previews and different thread snippets: source state BLOCKED.
+- Added interface copy describes local limits, counts only visible supplied records, and labels controls/errors. Drafts are never appended as sent messages, serialized, logged, persisted or transmitted; browser tests confirm unchanged messages/storage and zero submission requests. Clipboard writes require an explicit click and have a manual-copy fallback.

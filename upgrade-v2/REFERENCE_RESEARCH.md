@@ -97,3 +97,8 @@ Initial search-result discovery links (not proof of fetch/render):
 | R7 accessible errors | Labeled original fields, error relationships and honest local result | Empty/email validation + focus + no transmission/storage |
 
 Original screenshot inspection includes 014/015 marketing pages and 004 contact. 002/003/008 are visual references for sibling content, **not** state verification of the unedited web blog/case-study routes. Every batch-2 original HTML was inspected and captured before editing.
+
+## Batch 3 application of established references
+No new framework/source-code import. Reuse of previously fetched patterns: R4 native reduced-motion lifecycle (settled/no-JS tests); R5 restrained cover/control response; R6 supplied-record-only filters for ten articles and four conversation previews; R7 labeled input, adjacent explanatory/error text, focusable feedback. Article contents links and inbox previews use native links/buttons, not a simulated tab widget. Copy handlers catch permission/secure-context failures and reveal manually selectable content.
+
+All four route HTML bodies and 390/1440 before renders were inspected independently. Existing compact public 002/003/008 source references and full client 005 source screenshot were reviewed; no landing-page body was copied into a web sibling. Local evidence: `batch3-browser-qa.json`, `batch3-before-*`, `batch3-after-*`. Remote visual-reference gate remains blocked; no additional remote visual inspection claim.

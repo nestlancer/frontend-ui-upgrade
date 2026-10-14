@@ -9,11 +9,18 @@ BASE=json.loads((OUT/'data-baseline.json').read_text())['commit']
 def savecsv(path,rows):
  with path.open('w',newline='') as f:
   w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n");w.writeheader();w.writerows(rows)
-first=json.loads((OUT/'test-paths.json').read_text());second=json.loads((OUT/'batch-2-paths.json').read_text());edited=['proto/'+p for p in first+second]
+first=json.loads((OUT/'test-paths.json').read_text());second=json.loads((OUT/'batch-2-paths.json').read_text());third=json.loads((OUT/'batch-3-paths.json').read_text());edited=['proto/'+p for p in first+second+third]
 # Base rendering is distinct from exact original screenshot-state equivalence.
 blocked={4:'Mapped payment screenshots use different records from the preserved page fixture',6:'Mapped project screenshot uses a different record from the preserved page fixture',13:'Source 004-contact uses Subject / General; preserved HTML has Company and Topic / New project inquiry'}
+blocked.update({14:'Source 002 has twelve cards and 110 total; preserved web fixture has ten cards and conflicting 110/106 totals',15:'Source 003 reads 2 min; preserved full article reads 8 min and contains additional source figures',17:'Source 005 shows Samira Patel and two conversation previews; preserved fixture is Ananya Iyer with four previews and a Riya thread'})
 arts=['A1;A3;A4;A5;A6','A2','','A3','','A3;A4;A5;A6','','','A7','A8','A6','A3;A5;A6;A7;A9','A9','A8']
 refs=['R1;R2;R4;R5','R2;R4;R5','R2;R4;R5','R4;R5','R3;R4;R5','R2;R4;R5;R6','R4;R5;R6','R4;R5','R2;R4;R5','R2;R4;R5','R4;R5','R4;R5;R6','R4;R5','R4;R5;R7']
+arts += ['A3;A5;A6;A7;A9','A9','A6;A10','']
+refs += ['R4;R5;R6','R4;R5','R4;R5;R7','R4;R6;R7']
+qa3=json.loads((OUT/'evidence/batch3-browser-qa.json').read_text())
+assert len(qa3['layouts'])==40 and len(qa3['axe'])==16
+assert not qa3['errors'] and not any(x['violations'] for x in qa3['axe'])
+assert not any(x['hidden'] or ('reduced' in x['mode'] and x['running']) for x in qa3['visibility'])
 qa=json.loads((OUT/'evidence/batch2-browser-qa.json').read_text())
 assert len(qa['layout'])==60 and len(qa['axe'])==24
 assert not qa['errors'] and not any(x['violations'] for x in qa['axe'])
@@ -28,14 +35,17 @@ savecsv(OUT/'PAGE_COVERAGE.csv',pages)
 states=list(csv.DictReader((OUT/'STATE_COVERAGE.csv').open()))
 for row in states:
  if row['proto_path'] not in edited:continue
- i=edited.index(row['proto_path']);reason=blocked.get(i,'');stem=f'final-{i}' if i<8 else f'batch2-after-{i-8}'
- row.update(status='BLOCKED' if reason else 'VERIFIED',trigger_or_url='/'+row['proto_path'].removeprefix('proto/'),evidence=f'upgrade-v2/evidence/{stem}-390.webp;upgrade-v2/evidence/{stem}-1440.webp;upgrade-v2/evidence/'+('browser-qa.json' if i<8 else 'batch2-browser-qa.json'),blocker=reason+'; base-page QA passes, exact original state remains unimplemented.' if reason else '')
+ i=edited.index(row['proto_path']);reason=blocked.get(i,'');stem=f'final-{i}' if i<8 else f'batch2-after-{i-8}' if i<14 else f'batch3-after-{i-14}'
+ row.update(status='BLOCKED' if reason else 'VERIFIED',trigger_or_url='/'+row['proto_path'].removeprefix('proto/'),evidence=f'upgrade-v2/evidence/{stem}-390.webp;upgrade-v2/evidence/{stem}-1440.webp;upgrade-v2/evidence/'+('browser-qa.json' if i<8 else 'batch2-browser-qa.json' if i<14 else 'batch3-browser-qa.json'),blocker=reason+'; base-page QA passes, exact original state remains unimplemented.' if reason else '')
 savecsv(OUT/'STATE_COVERAGE.csv',states)
 # Retain existing motion records, adding only this reviewed batch.
 motions=list(csv.DictReader((OUT/'MOTION_REGISTER.csv').open()));motions=[x for x in motions if x['motion_id'] not in [f'M{i}' for i in range(9,15)]]
 spec=[('Collaboration scene + workflow section reveals','.about-art; .studio-workflow; .reveal','load/scroll/hover/focus/anchor','opacity/transform','640-1050','0-160'),('Correspondence scene + native FAQ','.contact-art; .handoff-faq; .reveal','load/scroll/hover/focus/keyboard','opacity/transform','640-900','0-160'),('Case-study scene + section navigation','.case-art; .case-nav; .reveal','load/scroll/hover/focus/anchor','opacity/transform','640-950','0-180'),('Editorial cover response + real local filters','.journal-cover img; [data-blog-list]','load/scroll/hover/focus/input/keyboard','opacity/transform','180-900','0-240'),('Quiet article entrance, static reading body','.article-heading; .article-cover; .article-toc','load/anchor/keyboard','opacity/transform','640-900','0-240'),('Quiet form entrance and correspondence art','.contact-support-art; [data-demo-contact]','load/keyboard/input/submit','opacity/transform','640-900','0-120')]
 for j,(purpose,sel,trigger,prop,duration,delay) in enumerate(spec):
  motions.append(dict(motion_id=f'M{j+9}',page_paths=edited[j+8],selector=sel,trigger=trigger,property=prop,duration_ms=duration,delay_ms=delay,easing='var(--ease-out); inherited --ease-expo',repeat='one-shot; no new continuous loops',mobile_behavior='responsive stacking; native touch/keyboard controls',reduced_motion_behavior='immediate readable content; no choreography; preference changes tested',owner_file='proto/shared/assets/editorial.css;proto/shared/assets/studio.js;proto/shared/assets/proto-motion.js',status='VERIFIED_BASE_PAGE',evidence='upgrade-v2/evidence/batch2-browser-qa.json;upgrade-v2/evidence/batch2-after-'+str(j)+'-390.webp'))
+motions=[x for x in motions if x['motion_id'] not in ['M15','M16','M17','M18']]
+for j,sel in enumerate(['.web-journal .journal-card; [data-content-filter]','.web-article .article-heading; .article-toc; [data-content-toggle]','.web-case-figure; .web-case-gallery; .case-nav','.inbox-workspace; [data-conversation]; [data-local-draft]']):
+ motions.append(dict(motion_id=f'M{j+15}',page_paths=edited[j+14],selector=sel,trigger='load/scroll/hover/focus/keyboard/input',property='opacity/transform',duration_ms='180-950',delay_ms='0-240',easing='var(--ease-out/--ease-expo)',repeat='one-shot; no running animations in settled sample',mobile_behavior='responsive stacking; focus and return navigation',reduced_motion_behavior='no running motion; visible content; JS-only controls disabled without JS',owner_file='proto/shared/assets/editorial.css;proto/shared/assets/inbox.css;proto/shared/assets/content-tools.js;proto/shared/assets/proto-motion.js',status='VERIFIED_BASE_PAGE',evidence='upgrade-v2/evidence/batch3-browser-qa.json;upgrade-v2/evidence/batch3-after-'+str(j)+'-390.webp'))
 savecsv(OUT/'MOTION_REGISTER.csv',motions)
 counts={'status':dict(Counter(r['status'] for r in pages)),'surfaces':{},'html_changed':sum(r['html_changed']=='true' for r in pages),'shared_only':sum(r['shared_only']=='true' for r in pages),'states':dict(Counter(r['status'] for r in states))}
 for surface in ['public','client','admin']:

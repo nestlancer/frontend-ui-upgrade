@@ -88,13 +88,13 @@ Fresh-load `getAnimations()` sampled at approximately 100ms; settled sample at a
 
 `validate.py` parsed all 188 HTML files and checked local href/src/action targets, fragments, literal bracket directories, duplicate IDs, input labeling, h1 count, missing alt, text/default/data preservation and original progress styles:
 - Zero missing local targets or fragments.
-- Zero static issues on all fourteen edited pages.
-- Remaining inherited issues elsewhere: **208 unlabeled controls**, **six duplicate-ID groups across three files**, **one h1-count issue**. Exact paths/selectors in `static-validation.json`.
+- Zero static issues on all eighteen edited pages.
+- Remaining inherited issues elsewhere: **204 unlabeled controls**, **six duplicate-ID groups across three files**, **one h1-count issue**. Exact paths/selectors in `static-validation.json`.
 - Original headings/data preserved; no new rendered undefined/NaN or lorem-ipsum text was introduced by the implementation. Existing placeholder attributes remain legitimate form hints.
 
 ## Limits / failed completion gates
-- **174 pages have no page-level implementation**; shared changes do not close those pages.
-- 6 of 181 original screenshot states verified; 4 fixture-mismatched states blocked from sign-off; 171 not implemented/reviewed for state sign-off.
+- **170 pages have no page-level implementation**; shared changes do not close those pages.
+- 7 of 181 original screenshot states verified; 7 fixture-mismatched states blocked from sign-off; 167 not implemented/reviewed for state sign-off.
 - No full A+ score, official grade, or WCAG compliance claim. Human review used local screenshots/DOM, not a screen-reader session or physical mobile device.
 - Remote reference demo browser access failed. Actual search/doc fetch research succeeded; remote visual-reference gate remains incomplete.
 - Outstanding pages/states, theme/a11y problems on untouched pages, and exact screenshot-data reconstruction remain real work.
@@ -112,3 +112,25 @@ LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/final-check.cjs
 ```
 
 If caches are absent, install `puppeteer-core`, `@sparticuz/chromium`, `@axe-core/puppeteer` under a local excluded cache; Python venv uses beautifulsoup4/Pillow. On this minimal environment the Chromium package's `al2023.tar.br` supplies missing NSS/NSPR libraries. Application preview itself needs only Python's static server, no Node dependencies or build step.
+
+## Batch 3 final QA — four independent routes
+`qa-batch-3.cjs` / `evidence/batch3-browser-qa.json`: **40 layouts** (four pages × five widths 320/390/768/1440/1920 × light/dark), **16 axe checks**, zero measured overflow/clipping/broken eager images/local errors/axe violations. Twelve live-reduced/fresh-reduced/no-JS visibility checks pass. JavaScript-only controls stay disabled without the runtime. Early named animations and three offscreen reveals were sampled; inbox is a compact app entrance, not a marketing scroll sequence. All four settled animation samples are empty after refinement.
+
+Assertions cover ten-card journal search/category/empty/reset; full article contents link, two synchronized Bookmark controls and reload reset; forced clipboard rejection with visible selectable URL fallback; project-note copy handler with a **stubbed** Clipboard API (not OS clipboard certification); inbox empty/reset, Enter selection and focus return; empty draft errors, Shift+Enter newline, Enter local check, unchanged source messages/storage and zero document/fetch/XHR/non-GET submission requests.
+
+Read-only comments preserve original comments/counts; no fake posting, uploads or remote sharing. The separate global search is disabled on the inbox with an explanation. Native existing destination links remain intact.
+
+### Review fixes / evidence caveats
+- Removed malformed nested journal headings without losing navigation content.
+- Made each journal card reveal on scroll rather than animating the entire long listing at once.
+- Disabled inherited article live-badge ping and inbox CTA pulsing; retained restrained entry/hover/focus.
+- Corrected mobile case metrics to a tested compact 2×2 layout.
+- Visual inspection found icon-button padding squeezing SVGs to **2px**. Scoped zero padding / 16px SVG sizing restores usable icons; final 40/16 matrix rerun passes.
+- A full-page Chromium capture longer than 8192px repeated the page top into the footer. `capture.cjs` now stitches real scrolled viewport tiles for documents over 7500px, with reduced motion settled and sticky header/fab rendered only in the first tile. Capture mode is recorded in dimensions JSON. This is a screenshot workaround, not a production DOM change.
+- The first internal inbox-bottom image captured entry motion too early. The QA runner now waits for settlement; final `batch3-inbox-desktop-bottom.webp` shows actual messages and composer after internal scrolling.
+
+Source 002 journal, 003 article and client 005 inbox differ from preserved fixtures and remain BLOCKED. Web case-study 008 was reviewed with original facts plus explicitly illustrative Gallery: VERIFIED, not pixel-identical photography or independent business-result validation.
+
+All-page `regression.cjs` rerun: 188 × 390/1440 = 376 smoke checks, no overflow/local errors; dialog Tab containment, chart isolation and persisted-pageshow simulation still pass. Final scoped icon adjustments are covered by the four-page matrix; earlier pages do not load the new runtime/inbox CSS. Earlier focused matrices remain historical evidence, not newly repeated axe runs.
+
+Rerun: `LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/qa-batch-3.cjs`. Full captures: `PATHS=upgrade-v2/batch-3-paths.json LD_LIBRARY_PATH=/home/user/.cache/nl-qa/libs/lib node upgrade-v2/capture.cjs batch3-after`.

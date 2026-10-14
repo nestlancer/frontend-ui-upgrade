@@ -1,6 +1,6 @@
 # Original artwork and local resources
 
-All nine SVGs were hand-authored for this implementation on 2026-10-14. They use only original vector geometry; no stock, scraped, generated-photographic, or third-party template assets. No customer screenshot/result claims. Source generators: `make-art.py` and `batch-2-art.py`. Total SVG payload: 14,270 bytes; largest: 3,398 bytes. No base64 art, external images, or additional animation library.
+All ten SVGs were hand-authored for this implementation on 2026-10-14. They use only original vector geometry; no stock, scraped, generated-photographic, or third-party template assets. No customer screenshot/result claims. Source generators: `make-art.py` and `batch-2-art.py`. Total SVG payload: 15,385 bytes; largest: 3,398 bytes. No base64 art, external images, or additional animation library.
 
 Paths below are relative to `proto/shared/assets/art/`.
 
@@ -29,3 +29,8 @@ Geist Sans and Geist Mono variable WOFF2 fonts copied from the official `geist` 
 
 ## Verification
 Images render locally in Chromium; width/height attributes reserve space. Lazy covers verified through full-page scroll capture. Final public captures: `evidence/final-{0,1,5}-{390,1440}.webp`; auth: `final-3-*`. Art overlay is excluded from chart detection. `shared-regression.json`: art/chart isolation true; existing admin dashboard still has three tagged charts.
+
+## Batch 3 integration
+**A10 — `payment-flow.svg`**: original hand-authored SVG geometry (source is the SVG itself), 960×300. Web case-study Gallery depicts the supplied webhook → queue → reconciliation-ledger → CSV-export narrative. Descriptive alt, visible ordered labels and explicit illustrative-not-production caption. No logos, figures, customer screens or third-party imagery fabricated. Fluid image; labels become two columns on phones. M17; `batch3-after-2-*` and browser QA.
+
+A3/A5/A6/A7/A9 reused as clearly illustrative web journal covers; A9 full-article media; A6 web case-study hero. No new artwork in the client inbox. Ten local SVGs remain small; no animation/image dependency added.

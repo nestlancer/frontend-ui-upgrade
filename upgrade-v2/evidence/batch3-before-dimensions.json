@@ -1,0 +1,66 @@
+[
+  {
+    "path": "apps/web/blog/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/web/blog/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  },
+  {
+    "path": "apps/web/messages/inbox/index.html",
+    "width": 1440,
+    "dimensions": {
+      "width": 1440,
+      "scroll": 1440
+    }
+  },
+  {
+    "path": "apps/web/messages/inbox/index.html",
+    "width": 390,
+    "dimensions": {
+      "width": 390,
+      "scroll": 390
+    }
+  }
+]

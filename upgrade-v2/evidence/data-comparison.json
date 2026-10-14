@@ -1340,6 +1340,484 @@
     ]
   },
   {
+    "page": "proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      ".": 1,
+      "Menu": 1,
+      "Preview-only reactions require JavaScript. Nothing is saved to an account and original counts do not change.": 1,
+      "Page link": 1,
+      "Illustrative pipeline sketch · original article figures are retained below.": 1,
+      "In this article": 1,
+      "Where we started": 1,
+      "Architecture before": 1,
+      "Migration timeline": 1,
+      "Patterns we applied": 1,
+      "Code sketch from the cutover": 1,
+      "Profile before you optimize": 1,
+      "Results": 1,
+      "Retrospective checklist": 1,
+      "Lesson": 1,
+      "Original comments are read-only. Comment posting, external sharing and RSS are not connected.": 1,
+      "Explore the prototype sign-in": 1,
+      "Related posts currently link back to this prototype article.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "../../login/index.html"
+      },
+      {
+        "attribute": "data-content-toggle",
+        "tag": "button",
+        "value": "Bookmark"
+      },
+      {
+        "attribute": "data-content-toggle",
+        "tag": "button",
+        "value": "Bookmark"
+      },
+      {
+        "attribute": "data-copy-page",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "data-copy-page",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "data-content-status",
+        "tag": "p",
+        "value": ""
+      },
+      {
+        "attribute": "data-share-output",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-1"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-2"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-3"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-4"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-5"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-6"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-7"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-8"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#read-section-9"
+      },
+      {
+        "attribute": "data-content-toggle",
+        "tag": "button",
+        "value": "Like"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/blog/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Search this preview": 1,
+      "This route contains 10 local article cards. Original collection totals disagree (110 in the filter, 106 in the rail); they are preserved, not live counts. Other pages and RSS are unavailable; category and article links open shared templates. Covers are illustrations. Filtering requires JavaScript.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-content-filter",
+        "tag": "form",
+        "value": ""
+      },
+      {
+        "attribute": "data-item-name",
+        "tag": "form",
+        "value": "articles"
+      },
+      {
+        "attribute": "data-list-id",
+        "tag": "form",
+        "value": "web-articles"
+      },
+      {
+        "attribute": "data-content-query",
+        "tag": "input",
+        "value": ""
+      },
+      {
+        "attribute": "data-content-category",
+        "tag": "select",
+        "value": ""
+      },
+      {
+        "attribute": "value",
+        "tag": "option",
+        "value": ""
+      },
+      {
+        "attribute": "value",
+        "tag": "option",
+        "value": "Business"
+      },
+      {
+        "attribute": "value",
+        "tag": "option",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "value",
+        "tag": "option",
+        "value": "Design"
+      },
+      {
+        "attribute": "value",
+        "tag": "option",
+        "value": "Technology"
+      },
+      {
+        "attribute": "data-unavailable",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-content-result",
+        "tag": "p",
+        "value": ""
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "Case Studies"
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/deployment-pipeline.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-commerce.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/studio-collaboration.svg"
+      }
+    ]
+  },
+  {
     "page": "proto/apps/web/contact/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
@@ -1490,6 +1968,311 @@
     ]
   },
   {
+    "page": "proto/apps/web/messages/inbox/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Local message preview. Four conversations are supplied; original mailbox counts are retained. Only Riya’s conversation contains a full thread. Replies are never sent or saved.": 1,
+      "Open Payments ops — Razorpay settlement and webhooks GROUP": 1,
+      "Open Riya Kapoor DIRECT": 1,
+      "Open LMS delivery — NL-204 GROUP": 1,
+      "Open Studio announcements GROUP": 1,
+      "← Conversations": 2,
+      "Use sample text. Send and Enter only check this draft locally; Shift+Enter adds a line. Nothing is sent or saved. JavaScript is required.": 1,
+      "Conversation preview": 1,
+      "This is the existing list preview. Full messages for this conversation are not included in this prototype.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/inbox.css"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "../new/index.html"
+      },
+      {
+        "attribute": "data-content-filter",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-item-name",
+        "tag": "div",
+        "value": "conversations"
+      },
+      {
+        "attribute": "data-list-id",
+        "tag": "div",
+        "value": "conversation-list"
+      },
+      {
+        "attribute": "data-content-query",
+        "tag": "input",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "search"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "div",
+        "value": "GROUP"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "div",
+        "value": "GROUP"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "div",
+        "value": "GROUP"
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-filter-item",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-conversation",
+        "tag": "button",
+        "value": "0"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "div",
+        "value": "DIRECT"
+      },
+      {
+        "attribute": "data-conversation",
+        "tag": "button",
+        "value": "1"
+      },
+      {
+        "attribute": "data-conversation",
+        "tag": "button",
+        "value": "2"
+      },
+      {
+        "attribute": "data-conversation",
+        "tag": "button",
+        "value": "3"
+      },
+      {
+        "attribute": "data-content-result",
+        "tag": "p",
+        "value": ""
+      },
+      {
+        "attribute": "data-back-to-list",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "data-back-to-list",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-draft",
+        "tag": "form",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "submit"
+      },
+      {
+        "attribute": "data-snippet-text",
+        "tag": "blockquote",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/portfolio/fintech-payments-hub/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Illustrative operations interface · not a customer screenshot.": 1,
+      "Overview": 1,
+      "Outcomes": 1,
+      "Gallery": 1,
+      "01 · Razorpay webhooks": 1,
+      "02 · Queues": 1,
+      "03 · Reconciliation ledger": 1,
+      "04 · CSV exports": 1,
+      "Original process illustration based on this case’s description. Not a customer screenshot or a production architecture diagram.": 1,
+      "Your project note": 1,
+      "Local scratchpad only. Copy your note before opening Contact; it is not sent, saved or carried over.": 1,
+      "Copy note": 1,
+      "Preview-only reactions require JavaScript. Nothing is saved to an account and original counts do not change.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/editorial.css"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#case-section-1"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#case-section-2"
+      },
+      {
+        "attribute": "data-content-toggle",
+        "tag": "button",
+        "value": "Like"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../../shared/assets/art/payment-flow.svg"
+      },
+      {
+        "attribute": "data-copy-note",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "data-content-status",
+        "tag": "p",
+        "value": ""
+      }
+    ]
+  },
+  {
     "page": "proto/apps/web/projects/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
@@ -1596,7 +2379,11 @@
       "Case study ↗": 1,
       "Journal ↗": 1,
       "Article ↗": 1,
-      "Contact form ↗": 1
+      "Contact form ↗": 1,
+      "Web journal ↗": 1,
+      "Full article ↗": 1,
+      "Full case study ↗": 1,
+      "Client inbox ↗": 1
     },
     "removed_attributes": [
       {
@@ -1620,6 +2407,11 @@
         "attribute": "href",
         "tag": "link",
         "value": "shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/web/blog/index.html"
       },
       {
         "attribute": "href",
@@ -1685,6 +2477,21 @@
         "attribute": "href",
         "tag": "a",
         "value": "./apps/landing/blog/[slug]/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/web/portfolio/fintech-payments-hub/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/web/messages/inbox/index.html"
       }
     ]
   }

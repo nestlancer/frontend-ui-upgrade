@@ -1,25 +1,25 @@
 {
   "status": {
-    "NOT_STARTED": 174,
-    "IMPLEMENTED_UNVERIFIED": 3,
-    "VERIFIED": 11
+    "NOT_STARTED": 170,
+    "IMPLEMENTED_UNVERIFIED": 6,
+    "VERIFIED": 12
   },
   "surfaces": {
     "public": {
       "total": 35,
-      "edited": 12,
+      "edited": 15,
       "status": {
-        "NOT_STARTED": 23,
-        "VERIFIED": 11,
-        "IMPLEMENTED_UNVERIFIED": 1
+        "NOT_STARTED": 20,
+        "VERIFIED": 12,
+        "IMPLEMENTED_UNVERIFIED": 3
       }
     },
     "client": {
       "total": 52,
-      "edited": 1,
+      "edited": 2,
       "status": {
-        "NOT_STARTED": 51,
-        "IMPLEMENTED_UNVERIFIED": 1
+        "NOT_STARTED": 50,
+        "IMPLEMENTED_UNVERIFIED": 2
       }
     },
     "admin": {
@@ -31,11 +31,11 @@
       }
     }
   },
-  "html_changed": 14,
-  "shared_only": 174,
+  "html_changed": 18,
+  "shared_only": 170,
   "states": {
-    "BLOCKED": 4,
-    "NOT_STARTED": 171,
-    "VERIFIED": 6
+    "BLOCKED": 7,
+    "NOT_STARTED": 167,
+    "VERIFIED": 7
   }
 }

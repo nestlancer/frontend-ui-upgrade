@@ -1,0 +1,1401 @@
+{
+  "browser": "HeadlessChrome/153.0.8010.0",
+  "layouts": [
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 320,
+      "theme": "light",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 390,
+      "theme": "light",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 768,
+      "theme": "light",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 1440,
+      "theme": "light",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 1920,
+      "theme": "light",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 320,
+      "theme": "dark",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 390,
+      "theme": "dark",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 768,
+      "theme": "dark",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 1920,
+      "theme": "dark",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 320,
+      "theme": "light",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 390,
+      "theme": "light",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 768,
+      "theme": "light",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 1440,
+      "theme": "light",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 1920,
+      "theme": "light",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 320,
+      "theme": "dark",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 390,
+      "theme": "dark",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 768,
+      "theme": "dark",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 1920,
+      "theme": "dark",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 320,
+      "theme": "light",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 390,
+      "theme": "light",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 768,
+      "theme": "light",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 1440,
+      "theme": "light",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 1920,
+      "theme": "light",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 320,
+      "theme": "dark",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 390,
+      "theme": "dark",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 768,
+      "theme": "dark",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 1920,
+      "theme": "dark",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 320,
+      "theme": "light",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 390,
+      "theme": "light",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 768,
+      "theme": "light",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 1440,
+      "theme": "light",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 1920,
+      "theme": "light",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 320,
+      "theme": "dark",
+      "scroll": 320,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 390,
+      "theme": "dark",
+      "scroll": 390,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 768,
+      "theme": "dark",
+      "scroll": 768,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "scroll": 1440,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 1920,
+      "theme": "dark",
+      "scroll": 1920,
+      "h1": 1,
+      "brokenImages": [],
+      "clipped": []
+    }
+  ],
+  "axe": [
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 390,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 390,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 390,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 390,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 390,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 390,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 390,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 1440,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 390,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "width": 1440,
+      "theme": "dark",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "motion": [
+    {
+      "path": "apps/web/blog/index.html",
+      "early": [
+        {
+          "name": "transition",
+          "duration": 260
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 220
+        },
+        {
+          "name": "transition",
+          "duration": 200
+        },
+        {
+          "name": "transition",
+          "duration": 200
+        },
+        {
+          "name": "transition",
+          "duration": 200
+        },
+        {
+          "name": "transition",
+          "duration": 200
+        },
+        {
+          "name": "transition",
+          "duration": 260
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "transition",
+          "duration": 140
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "mkt-card journal-card reveal",
+        "after": "mkt-card journal-card reveal is-in"
+      }
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "early": [
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "flex gap-2 mt-5 flex-wrap reveal",
+        "after": "flex gap-2 mt-5 flex-wrap reveal is-in"
+      }
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "early": [
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        },
+        {
+          "name": "nl-hero",
+          "duration": 900
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560
+        },
+        {
+          "name": "nl-rise",
+          "duration": 560
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        }
+      ],
+      "settled": [],
+      "scroll": {
+        "before": "panel mt-6 reveal",
+        "after": "panel mt-6 reveal is-in"
+      }
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "early": [
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 260
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 200
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 200
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 150
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "transition",
+          "duration": 200
+        },
+        {
+          "name": "transition",
+          "duration": 160
+        },
+        {
+          "name": "nl-pill",
+          "duration": 520
+        },
+        {
+          "name": "nl-ind",
+          "duration": 700
+        },
+        {
+          "name": "nl-crumb",
+          "duration": 460
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        },
+        {
+          "name": "nl-head",
+          "duration": 560
+        },
+        {
+          "name": "nl-head",
+          "duration": 560
+        },
+        {
+          "name": "nl-head",
+          "duration": 560
+        },
+        {
+          "name": "nl-head",
+          "duration": 560
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        },
+        {
+          "name": "nl-block",
+          "duration": 640
+        },
+        {
+          "name": "nl-row",
+          "duration": 520
+        },
+        {
+          "name": "nl-row",
+          "duration": 520
+        },
+        {
+          "name": "nl-row",
+          "duration": 520
+        },
+        {
+          "name": "nl-row",
+          "duration": 520
+        }
+      ],
+      "settled": [],
+      "scroll": null
+    }
+  ],
+  "visibility": [
+    {
+      "path": "apps/web/blog/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "mode": "fresh-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/blog/index.html",
+      "mode": "no-js",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "mode": "fresh-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "mode": "no-js",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "mode": "fresh-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "mode": "no-js",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "mode": "live-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "mode": "fresh-reduced",
+      "hidden": 0,
+      "running": []
+    },
+    {
+      "path": "apps/web/messages/inbox/index.html",
+      "mode": "no-js",
+      "hidden": 0,
+      "running": []
+    }
+  ],
+  "interactions": [
+    {
+      "name": "no-js-controls-0",
+      "disabled": true
+    },
+    {
+      "name": "no-js-controls-1",
+      "disabled": true
+    },
+    {
+      "name": "no-js-controls-2",
+      "disabled": true
+    },
+    {
+      "name": "no-js-controls-3",
+      "disabled": true
+    },
+    {
+      "name": "journal-search",
+      "count": 1
+    },
+    {
+      "name": "journal-empty",
+      "count": 0
+    },
+    {
+      "name": "journal-reset",
+      "count": 10
+    },
+    {
+      "name": "article-anchor",
+      "hash": "#read-section-7"
+    },
+    {
+      "name": "bookmark-sync",
+      "states": [
+        "true",
+        "true"
+      ]
+    },
+    {
+      "name": "clipboard-fallback",
+      "visible": true,
+      "message": "Clipboard unavailable. Select and copy the page link above."
+    },
+    {
+      "name": "bookmark-reset",
+      "states": [
+        "false",
+        "false"
+      ]
+    },
+    {
+      "name": "copy-note-handler",
+      "value": "Sample scope note",
+      "note": "Clipboard API stubbed; does not certify OS clipboard"
+    },
+    {
+      "name": "inbox-empty",
+      "visible": 0
+    },
+    {
+      "name": "inbox-preview-keyboard",
+      "visible": true,
+      "focus": "inbox-snippet-title",
+      "text": "I'll post the shared retry checklist here after tomorrow's reconciliation review. Production changes still go through each project milestone."
+    },
+    {
+      "name": "inbox-return-focus",
+      "value": "0"
+    },
+    {
+      "name": "draft-empty",
+      "invalid": "true"
+    },
+    {
+      "name": "draft-local-only",
+      "message": "Draft checked locally. Nothing was sent or saved; the original conversation is unchanged.",
+      "multiline": true,
+      "requests": 0,
+      "unchangedMessages": true,
+      "unchangedStorage": true
+    }
+  ]
+}

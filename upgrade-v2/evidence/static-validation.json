@@ -1397,23 +1397,7 @@
   },
   {
     "page": "proto/apps/web/messages/inbox/index.html",
-    "issues": [
-      {
-        "kind": "unlabeled-control",
-        "tag": "input",
-        "placeholder": "Search"
-      },
-      {
-        "kind": "unlabeled-control",
-        "tag": "input",
-        "placeholder": "Search conversations…"
-      },
-      {
-        "kind": "unlabeled-control",
-        "tag": "textarea",
-        "placeholder": "Reply… (Enter to send, Shift+Enter for newline)"
-      }
-    ]
+    "issues": []
   },
   {
     "page": "proto/apps/web/messages/index.html",
@@ -1622,13 +1606,7 @@
   },
   {
     "page": "proto/apps/web/portfolio/fintech-payments-hub/index.html",
-    "issues": [
-      {
-        "kind": "unlabeled-control",
-        "tag": "input",
-        "placeholder": "Project scope or email…"
-      }
-    ]
+    "issues": []
   },
   {
     "page": "proto/apps/web/portfolio/index.html",

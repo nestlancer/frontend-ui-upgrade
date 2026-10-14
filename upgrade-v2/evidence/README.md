@@ -36,3 +36,12 @@ Baseline/after captures establish composition. Animation proof is in sampled bro
 - `batch2-contact-errors.webp`, `batch2-contact-local-result.webp`: local validation/error/result. No actual delivery, uploads, persistence or production success.
 
 Initial-slice `browser-qa.json`, `shared-regression.json`, `final-focused-qa.json` and applicable viewport images were refreshed after the batch-2 runtime changes. Older full-page `final-*` captures remain initial composition evidence (the hub's current quick links are additionally covered by refreshed qa-7 images).
+
+## Batch 3 namespace
+Indices: **0 web journal / 1 full web article / 2 full web Fintech case study / 3 client inbox** (`batch-3-paths.json`).
+- `batch3-before-*`, `batch3-after-*`: 390/1440 before/after; dimensions JSON records long-page stitching mode.
+- `batch3-qa-*`: light/dark viewport captures.
+- `batch3-browser-qa.json`: final 40 layouts, 16 axe checks, motion/visibility and asserted interactions. Clipboard-copy success handler is stub-tested; rejection/fallback is exercised.
+- `batch3-inbox-preview.webp`, `batch3-inbox-draft.webp`, `batch3-inbox-desktop-bottom.webp`: actual local states/internal scrolling, no sent-message claims.
+- Source public images reuse `batch2-original-002/003/008-*`; source inbox was read from its original screenshot tree, not duplicated.
+- `shared-regression.json` refreshed for this batch. Full article mobile capture is composed from real scrolled viewports after a Chromium >8192px capture artifact; no original content edited to fix the screenshot.

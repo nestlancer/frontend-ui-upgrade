@@ -47,3 +47,6 @@ The original first queue is historical, not a pending plan. Commit `cd09e90` was
 Scoped optional `editorial.css` is wired only to these six pages; `studio.js` adds opt-in behavior. No framework, endpoint, duplicate route or build step. Reference R7 was fetched before edits; R2/R4/R5/R6 reused as documented in REFERENCE_RESEARCH.md.
 
 All nine landing routes now have substantive implementation. App Contact passes base-page QA but its screenshot field/default differs; exact state remains BLOCKED. See PROGRESS.md for cumulative counts and the precise next balanced queue.
+
+## Batch 3 executed
+The three mapped public web siblings and client inbox were upgraded independently (paths in `batch-3-paths.json`). Their unique content, defaults, metrics/comments/messages remain; new runtime is opt-in and local-only. Admin dashboard moves to the next batch rather than being counted as done. See PROGRESS.md for current 18-page coverage and explicit state mismatches. Full 188/181 scope remains unchanged.
