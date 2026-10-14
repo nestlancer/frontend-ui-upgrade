@@ -1,0 +1,1987 @@
+[
+  {
+    "page": "proto/apps/admin/analytics/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/api-keys/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/audit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search actor, meta, id…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/contact/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search name, email, company…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/content/blog/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/content/blog/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/content/blog/post-custom-crm/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/content/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search posts by title…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/content/posts/[id]/edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/content/posts/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/dashboard/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/index.html",
+    "issues": [
+      {
+        "kind": "h1-count",
+        "count": 0
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/integrations/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/login/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/admin/media/analytics/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/media/browse/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search by filename, type, tag, or description…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/media/folders/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/media/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search filename, mime, or id…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/media/quarantine/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/media/storage/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/media/upload/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search in conversation…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Reply to Karthik…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/archived/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/inbox/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search threads…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Reply to #nl-204…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/new/direct/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search clients & staff…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/new/group/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/new-direct/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search clients & staff…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/new-group/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/project/[projectId]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Reply to #nl-204…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html",
+    "issues": [
+      {
+        "kind": "duplicate-id",
+        "id": "ms-reply",
+        "count": 2
+      },
+      {
+        "kind": "duplicate-id",
+        "id": "ms-edit",
+        "count": 2
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search in conversation…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Reply to Karthik…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/thread/[threadId]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search in conversation…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Reply to Karthik…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/messages/threads/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search threads…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/moderation/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/notifications/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/admin/payments/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/accounts/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/company-legal/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/disputes/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search by UTR, client, invoice…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/projects/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/payments/projects/nl-lms/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Internal context for this engagement…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/projects/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Internal context for this engagement…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/projects/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search & open project (total 22)…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/projects/nl-lms/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Internal context for this engagement…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Internal context for support staff…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/users/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Internal context for support staff…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/users/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search & open user (total 20)…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/pipeline/users/priya-nair/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Internal context for support staff…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/portfolio/01a10a2a-544e-757a-8806-721a7b8591dd/edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/portfolio/[id]/edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/portfolio/banking-dashboard.edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/portfolio/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/portfolio/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "New metric…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Value"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/profile/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/archive/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/completed/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search projects…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/nl-lms/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/projects/stats/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/quotes/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/quotes/drafts/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/quotes/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search by client, ID, request…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/quotes/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Deliverable description…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Deliverable description…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/quotes/payment-schedules/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/quotes/stats/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Describe another deliverable…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/01a10a2c-1a04-75bb-8e80-fc143257fa02/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/quote/edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/quote/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Describe another deliverable…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/[id]/quote/edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/[id]/quote/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Describe another deliverable…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/capacity/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/requests/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search requests…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/announcements/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/cache/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/email-templates/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/features/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/health/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/index.html",
+    "issues": [
+      {
+        "kind": "duplicate-id",
+        "id": "sys-health",
+        "count": 2
+      },
+      {
+        "kind": "duplicate-id",
+        "id": "sys-jobs",
+        "count": 2
+      },
+      {
+        "kind": "duplicate-id",
+        "id": "sys-templates",
+        "count": 2
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Announcement title"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Message body (max 1000 characters)"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/jobs/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/logs/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search message, request id, user…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/maintenance/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/notification-templates/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search events…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/system/staff/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/users/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/users/arjun-mehta/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/users/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search name, email, company…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/admin/users/search/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search pages…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "nair · +91 98410 · NL-204 · mehta@…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/about/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/landing/blog/[slug]/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/landing/blog/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search posts…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/contact/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/landing/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/landing/portfolio/[id]/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/landing/portfolio/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/landing/pricing/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/landing/services/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/about/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/blog/[slug]/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/blog/bookmarks/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/blog/category/[slug]/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/blog/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/blog/tag/[slug]/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/contact/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/dashboard/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/forgot-password/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/impersonate/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/invoices/NL-INV-2026-000009/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/invoices/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/invoices/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/login/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/messages/[conversationId]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search conversations…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Reply… (Enter to send, Shift+Enter for newline)"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/archived/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/inbox/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search conversations…"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Reply… (Enter to send, Shift+Enter for newline)"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/new/direct/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search people…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html",
+    "issues": [
+      {
+        "kind": "duplicate-id",
+        "id": "cm-edit",
+        "count": 2
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Message #payments-ops…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/thread/[threadId]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "textarea",
+        "placeholder": "Message #payments-ops…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/messages/threads/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search threads…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/notifications/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search payments…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/invoice/NL-INV-2026-000008/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/invoice/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/invoices/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search invoices…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/payments/methods/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/portfolio/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Project scope or email…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/portfolio/fintech-payments-hub/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Project scope or email…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/portfolio/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/privacy/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/profile/edit/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/profile/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/projects/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/projects/archive/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/projects/completed/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/projects/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/projects/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/projects/nl-lms/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/quotes/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/quotes/drafts/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/quotes/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search quotes…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/quotes/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/quotes/templates/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/register/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/requests/01a10a2c-530e-7354-b21b-f5ecdab54f7a/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/requests/4b8110f3-1d0e-4f8c-a111-3e0a1/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/requests/[id]/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/requests/archive/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search archived requests…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/requests/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search work items…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/requests/new/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/reset-password/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/settings/account/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/settings/activity/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      },
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search events…"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/settings/billing/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/settings/files/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/settings/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/settings/notifications/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/settings/security/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/settings/sessions/index.html",
+    "issues": [
+      {
+        "kind": "unlabeled-control",
+        "tag": "input",
+        "placeholder": "Search"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/share/[token]/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/terms/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/verify/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/verify-document/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/verify-email/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/apps/web/work/index.html",
+    "issues": []
+  },
+  {
+    "page": "proto/index.html",
+    "issues": []
+  }
+]

@@ -1,0 +1,925 @@
+[
+  {
+    "page": "proto/apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Prototype fixture: the summary and bank-transfer context contain different records. Review them separately; actions below do not change any payment.": 1,
+      "Review action": 1,
+      "Close": 1,
+      "Local review only. No refund, payment, email, or ledger entry will be created.": 1,
+      "Amount (₹)": 1,
+      "Reason / Notes": 1,
+      "Cancel": 1,
+      "Preview action": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "payment"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-payment-action",
+        "tag": "button",
+        "value": "Issue refund"
+      },
+      {
+        "attribute": "data-payment-action",
+        "tag": "button",
+        "value": "Record manual payment"
+      },
+      {
+        "attribute": "data-payment-action",
+        "tag": "button",
+        "value": "Verify offline payment"
+      },
+      {
+        "attribute": "data-payment-action",
+        "tag": "button",
+        "value": "Update status"
+      },
+      {
+        "attribute": "value",
+        "tag": "input",
+        "value": "3000"
+      },
+      {
+        "attribute": "data-payment-action",
+        "tag": "button",
+        "value": "Verify & mark paid"
+      },
+      {
+        "attribute": "data-payment-action",
+        "tag": "button",
+        "value": "Ask client for proof"
+      },
+      {
+        "attribute": "data-payment-action",
+        "tag": "button",
+        "value": "Reject UTR"
+      },
+      {
+        "attribute": "data-proto-dialog",
+        "tag": "dialog",
+        "value": ""
+      },
+      {
+        "attribute": "data-payment-review",
+        "tag": "form",
+        "value": ""
+      },
+      {
+        "attribute": "value",
+        "tag": "button",
+        "value": "cancel"
+      },
+      {
+        "attribute": "value",
+        "tag": "button",
+        "value": "cancel"
+      },
+      {
+        "attribute": "data-refund-field",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "number"
+      },
+      {
+        "attribute": "placeholder",
+        "tag": "textarea",
+        "value": "Add a note for this local review"
+      },
+      {
+        "attribute": "data-review-result",
+        "tag": "p",
+        "value": ""
+      },
+      {
+        "attribute": "data-review-action",
+        "tag": "button",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "FIG 01 / THE DELIVERY SYSTEM": 1,
+      "Brief → build → deliver": 1,
+      "Illustrative product concepts — not customer screenshots.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "home"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-signature",
+        "tag": "figure",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/delivery-system.svg"
+      },
+      {
+        "attribute": "data-artwork",
+        "tag": "svg",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-mobile.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-commerce.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-commerce.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../shared/assets/art/work-analytics.svg"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/portfolio/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Find a project": 1,
+      "Discipline": 1,
+      "All disciplines": 1,
+      "UI/UX DESIGN": 1,
+      "MOBILE APP": 1,
+      "E-COMMERCE": 1,
+      "WEB DEVELOPMENT": 1,
+      "Illustrative product concepts, not customer screenshots. Case-study links open the shared prototype fixture.": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "portfolio"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-search",
+        "tag": "input",
+        "value": ""
+      },
+      {
+        "attribute": "placeholder",
+        "tag": "input",
+        "value": "Search the work shown below"
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "search"
+      },
+      {
+        "attribute": "data-local-category",
+        "tag": "select",
+        "value": ""
+      },
+      {
+        "attribute": "value",
+        "tag": "option",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-list",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "UI/UX DESIGN"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "UI/UX DESIGN"
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "MOBILE APP"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "MOBILE APP"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-mobile.svg"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "E-COMMERCE"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "E-COMMERCE"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-commerce.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-commerce.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-analytics.svg"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "WEB DEVELOPMENT"
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "WEB DEVELOPMENT"
+      },
+      {
+        "attribute": "data-local-result",
+        "tag": "p",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/pricing/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Compare engagements ↓": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "pricing"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "#compare-engagements"
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-signature",
+        "tag": "div",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/landing/services/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Menu": 1,
+      "Discovery": 1,
+      "Design": 1,
+      "Development": 1,
+      "Handoff": 1,
+      "Discovery & requirements workshop": 1,
+      "Included in this engagement": 3,
+      "Compare engagements ↗": 3
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "services"
+      },
+      {
+        "attribute": "data-public-menu",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-signature",
+        "tag": "figure",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/delivery-process.svg"
+      },
+      {
+        "attribute": "data-process-step",
+        "tag": "button",
+        "value": "Discovery & requirements workshop"
+      },
+      {
+        "attribute": "data-process-step",
+        "tag": "button",
+        "value": "UI/UX for core screens"
+      },
+      {
+        "attribute": "data-process-step",
+        "tag": "button",
+        "value": "Frontend + backend API"
+      },
+      {
+        "attribute": "data-process-step",
+        "tag": "button",
+        "value": "QA, deployment & handoff"
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "data-section-reveal",
+        "tag": "section",
+        "value": ""
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "../pricing/index.html#compare-engagements"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "../pricing/index.html#compare-engagements"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "../pricing/index.html#compare-engagements"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/login/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Local prototype only. Use sample details; nothing is sent or authenticated.": 1,
+      "Illustrative workspace · local prototype": 1,
+      "Project Hub preview": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "login"
+      },
+      {
+        "attribute": "data-demo-login",
+        "tag": "form",
+        "value": ""
+      },
+      {
+        "attribute": "data-password-toggle",
+        "tag": "button",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "button",
+        "value": "button"
+      },
+      {
+        "attribute": "data-signature",
+        "tag": "figure",
+        "value": ""
+      },
+      {
+        "attribute": "src",
+        "tag": "img",
+        "value": "../../../shared/assets/art/work-workspace.svg"
+      }
+    ]
+  },
+  {
+    "page": "proto/apps/web/projects/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "Active delivery": 1,
+      "Review milestone payments →": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "../../../shared/assets/studio.css"
+      },
+      {
+        "attribute": "data-page",
+        "tag": "body",
+        "value": "projects"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "../payments/index.html"
+      },
+      {
+        "attribute": "data-local-category",
+        "tag": "select",
+        "value": ""
+      },
+      {
+        "attribute": "value",
+        "tag": "option",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-search",
+        "tag": "input",
+        "value": ""
+      },
+      {
+        "attribute": "type",
+        "tag": "input",
+        "value": "search"
+      },
+      {
+        "attribute": "data-local-list",
+        "tag": "div",
+        "value": ""
+      },
+      {
+        "attribute": "data-category",
+        "tag": "a",
+        "value": "In progress"
+      },
+      {
+        "attribute": "data-local-item",
+        "tag": "a",
+        "value": ""
+      },
+      {
+        "attribute": "data-local-result",
+        "tag": "p",
+        "value": ""
+      },
+      {
+        "attribute": "data-base-summary",
+        "tag": "div",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "page": "proto/index.html",
+    "missing_text": {},
+    "missing_business_progress_styles": {},
+    "added_text": {
+      "UI upgrade · partial delivery": 1,
+      "Open the upgraded pages below. The full route directory remains available; other pages are still awaiting page-level implementation.": 1,
+      "Homepage ↗": 1,
+      "Services ↗": 1,
+      "Pricing ↗": 1,
+      "Portfolio ↗": 1,
+      "Client sign-in ↗": 1,
+      "Client projects ↗": 1,
+      "Payment review ↗": 1
+    },
+    "removed_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.gstatic.com"
+      },
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;550;600;650;700&family=Geist+Mono:wght@400;500;600&display=swap"
+      }
+    ],
+    "added_attributes": [
+      {
+        "attribute": "href",
+        "tag": "link",
+        "value": "shared/assets/studio.css"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/web/login/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/services/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/pricing/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/landing/portfolio/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/web/projects/index.html"
+      },
+      {
+        "attribute": "href",
+        "tag": "a",
+        "value": "./apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html"
+      }
+    ]
+  }
+]

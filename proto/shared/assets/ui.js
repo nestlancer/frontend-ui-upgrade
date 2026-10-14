@@ -83,6 +83,25 @@
     }
   }
 
+  /* Prototype menu mirrors the existing inline toggle, including keyboard close. */
+  var prototypeMenu = document.querySelector('#fab .fab-menu');
+  var prototypeButton = document.querySelector('#fab .fab-btn');
+  if (prototypeMenu && prototypeButton) {
+    prototypeMenu.id = prototypeMenu.id || 'prototype-navigation';
+    prototypeButton.setAttribute('aria-controls', prototypeMenu.id);
+    prototypeButton.setAttribute('aria-expanded', 'false');
+    prototypeButton.addEventListener('click', function () {
+      prototypeButton.setAttribute('aria-expanded', document.getElementById('fab').classList.contains('open') ? 'true' : 'false');
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && document.getElementById('fab').classList.contains('open')) {
+        document.getElementById('fab').classList.remove('open');
+        prototypeButton.setAttribute('aria-expanded', 'false');
+        prototypeButton.focus();
+      }
+    });
+  }
+
   /* ------------------------------------------------------------ delegation */
   document.addEventListener('click', function (ev) {
     var theme = ev.target.closest('[data-theme-toggle]');
@@ -134,7 +153,7 @@
     }
 
     var fab = document.getElementById('fab');
-    if (fab && !ev.target.closest('#fab')) fab.classList.remove('open');
+    if (fab && !ev.target.closest('#fab')) { fab.classList.remove('open'); if (prototypeButton) prototypeButton.setAttribute('aria-expanded', 'false'); }
   });
 
   document.addEventListener('keydown', function (ev) {
@@ -312,7 +331,10 @@
   });
   document.addEventListener('click', function (ev) {
     // click on the backdrop closes the dialog
-    if (ev.target.tagName === 'DIALOG') ev.target.close();
+    if (ev.target.tagName === 'DIALOG') {
+      var bounds = ev.target.getBoundingClientRect();
+      if (ev.clientX < bounds.left || ev.clientX > bounds.right || ev.clientY < bounds.top || ev.clientY > bounds.bottom) ev.target.close();
+    }
   });
 
   /* ------------------------------------------------- collapsed <details> */
