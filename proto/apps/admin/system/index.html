@@ -3,14 +3,14 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Nestlancer admin prototype — System · Admin" name="description"/>
+<meta content="Nestlancer System — operator console screen in the static prototype; sample data only." name="description"/>/>
 <title>System · Admin</title>
 
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E" rel="icon"/>
 <link href="../../../shared/assets/proto.css" rel="stylesheet"/>
 <script src="../../../shared/assets/proto-motion.js"></script>
-<link href="../../../shared/assets/operator.css" rel="stylesheet"/><link href="../../../shared/assets/workbench.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/workbench.js"></script><script defer="" src="../../../shared/assets/operator.js"></script></head>
-<body class="app-body upgrade-v2 workbench-v2 workbench-admin operator-v2" data-page="system" data-surface="admin">
+<link href="../../../shared/assets/operator.css" rel="stylesheet"/><link href="../../../shared/assets/workbench.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/workbench.js"></script><script defer="" src="../../../shared/assets/operator.js"></script><link href="../../../shared/assets/nl-v3.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/nl-v3.js"></script></head>
+<body class="app-body upgrade-v2 workbench-v2 workbench-admin operator-v2 nl-v3" data-page="system" data-surface="admin">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button aria-hidden="true" class="sb-backdrop" data-sb-close="" tabindex="-1" type="button"></button>
@@ -63,32 +63,32 @@
 <button aria-label="Theme" class="icobtn" data-theme-toggle="" title="Theme"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button></div>
 </header>
 <main class="content" id="main" tabindex="-1">
-<div class="pband"><div class="phead anim-in">
-<div class="min-w-0">
-<div class="eyebrow"><span class="dot"></span>SYSTEM · ADMINISTRATION</div>
-<h1 class="ptitle">System Configuration · System</h1>
-<p class="psub">Runtime health, platform settings, feature flags, jobs, templates, and operator controls. Config, feature flags, jobs, logs, templates — the whole back office.</p>
-</div>
-<div class="phead-actions"><button class="btn btn-secondary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Load diagnostics</button><button class="btn btn-primary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Send announcement</button></div>
-</div></div>
-<div class="stats mb-5 reveal stagger" style="grid-template-columns:repeat(4,1fr)">
-<div class="stat"><div class="stat-label">Service</div><div class="stat-value">Healthy</div><div class="stat-note">admin · Uptime 5d 8h 5m · Memory 88 MB · Heap 42 MB</div></div>
-<div class="stat"><div class="stat-label">Config keys</div><div class="stat-value">14</div><div class="stat-note">All saved</div></div>
-<div class="stat"><div class="stat-label">Feature flags</div><div class="stat-value">5/12</div><div class="stat-note">Enabled / total</div></div>
-<div class="stat"><div class="stat-label">Templates</div><div class="stat-value">62</div><div class="stat-note">10 email · 52 notification</div></div>
-</div>
-<nav aria-label="Page sections" class="tabs mb-5 reveal" data-wb-sections="">
+
+
+
+
+
+
+
+
+<!-- PROTO-STATES-SYSTEM -->
+
+<div class="nl-root"><header class="nl-mast reveal"><div class="nl-mast-l"><div class="nl-kicker"><span class="nl-kicker-i" aria-hidden="true">01/08</span><span class="nl-kicker-t">SYSTEM · ADMINISTRATION</span><span class="nl-kicker-line" aria-hidden="true"></span></div><h1 class="nl-title" id="nl-t-01">System Configuration · System</h1><p class="nl-lede">Runtime health, platform settings, feature flags, jobs, templates, and operator controls. Config, feature flags, jobs, logs, templates — the whole back office.</p><ul class="nl-tags" role="list" aria-label="Page facts"><li class="nl-tag" data-tone="info"><span class="nl-tag-k">view</span>List view</li><li class="nl-tag" data-tone="muted"><span class="nl-tag-k">theme</span>light · dark</li></ul></div><div class="nl-mast-r"><div class="nl-mast-actions"><button class="btn btn-secondary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Load diagnostics</button><button class="btn btn-primary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Send announcement</button></div></div><div class="nl-mast-art" aria-hidden="true" data-nl-art="system"><svg viewBox="0 0 132 92" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" data-artwork="v3-mast"><rect x="8" y="14" width="48" height="30" rx="7"/><path d="M16 24h20M16 34h30" stroke-opacity=".5"/><rect x="8" y="52" width="22" height="26" rx="6"/><rect x="34" y="52" width="22" height="26" rx="6"/><path d="M42 8h44" stroke-opacity=".3"/><rect x="68" y="34" width="30" height="30" rx="15"/><circle cx="83" cy="49" r="4"/><path d="M83 38v4M83 56v4M72 49h4M90 49h4" stroke-opacity=".6"/><rect x="104" y="16" width="24" height="46" rx="7"/><path d="M110 26h12M110 36h12M110 46h8" stroke-opacity=".45"/><path d="M104 70h24" stroke-opacity=".3"/></svg></div></header><div class="nl-body nl-has-rail"><div class="nl-flow"><section class="nl-sec" id="nl-s-02" aria-labelledby="nl-sh-03" data-nl-group="plain" data-nl-panels="0"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">01</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-03">Signal strip</h2></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-02" aria-expanded="true" aria-controls="nl-s-02" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-02" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><div class="stats mb-5 reveal stagger nl-kpis" style="grid-template-columns:repeat(4,1fr)">
+<div class="stat nl-kpi"><div class="stat-label nl-kpi-l">Service</div><div class="stat-value nl-kpi-v">Healthy</div><div class="stat-note nl-kpi-n" data-dir="flat">admin · Uptime 5d 8h 5m · Memory 88 MB · Heap 42 MB</div><svg class="nl-spark" viewBox="0 0 64 24" aria-hidden="true" focusable="false"><path d="M2:14 L9:15 L16:13 L23:15 L30:16 L37:18 L44:17 L51:19 L58:19" data-artwork="v3-spark"/></svg></div>
+<div class="stat nl-kpi"><div class="stat-label nl-kpi-l">Config keys</div><div class="stat-value nl-kpi-v">14</div><div class="stat-note nl-kpi-n" data-dir="flat">All saved</div><svg class="nl-spark" viewBox="0 0 64 24" aria-hidden="true" focusable="false"><path d="M2:14 L9:16 L16:14 L23:12 L30:11 L37:9 L44:9 L51:11 L58:10" data-artwork="v3-spark"/></svg></div>
+<div class="stat nl-kpi"><div class="stat-label nl-kpi-l">Feature flags</div><div class="stat-value nl-kpi-v">5/12</div><div class="stat-note nl-kpi-n" data-dir="flat">Enabled / total</div><svg class="nl-spark" viewBox="0 0 64 24" aria-hidden="true" focusable="false"><path d="M2:13 L9:13 L16:15 L23:14 L30:16 L37:15 L44:15 L51:16 L58:16" data-artwork="v3-spark"/></svg></div>
+<div class="stat nl-kpi"><div class="stat-label nl-kpi-l">Templates</div><div class="stat-value nl-kpi-v">62</div><div class="stat-note nl-kpi-n" data-dir="flat">10 email · 52 notification</div><svg class="nl-spark" viewBox="0 0 64 24" aria-hidden="true" focusable="false"><path d="M2:16 L9:17 L16:17 L23:15 L30:15 L37:14 L44:14 L51:12 L58:11" data-artwork="v3-spark"/></svg></div>
+</div></div></section><section class="nl-sec" id="nl-s-04" aria-labelledby="nl-sh-05" data-nl-group="plain" data-nl-panels="0"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">02</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-05">Views</h2></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-04" aria-expanded="true" aria-controls="nl-s-04" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-04" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><nav aria-label="Page sections" class="tabs mb-5 reveal" data-wb-sections="">
 <a aria-current="true" class="tab active" href="#sys-health">Health</a>
 <a class="tab" href="#sys-config">Config <span class="count">14</span></a>
 <a class="tab" href="#sys-features">Features <span class="count">12</span></a>
 <a class="tab" href="#sys-jobs">Jobs <span class="count">12</span></a>
 <a class="tab" href="#sys-templates">Templates <span class="count">62</span></a>
 <a class="tab" href="#sys-operations">Operations</a>
-</nav>
-<div class="grid g2 gap-5 mb-5 reveal" id="sys-operations">
-<section class="panel">
-<div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Platform announcements</h2><div class="panel-sub">Broadcast a banner notification to all active users. Delivery is written immediately, then queued for push/email channels.</div></div></div>
-<div class="panel-body">
+</nav></div></section><section class="nl-sec" id="nl-s-06" aria-labelledby="nl-sh-07" data-nl-group="plain" data-nl-panels="2"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">03</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-07">Related blocks</h2><p class="nl-sec-s">Broadcast a banner notification to all active users. Delivery is written immediately, then queued for push/email channels.</p></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-06" aria-expanded="true" aria-controls="nl-s-06" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-06" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><div class="grid g2 gap-5 mb-5 reveal" id="sys-operations">
+<article class="nl-card" data-nl-card="flag">
+<div class="nl-card-hd"><span class="nl-card-mark" aria-hidden="true" data-nl-art="flag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" data-artwork="v3-mark"><path d="M5 21V4M5 5h13l-2.5 4L18 13H5"/></svg></span><div class="nl-card-tt"><h2 class="nl-card-t" id="nl-ct-17">Platform announcements</h2><div class="panel-sub nl-card-s">Broadcast a banner notification to all active users. Delivery is written immediately, then queued for push/email channels.</div></div><button class="nl-tool" type="button" data-nl-copy="#nl-s-06" aria-label="Copy link to Platform announcements" title="Copy link to this card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div>
+<div class="nl-card-bd">
 <div class="field mb-3"><input aria-label="Announcement title" class="input sm" placeholder="Announcement title" value="Announcement title"/></div>
 <div class="field mb-3"><textarea aria-label="Message body (max 1000 characters)" class="textarea" placeholder="Message body (max 1000 characters)" rows="2">Message body (max 1000 characters)</textarea></div>
 <div class="flex items-center gap-3 mb-3 flex-wrap">
@@ -98,32 +98,31 @@
 </div>
 <button class="btn btn-primary btn-sm" data-wb-action="check" data-wb-js="" disabled="" type="button">Send announcement</button>
 </div>
-</section>
-<section class="panel">
-<div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Maintenance mode</h2><div class="panel-sub">Block client app access during planned downtime. Admins can still sign in. Enabling revokes non-admin sessions.</div></div><span class="badge tone-success">Disabled</span></div>
-<div class="panel-body">
+<footer class="nl-card-ft"><span class="nl-tbl-n">4 inputs</span><span class="nl-tag" data-tone="muted">fixture data</span></footer></article>
+<article class="nl-card" data-nl-card="gear">
+<div class="nl-card-hd"><span class="nl-card-mark" aria-hidden="true" data-nl-art="gear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" data-artwork="v3-mark"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7"/></svg></span><span class="badge tone-success">Disabled</span><div class="nl-card-tt"><h2 class="nl-card-t" id="nl-ct-18">Maintenance mode</h2><div class="panel-sub nl-card-s">Block client app access during planned downtime. Admins can still sign in. Enabling revokes non-admin sessions.</div></div><button class="nl-tool" type="button" data-nl-copy="#nl-s-06" aria-label="Copy link to Maintenance mode" title="Copy link to this card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div>
+<div class="nl-card-bd">
 <div class="flex items-center justify-between mb-3"><div><b>Live status</b><div class="text-xs dim">What the platform is enforcing right now.</div></div><span class="badge tone-success">Disabled</span></div>
 <div class="flex items-center justify-between mb-3"><div><b>Enable maintenance</b><div class="text-xs dim">Clients see a downtime screen. Public portfolio and blog stay readable.</div></div><label class="switch"><input aria-label="Enable maintenance Clients see a downtime screen. Public portfolio and blog stay" type="checkbox"/><i></i></label></div>
 <div class="field mb-3"><label class="label" for="nl-message-shown-to-users">Message shown to users</label><input class="input sm" id="nl-message-shown-to-users" value="System is under maintenance. Please check back later."/></div>
 <div class="field mb-3"><label class="label" for="nl-estimated-end-optional">Estimated end (optional)</label><input class="input sm" id="nl-estimated-end-optional" placeholder="mm/dd/yyyy, --:-- --"/></div>
 <button class="btn btn-secondary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">No changes to apply</button>
 </div>
-</section>
-</div>
-<div class="grid g2 gap-5 mb-5 reveal" id="sys-health">
-<section class="panel">
-<div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Runtime Health &amp; Loaded Diagnostics</h2><div class="panel-sub">Dependencies · Outbox &amp; workers · System overview · Cache statistics · Error logs</div></div><span class="badge tone-success">HEALTHY</span></div>
-<div class="panel-body">
+<footer class="nl-card-ft"><span class="nl-tbl-n">3 inputs</span><span class="nl-tag" data-tone="muted">fixture data</span></footer></article>
+</div></div></section><section class="nl-sec" id="nl-s-08" aria-labelledby="nl-sh-09" data-nl-group="plain" data-nl-panels="2"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">04</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-09">Related blocks</h2><p class="nl-sec-s">Dependencies · Outbox &amp;amp; workers · System overview · Cache statistics · Error logs</p></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-08" aria-expanded="true" aria-controls="nl-s-08" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-08" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><div class="grid g2 gap-5 mb-5 reveal" id="sys-health">
+<article class="nl-card" data-nl-card="spark">
+<div class="nl-card-hd"><span class="nl-card-mark" aria-hidden="true" data-nl-art="spark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" data-artwork="v3-mark"><path d="M3 17l5-6 4 3 4-6 5 5"/></svg></span><span class="badge tone-success">HEALTHY</span><div class="nl-card-tt"><h2 class="nl-card-t" id="nl-ct-19">Runtime Health &amp; Loaded Diagnostics</h2><div class="panel-sub nl-card-s">Dependencies · Outbox &amp; workers · System overview · Cache statistics · Error logs</div></div><button class="nl-tool" type="button" data-nl-copy="#nl-s-08" aria-label="Copy link to Runtime Health &amp;amp; Loaded Diagnostics" title="Copy link to this card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div>
+<div class="nl-card-bd">
 <div class="text-xs mb-2"><b>Dependencies:</b> <span class="mono">database HEALTHY (&lt;1ms) · redis HEALTHY (1ms) · rabbitmq HEALTHY (1ms) · storage HEALTHY (1ms)</span></div>
 <div class="text-xs mb-2"><b>Outbox &amp; workers:</b> Pending <span class="mono">0</span> · Published <span class="mono">592</span> · Failed <span class="mono">0</span> · Dead letter <span class="mono">0</span></div>
 <div class="text-xs mb-2"><b>System overview:</b> Users <span class="mono">34</span> · Active projects <span class="mono">4</span> · Completed <span class="mono">10</span> · Revenue <span class="mono">₹7,08,160.00</span> · Storage <span class="mono">0 B</span> · Cache hit rate <span class="mono">0%</span></div>
 <div class="text-xs mb-2"><b>Cache statistics:</b> Hits <span class="mono">0</span> · Misses <span class="mono">0</span> · Keys <span class="mono">10</span> · Memory <span class="mono">1.2M</span></div>
 <div class="text-xs dim"><b>Error logs (10 entries):</b> 4×500 errors · 2×429 rate-limit · 2×401 token/TOTP · 1×502 B2 timeout · 1×503 maintenance rejected</div>
 </div>
-</section>
-<section class="panel" id="sys-config">
-<div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Configuration keys (14)</h2><div class="panel-sub">Live runtime key-value registry</div></div><span class="badge tone-neutral mono">All saved</span></div>
-<div class="panel-body mono text-xs" style="line-height:1.7">
+</article>
+<article class="nl-card" id="sys-config" data-nl-card="key">
+<div class="nl-card-hd"><span class="nl-card-mark" aria-hidden="true" data-nl-art="key"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" data-artwork="v3-mark"><circle cx="8" cy="14" r="4.5"/><path d="M11.5 11.5L20 3M16 7l3 3M13 10l2.5 2.5"/></svg></span><span class="badge tone-neutral mono">All saved</span><div class="nl-card-tt"><h2 class="nl-card-t" id="nl-ct-20">Configuration keys (14)</h2><div class="panel-sub nl-card-s">Live runtime key-value registry</div></div><button class="nl-tool" type="button" data-nl-copy="#nl-s-08" aria-label="Copy link to Configuration keys (14)" title="Copy link to this card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div>
+<div class="nl-card-bd mono text-xs" style="line-height:1.7">
 <div><b>app.name</b> = Nestlancer · <b>app.support_email</b> = support@nestlancer.com</div>
 <div><b>app.maintenance_message</b> = System is under maintenance. Please check back later.</div>
 <div><b>app.max_upload_size_mb</b> = 50 · <b>app.pagination_default_limit</b> = 20 · <b>app.quote_validity_days</b> = 30</div>
@@ -131,30 +130,28 @@
 <div><b>billing.currency</b> = INR · <b>billing.late_fee_percent</b> = 2 · <b>billing.tax_rate_percent</b> = 18</div>
 <div><b>features.ai_estimation</b> = false · <b>notifications.digest_cron</b> = 0 9 * * 1</div>
 </div>
-</section>
-</div>
-<div class="grid g2 gap-5 mb-5 reveal">
-<section class="panel" id="sys-features">
-<div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Feature flags (12)</h2><div class="panel-sub">5 enabled · Staged rollouts and target roles</div></div></div>
-<div class="panel-body mono text-xs" style="line-height:1.65">
+</article>
+</div></div></section><section class="nl-sec" id="nl-s-10" aria-labelledby="nl-sh-11" data-nl-group="plain" data-nl-panels="2"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">05</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-11">Related blocks</h2><p class="nl-sec-s">5 enabled · Staged rollouts and target roles</p></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-10" aria-expanded="true" aria-controls="nl-s-10" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-10" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><div class="grid g2 gap-5 mb-5 reveal">
+<article class="nl-card" id="sys-features" data-nl-card="gear">
+<div class="nl-card-hd"><span class="nl-card-mark" aria-hidden="true" data-nl-art="gear"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" data-artwork="v3-mark"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7"/></svg></span><div class="nl-card-tt"><h2 class="nl-card-t" id="nl-ct-21">Feature flags (12)</h2><div class="panel-sub nl-card-s">5 enabled · Staged rollouts and target roles</div></div><button class="nl-tool" type="button" data-nl-copy="#nl-s-10" aria-label="Copy link to Feature flags (12)" title="Copy link to this card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div>
+<div class="nl-card-bd mono text-xs" style="line-height:1.65">
 <div><span class="badge tone-success">ON</span> <b>new_quote_builder</b> (25% rollout · Target roles ADMIN) · <b>dark_mode_beta</b> (100% · USER/ADMIN) · <b>automated_invoicing</b> (100%) · <b>file_virus_scan</b> (100%) · <b>batch_notifications</b> (50%)</div>
 <div class="mt-2"><span class="badge tone-neutral">OFF</span> <b>webhook_retry_v2</b> (0%) · <b>graphql_api</b> (0%) · <b>sso_login</b> (0%) · <b>advanced_analytics</b> (0% · ADMIN) · <b>two_factor_enforcement</b> (0% · ADMIN) · <b>project_templates</b> (10%) · <b>ai_request_summary</b> (0%)</div>
 </div>
-</section>
-<section class="panel" id="sys-jobs">
-<div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Background jobs (12)</h2><div class="panel-sub">Cron schedules, execution counts, and status</div></div><span class="badge tone-success">SUCCESS</span></div>
-<div class="panel-body mono text-xs" style="line-height:1.65">
+</article>
+<article class="nl-card" id="sys-jobs" data-nl-card="list">
+<div class="nl-card-hd"><span class="nl-card-mark" aria-hidden="true" data-nl-art="list"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" data-artwork="v3-mark"><path d="M8 7h13M8 12h13M8 17h9"/><circle cx="4" cy="7" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="17" r="1"/></svg></span><span class="badge tone-success">SUCCESS</span><div class="nl-card-tt"><h2 class="nl-card-t" id="nl-ct-22">Background jobs (12)</h2><div class="panel-sub nl-card-s">Cron schedules, execution counts, and status</div></div><button class="nl-tool" type="button" data-nl-copy="#nl-s-10" aria-label="Copy link to Background jobs (12)" title="Copy link to this card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div>
+<div class="nl-card-bd mono text-xs" style="line-height:1.65">
 <div><b>outbox-poller</b> (*/10 * * * * *, 62 runs, SUCCESS) · <b>audit-archiver</b> (0 2 * * *, 30 runs) · <b>session-cleanup</b> (0 */6 * * *, 120 runs)</div>
 <div><b>media-orphan-sweep</b> (0 3 * * 0, 4 runs) · <b>webhook-retry-worker</b> (*/30 * * * * *, 18 runs) · <b>quote-expiry-checker</b> (0 0 * * *, 30 runs)</div>
 <div><b>metrics-aggregator</b> (*/5 * * * *, 288 runs) · <b>invoice-reminder</b> (0 9 * * 1-5, 22 runs) · <b>search-index-sync</b> (*/15 * * * *, 96 runs)</div>
 <div><b>backup-verifier</b> (0 4 * * *, 30 runs) · <b>notification-digest</b> (0 8 * * *, 30 runs) · <b>rate-limit-flusher</b> (0 * * * *, 720 runs)</div>
 </div>
-</section>
-</div>
-<section class="panel mb-5 reveal" id="sys-templates">
-<div class="panel-head"><div class="min-w-0"><h2 class="panel-title">Templates (62) · Email templates (10) &amp; Notification templates (52)</h2><div class="panel-sub">Edit and preview transactional email &amp; in-app notification templates</div></div></div>
+</article>
+</div></div></section><section class="nl-sec" id="nl-s-12" data-nl-group="cards" data-nl-panels="1" aria-labelledby="nl-ct-23"><div class="nl-sec-bd"><article class="nl-card mb-5 reveal" id="sys-templates" data-nl-card="bell">
+<div class="nl-card-hd"><span class="nl-card-mark" aria-hidden="true" data-nl-art="bell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" data-artwork="v3-mark"><path d="M18 8a6 6 0 1 0-12 0c0 7-2 8-2 8h16s-2-1-2-8"/><path d="M13.7 20a2 2 0 0 1-3.4 0"/></svg></span><div class="nl-card-tt"><h2 class="nl-card-t" id="nl-ct-23">Templates (62) · Email templates (10) &amp; Notification templates (52)</h2><div class="panel-sub nl-card-s">Edit and preview transactional email &amp; in-app notification templates</div></div><button class="nl-tool" type="button" data-nl-copy="#nl-s-12" aria-label="Copy link to Templates (62) · Email templates (10) &amp;amp; Notification templates (52)" title="Copy link to this card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div>
 <div class="grid g2">
-<div class="panel-body" style="border-right:1px solid var(--line)">
+<div class="nl-card-bd" style="border-right:1px solid var(--line)">
 <h3 class="panel-title mb-2">Email templates (10) — Edit &amp; Preview</h3>
 <div class="text-xs mb-2"><b>Expanded: Contact Inquiry Confirmation</b> (<span class="mono">contact-confirmation</span>) — Subject: <span class="mono">We received your message, {{name}} — Nestlancer</span></div>
 <div class="text-xs dim">Other email templates: <b>Milestone Completed</b> (<span class="mono">milestone-completed</span>) · <b>New Contact Inquiry Admin</b> (<span class="mono">contact-admin-notify</span>) · <b>Password Reset Request</b> (<span class="mono">password-reset</span>) · <b>Payment Receipt</b> (<span class="mono">payment-receipt</span>) · <b>Project Created</b> (<span class="mono">project-created</span>) · <b>Project Delivered</b> (<span class="mono">project-delivered</span>) · <b>Quote Ready for Review</b> (<span class="mono">quote-sent</span>) · <b>Two-Factor Verification Code</b> (<span class="mono">two-factor-code</span>) · <b>Welcome Email</b> (<span class="mono">welcome</span>)</div>
@@ -165,119 +162,116 @@
 <div class="text-xs dim">Covers all 52 platform lifecycle events across Auth, Requests, Quotes, Projects, Milestones, Deliverables, Payments, Disputes, and Moderation.</div>
 </div>
 </div>
-</section>
-<div class="grid g4 gap-4 reveal">
-<a class="panel panel-pad" href="./staff/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+</article></div></section><section class="nl-sec" id="nl-s-13" aria-labelledby="nl-sh-14" data-nl-group="plain" data-nl-panels="12"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">07</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-14">Related blocks</h2><p class="nl-sec-s">Who can do what in this console</p></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-13" aria-expanded="true" aria-controls="nl-s-13" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-13" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><div class="grid g4 gap-4 reveal">
+<a class="nl-card panel-pad" href="./staff/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></span>
 <span class="badge tone-neutral">4 staff</span>
-</div>
-<b class="h3 fs-14">Staff &amp; roles</b>
-<div class="text-xs dim mt-1 mb-3">Who can do what in this console</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Staff &amp; roles</b><div class="text-xs dim mt-1 mb-3">Who can do what in this console</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./features/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./features/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M5 21V4"></path><path d="M5 4h12l-2.5 4L17 12H5"></path></svg></span>
 <span class="badge tone-success">2 flags on</span>
-</div>
-<b class="h3 fs-14">Feature flags</b>
-<div class="text-xs dim mt-1 mb-3">Kill-switches and staged rollouts</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Feature flags</b><div class="text-xs dim mt-1 mb-3">Kill-switches and staged rollouts</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./health/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./health/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--t-warning-bg);color:var(--t-warning-tx)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg></span>
 <span class="badge tone-warning">Degraded: jobs-Q</span>
-</div>
-<b class="h3 fs-14">Health</b>
-<div class="text-xs dim mt-1 mb-3">DB, cache, queues, edge</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Health</b><div class="text-xs dim mt-1 mb-3">DB, cache, queues, edge</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./jobs/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./jobs/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--t-danger-bg);color:var(--t-danger-tx)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
 <span class="badge tone-danger">1 failing</span>
-</div>
-<b class="h3 fs-14">Jobs</b>
-<div class="text-xs dim mt-1 mb-3">Cron, retries, dead-letters</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Jobs</b><div class="text-xs dim mt-1 mb-3">Cron, retries, dead-letters</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./cache/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./cache/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></span>
 <span class="badge tone-success">Warm: 96.8% hits</span>
-</div>
-<b class="h3 fs-14">Cache</b>
-<div class="text-xs dim mt-1 mb-3">Fast paths for reads</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Cache</b><div class="text-xs dim mt-1 mb-3">Fast paths for reads</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./logs/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./logs/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span>
 <span class="badge tone-neutral">—</span>
-</div>
-<b class="h3 fs-14">Logs</b>
-<div class="text-xs dim mt-1 mb-3">Recent runtime output</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Logs</b><div class="text-xs dim mt-1 mb-3">Recent runtime output</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./maintenance/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./maintenance/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M12 3v8"></path><path d="M7 5.5a8 8 0 1010 0"></path></svg></span>
 <span class="badge tone-muted">Off</span>
-</div>
-<b class="h3 fs-14">Maintenance</b>
-<div class="text-xs dim mt-1 mb-3">Read-only &amp; offline modes</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Maintenance</b><div class="text-xs dim mt-1 mb-3">Read-only &amp; offline modes</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./announcements/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./announcements/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M3 11l14-6v14L3 13v-2z"></path><path d="M17 6a4 4 0 010 12"></path><path d="M7 13v6a1 1 0 001 1h2"></path></svg></span>
 <span class="badge tone-info">1 scheduled</span>
-</div>
-<b class="h3 fs-14">Announcements</b>
-<div class="text-xs dim mt-1 mb-3">Site-wide banners and digest copy</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Announcements</b><div class="text-xs dim mt-1 mb-3">Site-wide banners and digest copy</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./email-templates/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./email-templates/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span>
 <span class="badge tone-neutral">6 live</span>
-</div>
-<b class="h3 fs-14">Email templates</b>
-<div class="text-xs dim mt-1 mb-3">Every transactional email</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Email templates</b><div class="text-xs dim mt-1 mb-3">Every transactional email</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="./notification-templates/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="./notification-templates/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="M18 8a6 6 0 10-12 0c0 7-2 8-2 8h16s-2-1-2-8"></path><path d="M13.7 20a2 2 0 01-3.4 0"></path></svg></span>
 <span class="badge tone-info">24 events</span>
-</div>
-<b class="h3 fs-14">Notification templates</b>
-<div class="text-xs dim mt-1 mb-3">In-app event copy</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Notification templates</b><div class="text-xs dim mt-1 mb-3">In-app event copy</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="../api-keys/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="../api-keys/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span>
 <span class="badge tone-neutral">5 active</span>
-</div>
-<b class="h3 fs-14">API keys</b>
-<div class="text-xs dim mt-1 mb-3">Scoped programmatic access</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">API keys</b><div class="text-xs dim mt-1 mb-3">Scoped programmatic access</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-<a class="panel panel-pad" href="../integrations/index.html" style="display:block">
-<div class="flex items-center justify-between mb-3">
+<a class="nl-card panel-pad" href="../integrations/index.html" style="display:block" data-nl-linkcard="true" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3">
 <span class="avatar sq" style="width:34px;height:34px;border-radius:10px;background:var(--t-warning-bg);color:var(--t-warning-tx)"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></span>
 <span class="badge tone-warning">1 attention</span>
-</div>
-<b class="h3 fs-14">Integrations</b>
-<div class="text-xs dim mt-1 mb-3">Payment, email, LLM, storage</div>
-<span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span>
+</div><b class="h3 fs-14">Integrations</b><div class="text-xs dim mt-1 mb-3">Payment, email, LLM, storage</div><span class="link text-sm inline-flex items-center gap-1">Open <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="12"><path d="m9 18 6-6-6-6"></path></svg></span></div>
+
+
+
 </a>
-</div>
-<!-- PROTO-STATES-SYSTEM -->
-<section aria-labelledby="states-system-h" class="mb-5 reveal" id="states-system"><div class="sec-head">
+</div></div></section><section class="nl-sec" id="nl-s-15" aria-labelledby="nl-sh-16" data-nl-group="plain" data-nl-panels="0"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">08</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-16">Prototype note</h2><p class="nl-sec-s">Gateway Reachable · service Healthy · maintenance Off · flags 5/12 enabled</p></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-15" aria-expanded="true" aria-controls="nl-s-15" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-15" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><section aria-labelledby="states-system-h" class="mb-5 reveal" id="states-system"><div class="sec-head">
 <div class="min-w-0">
 <div class="sec-eyebrow">Operator states · 8 screens</div>
 <h2 class="sec-title" id="states-system-h">System configuration states</h2>
@@ -330,8 +324,7 @@
 <span class="badge tone-neutral mono">063 · 106 · 107</span>
 </div>
 <div class="dialog-body"><div class="tbl-wrap"><table aria-labelledby="sys-templates-h" class="tbl tbl-cards"><thead><tr><th id="nl-th-11" scope="col">Key</th><th id="nl-th-12" scope="col">Template</th><th id="nl-th-13" scope="col">Updated</th></tr></thead><tbody><tr><td class="min-w-0" data-label="Key">verification</td><td class="min-w-0" data-label="Template">Verify your Nestlancer account</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">welcome</td><td class="min-w-0" data-label="Template">Welcome to Nestlancer!</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">password-reset</td><td class="min-w-0" data-label="Template">Reset your Nestlancer password</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">quote-sent</td><td class="min-w-0" data-label="Template">New quote for your project: {{projectTitle}}</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">payment-receipt</td><td class="min-w-0" data-label="Template">Payment receipt for {{amount}}</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">project-update</td><td class="min-w-0" data-label="Template">New update on {{projectTitle}}</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">milestone-completed</td><td class="min-w-0" data-label="Template">{{milestoneName}} approved</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">new-message</td><td class="min-w-0" data-label="Template">New message from {{senderName}}</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">account-suspended</td><td class="min-w-0" data-label="Template">Your account has been suspended</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr><tr><td class="min-w-0" data-label="Key">contact-received</td><td class="min-w-0" data-label="Template">We received your message – Ticket #{{ticketId}}</td><td class="min-w-0" data-label="Updated">Edit · Preview</td></tr></tbody></table></div><div class="mt-3"><dl class="kv"><dt>Email preview</dt><dd>From Nestlancer &lt;noreply@nestlancer.com&gt; · To recipient@example.com</dd><dt>Notification template</dt><dd>account-deleted-user · event account.deleted · title “Account deleted” · body “Your account has been deleted.” · channels [IN_APP]</dd><dt>Body sample</dt><dd>Hi {{userName}} — thanks for joining Nestlancer. This link expires in 24 hours.</dd></dl></div><div class="mt-3 flex items-center gap-2 flex-wrap"><button class="btn btn-secondary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Send test</button><button class="btn btn-primary btn-sm" data-wb-action="default" data-wb-js="" disabled="" type="button">Save template</button></div></div>
-</section></div></section>
-</main>
+</section></div></section></div></section></div><aside class="nl-rail" aria-label="Page aids"><nav class="nl-rail-card" aria-label="On this page"><h2 class="nl-rail-t"><span>On this page</span><span class="nl-mono" aria-hidden="true">08</span></h2><ul class="nl-toc" role="list"><li><a href="#nl-s-02"><span class="nl-toc-i" aria-hidden="true">01</span><span>Signal strip</span></a></li><li><a href="#nl-s-04"><span class="nl-toc-i" aria-hidden="true">02</span><span>Views</span></a></li><li><a href="#nl-s-06"><span class="nl-toc-i" aria-hidden="true">03</span><span>Related blocks</span></a></li><li><a href="#nl-s-08"><span class="nl-toc-i" aria-hidden="true">04</span><span>Related blocks</span></a></li><li><a href="#nl-s-10"><span class="nl-toc-i" aria-hidden="true">05</span><span>Related blocks</span></a></li><li><a href="#nl-s-12"><span class="nl-toc-i" aria-hidden="true">06</span><span>Templates (62) · Email templates (10) &amp;a…</span></a></li><li><a href="#nl-s-13"><span class="nl-toc-i" aria-hidden="true">07</span><span>Related blocks</span></a></li><li><a href="#nl-s-15"><span class="nl-toc-i" aria-hidden="true">08</span><span>Prototype note</span></a></li></ul></nav><div class="nl-rail-card"><h2 class="nl-rail-t"><span>Ledger</span><span aria-hidden="true">◇</span></h2><dl class="nl-rail-kv"><div><dt>Surface</dt><dd>Operator console</dd></div><div><dt>View</dt><dd>List</dd></div><div><dt>Sections</dt><dd>8</dd></div><div><dt>Cards</dt><dd>19</dd></div><div><dt>Sample rows</dt><dd>0</dd></div><div><dt>Bespoke art</dt><dd>24 vectors</dd></div><div><dt>Contract</dt><dd>admin.openapi.json</dd></div></dl></div><div class="nl-rail-card"><h2 class="nl-rail-t"><span>Keys</span><span class="kbd" aria-hidden="true">⌘K</span></h2><p class="nl-rail-hint"><span>Focus search</span><span class="kbd" aria-hidden="true">⌘K</span></p><p class="nl-rail-hint"><span>Skip to content</span><span class="kbd" aria-hidden="true">Tab</span></p><p class="nl-rail-hint"><span>Close menus</span><span class="kbd" aria-hidden="true">Esc</span></p></div></aside></div><footer class="nl-strip reveal"><span>sections <b>8</b></span><span>cards <b>19</b></span><span>rows <b>0</b></span><span>static prototype · no live service</span><div class="nl-strip-acts"><button class="nl-tool" type="button" data-nl-density aria-label="Cycle row density"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-nl-density-label>Cosy</span></button><button class="nl-tool" type="button" data-nl-copy aria-label="Copy link to this page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Top</button></div></footer></div></main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">

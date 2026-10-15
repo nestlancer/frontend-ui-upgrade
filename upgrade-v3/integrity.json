@@ -1,0 +1,1404 @@
+[
+ {
+  "path": "proto/apps/admin/analytics/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 63655,
+  "text_len": 4176,
+  "headings": 25
+ },
+ {
+  "path": "proto/apps/admin/api-keys/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 42211,
+  "text_len": 2563,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/audit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 63631,
+  "text_len": 5912,
+  "headings": 21
+ },
+ {
+  "path": "proto/apps/admin/contact/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40575,
+  "text_len": 2785,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/content/blog/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 50427,
+  "text_len": 5964,
+  "headings": 21
+ },
+ {
+  "path": "proto/apps/admin/content/blog/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 45794,
+  "text_len": 2681,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/admin/content/blog/post-custom-crm/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39699,
+  "text_len": 2334,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/content/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 61269,
+  "text_len": 7153,
+  "headings": 19
+ },
+ {
+  "path": "proto/apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 59028,
+  "text_len": 7609,
+  "headings": 28
+ },
+ {
+  "path": "proto/apps/admin/content/posts/[id]/edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 50611,
+  "text_len": 5964,
+  "headings": 21
+ },
+ {
+  "path": "proto/apps/admin/content/posts/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 45795,
+  "text_len": 2681,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/admin/dashboard/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 62133,
+  "text_len": 4310,
+  "headings": 22
+ },
+ {
+  "path": "proto/apps/admin/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 6521,
+  "text_len": 309,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/admin/integrations/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 43519,
+  "text_len": 2988,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/media/analytics/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 45229,
+  "text_len": 2343,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/media/browse/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 46137,
+  "text_len": 3047,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/media/folders/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38222,
+  "text_len": 1963,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/admin/media/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 90281,
+  "text_len": 9309,
+  "headings": 33
+ },
+ {
+  "path": "proto/apps/admin/media/quarantine/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 35514,
+  "text_len": 2241,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/media/storage/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38217,
+  "text_len": 2170,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/media/upload/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 36779,
+  "text_len": 2101,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/messages/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34645,
+  "text_len": 2805,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/messages/archived/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34020,
+  "text_len": 2082,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/admin/messages/inbox/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40580,
+  "text_len": 3120,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/messages/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 42127,
+  "text_len": 2668,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/admin/messages/new-direct/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 36516,
+  "text_len": 2256,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/messages/new-group/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37125,
+  "text_len": 2293,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/messages/new/direct/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 36713,
+  "text_len": 2256,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/messages/new/group/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37307,
+  "text_len": 2293,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/messages/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37280,
+  "text_len": 2124,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/messages/project/[projectId]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34430,
+  "text_len": 2424,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39769,
+  "text_len": 3734,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/messages/thread/[threadId]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34772,
+  "text_len": 2805,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/messages/threads/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38148,
+  "text_len": 2512,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/moderation/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38753,
+  "text_len": 2804,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/notifications/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 66944,
+  "text_len": 7166,
+  "headings": 26
+ },
+ {
+  "path": "proto/apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41300,
+  "text_len": 3570,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/payments/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 43551,
+  "text_len": 3733,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/admin/payments/accounts/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38664,
+  "text_len": 2519,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/payments/company-legal/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 44687,
+  "text_len": 2696,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/payments/disputes/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37331,
+  "text_len": 2414,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/payments/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 48613,
+  "text_len": 4602,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/admin/payments/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39078,
+  "text_len": 3089,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/payments/projects/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39078,
+  "text_len": 3089,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/payments/projects/nl-lms/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38485,
+  "text_len": 2448,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/pipeline/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 50008,
+  "text_len": 3658,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 53191,
+  "text_len": 4252,
+  "headings": 22
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 53191,
+  "text_len": 4252,
+  "headings": 22
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 42019,
+  "text_len": 3158,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/nl-lms/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 46972,
+  "text_len": 3088,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 80672,
+  "text_len": 8519,
+  "headings": 31
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 62284,
+  "text_len": 5097,
+  "headings": 23
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 42776,
+  "text_len": 3133,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/priya-nair/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 49552,
+  "text_len": 2956,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/admin/portfolio/01a10a2a-544e-757a-8806-721a7b8591dd/edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38407,
+  "text_len": 2165,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/portfolio/[id]/edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38407,
+  "text_len": 2165,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/portfolio/banking-dashboard.edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38214,
+  "text_len": 2165,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/portfolio/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 52100,
+  "text_len": 3851,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/portfolio/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39045,
+  "text_len": 2134,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/profile/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33355,
+  "text_len": 2155,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 82452,
+  "text_len": 10180,
+  "headings": 38
+ },
+ {
+  "path": "proto/apps/admin/projects/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 63858,
+  "text_len": 6624,
+  "headings": 29
+ },
+ {
+  "path": "proto/apps/admin/projects/archive/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33069,
+  "text_len": 2113,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/projects/completed/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34680,
+  "text_len": 2282,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/projects/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 43463,
+  "text_len": 2766,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/projects/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39805,
+  "text_len": 2671,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/projects/nl-lms/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41983,
+  "text_len": 2407,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/admin/projects/stats/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 46157,
+  "text_len": 2627,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/admin/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 51065,
+  "text_len": 3798,
+  "headings": 21
+ },
+ {
+  "path": "proto/apps/admin/quotes/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 44615,
+  "text_len": 2655,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/quotes/drafts/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33275,
+  "text_len": 2119,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/quotes/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41537,
+  "text_len": 2778,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/quotes/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 43090,
+  "text_len": 2581,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/admin/quotes/payment-schedules/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33472,
+  "text_len": 2292,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/admin/quotes/stats/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41357,
+  "text_len": 2114,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 52218,
+  "text_len": 4965,
+  "headings": 22
+ },
+ {
+  "path": "proto/apps/admin/requests/01a10a2c-1a04-75bb-8e80-fc143257fa02/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 50639,
+  "text_len": 4920,
+  "headings": 22
+ },
+ {
+  "path": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 43141,
+  "text_len": 3209,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/quote/edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40615,
+  "text_len": 2357,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/quote/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41910,
+  "text_len": 2630,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/requests/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 43141,
+  "text_len": 3209,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/admin/requests/[id]/quote/edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40607,
+  "text_len": 2357,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/requests/[id]/quote/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41910,
+  "text_len": 2630,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/requests/capacity/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41473,
+  "text_len": 2787,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/requests/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 48809,
+  "text_len": 4201,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/admin/system/announcements/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37389,
+  "text_len": 2617,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/system/cache/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41981,
+  "text_len": 2437,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/system/email-templates/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 38055,
+  "text_len": 2509,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/system/features/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 35038,
+  "text_len": 2349,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/system/health/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39760,
+  "text_len": 2296,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/admin/system/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 87398,
+  "text_len": 10690,
+  "headings": 32
+ },
+ {
+  "path": "proto/apps/admin/system/jobs/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39577,
+  "text_len": 2419,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/admin/system/logs/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 35958,
+  "text_len": 2543,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/admin/system/maintenance/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 39204,
+  "text_len": 2690,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/admin/system/notification-templates/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37925,
+  "text_len": 2900,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/system/staff/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40518,
+  "text_len": 2527,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 69958,
+  "text_len": 7404,
+  "headings": 30
+ },
+ {
+  "path": "proto/apps/admin/users/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 56783,
+  "text_len": 4878,
+  "headings": 21
+ },
+ {
+  "path": "proto/apps/admin/users/arjun-mehta/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 45483,
+  "text_len": 2898,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/admin/users/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 41135,
+  "text_len": 3162,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/admin/users/search/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 32950,
+  "text_len": 2017,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/landing/about/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 15956,
+  "text_len": 2257,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/landing/admin-login/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 14595,
+  "text_len": 1966,
+  "headings": 2
+ },
+ {
+  "path": "proto/apps/landing/blog/[slug]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 14723,
+  "text_len": 3100,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/landing/blog/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 22346,
+  "text_len": 3663,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/landing/contact-alt/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 13172,
+  "text_len": 1449,
+  "headings": 7
+ },
+ {
+  "path": "proto/apps/landing/contact/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 15532,
+  "text_len": 2414,
+  "headings": 7
+ },
+ {
+  "path": "proto/apps/landing/forgot-password/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 12462,
+  "text_len": 1621,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/landing/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 31090,
+  "text_len": 5047,
+  "headings": 9
+ },
+ {
+  "path": "proto/apps/landing/login/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 13528,
+  "text_len": 1593,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/landing/portfolio/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 15220,
+  "text_len": 2529,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/landing/portfolio/fintech-payments-hub/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 15220,
+  "text_len": 2529,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/landing/portfolio/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 19900,
+  "text_len": 2863,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/landing/pricing/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 20472,
+  "text_len": 3380,
+  "headings": 9
+ },
+ {
+  "path": "proto/apps/landing/privacy/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 13988,
+  "text_len": 3138,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/landing/register/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 16544,
+  "text_len": 1906,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/landing/reset-password/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 13774,
+  "text_len": 1737,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/landing/services/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 19375,
+  "text_len": 2115,
+  "headings": 8
+ },
+ {
+  "path": "proto/apps/landing/terms/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 14454,
+  "text_len": 3269,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/landing/verify-document/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 13765,
+  "text_len": 1931,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/landing/verify-email/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 13250,
+  "text_len": 1627,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/landing/verify/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 12533,
+  "text_len": 1409,
+  "headings": 1
+ },
+ {
+  "path": "proto/apps/web/dashboard/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 42248,
+  "text_len": 3072,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/web/invoices/NL-INV-2026-000009/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29674,
+  "text_len": 2088,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/web/invoices/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29674,
+  "text_len": 2088,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/web/invoices/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33886,
+  "text_len": 2064,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/messages/[conversationId]/index.html",
+  "errors": [],
+  "warns": [
+   "first heading is h2"
+  ],
+  "bytes": 32930,
+  "text_len": 2329,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/messages/archived/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 28017,
+  "text_len": 1698,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/messages/inbox/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 32374,
+  "text_len": 2977,
+  "headings": 5
+ },
+ {
+  "path": "proto/apps/web/messages/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 28320,
+  "text_len": 2053,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/web/messages/new/direct/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29718,
+  "text_len": 1747,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/web/messages/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 31875,
+  "text_len": 1928,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 36114,
+  "text_len": 3231,
+  "headings": 16
+ },
+ {
+  "path": "proto/apps/web/messages/thread/[threadId]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 30063,
+  "text_len": 2157,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/messages/threads/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 30896,
+  "text_len": 2086,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/notifications/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 44709,
+  "text_len": 4243,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37995,
+  "text_len": 4001,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/web/payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29910,
+  "text_len": 2006,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29910,
+  "text_len": 2006,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/payments/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29910,
+  "text_len": 2006,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/payments/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 35753,
+  "text_len": 2519,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/web/payments/invoice/NL-INV-2026-000008/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 28030,
+  "text_len": 2118,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/payments/invoice/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 28030,
+  "text_len": 2118,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/payments/invoices/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33181,
+  "text_len": 2131,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/payments/methods/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34077,
+  "text_len": 2056,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/web/profile/edit/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34664,
+  "text_len": 2230,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/web/profile/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29509,
+  "text_len": 2080,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/web/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 58354,
+  "text_len": 6670,
+  "headings": 21
+ },
+ {
+  "path": "proto/apps/web/projects/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40064,
+  "text_len": 3632,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/web/projects/archive/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 26559,
+  "text_len": 1575,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/projects/completed/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 28377,
+  "text_len": 1723,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/projects/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 28412,
+  "text_len": 1513,
+  "headings": 8
+ },
+ {
+  "path": "proto/apps/web/projects/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 26761,
+  "text_len": 1716,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/projects/nl-lms/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40063,
+  "text_len": 3632,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/web/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 48070,
+  "text_len": 6135,
+  "headings": 20
+ },
+ {
+  "path": "proto/apps/web/quotes/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 40346,
+  "text_len": 4181,
+  "headings": 17
+ },
+ {
+  "path": "proto/apps/web/quotes/drafts/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 26014,
+  "text_len": 1618,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/quotes/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 35821,
+  "text_len": 2298,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/quotes/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 24806,
+  "text_len": 1501,
+  "headings": 10
+ },
+ {
+  "path": "proto/apps/web/quotes/templates/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 28367,
+  "text_len": 1938,
+  "headings": 11
+ },
+ {
+  "path": "proto/apps/web/requests/01a10a2c-530e-7354-b21b-f5ecdab54f7a/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 42441,
+  "text_len": 4052,
+  "headings": 21
+ },
+ {
+  "path": "proto/apps/web/requests/4b8110f3-1d0e-4f8c-a111-3e0a1/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37453,
+  "text_len": 2902,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/web/requests/[id]/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 37453,
+  "text_len": 2902,
+  "headings": 18
+ },
+ {
+  "path": "proto/apps/web/requests/archive/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 31142,
+  "text_len": 2007,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/web/requests/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 34257,
+  "text_len": 2122,
+  "headings": 13
+ },
+ {
+  "path": "proto/apps/web/requests/new/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 36118,
+  "text_len": 2558,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/web/settings/account/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33286,
+  "text_len": 2269,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/web/settings/activity/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 31080,
+  "text_len": 2308,
+  "headings": 12
+ },
+ {
+  "path": "proto/apps/web/settings/billing/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33854,
+  "text_len": 2118,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/web/settings/files/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 32585,
+  "text_len": 2018,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/web/settings/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 31383,
+  "text_len": 1724,
+  "headings": 10
+ },
+ {
+  "path": "proto/apps/web/settings/notifications/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33472,
+  "text_len": 1976,
+  "headings": 14
+ },
+ {
+  "path": "proto/apps/web/settings/security/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 33439,
+  "text_len": 2062,
+  "headings": 15
+ },
+ {
+  "path": "proto/apps/web/settings/sessions/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 29636,
+  "text_len": 1912,
+  "headings": 12
+ },
+ {
+  "path": "proto/index.html",
+  "errors": [],
+  "warns": [],
+  "bytes": 47882,
+  "text_len": 7407,
+  "headings": 21
+ }
+]

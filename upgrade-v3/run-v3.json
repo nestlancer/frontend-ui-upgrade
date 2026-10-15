@@ -1,0 +1,1533 @@
+[
+ {
+  "path": "proto/apps/admin/analytics/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 9,
+  "rows": 9,
+  "sections": 6,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/api-keys/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 6,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/audit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 18,
+  "sections": 9,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/contact/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 5,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/content/blog/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 8,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/content/blog/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/content/blog/post-custom-crm/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/content/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 19,
+  "sections": 6,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 9,
+  "rows": 0,
+  "sections": 5,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/content/posts/[id]/edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 8,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/content/posts/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/dashboard/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 8,
+  "sections": 8,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/index.html",
+  "changed": false,
+  "notes": [
+   "inline-script-in-main:body-skipped"
+  ],
+  "cards": 0,
+  "rows": 0,
+  "sections": 0,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/integrations/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 10,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/media/analytics/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 5,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/media/browse/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 8,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/media/folders/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/media/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 9,
+  "sections": 7,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/media/quarantine/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/media/storage/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/media/upload/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/archived/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/inbox/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 0,
+  "sections": 3,
+  "kind": "overview"
+ },
+ {
+  "path": "proto/apps/admin/messages/new-direct/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/new-group/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/new/direct/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/new/group/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/project/[projectId]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/messages/thread/[threadId]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/messages/threads/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 6,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/moderation/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 3,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/notifications/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 5,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 2,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/payments/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 2,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/payments/accounts/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/payments/company-legal/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/payments/disputes/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 4,
+  "kind": "overview"
+ },
+ {
+  "path": "proto/apps/admin/payments/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 5,
+  "sections": 6,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/payments/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 4,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/payments/projects/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 4,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/payments/projects/nl-lms/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 4,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 21,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 8,
+  "rows": 5,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 8,
+  "rows": 5,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 6,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/projects/nl-lms/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 5,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 8,
+  "rows": 16,
+  "sections": 7,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 8,
+  "rows": 16,
+  "sections": 6,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 10,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/pipeline/users/priya-nair/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 7,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/portfolio/01a10a2a-544e-757a-8806-721a7b8591dd/edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 2,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/portfolio/[id]/edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 2,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/portfolio/banking-dashboard.edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 2,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/portfolio/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 16,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/portfolio/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 3,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/profile/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 1,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 11,
+  "rows": 6,
+  "sections": 9,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/projects/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 10,
+  "rows": 6,
+  "sections": 9,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/projects/archive/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 3,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/projects/completed/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 4,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/projects/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 5,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/projects/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 4,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/projects/nl-lms/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/projects/stats/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 5,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 3,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/quotes/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 3,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/quotes/drafts/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 4,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/quotes/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 6,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/quotes/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 2,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/quotes/payment-schedules/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 5,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/quotes/stats/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 3,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 4,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/requests/01a10a2c-1a04-75bb-8e80-fc143257fa02/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/quote/edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 2,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/requests/6a4110f3-1507-769c-99d0-253425f8a1/quote/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 4,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/requests/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/requests/[id]/quote/edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 2,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/requests/[id]/quote/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 4,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/requests/capacity/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 4,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/requests/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 13,
+  "sections": 5,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/announcements/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 3,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/cache/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 6,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/email-templates/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/admin/system/features/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 6,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/health/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 5,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 19,
+  "rows": 0,
+  "sections": 8,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/jobs/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 8,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/logs/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/maintenance/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 3,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/notification-templates/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 6,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/system/staff/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 5,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 9,
+  "sections": 7,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/users/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 9,
+  "sections": 6,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/users/arjun-mehta/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 6,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/users/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 10,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/admin/users/search/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 2,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/dashboard/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 4,
+  "kind": "overview"
+ },
+ {
+  "path": "proto/apps/web/invoices/NL-INV-2026-000009/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 4,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/invoices/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 4,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/invoices/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 4,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/messages/[conversationId]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 0,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/messages/archived/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/messages/inbox/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 0,
+  "rows": 0,
+  "sections": 1,
+  "kind": "form"
+ },
+ {
+  "path": "proto/apps/web/messages/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 2,
+  "kind": "overview"
+ },
+ {
+  "path": "proto/apps/web/messages/new/direct/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/messages/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/messages/thread/[threadId]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/messages/threads/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 4,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/notifications/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/payments/01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/payments/01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/payments/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/payments/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 3,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/payments/invoice/NL-INV-2026-000008/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 4,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/payments/invoice/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 4,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/payments/invoices/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 4,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/payments/methods/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/profile/edit/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/profile/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 5,
+  "rows": 0,
+  "sections": 1,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 14,
+  "rows": 2,
+  "sections": 7,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/projects/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 9,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/projects/archive/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/projects/completed/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/projects/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 0,
+  "rows": 0,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/projects/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/projects/nl-lms/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 9,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 6,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/quotes/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 6,
+  "rows": 6,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/quotes/drafts/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/quotes/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/quotes/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/quotes/templates/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/requests/01a10a2c-530e-7354-b21b-f5ecdab54f7a/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 0,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/requests/4b8110f3-1d0e-4f8c-a111-3e0a1/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/requests/[id]/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/requests/archive/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/requests/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 0,
+  "sections": 4,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/requests/new/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/settings/account/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 0,
+  "sections": 4,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/settings/activity/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 6,
+  "sections": 2,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/settings/billing/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/settings/files/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 3,
+  "rows": 0,
+  "sections": 3,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/settings/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 7,
+  "rows": 0,
+  "sections": 1,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/settings/notifications/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 2,
+  "rows": 7,
+  "sections": 3,
+  "kind": "list"
+ },
+ {
+  "path": "proto/apps/web/settings/security/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 4,
+  "rows": 0,
+  "sections": 2,
+  "kind": "detail"
+ },
+ {
+  "path": "proto/apps/web/settings/sessions/index.html",
+  "changed": true,
+  "notes": [],
+  "lost_tokens": [],
+  "cards": 1,
+  "rows": 3,
+  "sections": 2,
+  "kind": "list"
+ }
+]

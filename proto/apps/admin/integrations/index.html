@@ -3,14 +3,14 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Nestlancer admin prototype — Integrations · Admin" name="description"/>
+<meta content="Nestlancer Integrations — operator console screen in the static prototype; sample data only." name="description"/>/>
 <title>Integrations · Admin</title>
 
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E" rel="icon"/>
 <link href="../../../shared/assets/proto.css" rel="stylesheet"/>
 <script src="../../../shared/assets/proto-motion.js"></script>
-<link href="../../../shared/assets/operator.css" rel="stylesheet"/><link href="../../../shared/assets/workbench.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/workbench.js"></script><script defer="" src="../../../shared/assets/operator.js"></script></head>
-<body class="app-body upgrade-v2 workbench-v2 workbench-admin operator-v2" data-page="integrations" data-surface="admin">
+<link href="../../../shared/assets/operator.css" rel="stylesheet"/><link href="../../../shared/assets/workbench.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/workbench.js"></script><script defer="" src="../../../shared/assets/operator.js"></script><link href="../../../shared/assets/nl-v3.css" rel="stylesheet"/><script defer="" src="../../../shared/assets/nl-v3.js"></script></head>
+<body class="app-body upgrade-v2 workbench-v2 workbench-admin operator-v2 nl-v3" data-page="integrations" data-surface="admin">
 <a class="skip-link" href="#main">Skip to main content</a>
 <div class="shell" id="app-shell">
 <button aria-hidden="true" class="sb-backdrop" data-sb-close="" tabindex="-1" type="button"></button>
@@ -63,79 +63,73 @@
 <button aria-label="Theme" class="icobtn" data-theme-toggle="" title="Theme"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button></div>
 </header>
 <main class="content" id="main" tabindex="-1">
-<div class="pband"><div class="phead anim-in">
-<div class="min-w-0">
-<div class="eyebrow"><span class="dot"></span>PLATFORM</div>
-<h1 class="ptitle">Integrations</h1>
-<p class="psub">Where the platform talks to the outside world — payments, email, LLMs, and notifications.</p>
-</div>
-<div class="phead-actions"><button class="btn btn-primary" data-dialog-open="dlg-webhook" type="button">Add webhook</button></div>
-</div></div>
-<div class="panel mb-5 reveal">
+
+
+
+
+
+<div class="nl-root"><header class="nl-mast reveal"><div class="nl-mast-l"><div class="nl-kicker"><span class="nl-kicker-i" aria-hidden="true">01/03</span><span class="nl-kicker-t">PLATFORM</span><span class="nl-kicker-line" aria-hidden="true"></span></div><h1 class="nl-title" id="nl-t-01">Integrations</h1><p class="nl-lede">Where the platform talks to the outside world — payments, email, LLMs, and notifications.</p><ul class="nl-tags" role="list" aria-label="Page facts"><li class="nl-tag" data-tone="info"><span class="nl-tag-k">view</span>Record view</li><li class="nl-tag" data-tone="muted"><span class="nl-tag-k">theme</span>light · dark</li></ul></div><div class="nl-mast-r"><div class="nl-mast-actions"><button class="btn btn-primary" data-dialog-open="dlg-webhook" type="button">Add webhook</button></div></div><div class="nl-mast-art" aria-hidden="true" data-nl-art="system"><svg viewBox="0 0 132 92" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" data-artwork="v3-mast"><rect x="8" y="14" width="48" height="30" rx="7"/><path d="M16 24h20M16 34h30" stroke-opacity=".5"/><rect x="8" y="52" width="22" height="26" rx="6"/><rect x="34" y="52" width="22" height="26" rx="6"/><path d="M42 8h44" stroke-opacity=".3"/><rect x="68" y="34" width="30" height="30" rx="15"/><circle cx="83" cy="49" r="4"/><path d="M83 38v4M83 56v4M72 49h4M90 49h4" stroke-opacity=".6"/><rect x="104" y="16" width="24" height="46" rx="7"/><path d="M110 26h12M110 36h12M110 46h8" stroke-opacity=".45"/><path d="M104 70h24" stroke-opacity=".3"/></svg></div></header><div class="nl-body nl-has-rail"><div class="nl-flow"><section class="nl-sec" id="nl-s-02" data-nl-group="cards" data-nl-panels="1"><div class="nl-sec-bd"><article class="nl-card mb-5 reveal" data-nl-card="list">
 <div class="panel-row">
 <span class="avatar sq" style="width:38px;height:38px;background:var(--t-info-bg);color:#3FA9F5"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg></span>
 <div class="flex-1"><b class="fs-14">Slack bot</b><div class="text-xs dim mt-1">Posting to <span class="mono">#nl-ops</span>, <span class="mono">#nl-leads</span></div></div>
 <span class="badge tone-success">Live</span>
 </div>
-</div>
-<div class="grid g3 gap-5 reveal">
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--t-warning-bg);color:var(--t-warning-tx)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></span><span class="badge tone-warning">Attention</span></div>
-<b class="h3 fs-14">Razorpay</b><div class="text-xs dim mt-1">Payments gateway</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">Test keys active · flip before GA</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">Resend</b><div class="text-xs dim mt-1">Transactional &amp; marketing email</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">Verified domain: nestlancer.com</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">Anthropic</b><div class="text-xs dim mt-1">Intake summaries, auto-tagging</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">Claude Haiku · 12k req/mo</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">Google Drive</b><div class="text-xs dim mt-1">External deliverable archive</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">Service account scoped to /deliverables</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">S3 — uploads bucket</b><div class="text-xs dim mt-1">Media origin for the CDN</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">Lifecycle: quarantine bucket is private</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">Sentry</b><div class="text-xs dim mt-1">Error tracking + release health</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">0 unresolved · native tracing on</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">Vercel Cron</b><div class="text-xs dim mt-1">Hourly jobs + digests</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">us-east · 21 routes</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">SMS Gupshup</b><div class="text-xs dim mt-1">India SMS for payment nudges</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">Sender ID NSTLAN · DLT registered</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-<div class="panel panel-pad">
-<div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span><span class="badge tone-success">Connected</span></div>
-<b class="h3 fs-14">Webhooks</b><div class="text-xs dim mt-1">Outbound events to client systems</div>
-<div class="text-xs dim mono mt-3" style="line-height:1.5">14 active endpoints</div>
-<div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div>
-</div>
-</div>
-<div class="note warn reveal"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><div>Razorpay is in <b>test mode</b>. No real money moves until production keys replace the current test pair — keep client comms aligned.</div></div>
-<dialog aria-labelledby="dlg-webhook-h" class="dialog" id="dlg-webhook">
+<div class="nl-card-bd"></div></article></div></section><section class="nl-sec" id="nl-s-03" aria-labelledby="nl-sh-04" data-nl-group="plain" data-nl-panels="9"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">02</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-04">Related blocks</h2></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-03" aria-expanded="true" aria-controls="nl-s-03" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-03" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><div class="grid g3 gap-5 reveal">
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--t-warning-bg);color:var(--t-warning-tx)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><rect height="14" rx="2" width="20" x="2" y="5"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></span><span class="badge tone-warning">Attention</span></div><b class="h3 fs-14">Razorpay</b><div class="text-xs dim mt-1">Payments gateway</div><div class="text-xs dim mono mt-3" style="line-height:1.5">Test keys active · flip before GA</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">Resend</b><div class="text-xs dim mt-1">Transactional &amp; marketing email</div><div class="text-xs dim mono mt-3" style="line-height:1.5">Verified domain: nestlancer.com</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">Anthropic</b><div class="text-xs dim mt-1">Intake summaries, auto-tagging</div><div class="text-xs dim mono mt-3" style="line-height:1.5">Claude Haiku · 12k req/mo</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">Google Drive</b><div class="text-xs dim mt-1">External deliverable archive</div><div class="text-xs dim mono mt-3" style="line-height:1.5">Service account scoped to /deliverables</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">S3 — uploads bucket</b><div class="text-xs dim mt-1">Media origin for the CDN</div><div class="text-xs dim mono mt-3" style="line-height:1.5">Lifecycle: quarantine bucket is private</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">Sentry</b><div class="text-xs dim mt-1">Error tracking + release health</div><div class="text-xs dim mono mt-3" style="line-height:1.5">0 unresolved · native tracing on</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">Vercel Cron</b><div class="text-xs dim mt-1">Hourly jobs + digests</div><div class="text-xs dim mono mt-3" style="line-height:1.5">us-east · 21 routes</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">SMS Gupshup</b><div class="text-xs dim mt-1">India SMS for payment nudges</div><div class="text-xs dim mono mt-3" style="line-height:1.5">Sender ID NSTLAN · DLT registered</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+<article class="nl-card panel-pad" data-nl-card="list">
+<div class="nl-card-bd"><div class="flex items-center justify-between mb-3"><span class="avatar sq" style="width:36px;height:36px;border-radius:10px;background:var(--brand-2);color:var(--brand-11)"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="16"><path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span><span class="badge tone-success">Connected</span></div><b class="h3 fs-14">Webhooks</b><div class="text-xs dim mt-1">Outbound events to client systems</div><div class="text-xs dim mono mt-3" style="line-height:1.5">14 active endpoints</div><div class="flex gap-1 mt-3"><button class="btn btn-secondary btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Configure</button><button class="btn btn-ghost btn-xs" data-wb-action="default" data-wb-js="" disabled="" type="button">Docs</button></div></div>
+
+
+
+</article>
+</div></div></section><section class="nl-sec" id="nl-s-05" aria-labelledby="nl-sh-06" data-nl-group="plain" data-nl-panels="0"><div class="nl-sec-hd"><span class="nl-idx" aria-hidden="true">03</span><div class="nl-sec-tt"><h2 class="nl-sec-t" id="nl-sh-06">Prototype note</h2><p class="nl-sec-s">Send a signed POST to your endpoint when a subscribed event fires.</p></div><div class="nl-sec-tools"><button class="nl-tool" type="button" data-nl-collapse="nl-s-05" aria-expanded="true" aria-controls="nl-s-05" title="Collapse this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg><span data-nl-collapse-label>Collapse</span></button><button class="nl-tool" type="button" data-nl-copy="#nl-s-05" aria-label="Copy link to this section" title="Copy link to this section"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 13.5a4.5 4.5 0 0 0 6.7.5l2-2a4.5 4.5 0 0 0-6.4-6.4l-1.1 1.1"/><path d="M13.5 10.5a4.5 4.5 0 0 0-6.7-.5l-2 2a4.5 4.5 0 0 0 6.4 6.4l1.1-1.1"/></svg></button></div></div><div class="nl-sec-bd"><div class="note warn reveal"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><div>Razorpay is in <b>test mode</b>. No real money moves until production keys replace the current test pair — keep client comms aligned.</div></div><dialog aria-labelledby="dlg-webhook-h" class="dialog" id="dlg-webhook">
 <div class="dialog-head">
 <div class="min-w-0">
 <h2 class="panel-title" id="dlg-webhook-h">New webhook</h2>
@@ -153,8 +147,7 @@
 <button class="btn btn-secondary" data-dialog-close="" type="button">Cancel</button>
 <button aria-disabled="true" class="btn btn-primary" data-wb-action="default" disabled="" type="button">Create webhook</button>
 </div>
-</dialog>
-</main>
+</dialog></div></section></div><aside class="nl-rail" aria-label="Page aids"><nav class="nl-rail-card" aria-label="On this page"><h2 class="nl-rail-t"><span>On this page</span><span class="nl-mono" aria-hidden="true">03</span></h2><ul class="nl-toc" role="list"><li><a href="#nl-s-02"><span class="nl-toc-i" aria-hidden="true">01</span><span>Overview</span></a></li><li><a href="#nl-s-03"><span class="nl-toc-i" aria-hidden="true">02</span><span>Related blocks</span></a></li><li><a href="#nl-s-05"><span class="nl-toc-i" aria-hidden="true">03</span><span>Prototype note</span></a></li></ul></nav><div class="nl-rail-card"><h2 class="nl-rail-t"><span>Ledger</span><span aria-hidden="true">◇</span></h2><dl class="nl-rail-kv"><div><dt>Surface</dt><dd>Operator console</dd></div><div><dt>View</dt><dd>Record</dd></div><div><dt>Sections</dt><dd>3</dd></div><div><dt>Cards</dt><dd>10</dd></div><div><dt>Sample rows</dt><dd>0</dd></div><div><dt>Bespoke art</dt><dd>11 vectors</dd></div><div><dt>Contract</dt><dd>admin.openapi.json</dd></div></dl></div><div class="nl-rail-card"><h2 class="nl-rail-t"><span>Keys</span><span class="kbd" aria-hidden="true">⌘K</span></h2><p class="nl-rail-hint"><span>Focus search</span><span class="kbd" aria-hidden="true">⌘K</span></p><p class="nl-rail-hint"><span>Skip to content</span><span class="kbd" aria-hidden="true">Tab</span></p><p class="nl-rail-hint"><span>Close menus</span><span class="kbd" aria-hidden="true">Esc</span></p></div></aside></div><footer class="nl-strip reveal"><span>sections <b>3</b></span><span>cards <b>10</b></span><span>rows <b>0</b></span><span>static prototype · no live service</span><div class="nl-strip-acts"><button class="nl-tool" type="button" data-nl-density aria-label="Cycle row density"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-nl-density-label>Cosy</span></button><button class="nl-tool" type="button" data-nl-copy aria-label="Copy link to this page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Top</button></div></footer></div></main>
 <footer class="page-foot">© 2026 Nestlancer Admin · Prototype build dir-html/1.0</footer>
 </div></div>
 <div class="fab" id="fab">
