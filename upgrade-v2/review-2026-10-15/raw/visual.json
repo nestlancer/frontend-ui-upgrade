@@ -1,0 +1,1565 @@
+{
+ "apps_admin": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin.webp",
+  "rmse": 0.139056,
+  "diff_pct": 6.5,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_analytics": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_analytics.webp",
+  "rmse": 0.148423,
+  "diff_pct": 6.8,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_analytics.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_api-keys": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_api-keys.webp",
+  "rmse": 0.11161,
+  "diff_pct": 5.07,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_api-keys.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_audit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_audit.webp",
+  "rmse": 0.127894,
+  "diff_pct": 6.52,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_audit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_contact": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_contact.webp",
+  "rmse": 0.137787,
+  "diff_pct": 6.57,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_contact.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_content": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_content.webp",
+  "rmse": 0.139659,
+  "diff_pct": 6.71,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_content.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_content_blog__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_content_blog__id_.webp",
+  "rmse": 0.191601,
+  "diff_pct": 11.31,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_content_blog__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_content_blog_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_content_blog_new.webp",
+  "rmse": 0.129641,
+  "diff_pct": 5.51,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_content_blog_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_content_blog_post-custom-crm": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_content_blog_post-custom-crm.webp",
+  "rmse": 0.106346,
+  "diff_pct": 4.02,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_content_blog_post-custom-crm.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_content_posts_01a10a2a-361c-758f-a218-fb673fd3b9d2_edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_content_posts_01a10a2a-361c-758f-a218-fb673fd3b9d2_edit.webp",
+  "rmse": 0.191602,
+  "diff_pct": 11.31,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_content_posts_01a10a2a-361c-758f-a218-fb673fd3b9d2_edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_content_posts__id__edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_content_posts__id__edit.webp",
+  "rmse": 0.191602,
+  "diff_pct": 11.31,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_content_posts__id__edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_content_posts_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_content_posts_new.webp",
+  "rmse": 0.129637,
+  "diff_pct": 5.51,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_content_posts_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_dashboard": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_dashboard.webp",
+  "rmse": 0.139106,
+  "diff_pct": 6.51,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_dashboard.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_integrations": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_integrations.webp",
+  "rmse": 0.127838,
+  "diff_pct": 6.04,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_integrations.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_media": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_media.webp",
+  "rmse": 0.158672,
+  "diff_pct": 8.24,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_media.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_media_analytics": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_media_analytics.webp",
+  "rmse": 0.0861089,
+  "diff_pct": 3.07,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_media_analytics.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_media_browse": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_media_browse.webp",
+  "rmse": 0.140781,
+  "diff_pct": 7.02,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_media_browse.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_media_folders": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_media_folders.webp",
+  "rmse": 0.0802687,
+  "diff_pct": 2.79,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_media_folders.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_media_quarantine": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_media_quarantine.webp",
+  "rmse": 0.105913,
+  "diff_pct": 4.38,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_media_quarantine.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_media_storage": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_media_storage.webp",
+  "rmse": 0.101862,
+  "diff_pct": 3.89,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_media_storage.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_media_upload": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_media_upload.webp",
+  "rmse": 0.0856796,
+  "diff_pct": 3.04,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_media_upload.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages.webp",
+  "rmse": 0.115998,
+  "diff_pct": 4.92,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages__id_.webp",
+  "rmse": 0.148492,
+  "diff_pct": 7.27,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_archived": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_archived.webp",
+  "rmse": 0.0895675,
+  "diff_pct": 3.0,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_archived.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_inbox": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_inbox.webp",
+  "rmse": 0.183913,
+  "diff_pct": 10.39,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_inbox.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_new-direct": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_new-direct.webp",
+  "rmse": 0.102079,
+  "diff_pct": 3.74,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_new-direct.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_new-group": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_new-group.webp",
+  "rmse": 0.109816,
+  "diff_pct": 4.17,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_new-group.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_new.webp",
+  "rmse": 0.0860457,
+  "diff_pct": 2.76,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_new_direct": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_new_direct.webp",
+  "rmse": 0.102079,
+  "diff_pct": 3.74,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_new_direct.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_new_group": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_new_group.webp",
+  "rmse": 0.109817,
+  "diff_pct": 4.17,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_new_group.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_project__projectId_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_project__projectId_.webp",
+  "rmse": 0.106714,
+  "diff_pct": 3.97,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_project__projectId_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a.webp",
+  "rmse": 0.148492,
+  "diff_pct": 7.27,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_thread__threadId_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_thread__threadId_.webp",
+  "rmse": 0.148488,
+  "diff_pct": 7.27,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_thread__threadId_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_messages_threads": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_messages_threads.webp",
+  "rmse": 0.112509,
+  "diff_pct": 4.43,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_messages_threads.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_moderation": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_moderation.webp",
+  "rmse": 0.118268,
+  "diff_pct": 5.28,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_moderation.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_notifications": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_notifications.webp",
+  "rmse": 0.1206,
+  "diff_pct": 5.31,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_notifications.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments.webp",
+  "rmse": 0.165583,
+  "diff_pct": 9.45,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments_01a10a2c-2d0e-7499-b769-967d17a42197": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments_01a10a2c-2d0e-7499-b769-967d17a42197.webp",
+  "rmse": 0.177277,
+  "diff_pct": 9.91,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments_01a10a2c-2d0e-7499-b769-967d17a42197.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments__id_.webp",
+  "rmse": 0.161394,
+  "diff_pct": 8.28,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments_accounts": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments_accounts.webp",
+  "rmse": 0.139566,
+  "diff_pct": 6.13,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments_accounts.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments_company-legal": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments_company-legal.webp",
+  "rmse": 0.118652,
+  "diff_pct": 4.81,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments_company-legal.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments_disputes": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments_disputes.webp",
+  "rmse": 0.108211,
+  "diff_pct": 4.38,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments_disputes.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924.webp",
+  "rmse": 0.159497,
+  "diff_pct": 7.87,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments_projects__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments_projects__id_.webp",
+  "rmse": 0.159505,
+  "diff_pct": 7.87,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments_projects__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_payments_projects_nl-lms": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_payments_projects_nl-lms.webp",
+  "rmse": 0.119499,
+  "diff_pct": 4.81,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_payments_projects_nl-lms.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline.webp",
+  "rmse": 0.141556,
+  "diff_pct": 6.74,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_projects": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_projects.webp",
+  "rmse": 0.14576,
+  "diff_pct": 6.87,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_projects.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924.webp",
+  "rmse": 0.172448,
+  "diff_pct": 8.71,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_projects__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_projects__id_.webp",
+  "rmse": 0.172449,
+  "diff_pct": 8.71,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_projects__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_projects_nl-lms": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_projects_nl-lms.webp",
+  "rmse": 0.136455,
+  "diff_pct": 5.63,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_projects_nl-lms.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_users": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_users.webp",
+  "rmse": 0.125293,
+  "diff_pct": 6.02,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_users.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b.webp",
+  "rmse": 0.151022,
+  "diff_pct": 7.77,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_users__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_users__id_.webp",
+  "rmse": 0.151022,
+  "diff_pct": 7.77,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_users__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_pipeline_users_priya-nair": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_pipeline_users_priya-nair.webp",
+  "rmse": 0.122495,
+  "diff_pct": 4.93,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_pipeline_users_priya-nair.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_portfolio": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_portfolio.webp",
+  "rmse": 0.116262,
+  "diff_pct": 4.65,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_portfolio.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_portfolio_01a10a2a-544e-757a-8806-721a7b8591dd_edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_portfolio_01a10a2a-544e-757a-8806-721a7b8591dd_edit.webp",
+  "rmse": 0.107176,
+  "diff_pct": 3.79,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_portfolio_01a10a2a-544e-757a-8806-721a7b8591dd_edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_portfolio__id__edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_portfolio__id__edit.webp",
+  "rmse": 0.107176,
+  "diff_pct": 3.79,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_portfolio__id__edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_portfolio_banking-dashboard.edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_portfolio_banking-dashboard.edit.webp",
+  "rmse": 0.105418,
+  "diff_pct": 3.71,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_portfolio_banking-dashboard.edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_portfolio_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_portfolio_new.webp",
+  "rmse": 0.0976414,
+  "diff_pct": 3.5,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_portfolio_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_profile": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_profile.webp",
+  "rmse": 0.0951228,
+  "diff_pct": 3.5,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_profile.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects.webp",
+  "rmse": 0.129361,
+  "diff_pct": 5.73,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924.webp",
+  "rmse": 0.152586,
+  "diff_pct": 8.4,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects__id_.webp",
+  "rmse": 0.152535,
+  "diff_pct": 8.39,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects_archive": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects_archive.webp",
+  "rmse": 0.0970026,
+  "diff_pct": 3.18,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects_archive.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects_completed": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects_completed.webp",
+  "rmse": 0.104892,
+  "diff_pct": 3.79,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects_completed.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects_new.webp",
+  "rmse": 0.106675,
+  "diff_pct": 4.29,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects_nl-lms": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects_nl-lms.webp",
+  "rmse": 0.162911,
+  "diff_pct": 7.61,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects_nl-lms.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_projects_stats": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_projects_stats.webp",
+  "rmse": 0.118605,
+  "diff_pct": 4.84,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_projects_stats.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_quotes": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_quotes.webp",
+  "rmse": 0.117599,
+  "diff_pct": 5.41,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_quotes.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9.webp",
+  "rmse": 0.127678,
+  "diff_pct": 5.18,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_quotes__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_quotes__id_.webp",
+  "rmse": 0.127171,
+  "diff_pct": 5.16,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_quotes__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_quotes_drafts": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_quotes_drafts.webp",
+  "rmse": 0.100434,
+  "diff_pct": 3.43,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_quotes_drafts.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_quotes_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_quotes_new.webp",
+  "rmse": 0.12583,
+  "diff_pct": 5.05,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_quotes_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_quotes_payment-schedules": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_quotes_payment-schedules.webp",
+  "rmse": 0.117827,
+  "diff_pct": 4.68,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_quotes_payment-schedules.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_quotes_stats": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_quotes_stats.webp",
+  "rmse": 0.125531,
+  "diff_pct": 5.4,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_quotes_stats.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests.webp",
+  "rmse": 0.121202,
+  "diff_pct": 5.27,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests_01a10a2c-01c3-7079-93e9-9d001541ced8_quote_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests_01a10a2c-01c3-7079-93e9-9d001541ced8_quote_new.webp",
+  "rmse": 0.112354,
+  "diff_pct": 4.5,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests_01a10a2c-01c3-7079-93e9-9d001541ced8_quote_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests_01a10a2c-1a04-75bb-8e80-fc143257fa02": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests_01a10a2c-1a04-75bb-8e80-fc143257fa02.webp",
+  "rmse": 0.110736,
+  "diff_pct": 4.7,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests_01a10a2c-1a04-75bb-8e80-fc143257fa02.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1.webp",
+  "rmse": 0.110737,
+  "diff_pct": 4.7,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_edit.webp",
+  "rmse": 0.12294,
+  "diff_pct": 4.86,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_new.webp",
+  "rmse": 0.112853,
+  "diff_pct": 4.52,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests__id_.webp",
+  "rmse": 0.110928,
+  "diff_pct": 4.71,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests__id__quote_edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests__id__quote_edit.webp",
+  "rmse": 0.122942,
+  "diff_pct": 4.86,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests__id__quote_edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests__id__quote_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests__id__quote_new.webp",
+  "rmse": 0.110951,
+  "diff_pct": 4.41,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests__id__quote_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_requests_capacity": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_requests_capacity.webp",
+  "rmse": 0.0986565,
+  "diff_pct": 3.52,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_requests_capacity.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system.webp",
+  "rmse": 0.132348,
+  "diff_pct": 6.24,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_announcements": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_announcements.webp",
+  "rmse": 0.133835,
+  "diff_pct": 5.64,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_announcements.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_cache": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_cache.webp",
+  "rmse": 0.114938,
+  "diff_pct": 4.61,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_cache.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_email-templates": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_email-templates.webp",
+  "rmse": 0.120619,
+  "diff_pct": 4.93,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_email-templates.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_features": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_features.webp",
+  "rmse": 0.10552,
+  "diff_pct": 4.38,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_features.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_health": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_health.webp",
+  "rmse": 0.119535,
+  "diff_pct": 5.66,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_health.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_jobs": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_jobs.webp",
+  "rmse": 0.118464,
+  "diff_pct": 4.8,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_jobs.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_logs": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_logs.webp",
+  "rmse": 0.0865721,
+  "diff_pct": 3.64,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_logs.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_maintenance": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_maintenance.webp",
+  "rmse": 0.123199,
+  "diff_pct": 5.58,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_maintenance.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_notification-templates": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_notification-templates.webp",
+  "rmse": 0.128867,
+  "diff_pct": 6.25,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_notification-templates.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_system_staff": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_system_staff.webp",
+  "rmse": 0.12363,
+  "diff_pct": 6.03,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_system_staff.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_users": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_users.webp",
+  "rmse": 0.11703,
+  "diff_pct": 5.56,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_users.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b.webp",
+  "rmse": 0.127098,
+  "diff_pct": 6.06,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_users__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_users__id_.webp",
+  "rmse": 0.127096,
+  "diff_pct": 6.06,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_users__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_users_arjun-mehta": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_users_arjun-mehta.webp",
+  "rmse": 0.112836,
+  "diff_pct": 4.63,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_users_arjun-mehta.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_admin_users_search": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_admin_users_search.webp",
+  "rmse": 0.0872952,
+  "diff_pct": 2.99,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_admin_users_search.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_landing": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing.webp",
+  "rmse": 0.365895,
+  "diff_pct": 28.31,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 3079
+ },
+ "apps_landing_about": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_about.webp",
+  "rmse": 0.234396,
+  "diff_pct": 13.74,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_about.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1694
+ },
+ "apps_landing_admin-login": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_admin-login.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 798
+ },
+ "apps_landing_blog": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_blog.webp",
+  "rmse": 0.352971,
+  "diff_pct": 29.19,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_blog.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 2775
+ },
+ "apps_landing_blog__slug_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_blog__slug_.webp",
+  "rmse": 0.398873,
+  "diff_pct": 38.73,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_blog__slug_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1958
+ },
+ "apps_landing_contact-alt": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_contact-alt.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 900
+ },
+ "apps_landing_contact": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_contact.webp",
+  "rmse": 0.328176,
+  "diff_pct": 22.72,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_contact.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1259
+ },
+ "apps_landing_forgot-password": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_forgot-password.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 557
+ },
+ "apps_landing_login": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_login.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 557
+ },
+ "apps_landing_portfolio": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_portfolio.webp",
+  "rmse": 0.36464,
+  "diff_pct": 30.58,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_portfolio.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 3610
+ },
+ "apps_landing_portfolio__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_portfolio__id_.webp",
+  "rmse": 0.269808,
+  "diff_pct": 21.63,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_portfolio__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1914
+ },
+ "apps_landing_portfolio_fintech-payments-hub": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_portfolio_fintech-payments-hub.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1914
+ },
+ "apps_landing_pricing": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_pricing.webp",
+  "rmse": 0.215901,
+  "diff_pct": 10.5,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_pricing.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1600
+ },
+ "apps_landing_privacy": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_privacy.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1349
+ },
+ "apps_landing_register": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_register.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 567
+ },
+ "apps_landing_reset-password": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_reset-password.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_landing_services": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_services.webp",
+  "rmse": 0.199956,
+  "diff_pct": 13.74,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_landing_services.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1386
+ },
+ "apps_landing_terms": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_terms.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1496
+ },
+ "apps_landing_verify-document": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_verify-document.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 1001
+ },
+ "apps_landing_verify-email": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_verify-email.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_landing_verify": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_landing_verify.webp",
+  "rmse": null,
+  "diff_pct": null,
+  "h": "900",
+  "full_exists": true,
+  "full_h": 642
+ },
+ "apps_web_dashboard": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_dashboard.webp",
+  "rmse": 0.0970659,
+  "diff_pct": 3.63,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_dashboard.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_invoices": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_invoices.webp",
+  "rmse": 0.107111,
+  "diff_pct": 4.1,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_invoices.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_invoices_NL-INV-2026-000009": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_invoices_NL-INV-2026-000009.webp",
+  "rmse": 0.108463,
+  "diff_pct": 3.92,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_invoices_NL-INV-2026-000009.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_invoices__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_invoices__id_.webp",
+  "rmse": 0.108463,
+  "diff_pct": 3.92,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_invoices__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages.webp",
+  "rmse": 0.092932,
+  "diff_pct": 3.69,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages__conversationId_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages__conversationId_.webp",
+  "rmse": 0.116542,
+  "diff_pct": 4.49,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages__conversationId_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages_archived": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages_archived.webp",
+  "rmse": 0.0770708,
+  "diff_pct": 2.23,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages_archived.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages_inbox": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages_inbox.webp",
+  "rmse": 0.198703,
+  "diff_pct": 11.47,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages_inbox.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages_new.webp",
+  "rmse": 0.0875228,
+  "diff_pct": 2.97,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages_new_direct": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages_new_direct.webp",
+  "rmse": 0.0813297,
+  "diff_pct": 2.68,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages_new_direct.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a.webp",
+  "rmse": 0.109069,
+  "diff_pct": 3.91,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages_thread__threadId_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages_thread__threadId_.webp",
+  "rmse": 0.109069,
+  "diff_pct": 3.91,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages_thread__threadId_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_messages_threads": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_messages_threads.webp",
+  "rmse": 0.0997092,
+  "diff_pct": 3.49,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_messages_threads.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_notifications": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_notifications.webp",
+  "rmse": 0.13481,
+  "diff_pct": 6.51,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_notifications.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments.webp",
+  "rmse": 0.126908,
+  "diff_pct": 5.53,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments_01a10a2c-2d0e-7499-b769-967d17a42197": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments_01a10a2c-2d0e-7499-b769-967d17a42197.webp",
+  "rmse": 0.111472,
+  "diff_pct": 4.59,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments_01a10a2c-2d0e-7499-b769-967d17a42197.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments_01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments_01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2.webp",
+  "rmse": 0.105056,
+  "diff_pct": 3.98,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments_01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments_01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments_01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5.webp",
+  "rmse": 0.105056,
+  "diff_pct": 3.98,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments_01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments__id_.webp",
+  "rmse": 0.105056,
+  "diff_pct": 3.98,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments_invoice_NL-INV-2026-000008": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments_invoice_NL-INV-2026-000008.webp",
+  "rmse": 0.10929,
+  "diff_pct": 4.22,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments_invoice_NL-INV-2026-000008.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments_invoice__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments_invoice__id_.webp",
+  "rmse": 0.10929,
+  "diff_pct": 4.22,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments_invoice__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments_invoices": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments_invoices.webp",
+  "rmse": 0.097345,
+  "diff_pct": 3.49,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments_invoices.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_payments_methods": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_payments_methods.webp",
+  "rmse": 0.0964527,
+  "diff_pct": 3.65,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_payments_methods.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_profile": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_profile.webp",
+  "rmse": 0.0949466,
+  "diff_pct": 3.52,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_profile.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_profile_edit": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_profile_edit.webp",
+  "rmse": 0.103069,
+  "diff_pct": 3.86,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_profile_edit.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_projects": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_projects.webp",
+  "rmse": 0.0972551,
+  "diff_pct": 3.31,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_projects.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_projects_01a10a2c-5cfb-71fa-854b-d88f4481e3e8": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_projects_01a10a2c-5cfb-71fa-854b-d88f4481e3e8.webp",
+  "rmse": 0.144188,
+  "diff_pct": 7.34,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_projects_01a10a2c-5cfb-71fa-854b-d88f4481e3e8.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_projects__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_projects__id_.webp",
+  "rmse": 0.133265,
+  "diff_pct": 6.36,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_projects__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_projects_archive": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_projects_archive.webp",
+  "rmse": 0.0652133,
+  "diff_pct": 1.73,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_projects_archive.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_projects_completed": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_projects_completed.webp",
+  "rmse": 0.0879884,
+  "diff_pct": 2.75,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_projects_completed.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_projects_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_projects_new.webp",
+  "rmse": 0.0828702,
+  "diff_pct": 2.49,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_projects_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_projects_nl-lms": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_projects_nl-lms.webp",
+  "rmse": 0.133569,
+  "diff_pct": 6.37,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_projects_nl-lms.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_quotes": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_quotes.webp",
+  "rmse": 0.104504,
+  "diff_pct": 4.1,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_quotes.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9.webp",
+  "rmse": 0.100976,
+  "diff_pct": 4.37,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_quotes__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_quotes__id_.webp",
+  "rmse": 0.100976,
+  "diff_pct": 4.37,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_quotes__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_quotes_drafts": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_quotes_drafts.webp",
+  "rmse": 0.0701993,
+  "diff_pct": 1.99,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_quotes_drafts.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_quotes_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_quotes_new.webp",
+  "rmse": 0.0896877,
+  "diff_pct": 2.46,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_quotes_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_quotes_templates": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_quotes_templates.webp",
+  "rmse": 0.089421,
+  "diff_pct": 2.8,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_quotes_templates.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_requests": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_requests.webp",
+  "rmse": 0.101905,
+  "diff_pct": 3.71,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_requests.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_requests_01a10a2c-530e-7354-b21b-f5ecdab54f7a": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_requests_01a10a2c-530e-7354-b21b-f5ecdab54f7a.webp",
+  "rmse": 0.117405,
+  "diff_pct": 4.99,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_requests_01a10a2c-530e-7354-b21b-f5ecdab54f7a.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_requests_4b8110f3-1d0e-4f8c-a111-3e0a1": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_requests_4b8110f3-1d0e-4f8c-a111-3e0a1.webp",
+  "rmse": 0.1174,
+  "diff_pct": 4.99,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_requests_4b8110f3-1d0e-4f8c-a111-3e0a1.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_requests__id_": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_requests__id_.webp",
+  "rmse": 0.117405,
+  "diff_pct": 4.99,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_requests__id_.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_requests_archive": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_requests_archive.webp",
+  "rmse": 0.0828879,
+  "diff_pct": 2.65,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_requests_archive.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_requests_new": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_requests_new.webp",
+  "rmse": 0.115112,
+  "diff_pct": 4.83,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_requests_new.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings.webp",
+  "rmse": 0.0807722,
+  "diff_pct": 2.52,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings_account": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings_account.webp",
+  "rmse": 0.0875163,
+  "diff_pct": 3.11,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings_account.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings_activity": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings_activity.webp",
+  "rmse": 0.114433,
+  "diff_pct": 4.11,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings_activity.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings_billing": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings_billing.webp",
+  "rmse": 0.103679,
+  "diff_pct": 3.69,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings_billing.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings_files": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings_files.webp",
+  "rmse": 0.086669,
+  "diff_pct": 2.81,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings_files.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings_notifications": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings_notifications.webp",
+  "rmse": 0.122254,
+  "diff_pct": 4.02,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings_notifications.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings_security": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings_security.webp",
+  "rmse": 0.0769068,
+  "diff_pct": 2.47,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings_security.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "apps_web_settings_sessions": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/apps_web_settings_sessions.webp",
+  "rmse": 0.0906797,
+  "diff_pct": 3.09,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/apps_web_settings_sessions.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 540
+ },
+ "index.html": {
+  "after": "/home/user/.cache/nl-review/shots/after/1440/index.html.webp",
+  "rmse": 0.141465,
+  "diff_pct": 6.78,
+  "before": "/home/user/.cache/nl-review/shots/before/1440/index.html.webp",
+  "h": "900",
+  "full_exists": true,
+  "full_h": 4142
+ }
+}
