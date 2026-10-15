@@ -1,0 +1,3394 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/portfolio": {
+      "get": {
+        "operationId": "PortfolioPublicController_list",
+        "summary": "List published portfolio items",
+        "description": "Fetch all portfolio entries that are marked as published.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "description": "Alias of limit",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "sort",
+            "required": false,
+            "in": "query",
+            "description": "Sort field:order (e.g., createdAt:desc)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "required": false,
+            "in": "query",
+            "description": "Filter by category ID",
+            "schema": {
+              "example": "123e4567-e89b-12d3-a456-426614174000",
+              "type": "string"
+            }
+          },
+          {
+            "name": "tag",
+            "required": false,
+            "in": "query",
+            "description": "Filter by a specific tag",
+            "schema": {
+              "example": "React",
+              "type": "string"
+            }
+          },
+          {
+            "name": "featured",
+            "required": false,
+            "in": "query",
+            "description": "Filter only featured items",
+            "schema": {
+              "example": true,
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/featured": {
+      "get": {
+        "operationId": "PortfolioPublicController_getFeatured",
+        "summary": "Get featured portfolio items",
+        "description": "Retrieve high-priority portfolio entries intended for the main showcase.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/categories": {
+      "get": {
+        "operationId": "PortfolioPublicController_getCategories",
+        "summary": "Get all categories",
+        "description": "Fetch a complete list of active categories used to classify portfolio projects.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "CategoryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/CategoryResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/tags": {
+      "get": {
+        "operationId": "PortfolioPublicController_getTags",
+        "summary": "Get all unique tags",
+        "description": "Extract a unique set of all technological and thematic tags used in published items.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/search": {
+      "get": {
+        "operationId": "PortfolioPublicController_search",
+        "summary": "Search portfolio items",
+        "description": "Perform keyword-based search across the entire public portfolio.",
+        "parameters": [
+          {
+            "name": "q",
+            "required": true,
+            "in": "query",
+            "description": "Search keywords",
+            "schema": {
+              "minLength": 2,
+              "pattern": "/^[^\\u0000-\\u001F\\u007F]+$/",
+              "example": "E-commerce",
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "required": false,
+            "in": "query",
+            "description": "Limit search to a category",
+            "schema": {
+              "example": "123e4567-e89b-12d3-a456-426614174000",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/health": {
+      "get": {
+        "operationId": "PortfolioPublicController_health",
+        "summary": "Service health check",
+        "description": "Confirm the availability and health of the portfolio microservice.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/timeline": {
+      "get": {
+        "operationId": "PortfolioPublicController_getTimeline",
+        "summary": "Portfolio project timeline",
+        "description": "Chronological list of published projects with minimal fields for timeline UIs.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "PortfolioTimelineItemDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/PortfolioTimelineItemDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/{idOrSlug}": {
+      "get": {
+        "operationId": "PortfolioPublicController_getDetail",
+        "summary": "Get portfolio item details",
+        "description": "Retrieves detailed information for a specific portfolio item by ID or slug.",
+        "parameters": [
+          {
+            "name": "idOrSlug",
+            "required": true,
+            "in": "path",
+            "description": "Item UUID or URL slug",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/{idOrSlug}/view": {
+      "post": {
+        "operationId": "PortfolioPublicController_recordView",
+        "summary": "Record portfolio item view",
+        "description": "Records a view for analytics (debounced per viewer IP).",
+        "parameters": [
+          {
+            "name": "idOrSlug",
+            "required": true,
+            "in": "path",
+            "description": "Item UUID or URL slug",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/portfolio/{idOrSlug}/like": {
+      "post": {
+        "operationId": "PortfolioPublicController_toggleLike",
+        "summary": "Toggle like on portfolio item",
+        "description": "Toggles a like on a portfolio item (authenticated user or anonymous IP session).",
+        "parameters": [
+          {
+            "name": "idOrSlug",
+            "required": true,
+            "in": "path",
+            "description": "Item UUID or URL slug",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Public/Portfolio"
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/categories": {
+      "get": {
+        "operationId": "PortfolioCategoriesAdminController_findAll",
+        "summary": "List all categories",
+        "description": "Retrieve the complete registry of categories used across the portfolio system.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "CategoryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/CategoryResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "PortfolioCategoriesAdminController_create",
+        "summary": "Create category",
+        "description": "Define and save a new organizational category for portfolio entries.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "CategoryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/CategoryResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Admin/Portfolio Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/categories/{id}": {
+      "patch": {
+        "operationId": "PortfolioCategoriesAdminController_update",
+        "summary": "Update category",
+        "description": "Apply changes to the metadata or display properties of a category.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Category UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "CategoryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/CategoryResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "PortfolioCategoriesAdminController_remove",
+        "summary": "Delete category",
+        "description": "Remove a classification category and handle legacy item associations.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Category UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reassignToId",
+            "required": false,
+            "in": "query",
+            "description": "Target category ID for existing items",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Category successfully deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio": {
+      "get": {
+        "operationId": "PortfolioAdminController_findAll",
+        "summary": "List all portfolio items",
+        "description": "Retrieve a global view of all portfolio entries for administrative management.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "description": "Alias of limit",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "sort",
+            "required": false,
+            "in": "query",
+            "description": "Sort field:order (e.g., createdAt:desc)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "enum": [
+                "DRAFT",
+                "PUBLISHED",
+                "ARCHIVED"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "featured",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "PortfolioAdminController_create",
+        "summary": "Create portfolio item",
+        "description": "Initialize and save a new entry in the portfolio repository.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePortfolioItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/reorder": {
+      "post": {
+        "operationId": "PortfolioAdminController_reorder",
+        "summary": "Reorder portfolio items",
+        "description": "Update the global sorting order of portfolio items for the showcase UI.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReorderPortfolioDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/bulk-update": {
+      "post": {
+        "operationId": "PortfolioAdminController_bulkUpdate",
+        "summary": "Bulk update portfolio items",
+        "description": "Performs bulk operations (publish, archive, etc.) on multiple items.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BulkUpdatePortfolioDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/analytics": {
+      "get": {
+        "operationId": "PortfolioAdminController_getAnalytics",
+        "summary": "Get global analytics",
+        "description": "Fetch system-wide statistics on views, likes, and engagement trends.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/analytics/{id}": {
+      "get": {
+        "operationId": "PortfolioAdminController_getItemAnalytics",
+        "summary": "Get item analytics",
+        "description": "Access detailed engagement history and view counts for a specific entry.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}": {
+      "get": {
+        "operationId": "PortfolioAdminController_findOne",
+        "summary": "Get portfolio item",
+        "description": "Retrieve detailed metadata and content for any portfolio entry.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "PortfolioAdminController_update",
+        "summary": "Update portfolio item",
+        "description": "Apply changes to the metadata, description, or media associations of an item.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePortfolioItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "PortfolioAdminController_remove",
+        "summary": "Delete portfolio item",
+        "description": "Deactivate and mark an entry for removal from the public repository.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/publish": {
+      "post": {
+        "operationId": "PortfolioAdminController_publish",
+        "summary": "Publish item",
+        "description": "Makes a portfolio item publicly visible.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/unpublish": {
+      "post": {
+        "operationId": "PortfolioAdminController_unpublish",
+        "summary": "Unpublish item",
+        "description": "Hides a published portfolio item.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/archive": {
+      "post": {
+        "operationId": "PortfolioAdminController_archive",
+        "summary": "Archive item",
+        "description": "Archives a portfolio item (moves it out of active list).",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/toggle-featured": {
+      "post": {
+        "operationId": "PortfolioAdminController_toggleFeatured",
+        "summary": "Toggle featured status",
+        "description": "Toggles whether the item is highlighted on the user's profile.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/privacy": {
+      "patch": {
+        "operationId": "PortfolioAdminController_updatePrivacy",
+        "summary": "Update privacy settings",
+        "description": "Updates the specific visibility level (Public, Unlisted, Private).",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePrivacyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/duplicate": {
+      "post": {
+        "operationId": "PortfolioAdminController_duplicate",
+        "summary": "Duplicate item",
+        "description": "Creates a copy of an existing portfolio item.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PortfolioItemResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/PortfolioItemResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/media": {
+      "get": {
+        "operationId": "PortfolioAdminController_listMedia",
+        "summary": "List portfolio preview media",
+        "description": "Lists preview media (images, videos, documents) for admin editor.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "PortfolioAdminController_addMedia",
+        "summary": "Add media assets",
+        "description": "Associates an existing media asset with the portfolio item.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddMediaDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Media added successfully"
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/media/upload": {
+      "post": {
+        "operationId": "PortfolioAdminController_uploadMedia",
+        "summary": "Upload portfolio preview media",
+        "description": "Upload a preview file (image, video, or document) for the showcase.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "title",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "setAsThumbnail",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "setAsFeaturedVideo",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/media/{mediaId}": {
+      "delete": {
+        "operationId": "PortfolioAdminController_removeMedia",
+        "summary": "Remove media asset",
+        "description": "Removes a specific media asset association.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mediaId",
+            "required": true,
+            "in": "path",
+            "description": "Media UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/media/{mediaId}/thumbnail": {
+      "post": {
+        "operationId": "PortfolioAdminController_setThumbnail",
+        "summary": "Set portfolio thumbnail image",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mediaId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/media/{mediaId}/featured-video": {
+      "post": {
+        "operationId": "PortfolioAdminController_setFeaturedVideo",
+        "summary": "Set featured showcase video",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mediaId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/portfolio/{id}/media/reorder": {
+      "patch": {
+        "operationId": "PortfolioAdminController_reorderMedia",
+        "summary": "Reorder media assets",
+        "description": "Updates the display order of media assets within the item.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Portfolio item UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Portfolio"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Nestlancer Portfolio Service",
+    "description": "Portfolio showcase API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "ResponseMetadataDto": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "example": "2026-05-29T12:00:00.000Z"
+          },
+          "requestId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "version": {
+            "type": "string",
+            "example": "v1"
+          },
+          "path": {
+            "type": "string",
+            "example": "/api/v1/users/me"
+          }
+        },
+        "required": [
+          "timestamp",
+          "requestId",
+          "version"
+        ]
+      },
+      "ApiSuccessEnvelopeDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "success"
+            ],
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "description": "Business payload returned by the controller handler",
+            "additionalProperties": true
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ResponseMetadataDto"
+          }
+        },
+        "required": [
+          "status",
+          "data",
+          "metadata"
+        ]
+      },
+      "CategoryResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174000",
+            "description": "Unique category ID"
+          },
+          "name": {
+            "type": "string",
+            "example": "Web Development",
+            "description": "Display name"
+          },
+          "slug": {
+            "type": "string",
+            "example": "web-development",
+            "description": "URL-friendly slug"
+          },
+          "description": {
+            "type": "string",
+            "example": "Web projects",
+            "description": "Description"
+          },
+          "itemCount": {
+            "type": "number",
+            "example": 10,
+            "description": "Number of portfolio items in this category"
+          },
+          "order": {
+            "type": "number",
+            "example": 1,
+            "description": "Display order"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "slug",
+          "itemCount",
+          "order"
+        ]
+      },
+      "ClientTestimonialDto": {
+        "type": "object",
+        "properties": {
+          "quote": {
+            "type": "string",
+            "maxLength": 1000,
+            "example": "They delivered on time and exceeded expectations."
+          },
+          "author": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Jane Doe"
+          },
+          "role": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "CEO, Acme Corp"
+          },
+          "rating": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5,
+            "example": 5,
+            "description": "Star rating from 1 to 5"
+          },
+          "enabled": {
+            "type": "boolean",
+            "example": true,
+            "description": "When false, review is stored but hidden on the public showcase"
+          }
+        }
+      },
+      "ClientDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Acme Corp",
+            "description": "Name of the client"
+          },
+          "logoId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174001",
+            "description": "Media ID for the client logo"
+          },
+          "industry": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "E-commerce",
+            "description": "Client industry"
+          },
+          "website": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "https://acme.com",
+            "description": "Client website"
+          },
+          "testimonial": {
+            "$ref": "#/components/schemas/ClientTestimonialDto"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "ProjectDetailsDto": {
+        "type": "object",
+        "properties": {
+          "duration": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "3 months",
+            "description": "Duration of the project"
+          },
+          "completedAt": {
+            "type": "string",
+            "example": "2023-12-01",
+            "description": "Completion date (human-readable or ISO)"
+          },
+          "technologies": {
+            "example": [
+              "React",
+              "Node.js"
+            ],
+            "description": "Technologies used in the project",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LinksDto": {
+        "type": "object",
+        "properties": {
+          "live": {
+            "type": "string",
+            "example": "https://acme.com",
+            "description": "Live project URL"
+          },
+          "github": {
+            "type": "string",
+            "example": "https://github.com/acme/project",
+            "description": "Source code repository URL"
+          }
+        }
+      },
+      "SeoDto": {
+        "type": "object",
+        "properties": {
+          "metaTitle": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Portfolio | Acme Project",
+            "description": "Meta title tag"
+          },
+          "metaDescription": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Detailed view of the Acme project...",
+            "description": "Meta description tag"
+          },
+          "ogImageId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174002",
+            "description": "Media ID for Open Graph image"
+          }
+        }
+      },
+      "PortfolioItemResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174000",
+            "description": "Unique portfolio item ID"
+          },
+          "title": {
+            "type": "string",
+            "example": "Modern E-commerce Platform",
+            "description": "Project title"
+          },
+          "slug": {
+            "type": "string",
+            "example": "modern-ecommerce-platform",
+            "description": "URL-friendly slug"
+          },
+          "shortDescription": {
+            "type": "string",
+            "example": "A brief overview of the project",
+            "description": "Short summary"
+          },
+          "fullDescription": {
+            "type": "string",
+            "example": "Detailed description with markdown...",
+            "description": "Full project content"
+          },
+          "contentFormat": {
+            "type": "string",
+            "example": "MARKDOWN",
+            "description": "Format of the full description (MARKDOWN, HTML)"
+          },
+          "category": {
+            "description": "Associated category",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/CategoryResponseDto"
+              }
+            ]
+          },
+          "tags": {
+            "example": [
+              "React",
+              "NestJS"
+            ],
+            "description": "List of tags",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "thumbnailId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174001",
+            "description": "Media ID for thumbnail"
+          },
+          "thumbnailUrl": {
+            "type": "string",
+            "example": "https://cdn.example.com/image.jpg",
+            "description": "Resolved thumbnail URL"
+          },
+          "imageIds": {
+            "example": [
+              "123",
+              "456"
+            ],
+            "description": "List of additional image IDs",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "videoUrl": {
+            "type": "string",
+            "example": "https://youtube.com/watch?v=...",
+            "description": "URL to video content"
+          },
+          "client": {
+            "description": "Client information",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            ]
+          },
+          "projectDetails": {
+            "description": "Technical project details",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProjectDetailsDto"
+              }
+            ]
+          },
+          "links": {
+            "description": "External links",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LinksDto"
+              }
+            ]
+          },
+          "seo": {
+            "description": "SEO metadata",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SeoDto"
+              }
+            ]
+          },
+          "status": {
+            "type": "string",
+            "example": "PUBLISHED",
+            "description": "Visibility status"
+          },
+          "featured": {
+            "type": "boolean",
+            "example": true,
+            "description": "Whether highlighted on profile"
+          },
+          "order": {
+            "type": "number",
+            "example": 1,
+            "description": "Display order"
+          },
+          "likeCount": {
+            "type": "number",
+            "example": 124,
+            "description": "Total likes"
+          },
+          "viewCount": {
+            "type": "number",
+            "example": 5000,
+            "description": "Total views"
+          },
+          "publishedAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-03-08T12:00:00Z",
+            "description": "Timestamp when published"
+          },
+          "completedAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-02-28T12:00:00Z",
+            "description": "When the project was completed"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-03-08T12:00:00Z",
+            "description": "Timestamp of creation"
+          },
+          "updatedAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-03-08T12:00:00Z",
+            "description": "Timestamp of last update"
+          },
+          "sourceProjectId": {
+            "type": "string",
+            "description": "Source delivery project ID (admin only \u2014 never exposed on public routes)"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "slug",
+          "shortDescription",
+          "fullDescription",
+          "contentFormat",
+          "tags",
+          "imageIds",
+          "status",
+          "featured",
+          "order",
+          "likeCount",
+          "viewCount",
+          "createdAt",
+          "updatedAt"
+        ]
+      },
+      "PortfolioTimelineItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174000"
+          },
+          "title": {
+            "type": "string",
+            "example": "Brand identity \u2014 Acme Co."
+          },
+          "slug": {
+            "type": "string",
+            "example": "brand-identity-acme"
+          },
+          "publishedAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true,
+            "example": "2024-03-08T12:00:00.000Z"
+          },
+          "completedAt": {
+            "format": "date-time",
+            "type": "string",
+            "nullable": true,
+            "example": "2024-02-15T12:00:00.000Z"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-01-10T12:00:00.000Z"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "slug",
+          "createdAt"
+        ]
+      },
+      "CreateCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Web Development",
+            "description": "Display name of the category"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "/^[a-z0-9-]+$/",
+            "example": "web-development",
+            "description": "URL-friendly slug (auto-generated if not provided)"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "example": "Projects related to web applications and sites",
+            "description": "Detailed description of the category"
+          },
+          "order": {
+            "type": "number",
+            "example": 1,
+            "description": "Display order for sorting"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Web Development",
+            "description": "Display name of the category"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "/^[a-z0-9-]+$/",
+            "example": "web-development",
+            "description": "URL-friendly slug (auto-generated if not provided)"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "example": "Projects related to web applications and sites",
+            "description": "Detailed description of the category"
+          },
+          "order": {
+            "type": "number",
+            "example": 1,
+            "description": "Display order for sorting"
+          }
+        }
+      },
+      "CreatePortfolioItemDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Modern E-commerce Platform",
+            "description": "The title of the portfolio item"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "/^[a-z0-9-]+$/",
+            "example": "modern-ecommerce-platform",
+            "description": "URL-friendly slug (auto-generated if not provided)"
+          },
+          "shortDescription": {
+            "type": "string",
+            "maxLength": 500,
+            "example": "A brief overview of the project",
+            "description": "A short summary for list views"
+          },
+          "fullDescription": {
+            "type": "string",
+            "maxLength": 50000,
+            "example": "Detailed description with markdown...",
+            "description": "Full project details"
+          },
+          "contentFormat": {
+            "enum": [
+              "MARKDOWN",
+              "HTML"
+            ],
+            "type": "string",
+            "example": "MARKDOWN",
+            "description": "The format of the full description"
+          },
+          "categoryId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174003",
+            "description": "Category ID"
+          },
+          "tags": {
+            "example": [
+              "React",
+              "NestJS"
+            ],
+            "description": "List of tags",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "thumbnailId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174004",
+            "description": "Main thumbnail image ID"
+          },
+          "imageIds": {
+            "example": [
+              "123",
+              "456"
+            ],
+            "description": "Additional gallery image IDs",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "videoId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174005",
+            "description": "Video media ID"
+          },
+          "client": {
+            "description": "Client details",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            ]
+          },
+          "projectDetails": {
+            "description": "Technical project details",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProjectDetailsDto"
+              }
+            ]
+          },
+          "links": {
+            "description": "External links",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LinksDto"
+              }
+            ]
+          },
+          "seo": {
+            "description": "SEO metadata",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SeoDto"
+              }
+            ]
+          },
+          "featured": {
+            "type": "boolean",
+            "example": true,
+            "description": "Highlight on homepage listings"
+          },
+          "clientName": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Confidential Client",
+            "description": "Flat client name (admin editor)"
+          },
+          "clientIndustry": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "E-commerce",
+            "description": "Flat client industry (admin editor)"
+          },
+          "clientWebsite": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "https://acme.com",
+            "description": "Flat client website (admin editor)"
+          },
+          "clientTestimonial": {
+            "$ref": "#/components/schemas/ClientTestimonialDto"
+          }
+        },
+        "required": [
+          "title",
+          "shortDescription",
+          "fullDescription",
+          "contentFormat"
+        ]
+      },
+      "ReorderItemDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174000",
+            "description": "Item ID"
+          },
+          "order": {
+            "type": "number",
+            "example": 1,
+            "description": "The new order rank"
+          }
+        },
+        "required": [
+          "id",
+          "order"
+        ]
+      },
+      "ReorderPortfolioDto": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "description": "List of items and their new order",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReorderItemDto"
+            }
+          }
+        },
+        "required": [
+          "items"
+        ]
+      },
+      "BulkUpdatePortfolioDto": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "enum": [
+              "PUBLISH",
+              "ARCHIVE",
+              "DELETE",
+              "FEATURE",
+              "UNFEATURE"
+            ],
+            "type": "string",
+            "example": "PUBLISH",
+            "description": "The operation to perform"
+          },
+          "ids": {
+            "example": [
+              "123",
+              "456"
+            ],
+            "description": "List of portfolio item IDs",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "operation",
+          "ids"
+        ]
+      },
+      "UpdatePortfolioItemDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Modern E-commerce Platform",
+            "description": "The title of the portfolio item"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "/^[a-z0-9-]+$/",
+            "example": "modern-ecommerce-platform",
+            "description": "URL-friendly slug (auto-generated if not provided)"
+          },
+          "shortDescription": {
+            "type": "string",
+            "maxLength": 500,
+            "example": "A brief overview of the project",
+            "description": "A short summary for list views"
+          },
+          "fullDescription": {
+            "type": "string",
+            "maxLength": 50000,
+            "example": "Detailed description with markdown...",
+            "description": "Full project details"
+          },
+          "contentFormat": {
+            "enum": [
+              "MARKDOWN",
+              "HTML"
+            ],
+            "type": "string",
+            "example": "MARKDOWN",
+            "description": "The format of the full description"
+          },
+          "categoryId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174003",
+            "description": "Category ID"
+          },
+          "tags": {
+            "example": [
+              "React",
+              "NestJS"
+            ],
+            "description": "List of tags",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "thumbnailId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174004",
+            "description": "Main thumbnail image ID"
+          },
+          "imageIds": {
+            "example": [
+              "123",
+              "456"
+            ],
+            "description": "Additional gallery image IDs",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "videoId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174005",
+            "description": "Video media ID"
+          },
+          "client": {
+            "description": "Client details",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ClientDto"
+              }
+            ]
+          },
+          "projectDetails": {
+            "description": "Technical project details",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ProjectDetailsDto"
+              }
+            ]
+          },
+          "links": {
+            "description": "External links",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/LinksDto"
+              }
+            ]
+          },
+          "seo": {
+            "description": "SEO metadata",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/SeoDto"
+              }
+            ]
+          },
+          "featured": {
+            "type": "boolean",
+            "example": true,
+            "description": "Highlight on homepage listings"
+          },
+          "clientName": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Confidential Client",
+            "description": "Flat client name (admin editor)"
+          },
+          "clientIndustry": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "E-commerce",
+            "description": "Flat client industry (admin editor)"
+          },
+          "clientWebsite": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "https://acme.com",
+            "description": "Flat client website (admin editor)"
+          },
+          "clientTestimonial": {
+            "$ref": "#/components/schemas/ClientTestimonialDto"
+          }
+        }
+      },
+      "UpdatePrivacyDto": {
+        "type": "object",
+        "properties": {
+          "visibility": {
+            "enum": [
+              "PUBLIC",
+              "UNLISTED",
+              "PRIVATE"
+            ],
+            "type": "string",
+            "example": "PUBLIC",
+            "description": "The new visibility state"
+          }
+        },
+        "required": [
+          "visibility"
+        ]
+      },
+      "AddMediaDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Media asset ID"
+          },
+          "mediaId": {
+            "type": "string",
+            "description": "Alternative media asset ID field"
+          },
+          "alt": {
+            "type": "string",
+            "description": "Alt text for the image"
+          },
+          "caption": {
+            "type": "string",
+            "description": "Caption for the image"
+          },
+          "order": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Display order"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "IMAGE",
+              "VIDEO",
+              "DOCUMENT"
+            ],
+            "description": "Preview asset type"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "Display title (documents/videos)"
+          }
+        }
+      }
+    }
+  }
+}

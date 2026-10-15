@@ -1,0 +1,5947 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/posts/{slug}/comments": {
+      "post": {
+        "operationId": "CommentsController_create",
+        "summary": "Post a comment",
+        "description": "Submit a new root-level comment to a specified blog post.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "PostsPublicController_getPostComments",
+        "summary": "Get post comments",
+        "description": "Retrieve the public, approved comment thread for a specific blog post.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Posts"
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/comments/{commentId}/reply": {
+      "post": {
+        "operationId": "CommentsController_replyToComment",
+        "summary": "Reply to comment",
+        "description": "Submit nested feedback as a reply to an existing comment.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/comments/{commentId}": {
+      "put": {
+        "operationId": "CommentsController_updatePut",
+        "summary": "Update comment (PUT)",
+        "description": "Modify the textual body of a comment previously authored by the user.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "description": "Comment UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "description": "Post URL slug",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "CommentsController_updatePatch",
+        "summary": "Update comment (PATCH)",
+        "description": "Modify the textual body of a comment previously authored by the user.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "description": "Comment UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "description": "Post URL slug",
+            "schema": {}
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "CommentsController_remove",
+        "summary": "Delete comment",
+        "description": "Mark a specific comment as deleted by its author.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "description": "Comment UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "description": "Post URL slug",
+            "schema": {}
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/comments/{commentId}/replies": {
+      "get": {
+        "operationId": "CommentsController_getReplies",
+        "summary": "Get comment replies",
+        "description": "Retrieve all nested responses for a specific parent comment.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/comments/{commentId}/report": {
+      "post": {
+        "operationId": "CommentsController_reportComment",
+        "summary": "Report comment",
+        "description": "Flag a specific comment for review due to community guideline violations.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/comments/{commentId}/like": {
+      "post": {
+        "operationId": "CommentsController_likePostComment",
+        "summary": "Like comment",
+        "description": "Add a like to a blog post comment.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/like": {
+      "post": {
+        "operationId": "PostInteractionsController_toggleLike",
+        "summary": "Toggle like",
+        "description": "Like or unlike a blog post.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Interactions"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/engagement": {
+      "get": {
+        "operationId": "PostInteractionsController_getEngagement",
+        "summary": "Get post engagement",
+        "description": "Fetch like/bookmark state and counts for the authenticated user.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Interactions"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/bookmark": {
+      "post": {
+        "operationId": "PostInteractionsController_addBookmark",
+        "summary": "Bookmark post",
+        "description": "Save a blog post to the user's personal bookmarks.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Interactions"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "PostInteractionsController_removeBookmark",
+        "summary": "Remove bookmark",
+        "description": "Remove a previously saved blog post from the user's bookmarks.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Interactions"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/views": {
+      "post": {
+        "operationId": "PostInteractionsController_trackView",
+        "summary": "Track authenticated view",
+        "description": "Record a post view specifically for a logged-in user context.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Interactions"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/share": {
+      "post": {
+        "operationId": "PostInteractionsController_trackShare",
+        "summary": "Track share",
+        "description": "Record that a post has been shared by the user.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Post Interactions"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/posts": {
+      "get": {
+        "operationId": "PostsPublicController_list",
+        "summary": "List published posts",
+        "description": "Retrieve a paginated list of blog posts that are currently published and visible to the public.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "description": "Alias of limit",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "sort",
+            "required": false,
+            "in": "query",
+            "description": "Sort field:order (e.g., createdAt:desc)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "categoryId",
+            "required": false,
+            "in": "query",
+            "description": "Filter result set by a specific primary category identifier",
+            "schema": {
+              "example": "550e8400-e29b-41d4-a716-446655440000",
+              "type": "string"
+            }
+          },
+          {
+            "name": "tag",
+            "required": false,
+            "in": "query",
+            "description": "Filter result set by a specific taxonomy tag name",
+            "schema": {
+              "example": "typescript",
+              "type": "string"
+            }
+          },
+          {
+            "name": "authorId",
+            "required": false,
+            "in": "query",
+            "description": "Filter result set by a specific author user account",
+            "schema": {
+              "example": "550e8400-e29b-41d4-a716-446655440000",
+              "type": "string"
+            }
+          },
+          {
+            "name": "search",
+            "required": false,
+            "in": "query",
+            "description": "Search keyword to match against post titles, excerpts, or content bodies",
+            "schema": {
+              "example": "nest-js",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Posts"
+        ]
+      }
+    },
+    "/api/v1/posts/search": {
+      "get": {
+        "operationId": "PostsPublicController_search",
+        "summary": "Search blog posts",
+        "description": "Perform a full-text search across published blog posts titles and content.",
+        "parameters": [
+          {
+            "name": "q",
+            "required": true,
+            "in": "query",
+            "description": "The search query string (minimum 2 characters, no control characters)",
+            "schema": {
+              "minLength": 2,
+              "pattern": "/^[^\\u0000-\\u001F\\u007F]+$/",
+              "example": "microservices",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Posts"
+        ]
+      }
+    },
+    "/api/v1/posts/health": {
+      "get": {
+        "operationId": "PostsPublicController_health",
+        "summary": "Service health check",
+        "description": "Verify that the blog microservice is online and operational.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Posts"
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}": {
+      "get": {
+        "operationId": "PostsPublicController_getDetail",
+        "summary": "Get post detail",
+        "description": "Fetch the full content, author info, and metadata of a specific blog post.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Posts"
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/related": {
+      "get": {
+        "operationId": "PostsPublicController_getRelated",
+        "summary": "Get related posts",
+        "description": "Retrieve a collection of blog posts that are semantically or taxonomically similar to the given post.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Posts"
+        ]
+      }
+    },
+    "/api/v1/posts/{slug}/view": {
+      "post": {
+        "operationId": "PostsPublicController_recordViewExplicit",
+        "summary": "Record post view",
+        "description": "Explicitly record a reader view event for a specific blog post.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Posts"
+        ]
+      }
+    },
+    "/api/v1/categories": {
+      "get": {
+        "operationId": "BlogCategoriesPublicController_findAll",
+        "summary": "List categories",
+        "description": "Fetch all available blog categories for navigation and filtering.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Categories"
+        ]
+      }
+    },
+    "/api/v1/categories/{slug}": {
+      "get": {
+        "operationId": "BlogCategoriesPublicController_getBySlug",
+        "summary": "Get category detail",
+        "description": "Retrieve metadata and metadata for a specific blog category.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Categories"
+        ]
+      }
+    },
+    "/api/v1/categories/{slug}/posts": {
+      "get": {
+        "operationId": "BlogCategoriesPublicController_getPostsByCategory",
+        "summary": "Get posts by category",
+        "description": "Fetch a paginated list of published blog posts associated with a specific category.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Categories"
+        ]
+      }
+    },
+    "/api/v1/tags": {
+      "get": {
+        "operationId": "BlogTagsPublicController_findAll",
+        "summary": "List tags",
+        "description": "Fetch all available blog tags used for content discovery.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Tags"
+        ]
+      }
+    },
+    "/api/v1/tags/{slug}": {
+      "get": {
+        "operationId": "BlogTagsPublicController_getBySlug",
+        "summary": "Get tag detail",
+        "description": "Retrieve metadata and metadata for a specific blog tag.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Tags"
+        ]
+      }
+    },
+    "/api/v1/tags/{slug}/posts": {
+      "get": {
+        "operationId": "BlogTagsPublicController_getPostsByTag",
+        "summary": "Get posts by tag",
+        "description": "Fetch a paginated list of published blog posts that share a specific tag.",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Tags"
+        ]
+      }
+    },
+    "/api/v1/authors": {
+      "get": {
+        "operationId": "AuthorsPublicController_findAll",
+        "summary": "List authors",
+        "description": "Fetch all available blog authors and their basic profile information.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Authors"
+        ]
+      }
+    },
+    "/api/v1/authors/{id}": {
+      "get": {
+        "operationId": "AuthorsPublicController_getAuthorById",
+        "summary": "Get author detail",
+        "description": "Retrieve professional metadata and authored posts for a specific user.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Authors"
+        ]
+      }
+    },
+    "/api/v1/feed/rss": {
+      "get": {
+        "operationId": "FeedPublicController_getRss",
+        "summary": "Get global RSS feed",
+        "description": "Retrieve the latest published blog posts in standard RSS 2.0 format.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Feeds"
+        ]
+      }
+    },
+    "/api/v1/feed/atom": {
+      "get": {
+        "operationId": "FeedPublicController_getAtom",
+        "summary": "Get global Atom feed",
+        "description": "Retrieve the latest published blog posts in standard Atom format.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Public Feeds"
+        ]
+      }
+    },
+    "/api/v1/comments/{commentId}": {
+      "get": {
+        "operationId": "StandaloneCommentsController_getCommentById",
+        "summary": "Get comment by ID",
+        "description": "Retrieve detailed record for a single comment entry.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Standalone Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "StandaloneCommentsController_editComment",
+        "summary": "Patch comment",
+        "description": "Directly modify attributes of a comment record.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Standalone Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "StandaloneCommentsController_deleteComment",
+        "summary": "Delete standalone comment",
+        "description": "Directly remove a comment record from the system.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Standalone Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/comments/{commentId}/replies": {
+      "get": {
+        "operationId": "StandaloneCommentsController_getCommentReplies",
+        "summary": "Get standalone replies",
+        "description": "Fetch all hierarchical replies for a specific comment ID.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Standalone Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/comments/{commentId}/reply": {
+      "post": {
+        "operationId": "StandaloneCommentsController_replyToCommentStandalone",
+        "summary": "Reply standalone",
+        "description": "Submit a response to a comment without post context.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Standalone Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/comments/{commentId}/report": {
+      "post": {
+        "operationId": "StandaloneCommentsController_reportCommentStandalone",
+        "summary": "Report standalone comment",
+        "description": "Flag a specific comment record for administrative review.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Standalone Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/comments/{commentId}/like": {
+      "post": {
+        "operationId": "StandaloneCommentsController_likeComment",
+        "summary": "Like standalone comment",
+        "description": "Add a like to a specific comment record.",
+        "parameters": [
+          {
+            "name": "commentId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Standalone Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/bookmarks": {
+      "get": {
+        "operationId": "BookmarksController_listBookmarks",
+        "summary": "List bookmarked posts",
+        "description": "Fetch all blog posts that the current user has saved to their bookmarks.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Bookmarks"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts": {
+      "get": {
+        "operationId": "PostsAdminController_findAll",
+        "summary": "List all posts (Admin)",
+        "description": "Retrieve a comprehensive paginated list of all blog posts, including drafts, scheduled, and deleted entries.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "PostsAdminController_create",
+        "summary": "Create blog post",
+        "description": "Initialize a new blog post entry. Status defaults to DRAFT upon creation.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePostDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}": {
+      "get": {
+        "operationId": "PostsAdminController_findOne",
+        "summary": "Get post detail (Admin)",
+        "description": "Fetch full configuration and historical metadata for a specific blog post entry.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "PostsAdminController_update",
+        "summary": "Update blog post",
+        "description": "Apply partial updates to post content, taxonomy, or configuration.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePostDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "PostsAdminController_remove",
+        "summary": "Delete blog post",
+        "description": "Perform a soft-deletion of the blog post, archival only.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/publish": {
+      "post": {
+        "operationId": "PostsAdminController_publish",
+        "summary": "Publish post",
+        "description": "Immediately transition a post status to PUBLISHED and record the timestamp.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/unpublish": {
+      "post": {
+        "operationId": "PostsAdminController_unpublish",
+        "summary": "Unpublish post",
+        "description": "Transition a published or scheduled post back to DRAFT status.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/schedule": {
+      "post": {
+        "operationId": "PostsAdminController_schedule",
+        "summary": "Schedule post publication",
+        "description": "Define the future date and time for automated post publication.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SchedulePostDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/feature": {
+      "post": {
+        "operationId": "PostsAdminController_featurePost",
+        "summary": "Feature blog post",
+        "description": "Mark a post as a featured piece of content for site-wide promotion.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/unfeature": {
+      "post": {
+        "operationId": "PostsAdminController_unfeaturePost",
+        "summary": "Unfeature blog post",
+        "description": "Remove the featured status flag from a blog post.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/pin": {
+      "post": {
+        "operationId": "PostsAdminController_pinPost",
+        "summary": "Pin blog post",
+        "description": "Pin a post to ensure it remains at the top of categorized listings.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/unpin": {
+      "post": {
+        "operationId": "PostsAdminController_unpinPost",
+        "summary": "Unpin blog post",
+        "description": "Remove the pinned status from a blog post.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/duplicate": {
+      "post": {
+        "operationId": "PostsAdminController_duplicatePost",
+        "summary": "Duplicate post",
+        "description": "Create a new draft post by copying content and settings from an existing post.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/archive": {
+      "post": {
+        "operationId": "PostsAdminController_archivePost",
+        "summary": "Archive post",
+        "description": "Permanently archive a post, removing it from active management queues.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/revisions": {
+      "get": {
+        "operationId": "PostsAdminController_getRevisions",
+        "summary": "Get post revisions",
+        "description": "Fetch the audit trail and content history for a specific post.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/{id}/revisions/{revisionId}/restore": {
+      "post": {
+        "operationId": "PostsAdminController_restoreRevision",
+        "summary": "Restore revision",
+        "description": "Roll back a post to a previously saved content state.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "revisionId",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/import": {
+      "post": {
+        "operationId": "PostsAdminController_importPosts",
+        "summary": "Import posts",
+        "description": "Batch process and import blog content from standardized JSON/CSV formats.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/export": {
+      "post": {
+        "operationId": "PostsAdminController_exportPosts",
+        "summary": "Export posts",
+        "description": "Initiate a background export of blog content for data portability.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/posts/settings": {
+      "patch": {
+        "operationId": "PostsAdminController_updateBlogSettings",
+        "summary": "Update blog settings",
+        "description": "Modify service-level configurations such as default pagination, moderation rules, etc.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Posts"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments": {
+      "get": {
+        "operationId": "CommentsAdminController_getAll",
+        "summary": "List all comments (Admin)",
+        "description": "Retrieve a global paginated list of all blog comments for review and management.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/pending": {
+      "get": {
+        "operationId": "CommentsAdminController_getPendingComments",
+        "summary": "List pending comments (Admin)",
+        "description": "Fetch all comments awaiting administrative approval before public display.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/reported": {
+      "get": {
+        "operationId": "CommentsAdminController_getReportedComments",
+        "summary": "List reported comments (Admin)",
+        "description": "Fetch comments that have been flagged as potentially violative by site users.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/{id}/approve": {
+      "post": {
+        "operationId": "CommentsAdminController_approve",
+        "summary": "Approve comment",
+        "description": "Explicitly approve a comment for public visibility.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/{id}/reject": {
+      "post": {
+        "operationId": "CommentsAdminController_reject",
+        "summary": "Reject comment",
+        "description": "Explicitly reject an inappropriate or non-compliant comment.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/{id}/spam": {
+      "post": {
+        "operationId": "CommentsAdminController_markAsSpam",
+        "summary": "Mark as spam",
+        "description": "Classify a comment as spam and apply system-wide filtering if necessary.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/{id}/pin": {
+      "post": {
+        "operationId": "CommentsAdminController_pinComment",
+        "summary": "Pin comment (Admin)",
+        "description": "Ensure a specific comment stays at the top of the post thread.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/{id}/unpin": {
+      "post": {
+        "operationId": "CommentsAdminController_unpinComment",
+        "summary": "Unpin comment (Admin)",
+        "description": "Remove the pinned status from a comment.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/{id}": {
+      "delete": {
+        "operationId": "CommentsAdminController_deleteComment",
+        "summary": "Delete comment (Admin)",
+        "description": "Permanently remove a comment from the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/comments/{id}/reply": {
+      "post": {
+        "operationId": "CommentsAdminController_adminReply",
+        "summary": "Post admin reply",
+        "description": "Submit an official response as a blog administrator.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Comments"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/categories": {
+      "get": {
+        "operationId": "BlogCategoriesAdminController_findAll",
+        "summary": "List all categories",
+        "description": "Fetch all blog categories including their internal metadata.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "BlogCategoriesAdminController_create",
+        "summary": "Create category",
+        "description": "Define a new organizational category for blog posts.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/categories/{id}": {
+      "patch": {
+        "operationId": "BlogCategoriesAdminController_update",
+        "summary": "Update category",
+        "description": "Modify the name, slug, or description of an existing category.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCategoryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "BlogCategoriesAdminController_remove",
+        "summary": "Delete category",
+        "description": "Remove a blog category from the system.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Categories"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/tags": {
+      "get": {
+        "operationId": "BlogTagsAdminController_findAll",
+        "summary": "List all tags",
+        "description": "Fetch all blog tags used across the system.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Tags"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "BlogTagsAdminController_create",
+        "summary": "Create tag",
+        "description": "Define a new blog tag for content categorization.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateTagDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Tags"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/tags/{id}": {
+      "patch": {
+        "operationId": "BlogTagsAdminController_update",
+        "summary": "Update tag",
+        "description": "Modify the name or slug of an existing blog tag.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateTagDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Tags"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "BlogTagsAdminController_remove",
+        "summary": "Delete tag",
+        "description": "Remove a blog tag from the system.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Tags"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/tags/merge": {
+      "post": {
+        "operationId": "BlogTagsAdminController_merge",
+        "summary": "Merge tags",
+        "description": "Consolidate multiple tags into one and update all associated blog posts.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MergeTagsDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Tags"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/authors": {
+      "get": {
+        "operationId": "BlogAuthorsAdminController_findAll",
+        "summary": "List all authors",
+        "description": "Fetch all blog authors and their associated metadata for management.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Authors"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/analytics": {
+      "get": {
+        "operationId": "BlogAnalyticsAdminController_getAnalytics",
+        "summary": "Get general analytics",
+        "description": "Retrieve aggregated performance data for the entire blog service.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Analytics"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/analytics/top-posts": {
+      "get": {
+        "operationId": "BlogAnalyticsAdminController_getTopPosts",
+        "summary": "Get top posts",
+        "description": "Fetch the most popular blog posts based on traffic and engagement.",
+        "parameters": [
+          {
+            "name": "period",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Analytics"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/analytics/engagement": {
+      "get": {
+        "operationId": "BlogAnalyticsAdminController_getEngagement",
+        "summary": "Get engagement metrics",
+        "description": "Retrieve detailed interaction data including likes, comments, and shares.",
+        "parameters": [
+          {
+            "name": "from",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "to",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Analytics"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/blog/analytics/{id}": {
+      "get": {
+        "operationId": "BlogAnalyticsAdminController_getPostAnalytics",
+        "summary": "Get single post analytics",
+        "description": "Retrieve deep-dive performance data for a specific blog post entry.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Blog - Admin Analytics"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Nestlancer Blog Service",
+    "description": "Blog management API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "ResponseMetadataDto": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "example": "2026-05-29T12:00:00.000Z"
+          },
+          "requestId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "version": {
+            "type": "string",
+            "example": "v1"
+          },
+          "path": {
+            "type": "string",
+            "example": "/api/v1/users/me"
+          }
+        },
+        "required": [
+          "timestamp",
+          "requestId",
+          "version"
+        ]
+      },
+      "ApiSuccessEnvelopeDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "success"
+            ],
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "description": "Business payload returned by the controller handler",
+            "additionalProperties": true
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ResponseMetadataDto"
+          }
+        },
+        "required": [
+          "status",
+          "data",
+          "metadata"
+        ]
+      },
+      "CreateCommentDto": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "example": "Great article! Very helpful.",
+            "description": "The body text content of the comment. Supports plain text."
+          },
+          "parentId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "The unique identifier of the parent comment if this is a reply in a nested thread."
+          }
+        },
+        "required": [
+          "content"
+        ]
+      },
+      "UpdateCommentDto": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "example": "Updated comment content...",
+            "description": "The revised body text for the comment."
+          }
+        },
+        "required": [
+          "content"
+        ]
+      },
+      "CreatePostDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Building Scalable Microservices",
+            "description": "The primary title of the blog post. Used for SEO and display."
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "/^[a-z0-9-]+$/",
+            "example": "building-scalable-microservices",
+            "description": "URL-friendly slug. If not provided, it will be auto-generated from the title."
+          },
+          "excerpt": {
+            "type": "string",
+            "maxLength": 500,
+            "example": "A deep dive into microservices architecture...",
+            "description": "A concise summary of the post content designed for search results and previews."
+          },
+          "content": {
+            "type": "string",
+            "maxLength": 100000,
+            "example": "# My Post Content...",
+            "description": "The full substantive body text of the blog post."
+          },
+          "contentFormat": {
+            "enum": [
+              "MARKDOWN",
+              "HTML"
+            ],
+            "type": "string",
+            "example": "MARKDOWN",
+            "description": "The syntax format used for the content body (defaults to MARKDOWN)"
+          },
+          "featuredImageId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "The unique identifier of the uploaded featured media asset"
+          },
+          "categoryId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "The unique identifier of the primary category for this post"
+          },
+          "tags": {
+            "example": [
+              "typescript",
+              "node"
+            ],
+            "description": "A collection of tags for granular content discoverability",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "authorId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "The unique identifier of the author. Defaults to the current user if not specified."
+          },
+          "seo": {
+            "type": "object",
+            "description": "Custom SEO metadata including meta-titles, keywords, and description."
+          },
+          "commentsEnabled": {
+            "type": "boolean",
+            "example": true,
+            "description": "Flag to determine if user comments are permitted on this specific post"
+          }
+        },
+        "required": [
+          "title",
+          "excerpt",
+          "content"
+        ]
+      },
+      "UpdatePostDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "SchedulePostDto": {
+        "type": "object",
+        "properties": {
+          "scheduledAt": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scheduledAt"
+        ]
+      },
+      "CreateCategoryDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "Technology",
+            "description": "The user-facing display name of the blog category"
+          },
+          "slug": {
+            "type": "string",
+            "example": "technology",
+            "description": "The unique URL-friendly slug for the category. Auto-generated from name if omitted."
+          },
+          "description": {
+            "type": "string",
+            "example": "Posts about the latest in industry technology trends...",
+            "description": "A brief description of the classification or purpose of this category"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateCategoryDto": {
+        "type": "object",
+        "properties": {}
+      },
+      "CreateTagDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 50,
+            "example": "typescript",
+            "description": "The unique, case-insensitive identifier name for the taxonomy tag"
+          },
+          "slug": {
+            "type": "string",
+            "maxLength": 80,
+            "example": "typescript",
+            "description": "URL slug. Auto-generated from name if omitted."
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "UpdateTagDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 50,
+            "example": "node-js",
+            "description": "The updated display name for the specified tag"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "MergeTagsDto": {
+        "type": "object",
+        "properties": {
+          "fromTagId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "The unique identifier of the source tag that will be merged and potentially removed"
+          },
+          "toTagId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440001",
+            "description": "The unique identifier of the target tag that will receive all associated post references"
+          }
+        },
+        "required": [
+          "fromTagId",
+          "toTagId"
+        ]
+      }
+    }
+  }
+}

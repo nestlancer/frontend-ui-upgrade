@@ -1,0 +1,2885 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/quotes/health": {
+      "get": {
+        "operationId": "QuotesController_healthCheck",
+        "summary": "Service health check",
+        "description": "Confirm that the quotes microservice is alive and operational.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes": {
+      "get": {
+        "operationId": "QuotesController_listQuotes",
+        "summary": "List my quotes",
+        "description": "Fetch all quotes and proposals that have been sent to your account.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes/stats": {
+      "get": {
+        "operationId": "QuotesController_getStats",
+        "summary": "Get user quote statistics",
+        "description": "Fetch a bird-eye view of your quoting activity, including acceptance rates.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}": {
+      "get": {
+        "operationId": "QuotesController_getQuoteDetails",
+        "summary": "Get quote details",
+        "description": "Retrieves detailed information for a specific quote.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}/accept": {
+      "post": {
+        "operationId": "QuotesController_acceptQuote",
+        "summary": "Accept quote",
+        "description": "Accepts a quote and initiates the project creation workflow.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcceptQuoteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote accepted successfully. Project has been created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}/decline": {
+      "post": {
+        "operationId": "QuotesController_declineQuote",
+        "summary": "Decline quote",
+        "description": "Declines a quote with optional qualitative feedback.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeclineQuoteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote declined. Your feedback has been sent.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}/request-changes": {
+      "post": {
+        "operationId": "QuotesController_requestChanges",
+        "summary": "Request quote changes",
+        "description": "Requests specific modifications or clarifications on a quote.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestQuoteChangesDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Change request submitted.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}/pdf": {
+      "get": {
+        "operationId": "QuotesController_downloadPdf",
+        "summary": "Download quote PDF",
+        "description": "Returns a presigned cloud storage URL for the latest quote PDF.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes": {
+      "get": {
+        "operationId": "QuotesAdminController_listQuotes",
+        "summary": "List all quotes (Admin)",
+        "description": "Access the global repository of all client proposals and issued quotes.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "example": "1",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Results per page",
+            "schema": {
+              "example": "20",
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "required": false,
+            "in": "query",
+            "description": "Filter by client user ID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "description": "Filter by quote status, or use queue shortcuts: inbox (needs attention), all (no filter). Default excludes accepted/declined/expired.",
+            "schema": {
+              "example": "inbox",
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "QuotesAdminController_createQuote",
+        "summary": "Create and issue a new quote",
+        "description": "Legacy path. Prefer POST /admin/requests/:id/quotes for request-first quoting with line items and tier discounts.",
+        "deprecated": true,
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuoteAdminDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/stats": {
+      "get": {
+        "operationId": "QuotesAdminController_getStats",
+        "summary": "Get overall quote statistics",
+        "description": "Access administrative KPIs including total volume, conversion rates, and revenue trends.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/templates": {
+      "get": {
+        "operationId": "QuotesAdminController_getTemplates",
+        "summary": "List quote templates (deprecated)",
+        "deprecated": true,
+        "description": "Deprecated (CODE-GAP-003). Returns empty templates array plus line-item library blocks. Use GET /admin/quotes/line-item-library instead.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "QuotesAdminController_createQuoteTemplate",
+        "summary": "Create quote template (removed)",
+        "deprecated": true,
+        "description": "Removed (CODE-GAP-003). Use POST /admin/quotes/line-item-library for reusable blocks.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "410": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/line-item-library": {
+      "get": {
+        "operationId": "QuotesAdminController_listLineItemLibrary",
+        "summary": "List reusable quote line-item blocks",
+        "description": "Modular building blocks for admin quote creation (not frozen full quotes).",
+        "parameters": [
+          {
+            "name": "includeInactive",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "example": "false",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "QuotesAdminController_createLineItemBlock",
+        "summary": "Create a line-item library block",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateLineItemBlockDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Line-item block created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/line-item-library/{id}": {
+      "patch": {
+        "operationId": "QuotesAdminController_updateLineItemBlock",
+        "summary": "Update a line-item library block",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Block UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateLineItemBlockDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Line-item block updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "QuotesAdminController_deactivateLineItemBlock",
+        "summary": "Deactivate a line-item library block",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Block UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Line-item block deactivated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/payment-schedule-presets": {
+      "get": {
+        "operationId": "QuotesAdminController_listPaymentSchedulePresets",
+        "summary": "List payment schedule presets",
+        "description": "Built-in installment templates the admin can apply when creating a quote.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/send": {
+      "post": {
+        "operationId": "QuotesAdminController_sendQuote",
+        "summary": "Send quote to client",
+        "description": "Sends/Issues a finalized quote to the client via configured channels.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Quote sent successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/resend": {
+      "post": {
+        "operationId": "QuotesAdminController_resendQuote",
+        "summary": "Resend quote notification",
+        "description": "Triggers a resend of the quote notification to the client.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Quote notification resent",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}": {
+      "get": {
+        "operationId": "QuotesAdminController_getQuoteDetails",
+        "summary": "Get quote administrative details",
+        "description": "Retrieves full administrative details for a specific quote.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "QuotesAdminController_updateQuote",
+        "summary": "Update quote details (Admin)",
+        "description": "Updates an existing quote's details before or after issuance.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuoteAdminDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "QuotesAdminController_deleteQuote",
+        "summary": "Delete quote",
+        "description": "Permanent removal of a quote record.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Quote deleted"
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/duplicate": {
+      "post": {
+        "operationId": "QuotesAdminController_duplicateQuote",
+        "summary": "Duplicate quote",
+        "description": "Pass targetRequestId to copy onto an existing request. Without it, creates orphan DRAFT request (legacy \u2014 prefer POST /admin/requests/:id/quotes/prefill).",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DuplicateQuoteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote duplicated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/revise": {
+      "post": {
+        "operationId": "QuotesAdminController_createRevision",
+        "summary": "Create quote revision",
+        "description": "Generates a new version (revision) based on an existing quote.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateQuoteAdminDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote revision created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/history": {
+      "get": {
+        "operationId": "QuotesAdminController_getHistory",
+        "summary": "Get quote history",
+        "description": "Retrieves the complete version and interaction history of a specific quote.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/documents/versions": {
+      "get": {
+        "operationId": "QuotesAdminController_listDocumentVersions",
+        "summary": "List quote document versions (admin)",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/extend": {
+      "post": {
+        "operationId": "QuotesAdminController_extendQuote",
+        "summary": "Extend quote validity",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/pdf": {
+      "get": {
+        "operationId": "QuotesAdminController_getAdminPDF",
+        "summary": "Get quote PDF metadata (Admin)",
+        "description": "Retrieves a metadata-rich link or status for the quote document (Admin view).\nPass `?regenerate=true` to force a new document version (NL-QUOTE-003).",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "regenerate",
+            "required": false,
+            "in": "query",
+            "description": "When true, always create a new PDF version",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/quotes/{id}/contract": {
+      "get": {
+        "operationId": "QuotesAdminController_getAdminContract",
+        "summary": "Download signed contract PDF (Admin)",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Quotes"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}/documents/versions": {
+      "get": {
+        "operationId": "QuoteDocumentsController_listVersions",
+        "summary": "List quote document versions",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quote Documents"
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}/contract/preview": {
+      "get": {
+        "operationId": "QuoteDocumentsController_previewContract",
+        "summary": "Preview draft service agreement PDF before acceptance",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quote Documents"
+        ]
+      }
+    },
+    "/api/v1/quotes/{id}/contract": {
+      "get": {
+        "operationId": "QuoteDocumentsController_downloadContract",
+        "summary": "Download signed contract PDF",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Quote UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Quote Documents"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Nestlancer Quotes Service",
+    "description": "Quotes & proposals API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "ResponseMetadataDto": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "example": "2026-05-29T12:00:00.000Z"
+          },
+          "requestId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "version": {
+            "type": "string",
+            "example": "v1"
+          },
+          "path": {
+            "type": "string",
+            "example": "/api/v1/users/me"
+          }
+        },
+        "required": [
+          "timestamp",
+          "requestId",
+          "version"
+        ]
+      },
+      "ApiSuccessEnvelopeDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "success"
+            ],
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "description": "Business payload returned by the controller handler",
+            "additionalProperties": true
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ResponseMetadataDto"
+          }
+        },
+        "required": [
+          "status",
+          "data",
+          "metadata"
+        ]
+      },
+      "AcceptQuoteDto": {
+        "type": "object",
+        "properties": {
+          "acceptTerms": {
+            "type": "boolean",
+            "description": "Confirmed agreement to the terms and conditions",
+            "example": true
+          },
+          "signatureName": {
+            "type": "string",
+            "maxLength": 100,
+            "description": "Full legal name for electronic signature",
+            "example": "John Doe"
+          },
+          "signatureDate": {
+            "type": "string",
+            "description": "Timestamp of the electronic signature",
+            "example": "2024-12-31T23:59:59Z"
+          },
+          "notes": {
+            "type": "string",
+            "maxLength": 1000,
+            "description": "Additional notes or requirements upon acceptance",
+            "example": "Looking forward to working together!"
+          }
+        },
+        "required": [
+          "acceptTerms",
+          "signatureName",
+          "signatureDate"
+        ]
+      },
+      "DeclineQuoteDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "enum": [
+              "budgetConstraints",
+              "timelineIssues",
+              "scopeDiscrepancy",
+              "other"
+            ],
+            "description": "Categorized reason for declining the quote",
+            "example": "budgetConstraints"
+          },
+          "feedback": {
+            "type": "string",
+            "maxLength": 1000,
+            "description": "Detailed qualitative feedback for the decline action",
+            "example": "The budget is higher than our quarterly allocation."
+          },
+          "requestRevision": {
+            "type": "boolean",
+            "description": "Whether the client wants to keep the negotiation open by requesting a revised quote",
+            "example": true
+          }
+        },
+        "required": [
+          "reason",
+          "requestRevision"
+        ]
+      },
+      "ChangeItemDto": {
+        "type": "object",
+        "properties": {
+          "area": {
+            "type": "string",
+            "maxLength": 50,
+            "description": "Specific area of the quote requiring adjustment",
+            "example": "budget",
+            "enum": [
+              "budget",
+              "timeline",
+              "features",
+              "terms"
+            ]
+          },
+          "request": {
+            "type": "string",
+            "maxLength": 500,
+            "description": "Detailed description of the requested modification",
+            "example": "Reduce the total budget by 10% by removing the logo design service."
+          }
+        },
+        "required": [
+          "area",
+          "request"
+        ]
+      },
+      "RequestQuoteChangesDto": {
+        "type": "object",
+        "properties": {
+          "changes": {
+            "description": "List of specific points of negotiation or concern",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChangeItemDto"
+            }
+          },
+          "additionalNotes": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Any additional context or summary for the requested changes",
+            "example": "We are generally happy with the proposal but need to adjust the cost."
+          }
+        },
+        "required": [
+          "changes"
+        ]
+      },
+      "CreateLineItemBlockDto": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "maxLength": 80,
+            "example": "custom-api-integration"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 120,
+            "example": "Custom API Integration"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "example": "Third-party API integration and webhook handling"
+          },
+          "category": {
+            "type": "string",
+            "example": "backend",
+            "enum": [
+              "discovery",
+              "design",
+              "frontend",
+              "backend",
+              "qa",
+              "devops",
+              "pm"
+            ]
+          },
+          "defaultUnitPrice": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Default unit price in major currency (e.g. rupees)",
+            "example": 25000
+          },
+          "defaultQuantity": {
+            "type": "number",
+            "minimum": 1,
+            "example": 1
+          },
+          "sortOrder": {
+            "type": "number",
+            "example": 0
+          }
+        },
+        "required": [
+          "slug",
+          "label",
+          "description",
+          "category",
+          "defaultUnitPrice"
+        ]
+      },
+      "UpdateLineItemBlockDto": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "category": {
+            "type": "string"
+          },
+          "defaultUnitPrice": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Default unit price in major currency"
+          },
+          "defaultQuantity": {
+            "type": "number",
+            "minimum": 1
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "sortOrder": {
+            "type": "number"
+          }
+        }
+      },
+      "QuotePaymentBreakdownDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "advance",
+              "milestone",
+              "final",
+              "subscription",
+              "fullPayment"
+            ],
+            "description": "The nature of this payment installment",
+            "example": "milestone"
+          },
+          "description": {
+            "type": "string",
+            "description": "Specific description of what this payment covers",
+            "example": "Completion of frontend UI design phase."
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Installment amount in paise (smallest currency unit). Same unit as stored quote totals.",
+            "example": 250000
+          },
+          "percentage": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "The percentage of the total project value this installment represents",
+            "example": 25
+          },
+          "dueDate": {
+            "type": "string",
+            "description": "Expected or deadline date for this payment",
+            "example": "2024-12-01T00:00:00Z"
+          },
+          "deliverables": {
+            "description": "List of deliverable titles linked to this payment module",
+            "example": [
+              "Figma Design Files",
+              "Icon Set Assets"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "description",
+          "amount",
+          "percentage",
+          "dueDate"
+        ]
+      },
+      "CreateQuoteAdminDto": {
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "description": "Reference to the project request UUID this quote answers",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "Descriptive title for the quote proposal",
+            "example": "E-commerce Platform Phase 1 Development"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Extensive textual scope and value proposition description",
+            "example": "This quote covers the end-to-end development of the MVP..."
+          },
+          "totalAmount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total quote amount in paise (smallest currency unit). Same unit as stored/returned totals.",
+            "example": 1000000
+          },
+          "currency": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ISO currency code for the quote",
+            "example": "INR"
+          },
+          "validUntil": {
+            "type": "string",
+            "description": "Absolute expiration date of the quote validity",
+            "example": "2025-01-15T23:59:59Z"
+          },
+          "validityDays": {
+            "type": "number",
+            "minimum": 1,
+            "description": "Duration in days the quote remains valid from issuance",
+            "example": 30
+          },
+          "paymentBreakdown": {
+            "description": "Phased payment schedule and milestones",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuotePaymentBreakdownDto"
+            }
+          },
+          "timeline": {
+            "type": "object",
+            "description": "Structured timeline information (JSON Object)"
+          },
+          "scope": {
+            "type": "object",
+            "description": "Detailed project scope definitions (JSON Object)"
+          },
+          "technicalDetails": {
+            "type": "object",
+            "description": "Specific technical requirements or stack details (JSON Object)"
+          },
+          "terms": {
+            "type": "string",
+            "description": "Specific terms and conditions governing this quote",
+            "example": "30% upfront requirement. 3 revision cycles included."
+          },
+          "notes": {
+            "type": "string",
+            "description": "Internal or client-facing miscellaneous notes",
+            "example": "Special discount applied for long-term partnership."
+          },
+          "attachments": {
+            "description": "Array of media/file UUIDs for documentation or assets linked to the quote",
+            "example": [
+              "550e8400-e29b-41d4-a716-446655440001"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "requestId",
+          "title",
+          "description",
+          "totalAmount",
+          "currency",
+          "validUntil",
+          "paymentBreakdown"
+        ]
+      },
+      "UpdateQuoteLineItemDto": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "example": "Frontend UI implementation"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0,
+            "example": 1
+          },
+          "unitPrice": {
+            "type": "number",
+            "minimum": 0,
+            "example": 2500
+          }
+        }
+      },
+      "UpdateQuotePaymentScheduleInstallmentDto": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Installment label shown to client",
+            "example": "Deposit"
+          },
+          "percentage": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Percentage of quote total (use this OR amount, not both required)",
+            "example": 30
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Fixed amount in major currency (e.g. rupees). Use when not using percentage.",
+            "example": 15000
+          },
+          "dueTrigger": {
+            "type": "string",
+            "enum": [
+              "on_accept",
+              "on_prior_approved",
+              "on_date"
+            ],
+            "description": "When this installment becomes payable",
+            "example": "on_accept"
+          },
+          "dueDate": {
+            "type": "string",
+            "description": "Due date (required when dueTrigger is on_date)",
+            "example": "2025-03-01T00:00:00Z"
+          }
+        },
+        "required": [
+          "label"
+        ]
+      },
+      "UpdateQuoteAdminDto": {
+        "type": "object",
+        "properties": {
+          "requestId": {
+            "type": "string",
+            "description": "Reference to the project request UUID this quote answers",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "description": "Descriptive title for the quote proposal",
+            "example": "E-commerce Platform Phase 1 Development"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Extensive textual scope and value proposition description",
+            "example": "This quote covers the end-to-end development of the MVP..."
+          },
+          "totalAmount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Total quote amount in paise (smallest currency unit). Same unit as stored/returned totals.",
+            "example": 1000000
+          },
+          "currency": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ISO currency code for the quote",
+            "example": "INR"
+          },
+          "validUntil": {
+            "type": "string",
+            "description": "Absolute expiration date of the quote validity",
+            "example": "2025-01-15T23:59:59Z"
+          },
+          "validityDays": {
+            "type": "number",
+            "minimum": 1,
+            "description": "Duration in days the quote remains valid from issuance",
+            "example": 30
+          },
+          "paymentBreakdown": {
+            "description": "Phased payment schedule and milestones",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuotePaymentBreakdownDto"
+            }
+          },
+          "timeline": {
+            "type": "object",
+            "description": "Structured timeline information (JSON Object)"
+          },
+          "scope": {
+            "type": "object",
+            "description": "Detailed project scope definitions (JSON Object)"
+          },
+          "technicalDetails": {
+            "type": "object",
+            "description": "Specific technical requirements or stack details (JSON Object)"
+          },
+          "terms": {
+            "type": "string",
+            "description": "Specific terms and conditions governing this quote",
+            "example": "30% upfront requirement. 3 revision cycles included."
+          },
+          "notes": {
+            "type": "string",
+            "description": "Internal or client-facing miscellaneous notes",
+            "example": "Special discount applied for long-term partnership."
+          },
+          "attachments": {
+            "description": "Array of media/file UUIDs for documentation or assets linked to the quote",
+            "example": [
+              "550e8400-e29b-41d4-a716-446655440001"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "items": {
+            "description": "Replace line items (request-style quotes) and recalculate totals",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateQuoteLineItemDto"
+            }
+          },
+          "taxPercentage": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Tax percentage applied to subtotal",
+            "example": 10
+          },
+          "termsAndConditions": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Project-specific terms added on top of the standard Nestlancer terms snapshotted on the quote"
+          },
+          "internalNotes": {
+            "type": "string",
+            "maxLength": 1000,
+            "description": "Internal notes (admin only)"
+          },
+          "requiresContract": {
+            "type": "boolean",
+            "description": "Whether the client must sign the service agreement when accepting the quote",
+            "example": true
+          },
+          "schedulePreset": {
+            "type": "string",
+            "description": "Built-in payment schedule preset (rebuilds paymentSchedule from quote total)",
+            "example": "30-70"
+          },
+          "paymentSchedule": {
+            "description": "Custom payment schedule rows (amounts in major currency or percentages)",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateQuotePaymentScheduleInstallmentDto"
+            }
+          }
+        }
+      },
+      "DuplicateQuoteDto": {
+        "type": "object",
+        "properties": {
+          "targetRequestId": {
+            "type": "string",
+            "description": "When set, copies line items onto this existing request (must not already have a quote). Omit to clone as a new DRAFT request (legacy \u2014 prefer POST /admin/requests/:id/quotes/prefill)."
+          },
+          "sourceQuoteId": {
+            "type": "string",
+            "description": "Ignored alias",
+            "deprecated": true
+          },
+          "quoteId": {
+            "type": "string",
+            "deprecated": true,
+            "description": "Ignored alias"
+          },
+          "duplicateFrom": {
+            "type": "string",
+            "deprecated": true,
+            "description": "Ignored alias"
+          },
+          "title": {
+            "type": "string",
+            "deprecated": true,
+            "description": "Ignored \u2014 title is copied from source"
+          }
+        }
+      }
+    }
+  }
+}

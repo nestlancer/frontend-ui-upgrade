@@ -1,0 +1,787 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/contact/health": {
+      "get": {
+        "operationId": "ContactPublicController_healthCheck",
+        "summary": "Contact service health check",
+        "description": "Check if the contact service is operational.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Public"
+        ]
+      }
+    },
+    "/api/v1/contact": {
+      "post": {
+        "operationId": "ContactPublicController_submitContact",
+        "summary": "Submit contact inquiry",
+        "description": "Submit a new message or inquiry through the contact form.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubmitContactDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Public"
+        ]
+      }
+    },
+    "/api/v1/admin/contact": {
+      "get": {
+        "operationId": "ContactAdminController_findAll",
+        "summary": "List all inquiries",
+        "description": "Retrieve a paginated list of all contact inquiries received with statistics.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "description": "Alias of limit",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "type": "number"
+            }
+          },
+          {
+            "name": "sort",
+            "required": false,
+            "in": "query",
+            "description": "Sort field:order (e.g., createdAt:desc)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "description": "Filter by inquiry status",
+            "schema": {
+              "enum": [
+                "NEW",
+                "READ",
+                "RESPONDED",
+                "ARCHIVED",
+                "SPAM"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "sortBy",
+            "required": false,
+            "in": "query",
+            "description": "Field to sort by",
+            "schema": {
+              "default": "createdAt",
+              "example": "createdAt",
+              "type": "string"
+            }
+          },
+          {
+            "name": "order",
+            "required": false,
+            "in": "query",
+            "description": "Sort direction",
+            "schema": {
+              "default": "DESC",
+              "enum": [
+                "ASC",
+                "DESC"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Admin"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/contact/{id}": {
+      "get": {
+        "operationId": "ContactAdminController_getContactDetails",
+        "summary": "Get inquiry details",
+        "description": "Retrieve exhaustive metadata and content for a specific contact inquiry.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Admin"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "ContactAdminController_deleteContact",
+        "summary": "Delete inquiry",
+        "description": "Remove a contact inquiry record from the active administrative view.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Admin"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/contact/{id}/status": {
+      "patch": {
+        "operationId": "ContactAdminController_updateStatus",
+        "summary": "Update inquiry status",
+        "description": "Transition an inquiry between states like PENDING, RESPONDED, or RESOLVED.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateContactStatusDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Admin"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/contact/{id}/respond": {
+      "post": {
+        "operationId": "ContactAdminController_respondToContact",
+        "summary": "Respond to inquiry",
+        "description": "Send a professional response to a contact inquiry and notify the requester.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RespondContactDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Admin"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/contact/{id}/spam": {
+      "post": {
+        "operationId": "ContactAdminController_markAsSpam",
+        "summary": "Mark as spam",
+        "description": "Identify an inquiry as illegitimate content and update its internal classification.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Contact - Admin"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Nestlancer Contact Service",
+    "description": "Contact form API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "ResponseMetadataDto": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "example": "2026-05-29T12:00:00.000Z"
+          },
+          "requestId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "version": {
+            "type": "string",
+            "example": "v1"
+          },
+          "path": {
+            "type": "string",
+            "example": "/api/v1/users/me"
+          }
+        },
+        "required": [
+          "timestamp",
+          "requestId",
+          "version"
+        ]
+      },
+      "ApiSuccessEnvelopeDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "success"
+            ],
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "description": "Business payload returned by the controller handler",
+            "additionalProperties": true
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ResponseMetadataDto"
+          }
+        },
+        "required": [
+          "status",
+          "data",
+          "metadata"
+        ]
+      },
+      "SubmitContactDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "example": "John Doe",
+            "description": "The full legal or preferred name of the person submitting the inquiry"
+          },
+          "email": {
+            "type": "string",
+            "example": "john.doe@example.com",
+            "description": "The verified email address for receiving administrative responses"
+          },
+          "subject": {
+            "enum": [
+              "GENERAL",
+              "SUPPORT",
+              "SALES",
+              "BILLING",
+              "PARTNERSHIP",
+              "BUG_REPORT",
+              "OTHER"
+            ],
+            "type": "string",
+            "example": "GENERAL",
+            "description": "The primary classification or topic of the inquiry"
+          },
+          "message": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 5000,
+            "example": "I would like to discuss a potential partnership regarding the API ecosystem.",
+            "description": "The detailed textual content of the message body"
+          },
+          "turnstileToken": {
+            "type": "string",
+            "description": "Cloudflare Turnstile token. Required when TURNSTILE_SECRET_KEY is set in Infisical."
+          },
+          "referencePortfolioItemId": {
+            "type": "string",
+            "description": "Portfolio item that inspired this inquiry"
+          }
+        },
+        "required": [
+          "name",
+          "email",
+          "subject",
+          "message"
+        ]
+      },
+      "UpdateContactStatusDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "enum": [
+              "NEW",
+              "READ",
+              "RESPONDED",
+              "ARCHIVED",
+              "SPAM"
+            ],
+            "type": "string",
+            "description": "The new status to assign to the inquiry"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "RespondContactDto": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "RE: Your inquiry about services",
+            "description": "Subject line of the response email. When omitted, the service defaults to Re: <inquiry subject>."
+          },
+          "message": {
+            "type": "string",
+            "maxLength": 10000,
+            "example": "Hello, thank you for reaching out...",
+            "description": "The body content of the response"
+          },
+          "markAsResponded": {
+            "type": "boolean",
+            "default": true,
+            "example": true,
+            "description": "Whether to automatically mark the inquiry as resolved/responded"
+          }
+        },
+        "required": [
+          "message"
+        ]
+      }
+    }
+  }
+}

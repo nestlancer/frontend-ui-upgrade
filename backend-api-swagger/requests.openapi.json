@@ -1,0 +1,2963 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/requests/health": {
+      "get": {
+        "operationId": "RequestsController_healthCheck",
+        "summary": "Service health check",
+        "description": "Confirm that the project requests microservice is reachable and functioning correctly.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests": {
+      "post": {
+        "operationId": "RequestsController_createRequest",
+        "summary": "Create a new request",
+        "description": "Register a new project proposal in the system as a draft.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request created successfully in draft status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "RequestsController_listRequests",
+        "summary": "List my requests",
+        "description": "Fetch all project proposals you have created, including drafts and submitted items.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/stats": {
+      "get": {
+        "operationId": "RequestsController_getStats",
+        "summary": "Get user request statistics",
+        "description": "Retrieves aggregated request statistics for the current user.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}/status": {
+      "get": {
+        "operationId": "RequestsController_getStatusTimeline",
+        "summary": "Get request status timeline",
+        "description": "Retrieves the complete status transition history for a specific request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}": {
+      "get": {
+        "operationId": "RequestsController_getRequestDetails",
+        "summary": "Get request details",
+        "description": "Retrieves full details for a specific project request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "RequestsController_updateRequest",
+        "summary": "Update request",
+        "description": "Updates an existing draft or active project request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "RequestsController_deleteRequest",
+        "summary": "Delete request",
+        "description": "Removes a project request record.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}/submit": {
+      "post": {
+        "operationId": "RequestsController_submitRequest",
+        "summary": "Submit request for review",
+        "description": "Formally submits a draft request for review and quoting.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Request submitted successfully. You will receive a quote within 24-48 hours.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}/attachments": {
+      "get": {
+        "operationId": "RequestsController_getAttachments",
+        "summary": "List request attachments",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "RequestsController_addAttachment",
+        "summary": "Upload attachment",
+        "description": "Uploads a new file attachment to a request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Attachment uploaded successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}/attachments/{attachmentId}": {
+      "delete": {
+        "operationId": "RequestsController_removeAttachment",
+        "summary": "Delete attachment",
+        "description": "Deletes a specific attachment from a project request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attachmentId",
+            "required": true,
+            "in": "path",
+            "description": "Attachment UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Attachment removed successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}/attachments/{attachmentId}/download": {
+      "get": {
+        "operationId": "RequestsController_getAttachmentDownloadUrl",
+        "summary": "Get attachment download URL",
+        "description": "Returns a presigned download URL for a request attachment.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attachmentId",
+            "required": true,
+            "in": "path",
+            "description": "Attachment UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/requests/{id}/quotes": {
+      "get": {
+        "operationId": "RequestsController_getRequestQuotes",
+        "summary": "Get quotes for a request",
+        "description": "Retrieves all official quotes issued for a specific client request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests": {
+      "get": {
+        "operationId": "RequestsAdminController_listRequests",
+        "summary": "List all requests (Admin)",
+        "description": "Access the system-wide repository of all project proposals for review.",
+        "parameters": [
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "example": "1",
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Results per page",
+            "schema": {
+              "example": "20",
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "required": false,
+            "in": "query",
+            "description": "Filter by request status, or use queue shortcuts: inbox (submitted + under review + changes requested), all (include drafts). Default excludes client drafts.",
+            "schema": {
+              "example": "inbox",
+              "type": "string"
+            }
+          },
+          {
+            "name": "userId",
+            "required": false,
+            "in": "query",
+            "description": "Filter by client user ID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/stats": {
+      "get": {
+        "operationId": "RequestsAdminController_getOverallStats",
+        "summary": "Get overall request statistics",
+        "description": "Access administrative KPIs and volume data for all user project proposals.",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/capacity/dashboard": {
+      "get": {
+        "operationId": "RequestsAdminController_getCapacityDashboard",
+        "summary": "Admin capacity usage dashboard",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/settings/capacity": {
+      "patch": {
+        "operationId": "RequestsAdminController_updateCapacity",
+        "summary": "Update admin capacity settings",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/{id}": {
+      "get": {
+        "operationId": "RequestsAdminController_getRequestDetails",
+        "summary": "Get request administrative details",
+        "description": "Retrieve detailed metadata, content, and history for any project proposal.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "RequestsAdminController_updateRequest",
+        "summary": "Update request details (Admin)",
+        "description": "Updates an existing request's core details (Admin override).",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequestAdminDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "RequestsAdminController_deleteRequest",
+        "summary": "Delete request (Admin)",
+        "description": "Permanent removal of a project request record (Admin only).",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Request deleted"
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/{id}/status": {
+      "patch": {
+        "operationId": "RequestsAdminController_updateRequestStatus",
+        "summary": "Update request status (Admin)",
+        "description": "Transitions a request to a new status and adds administrative notes.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateRequestStatusDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request status updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/{id}/quotes": {
+      "post": {
+        "operationId": "RequestsAdminController_createQuote",
+        "summary": "Create quote from request",
+        "description": "Issues a formal quote based on a reviewed project request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateQuoteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Quote created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/{id}/quotes/prefill": {
+      "post": {
+        "operationId": "RequestsAdminController_suggestQuotePrefill",
+        "summary": "Get quote prefill suggestions from a past quote",
+        "description": "Returns suggested line items and terms for admin review. Does not persist \u2014 use POST /admin/requests/:id/quotes to create.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Target request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuotePrefillDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/{id}/notes": {
+      "post": {
+        "operationId": "RequestsAdminController_addNote",
+        "summary": "Add internal note",
+        "description": "Adds an internal administrative note to a request record.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddNoteDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Internal note added",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "RequestsAdminController_getNotes",
+        "summary": "List request notes",
+        "description": "Lists all internal notes associated with a project request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/{id}/assign": {
+      "post": {
+        "operationId": "RequestsAdminController_assignRequest",
+        "summary": "Assign request to staff",
+        "description": "Assigns a staff member or team to a specific project request.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Request assigned successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/requests/{id}/attachments/{attachmentId}/download": {
+      "get": {
+        "operationId": "RequestsAdminController_getAttachmentDownloadUrl",
+        "summary": "Get attachment download URL (Admin)",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Request UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "attachmentId",
+            "required": true,
+            "in": "path",
+            "description": "Attachment UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Requests"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/services": {
+      "get": {
+        "operationId": "ServicesPublicController_list",
+        "summary": "List active service packages",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Services"
+        ]
+      }
+    },
+    "/api/v1/services/{slug}": {
+      "get": {
+        "operationId": "ServicesPublicController_getOne",
+        "summary": "Get service package by slug",
+        "parameters": [
+          {
+            "name": "slug",
+            "required": true,
+            "in": "path",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Public/Services"
+        ]
+      }
+    },
+    "/api/v1/admin/service-packages": {
+      "get": {
+        "operationId": "ServicePackagesAdminController_list",
+        "summary": "List all service packages (including inactive)",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Service Packages"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "ServicePackagesAdminController_upsert",
+        "summary": "Create or upsert service package",
+        "description": "Upserts by unique slug. Safe for repeated seed runs.",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpsertServicePackageDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Admin/Service Packages"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/service-packages/{id}": {
+      "patch": {
+        "operationId": "ServicePackagesAdminController_update",
+        "summary": "Update service package by id",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Package UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Service Packages"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Nestlancer Requests Service",
+    "description": "Project requests API",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "ResponseMetadataDto": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "example": "2026-05-29T12:00:00.000Z"
+          },
+          "requestId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "version": {
+            "type": "string",
+            "example": "v1"
+          },
+          "path": {
+            "type": "string",
+            "example": "/api/v1/users/me"
+          }
+        },
+        "required": [
+          "timestamp",
+          "requestId",
+          "version"
+        ]
+      },
+      "ApiSuccessEnvelopeDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "success"
+            ],
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "description": "Business payload returned by the controller handler",
+            "additionalProperties": true
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ResponseMetadataDto"
+          }
+        },
+        "required": [
+          "status",
+          "data",
+          "metadata"
+        ]
+      },
+      "BudgetDto": {
+        "type": "object",
+        "properties": {
+          "min": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Minimum estimated budget in rupees (major units). Stored as paise server-side.",
+            "example": 5000
+          },
+          "max": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Maximum estimated budget in rupees (major units). Stored as paise server-side.",
+            "example": 15000
+          },
+          "currency": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ISO currency code for the budget",
+            "example": "INR"
+          },
+          "flexible": {
+            "type": "boolean",
+            "description": "Whether the budget is open to negotiation",
+            "example": true
+          }
+        },
+        "required": [
+          "min",
+          "max",
+          "currency",
+          "flexible"
+        ]
+      },
+      "TimelineDto": {
+        "type": "object",
+        "properties": {
+          "preferredStartDate": {
+            "type": "string",
+            "description": "Preferred project kickoff date",
+            "example": "2024-12-01T00:00:00Z"
+          },
+          "deadline": {
+            "type": "string",
+            "description": "Target date for project completion",
+            "example": "2025-05-01T23:59:59Z"
+          },
+          "flexible": {
+            "type": "boolean",
+            "description": "Whether the project deadlines are flexible",
+            "example": false
+          }
+        },
+        "required": [
+          "preferredStartDate",
+          "deadline",
+          "flexible"
+        ]
+      },
+      "TechnicalRequirementsDto": {
+        "type": "object",
+        "properties": {
+          "preferredTechnologies": {
+            "description": "Preferred technology stack or languages",
+            "example": [
+              "NestJS",
+              "React",
+              "PostgreSQL"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hosting": {
+            "type": "string",
+            "description": "Hosting or infrastructure preferences",
+            "example": "AWS / Vercel"
+          },
+          "integrations": {
+            "description": "Third-party APIs or services to integrate",
+            "example": [
+              "Stripe",
+              "SendGrid",
+              "OpenAI"
+            ],
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "CreateRequestDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 100,
+            "description": "Succinct and descriptive title for the request",
+            "example": "Build a Custom CRM for Real Estate"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 5000,
+            "description": "Detailed explanation of the project scope and requirements",
+            "example": "We need a robust CRM system to manage lead flow, automated emails, and agent performance tracking..."
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "webDevelopment",
+              "mobileApp",
+              "ecommerce",
+              "design",
+              "branding",
+              "marketing",
+              "seo",
+              "consulting",
+              "maintenance",
+              "custom"
+            ],
+            "description": "The primary service category for this request",
+            "example": "webDevelopment"
+          },
+          "budget": {
+            "description": "Financial constraints and configuration",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BudgetDto"
+              }
+            ]
+          },
+          "timeline": {
+            "description": "Project timing and flexibility requirements",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TimelineDto"
+              }
+            ]
+          },
+          "requirements": {
+            "description": "Specific functional or business requirements",
+            "example": [
+              "User authentication",
+              "Dashboard analytics",
+              "PDF reporting"
+            ],
+            "maxItems": 20,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "technicalRequirements": {
+            "description": "Technical stack and infra preferences",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TechnicalRequirementsDto"
+              }
+            ]
+          },
+          "attachments": {
+            "description": "Array of media/file UUIDs for any supporting documentation provided by the client",
+            "example": [
+              "550e8400-e29b-41d4-a716-446655440003"
+            ],
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "additionalInfo": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Any other relevant information not captured in the description or technical requirements",
+            "example": "We prefer a phased rollout with the MVP being ready by Q1."
+          },
+          "referencePortfolioItemId": {
+            "type": "string",
+            "description": "Published portfolio item that inspired this request"
+          },
+          "servicePackageId": {
+            "type": "string",
+            "description": "Optional service catalog package this request is based on",
+            "example": "550e8400-e29b-41d4-a716-446655440099"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "category",
+          "budget",
+          "timeline",
+          "requirements"
+        ]
+      },
+      "UpdateRequestDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 100,
+            "description": "Succinct and descriptive title for the request",
+            "example": "Build a Custom CRM for Real Estate"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 5000,
+            "description": "Detailed explanation of the project scope and requirements",
+            "example": "We need a robust CRM system to manage lead flow, automated emails, and agent performance tracking..."
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "webDevelopment",
+              "mobileApp",
+              "ecommerce",
+              "design",
+              "branding",
+              "marketing",
+              "seo",
+              "consulting",
+              "maintenance",
+              "custom"
+            ],
+            "description": "The primary service category for this request",
+            "example": "webDevelopment"
+          },
+          "budget": {
+            "description": "Financial constraints and configuration",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/BudgetDto"
+              }
+            ]
+          },
+          "timeline": {
+            "description": "Project timing and flexibility requirements",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TimelineDto"
+              }
+            ]
+          },
+          "requirements": {
+            "description": "Specific functional or business requirements",
+            "example": [
+              "User authentication",
+              "Dashboard analytics",
+              "PDF reporting"
+            ],
+            "maxItems": 20,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "technicalRequirements": {
+            "description": "Technical stack and infra preferences",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/TechnicalRequirementsDto"
+              }
+            ]
+          },
+          "attachments": {
+            "description": "Array of media/file UUIDs for any supporting documentation provided by the client",
+            "example": [
+              "550e8400-e29b-41d4-a716-446655440003"
+            ],
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "additionalInfo": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Any other relevant information not captured in the description or technical requirements",
+            "example": "We prefer a phased rollout with the MVP being ready by Q1."
+          },
+          "referencePortfolioItemId": {
+            "type": "string",
+            "description": "Published portfolio item that inspired this request"
+          },
+          "servicePackageId": {
+            "type": "string",
+            "description": "Optional service catalog package this request is based on",
+            "example": "550e8400-e29b-41d4-a716-446655440099"
+          }
+        }
+      },
+      "UpdateRequestStatusDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "submitted",
+              "underReview",
+              "quoted",
+              "accepted",
+              "rejected",
+              "convertedToProject",
+              "changesRequested"
+            ],
+            "description": "The new target status: draft (editable), submitted (awaiting review), underReview, quoted, accepted, rejected, convertedToProject, changesRequested",
+            "example": "underReview"
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 1000,
+            "description": "Administrative reason or context for the status transition",
+            "example": "Moving to review after client confirmation of budget."
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "QuoteItemDto": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Detailed description of the service or component",
+            "example": "Frontend UI Implementation - Dashboard"
+          },
+          "quantity": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Quantity or hours for the item",
+            "example": 1
+          },
+          "unitPrice": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Price per unit in major currency (e.g. \u20b92,500.00). Stored as paise server-side.",
+            "example": 2500
+          }
+        },
+        "required": [
+          "description",
+          "quantity",
+          "unitPrice"
+        ]
+      },
+      "PaymentScheduleInstallmentDto": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "description": "Installment label shown to client",
+            "example": "Deposit"
+          },
+          "percentage": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Percentage of quote total (use this OR amount, not both required)",
+            "example": 30
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Fixed amount in major currency (e.g. rupees). Use when not using percentage.",
+            "example": 15000
+          },
+          "dueTrigger": {
+            "type": "string",
+            "enum": [
+              "on_accept",
+              "on_prior_approved",
+              "on_date"
+            ],
+            "description": "When this installment becomes payable",
+            "example": "on_accept"
+          },
+          "dueDate": {
+            "type": "string",
+            "description": "Due date (required when dueTrigger is on_date)",
+            "example": "2025-03-01T00:00:00Z"
+          }
+        },
+        "required": [
+          "label"
+        ]
+      },
+      "CreateQuoteDto": {
+        "type": "object",
+        "properties": {
+          "prefillFromPackage": {
+            "type": "boolean",
+            "description": "When true and request has servicePackageId, prefill items from package deliverables if items is empty.",
+            "example": true
+          },
+          "includePackageAddOns": {
+            "type": "boolean",
+            "description": "Include optional add-ons from service package when prefillFromPackage is true",
+            "example": false
+          },
+          "items": {
+            "description": "List of line items comprising the quote total (billing breakdown)",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/QuoteItemDto"
+            }
+          },
+          "schedulePreset": {
+            "type": "string",
+            "enum": [
+              "50-50",
+              "30-70",
+              "30-40-30",
+              "25-25-25-25",
+              "100-upfront"
+            ],
+            "description": "Built-in payment schedule preset. Used when paymentSchedule is omitted. Defaults to 50-50.",
+            "example": "30-70"
+          },
+          "paymentSchedule": {
+            "description": "Custom payment installments (amounts in major currency or percentages). Overrides schedulePreset.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PaymentScheduleInstallmentDto"
+            }
+          },
+          "currency": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "ISO currency code for the quote",
+            "example": "INR"
+          },
+          "taxPercentage": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Tax percentage to apply to the subtotal",
+            "example": 10
+          },
+          "validUntil": {
+            "type": "string",
+            "description": "Quote expiration date",
+            "example": "2024-12-31T23:59:59Z"
+          },
+          "termsAndConditions": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "Project-specific terms added on top of the platform standard terms (payment milestones, scope boundaries, client responsibilities, etc.)",
+            "example": "30% deposit on acceptance. Client provides brand assets within 5 business days of kickoff."
+          },
+          "internalNotes": {
+            "type": "string",
+            "maxLength": 1000,
+            "description": "Internal administrative or project management notes",
+            "example": "Priority client. Standard rates applied."
+          },
+          "requiresContract": {
+            "type": "boolean",
+            "description": "Whether client must sign contract before deposit (enterprise clients)",
+            "example": false
+          },
+          "revisionsIncluded": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Number of revision rounds included in this quote",
+            "example": 2
+          },
+          "additionalRevisionCost": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Overflow fee per additional revision in major currency (paise stored server-side)",
+            "example": 5000
+          },
+          "applyClientTierDiscount": {
+            "type": "boolean",
+            "description": "When true, apply the client tier discount (e.g. VIP 10%) to computed list-price totals. Default false \u2014 never silently rewrite admin totals (NL-BUG-PAY-001).",
+            "example": false
+          }
+        },
+        "required": [
+          "currency",
+          "taxPercentage",
+          "validUntil"
+        ]
+      },
+      "QuotePrefillDto": {
+        "type": "object",
+        "properties": {
+          "sourceQuoteId": {
+            "type": "string",
+            "description": "Source quote UUID to copy structure from"
+          }
+        },
+        "required": [
+          "sourceQuoteId"
+        ]
+      },
+      "AddNoteDto": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string",
+            "maxLength": 2000,
+            "description": "The textual content of the note",
+            "example": "Initial draft looks good, but need more clarity on the cloud provider requirements."
+          }
+        },
+        "required": [
+          "content"
+        ]
+      },
+      "UpdateRequestAdminDto": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 5,
+            "maxLength": 100
+          },
+          "description": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 5000
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "webDevelopment",
+              "mobileApp",
+              "ecommerce",
+              "design",
+              "branding",
+              "marketing",
+              "seo",
+              "consulting",
+              "maintenance",
+              "custom"
+            ]
+          },
+          "additionalInfo": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "timeframe": {
+            "type": "string",
+            "maxLength": 100
+          }
+        }
+      },
+      "AssignRequestDto": {
+        "type": "object",
+        "properties": {
+          "assigneeId": {
+            "type": "string",
+            "maxLength": 64,
+            "description": "User id of an active admin to assign this request to"
+          }
+        },
+        "required": [
+          "assigneeId"
+        ]
+      },
+      "UpsertServicePackageDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 120,
+            "example": "Web Application MVP"
+          },
+          "slug": {
+            "type": "string",
+            "maxLength": 80,
+            "example": "web-application-mvp"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string",
+            "example": "webDevelopment"
+          },
+          "basePricePaise": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Price in paise (preferred for seed payloads)",
+            "example": 5900000
+          },
+          "basePrice": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Price in major currency units (e.g. INR)",
+            "example": 59000
+          },
+          "estimatedDays": {
+            "type": "number",
+            "minimum": 1,
+            "example": 30
+          },
+          "revisionsIncluded": {
+            "type": "number",
+            "minimum": 0,
+            "example": 2
+          },
+          "deliverables": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "addOns": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "isActive": {
+            "type": "boolean",
+            "example": true
+          },
+          "sortOrder": {
+            "type": "number",
+            "example": 10
+          },
+          "id": {
+            "type": "string",
+            "description": "Stable UUID when seeding known IDs"
+          }
+        },
+        "required": [
+          "name",
+          "slug",
+          "description",
+          "category"
+        ]
+      }
+    }
+  }
+}

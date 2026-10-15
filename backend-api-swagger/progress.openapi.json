@@ -1,0 +1,2852 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/api/v1/progress/health": {
+      "get": {
+        "operationId": "ProgressHealthController_health",
+        "summary": "Progress service health check",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Progress"
+        ]
+      }
+    },
+    "/api/v1/admin/progress/projects/{projectId}": {
+      "post": {
+        "operationId": "ProgressAdminController_createProgressEntry",
+        "summary": "Create progress entry",
+        "description": "Creates a new progress entry for a project.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProgressEntryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ProgressEntryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/ProgressEntryResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "ProgressAdminController_getProjectProgress",
+        "summary": "List progress entries for project",
+        "description": "Lists all progress entries for a specific project.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "description": "Filter by type of progress entry",
+            "schema": {
+              "example": "UPDATE",
+              "enum": [
+                "UPDATE",
+                "MILESTONE_COMPLETE",
+                "DELIVERABLE_UPLOAD",
+                "STATUS_CHANGE",
+                "INTERNAL_NOTE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Page number for pagination",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "example": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "example": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "description": "Alias of limit. Accepted so clients using pageSize are not rejected.",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "example": 20,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ProgressEntryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/ProgressEntryResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/progress/{id}": {
+      "patch": {
+        "operationId": "ProgressAdminController_updateProgressEntry",
+        "summary": "Update progress entry",
+        "description": "Updates an existing progress entry.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Progress entry UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProgressEntryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ProgressEntryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/ProgressEntryResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "ProgressAdminController_deleteProgressEntry",
+        "summary": "Delete progress entry",
+        "description": "Deletes a progress entry.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Progress entry UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Entry deleted successfully"
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/progress/projects/{projectId}/analytics": {
+      "get": {
+        "operationId": "ProgressAdminController_getAnalytics",
+        "summary": "Get progress analytics for project",
+        "description": "Gets analytics data for project progress.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/progress/projects/{projectId}/timeline": {
+      "get": {
+        "operationId": "ProgressAdminController_getAdminTimeline",
+        "summary": "Get full administrative timeline for project",
+        "description": "Gets the full administrative timeline for a project.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/progress/projects/{projectId}/status": {
+      "patch": {
+        "operationId": "ProgressAdminController_updateProjectStatus",
+        "summary": "Update project status (admin)",
+        "description": "Override and update the current lifecycle status of a project. Deprecated \u2014 prefer PATCH /admin/projects/:id/status on the projects service.",
+        "deprecated": true,
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/progress/projects/{projectId}/complete": {
+      "post": {
+        "operationId": "ProgressAdminController_markProjectComplete",
+        "summary": "Mark project as complete (admin)",
+        "description": "Finalize a project and record its completion details in the system.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/projects/{projectId}/milestones": {
+      "post": {
+        "operationId": "MilestonesAdminController_createMilestone",
+        "summary": "Create milestone",
+        "description": "Creates a new milestone for a project.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateMilestoneDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "MilestoneResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/MilestoneResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Milestones"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/milestones/{id}": {
+      "patch": {
+        "operationId": "MilestonesAdminController_updateMilestone",
+        "summary": "Update milestone",
+        "description": "Updates an existing milestone's details (dates, description, etc.).",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Milestone UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateMilestoneDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "MilestoneResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/MilestoneResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Milestones"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/milestones/{id}/complete": {
+      "post": {
+        "operationId": "MilestonesAdminController_completeMilestone",
+        "summary": "Mark milestone complete",
+        "description": "Manually marks a milestone as physically complete, pending client approval.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Milestone UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Milestones"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/projects/{projectId}/deliverables": {
+      "post": {
+        "operationId": "DeliverablesAdminController_uploadDeliverable",
+        "summary": "Upload deliverable",
+        "description": "Uploads a new deliverable submission for a project.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UploadDeliverableDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "DeliverableResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/DeliverableResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Deliverables"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "DeliverablesAdminController_getProjectDeliverables",
+        "summary": "List project deliverables",
+        "description": "Lists all deliverables submitted for a specific project.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Project UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "DeliverableResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/DeliverableResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Deliverables"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/deliverables/{id}": {
+      "patch": {
+        "operationId": "DeliverablesAdminController_updateDeliverable",
+        "summary": "Update deliverable metadata",
+        "description": "Updates the metadata or description of an existing deliverable.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Deliverable UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateDeliverableDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "DeliverableResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/DeliverableResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Deliverables"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "DeliverablesAdminController_deleteDeliverable",
+        "summary": "Delete deliverable",
+        "description": "Permanent removal of a deliverable submission.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Deliverable UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Deliverable deleted"
+          }
+        },
+        "tags": [
+          "Admin/Deliverables"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{projectId}/progress": {
+      "get": {
+        "operationId": "ProgressController_getTimeline",
+        "summary": "Get progress timeline for project",
+        "description": "Retrieves the historical timeline of progress updates for a specific project.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Unique identifier of the project",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "required": false,
+            "in": "query",
+            "description": "Filter by type of progress entry",
+            "schema": {
+              "example": "UPDATE",
+              "enum": [
+                "UPDATE",
+                "MILESTONE_COMPLETE",
+                "DELIVERABLE_UPLOAD",
+                "STATUS_CHANGE",
+                "INTERNAL_NOTE"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": false,
+            "in": "query",
+            "description": "Page number for pagination",
+            "schema": {
+              "minimum": 1,
+              "default": 1,
+              "example": 1,
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "required": false,
+            "in": "query",
+            "description": "Number of items per page",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "default": 20,
+              "example": 20,
+              "type": "number"
+            }
+          },
+          {
+            "name": "pageSize",
+            "required": false,
+            "in": "query",
+            "description": "Alias of limit. Accepted so clients using pageSize are not rejected.",
+            "schema": {
+              "minimum": 1,
+              "maximum": 100,
+              "example": 20,
+              "type": "number"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ProgressEntryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/ProgressEntryResponseDto"
+                          }
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "ProgressController_createProgressEntry",
+        "summary": "Create a progress entry for a project (admin only)",
+        "description": "Manually creates a progress entry (admin-only; clients use request-changes).",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Unique identifier of the project",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProgressEntryDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "ProgressEntryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/ProgressEntryResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{projectId}/progress/status": {
+      "get": {
+        "operationId": "ProgressController_getStatusSummary",
+        "summary": "Get overall project status summary",
+        "description": "Fetch a concise overview of the project's current health and advancement.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Unique identifier of the project",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{projectId}/progress/milestones": {
+      "get": {
+        "operationId": "ProgressController_getMilestoneProgress",
+        "summary": "Get milestone progress for project",
+        "description": "Retrieve tracking information for all major project milestones.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Unique identifier of the project",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{projectId}/progress/request-changes": {
+      "post": {
+        "operationId": "ProgressController_requestChanges",
+        "summary": "Request revisions on project progress",
+        "description": "Submit a formal request for modifications to current project outputs.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Unique identifier of the project",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestChangesDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Revision request successfully submitted"
+          }
+        },
+        "tags": [
+          "Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/projects/{projectId}/progress/{entryId}": {
+      "get": {
+        "operationId": "ProgressController_getEntry",
+        "summary": "Get single progress entry",
+        "description": "Retrieves details for a specific progress entry.",
+        "parameters": [
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "path",
+            "description": "Unique identifier of the project",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entryId",
+            "required": true,
+            "in": "path",
+            "description": "Progress entry UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ProgressEntryResponseDto wrapped in the standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "$ref": "#/components/schemas/ProgressEntryResponseDto"
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Progress"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/milestones/{id}/approve": {
+      "post": {
+        "operationId": "MilestoneApprovalsController_approveMilestone",
+        "summary": "Approve a milestone",
+        "description": "Approves a milestone, marking it as finalized and potentially triggering payment milestones.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Milestone UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApproveMilestoneDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Milestone Approvals"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/milestones/{id}/request-revision": {
+      "post": {
+        "operationId": "MilestoneApprovalsController_requestRevision",
+        "summary": "Request revision on a milestone",
+        "description": "Requests a revision for a completed milestone if requirements were not fully met.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Milestone UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestMilestoneRevisionDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Milestone Approvals"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/deliverables/{id}/approve": {
+      "post": {
+        "operationId": "DeliverableReviewsController_approveDeliverable",
+        "summary": "Approve a deliverable",
+        "description": "Approves a specific deliverable submission.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Deliverable UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApproveDeliverableDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Deliverable Reviews"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/deliverables/{id}/reject": {
+      "post": {
+        "operationId": "DeliverableReviewsController_rejectDeliverable",
+        "summary": "Reject a deliverable",
+        "description": "Rejects a deliverable submission, typically requiring changes.",
+        "parameters": [
+          {
+            "name": "id",
+            "required": true,
+            "in": "path",
+            "description": "Deliverable UUID",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectDeliverableDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Deliverable Reviews"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/admin/time-entries": {
+      "get": {
+        "operationId": "TimeEntriesAdminController_list",
+        "summary": "List time entries for a milestone or project",
+        "parameters": [
+          {
+            "name": "milestoneId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "projectId",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "required": true,
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Admin/Time Entries"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "post": {
+        "operationId": "TimeEntriesAdminController_create",
+        "summary": "Log time against a milestone",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Standard success envelope",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/ApiSuccessEnvelopeDto"
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "status",
+                        "data",
+                        "metadata"
+                      ],
+                      "properties": {
+                        "status": {
+                          "type": "string",
+                          "enum": [
+                            "success"
+                          ]
+                        },
+                        "data": {
+                          "type": "object",
+                          "additionalProperties": true
+                        },
+                        "metadata": {
+                          "$ref": "#/components/schemas/ResponseMetadataDto"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "201": {
+            "description": ""
+          }
+        },
+        "tags": [
+          "Admin/Time Entries"
+        ],
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Progress Service API",
+    "description": "API documentation for the Progress service",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "securitySchemes": {
+      "bearer": {
+        "scheme": "bearer",
+        "bearerFormat": "JWT",
+        "type": "http"
+      }
+    },
+    "schemas": {
+      "ResponseMetadataDto": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "example": "2026-05-29T12:00:00.000Z"
+          },
+          "requestId": {
+            "type": "string",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "version": {
+            "type": "string",
+            "example": "v1"
+          },
+          "path": {
+            "type": "string",
+            "example": "/api/v1/users/me"
+          }
+        },
+        "required": [
+          "timestamp",
+          "requestId",
+          "version"
+        ]
+      },
+      "ApiSuccessEnvelopeDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "success"
+            ],
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "description": "Business payload returned by the controller handler",
+            "additionalProperties": true
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/ResponseMetadataDto"
+          }
+        },
+        "required": [
+          "status",
+          "data",
+          "metadata"
+        ]
+      },
+      "ProgressEntryResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174333",
+            "description": "Unique identifier for the progress entry"
+          },
+          "type": {
+            "enum": [
+              "UPDATE",
+              "MILESTONE_COMPLETE",
+              "DELIVERABLE_UPLOAD",
+              "STATUS_CHANGE",
+              "INTERNAL_NOTE"
+            ],
+            "type": "string",
+            "example": "UPDATE",
+            "description": "The type of progress update"
+          },
+          "title": {
+            "type": "string",
+            "example": "Research Complete",
+            "description": "The title of the update"
+          },
+          "description": {
+            "type": "string",
+            "example": "Finished all user interviews for the initial phase.",
+            "description": "Detailed content of the update"
+          },
+          "milestoneId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174111",
+            "description": "Optional associated milestone ID"
+          },
+          "attachments": {
+            "description": "Attached files or media references",
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "visibility": {
+            "enum": [
+              "CLIENT_VISIBLE",
+              "INTERNAL"
+            ],
+            "type": "string",
+            "example": "CLIENT_VISIBLE",
+            "description": "Privacy level of the entry"
+          },
+          "createdBy": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174000",
+            "description": "User ID of the creator"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-01-10T16:00:00Z",
+            "description": "Timestamp of creation"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "title",
+          "description",
+          "visibility",
+          "createdBy",
+          "createdAt"
+        ]
+      },
+      "CreateProgressEntryDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "UPDATE",
+              "MILESTONE_COMPLETE",
+              "DELIVERABLE_UPLOAD",
+              "STATUS_CHANGE",
+              "INTERNAL_NOTE"
+            ],
+            "type": "string",
+            "example": "UPDATE",
+            "description": "The type of progress update"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Backend Infrastructure Ready",
+            "description": "Short title for the update"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 5000,
+            "example": "Completed the migration to the new database schema...",
+            "description": "Detailed update content"
+          },
+          "milestoneId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174111",
+            "description": "Associated milestone UUID"
+          },
+          "deliverableIds": {
+            "example": [
+              "123e4567-e89b-12d3-a456-426614174222"
+            ],
+            "description": "List of deliverable UUIDs covered by this update",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "attachmentIds": {
+            "example": [
+              "123e4567-e89b-12d3-a456-426614174444"
+            ],
+            "description": "List of media/attachment UUIDs",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notifyClient": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to send a notification to the client"
+          },
+          "visibility": {
+            "default": "CLIENT_VISIBLE",
+            "enum": [
+              "CLIENT_VISIBLE",
+              "INTERNAL"
+            ],
+            "type": "string",
+            "description": "Who can see this progress entry"
+          }
+        },
+        "required": [
+          "type",
+          "title",
+          "description"
+        ]
+      },
+      "UpdateProgressEntryDto": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "UPDATE",
+              "MILESTONE_COMPLETE",
+              "DELIVERABLE_UPLOAD",
+              "STATUS_CHANGE",
+              "INTERNAL_NOTE"
+            ],
+            "type": "string",
+            "example": "UPDATE",
+            "description": "The type of progress update"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Backend Infrastructure Ready",
+            "description": "Short title for the update"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 5000,
+            "example": "Completed the migration to the new database schema...",
+            "description": "Detailed update content"
+          },
+          "milestoneId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174111",
+            "description": "Associated milestone UUID"
+          },
+          "deliverableIds": {
+            "example": [
+              "123e4567-e89b-12d3-a456-426614174222"
+            ],
+            "description": "List of deliverable UUIDs covered by this update",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "attachmentIds": {
+            "example": [
+              "123e4567-e89b-12d3-a456-426614174444"
+            ],
+            "description": "List of media/attachment UUIDs",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notifyClient": {
+            "type": "boolean",
+            "default": true,
+            "description": "Whether to send a notification to the client"
+          },
+          "visibility": {
+            "default": "CLIENT_VISIBLE",
+            "enum": [
+              "CLIENT_VISIBLE",
+              "INTERNAL"
+            ],
+            "type": "string",
+            "description": "Who can see this progress entry"
+          }
+        }
+      },
+      "DeliverableResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174222",
+            "description": "Unique identifier for the deliverable"
+          },
+          "milestoneId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174111",
+            "description": "Associated milestone ID"
+          },
+          "description": {
+            "type": "string",
+            "example": "Phase 1 Documentation Draft",
+            "description": "Optional description of the deliverable"
+          },
+          "media": {
+            "description": "Metadata for associated media/files",
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "status": {
+            "enum": [
+              "PENDING",
+              "IN_PROGRESS",
+              "READY_FOR_REVIEW",
+              "REVISION_REQUESTED",
+              "APPROVED",
+              "REJECTED"
+            ],
+            "type": "string",
+            "example": "PENDING",
+            "description": "Current status of the deliverable"
+          },
+          "version": {
+            "type": "number",
+            "example": 1,
+            "description": "Submission version number"
+          },
+          "reviewStatus": {
+            "type": "object",
+            "description": "Current review status/notes"
+          },
+          "createdAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-01-10T15:30:00Z",
+            "description": "Timestamp of creation"
+          }
+        },
+        "required": [
+          "id",
+          "milestoneId",
+          "media",
+          "status",
+          "version",
+          "createdAt"
+        ]
+      },
+      "MilestoneResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174111",
+            "description": "Unique identifier for the milestone"
+          },
+          "name": {
+            "type": "string",
+            "example": "Initial Research Phase",
+            "description": "The name of the milestone"
+          },
+          "description": {
+            "type": "string",
+            "example": "Deep dive into user requirements and market analysis",
+            "description": "Optional detailed description"
+          },
+          "status": {
+            "enum": [
+              "PENDING",
+              "IN_PROGRESS",
+              "REVIEW",
+              "COMPLETED",
+              "APPROVED",
+              "REVISION_REQUESTED",
+              "CANCELLED"
+            ],
+            "type": "string",
+            "example": "IN_PROGRESS",
+            "description": "Current status of the milestone"
+          },
+          "startDate": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-01-01T00:00:00Z",
+            "description": "Scheduled start date"
+          },
+          "endDate": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-01-15T00:00:00Z",
+            "description": "Scheduled end date"
+          },
+          "completionPercentage": {
+            "type": "number",
+            "example": 45,
+            "description": "Completion percentage (0-100)"
+          },
+          "deliverables": {
+            "description": "List of deliverables associated with this milestone",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliverableResponseDto"
+            }
+          },
+          "approvedAt": {
+            "format": "date-time",
+            "type": "string",
+            "example": "2024-01-16T10:00:00Z",
+            "description": "Timestamp of client approval"
+          },
+          "order": {
+            "type": "number",
+            "example": 1,
+            "description": "Display order of the milestone in the project sequence"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "status",
+          "startDate",
+          "endDate",
+          "completionPercentage",
+          "deliverables",
+          "order"
+        ]
+      },
+      "CreateMilestoneDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Frontend MVP Development",
+            "description": "The name of the milestone"
+          },
+          "description": {
+            "type": "string",
+            "example": "Implementation of the core frontend features...",
+            "description": "Detailed description of milestone objectives"
+          },
+          "startDate": {
+            "type": "string",
+            "example": "2024-02-01",
+            "description": "Expected start date (ISO string)"
+          },
+          "endDate": {
+            "type": "string",
+            "example": "2024-02-15",
+            "description": "Expected completion date (ISO string)"
+          },
+          "dueDate": {
+            "type": "string",
+            "example": "2024-02-15",
+            "description": "Due date alias (ISO string). Falls back to endDate if omitted."
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0,
+            "example": 5000,
+            "description": "Payment amount for this milestone (in smallest currency unit, e.g. paise for INR)"
+          },
+          "currency": {
+            "type": "string",
+            "example": "INR",
+            "description": "Currency code for the milestone payment amount"
+          },
+          "deliverables": {
+            "example": [
+              "Homepage UI",
+              "Auth Flow"
+            ],
+            "description": "Initial list of deliverable titles",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "order": {
+            "type": "number",
+            "example": 2,
+            "description": "The sequential order of this milestone"
+          }
+        },
+        "required": [
+          "name",
+          "startDate",
+          "endDate"
+        ]
+      },
+      "UpdateMilestoneDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Frontend MVP Development",
+            "description": "The name of the milestone"
+          },
+          "description": {
+            "type": "string",
+            "example": "Implementation of the core frontend features...",
+            "description": "Detailed description of milestone objectives"
+          },
+          "startDate": {
+            "type": "string",
+            "example": "2024-02-01",
+            "description": "Expected start date (ISO string)"
+          },
+          "endDate": {
+            "type": "string",
+            "example": "2024-02-15",
+            "description": "Expected completion date (ISO string)"
+          },
+          "dueDate": {
+            "type": "string",
+            "example": "2024-02-15",
+            "description": "Due date alias (ISO string). Falls back to endDate if omitted."
+          },
+          "amount": {
+            "type": "number",
+            "minimum": 0,
+            "example": 5000,
+            "description": "Payment amount for this milestone (in smallest currency unit, e.g. paise for INR)"
+          },
+          "currency": {
+            "type": "string",
+            "example": "INR",
+            "description": "Currency code for the milestone payment amount"
+          },
+          "deliverables": {
+            "example": [
+              "Homepage UI",
+              "Auth Flow"
+            ],
+            "description": "Initial list of deliverable titles",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "order": {
+            "type": "number",
+            "example": 2,
+            "description": "The sequential order of this milestone"
+          }
+        }
+      },
+      "UploadDeliverableDto": {
+        "type": "object",
+        "properties": {
+          "milestoneId": {
+            "type": "string",
+            "example": "123e4567-e89b-12d3-a456-426614174111",
+            "description": "Target milestone ID"
+          },
+          "mediaIds": {
+            "example": [
+              "123e4567-e89b-12d3-a456-426614174555"
+            ],
+            "description": "List of media UUIDs for the deliverable",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 200,
+            "example": "Logo suite",
+            "description": "Client-facing deliverable name (defaults to milestone name or description)"
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 1000,
+            "example": "Initial draft for review",
+            "description": "Optional description or notes"
+          }
+        },
+        "required": [
+          "milestoneId",
+          "mediaIds"
+        ]
+      },
+      "UpdateDeliverableDto": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "maxLength": 1000,
+            "example": "Revised draft with updated branding...",
+            "description": "Updated description or notes"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "IN_PROGRESS",
+              "READY_FOR_REVIEW",
+              "REVISION_REQUESTED",
+              "APPROVED",
+              "REJECTED"
+            ],
+            "description": "Moderation status (admin)"
+          },
+          "rejectionReason": {
+            "type": "string",
+            "maxLength": 1000,
+            "example": "Does not meet acceptance criteria for milestone 2.",
+            "description": "Reason when rejecting a deliverable"
+          }
+        }
+      },
+      "ChangeRequestDetailDto": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "maxLength": 500,
+            "example": "Add social login options",
+            "description": "Description of the specific change"
+          }
+        },
+        "required": [
+          "description"
+        ]
+      },
+      "RequestChangesDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 2000,
+            "example": "Scope adjustment based on latest feedback",
+            "description": "Overall reason for the change request"
+          },
+          "details": {
+            "description": "List of specific granular changes required (optional; omit to avoid duplicating reason)",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChangeRequestDetailDto"
+            }
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      },
+      "ApproveMilestoneDto": {
+        "type": "object",
+        "properties": {
+          "feedback": {
+            "type": "string",
+            "maxLength": 1000,
+            "example": "Excellent work on the initial phase. Proceed to the next milestone.",
+            "description": "Optional feedback for the studio"
+          }
+        }
+      },
+      "RequestMilestoneRevisionDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "maxLength": 2000,
+            "example": "Need more time for the research phase due to data access issues",
+            "description": "Reason for requesting a revision"
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      },
+      "ApproveDeliverableDto": {
+        "type": "object",
+        "properties": {
+          "rating": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5,
+            "example": 5,
+            "description": "Optional rating for the work provided"
+          },
+          "feedback": {
+            "type": "string",
+            "maxLength": 1000,
+            "example": "The deliverable meets all requirements.",
+            "description": "Optional feedback for the studio"
+          }
+        }
+      },
+      "RejectDeliverableDto": {
+        "type": "object",
+        "properties": {
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "example": "The branding colors do not match the style guide.",
+            "description": "The reason for rejection"
+          },
+          "requestedChanges": {
+            "example": [
+              "Update primary color to #FF5733",
+              "Fix alignment on header"
+            ],
+            "description": "Specific changes requested",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      }
+    }
+  }
+}
