@@ -80,7 +80,7 @@
     }
   },
   {
-    "path": "apps/web/contact/index.html",
+    "path": "apps/landing/contact-alt/index.html",
     "width": 1440,
     "dimensions": {
       "width": 1440,
@@ -88,7 +88,7 @@
     }
   },
   {
-    "path": "apps/web/contact/index.html",
+    "path": "apps/landing/contact-alt/index.html",
     "width": 390,
     "dimensions": {
       "width": 390,

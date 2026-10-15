@@ -65,22 +65,22 @@
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "width": 390,
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "width": 1440,
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "width": 390,
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "width": 1440,
       "violations": []
     },
@@ -192,7 +192,7 @@
     },
     {
       "name": "login-demo-only",
-      "url": "http://localhost:8000/apps/web/login/index.html",
+      "url": "http://localhost:8000/apps/landing/login/index.html",
       "feedback": "This prototype cannot authenticate an account. Explore the sample client dashboard"
     },
     {

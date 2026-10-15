@@ -452,7 +452,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "light",
       "width": 320,
       "scroll": 320,
@@ -461,7 +461,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "light",
       "width": 390,
       "scroll": 390,
@@ -470,7 +470,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "light",
       "width": 768,
       "scroll": 768,
@@ -479,7 +479,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "light",
       "width": 1440,
       "scroll": 1440,
@@ -488,7 +488,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "light",
       "width": 1920,
       "scroll": 1920,
@@ -497,7 +497,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "dark",
       "width": 320,
       "scroll": 320,
@@ -506,7 +506,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "dark",
       "width": 390,
       "scroll": 390,
@@ -515,7 +515,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "dark",
       "width": 768,
       "scroll": 768,
@@ -524,7 +524,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "dark",
       "width": 1440,
       "scroll": 1440,
@@ -533,7 +533,7 @@
       "images": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "dark",
       "width": 1920,
       "scroll": 1920,
@@ -664,25 +664,25 @@
       "violations": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "light",
       "width": 390,
       "violations": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "light",
       "width": 1440,
       "violations": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "dark",
       "width": 390,
       "violations": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "theme": "dark",
       "width": 1440,
       "violations": []
@@ -991,7 +991,7 @@
       }
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "early": [
         {
           "name": "nl-hero",
@@ -1120,20 +1120,20 @@
       "running": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "mode": "live-reduced",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "mode": "fresh-reduced",
       "sample": "after two committed frames",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/contact/index.html",
+      "path": "apps/landing/contact-alt/index.html",
       "mode": "no-js-normal",
       "hidden": 0,
       "running": []
@@ -1154,7 +1154,7 @@
     },
     {
       "name": "contact-handoff-destination",
-      "url": "http://localhost:8000/apps/web/contact/index.html"
+      "url": "http://localhost:8000/apps/landing/contact-alt/index.html"
     },
     {
       "name": "contact-empty-errors",
@@ -1171,7 +1171,7 @@
     },
     {
       "name": "contact-local-only-result",
-      "url": "http://localhost:8000/apps/web/contact/index.html",
+      "url": "http://localhost:8000/apps/landing/contact-alt/index.html",
       "text": "Local preview checked. No message was sent or saved. You can edit your details and check them again.",
       "focus": "contact-result"
     },

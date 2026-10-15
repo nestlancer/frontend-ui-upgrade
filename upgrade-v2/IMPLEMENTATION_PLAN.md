@@ -27,7 +27,7 @@ Warm paper, deep ink, brand teal, fine technical rules. Public pages pair editor
 1. `proto/apps/landing/index.html`: split editorial/art hero, existing preview preserved below, distinct project covers.
 2. `proto/apps/landing/services/index.html`: process artwork, semantic service cards, native existing-feature disclosure.
 3. `proto/apps/landing/pricing/index.html`: price hierarchy, primary CTA, native FAQ, working comparison links.
-4. `proto/apps/web/login/index.html`: actual labeled form, show password button, explicit demo-only submission, quiet original art.
+4. `proto/apps/landing/login/index.html`: actual labeled form, show password button, explicit demo-only submission, quiet original art.
 5. `proto/apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html`: preserve conflicting fixtures visibly, money wrap, local action dialogs with no backend claims.
 Then portfolio landing and client projects to advance other lanes. Remaining routes stay NOT_STARTED, even when inheriting shared token/runtime changes.
 

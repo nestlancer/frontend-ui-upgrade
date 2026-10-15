@@ -80,7 +80,7 @@ for sec in s.select('main > section'):
  if 'mkt-section' in sec.get('class',[]): sec['data-section-reveal']=''
 save(p,s)
 # Login — whole form wraps actual fields, no credential transmission.
-p,s,rel=load('proto/apps/web/login/index.html','auth-v2'); s.body['data-page']='login'
+p,s,rel=load('proto/apps/landing/login/index.html','auth-v2'); s.body['data-page']='login'
 main=s.select_one('main'); start=main.select_one('.field'); oldform=main.select_one('form'); form=s.new_tag('form',attrs={'action':oldform['action'],'method':'get','data-demo-login':'','aria-describedby':'login-note'})
 start.insert_before(form)
 node=start

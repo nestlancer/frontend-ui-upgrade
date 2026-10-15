@@ -302,7 +302,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "light",
       "width": 390,
       "scroll": 390,
@@ -312,7 +312,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "light",
       "width": 1440,
       "scroll": 1440,
@@ -322,7 +322,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "dark",
       "width": 390,
       "scroll": 390,
@@ -332,7 +332,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "dark",
       "width": 1440,
       "scroll": 1440,
@@ -1563,7 +1563,7 @@
       }
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "early": [
         {
           "name": "nl-head",
@@ -3888,7 +3888,7 @@
     },
     {
       "name": "login-demo-only",
-      "url": "http://localhost:8000/apps/web/login/index.html",
+      "url": "http://localhost:8000/apps/landing/login/index.html",
       "feedback": "This prototype cannot authenticate an account. Explore the sample client dashboard"
     },
     {
@@ -4001,25 +4001,25 @@
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "light",
       "width": 390,
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "light",
       "width": 1440,
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "dark",
       "width": 390,
       "violations": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "theme": "dark",
       "width": 1440,
       "violations": []
@@ -4178,19 +4178,19 @@
       "running": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "mode": "live-reduced",
       "hiddenEssential": 0,
       "running": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "mode": "fresh-reduced",
       "hiddenEssential": 0,
       "running": []
     },
     {
-      "path": "apps/web/login/index.html",
+      "path": "apps/landing/login/index.html",
       "mode": "no-js",
       "hiddenEssential": 0,
       "running": []

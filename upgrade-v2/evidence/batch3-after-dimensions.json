@@ -1,6 +1,6 @@
 [
   {
-    "path": "apps/web/blog/index.html",
+    "path": "apps/landing/blog/index.html",
     "width": 1440,
     "captureMode": "full-page",
     "dimensions": {
@@ -9,7 +9,7 @@
     }
   },
   {
-    "path": "apps/web/blog/index.html",
+    "path": "apps/landing/blog/index.html",
     "width": 390,
     "captureMode": "full-page",
     "dimensions": {
@@ -18,7 +18,7 @@
     }
   },
   {
-    "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+    "path": "apps/landing/blog/[slug]/index.html",
     "width": 1440,
     "captureMode": "full-page",
     "dimensions": {
@@ -27,7 +27,7 @@
     }
   },
   {
-    "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+    "path": "apps/landing/blog/[slug]/index.html",
     "width": 390,
     "captureMode": "stitched-viewport; settled reduced motion; sticky chrome first tile only",
     "dimensions": {
@@ -36,7 +36,7 @@
     }
   },
   {
-    "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+    "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
     "width": 1440,
     "captureMode": "full-page",
     "dimensions": {
@@ -45,7 +45,7 @@
     }
   },
   {
-    "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+    "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
     "width": 390,
     "captureMode": "full-page",
     "dimensions": {

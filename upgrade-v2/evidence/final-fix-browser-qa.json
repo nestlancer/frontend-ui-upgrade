@@ -2,7 +2,7 @@
  "browser": "HeadlessChrome/153.0.8010.0",
  "pages": [
   {
-   "path": "apps/web/forgot-password/index.html",
+   "path": "apps/landing/forgot-password/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -98,7 +98,7 @@
    }
   },
   {
-   "path": "apps/web/register/index.html",
+   "path": "apps/landing/register/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -188,7 +188,7 @@
    }
   },
   {
-   "path": "apps/web/reset-password/index.html",
+   "path": "apps/landing/reset-password/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -283,7 +283,7 @@
    }
   },
   {
-   "path": "apps/web/verify-email/index.html",
+   "path": "apps/landing/verify-email/index.html",
    "layouts": [
     {
      "theme": "light",

@@ -204,21 +204,21 @@ Full 181-row machine table: `RANKING_REPORT.csv` (same order). `Gap` = S_shot �
 | 64 | clients | `Nestlancer-clients-screenshots/clients/041-new-request-form.webp` | `proto/apps/web/requests/new/index.html` | exact · VERIFIED | 77 | C | 76 | C | A (93.2) | +1 | Reads as generic AI SaaS template | P2 (S) |
 | 65 | admin | `Nestlancer-admin-screenshots/admin/028-moderation-history.webp` | `proto/apps/admin/moderation/index.html` | exact · VERIFIED | 78 | C | 76 | C | A (91.9) | +2 | Reads as generic AI SaaS template | P2 (S) |
 | 66 | admin | `Nestlancer-admin-screenshots/admin/050-portfolio-new.webp` | `proto/apps/admin/portfolio/new/index.html` | exact · VERIFIED | 79 | C | 76 | C | A (94.1) | +3 | Reads as generic AI SaaS template | P2 (S) |
-| 67 | public | `Nestlancer-public-screenshots/public/004-contact.webp` | `proto/apps/web/contact/index.html` | exact · VERIFIED | 79 | C | 76 | C | A (95.3) | +3 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
-| 68 | public | `Nestlancer-public-screenshots/public/005-forgot-password.webp` | `proto/apps/web/forgot-password/index.html` | exact · VERIFIED | 83 | B | 76 | C | A (96.7) | +7 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
-| 69 | public | `Nestlancer-public-screenshots/public/010-register.webp` | `proto/apps/web/register/index.html` | exact · VERIFIED | 83 | B | 76 | C | A (96.7) | +7 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
-| 70 | public | `Nestlancer-public-screenshots/public/006-login.webp` | `proto/apps/web/login/index.html` | exact · VERIFIED | 86 | B | 76 | C | A (96.8) | +10 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
+| 67 | public | `Nestlancer-public-screenshots/public/004-contact.webp` | `proto/apps/landing/contact-alt/index.html` | exact · VERIFIED | 79 | C | 76 | C | A (95.3) | +3 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
+| 68 | public | `Nestlancer-public-screenshots/public/005-forgot-password.webp` | `proto/apps/landing/forgot-password/index.html` | exact · VERIFIED | 83 | B | 76 | C | A (96.7) | +7 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
+| 69 | public | `Nestlancer-public-screenshots/public/010-register.webp` | `proto/apps/landing/register/index.html` | exact · VERIFIED | 83 | B | 76 | C | A (96.7) | +7 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
+| 70 | public | `Nestlancer-public-screenshots/public/006-login.webp` | `proto/apps/landing/login/index.html` | exact · VERIFIED | 86 | B | 76 | C | A (96.8) | +10 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
 | 71 | clients | `Nestlancer-clients-screenshots/clients/007-messages-thread-details.webp` | `proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html` | exact · VERIFIED | 75 | C | 77 | C | A (94.4) | -2 | Reads as generic AI SaaS template | P2 (M) |
 | 72 | clients | `Nestlancer-clients-screenshots/clients/040-messages-reply-composer.webp` | `proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html` | exact · VERIFIED | 75 | C | 77 | C | A (94.0) | -2 | Reads as generic AI SaaS template | P2 (M) |
-| 73 | public | `Nestlancer-public-screenshots/public/009-privacy.webp` | `proto/apps/web/privacy/index.html` | exact · VERIFIED | 76 | C | 77 | C | A (97.5) | -1 | Reads as generic AI SaaS template | P2 (S) |
-| 74 | public | `Nestlancer-public-screenshots/public/011-terms.webp` | `proto/apps/web/terms/index.html` | exact · VERIFIED | 76 | C | 77 | C | A (98.3) | -1 | Reads as generic AI SaaS template | P2 (S) |
+| 73 | public | `Nestlancer-public-screenshots/public/009-privacy.webp` | `proto/apps/landing/privacy/index.html` | exact · VERIFIED | 76 | C | 77 | C | A (97.5) | -1 | Reads as generic AI SaaS template | P2 (S) |
+| 74 | public | `Nestlancer-public-screenshots/public/011-terms.webp` | `proto/apps/landing/terms/index.html` | exact · VERIFIED | 76 | C | 77 | C | A (98.3) | -1 | Reads as generic AI SaaS template | P2 (S) |
 | 75 | clients | `Nestlancer-clients-screenshots/clients/038-messages-edit-message-form.webp` | `proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html` | exact · VERIFIED | 77 | C | 77 | C | A (93.2) | +0 | Reads as generic AI SaaS template | P2 (M) |
 | 76 | admin | `Nestlancer-admin-screenshots/admin/027-moderation.webp` | `proto/apps/admin/moderation/index.html` | exact · VERIFIED | 78 | C | 77 | C | A (93.0) | +1 | Reads as generic AI SaaS template | P2 (S) |
 | 77 | admin | `Nestlancer-admin-screenshots/admin/037-payments-awaiting-verification.webp` | `proto/apps/admin/payments/index.html` | exact · VERIFIED | 78 | C | 77 | C | A (91.1) | +1 | Reads as generic AI SaaS template | P2 (S) |
 | 78 | admin | `Nestlancer-admin-screenshots/admin/047-pipeline-users.webp` | `proto/apps/admin/pipeline/users/index.html` | exact · VERIFIED | 80 | B | 77 | C | A (94.1) | +3 | Reads as generic AI SaaS template | P2 (L) |
 | 79 | admin | `Nestlancer-admin-screenshots/admin/066-blog-editor-new-post-form.webp` | `proto/apps/admin/content/posts/new/index.html` | exact · VERIFIED | 80 | B | 77 | C | A (95.2) | +3 | Motion is entrance-only; no signature micro-interaction | P2 (L) |
 | 80 | clients | `Nestlancer-clients-screenshots/clients/008-notifications.webp` | `proto/apps/web/notifications/index.html` | exact · VERIFIED | 80 | B | 77 | C | A (94.5) | +3 | Reads as generic AI SaaS template | P2 (S) |
-| 81 | public | `Nestlancer-public-screenshots/public/001-admin-login.webp` | `proto/apps/admin/login/index.html` | exact · VERIFIED | 85 | B | 77 | C | A (95.1) | +8 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
+| 81 | public | `Nestlancer-public-screenshots/public/001-admin-login.webp` | `proto/apps/landing/admin-login/index.html` | exact · VERIFIED | 85 | B | 77 | C | A (95.1) | +8 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
 | 82 | clients | `Nestlancer-clients-screenshots/clients/043-project-files-document-preview-dialog.webp` | `proto/apps/web/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8/index.html` | exact · VERIFIED | 69 | D | 78 | C | B (89.5) | -9 | Reads as generic AI SaaS template | P2 (S) |
 | 83 | admin | `Nestlancer-admin-screenshots/admin/067-blog-editor-preview-mode.webp` | `proto/apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html` | exact · VERIFIED | 75 | C | 78 | C | A (91.5) | -3 | Reads as generic AI SaaS template | P2 (S) |
 | 84 | admin | `Nestlancer-admin-screenshots/admin/068-blog-editor-split-mode.webp` | `proto/apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html` | exact · VERIFIED | 75 | C | 78 | C | A (94.1) | -3 | Reads as generic AI SaaS template | P2 (S) |
@@ -249,8 +249,8 @@ Full 181-row machine table: `RANKING_REPORT.csv` (same order). `Gap` = S_shot �
 | 109 | admin | `Nestlancer-admin-screenshots/admin/045-pipeline-projects.webp` | `proto/apps/admin/pipeline/projects/index.html` | exact · VERIFIED | 80 | B | 78 | C | A (95.4) | +2 | Reads as generic AI SaaS template | P2 (L) |
 | 110 | admin | `Nestlancer-admin-screenshots/admin/095-quote-builder-pricing-and-schedule.webp` | `proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html` | exact · VERIFIED | 80 | B | 78 | C | A (94.0) | +2 | Motion is entrance-only; no signature micro-interaction | P2 (L) |
 | 111 | admin | `Nestlancer-admin-screenshots/admin/096-quote-builder-terms-and-review.webp` | `proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html` | exact · VERIFIED | 80 | B | 78 | C | A (94.0) | +2 | Motion is entrance-only; no signature micro-interaction | P2 (L) |
-| 112 | public | `Nestlancer-public-screenshots/public/002-blog-listing.webp` | `proto/apps/web/blog/index.html` | exact · VERIFIED | 81 | B | 78 | C | A (91.5) | +3 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
-| 113 | public | `Nestlancer-public-screenshots/public/012-verify-document.webp` | `proto/apps/web/verify-document/index.html` | exact · VERIFIED | 83 | B | 78 | C | A (93.0) | +5 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
+| 112 | public | `Nestlancer-public-screenshots/public/002-blog-listing.webp` | `proto/apps/landing/blog/index.html` | exact · VERIFIED | 81 | B | 78 | C | A (91.5) | +3 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
+| 113 | public | `Nestlancer-public-screenshots/public/012-verify-document.webp` | `proto/apps/landing/verify-document/index.html` | exact · VERIFIED | 83 | B | 78 | C | A (93.0) | +5 | Motion is entrance-only; no signature micro-interaction | P2 (S) |
 | 114 | clients | `Nestlancer-clients-screenshots/clients/044-quote-awaiting-acceptance-and-signature.webp` | `proto/apps/web/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html` | exact · VERIFIED | 75 | C | 79 | C | A (97.1) | -4 | Reads as generic AI SaaS template | P2 (S) |
 | 115 | clients | `Nestlancer-clients-screenshots/clients/022-quotes-details.webp` | `proto/apps/web/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html` | exact · VERIFIED | 76 | C | 79 | C | A (98.2) | -3 | Reads as generic AI SaaS template | P2 (M) |
 | 116 | admin | `Nestlancer-admin-screenshots/admin/085-project-delivery-upload-deliverable-form.webp` | `proto/apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html` | exact · VERIFIED | 77 | C | 79 | C | A (90.7) | -2 | Reads as generic AI SaaS template | P2 (M) |
@@ -282,7 +282,7 @@ Full 181-row machine table: `RANKING_REPORT.csv` (same order). `Gap` = S_shot �
 | 142 | admin | `Nestlancer-admin-screenshots/admin/048-portfolio-listing.webp` | `proto/apps/admin/portfolio/index.html` | exact · VERIFIED | 80 | B | 79 | C | A (96.3) | +1 | Reads as generic AI SaaS template | P2 (S) |
 | 143 | admin | `Nestlancer-admin-screenshots/admin/065-audit-logs-overview.webp` | `proto/apps/admin/audit/index.html` | exact · VERIFIED | 80 | B | 79 | C | A (92.4) | +1 | Reads as generic AI SaaS template | P2 (S) |
 | 144 | admin | `Nestlancer-admin-screenshots/admin/071-content-card-view.webp` | `proto/apps/admin/content/index.html` | exact · VERIFIED | 80 | B | 79 | C | A (93.5) | +1 | Reads as generic AI SaaS template | P2 (S) |
-| 145 | public | `Nestlancer-public-screenshots/public/007-portfolio-listing.webp` | `proto/apps/web/portfolio/index.html` | exact · VERIFIED | 81 | B | 79 | C | A (95.0) | +2 | Reads as generic AI SaaS template | P2 (S) |
+| 145 | public | `Nestlancer-public-screenshots/public/007-portfolio-listing.webp` | `proto/apps/landing/portfolio/index.html` | exact · VERIFIED | 81 | B | 79 | C | A (95.0) | +2 | Reads as generic AI SaaS template | P2 (S) |
 | 146 | public | `Nestlancer-public-screenshots/public/015-marketing-contact.webp` | `proto/apps/landing/contact/index.html` | exact · VERIFIED | 83 | B | 79 | C | A (96.3) | +4 | Motion is entrance-only; no signature micro-interaction | P2 (M) |
 | 147 | public | `Nestlancer-public-screenshots/public/017-marketing-services.webp` | `proto/apps/landing/services/index.html` | exact · VERIFIED | 83 | B | 79 | C | A (95.5) | +4 | Components lack full states (empty/loading/focus/selected) | P2 (M) |
 | 148 | admin | `Nestlancer-admin-screenshots/admin/105-system-loaded-diagnostics.webp` | `proto/apps/admin/system/index.html` | exact · VERIFIED | 68 | D | 80 | B | A (95.4) | -12 | Raw JSON diagnostics with zero human-readable health summary | P3 (L) |
@@ -304,8 +304,8 @@ Full 181-row machine table: `RANKING_REPORT.csv` (same order). `Gap` = S_shot �
 | 164 | admin | `Nestlancer-admin-screenshots/admin/063-system-templates.webp` | `proto/apps/admin/system/index.html` | exact · VERIFIED | 80 | B | 80 | B | A (94.8) | +0 | Reads as generic AI SaaS template | P3 (L) |
 | 165 | admin | `Nestlancer-admin-screenshots/admin/086-project-details-analytics.webp` | `proto/apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html` | exact · VERIFIED | 80 | B | 80 | B | A (92.7) | +0 | Reads as generic AI SaaS template | P3 (L) |
 | 166 | admin | `Nestlancer-admin-screenshots/admin/104-system-configuration.webp` | `proto/apps/admin/system/index.html` | exact · VERIFIED-STATE | 80 | B | 80 | B | A (95.4) | +0 | Reads as generic AI SaaS template | P3 (L) |
-| 167 | public | `Nestlancer-public-screenshots/public/003-blog-article.webp` | `proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html` | exact · VERIFIED | 81 | B | 80 | B | A (97.4) | +1 | Reads as generic AI SaaS template | P3 (M) |
-| 168 | public | `Nestlancer-public-screenshots/public/008-portfolio-case-study.webp` | `proto/apps/web/portfolio/fintech-payments-hub/index.html` | exact · VERIFIED | 81 | B | 80 | B | A (97.4) | +1 | Reads as generic AI SaaS template | P3 (S) |
+| 167 | public | `Nestlancer-public-screenshots/public/003-blog-article.webp` | `proto/apps/landing/blog/[slug]/index.html` | exact · VERIFIED | 81 | B | 80 | B | A (97.4) | +1 | Reads as generic AI SaaS template | P3 (M) |
+| 168 | public | `Nestlancer-public-screenshots/public/008-portfolio-case-study.webp` | `proto/apps/landing/portfolio/fintech-payments-hub/index.html` | exact · VERIFIED | 81 | B | 80 | B | A (97.4) | +1 | Reads as generic AI SaaS template | P3 (S) |
 | 169 | admin | `Nestlancer-admin-screenshots/admin/115-user-pipeline-payments.webp` | `proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html` | exact · VERIFIED | 82 | B | 80 | B | A (93.3) | +2 | Reads as generic AI SaaS template | P3 (L) |
 | 170 | admin | `Nestlancer-admin-screenshots/admin/116-user-pipeline-projects.webp` | `proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html` | exact · VERIFIED | 82 | B | 80 | B | A (93.7) | +2 | Reads as generic AI SaaS template | P3 (L) |
 | 171 | admin | `Nestlancer-admin-screenshots/admin/117-user-pipeline-quotes.webp` | `proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html` | exact · VERIFIED | 82 | B | 80 | B | A (93.3) | +2 | Reads as generic AI SaaS template | P3 (L) |
@@ -1265,7 +1265,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 67] `Nestlancer-public-screenshots/public/004-contact.webp`
-- Proto: `proto/apps/web/contact/index.html` · Match **exact** · Prior A (95.3) → now **76 C** (shot 79 C, gap +3) · Batch **P2** · Effort **S** · Type: content · Screenshot 2880×2756, near-white 87%
+- Proto: `proto/apps/landing/contact-alt/index.html` · Match **exact** · Prior A (95.3) → now **76 C** (shot 79 C, gap +3) · Batch **P2** · Effort **S** · Type: content · Screenshot 2880×2756, near-white 87%
 - Verification: **VERIFIED** — Kept. Same route/page (derived-URL check); audit-note paraphrase lowers keyword overlap, headings/route/anchors hold. (anchors: coverage 47.6% · amounts — · quoted — · keywords 0.48 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 78 · F 80 · Ty 76 · Br 75 · Mo 60 · R 86 · Ac 88 · Co 61 · Cr 68.
 - What’s wrong (evidence): Proto 185 words · h1×1 h2×2 (sections 2) · panels 3 tables 0 · reveal/anim 1/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Motion is entrance-only; no signature micro-interaction. Second: Components lack full states (empty/loading/focus/selected) (dim components 61). Screenshot mods: archetype baseline.
@@ -1279,7 +1279,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 68] `Nestlancer-public-screenshots/public/005-forgot-password.webp`
-- Proto: `proto/apps/web/forgot-password/index.html` · Match **exact** · Prior A (96.7) → now **76 C** (shot 83 B, gap +7) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 54%
+- Proto: `proto/apps/landing/forgot-password/index.html` · Match **exact** · Prior A (96.7) → now **76 C** (shot 83 B, gap +7) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 54%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 62.5% · amounts — · quoted 0.5 · keywords 0.81 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 76 · F 79 · Ty 75 · Br 80 · Mo 60 · R 86 · Ac 88 · Co 62 · Cr 74.
 - What’s wrong (evidence): Proto 216 words · h1×1 h2×1 (sections 1) · panels 0 tables 0 · reveal/anim 0/2 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Motion is entrance-only; no signature micro-interaction. Second: Components lack full states (empty/loading/focus/selected) (dim components 62). Screenshot mods: archetype baseline.
@@ -1293,7 +1293,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 69] `Nestlancer-public-screenshots/public/010-register.webp`
-- Proto: `proto/apps/web/register/index.html` · Match **exact** · Prior A (96.7) → now **76 C** (shot 83 B, gap +7) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 51%
+- Proto: `proto/apps/landing/register/index.html` · Match **exact** · Prior A (96.7) → now **76 C** (shot 83 B, gap +7) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 51%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 98.3% · amounts — · quoted 1.0 · keywords 0.96 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 76 · F 79 · Ty 75 · Br 80 · Mo 60 · R 86 · Ac 88 · Co 62 · Cr 74.
 - What’s wrong (evidence): Proto 233 words · h1×1 h2×1 (sections 1) · panels 0 tables 0 · reveal/anim 0/2 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Motion is entrance-only; no signature micro-interaction. Second: Components lack full states (empty/loading/focus/selected) (dim components 62). Screenshot mods: archetype baseline.
@@ -1307,7 +1307,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 70] `Nestlancer-public-screenshots/public/006-login.webp`
-- Proto: `proto/apps/web/login/index.html` · Match **exact** · Prior A (96.8) → now **76 C** (shot 86 B, gap +10) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 53%
+- Proto: `proto/apps/landing/login/index.html` · Match **exact** · Prior A (96.8) → now **76 C** (shot 86 B, gap +10) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 53%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 100.0% · amounts — · quoted — · keywords 1.0 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 76 · F 79 · Ty 75 · Br 80 · Mo 60 · R 86 · Ac 88 · Co 62 · Cr 74.
 - What’s wrong (evidence): Proto 219 words · h1×1 h2×1 (sections 1) · panels 0 tables 0 · reveal/anim 0/2 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Motion is entrance-only; no signature micro-interaction. Second: Components lack full states (empty/loading/focus/selected) (dim components 62). Screenshot mods: manual dual-view +3.
@@ -1349,7 +1349,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **M**.
 
 ### [Rank 73] `Nestlancer-public-screenshots/public/009-privacy.webp`
-- Proto: `proto/apps/web/privacy/index.html` · Match **exact** · Prior A (97.5) → now **77 C** (shot 76 C, gap -1) · Batch **P2** · Effort **S** · Type: legal · Screenshot 2880×5954, near-white 90%
+- Proto: `proto/apps/landing/privacy/index.html` · Match **exact** · Prior A (97.5) → now **77 C** (shot 76 C, gap -1) · Batch **P2** · Effort **S** · Type: legal · Screenshot 2880×5954, near-white 90%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 65.0% · amounts — · quoted — · keywords 0.65 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 80 · F 84 · Ty 76 · Br 69 · Mo 69 · R 86 · Ac 88 · Co 66 · Cr 60.
 - What’s wrong (evidence): Proto 456 words · h1×1 h2×7 (sections 7) · panels 1 tables 1 · reveal/anim 5/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Reads as generic AI SaaS template. Second: Components lack full states (empty/loading/focus/selected) (dim components 66). Screenshot mods: tall rich page +2.
@@ -1363,7 +1363,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 74] `Nestlancer-public-screenshots/public/011-terms.webp`
-- Proto: `proto/apps/web/terms/index.html` · Match **exact** · Prior A (98.3) → now **77 C** (shot 76 C, gap -1) · Batch **P2** · Effort **S** · Type: legal · Screenshot 2880×5898, near-white 88%
+- Proto: `proto/apps/landing/terms/index.html` · Match **exact** · Prior A (98.3) → now **77 C** (shot 76 C, gap -1) · Batch **P2** · Effort **S** · Type: legal · Screenshot 2880×5898, near-white 88%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 69.7% · amounts — · quoted — · keywords 0.7 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 80 · F 85 · Ty 76 · Br 69 · Mo 69 · R 86 · Ac 88 · Co 66 · Cr 60.
 - What’s wrong (evidence): Proto 494 words · h1×1 h2×9 (sections 9) · panels 1 tables 1 · reveal/anim 5/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Reads as generic AI SaaS template. Second: Components lack full states (empty/loading/focus/selected) (dim components 66). Screenshot mods: tall rich page +2.
@@ -1461,7 +1461,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 81] `Nestlancer-public-screenshots/public/001-admin-login.webp`
-- Proto: `proto/apps/admin/login/index.html` · Match **exact** · Prior A (95.1) → now **77 C** (shot 85 B, gap +8) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2134, near-white 22%
+- Proto: `proto/apps/landing/admin-login/index.html` · Match **exact** · Prior A (95.1) → now **77 C** (shot 85 B, gap +8) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2134, near-white 22%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 97.4% · amounts — · quoted 1.0 · keywords 0.93 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 78 · F 81 · Ty 75 · Br 77 · Mo 54 · R 86 · Ac 88 · Co 74 · Cr 72.
 - What’s wrong (evidence): Proto 251 words · h1×1 h2×2 (sections 2) · panels 5 tables 0 · reveal/anim 0/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Motion is entrance-only; no signature micro-interaction. Second: Reads as generic AI SaaS template (dim creativity 72). Screenshot mods: manual dual-view +2.
@@ -1911,7 +1911,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **L**.
 
 ### [Rank 112] `Nestlancer-public-screenshots/public/002-blog-listing.webp`
-- Proto: `proto/apps/web/blog/index.html` · Match **exact** · Prior A (91.5) → now **78 C** (shot 81 B, gap +3) · Batch **P2** · Effort **S** · Type: content · Screenshot 2880×7648, near-white 72%
+- Proto: `proto/apps/landing/blog/index.html` · Match **exact** · Prior A (91.5) → now **78 C** (shot 81 B, gap +3) · Batch **P2** · Effort **S** · Type: content · Screenshot 2880×7648, near-white 72%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 93.9% · amounts — · quoted 1.0 · keywords 0.85 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 80 · F 83 · Ty 74 · Br 75 · Mo 68 · R 86 · Ac 88 · Co 75 · Cr 68.
 - What’s wrong (evidence): Proto 362 words · h1×1 h2×3 (sections 3) · panels 11 tables 0 · reveal/anim 2/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Motion is entrance-only; no signature micro-interaction. Second: Reads as generic AI SaaS template (dim creativity 68). Screenshot mods: tall rich page +2.
@@ -1925,7 +1925,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 113] `Nestlancer-public-screenshots/public/012-verify-document.webp`
-- Proto: `proto/apps/web/verify-document/index.html` · Match **exact** · Prior A (93.0) → now **78 C** (shot 83 B, gap +5) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 91%
+- Proto: `proto/apps/landing/verify-document/index.html` · Match **exact** · Prior A (93.0) → now **78 C** (shot 83 B, gap +5) · Batch **P2** · Effort **S** · Type: auth · Screenshot 2880×2000, near-white 91%
 - Verification: **VERIFIED** — Kept. Route/page identity holds (derived-URL check + headings); anchor overlap is low because proto data is summarised vs the screenshot record — template graded, data fidelity noted in card. (anchors: coverage 19.0% · amounts — · quoted 0.0 · keywords 0.48 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 76 · F 79 · Ty 75 · Br 80 · Mo 70 · R 86 · Ac 88 · Co 71 · Cr 74.
 - What’s wrong (evidence): Proto 253 words · h1×1 h2×1 (sections 1) · panels 5 tables 0 · reveal/anim 3/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Motion is entrance-only; no signature micro-interaction. Second: Components lack full states (empty/loading/focus/selected) (dim components 71). Screenshot mods: archetype baseline.
@@ -2373,7 +2373,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **S**.
 
 ### [Rank 145] `Nestlancer-public-screenshots/public/007-portfolio-listing.webp`
-- Proto: `proto/apps/web/portfolio/index.html` · Match **exact** · Prior A (95.0) → now **79 C** (shot 81 B, gap +2) · Batch **P2** · Effort **S** · Type: content · Screenshot 2880×11740, near-white 77%
+- Proto: `proto/apps/landing/portfolio/index.html` · Match **exact** · Prior A (95.0) → now **79 C** (shot 81 B, gap +2) · Batch **P2** · Effort **S** · Type: content · Screenshot 2880×11740, near-white 77%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 69.2% · amounts — · quoted 0.5 · keywords 0.98 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 80 · F 85 · Ty 74 · Br 75 · Mo 71 · R 86 · Ac 88 · Co 78 · Cr 68.
 - What’s wrong (evidence): Proto 397 words · h1×1 h2×2 (sections 8) · panels 9 tables 0 · reveal/anim 6/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Reads as generic AI SaaS template. Second: Motion is entrance-only; no signature micro-interaction (dim motion 71). Screenshot mods: tall rich page +2.
@@ -2681,7 +2681,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **L**.
 
 ### [Rank 167] `Nestlancer-public-screenshots/public/003-blog-article.webp`
-- Proto: `proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html` · Match **exact** · Prior A (97.4) → now **80 B** (shot 81 B, gap +1) · Batch **P3** · Effort **M** · Type: content · Screenshot 2880×11936, near-white 82%
+- Proto: `proto/apps/landing/blog/[slug]/index.html` · Match **exact** · Prior A (97.4) → now **80 B** (shot 81 B, gap +1) · Batch **P3** · Effort **M** · Type: content · Screenshot 2880×11936, near-white 82%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 99.1% · amounts — · quoted 1.0 · keywords 0.98 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 80 · F 87 · Ty 75 · Br 75 · Mo 74 · R 86 · Ac 88 · Co 78 · Cr 68.
 - What’s wrong (evidence): Proto 821 words · h1×1 h2×13 (sections 13) · panels 9 tables 0 · reveal/anim 9/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Reads as generic AI SaaS template. Second: Motion is entrance-only; no signature micro-interaction (dim motion 74). Screenshot mods: tall rich page +2.
@@ -2695,7 +2695,7 @@ Cards are worst-first (same rank as §3/CSV). “What to change” is written fo
 - Exit check for A+: re-render 1440+390 (no overflow, CTA above fold, h2 scan ≤3s), one signature interaction, reduced-motion clean, §0 tokens (ink-4 fix) applied. Estimated effort: **M**.
 
 ### [Rank 168] `Nestlancer-public-screenshots/public/008-portfolio-case-study.webp`
-- Proto: `proto/apps/web/portfolio/fintech-payments-hub/index.html` · Match **exact** · Prior A (97.4) → now **80 B** (shot 81 B, gap +1) · Batch **P3** · Effort **S** · Type: content · Screenshot 2880×4812, near-white 67%
+- Proto: `proto/apps/landing/portfolio/fintech-payments-hub/index.html` · Match **exact** · Prior A (97.4) → now **80 B** (shot 81 B, gap +1) · Batch **P3** · Effort **S** · Type: content · Screenshot 2880×4812, near-white 67%
 - Verification: **VERIFIED** — Kept. Route + identity anchors (amounts/quoted strings/keywords) agree. (anchors: coverage 98.5% · amounts — · quoted 1.0 · keywords 0.96 · route same-file)
 - Scores → target A+ (≥95). Dims (H/F/Ty/Br/Mo/R/Ac/Co/Cr): H 80 · F 86 · Ty 75 · Br 75 · Mo 74 · R 86 · Ac 86 · Co 76 · Cr 68.
 - What’s wrong (evidence): Proto 304 words · h1×1 h2×4 (sections 4) · panels 7 tables 0 · reveal/anim 8/1 · tabs 0 dialogs/native 0 surfaces 0. Blocker: Reads as generic AI SaaS template. Second: Motion is entrance-only; no signature micro-interaction (dim motion 74). Screenshot mods: tall rich page +2.

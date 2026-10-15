@@ -211,7 +211,7 @@
       ]
     },
     {
-      "path": "proto/apps/admin/login/index.html",
+      "path": "proto/apps/landing/admin-login/index.html",
       "widths": [
         {
           "width": 390,
@@ -1666,7 +1666,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/about/index.html",
+      "path": "proto/apps/landing/about/index.html",
       "widths": [
         {
           "width": 390,
@@ -1681,7 +1681,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/blog/[slug]/index.html",
+      "path": "proto/apps/landing/blog/[slug]/index.html",
       "widths": [
         {
           "width": 390,
@@ -1696,7 +1696,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/blog/bookmarks/index.html",
+      "path": "proto/apps/landing/blog/index.html",
       "widths": [
         {
           "width": 390,
@@ -1711,7 +1711,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/blog/category/[slug]/index.html",
+      "path": "proto/apps/landing/blog/index.html",
       "widths": [
         {
           "width": 390,
@@ -1726,7 +1726,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "proto/apps/landing/blog/[slug]/index.html",
       "widths": [
         {
           "width": 390,
@@ -1741,7 +1741,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/blog/index.html",
+      "path": "proto/apps/landing/blog/index.html",
       "widths": [
         {
           "width": 390,
@@ -1756,7 +1756,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/blog/tag/[slug]/index.html",
+      "path": "proto/apps/landing/blog/index.html",
       "widths": [
         {
           "width": 390,
@@ -1771,7 +1771,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/contact/index.html",
+      "path": "proto/apps/landing/contact-alt/index.html",
       "widths": [
         {
           "width": 390,
@@ -1801,7 +1801,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/forgot-password/index.html",
+      "path": "proto/apps/landing/forgot-password/index.html",
       "widths": [
         {
           "width": 390,
@@ -1831,7 +1831,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/index.html",
+      "path": "proto/apps/landing/index.html",
       "widths": [
         {
           "width": 390,
@@ -1891,7 +1891,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/login/index.html",
+      "path": "proto/apps/landing/login/index.html",
       "widths": [
         {
           "width": 390,
@@ -2191,7 +2191,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/portfolio/[id]/index.html",
+      "path": "proto/apps/landing/portfolio/[id]/index.html",
       "widths": [
         {
           "width": 390,
@@ -2206,7 +2206,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "proto/apps/landing/portfolio/fintech-payments-hub/index.html",
       "widths": [
         {
           "width": 390,
@@ -2221,7 +2221,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/portfolio/index.html",
+      "path": "proto/apps/landing/portfolio/index.html",
       "widths": [
         {
           "width": 390,
@@ -2236,7 +2236,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/privacy/index.html",
+      "path": "proto/apps/landing/privacy/index.html",
       "widths": [
         {
           "width": 390,
@@ -2476,7 +2476,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/register/index.html",
+      "path": "proto/apps/landing/register/index.html",
       "widths": [
         {
           "width": 390,
@@ -2581,7 +2581,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/reset-password/index.html",
+      "path": "proto/apps/landing/reset-password/index.html",
       "widths": [
         {
           "width": 390,
@@ -2731,7 +2731,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/terms/index.html",
+      "path": "proto/apps/landing/terms/index.html",
       "widths": [
         {
           "width": 390,
@@ -2746,7 +2746,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/verify/index.html",
+      "path": "proto/apps/landing/verify/index.html",
       "widths": [
         {
           "width": 390,
@@ -2761,7 +2761,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/verify-document/index.html",
+      "path": "proto/apps/landing/verify-document/index.html",
       "widths": [
         {
           "width": 390,
@@ -2776,7 +2776,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/verify-email/index.html",
+      "path": "proto/apps/landing/verify-email/index.html",
       "widths": [
         {
           "width": 390,
@@ -2791,7 +2791,7 @@
       ]
     },
     {
-      "path": "proto/apps/web/work/index.html",
+      "path": "proto/apps/landing/portfolio/index.html",
       "widths": [
         {
           "width": 390,

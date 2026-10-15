@@ -1,6 +1,6 @@
 [
  {
-  "path": "apps/web/forgot-password/index.html",
+  "path": "apps/landing/forgot-password/index.html",
   "f": [
    "axe@light1440:region(.brand > span, .text-center.text-sm.dim)",
    "axe@dark390:region(.brand > span, .text-center.text-sm.dim)"
@@ -13,21 +13,21 @@
   ]
  },
  {
-  "path": "apps/web/register/index.html",
+  "path": "apps/landing/register/index.html",
   "f": [
    "axe@light1440:region(.brand > span, .text-center.text-sm.dim)",
    "axe@dark390:region(.brand > span, .text-center.text-sm.dim)"
   ]
  },
  {
-  "path": "apps/web/reset-password/index.html",
+  "path": "apps/landing/reset-password/index.html",
   "f": [
    "axe@light1440:region(.brand > span, .text-center.dim.text-sm)",
    "axe@dark390:region(.brand > span, .text-center.dim.text-sm)"
   ]
  },
  {
-  "path": "apps/web/verify-email/index.html",
+  "path": "apps/landing/verify-email/index.html",
   "f": [
    "axe@light1440:region(.brand > span, .text-sm.dim.text-center)",
    "axe@dark390:region(.brand > span, .text-sm.dim.text-center)"

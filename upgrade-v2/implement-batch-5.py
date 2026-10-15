@@ -130,7 +130,7 @@ SIGNUP = ['Account', 'Verify email', 'Workspace']
 RESET = ['Request link', 'New password', 'Sign in']
 
 # REGISTER — the original action (verify-email) is retained as the next step.
-p, s, rel = setup('web/register', 'auth-v2', 'register')
+p, s, rel = setup('landing/register', 'auth-v2', 'register')
 form = wrap_auth_form(s, 'Prototype only: no account was created and nothing was sent.', 'Continue to the sample email verification step', 'register-note')
 require_marked(form)
 s.find(id='nl-password')['autocomplete'] = 'new-password'
@@ -150,7 +150,7 @@ auth_rail(s, rel, 'account-access', 'Illustration of a client account being set 
 finish(p, s, ['form wraps fields; required/autocomplete; password match; reveal toggles; steps; account-access art'])
 
 # FORGOT PASSWORD
-p, s, rel = setup('web/forgot-password', 'auth-v2', 'forgot-password')
+p, s, rel = setup('landing/forgot-password', 'auth-v2', 'forgot-password')
 form = wrap_auth_form(s, 'Prototype only: no reset email was sent.', 'Continue to the sample new-password step', 'forgot-note')
 em = s.find(id='nl-email')
 em['required'] = ''
@@ -160,7 +160,7 @@ auth_rail(s, rel, 'account-access', 'Illustration of account recovery: identity 
 finish(p, s, ['form wraps email; required; steps; account-access art'])
 
 # RESET PASSWORD — enforce only the requirements this page states.
-p, s, rel = setup('web/reset-password', 'auth-v2', 'reset-password')
+p, s, rel = setup('landing/reset-password', 'auth-v2', 'reset-password')
 form = wrap_auth_form(s, 'Prototype only: no password was changed.', 'Return to sign in', 'reset-note')
 req = [d for d in form.select('.panel') if 'Password requirements' in d.get_text()][0]
 req['id'] = 'password-requirements'
@@ -177,7 +177,7 @@ auth_rail(s, rel, 'account-access', 'Illustration of a new password protecting a
 finish(p, s, ['form; minlength/pattern from stated requirements; match; reveal; steps; art'])
 
 # VERIFY EMAIL — six digits, resend cooldown, original dashboard action.
-p, s, rel = setup('web/verify-email', 'auth-v2', 'verify-email')
+p, s, rel = setup('landing/verify-email', 'auth-v2', 'verify-email')
 form = wrap_auth_form(s, 'Prototype only: the code was not checked.', 'Open the sample client dashboard', 'verify-email-note')
 otp_fieldset(s, form.select_one('.flex.gap-2.mb-4'), 'Verification code')
 form.insert_after(fragment('<p class="flow-status" id="verify-email-resend" role="status" tabindex="-1"></p>').p)
@@ -189,7 +189,7 @@ finish(p, s, ['otp fieldset with advance/paste; resend cooldown; steps; verifica
 # ===================================================================== PUBLIC FLOWS
 # VERIFY (public) — the button had no form; verification leads to the same
 # client dashboard as the sibling verify-email route.
-p, s, rel = setup('web/verify', 'studio-v2', 'verify')
+p, s, rel = setup('landing/verify', 'studio-v2', 'verify')
 card = s.main.select_one('.mkt-card')
 wrapper = card.parent
 wrapper.attrs.pop('style', None)
@@ -210,7 +210,7 @@ wrapper.append(figure(rel, 'verification-seal', 'Illustration of a verification 
 finish(p, s, ['otp form with original prefilled digits; resend; verification-seal art'])
 
 # VERIFY DOCUMENT — local lookup against the single sample record on the page.
-p, s, rel = setup('web/verify-document', 'studio-v2', 'verify-document')
+p, s, rel = setup('landing/verify-document', 'studio-v2', 'verify-document')
 hero = s.select_one('.mkt-hero .mkt-wrap')
 copy = s.new_tag('div', attrs={'class': 'doc-hero-copy'})
 for el in list(hero.contents):
@@ -292,7 +292,7 @@ cls(cards, 'home-promises')
 finish(p, s, ['delivery-system art; responsive vitals; section reveal'])
 
 # ABOUT
-p, s, rel = setup('web/about', 'studio-v2', 'web-about')
+p, s, rel = setup('landing/about', 'studio-v2', 'web-about')
 hero = s.select_one('.mkt-hero .mkt-wrap')
 copy = s.new_tag('div', attrs={'class': 'flow-hero-copy'})
 for el in list(hero.contents):
@@ -303,7 +303,7 @@ hero.append(figure(rel, 'studio-collaboration', 'Illustration of a product studi
 finish(p, s, ['hero art'])
 
 # PORTFOLIO — local search + sector filter over the eight original cards.
-p, s, rel = setup('web/portfolio', 'studio-v2', 'web-portfolio')
+p, s, rel = setup('landing/portfolio', 'studio-v2', 'web-portfolio')
 covers(s, rel)
 timeline = s.select_one('.pj-timeline')
 timeline['id'] = 'portfolio-list'
@@ -332,7 +332,7 @@ add(timeline.find_parent(class_='mkt-wrap'), '<p class="art-caption">Illustrativ
 finish(p, s, ['work art covers; local search + sector filter; unmatched sectors disabled: ' + ', '.join(unmatched)])
 
 # WORK
-p, s, rel = setup('web/work', 'studio-v2', 'web-work')
+p, s, rel = setup('landing/portfolio', 'studio-v2', 'web-work')
 covers(s, rel)
 grid = s.main.select_one('.grid.g3')
 grid.insert_after(fragment('<p class="art-caption">Illustrative product concepts — not customer screenshots.</p>').p)
@@ -359,7 +359,7 @@ def journal(route, page, alt_caption):
     return p, s, rel
 
 
-for route, page in [('web/blog/category/[slug]', 'blog-category'), ('web/blog/tag/[slug]', 'blog-tag')]:
+for route, page in [('landing/blog', 'blog-category'), ('landing/blog', 'blog-tag')]:
     p, s, rel = journal(route, page, 'Illustrative journal · article art is decorative')
     rss = s.select_one('aside a.rail-link[href="#"]')
     del rss['href']
@@ -370,7 +370,7 @@ for route, page in [('web/blog/category/[slug]', 'blog-category'), ('web/blog/ta
     aside['aria-label'] = 'Journal navigation'
     finish(p, s, ['hero art; journal covers; RSS disclosed as not connected'])
 
-p, s, rel = journal('web/blog/bookmarks', 'blog-bookmarks', 'Illustrative reading list')
+p, s, rel = journal('landing/blog', 'blog-bookmarks', 'Illustrative reading list')
 lst = s.main.select_one('.flex-col.gap-4')
 lst['data-bookmark-list'] = ''
 lst['data-bookmark-status'] = 'bookmark-status'
@@ -392,7 +392,7 @@ lst.insert_after(fragment('<p class="flow-status" id="bookmark-status" role="sta
 finish(p, s, ['hero art; journal covers; local remove with undo'])
 
 # LEGAL — rail links map to real section ids; missing sections are disclosed.
-for route, page in [('web/terms', 'terms'), ('web/privacy', 'privacy')]:
+for route, page in [('landing/terms', 'terms'), ('landing/privacy', 'privacy')]:
     p, s, rel = setup(route, 'studio-v2', page)
     aside = s.select_one('.doc-layout aside')
     heads = s.select('.doc-layout .prose h2[id]')
@@ -424,7 +424,7 @@ for route, page in [('web/terms', 'terms'), ('web/privacy', 'privacy')]:
     finish(p, s, ['rail anchors + active section; missing: ' + ', '.join(missing)])
 
 # ===================================================================== OPERATOR SIGN-IN
-p, s, rel = setup('admin/login', 'operator-auth-v2', 'admin-login')
+p, s, rel = setup('landing/admin-login', 'operator-auth-v2', 'admin-login')
 left = s.select_one('.auth-left')
 grid = left.select_one('.grid.g2')
 grid.insert_before(figure(rel, 'operator-console', 'Illustration of an operator console behind an identity check with a shield and audit trail.', 'Illustrative operator boundary · local prototype', 'flow-figure operator-art'))
@@ -454,7 +454,7 @@ finish(p, s, ['operator-console art; reveal; required; local result'])
 # These dynamic routes are byte-identical at baseline (dfc0f42) to the already
 # upgraded sibling routes at the same depth, so the deterministic Batch 3
 # transform yields identical output. Copy rather than re-implement.
-for dyn, src in [('web/blog/[slug]', 'web/blog/cutting-deploy-time-from-45-minutes-to-five'), ('web/portfolio/[id]', 'web/portfolio/fintech-payments-hub')]:
+for dyn, src in [('landing/blog/[slug]', 'landing/blog/[slug]'), ('landing/portfolio/[id]', 'landing/portfolio/fintech-payments-hub')]:
     d = Path('proto/apps/' + dyn + '/index.html')
     if 'upgrade-v2' in d.read_text():
         raise RuntimeError('One-shot migration already applied: ' + str(d))

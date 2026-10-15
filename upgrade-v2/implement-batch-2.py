@@ -106,7 +106,7 @@ related=s.select_one('main > .mkt-section:last-child');add(related.select_one('.
 for title in related.select('.font-bold'):title.name='h3'
 save(p,s)
 # WEB CONTACT: the actual form destination, secure local-only demo behavior.
-p,s,rel=setup('web/contact','contact-form');main=s.select_one('main');grid=main.select_one('.mkt-wrap > .grid');grid.attrs.pop('style',None);cls(grid,'contact-form-layout')
+p,s,rel=setup('landing/contact-alt','contact-form');main=s.select_one('main');grid=main.select_one('.mkt-wrap > .grid');grid.attrs.pop('style',None);cls(grid,'contact-form-layout')
 card=grid.select_one(':scope > .mkt-card');card.name='form';card['data-demo-contact']='';card['aria-describedby']='contact-demo-note';card['id']='contact-form';card.attrs.pop('style',None);cls(card,'contact-form-card')
 card.insert(0,fragment('<h2 class="h3 mb-3">Your message</h2><p id="contact-demo-note" class="demo-note">Local prototype only. Use sample details. Nothing is sent, uploaded or saved; spam protection and delivery are not connected.</p>').h2)
 # Insert note independently (the heading extraction above intentionally only takes h2).

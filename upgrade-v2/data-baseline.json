@@ -738,7 +738,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -756,7 +756,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -1351,7 +1351,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -1369,7 +1369,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -2576,7 +2576,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -2594,7 +2594,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -3160,7 +3160,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -3178,7 +3178,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -3621,7 +3621,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html"
+      "href": "../../../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -3704,7 +3704,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -3722,7 +3722,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -4232,7 +4232,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -4250,7 +4250,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -4636,7 +4636,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/blog/[slug]/index.html"
+      "href": "../../../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -4694,7 +4694,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -4712,7 +4712,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -5342,7 +5342,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/index.html"
+      "href": "../../landing/blog/index.html"
      }
     },
     {
@@ -5444,7 +5444,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -5900,7 +5900,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -5942,7 +5942,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -5984,7 +5984,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -6026,7 +6026,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -6068,7 +6068,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -6110,7 +6110,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -6152,7 +6152,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -6194,7 +6194,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/[slug]/index.html"
+      "href": "../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -6212,7 +6212,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -6230,7 +6230,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -6747,7 +6747,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html"
+      "href": "../../../../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -6884,7 +6884,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/index.html"
+      "href": "../../../../../landing/index.html"
      }
     },
     {
@@ -6902,7 +6902,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/login/index.html"
+      "href": "../../../../../landing/login/index.html"
      }
     },
     {
@@ -7345,7 +7345,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html"
+      "href": "../../../../../landing/blog/[slug]/index.html"
      }
     },
     {
@@ -7428,7 +7428,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/index.html"
+      "href": "../../../../../landing/index.html"
      }
     },
     {
@@ -7446,7 +7446,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/login/index.html"
+      "href": "../../../../../landing/login/index.html"
      }
     },
     {
@@ -7956,7 +7956,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -7974,7 +7974,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -8701,7 +8701,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -8719,7 +8719,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -8863,7 +8863,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/index.html"
+      "href": "../landing/index.html"
      }
     },
     {
@@ -8881,7 +8881,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/login/index.html"
+      "href": "../landing/login/index.html"
      }
     },
     {
@@ -9353,7 +9353,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -9371,7 +9371,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -9406,7 +9406,7 @@
     }
    ]
   },
-  "proto/apps/admin/login/index.html": {
+  "proto/apps/landing/admin-login/index.html": {
    "text": [
     "html",
     "Operator sign-in · Admin",
@@ -9555,19 +9555,19 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
@@ -9619,7 +9619,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -9655,13 +9655,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
@@ -9679,7 +9679,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -10213,7 +10213,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -10231,7 +10231,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -11172,7 +11172,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -11190,7 +11190,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -11623,7 +11623,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -11641,7 +11641,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -13900,7 +13900,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -13918,7 +13918,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -14294,7 +14294,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -14312,7 +14312,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -14748,7 +14748,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -14766,7 +14766,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -15159,7 +15159,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -15177,7 +15177,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -15572,7 +15572,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -15590,7 +15590,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -15972,7 +15972,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -15990,7 +15990,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -16501,7 +16501,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -16519,7 +16519,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -16997,7 +16997,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -17015,7 +17015,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -17478,7 +17478,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -17496,7 +17496,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -17972,7 +17972,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -17990,7 +17990,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -18415,7 +18415,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -18433,7 +18433,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -18896,7 +18896,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -18914,7 +18914,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -19390,7 +19390,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -19408,7 +19408,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -19804,7 +19804,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -19822,7 +19822,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -20370,7 +20370,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -20388,7 +20388,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -20783,7 +20783,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -20801,7 +20801,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -21446,7 +21446,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -21464,7 +21464,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -21991,7 +21991,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -22009,7 +22009,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -23063,7 +23063,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -23081,7 +23081,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -23593,7 +23593,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -23611,7 +23611,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -24123,7 +24123,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -24141,7 +24141,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -24544,7 +24544,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -24562,7 +24562,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -25024,7 +25024,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -25042,7 +25042,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -25462,7 +25462,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -25480,7 +25480,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -26197,7 +26197,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -26215,7 +26215,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -26771,7 +26771,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -26789,7 +26789,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -27345,7 +27345,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -27363,7 +27363,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -27915,7 +27915,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -27933,7 +27933,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -28622,7 +28622,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -28640,7 +28640,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -29265,7 +29265,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -29283,7 +29283,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -29908,7 +29908,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -29926,7 +29926,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -30622,7 +30622,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -30640,7 +30640,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -31239,7 +31239,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -31257,7 +31257,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -33234,7 +33234,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -33252,7 +33252,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -34195,7 +34195,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -34213,7 +34213,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -35111,7 +35111,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -35129,7 +35129,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -35787,7 +35787,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -35805,7 +35805,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -36174,7 +36174,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/portfolio/[id]/index.html"
+      "href": "../../../../landing/portfolio/[id]/index.html"
      }
     },
     {
@@ -36276,7 +36276,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -36294,7 +36294,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -36663,7 +36663,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/portfolio/[id]/index.html"
+      "href": "../../../../landing/portfolio/[id]/index.html"
      }
     },
     {
@@ -36765,7 +36765,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/index.html"
+      "href": "../../../../landing/index.html"
      }
     },
     {
@@ -36783,7 +36783,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../web/login/index.html"
+      "href": "../../../../landing/login/index.html"
      }
     },
     {
@@ -37152,7 +37152,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/portfolio/[id]/index.html"
+      "href": "../../../landing/portfolio/[id]/index.html"
      }
     },
     {
@@ -37254,7 +37254,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -37272,7 +37272,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -37766,7 +37766,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/work/index.html"
+      "href": "../../landing/portfolio/index.html"
      }
     },
     {
@@ -38552,7 +38552,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -38570,7 +38570,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -39072,7 +39072,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -39090,7 +39090,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -39477,7 +39477,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -39495,7 +39495,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -40776,7 +40776,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -40794,7 +40794,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -41591,7 +41591,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -41609,7 +41609,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -42066,7 +42066,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -42084,7 +42084,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -42648,7 +42648,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -42666,7 +42666,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -43344,7 +43344,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -43362,7 +43362,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -43901,7 +43901,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -43919,7 +43919,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -44387,7 +44387,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -44405,7 +44405,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -44916,7 +44916,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -44934,7 +44934,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -45578,7 +45578,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -45596,7 +45596,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -46078,7 +46078,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -46096,7 +46096,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -46626,7 +46626,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -46644,7 +46644,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -47426,7 +47426,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -47444,7 +47444,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -47976,7 +47976,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -47994,7 +47994,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -48581,7 +48581,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -48599,7 +48599,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -49072,7 +49072,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -49090,7 +49090,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -49839,7 +49839,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/index.html"
+      "href": "../../../../../landing/index.html"
      }
     },
     {
@@ -49857,7 +49857,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/login/index.html"
+      "href": "../../../../../landing/login/index.html"
      }
     },
     {
@@ -50444,7 +50444,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -50462,7 +50462,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -50921,7 +50921,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -50939,7 +50939,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -51429,7 +51429,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/index.html"
+      "href": "../../../../../landing/index.html"
      }
     },
     {
@@ -51447,7 +51447,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/login/index.html"
+      "href": "../../../../../landing/login/index.html"
      }
     },
     {
@@ -52037,7 +52037,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/index.html"
+      "href": "../../../../../landing/index.html"
      }
     },
     {
@@ -52055,7 +52055,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/login/index.html"
+      "href": "../../../../../landing/login/index.html"
      }
     },
     {
@@ -52514,7 +52514,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -52532,7 +52532,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -53022,7 +53022,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/index.html"
+      "href": "../../../../../landing/index.html"
      }
     },
     {
@@ -53040,7 +53040,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/login/index.html"
+      "href": "../../../../../landing/login/index.html"
      }
     },
     {
@@ -53630,7 +53630,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/index.html"
+      "href": "../../../../../landing/index.html"
      }
     },
     {
@@ -53648,7 +53648,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../../web/login/index.html"
+      "href": "../../../../../landing/login/index.html"
      }
     },
     {
@@ -54219,7 +54219,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -54237,7 +54237,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -55386,7 +55386,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -55404,7 +55404,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -55890,7 +55890,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -55908,7 +55908,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -56433,7 +56433,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -56451,7 +56451,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -56908,7 +56908,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -56926,7 +56926,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -57545,7 +57545,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -57563,7 +57563,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -58019,7 +58019,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -58037,7 +58037,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -59924,7 +59924,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -59942,7 +59942,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -60582,7 +60582,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -60600,7 +60600,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -61019,7 +61019,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -61037,7 +61037,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -61524,7 +61524,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -61542,7 +61542,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -62099,7 +62099,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -62117,7 +62117,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -62687,7 +62687,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -62705,7 +62705,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -63974,7 +63974,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -63992,7 +63992,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -64761,7 +64761,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -64779,7 +64779,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -65351,7 +65351,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -65369,7 +65369,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -66210,7 +66210,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -66228,7 +66228,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -66670,7 +66670,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -66688,7 +66688,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -66939,7 +66939,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -66951,7 +66951,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
@@ -67077,25 +67077,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/verify-document/index.html"
+      "href": "../../landing/verify-document/index.html"
      }
     },
     {
@@ -67113,7 +67113,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -67131,13 +67131,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -67382,7 +67382,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -67466,25 +67466,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/register/index.html"
+      "href": "../../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/terms/index.html"
+      "href": "../../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/privacy/index.html"
+      "href": "../../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/verify-document/index.html"
+      "href": "../../../landing/verify-document/index.html"
      }
     },
     {
@@ -67502,7 +67502,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -67520,13 +67520,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -67828,7 +67828,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -67840,7 +67840,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/blog/bookmarks/index.html"
+      "href": "../../landing/blog/bookmarks/index.html"
      }
     },
     {
@@ -67984,25 +67984,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/verify-document/index.html"
+      "href": "../../landing/verify-document/index.html"
      }
     },
     {
@@ -68020,7 +68020,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -68038,13 +68038,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -68282,7 +68282,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -68294,7 +68294,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/contact/index.html"
+      "href": "../../landing/contact-alt/index.html"
      }
     },
     {
@@ -68414,25 +68414,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/verify-document/index.html"
+      "href": "../../landing/verify-document/index.html"
      }
     },
     {
@@ -68450,7 +68450,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -68468,13 +68468,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -68840,7 +68840,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/login/index.html"
+      "href": "../landing/login/index.html"
      }
     },
     {
@@ -68852,7 +68852,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/register/index.html"
+      "href": "../landing/register/index.html"
      }
     },
     {
@@ -68918,13 +68918,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/register/index.html"
+      "href": "../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/login/index.html"
+      "href": "../landing/login/index.html"
      }
     },
     {
@@ -69050,25 +69050,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/register/index.html"
+      "href": "../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/terms/index.html"
+      "href": "../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/privacy/index.html"
+      "href": "../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/verify-document/index.html"
+      "href": "../landing/verify-document/index.html"
      }
     },
     {
@@ -69086,7 +69086,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/index.html"
+      "href": "../landing/index.html"
      }
     },
     {
@@ -69104,13 +69104,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../web/login/index.html"
+      "href": "../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../admin/login/index.html"
+      "href": "../landing/admin-login/index.html"
      }
     },
     {
@@ -69332,7 +69332,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
@@ -69404,25 +69404,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/register/index.html"
+      "href": "../../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/terms/index.html"
+      "href": "../../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/privacy/index.html"
+      "href": "../../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/verify-document/index.html"
+      "href": "../../../landing/verify-document/index.html"
      }
     },
     {
@@ -69440,7 +69440,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/index.html"
+      "href": "../../../landing/index.html"
      }
     },
     {
@@ -69458,13 +69458,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../web/login/index.html"
+      "href": "../../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -69750,7 +69750,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -69864,25 +69864,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/verify-document/index.html"
+      "href": "../../landing/verify-document/index.html"
      }
     },
     {
@@ -69900,7 +69900,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -69918,13 +69918,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -70184,7 +70184,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -70196,13 +70196,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
@@ -70334,25 +70334,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/verify-document/index.html"
+      "href": "../../landing/verify-document/index.html"
      }
     },
     {
@@ -70370,7 +70370,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -70388,13 +70388,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -70637,7 +70637,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
@@ -70649,13 +70649,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
@@ -70769,25 +70769,25 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/register/index.html"
+      "href": "../../landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/terms/index.html"
+      "href": "../../landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/privacy/index.html"
+      "href": "../../landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/verify-document/index.html"
+      "href": "../../landing/verify-document/index.html"
      }
     },
     {
@@ -70805,7 +70805,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/index.html"
+      "href": "../../landing/index.html"
      }
     },
     {
@@ -70823,13 +70823,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../web/login/index.html"
+      "href": "../../landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -70858,7 +70858,7 @@
     }
    ]
   },
-  "proto/apps/web/about/index.html": {
+  "proto/apps/landing/about/index.html": {
    "text": [
     "html",
     "About · Nestlancer",
@@ -71153,7 +71153,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -71182,7 +71182,7 @@
     }
    ]
   },
-  "proto/apps/web/blog/[slug]/index.html": {
+  "proto/apps/landing/blog/[slug]/index.html": {
    "text": [
     "html",
     "Cutting Deploy Time from 45 Minutes to Five · Nestlancer Blog",
@@ -71617,7 +71617,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -71646,7 +71646,7 @@
     }
    ]
   },
-  "proto/apps/web/blog/bookmarks/index.html": {
+  "proto/apps/landing/blog/index.html": {
    "text": [
     "html",
     "Bookmarks · Nestlancer Blog",
@@ -71959,7 +71959,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -71988,7 +71988,7 @@
     }
    ]
   },
-  "proto/apps/web/blog/category/[slug]/index.html": {
+  "proto/apps/landing/blog/index.html": {
    "text": [
     "html",
     "Case studies · Nestlancer Blog",
@@ -72421,7 +72421,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../admin/login/index.html"
+      "href": "../../../../landing/admin-login/index.html"
      }
     },
     {
@@ -72450,7 +72450,7 @@
     }
    ]
   },
-  "proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html": {
+  "proto/apps/landing/blog/[slug]/index.html": {
    "text": [
     "html",
     "Cutting Deploy Time from 45 Minutes to Five · Nestlancer Blog",
@@ -72885,7 +72885,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -72914,7 +72914,7 @@
     }
    ]
   },
-  "proto/apps/web/blog/index.html": {
+  "proto/apps/landing/blog/index.html": {
    "text": [
     "html",
     "Blog · Nestlancer",
@@ -73420,7 +73420,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -73449,7 +73449,7 @@
     }
    ]
   },
-  "proto/apps/web/blog/tag/[slug]/index.html": {
+  "proto/apps/landing/blog/index.html": {
    "text": [
     "html",
     "Tag: deployment · Nestlancer Blog",
@@ -73848,7 +73848,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../admin/login/index.html"
+      "href": "../../../../landing/admin-login/index.html"
      }
     },
     {
@@ -73877,7 +73877,7 @@
     }
    ]
   },
-  "proto/apps/web/contact/index.html": {
+  "proto/apps/landing/contact-alt/index.html": {
    "text": [
     "html",
     "Contact · Nestlancer",
@@ -74215,7 +74215,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -74681,7 +74681,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -74710,7 +74710,7 @@
     }
    ]
   },
-  "proto/apps/web/forgot-password/index.html": {
+  "proto/apps/landing/forgot-password/index.html": {
    "text": [
     "html",
     "Forgot password · Nestlancer",
@@ -74921,7 +74921,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -75279,7 +75279,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -75308,7 +75308,7 @@
     }
    ]
   },
-  "proto/apps/web/index.html": {
+  "proto/apps/landing/index.html": {
    "text": [
     "html",
     "Nestlancer — Client portal for a senior product studio",
@@ -75649,7 +75649,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../admin/login/index.html"
+      "href": "../landing/admin-login/index.html"
      }
     },
     {
@@ -76082,7 +76082,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -76515,7 +76515,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -77026,7 +77026,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -77055,7 +77055,7 @@
     }
    ]
   },
-  "proto/apps/web/login/index.html": {
+  "proto/apps/landing/login/index.html": {
    "text": [
     "html",
     "Sign In · Nestlancer Client Portal",
@@ -77239,7 +77239,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -77299,7 +77299,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -77720,7 +77720,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -78054,7 +78054,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -78464,7 +78464,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -78823,7 +78823,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -79196,7 +79196,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../admin/login/index.html"
+      "href": "../../../../landing/admin-login/index.html"
      }
     },
     {
@@ -79572,7 +79572,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -80064,7 +80064,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../admin/login/index.html"
+      "href": "../../../../landing/admin-login/index.html"
      }
     },
     {
@@ -80418,7 +80418,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../admin/login/index.html"
+      "href": "../../../../landing/admin-login/index.html"
      }
     },
     {
@@ -80924,7 +80924,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -81552,7 +81552,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -82070,7 +82070,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -82425,7 +82425,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -82780,7 +82780,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -83135,7 +83135,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -83668,7 +83668,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -84138,7 +84138,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../admin/login/index.html"
+      "href": "../../../../landing/admin-login/index.html"
      }
     },
     {
@@ -84608,7 +84608,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../../admin/login/index.html"
+      "href": "../../../../landing/admin-login/index.html"
      }
     },
     {
@@ -85143,7 +85143,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -85514,7 +85514,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -85543,7 +85543,7 @@
     }
    ]
   },
-  "proto/apps/web/portfolio/[id]/index.html": {
+  "proto/apps/landing/portfolio/[id]/index.html": {
    "text": [
     "html",
     "Fintech Payments Hub · Nestlancer",
@@ -85876,7 +85876,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -85905,7 +85905,7 @@
     }
    ]
   },
-  "proto/apps/web/portfolio/fintech-payments-hub/index.html": {
+  "proto/apps/landing/portfolio/fintech-payments-hub/index.html": {
    "text": [
     "html",
     "Fintech Payments Hub · Nestlancer",
@@ -86238,7 +86238,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -86267,7 +86267,7 @@
     }
    ]
   },
-  "proto/apps/web/portfolio/index.html": {
+  "proto/apps/landing/portfolio/index.html": {
    "text": [
     "html",
     "Portfolio · Nestlancer",
@@ -86709,7 +86709,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -86738,7 +86738,7 @@
     }
    ]
   },
-  "proto/apps/web/privacy/index.html": {
+  "proto/apps/landing/privacy/index.html": {
    "text": [
     "html",
     "Privacy Policy · Nestlancer",
@@ -87220,7 +87220,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -87645,7 +87645,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -88004,7 +88004,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -88712,7 +88712,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -89174,7 +89174,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -89500,7 +89500,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -89844,7 +89844,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -90229,7 +90229,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -90563,7 +90563,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -91025,7 +91025,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -91988,7 +91988,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -92532,7 +92532,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -92857,7 +92857,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -93282,7 +93282,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -93613,7 +93613,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -93975,7 +93975,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -94004,7 +94004,7 @@
     }
    ]
   },
-  "proto/apps/web/register/index.html": {
+  "proto/apps/landing/register/index.html": {
    "text": [
     "html",
     "Create account · Nestlancer",
@@ -94280,7 +94280,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -94787,7 +94787,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -95183,7 +95183,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -95579,7 +95579,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -95927,7 +95927,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -96335,7 +96335,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -96745,7 +96745,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -96774,7 +96774,7 @@
     }
    ]
   },
-  "proto/apps/web/reset-password/index.html": {
+  "proto/apps/landing/reset-password/index.html": {
    "text": [
     "html",
     "Set a new password · Nestlancer",
@@ -96993,7 +96993,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -97421,7 +97421,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -98024,7 +98024,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -98460,7 +98460,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -98875,7 +98875,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -99254,7 +99254,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -99957,7 +99957,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -100365,7 +100365,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -100818,7 +100818,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -101277,7 +101277,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../../admin/login/index.html"
+      "href": "../../../landing/admin-login/index.html"
      }
     },
     {
@@ -101306,7 +101306,7 @@
     }
    ]
   },
-  "proto/apps/web/terms/index.html": {
+  "proto/apps/landing/terms/index.html": {
    "text": [
     "html",
     "Terms of Service · Nestlancer",
@@ -101828,7 +101828,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -101857,7 +101857,7 @@
     }
    ]
   },
-  "proto/apps/web/verify/index.html": {
+  "proto/apps/landing/verify/index.html": {
    "text": [
     "html",
     "Verify your email · Nestlancer",
@@ -102200,7 +102200,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -102229,7 +102229,7 @@
     }
    ]
   },
-  "proto/apps/web/verify-document/index.html": {
+  "proto/apps/landing/verify-document/index.html": {
    "text": [
     "html",
     "Verify Document · Nestlancer",
@@ -102549,7 +102549,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -102578,7 +102578,7 @@
     }
    ]
   },
-  "proto/apps/web/verify-email/index.html": {
+  "proto/apps/landing/verify-email/index.html": {
    "text": [
     "html",
     "Verify email · Nestlancer",
@@ -102787,7 +102787,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -102816,7 +102816,7 @@
     }
    ]
   },
-  "proto/apps/web/work/index.html": {
+  "proto/apps/landing/portfolio/index.html": {
    "text": [
     "html",
     "Work · Nestlancer",
@@ -103205,7 +103205,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "../../admin/login/index.html"
+      "href": "../../landing/admin-login/index.html"
      }
     },
     {
@@ -103291,37 +103291,37 @@
     "app.nestlancer.com · public surface + legal + verify/share",
     "/apps/web/",
     "Nestlancer — Client portal for a senior product studio",
-    "/apps/web/about/",
+    "/apps/landing/about/",
     "About",
-    "/apps/web/work/",
+    "/apps/landing/portfolio/",
     "Work",
-    "/apps/web/contact/",
+    "/apps/landing/contact-alt/",
     "Contact",
-    "/apps/web/portfolio/",
+    "/apps/landing/portfolio/",
     "Portfolio",
-    "/apps/web/portfolio/[id]/",
+    "/apps/landing/portfolio/[id]/",
     "Fintech Payments Hub",
     "[param]",
-    "/apps/web/blog/",
+    "/apps/landing/blog/",
     "Blog",
-    "/apps/web/blog/[slug]/",
+    "/apps/landing/blog/[slug]/",
     "Cutting Deploy Time from 45 Minutes to Five Blog",
     "[param]",
-    "/apps/web/blog/category/[slug]/",
+    "/apps/landing/blog/",
     "Case studies Blog",
     "[param]",
-    "/apps/web/blog/tag/[slug]/",
+    "/apps/landing/blog/",
     "Tag: deployment Blog",
     "[param]",
-    "/apps/web/blog/bookmarks/",
+    "/apps/landing/blog/",
     "Bookmarks Blog",
-    "/apps/web/privacy/",
+    "/apps/landing/privacy/",
     "Privacy Policy",
-    "/apps/web/terms/",
+    "/apps/landing/terms/",
     "Terms of Service",
-    "/apps/web/verify/",
+    "/apps/landing/verify/",
     "Verify your email",
-    "/apps/web/verify-document/",
+    "/apps/landing/verify-document/",
     "Verify Document",
     "/apps/web/share/[token]/",
     "Shared quote",
@@ -103427,17 +103427,17 @@
     "auth",
     "6 routes",
     "Sign-in flows — client (card rail) + operator (centered)",
-    "/apps/web/login/",
+    "/apps/landing/login/",
     "Sign In Client Portal",
-    "/apps/web/register/",
+    "/apps/landing/register/",
     "Create account",
-    "/apps/web/forgot-password/",
+    "/apps/landing/forgot-password/",
     "Forgot password",
-    "/apps/web/reset-password/",
+    "/apps/landing/reset-password/",
     "Set a new password",
-    "/apps/web/verify-email/",
+    "/apps/landing/verify-email/",
     "Verify email",
-    "/apps/admin/login/",
+    "/apps/landing/admin-login/",
     "Operator sign-in · Admin",
     "apps/admin — operator console",
     "74 routes",
@@ -103706,55 +103706,55 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/index.html"
+      "href": "./apps/landing/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/index.html"
+      "href": "./apps/landing/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/about/index.html"
+      "href": "./apps/landing/about/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/work/index.html"
+      "href": "./apps/landing/portfolio/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/index.html"
+      "href": "./apps/landing/blog/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/contact/index.html"
+      "href": "./apps/landing/contact-alt/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/bookmarks/index.html"
+      "href": "./apps/landing/blog/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/login/index.html"
+      "href": "./apps/landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/contact/index.html"
+      "href": "./apps/landing/contact-alt/index.html"
      }
     },
     {
@@ -103778,7 +103778,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/login/index.html"
+      "href": "./apps/landing/login/index.html"
      }
     },
     {
@@ -103838,91 +103838,91 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/index.html"
+      "href": "./apps/landing/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/about/index.html"
+      "href": "./apps/landing/about/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/work/index.html"
+      "href": "./apps/landing/portfolio/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/contact/index.html"
+      "href": "./apps/landing/contact-alt/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/portfolio/index.html"
+      "href": "./apps/landing/portfolio/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/portfolio/[id]/index.html"
+      "href": "./apps/landing/portfolio/[id]/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/index.html"
+      "href": "./apps/landing/blog/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/[slug]/index.html"
+      "href": "./apps/landing/blog/[slug]/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/category/[slug]/index.html"
+      "href": "./apps/landing/blog/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/tag/[slug]/index.html"
+      "href": "./apps/landing/blog/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/bookmarks/index.html"
+      "href": "./apps/landing/blog/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/privacy/index.html"
+      "href": "./apps/landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/terms/index.html"
+      "href": "./apps/landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/verify/index.html"
+      "href": "./apps/landing/verify/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/verify-document/index.html"
+      "href": "./apps/landing/verify-document/index.html"
      }
     },
     {
@@ -104198,37 +104198,37 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/login/index.html"
+      "href": "./apps/landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/register/index.html"
+      "href": "./apps/landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/forgot-password/index.html"
+      "href": "./apps/landing/forgot-password/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/reset-password/index.html"
+      "href": "./apps/landing/reset-password/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/verify-email/index.html"
+      "href": "./apps/landing/verify-email/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/admin/login/index.html"
+      "href": "./apps/landing/admin-login/index.html"
      }
     },
     {
@@ -104678,7 +104678,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/index.html"
+      "href": "./apps/landing/index.html"
      }
     },
     {
@@ -104702,49 +104702,49 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/portfolio/index.html"
+      "href": "./apps/landing/portfolio/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/about/index.html"
+      "href": "./apps/landing/about/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/blog/index.html"
+      "href": "./apps/landing/blog/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/contact/index.html"
+      "href": "./apps/landing/contact-alt/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/register/index.html"
+      "href": "./apps/landing/register/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/terms/index.html"
+      "href": "./apps/landing/terms/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/privacy/index.html"
+      "href": "./apps/landing/privacy/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/verify-document/index.html"
+      "href": "./apps/landing/verify-document/index.html"
      }
     },
     {
@@ -104762,7 +104762,7 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/index.html"
+      "href": "./apps/landing/index.html"
      }
     },
     {
@@ -104780,13 +104780,13 @@
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/web/login/index.html"
+      "href": "./apps/landing/login/index.html"
      }
     },
     {
      "tag": "a",
      "attrs": {
-      "href": "./apps/admin/login/index.html"
+      "href": "./apps/landing/admin-login/index.html"
      }
     },
     {

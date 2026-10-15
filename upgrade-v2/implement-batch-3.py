@@ -17,7 +17,7 @@ def reaction(b,key):
  b['type']='button';b['data-content-toggle']=key;b['aria-pressed']='false';b['disabled']='';b['aria-describedby']='content-actions-note'
 def action_note(parent):add(parent,'<p class="demo-note" id="content-actions-note">Preview-only reactions require JavaScript. Nothing is saved to an account and original counts do not change.</p><p role="status" data-content-status></p>')
 # WEB JOURNAL: its own ten cards and conflicting original totals are retained.
-p,s,rel=setup('web/blog');cls(s.body,'web-journal');form=s.select_one('form.filterbar');form['data-content-filter']='';form['data-list-id']='web-articles';form['data-item-name']='articles'
+p,s,rel=setup('landing/blog');cls(s.body,'web-journal');form=s.select_one('form.filterbar');form['data-content-filter']='';form['data-list-id']='web-articles';form['data-item-name']='articles'
 query=form.select_one('input');query['id']='web-article-search';query['data-content-query']='';query['aria-describedby']='web-journal-note';query['disabled']=''
 select=form.select_one('select');select['data-content-category']='';select['disabled']=''
 for i,opt in enumerate(select.select('option')):opt['value']='' if i==0 else opt.get_text().split(' (')[0]
@@ -44,7 +44,7 @@ for i,item in enumerate(pagination.select(':scope > span')):
 rss=aside.select_one('a[href="#"]');rss['aria-disabled']='true';rss['tabindex']='-1';rss['data-unavailable']='';rss['aria-describedby']='web-journal-note'
 save(p,s)
 # ARTICLE: keeps this route's 8-min read, 6-engineer team, code/results/comments.
-p,s,rel=setup('web/blog/cutting-deploy-time-from-45-minutes-to-five');cls(s.body,'web-article','article-v2')
+p,s,rel=setup('landing/blog/[slug]');cls(s.body,'web-article','article-v2')
 heading=s.select_one('.mkt-hero .mkt-wrap');heading.attrs.pop('style',None);cls(heading,'article-heading')
 wrap=s.select_one('main > .mkt-wrap');wrap.attrs.pop('style',None);cls(wrap,'web-reading-wrap')
 cover=wrap.select_one('.cover');image(cover,rel,'deployment-pipeline');cls(cover,'article-cover');cover.select_one('img')['alt']='Illustrative service-level deployment pipeline, not a production architecture diagram.'
@@ -70,7 +70,7 @@ add(heading,'<div class="share-output" data-share-output hidden><label class="la
 add(wrap,'<p class="demo-note">Related posts currently link back to this prototype article.</p>')
 save(p,s)
 # CASE STUDY: metric quartet, contract and extended narrative stay route-specific.
-p,s,rel=setup('web/portfolio/fintech-payments-hub');cls(s.body,'web-case')
+p,s,rel=setup('landing/portfolio/fintech-payments-hub');cls(s.body,'web-case')
 heading=s.select_one('.mkt-hero .mkt-wrap');cls(heading,'web-case-heading')
 wrap=s.select_one('main > .mkt-wrap');cls(wrap,'web-case-content');wrap.attrs.pop('style',None)
 cover=wrap.select_one('.cover');image(cover,rel,'work-analytics');cls(cover,'web-case-cover');cover.select_one('img')['alt']='Illustrative operations dashboard, not a customer screenshot or measured chart.'

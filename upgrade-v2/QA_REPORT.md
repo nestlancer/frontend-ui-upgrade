@@ -18,7 +18,7 @@ Live process: **Nestlancer prototype**, port 8000, bound to 0.0.0.0.
 | 0 | landing/index.html | 320,390,768,1440,1920 | light/dark | Base/public state verified |
 | 1 | landing/services/index.html | 320,390,768,1440,1920 | light/dark | Native disclosure and stage buttons verified |
 | 2 | landing/pricing/index.html | 320,390,768,1440,1920 | light/dark | FAQ/comparison and original values verified |
-| 3 | web/login/index.html | 390,1440 | light/dark | Required fields, show/hide and honest local result verified |
+| 3 | landing/login/index.html | 390,1440 | light/dark | Required fields, show/hide and honest local result verified |
 | 4 | admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html | 390,1440 | light/dark | Base layout/actions pass; two mapped data states blocked |
 | 5 | landing/portfolio/index.html | 320,390,768,1440,1920 | light/dark | Covers/filter/empty state verified; shared-template destination disclosed |
 | 6 | web/projects/index.html | 390,1440 | light/dark | Local search/status/reset pass; mapped screenshot record differs |

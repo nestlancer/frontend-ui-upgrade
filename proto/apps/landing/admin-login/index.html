@@ -19,9 +19,9 @@
 </div>
 <nav aria-label="Operator gate navigation" class="flex items-center gap-4 fs-13">
 <a class="link mono" href="../../../index.html">← gate</a>
-<a class="muted mono" href="../../web/login/index.html">clients use app.nestlancer.com</a>
-<a class="muted" href="../../web/terms/index.html">Terms</a>
-<a class="muted" href="../../web/privacy/index.html">Privacy</a>
+<a class="muted mono" href="../login/index.html">clients use app.nestlancer.com</a>
+<a class="muted" href="../terms/index.html">Terms</a>
+<a class="muted" href="../privacy/index.html">Privacy</a>
 <button aria-label="Toggle theme" class="icobtn" data-theme-toggle="" title="Toggle theme"><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></button>
 </nav>
 </header>
@@ -98,7 +98,7 @@
 <div class="eyebrow mb-2" style="color:var(--t-warning-tx)"><span class="dot" style="background:var(--t-warning-dot)"></span>INTERNAL ONLY</div>
 <h2 class="h3 fs-24" style="margin-bottom:6px">Operator sign-in</h2>
 <p class="text-sm muted mb-5">For Nestlancer administrators and internal operators only. Client accounts use the main app.</p>
-<form action="../dashboard/index.html" aria-describedby="operator-note" class="flow-auth-form" data-flow-form="Prototype only: operator credentials were not checked and no session was created." data-flow-next="Open the sample command center" method="get">
+<form action="../../admin/dashboard/index.html" aria-describedby="operator-note" class="flow-auth-form" data-flow-form="Prototype only: operator credentials were not checked and no session was created." data-flow-next="Open the sample command center" method="get">
 <div class="field mb-4">
 <label class="label" for="op-email">Work email <span class="req">*</span></label>
 <input autocomplete="username" class="input" id="op-email" placeholder="you@company.com" required="" type="email" value="admin@nestlancer.com"/>
@@ -121,7 +121,7 @@
 <div>Staff only. Sign-ins from unrecognized networks require an email challenge. Every session is audit-logged.</div>
 </div>
 <div class="text-center text-sm muted mt-4">
-        Client account? <a class="link" href="../../web/login/index.html">Client sign-in · Use the client portal sign-in</a>
+        Client account? <a class="link" href="../login/index.html">Client sign-in · Use the client portal sign-in</a>
 </div>
 <div class="sep"></div>
 <div class="mono text-xs dim" style="line-height:1.6">
@@ -132,21 +132,21 @@
 <a class="link-arrow text-sm muted mt-4" href="../../../index.html">← Back to operator gate</a>
 </section>
 <!-- PROTO-UPGRADE-START -->
-<nav aria-label="Breadcrumb" class="crumbs" style="margin-bottom:8px"><a href="../index.html">Home</a><span>·</span><a href="../portfolio/index.html">Portfolio</a><span>·</span><a href="../content/index.html">Blog</a><span>·</span><a href="../contact/index.html">Contact</a></nav>
+<nav aria-label="Breadcrumb" class="crumbs" style="margin-bottom:8px"><a href="../index.html">Home</a><span>·</span><a href="../../admin/portfolio/index.html">Portfolio</a><span>·</span><a href="../../admin/content/index.html">Blog</a><span>·</span><a href="../../admin/contact/index.html">Contact</a></nav>
 <!-- PROTO-UPGRADE-END -->
 </main>
 <footer class="page-foot text-center">
-<a class="link" href="../../web/terms/index.html">Terms</a> · <a class="link" href="../../web/privacy/index.html">Privacy</a>
+<a class="link" href="../terms/index.html">Terms</a> · <a class="link" href="../privacy/index.html">Privacy</a>
 </footer>
 <div class="fab" id="fab">
 <button aria-label="Prototype menu" class="fab-btn" onclick="document.getElementById('fab').classList.toggle('open')"><i class="dot"></i><span>Prototype</span><svg aria-hidden="true" fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="13"><path d="m7 15 5 5 5-5"></path><path d="m7 9 5-5 5 5"></path></svg></button>
 <div class="fab-menu">
 <div class="fab-lab">Jump to surface</div>
 <a class="fx" href="../../../index.html">Sign-off hub <small>hub</small></a>
-<a class="fx" href="../../landing/index.html">Marketing — nestlancer.com <small>9020</small></a>
-<a class="fx" href="../../web/index.html">Public app — app.nestlancer.com <small>9000</small></a>
+<a class="fx" href="../index.html">Marketing — nestlancer.com <small>9020</small></a>
+<a class="fx" href="../index.html">Marketing home — app.nestlancer.com <small>9000</small></a>
 <a class="fx" href="../../web/dashboard/index.html">Client portal <small>web</small></a>
-<a class="fx" href="../dashboard/index.html">Admin console <small>admin</small></a>
+<a class="fx" href="../../admin/dashboard/index.html">Admin console <small>admin</small></a>
 <div class="fab-sep"></div>
 <button class="fx" data-theme-toggle=""><span>Theme</span> <small data-theme-label="">Light</small></button>
 </div></div>

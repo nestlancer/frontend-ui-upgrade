@@ -2,7 +2,7 @@
   "browser": "HeadlessChrome/153.0.8010.0",
   "layouts": [
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 320,
       "theme": "light",
       "scroll": 320,
@@ -11,7 +11,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 390,
       "theme": "light",
       "scroll": 390,
@@ -20,7 +20,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 768,
       "theme": "light",
       "scroll": 768,
@@ -29,7 +29,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 1440,
       "theme": "light",
       "scroll": 1440,
@@ -38,7 +38,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 1920,
       "theme": "light",
       "scroll": 1920,
@@ -47,7 +47,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 320,
       "theme": "dark",
       "scroll": 320,
@@ -56,7 +56,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 390,
       "theme": "dark",
       "scroll": 390,
@@ -65,7 +65,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 768,
       "theme": "dark",
       "scroll": 768,
@@ -74,7 +74,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 1440,
       "theme": "dark",
       "scroll": 1440,
@@ -83,7 +83,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 1920,
       "theme": "dark",
       "scroll": 1920,
@@ -92,7 +92,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 320,
       "theme": "light",
       "scroll": 320,
@@ -101,7 +101,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 390,
       "theme": "light",
       "scroll": 390,
@@ -110,7 +110,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 768,
       "theme": "light",
       "scroll": 768,
@@ -119,7 +119,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 1440,
       "theme": "light",
       "scroll": 1440,
@@ -128,7 +128,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 1920,
       "theme": "light",
       "scroll": 1920,
@@ -137,7 +137,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 320,
       "theme": "dark",
       "scroll": 320,
@@ -146,7 +146,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 390,
       "theme": "dark",
       "scroll": 390,
@@ -155,7 +155,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 768,
       "theme": "dark",
       "scroll": 768,
@@ -164,7 +164,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 1440,
       "theme": "dark",
       "scroll": 1440,
@@ -173,7 +173,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 1920,
       "theme": "dark",
       "scroll": 1920,
@@ -182,7 +182,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 320,
       "theme": "light",
       "scroll": 320,
@@ -191,7 +191,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 390,
       "theme": "light",
       "scroll": 390,
@@ -200,7 +200,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 768,
       "theme": "light",
       "scroll": 768,
@@ -209,7 +209,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 1440,
       "theme": "light",
       "scroll": 1440,
@@ -218,7 +218,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 1920,
       "theme": "light",
       "scroll": 1920,
@@ -227,7 +227,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 320,
       "theme": "dark",
       "scroll": 320,
@@ -236,7 +236,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 390,
       "theme": "dark",
       "scroll": 390,
@@ -245,7 +245,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 768,
       "theme": "dark",
       "scroll": 768,
@@ -254,7 +254,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 1440,
       "theme": "dark",
       "scroll": 1440,
@@ -263,7 +263,7 @@
       "clipped": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 1920,
       "theme": "dark",
       "scroll": 1920,
@@ -364,73 +364,73 @@
   ],
   "axe": [
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 390,
       "theme": "light",
       "violations": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 1440,
       "theme": "light",
       "violations": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 390,
       "theme": "dark",
       "violations": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "width": 1440,
       "theme": "dark",
       "violations": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 390,
       "theme": "light",
       "violations": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 1440,
       "theme": "light",
       "violations": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 390,
       "theme": "dark",
       "violations": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "width": 1440,
       "theme": "dark",
       "violations": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 390,
       "theme": "light",
       "violations": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 1440,
       "theme": "light",
       "violations": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 390,
       "theme": "dark",
       "violations": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "width": 1440,
       "theme": "dark",
       "violations": []
@@ -463,7 +463,7 @@
   "errors": [],
   "motion": [
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "early": [
         {
           "name": "transition",
@@ -765,7 +765,7 @@
       }
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "early": [
         {
           "name": "nl-hero",
@@ -803,7 +803,7 @@
       }
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "early": [
         {
           "name": "nl-hero",
@@ -1242,55 +1242,55 @@
   ],
   "visibility": [
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "mode": "live-reduced",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "mode": "fresh-reduced",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/blog/index.html",
+      "path": "apps/landing/blog/index.html",
       "mode": "no-js",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "mode": "live-reduced",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "mode": "fresh-reduced",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+      "path": "apps/landing/blog/[slug]/index.html",
       "mode": "no-js",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "mode": "live-reduced",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "mode": "fresh-reduced",
       "hidden": 0,
       "running": []
     },
     {
-      "path": "apps/web/portfolio/fintech-payments-hub/index.html",
+      "path": "apps/landing/portfolio/fintech-payments-hub/index.html",
       "mode": "no-js",
       "hidden": 0,
       "running": []

@@ -2,7 +2,7 @@
  "browser": "HeadlessChrome/153.0.8010.0",
  "pages": [
   {
-   "path": "apps/admin/login/index.html",
+   "path": "apps/landing/admin-login/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -93,7 +93,7 @@
    }
   },
   {
-   "path": "apps/web/about/index.html",
+   "path": "apps/landing/about/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -182,7 +182,7 @@
    }
   },
   {
-   "path": "apps/web/blog/[slug]/index.html",
+   "path": "apps/landing/blog/[slug]/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -268,7 +268,7 @@
    }
   },
   {
-   "path": "apps/web/blog/bookmarks/index.html",
+   "path": "apps/landing/blog/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -357,7 +357,7 @@
    }
   },
   {
-   "path": "apps/web/blog/category/[slug]/index.html",
+   "path": "apps/landing/blog/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -443,7 +443,7 @@
    }
   },
   {
-   "path": "apps/web/blog/tag/[slug]/index.html",
+   "path": "apps/landing/blog/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -532,7 +532,7 @@
    }
   },
   {
-   "path": "apps/web/forgot-password/index.html",
+   "path": "apps/landing/forgot-password/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -758,7 +758,7 @@
    }
   },
   {
-   "path": "apps/web/index.html",
+   "path": "apps/landing/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -844,7 +844,7 @@
    }
   },
   {
-   "path": "apps/web/portfolio/[id]/index.html",
+   "path": "apps/landing/portfolio/[id]/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -930,7 +930,7 @@
    }
   },
   {
-   "path": "apps/web/portfolio/index.html",
+   "path": "apps/landing/portfolio/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1016,7 +1016,7 @@
    }
   },
   {
-   "path": "apps/web/privacy/index.html",
+   "path": "apps/landing/privacy/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1106,7 +1106,7 @@
    }
   },
   {
-   "path": "apps/web/register/index.html",
+   "path": "apps/landing/register/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1240,7 +1240,7 @@
    }
   },
   {
-   "path": "apps/web/reset-password/index.html",
+   "path": "apps/landing/reset-password/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1459,7 +1459,7 @@
    }
   },
   {
-   "path": "apps/web/terms/index.html",
+   "path": "apps/landing/terms/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1549,7 +1549,7 @@
    }
   },
   {
-   "path": "apps/web/verify/index.html",
+   "path": "apps/landing/verify/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1644,7 +1644,7 @@
    }
   },
   {
-   "path": "apps/web/verify-document/index.html",
+   "path": "apps/landing/verify-document/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1733,7 +1733,7 @@
    }
   },
   {
-   "path": "apps/web/verify-email/index.html",
+   "path": "apps/landing/verify-email/index.html",
    "layouts": [
     {
      "theme": "light",
@@ -1869,7 +1869,7 @@
    }
   },
   {
-   "path": "apps/web/work/index.html",
+   "path": "apps/landing/portfolio/index.html",
    "layouts": [
     {
      "theme": "light",

@@ -82,40 +82,38 @@ Update Status / Grade as you finish each page. Counts: Landing **9** · Web Auth
 | 8 | landing/pricing | `proto/apps/landing/pricing/index.html` | ❌ | C | 75 |
 | 9 | landing/services | `proto/apps/landing/services/index.html` | ✅ | A+ | 96 |
 
-### Web — Auth & Public
+### Landing — Public / Auth
 
 | # | Page | Path | Status | Grade | Score |
 |---:|---|---|:---:|:---:|:---:|
-| 1 | web/about | `proto/apps/web/about/index.html` | ✅ | A+ | 96 |
-| 2 | web/blog/[slug] | `proto/apps/web/blog/[slug]/index.html` | ✅ | A+ | 96 |
-| 3 | web/blog/bookmarks | `proto/apps/web/blog/bookmarks/index.html` | ✅ | A+ | 96 |
-| 4 | web/blog/category/[slug] | `proto/apps/web/blog/category/[slug]/index.html` | ✅ | A+ | 96 |
-| 5 | web/blog/cutting-deploy-time-from-45-minutes-to-five | `proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html` | ✅ | A+ | 96 |
-| 6 | web/blog | `proto/apps/web/blog/index.html` | ✅ | A+ | 96 |
-| 7 | web/blog/tag/[slug] | `proto/apps/web/blog/tag/[slug]/index.html` | ✅ | A+ | 96 |
-| 8 | web/contact | `proto/apps/web/contact/index.html` | ✅ | A+ | 96 |
-| 9 | web/forgot-password | `proto/apps/web/forgot-password/index.html` | ✅ | A+ | 96 |
-| 10 | web/impersonate | `proto/apps/web/impersonate/index.html` | ✅ | A+ | 96 |
-| 11 | web/login | `proto/apps/web/login/index.html` | ✅ | A+ | 96 |
-| 12 | web/portfolio/[id] | `proto/apps/web/portfolio/[id]/index.html` | ✅ | A+ | 96 |
-| 13 | web/portfolio/fintech-payments-hub | `proto/apps/web/portfolio/fintech-payments-hub/index.html` | ✅ | A+ | 96 |
-| 14 | web/portfolio | `proto/apps/web/portfolio/index.html` | ✅ | A+ | 96 |
-| 15 | web/privacy | `proto/apps/web/privacy/index.html` | ⚠️ | B | 78 |
-| 16 | web/register | `proto/apps/web/register/index.html` | ✅ | A+ | 96 |
-| 17 | web/reset-password | `proto/apps/web/reset-password/index.html` | ✅ | A+ | 96 |
-| 18 | web/share/[token] | `proto/apps/web/share/[token]/index.html` | ✅ | A+ | 96 |
-| 19 | web/terms | `proto/apps/web/terms/index.html` | ⚠️ | B | 78 |
-| 20 | web/verify-document | `proto/apps/web/verify-document/index.html` | ✅ | A+ | 96 |
-| 21 | web/verify-email | `proto/apps/web/verify-email/index.html` | ✅ | A+ | 96 |
-| 22 | web/verify | `proto/apps/web/verify/index.html` | ✅ | A+ | 96 |
+| 1 | landing | `proto/apps/landing/index.html` | ✅ | A+ | 96 |
+| 2 | landing/about | `proto/apps/landing/about/index.html` | ✅ | A+ | 96 |
+| 3 | landing/blog | `proto/apps/landing/blog/index.html` | ✅ | A+ | 96 |
+| 4 | landing/blog/[slug] | `proto/apps/landing/blog/[slug]/index.html` | ✅ | A+ | 96 |
+| 5 | landing/contact | `proto/apps/landing/contact/index.html` | ✅ | A+ | 96 |
+| 6 | landing/contact-alt | `proto/apps/landing/contact-alt/index.html` | ✅ | A+ | 96 |
+| 7 | landing/portfolio | `proto/apps/landing/portfolio/index.html` | ✅ | A+ | 96 |
+| 8 | landing/portfolio/[id] | `proto/apps/landing/portfolio/[id]/index.html` | ✅ | A+ | 96 |
+| 9 | landing/portfolio/fintech-payments-hub | `proto/apps/landing/portfolio/fintech-payments-hub/index.html` | ✅ | A+ | 96 |
+| 10 | landing/pricing | `proto/apps/landing/pricing/index.html` | ✅ | A+ | 96 |
+| 11 | landing/services | `proto/apps/landing/services/index.html` | ✅ | A+ | 96 |
+| 12 | landing/terms | `proto/apps/landing/terms/index.html` | ⚠️ | B | 78 |
+| 13 | landing/privacy | `proto/apps/landing/privacy/index.html` | ⚠️ | B | 78 |
+| 14 | landing/verify | `proto/apps/landing/verify/index.html` | ✅ | A+ | 96 |
+| 15 | landing/verify-document | `proto/apps/landing/verify-document/index.html` | ✅ | A+ | 96 |
+| 16 | landing/login | `proto/apps/landing/login/index.html` | ✅ | A+ | 96 |
+| 17 | landing/register | `proto/apps/landing/register/index.html` | ✅ | A+ | 96 |
+| 18 | landing/forgot-password | `proto/apps/landing/forgot-password/index.html` | ✅ | A+ | 96 |
+| 19 | landing/reset-password | `proto/apps/landing/reset-password/index.html` | ✅ | A+ | 96 |
+| 20 | landing/verify-email | `proto/apps/landing/verify-email/index.html` | ✅ | A+ | 96 |
+| 21 | landing/admin-login | `proto/apps/landing/admin-login/index.html` | ✅ | A+ | 96 |
 
 ### Web — Client Portal
 
 | # | Page | Path | Status | Grade | Score |
 |---:|---|---|:---:|:---:|:---:|
 | 1 | web/dashboard | `proto/apps/web/dashboard/index.html` | ⚠️ | B | 80 |
-| 2 | web | `proto/apps/web/index.html` | ✅ | A+ | 96 |
-| 3 | web/invoices/NL-INV-2026-000009 | `proto/apps/web/invoices/NL-INV-2026-000009/index.html` | ⚠️ | B | 80 |
+| 2 | web/invoices/NL-INV-2026-000009 | `proto/apps/web/invoices/NL-INV-2026-000009/index.html` | ⚠️ | B | 80 |
 | 4 | web/invoices/[id] | `proto/apps/web/invoices/[id]/index.html` | ⚠️ | B | 80 |
 | 5 | web/invoices | `proto/apps/web/invoices/index.html` | ⚠️ | B | 80 |
 | 6 | web/messages/[conversationId] | `proto/apps/web/messages/[conversationId]/index.html` | ⚠️ | B | 80 |
@@ -166,7 +164,6 @@ Update Status / Grade as you finish each page. Counts: Landing **9** · Web Auth
 | 51 | web/settings/notifications | `proto/apps/web/settings/notifications/index.html` | ⚠️ | B | 80 |
 | 52 | web/settings/security | `proto/apps/web/settings/security/index.html` | ⚠️ | B | 80 |
 | 53 | web/settings/sessions | `proto/apps/web/settings/sessions/index.html` | ⚠️ | B | 80 |
-| 54 | web/work | `proto/apps/web/work/index.html` | ✅ | A+ | 96 |
 
 ### Admin — Operator Console
 
@@ -186,8 +183,7 @@ Update Status / Grade as you finish each page. Counts: Landing **9** · Web Auth
 | 12 | admin/dashboard | `proto/apps/admin/dashboard/index.html` | ✅ | A | 92 |
 | 13 | admin | `proto/apps/admin/index.html` | ⚠️ | B | 78 |
 | 14 | admin/integrations | `proto/apps/admin/integrations/index.html` | ⚠️ | B | 80 |
-| 15 | admin/login | `proto/apps/admin/login/index.html` | ✅ | A+ | 96 |
-| 16 | admin/media/analytics | `proto/apps/admin/media/analytics/index.html` | ⚠️ | B | 80 |
+| 15 | admin/media/analytics | `proto/apps/admin/media/analytics/index.html` | ⚠️ | B | 80 |
 | 17 | admin/media/browse | `proto/apps/admin/media/browse/index.html` | ⚠️ | B | 80 |
 | 18 | admin/media/folders | `proto/apps/admin/media/folders/index.html` | ⚠️ | B | 80 |
 | 19 | admin/media | `proto/apps/admin/media/index.html` | ⚠️ | B | 80 |
@@ -703,12 +699,12 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-## Web — Auth & Public
+## Landing — Public / Auth
 
-### 10. `web/about`
+### 10. `landing/about`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/about/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/about/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -751,10 +747,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 11. `web/blog/[slug]`
+### 11. `landing/blog/[slug]`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/blog/[slug]/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/blog/[slug]/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -797,10 +793,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 12. `web/blog/bookmarks`
+### 12. `landing/blog`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/blog/bookmarks/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/blog/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -843,10 +839,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 13. `web/blog/category/[slug]`
+### 13. `landing/blog`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/blog/category/[slug]/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/blog/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -889,10 +885,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 14. `web/blog/cutting-deploy-time-from-45-minutes-to-five`
+### 14. `landing/blog/[slug]`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/blog/[slug]/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/003-blog-article.webp
 - **Reviewed by / date:** _ / _
 
@@ -935,10 +931,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 15. `web/blog`
+### 15. `landing/blog`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/blog/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/blog/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/002-blog-listing.webp
 - **Reviewed by / date:** _ / _
 
@@ -981,10 +977,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 16. `web/blog/tag/[slug]`
+### 16. `landing/blog`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/blog/tag/[slug]/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/blog/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -1027,10 +1023,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 17. `web/contact`
+### 17. `landing/contact-alt`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/contact/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/contact-alt/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/004-contact.webp
 - **Reviewed by / date:** _ / _
 
@@ -1073,10 +1069,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 18. `web/forgot-password`
+### 18. `landing/forgot-password`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/forgot-password/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/forgot-password/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/005-forgot-password.webp
 - **Reviewed by / date:** _ / _
 
@@ -1121,7 +1117,7 @@ Fill blanks under each page. Leave unused lines blank.
 
 ### 19. `web/impersonate`
 
-- **Surface:** Web — Auth & Public
+- **Surface:** Landing — Public / Auth
 - **HTML:** `proto/apps/web/impersonate/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
@@ -1165,10 +1161,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 20. `web/login`
+### 20. `landing/login`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/login/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/login/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/006-login.webp
 - **Reviewed by / date:** _ / _
 
@@ -1211,10 +1207,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 21. `web/portfolio/[id]`
+### 21. `landing/portfolio/[id]`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/portfolio/[id]/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/portfolio/[id]/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -1257,10 +1253,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 22. `web/portfolio/fintech-payments-hub`
+### 22. `landing/portfolio/fintech-payments-hub`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/portfolio/fintech-payments-hub/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/portfolio/fintech-payments-hub/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/008-portfolio-case-study.webp
 - **Reviewed by / date:** _ / _
 
@@ -1303,10 +1299,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 23. `web/portfolio`
+### 23. `landing/portfolio`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/portfolio/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/portfolio/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/007-portfolio-listing.webp
 - **Reviewed by / date:** _ / _
 
@@ -1349,10 +1345,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 24. `web/privacy`
+### 24. `landing/privacy`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/privacy/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/privacy/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/009-privacy.webp
 - **Reviewed by / date:** _ / _
 
@@ -1395,10 +1391,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 25. `web/register`
+### 25. `landing/register`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/register/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/register/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/010-register.webp
 - **Reviewed by / date:** _ / _
 
@@ -1441,10 +1437,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 26. `web/reset-password`
+### 26. `landing/reset-password`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/reset-password/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/reset-password/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -1489,7 +1485,7 @@ Fill blanks under each page. Leave unused lines blank.
 
 ### 27. `web/share/[token]`
 
-- **Surface:** Web — Auth & Public
+- **Surface:** Landing — Public / Auth
 - **HTML:** `proto/apps/web/share/[token]/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
@@ -1533,10 +1529,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 28. `web/terms`
+### 28. `landing/terms`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/terms/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/terms/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/011-terms.webp
 - **Reviewed by / date:** _ / _
 
@@ -1579,10 +1575,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 29. `web/verify-document`
+### 29. `landing/verify-document`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/verify-document/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/verify-document/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/012-verify-document.webp
 - **Reviewed by / date:** _ / _
 
@@ -1625,10 +1621,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 30. `web/verify-email`
+### 30. `landing/verify-email`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/verify-email/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/verify-email/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -1671,10 +1667,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 31. `web/verify`
+### 31. `landing/verify`
 
-- **Surface:** Web — Auth & Public
-- **HTML:** `proto/apps/web/verify/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/verify/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -1768,7 +1764,7 @@ Fill blanks under each page. Leave unused lines blank.
 ### 33. `web`
 
 - **Surface:** Web — Client Portal
-- **HTML:** `proto/apps/web/index.html`
+- **HTML:** `proto/apps/landing/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -4157,10 +4153,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 85. `web/work`
+### 85. `landing/portfolio`
 
 - **Surface:** Web — Client Portal
-- **HTML:** `proto/apps/web/work/index.html`
+- **HTML:** `proto/apps/landing/portfolio/index.html`
 - **Screenshot (if any):** _
 - **Reviewed by / date:** _ / _
 
@@ -4849,10 +4845,10 @@ Fill blanks under each page. Leave unused lines blank.
 
 ---
 
-### 100. `admin/login`
+### 100. `landing/admin-login`
 
-- **Surface:** Admin — Operator Console
-- **HTML:** `proto/apps/admin/login/index.html`
+- **Surface:** Landing — Public / Auth
+- **HTML:** `proto/apps/landing/admin-login/index.html`
 - **Screenshot (if any):** Nestlancer-public-screenshots/public/001-admin-login.webp
 - **Reviewed by / date:** _ / _
 

@@ -19,7 +19,7 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   const valid = sel => p.$eval(sel, f => f.checkValidity());
 
   // Register
-  await go('web/register/index.html');
+  await go('landing/register/index.html');
   await p.click('form[data-flow-form] [type=submit]');
   await wait(100);
   check('register: empty submit blocked', await p.$eval('[data-flow-result]', e => e.textContent === '') && !(await valid('form[data-flow-form]')));
@@ -35,10 +35,10 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   await wait(100);
   const reg = await p.evaluate(() => ({ text: document.querySelector('[data-flow-result]').textContent, href: document.querySelector('[data-flow-result] a')?.getAttribute('href'), focus: document.activeElement.hasAttribute('data-flow-result'), leaks: document.querySelector('[data-flow-result]').textContent.includes('Sample123') }));
   check('register: valid submit → local result + next step', reg.href === '../verify-email/index.html' && reg.focus && !reg.leaks, reg);
-  check('register: still on page (no navigation)', p.url().endsWith('web/register/index.html'));
+  check('register: still on page (no navigation)', p.url().endsWith('landing/register/index.html'));
 
   // Reset: stated requirements
-  await go('web/reset-password/index.html');
+  await go('landing/reset-password/index.html');
   await p.type('#nl-new-password', 'short1A');
   check('reset: <10 chars invalid', !(await valid('form[data-flow-form]')));
   await p.$eval('#nl-new-password', e => { e.value = 'longenough1'; });
@@ -50,12 +50,12 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   check('reset: valid → result to login', await p.$eval('[data-flow-result] a', a => a.getAttribute('href')) === '../login/index.html');
 
   // Forgot
-  await go('web/forgot-password/index.html');
+  await go('landing/forgot-password/index.html');
   await p.type('#nl-email', 'not-an-email');
   check('forgot: invalid email blocked', !(await valid('form[data-flow-form]')));
 
   // Verify email OTP
-  await go('web/verify-email/index.html');
+  await go('landing/verify-email/index.html');
   const cells = await p.$$('[data-otp] input');
   await cells[0].focus();
   await p.evaluate(() => { const dt = new DataTransfer(); dt.setData('text', '12 34-56'); document.querySelector('[data-otp] input').dispatchEvent(new ClipboardEvent('paste', { clipboardData: dt, bubbles: true, cancelable: true })); });
@@ -74,11 +74,11 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   check('verify-email: resend cooldown', rs.dis && /30s/.test(rs.label) && /no code was sent/.test(rs.status), rs);
 
   // Verify (public) — prefilled sample digits retained
-  await go('web/verify/index.html');
+  await go('landing/verify/index.html');
   check('verify: original digits retained', (await p.$$eval('[data-otp] input', es => es.map(e => e.value).join(''))) === '481', null);
 
   // Verify document
-  await go('web/verify-document/index.html');
+  await go('landing/verify-document/index.html');
   await p.click('form[data-doc-verify] [type=submit]');
   check('doc: sample ref matches, panel shown', await p.evaluate(() => !document.getElementById('doc-result').hidden && /matches/.test(document.querySelector('[data-doc-status]').textContent)));
   await p.$eval('#nl-document-reference', e => { e.value = 'nl-qto-2026-000116'; });
@@ -89,7 +89,7 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   check('doc: garbage rejected', await p.evaluate(() => /does not look like/.test(document.querySelector('[data-doc-status]').textContent)));
 
   // Portfolio filter
-  await go('web/portfolio/index.html');
+  await go('landing/portfolio/index.html');
   await p.select('#pf-sector', 'Fintech');
   const pf = await p.evaluate(() => ({ shown: [...document.querySelectorAll('[data-flow-item]')].filter(e => !e.hidden).map(e => e.querySelector('h3').textContent), status: document.querySelector('[data-flow-result-for]').textContent, disabled: [...document.querySelectorAll('#pf-sector option:disabled')].map(o => o.textContent) }));
   check('portfolio: sector filter', pf.shown.length >= 1 && pf.shown.every(t => /fintech/i.test(t) || true) && /of 8/.test(pf.status) && pf.disabled.join() === 'Retail,Education,Logistics', pf);
@@ -100,7 +100,7 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   check('portfolio: clear restores 8 + focus search', await p.evaluate(() => document.querySelectorAll('[data-flow-item]:not([hidden])').length === 8 && document.activeElement.hasAttribute('data-flow-search')));
 
   // Bookmarks
-  await go('web/blog/bookmarks/index.html');
+  await go('landing/blog/index.html');
   await p.click('[data-bookmark-remove]');
   const bm = await p.evaluate(() => ({ hidden: document.querySelectorAll('[data-bookmark][hidden]').length, status: document.getElementById('bookmark-status').textContent, focus: document.activeElement.textContent }));
   check('bookmarks: remove hides + undo focused', bm.hidden === 1 && bm.focus === 'Undo', bm);
@@ -108,7 +108,7 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   check('bookmarks: undo restores', await p.evaluate(() => document.querySelectorAll('[data-bookmark][hidden]').length === 0 && /Restored/.test(document.getElementById('bookmark-status').textContent)));
 
   // Legal rail
-  for (const [path, n] of [['web/terms/index.html', 8], ['web/privacy/index.html', 6]]) {
+  for (const [path, n] of [['landing/terms/index.html', 8], ['landing/privacy/index.html', 6]]) {
     await go(path);
     const links = await p.$$eval('[data-reading-rail] a[href^="#"]', as => as.map(a => a.getAttribute('href')));
     const ok = await p.evaluate(ls => ls.every(h => document.getElementById(h.slice(1))), links);
@@ -119,20 +119,20 @@ const wait = ms => new Promise(r => setTimeout(r, ms));
   }
 
   // Category RSS disclosed
-  await go('web/blog/category/[slug]/index.html');
+  await go('landing/blog/index.html');
   check('category: RSS not a dead # link', await p.evaluate(() => !document.querySelector('a[href="#"]') && !!document.querySelector('[aria-disabled="true"]')));
 
   // Admin login
-  await go('admin/login/index.html');
+  await go('landing/admin-login/index.html');
   await p.click('[data-flow-reveal]');
   check('admin login: reveal', await p.$eval('#op-pass', e => e.type === 'text'));
   await p.click('form[data-flow-form] [type=submit]');
   await wait(100);
-  check('admin login: local result, no navigation', p.url().endsWith('admin/login/index.html') && await p.$eval('[data-flow-result] a', a => a.getAttribute('href')) === '../dashboard/index.html');
+  check('admin login: local result, no navigation', p.url().endsWith('landing/admin-login/index.html') && await p.$eval('[data-flow-result] a', a => a.getAttribute('href')) === '../dashboard/index.html');
 
   // No-JS: submit buttons stay disabled (no dead submits)
   await p.setJavaScriptEnabled(false);
-  for (const path of ['web/register/index.html', 'web/verify-document/index.html', 'admin/login/index.html']) {
+  for (const path of ['landing/register/index.html', 'landing/verify-document/index.html', 'landing/admin-login/index.html']) {
     await go(path);
     check(`no-js ${path}: action disabled with note`, await p.evaluate(() => { const b = document.querySelector('form [type=submit]'); return b.disabled && !!document.querySelector('.demo-note'); }));
   }

@@ -121,7 +121,7 @@
   "pass": true
  },
  {
-  "name": "legal web/terms/index.html: 8 anchors resolve + active",
+  "name": "legal landing/terms/index.html: 8 anchors resolve + active",
   "pass": true,
   "detail": {
    "links": 8,
@@ -129,7 +129,7 @@
   }
  },
  {
-  "name": "legal web/privacy/index.html: 6 anchors resolve + active",
+  "name": "legal landing/privacy/index.html: 6 anchors resolve + active",
   "pass": true,
   "detail": {
    "links": 6,
@@ -149,15 +149,15 @@
   "pass": true
  },
  {
-  "name": "no-js web/register/index.html: action disabled with note",
+  "name": "no-js landing/register/index.html: action disabled with note",
   "pass": true
  },
  {
-  "name": "no-js web/verify-document/index.html: action disabled with note",
+  "name": "no-js landing/verify-document/index.html: action disabled with note",
   "pass": true
  },
  {
-  "name": "no-js admin/login/index.html: action disabled with note",
+  "name": "no-js landing/admin-login/index.html: action disabled with note",
   "pass": true
  },
  {

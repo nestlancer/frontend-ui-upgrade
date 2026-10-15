@@ -81,21 +81,21 @@ Source: `RANKING_REPORT.md` / `RANKING_REPORT.csv` (Prompt 1.1). Work strictly P
 | 64 | `Nestlancer-clients-screenshots/clients/041-new-request-form.webp` | `proto/apps/web/requests/new/index.html` | 76 | C | S | Reads as generic AI SaaS template |
 | 65 | `Nestlancer-admin-screenshots/admin/028-moderation-history.webp` | `proto/apps/admin/moderation/index.html` | 76 | C | S | Reads as generic AI SaaS template |
 | 66 | `Nestlancer-admin-screenshots/admin/050-portfolio-new.webp` | `proto/apps/admin/portfolio/new/index.html` | 76 | C | S | Reads as generic AI SaaS template |
-| 67 | `Nestlancer-public-screenshots/public/004-contact.webp` | `proto/apps/web/contact/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
-| 68 | `Nestlancer-public-screenshots/public/005-forgot-password.webp` | `proto/apps/web/forgot-password/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
-| 69 | `Nestlancer-public-screenshots/public/010-register.webp` | `proto/apps/web/register/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
-| 70 | `Nestlancer-public-screenshots/public/006-login.webp` | `proto/apps/web/login/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
+| 67 | `Nestlancer-public-screenshots/public/004-contact.webp` | `proto/apps/landing/contact-alt/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
+| 68 | `Nestlancer-public-screenshots/public/005-forgot-password.webp` | `proto/apps/landing/forgot-password/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
+| 69 | `Nestlancer-public-screenshots/public/010-register.webp` | `proto/apps/landing/register/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
+| 70 | `Nestlancer-public-screenshots/public/006-login.webp` | `proto/apps/landing/login/index.html` | 76 | C | S | Motion is entrance-only; no signature micro-interaction |
 | 71 | `Nestlancer-clients-screenshots/clients/007-messages-thread-details.webp` | `proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html` | 77 | C | M | Reads as generic AI SaaS template |
 | 72 | `Nestlancer-clients-screenshots/clients/040-messages-reply-composer.webp` | `proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html` | 77 | C | M | Reads as generic AI SaaS template |
-| 73 | `Nestlancer-public-screenshots/public/009-privacy.webp` | `proto/apps/web/privacy/index.html` | 77 | C | S | Reads as generic AI SaaS template |
-| 74 | `Nestlancer-public-screenshots/public/011-terms.webp` | `proto/apps/web/terms/index.html` | 77 | C | S | Reads as generic AI SaaS template |
+| 73 | `Nestlancer-public-screenshots/public/009-privacy.webp` | `proto/apps/landing/privacy/index.html` | 77 | C | S | Reads as generic AI SaaS template |
+| 74 | `Nestlancer-public-screenshots/public/011-terms.webp` | `proto/apps/landing/terms/index.html` | 77 | C | S | Reads as generic AI SaaS template |
 | 75 | `Nestlancer-clients-screenshots/clients/038-messages-edit-message-form.webp` | `proto/apps/web/messages/thread/01a10a2e-42f8-70c9-95f7-0d05d4fd738a/index.html` | 77 | C | M | Reads as generic AI SaaS template |
 | 76 | `Nestlancer-admin-screenshots/admin/027-moderation.webp` | `proto/apps/admin/moderation/index.html` | 77 | C | S | Reads as generic AI SaaS template |
 | 77 | `Nestlancer-admin-screenshots/admin/037-payments-awaiting-verification.webp` | `proto/apps/admin/payments/index.html` | 77 | C | S | Reads as generic AI SaaS template |
 | 78 | `Nestlancer-admin-screenshots/admin/047-pipeline-users.webp` | `proto/apps/admin/pipeline/users/index.html` | 77 | C | L | Reads as generic AI SaaS template |
 | 79 | `Nestlancer-admin-screenshots/admin/066-blog-editor-new-post-form.webp` | `proto/apps/admin/content/posts/new/index.html` | 77 | C | L | Motion is entrance-only; no signature micro-interaction |
 | 80 | `Nestlancer-clients-screenshots/clients/008-notifications.webp` | `proto/apps/web/notifications/index.html` | 77 | C | S | Reads as generic AI SaaS template |
-| 81 | `Nestlancer-public-screenshots/public/001-admin-login.webp` | `proto/apps/admin/login/index.html` | 77 | C | S | Motion is entrance-only; no signature micro-interaction |
+| 81 | `Nestlancer-public-screenshots/public/001-admin-login.webp` | `proto/apps/landing/admin-login/index.html` | 77 | C | S | Motion is entrance-only; no signature micro-interaction |
 | 82 | `Nestlancer-clients-screenshots/clients/043-project-files-document-preview-dialog.webp` | `proto/apps/web/projects/01a10a2c-5cfb-71fa-854b-d88f4481e3e8/index.html` | 78 | C | S | Reads as generic AI SaaS template |
 | 83 | `Nestlancer-admin-screenshots/admin/067-blog-editor-preview-mode.webp` | `proto/apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html` | 78 | C | S | Reads as generic AI SaaS template |
 | 84 | `Nestlancer-admin-screenshots/admin/068-blog-editor-split-mode.webp` | `proto/apps/admin/content/posts/01a10a2a-361c-758f-a218-fb673fd3b9d2/edit/index.html` | 78 | C | S | Reads as generic AI SaaS template |
@@ -126,8 +126,8 @@ Source: `RANKING_REPORT.md` / `RANKING_REPORT.csv` (Prompt 1.1). Work strictly P
 | 109 | `Nestlancer-admin-screenshots/admin/045-pipeline-projects.webp` | `proto/apps/admin/pipeline/projects/index.html` | 78 | C | L | Reads as generic AI SaaS template |
 | 110 | `Nestlancer-admin-screenshots/admin/095-quote-builder-pricing-and-schedule.webp` | `proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html` | 78 | C | L | Motion is entrance-only; no signature micro-interaction |
 | 111 | `Nestlancer-admin-screenshots/admin/096-quote-builder-terms-and-review.webp` | `proto/apps/admin/requests/01a10a2c-01c3-7079-93e9-9d001541ced8/quote/new/index.html` | 78 | C | L | Motion is entrance-only; no signature micro-interaction |
-| 112 | `Nestlancer-public-screenshots/public/002-blog-listing.webp` | `proto/apps/web/blog/index.html` | 78 | C | S | Motion is entrance-only; no signature micro-interaction |
-| 113 | `Nestlancer-public-screenshots/public/012-verify-document.webp` | `proto/apps/web/verify-document/index.html` | 78 | C | S | Motion is entrance-only; no signature micro-interaction |
+| 112 | `Nestlancer-public-screenshots/public/002-blog-listing.webp` | `proto/apps/landing/blog/index.html` | 78 | C | S | Motion is entrance-only; no signature micro-interaction |
+| 113 | `Nestlancer-public-screenshots/public/012-verify-document.webp` | `proto/apps/landing/verify-document/index.html` | 78 | C | S | Motion is entrance-only; no signature micro-interaction |
 | 114 | `Nestlancer-clients-screenshots/clients/044-quote-awaiting-acceptance-and-signature.webp` | `proto/apps/web/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html` | 79 | C | S | Reads as generic AI SaaS template |
 | 115 | `Nestlancer-clients-screenshots/clients/022-quotes-details.webp` | `proto/apps/web/quotes/01a10f80-e01a-4d90-bd1c-86a026ad71f9/index.html` | 79 | C | M | Reads as generic AI SaaS template |
 | 116 | `Nestlancer-admin-screenshots/admin/085-project-delivery-upload-deliverable-form.webp` | `proto/apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html` | 79 | C | M | Reads as generic AI SaaS template |
@@ -159,7 +159,7 @@ Source: `RANKING_REPORT.md` / `RANKING_REPORT.csv` (Prompt 1.1). Work strictly P
 | 142 | `Nestlancer-admin-screenshots/admin/048-portfolio-listing.webp` | `proto/apps/admin/portfolio/index.html` | 79 | C | S | Reads as generic AI SaaS template |
 | 143 | `Nestlancer-admin-screenshots/admin/065-audit-logs-overview.webp` | `proto/apps/admin/audit/index.html` | 79 | C | S | Reads as generic AI SaaS template |
 | 144 | `Nestlancer-admin-screenshots/admin/071-content-card-view.webp` | `proto/apps/admin/content/index.html` | 79 | C | S | Reads as generic AI SaaS template |
-| 145 | `Nestlancer-public-screenshots/public/007-portfolio-listing.webp` | `proto/apps/web/portfolio/index.html` | 79 | C | S | Reads as generic AI SaaS template |
+| 145 | `Nestlancer-public-screenshots/public/007-portfolio-listing.webp` | `proto/apps/landing/portfolio/index.html` | 79 | C | S | Reads as generic AI SaaS template |
 | 146 | `Nestlancer-public-screenshots/public/015-marketing-contact.webp` | `proto/apps/landing/contact/index.html` | 79 | C | M | Motion is entrance-only; no signature micro-interaction |
 | 147 | `Nestlancer-public-screenshots/public/017-marketing-services.webp` | `proto/apps/landing/services/index.html` | 79 | C | M | Components lack full states (empty/loading/focus/selected) |
 
@@ -186,8 +186,8 @@ Source: `RANKING_REPORT.md` / `RANKING_REPORT.csv` (Prompt 1.1). Work strictly P
 | 164 | `Nestlancer-admin-screenshots/admin/063-system-templates.webp` | `proto/apps/admin/system/index.html` | 80 | B | L | Reads as generic AI SaaS template |
 | 165 | `Nestlancer-admin-screenshots/admin/086-project-details-analytics.webp` | `proto/apps/admin/projects/01a10a2b-5eaa-769e-a5d9-0d58fcca6924/index.html` | 80 | B | L | Reads as generic AI SaaS template |
 | 166 | `Nestlancer-admin-screenshots/admin/104-system-configuration.webp` | `proto/apps/admin/system/index.html` | 80 | B | L | Reads as generic AI SaaS template |
-| 167 | `Nestlancer-public-screenshots/public/003-blog-article.webp` | `proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html` | 80 | B | M | Reads as generic AI SaaS template |
-| 168 | `Nestlancer-public-screenshots/public/008-portfolio-case-study.webp` | `proto/apps/web/portfolio/fintech-payments-hub/index.html` | 80 | B | S | Reads as generic AI SaaS template |
+| 167 | `Nestlancer-public-screenshots/public/003-blog-article.webp` | `proto/apps/landing/blog/[slug]/index.html` | 80 | B | M | Reads as generic AI SaaS template |
+| 168 | `Nestlancer-public-screenshots/public/008-portfolio-case-study.webp` | `proto/apps/landing/portfolio/fintech-payments-hub/index.html` | 80 | B | S | Reads as generic AI SaaS template |
 | 169 | `Nestlancer-admin-screenshots/admin/115-user-pipeline-payments.webp` | `proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html` | 80 | B | L | Reads as generic AI SaaS template |
 | 170 | `Nestlancer-admin-screenshots/admin/116-user-pipeline-projects.webp` | `proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html` | 80 | B | L | Reads as generic AI SaaS template |
 | 171 | `Nestlancer-admin-screenshots/admin/117-user-pipeline-quotes.webp` | `proto/apps/admin/pipeline/users/01a10a2a-a99a-7578-825a-c7de8bce4d2b/index.html` | 80 | B | L | Reads as generic AI SaaS template |

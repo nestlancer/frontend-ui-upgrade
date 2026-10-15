@@ -1,36 +1,36 @@
 [
  {
-  "path": "proto/apps/web/register/index.html",
+  "path": "proto/apps/landing/register/index.html",
   "notes": [
    "form wraps fields; required/autocomplete; password match; reveal toggles; steps; account-access art"
   ]
  },
  {
-  "path": "proto/apps/web/forgot-password/index.html",
+  "path": "proto/apps/landing/forgot-password/index.html",
   "notes": [
    "form wraps email; required; steps; account-access art"
   ]
  },
  {
-  "path": "proto/apps/web/reset-password/index.html",
+  "path": "proto/apps/landing/reset-password/index.html",
   "notes": [
    "form; minlength/pattern from stated requirements; match; reveal; steps; art"
   ]
  },
  {
-  "path": "proto/apps/web/verify-email/index.html",
+  "path": "proto/apps/landing/verify-email/index.html",
   "notes": [
    "otp fieldset with advance/paste; resend cooldown; steps; verification-seal art"
   ]
  },
  {
-  "path": "proto/apps/web/verify/index.html",
+  "path": "proto/apps/landing/verify/index.html",
   "notes": [
    "otp form with original prefilled digits; resend; verification-seal art"
   ]
  },
  {
-  "path": "proto/apps/web/verify-document/index.html",
+  "path": "proto/apps/landing/verify-document/index.html",
   "notes": [
    "doc lookup form with local result/format checks; hero art"
   ]
@@ -48,75 +48,75 @@
   ]
  },
  {
-  "path": "proto/apps/web/index.html",
+  "path": "proto/apps/landing/index.html",
   "notes": [
    "delivery-system art; responsive vitals; section reveal"
   ]
  },
  {
-  "path": "proto/apps/web/about/index.html",
+  "path": "proto/apps/landing/about/index.html",
   "notes": [
    "hero art"
   ]
  },
  {
-  "path": "proto/apps/web/portfolio/index.html",
+  "path": "proto/apps/landing/portfolio/index.html",
   "notes": [
    "work art covers; local search + sector filter; unmatched sectors disabled: Retail, Education, Logistics"
   ]
  },
  {
-  "path": "proto/apps/web/work/index.html",
+  "path": "proto/apps/landing/portfolio/index.html",
   "notes": [
    "work art covers + caption"
   ]
  },
  {
-  "path": "proto/apps/web/blog/category/[slug]/index.html",
+  "path": "proto/apps/landing/blog/index.html",
   "notes": [
    "hero art; journal covers; RSS disclosed as not connected"
   ]
  },
  {
-  "path": "proto/apps/web/blog/tag/[slug]/index.html",
+  "path": "proto/apps/landing/blog/index.html",
   "notes": [
    "hero art; journal covers; RSS disclosed as not connected"
   ]
  },
  {
-  "path": "proto/apps/web/blog/bookmarks/index.html",
+  "path": "proto/apps/landing/blog/index.html",
   "notes": [
    "hero art; journal covers; local remove with undo"
   ]
  },
  {
-  "path": "proto/apps/web/terms/index.html",
+  "path": "proto/apps/landing/terms/index.html",
   "notes": [
    "rail anchors + active section; missing: "
   ]
  },
  {
-  "path": "proto/apps/web/privacy/index.html",
+  "path": "proto/apps/landing/privacy/index.html",
   "notes": [
    "rail anchors + active section; missing: Cookies not in this version, Retention not in this version"
   ]
  },
  {
-  "path": "proto/apps/admin/login/index.html",
+  "path": "proto/apps/landing/admin-login/index.html",
   "notes": [
    "operator-console art; reveal; required; local result"
   ]
  },
  {
-  "path": "proto/apps/web/blog/[slug]/index.html",
+  "path": "proto/apps/landing/blog/[slug]/index.html",
   "notes": [
-   "baseline-identical to web/blog/cutting-deploy-time-from-45-minutes-to-five; upgraded output reused"
+   "baseline-identical to landing/blog/[slug]; upgraded output reused"
   ]
  },
  {
-  "path": "proto/apps/web/portfolio/[id]/index.html",
+  "path": "proto/apps/landing/portfolio/[id]/index.html",
   "notes": [
-   "baseline-identical to web/portfolio/fintech-payments-hub; upgraded output reused"
+   "baseline-identical to landing/portfolio/fintech-payments-hub; upgraded output reused"
   ]
  }
 ]

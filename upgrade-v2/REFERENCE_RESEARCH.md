@@ -82,7 +82,7 @@ Initial search-result discovery links (not proof of fetch/render):
 - Exact/final fetched URL: https://ui.shadcn.com/docs/components/base/field (chunk 1 read), 2026-10-14. Status: FETCHED; remote visual inspection not claimed.
 - Observed patterns: label/control association, adjacent descriptions and errors, `aria-invalid`, responsive field layouts, optional semantic field grouping.
 - Applied native subset: original name/email/company/topic/message controls remain, with required semantics, descriptive associations, adjacent validation errors, first-invalid focus and a local-only result. No fieldset was added for unrelated fields; no React/shadcn code or dependency was copied.
-- Target: `proto/apps/web/contact/index.html`, `[data-demo-contact]`, `.field-error`, `studio.js`, `editorial.css`.
+- Target: `proto/apps/landing/contact-alt/index.html`, `[data-demo-contact]`, `.field-error`, `studio.js`, `editorial.css`.
 - Rejected: fabricated submission success, live endpoint, credential/PII persistence, duplicate form on marketing Contact.
 - License: UNKNOWN; conceptual adaptation only, original native implementation.
 - Local evidence: `batch2-browser-qa.json` contact-empty-errors, contact-invalid-email, contact-local-only-result, contact-no-network-or-storage, no-js-contact-submit-disabled; corresponding state captures.

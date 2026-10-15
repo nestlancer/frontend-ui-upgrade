@@ -155,7 +155,7 @@ screenshot_path,proto_path,match,verdict,state_name,trigger_or_url,status,eviden
 
 Rules:
 
-- `surface` is based on page purpose, not only folder name. `proto/apps/admin/login/index.html` is public/auth despite the admin path; web includes client and public pages.
+- `surface` is based on page purpose, not only folder name. `proto/apps/landing/admin-login/index.html` is public/auth despite the admin path; web includes client and public pages.
 - Several screenshots may map to the same HTML. Keep all their state rows while grouping the actual page implementation.
 - Ranking rows do not cover all original HTML. Unranked siblings and concrete-ID/template variants must be inspected too.
 - Baseline hashes make HTML changes checkable. Do not fake page-level progress based solely on shared CSS.
@@ -197,7 +197,7 @@ After a compact reference/design contract, implement:
 2. `proto/apps/landing/index.html` — homepage with a dominant original visual and verified choreography.
 3. `proto/apps/landing/services/index.html` — service-specific visual system and interaction.
 4. `proto/apps/landing/pricing/index.html` — preserve every price/plan value; improve hierarchy, comparison, and genuine existing controls.
-5. `proto/apps/web/login/index.html` — accessible form, public brand/art relationship, working applicable states.
+5. `proto/apps/landing/login/index.html` — accessible form, public brand/art relationship, working applicable states.
 6. Highest-priority nonempty ranking page, deduplicated by path. In the reviewed report this is `proto/apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html` in P1.
 
 Complete real implementation and QA of each selected page before expanding indiscriminately. Do not spend the entire initial turn generating plans and reference tables. If tools/turn limits prevent this full slice, ship fewer complete pages and clearly report the rest as partial.
@@ -382,7 +382,7 @@ At minimum explicitly cover these existing routes; inventory may discover more:
 
 - Web homepage, about, contact, portfolio listing/template/concrete case study, blog listing/template/concrete article, category/tag/bookmark routes where relevant.
 - Login, register, forgot/reset password, verify-email/verify/verify-document, privacy, terms, work, share, and impersonate routes according to their actual purpose.
-- `proto/apps/admin/login/index.html`.
+- `proto/apps/landing/admin-login/index.html`.
 
 Do not assume every `web/` route is a public marketing page. Protect authentication/security intent on utility routes. A shared public style should not accidentally expose client-only content.
 

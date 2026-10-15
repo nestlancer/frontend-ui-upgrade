@@ -6577,7 +6577,7 @@
     ]
   },
   {
-    "page": "proto/apps/admin/login/index.html",
+    "page": "proto/apps/landing/admin-login/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -45206,7 +45206,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/about/index.html",
+    "page": "proto/apps/landing/about/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -45269,7 +45269,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/blog/[slug]/index.html",
+    "page": "proto/apps/landing/blog/[slug]/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -45453,7 +45453,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/blog/bookmarks/index.html",
+    "page": "proto/apps/landing/blog/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -45572,7 +45572,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/blog/category/[slug]/index.html",
+    "page": "proto/apps/landing/blog/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -45691,7 +45691,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html",
+    "page": "proto/apps/landing/blog/[slug]/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -45875,7 +45875,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/blog/index.html",
+    "page": "proto/apps/landing/blog/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -46169,7 +46169,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/blog/tag/[slug]/index.html",
+    "page": "proto/apps/landing/blog/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -46273,7 +46273,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/contact/index.html",
+    "page": "proto/apps/landing/contact-alt/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -46622,7 +46622,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/forgot-password/index.html",
+    "page": "proto/apps/landing/forgot-password/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -46757,7 +46757,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/index.html",
+    "page": "proto/apps/landing/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -47716,7 +47716,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/login/index.html",
+    "page": "proto/apps/landing/login/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -53972,7 +53972,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/portfolio/[id]/index.html",
+    "page": "proto/apps/landing/portfolio/[id]/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -54077,7 +54077,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/portfolio/fintech-payments-hub/index.html",
+    "page": "proto/apps/landing/portfolio/fintech-payments-hub/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -54182,7 +54182,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/portfolio/index.html",
+    "page": "proto/apps/landing/portfolio/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -54372,7 +54372,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/privacy/index.html",
+    "page": "proto/apps/landing/privacy/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -59145,7 +59145,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/register/index.html",
+    "page": "proto/apps/landing/register/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -61194,7 +61194,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/reset-password/index.html",
+    "page": "proto/apps/landing/reset-password/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -63829,7 +63829,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/terms/index.html",
+    "page": "proto/apps/landing/terms/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -63966,7 +63966,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/verify/index.html",
+    "page": "proto/apps/landing/verify/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -64076,7 +64076,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/verify-document/index.html",
+    "page": "proto/apps/landing/verify-document/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -64160,7 +64160,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/verify-email/index.html",
+    "page": "proto/apps/landing/verify-email/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -64253,7 +64253,7 @@
     ]
   },
   {
-    "page": "proto/apps/web/work/index.html",
+    "page": "proto/apps/landing/portfolio/index.html",
     "missing_text": {},
     "missing_business_progress_styles": {},
     "added_text": {
@@ -64396,17 +64396,17 @@
       {
         "attribute": "href",
         "tag": "a",
-        "value": "./apps/web/blog/index.html"
+        "value": "./apps/landing/blog/index.html"
       },
       {
         "attribute": "href",
         "tag": "a",
-        "value": "./apps/web/contact/index.html"
+        "value": "./apps/landing/contact-alt/index.html"
       },
       {
         "attribute": "href",
         "tag": "a",
-        "value": "./apps/web/login/index.html"
+        "value": "./apps/landing/login/index.html"
       },
       {
         "attribute": "href",
@@ -64466,12 +64466,12 @@
       {
         "attribute": "href",
         "tag": "a",
-        "value": "./apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html"
+        "value": "./apps/landing/blog/[slug]/index.html"
       },
       {
         "attribute": "href",
         "tag": "a",
-        "value": "./apps/web/portfolio/fintech-payments-hub/index.html"
+        "value": "./apps/landing/portfolio/fintech-payments-hub/index.html"
       },
       {
         "attribute": "href",

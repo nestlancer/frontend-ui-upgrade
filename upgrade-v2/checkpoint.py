@@ -86,7 +86,7 @@ for j,pg in enumerate(fixqa['pages']):
  p='proto/'+pg['path']
  if p in lane_pages and p not in fixfail:lane_fail.pop(p,None);refixed.add(p)
 b5=json.loads((OUT/'evidence/batch-5-interactions.json').read_text());assert b5 and all(x['pass'] for x in b5)
-ART5={'web/register':'A11','web/forgot-password':'A11','web/reset-password':'A11','web/verify-email':'A12','web/verify':'A12','web/verify-document':'A12','admin/login':'A13','web/impersonate':'A13','web/blog/category/[slug]':'A14;A2;A3;A5;A6;A9;A10','web/blog/tag/[slug]':'A14;A3;A6;A9;A10','web/blog/bookmarks':'A14;A9;A10','web/share/[token]':'A15','web':'A1','web/about':'A7','web/portfolio':'A3;A4;A5;A6','web/work':'A3;A4;A5;A6','web/blog/[slug]':'A9','web/portfolio/[id]':'A6;A10'}
+ART5={'landing/register':'A11','landing/forgot-password':'A11','landing/reset-password':'A11','landing/verify-email':'A12','landing/verify':'A12','landing/verify-document':'A12','landing/admin-login':'A13','web/impersonate':'A13','landing/blog':'A14;A2;A3;A5;A6;A9;A10','landing/blog':'A14;A3;A6;A9;A10','landing/blog':'A14;A9;A10','web/share/[token]':'A15','web':'A1','landing/about':'A7','landing/portfolio':'A3;A4;A5;A6','landing/portfolio':'A3;A4;A5;A6','landing/blog/[slug]':'A9','landing/portfolio/[id]':'A6;A10'}
 def ev(path):
  if path in refixed:
   j=fixidx[path];return f'upgrade-v2/evidence/final-fix-{j}-light-1440.webp;upgrade-v2/evidence/final-fix-{j}-dark-390.webp;upgrade-v2/evidence/final-fix-browser-qa.json'

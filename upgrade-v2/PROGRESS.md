@@ -61,9 +61,9 @@ The earlier run was interrupted during batch 4. Its work arrived as `patch-file/
 - All-page reruns: `validate.py` (188 pages: no missing protected text, no placeholder defects, no issues on changed pages; inherited issues now 203 unlabeled controls / 6 duplicate-ID groups / 1 h1-count) and `regression.cjs` (188 × 390/1440 reduced-motion: 0 errors, 0 overflow).
 
 ## Batch 3: four independently upgraded routes
-- `proto/apps/web/blog/index.html`: keeps its own ten cards and original conflicting totals (filter 110 / rail 106); real local search/category filtering, editorial cover system, semantic heading repair, explicit unavailable pagination/RSS. Source 002 has twelve cards: exact state remains blocked.
-- `proto/apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html`: preserves full prose, code, results and both comments; contents links, synchronized preview bookmarks, copy-link fallback, clear read-only comment controls. Original 8-min metadata differs from source 003's 2-min metadata: exact state blocked.
-- `proto/apps/web/portfolio/fintech-payments-hub/index.html`: preserves all source metrics/contract terms, stronger hero/outcomes hierarchy, original payment-flow gallery, section navigation and explicit local scratchpad/copy. Base case-study state reviewed and verified; original art is not a customer screenshot.
+- `proto/apps/landing/blog/index.html`: keeps its own ten cards and original conflicting totals (filter 110 / rail 106); real local search/category filtering, editorial cover system, semantic heading repair, explicit unavailable pagination/RSS. Source 002 has twelve cards: exact state remains blocked.
+- `proto/apps/landing/blog/[slug]/index.html`: preserves full prose, code, results and both comments; contents links, synchronized preview bookmarks, copy-link fallback, clear read-only comment controls. Original 8-min metadata differs from source 003's 2-min metadata: exact state blocked.
+- `proto/apps/landing/portfolio/fintech-payments-hub/index.html`: preserves all source metrics/contract terms, stronger hero/outcomes hierarchy, original payment-flow gallery, section navigation and explicit local scratchpad/copy. Base case-study state reviewed and verified; original art is not a customer screenshot.
 - `proto/apps/web/messages/inbox/index.html`: compact mailbox navigation, four original searchable/selectable previews, preserved full Riya thread, keyboard focus/return and local-only draft checks. Source 005 shows Samira/two previews, not Ananya/four: exact state blocked.
 
 New optional `content-tools.js` is wired only to these four routes; `inbox.css` only to the inbox. No server calls, simulated sent bubbles or saved account reactions. Original counts are never rewritten from local filtered counts.
@@ -78,7 +78,7 @@ Batch 3 QA: **40 layouts / 16 axe checks**, **12 reduced/no-JS visibility checks
 | `proto/apps/landing/portfolio/[id]/index.html` | Conceptual cover, source outcomes/quote/client hierarchy, section anchors | VERIFIED base template |
 | `proto/apps/landing/blog/index.html` | Editorial feature/covers, labeled local search/category controls, honest unavailable pagination/RSS | VERIFIED base template |
 | `proto/apps/landing/blog/[slug]/index.html` | Deployment sketch, readable article, linked contents, preview-only Like/Bookmark | VERIFIED base template |
-| `proto/apps/web/contact/index.html` | Original fields/default preserved, actual native form, associated errors, first-invalid focus, no-send/no-save result | IMPLEMENTED_UNVERIFIED: source Subject/General differs from existing Topic/New project inquiry |
+| `proto/apps/landing/contact-alt/index.html` | Original fields/default preserved, actual native form, associated errors, first-invalid focus, no-send/no-save result | IMPLEMENTED_UNVERIFIED: source Subject/General differs from existing Topic/New project inquiry |
 
 Three original vectors added: collaboration, correspondence and deployment pipeline. Contact does **not** send a message, upload a file, run Turnstile or save input. Journal filters the 12 supplied cards, not a fabricated 110-record database. Article reactions are nonpersistent and do not alter view/comment counts.
 
@@ -87,7 +87,7 @@ Three original vectors added: collaboration, correspondence and deployment pipel
 - `proto/apps/landing/services/index.html`: original process art, selectable stages, semantic cards/native disclosures.
 - `proto/apps/landing/pricing/index.html`: exact plan values, featured hierarchy, native FAQ/comparison links.
 - `proto/apps/landing/portfolio/index.html`: original cover system, actual-data filters and template disclosure.
-- `proto/apps/web/login/index.html`: labeled required form, password toggle and honest local result.
+- `proto/apps/landing/login/index.html`: labeled required form, password toggle and honest local result.
 - `proto/apps/web/projects/index.html`: real local filters, empty/reset state, compact mobile metrics. Screenshot record unresolved.
 - `proto/apps/admin/payments/01a10a2c-2d0e-7499-b769-967d17a42197/index.html`: responsive source money/context and local review dialog. Two screenshot records unresolved.
 - `proto/index.html`: complete original directory plus upgraded-page quick links (expanded in batch 2).
