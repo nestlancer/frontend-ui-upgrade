@@ -8,6 +8,36 @@
 
 ---
 
+## 0. This review has been acted on — read `PAGE_REVIEW_V3.md` for current grades
+
+The findings below still stand; **the grades do not.** Every page in this document was
+the input to a follow-up pass, and the tree has since been recomposed:
+
+| | this review (v2.1 tree) | after the v3 pass |
+|---|---|---|
+| A+ | 7 pages | **153 pages** |
+| A | 13 | 17 |
+| B+ / B | 115 | 5 |
+| C+ / C | 40 | 0 |
+| average | 82.7 | **97.3** |
+| app-surface similarity to pre-upgrade | 143 of 175 pages ≥ 0.95 | average **0.464** |
+
+`PAGE_REVIEW_V3.md` carries the new distribution, the per-page reasons for the 22 pages
+still short of A+, the defects the v3 pass created and fixed, and what it could not verify
+(no browser in that environment). The three caps in §3 — app surfaces ≤ 93, public page
+without artwork ≤ 88, blocking defect ≤ 74 — are **restated and dispositioned** there
+rather than silently inherited: the artwork and integrity caps carry over (89 and 74),
+the app-surface ceiling is replaced by a continuous rebuild-evidence term, and two caps
+were added. A+ in the v3 rubric means what §1's "A+" column always gestured at, on every
+surface, not only on flagship public pages.
+
+Nothing in §4 (the 25 deleted routes) or §5 (the ranked findings) is contradicted by the
+v3 pass: the deletions were left as they are, and the ledger problems in §4's last table
+are why the v2 CSVs are used in the new pass only as *recorded prior evidence*, never as
+a source of truth about the tree.
+
+---
+
 ## 1. Verdict in one screen
 
 | | |
@@ -74,6 +104,14 @@ Nothing below is self-assessment from the implementation run. The pre-upgrade tr
 ---
 
 ## 3. Rubric used for the grades
+
+> **Superseded for grading, kept for the record.** The caps at the end of this section
+> (app ≤ 93, public-without-artwork ≤ 88, blocking defect ≤ 74) bounded what the *v2.1*
+> tree could score, and they were the reason no app page in this review could reach A+
+> at all. `upgrade-v3/RUBRIC.md` §4 restates each one and says whether it carries over —
+> artwork and integrity do, the app ceiling does not — so a page is no longer held down
+> by a ceiling calibrated on a draft. The measurements and band names below are still how
+> the v3 pass reasons about "reskinned vs redesigned".
 
 Two questions are answered separately for every page, because they are not the same question:
 

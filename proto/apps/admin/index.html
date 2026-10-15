@@ -7,16 +7,30 @@
 <meta content="Nestlancer Nestlancer Admin — operator console screen in the static prototype; sample data only." name="description"/>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../../shared/assets/proto.css">
+<link rel="stylesheet" href="../../shared/assets/nl-v3.css">
+<link rel="stylesheet" href="../../shared/assets/nl-v3-pub.css">
 <script src="../../shared/assets/proto-motion.js"></script>
 <link href="../../shared/assets/nl-v3.css" rel="stylesheet"/><script defer="" src="../../shared/assets/nl-v3.js"></script></head>
 <body data-surface="redirect" class="upgrade-v2 nl-v3" data-page="redirect">
 <a href="#main" class="skip-link">Skip to main content</a>
-<main id="main" tabindex="-1" style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px">
-        <span class="avatar" style="width:46px;height:46px;background:var(--brand-2);color:var(--brand-11);border-radius:12px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></span>
-        <h1 style="margin:0;font-size:var(--fs-body);font-weight:650;letter-spacing:0">Opening command center…</h1>
-        <a class="link" href="./dashboard/index.html">Continue →</a>
-        <script>location.replace("./dashboard/index.html");</script>
-      </main>
+<main class="nl-gate" id="main" tabindex="-1">
+<div class="nl-gate-card">
+<p class="nl-gate-kicker"><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="14"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg> Operator console</p>
+<h1 class="nl-gate-title">Opening the command center</h1>
+<p class="nl-gate-sub">This entry point only forwards signed-in operators to the console dashboard. If you were not sent here, use the operator sign-in instead.</p>
+<div class="nl-gate-prog" role="img" aria-label="Redirect in progress"></div>
+<div class="nl-gate-actions">
+<a class="nl-gate-btn" href="./dashboard/index.html">Continue to dashboard <svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<a class="nl-gate-link" href="../landing/admin-login/index.html">Operator sign-in</a>
+</div>
+<dl class="nl-gate-facts">
+<div><dt>Console</dt><dd>admin · 101 pages</dd></div>
+<div><dt>Requires</dt><dd>ADMIN role · MFA when enrolled</dd></div>
+<div><dt>Prototype</dt><dd>local files · no request sent</dd></div>
+</dl>
+</div>
+<script>location.replace("./dashboard/index.html");</script>
+</main>
 <div class="fab" id="fab">
 <button class="fab-btn" onclick="document.getElementById('fab').classList.toggle('open')" aria-label="Prototype menu"><i class="dot"></i><span>Prototype</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button>
 <div class="fab-menu">

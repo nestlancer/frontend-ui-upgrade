@@ -9,7 +9,7 @@
 <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 14C10 11 16 11 28 7c-1.5 4-4.5 8-9 9.5C15.5 17.7 10.5 17.3 4 14Z' fill='%230B7A71'/%3E%3C/svg%3E" rel="icon"/>
 <link href="./shared/assets/proto.css" rel="stylesheet"/>
 <script src="./shared/assets/proto-motion.js"></script>
-<link href="shared/assets/studio.css" rel="stylesheet"/><script defer="" src="shared/assets/studio.js"></script>
+<link href="shared/assets/studio.css" rel="stylesheet"/><link href="shared/assets/nl-v3.css" rel="stylesheet"/><link href="shared/assets/nl-v3-pub.css" rel="stylesheet"/><script defer="" src="shared/assets/studio.js"></script>
 <style>
   .hub-toc { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 8px; }
   .hub-toc a { font-size:12px; font-family:var(--font-mono); padding:6px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg-card); color:var(--ink-2); }
@@ -28,7 +28,7 @@
   .hub-tag { font-size:11px; font-family:var(--font-mono); color:var(--brand-11); background:var(--brand-1); border:1px solid var(--brand-4); padding:1px 6px; border-radius:5px; }
 </style>
 </head>
-<body class="mkt-body upgrade-v2 hub-v2" data-surface="hub">
+<body class="mkt-body hub-v2 upgrade-v3 nl-v3" data-surface="marketing">
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="mkt-header"><div class="mkt-wrap mkt-nav">
 <a class="brand" href="./apps/landing/index.html"><svg aria-hidden="true" fill="none" height="22" viewBox="0 0 32 32" width="22">
@@ -66,10 +66,10 @@
 <a href="#admin-system">System</a>
 </nav>
 
-<section aria-labelledby="upgrade-heading" class="upgrade-quickstart">
-<h2 class="h3" id="upgrade-heading">Quick open</h2>
-<p class="text-sm muted mt-2">High-signal entry points — full catalogs are grouped by category below.</p>
-<nav aria-label="Quick open" class="upgrade-links">
+<section aria-labelledby="upgrade-heading" class="upgrade-quickstart" id="upgrade-heading-1">
+<h2 class="h3 reveal" id="upgrade-heading">Quick open</h2>
+<p class="text-sm muted mt-2 reveal">High-signal entry points — full catalogs are grouped by category below.</p>
+<nav aria-label="Quick open" class="upgrade-links reveal">
 <a class="btn btn-secondary" href="./apps/landing/index.html">Homepage ↗</a>
 <a class="btn btn-secondary" href="./apps/landing/login/index.html">Client sign-in ↗</a>
 <a class="btn btn-secondary" href="./apps/landing/admin-login/index.html">Operator sign-in ↗</a>
@@ -89,14 +89,14 @@
 
 <!-- ========== LANDING ========== -->
 <section class="hub-surface reveal" id="landing" style="scroll-margin-top:88px">
-<div class="flex items-baseline justify-between mb-2">
-<h2 class="h3" style="display:flex;align-items:center;gap:10px"><i style="width:10px;height:10px;border-radius:3px;background:#0B7A71;display:inline-block"></i>apps/landing — public</h2>
+<div class="flex items-baseline justify-between mb-2 reveal">
+<h2 class="h3" style="display:flex;align-items:center;gap:10px" id="landing-2-h"><i style="width:10px;height:10px;border-radius:3px;background:#0B7A71;display:inline-block"></i>apps/landing — public</h2>
 <span class="mono text-xs dim">21 routes</span>
 </div>
-<p class="text-xs dim" style="margin:0 0 4px">nestlancer.com · marketing, content, legal, and auth</p>
+<p class="text-xs dim reveal" style="margin:0 0 4px">nestlancer.com · marketing, content, legal, and auth</p>
 
-<div class="hub-cat" id="landing-marketing" style="scroll-margin-top:88px"><h3>Marketing</h3><span class="mono text-xs">6</span></div>
-<div class="panel hub-list">
+<div class="hub-cat reveal" id="landing-marketing" style="scroll-margin-top:88px"><h3>Marketing</h3><span class="mono text-xs">6</span></div>
+<div class="panel hub-list reveal">
 <a class="hub-row" href="./apps/landing/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/</code><span class="hub-t">Homepage</span></a>
 <a class="hub-row" href="./apps/landing/about/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/about/</code><span class="hub-t">About</span></a>
 <a class="hub-row" href="./apps/landing/services/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/services/</code><span class="hub-t">Services</span></a>
@@ -105,8 +105,8 @@
 <a class="hub-row" href="./apps/landing/contact-alt/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/contact-alt/</code><span class="hub-t">Contact B</span></a>
 </div>
 
-<div class="hub-cat" id="landing-content" style="scroll-margin-top:88px"><h3>Blog &amp; portfolio</h3><span class="mono text-xs">5</span></div>
-<div class="panel hub-list">
+<div class="hub-cat reveal" id="landing-content" style="scroll-margin-top:88px"><h3>Blog &amp; portfolio</h3><span class="mono text-xs">5</span></div>
+<div class="panel hub-list reveal">
 <a class="hub-row" href="./apps/landing/blog/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/blog/</code><span class="hub-t">Blog list</span></a>
 <a class="hub-row" href="./apps/landing/blog/[slug]/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/blog/[slug]/</code><span class="hub-t">Blog post template</span><span class="hub-tag">[param]</span></a>
 <a class="hub-row" href="./apps/landing/portfolio/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/portfolio/</code><span class="hub-t">Portfolio list</span></a>
@@ -114,16 +114,16 @@
 <a class="hub-row" href="./apps/landing/portfolio/fintech-payments-hub/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/portfolio/fintech-payments-hub/</code><span class="hub-t">Fintech Payments Hub</span></a>
 </div>
 
-<div class="hub-cat" id="landing-legal" style="scroll-margin-top:88px"><h3>Legal &amp; verification</h3><span class="mono text-xs">4</span></div>
-<div class="panel hub-list">
+<div class="hub-cat reveal" id="landing-legal" style="scroll-margin-top:88px"><h3>Legal &amp; verification</h3><span class="mono text-xs">4</span></div>
+<div class="panel hub-list reveal">
 <a class="hub-row" href="./apps/landing/terms/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/terms/</code><span class="hub-t">Terms of Service</span></a>
 <a class="hub-row" href="./apps/landing/privacy/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/privacy/</code><span class="hub-t">Privacy Policy</span></a>
 <a class="hub-row" href="./apps/landing/verify/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/verify/</code><span class="hub-t">Verify email (public)</span></a>
 <a class="hub-row" href="./apps/landing/verify-document/index.html"><span class="hub-dot" style="background:#0B7A71"></span><code class="mono hub-p">/apps/landing/verify-document/</code><span class="hub-t">Verify document</span></a>
 </div>
 
-<div class="hub-cat" id="landing-auth" style="scroll-margin-top:88px"><h3>Auth (public)</h3><span class="mono text-xs">6</span></div>
-<div class="panel hub-list">
+<div class="hub-cat reveal" id="landing-auth" style="scroll-margin-top:88px"><h3>Auth (public)</h3><span class="mono text-xs">6</span></div>
+<div class="panel hub-list reveal">
 <a class="hub-row" href="./apps/landing/login/index.html"><span class="hub-dot" style="background:#8A5A1D"></span><code class="mono hub-p">/apps/landing/login/</code><span class="hub-t">Client sign-in</span></a>
 <a class="hub-row" href="./apps/landing/register/index.html"><span class="hub-dot" style="background:#8A5A1D"></span><code class="mono hub-p">/apps/landing/register/</code><span class="hub-t">Create account</span></a>
 <a class="hub-row" href="./apps/landing/forgot-password/index.html"><span class="hub-dot" style="background:#8A5A1D"></span><code class="mono hub-p">/apps/landing/forgot-password/</code><span class="hub-t">Forgot password</span></a>
@@ -135,8 +135,8 @@
 
 <!-- ========== WEB ========== -->
 <section class="hub-surface reveal" id="web" style="scroll-margin-top:88px">
-<div class="flex items-baseline justify-between mb-2">
-<h2 class="h3" style="display:flex;align-items:center;gap:10px"><i style="width:10px;height:10px;border-radius:3px;background:#02CED1;display:inline-block"></i>apps/web — client portal</h2>
+<div class="flex items-baseline justify-between mb-2 reveal">
+<h2 class="h3" style="display:flex;align-items:center;gap:10px" id="web-3-h"><i style="width:10px;height:10px;border-radius:3px;background:#02CED1;display:inline-block"></i>apps/web — client portal</h2>
 <span class="mono text-xs dim">52 routes</span>
 </div>
 <p class="text-xs dim" style="margin:0 0 4px">app.nestlancer.com · authenticated client surface only</p>
@@ -208,7 +208,7 @@
 <!-- ========== ADMIN ========== -->
 <section class="hub-surface reveal" id="admin" style="scroll-margin-top:88px">
 <div class="flex items-baseline justify-between mb-2">
-<h2 class="h3" style="display:flex;align-items:center;gap:10px"><i style="width:10px;height:10px;border-radius:3px;background:#B65A52;display:inline-block"></i>apps/admin — operator console</h2>
+<h2 class="h3" style="display:flex;align-items:center;gap:10px" id="admin-4-h"><i style="width:10px;height:10px;border-radius:3px;background:#B65A52;display:inline-block"></i>apps/admin — operator console</h2>
 <span class="mono text-xs dim">101 routes</span>
 </div>
 <p class="text-xs dim" style="margin:0 0 4px">admin.nestlancer.com · sign-in is under landing/admin-login</p>
@@ -304,7 +304,7 @@
 </div>
 </section>
 
-</div></main>
+</div><div class="mkt-wrap nl-index-wrap"><p class="nl-index-label">On this page</p><nav class="nl-index nl-toc" aria-label="On this page" role="nav"><a href="#upgrade-heading-1"><span>01</span><div>Quick open<small>High-signal entry points — full catalogs are grouped by category below.</small></div><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#landing"><span>02</span><div>apps/landing — public<small>nestlancer.com · marketing, content, legal, and auth</small></div><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#web"><span>03</span><div>apps/web — client portal<small>app.nestlancer.com · authenticated client surface only</small></div><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#admin"><span>04</span><div>apps/admin — operator console<small>admin.nestlancer.com · sign-in is under landing/admin-login</small></div><svg aria-hidden="true" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></nav></div></main>
 
 <footer class="footer"><div class="mkt-wrap">
 <div class="footer-grid">
@@ -340,6 +340,6 @@
 <div class="fab-sep"></div>
 <button class="fx" data-theme-toggle=""><svg aria-hidden="true" fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24" width="15"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <span>Theme</span> <small data-theme-label="">Light</small></button>
 </div></div>
-<script defer="" src="./shared/assets/ui.js"></script>
+<script defer="" src="./shared/assets/ui.js"></script><script defer="" src="shared/assets/nl-v3.js"></script>
 </body>
 </html>

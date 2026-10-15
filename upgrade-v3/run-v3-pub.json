@@ -1,0 +1,164 @@
+[
+ {
+  "path": "proto/index.html",
+  "changed": true,
+  "notes": [
+   "index-rail(4)",
+   "entrance(14)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/index.html",
+  "changed": true,
+  "notes": [
+   "canonical-nav",
+   "index-rail(5)",
+   "art-marks(1)",
+   "section-numbers(5)",
+   "public-mast",
+   "entrance(1)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/about/index.html",
+  "changed": true,
+  "notes": [
+   "canonical-nav",
+   "index-rail(4)",
+   "art-marks(1)",
+   "section-numbers(3)",
+   "public-mast",
+   "entrance(2)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/services/index.html",
+  "changed": true,
+  "notes": [
+   "canonical-nav",
+   "plans(3)",
+   "art-marks(1)",
+   "section-numbers(1)",
+   "public-mast",
+   "entrance(2)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/pricing/index.html",
+  "changed": true,
+  "notes": [
+   "canonical-nav",
+   "index-rail(3)",
+   "plans(3)",
+   "faq(4)",
+   "hero-art",
+   "section-numbers(2)",
+   "public-mast",
+   "entrance(3)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/portfolio/index.html",
+  "changed": true,
+  "notes": [
+   "meta-description-normalised",
+   "canonical-nav",
+   "section-numbers(1)",
+   "public-mast",
+   "entrance(2)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/portfolio/[id]/index.html",
+  "changed": true,
+  "notes": [
+   "meta-description-normalised",
+   "canonical-nav",
+   "clause-ledger(2)",
+   "art-marks(2)",
+   "public-mast",
+   "entrance(10)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/portfolio/fintech-payments-hub/index.html",
+  "changed": true,
+  "notes": [
+   "meta-description-normalised",
+   "canonical-nav",
+   "clause-ledger(2)",
+   "art-marks(2)",
+   "public-mast",
+   "entrance(10)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/blog/index.html",
+  "changed": true,
+  "notes": [
+   "canonical-nav",
+   "public-mast",
+   "entrance(1)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/blog/[slug]/index.html",
+  "changed": true,
+  "notes": [
+   "canonical-nav",
+   "public-mast",
+   "entrance(6)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/contact/index.html",
+  "changed": true,
+  "notes": [
+   "canonical-nav",
+   "art-marks(1)",
+   "section-numbers(1)",
+   "public-mast",
+   "entrance(2)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/contact-alt/index.html",
+  "changed": true,
+  "notes": [
+   "meta-description-normalised",
+   "canonical-nav",
+   "art-marks(1)",
+   "public-mast",
+   "topic-radios",
+   "entrance(2)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/terms/index.html",
+  "changed": true,
+  "notes": [
+   "meta-description-normalised",
+   "canonical-nav",
+   "clause-ledger(8)",
+   "index-rail(8)",
+   "hero-art",
+   "section-numbers(1)",
+   "public-mast",
+   "entrance(11)"
+  ]
+ },
+ {
+  "path": "proto/apps/landing/privacy/index.html",
+  "changed": true,
+  "notes": [
+   "meta-description-normalised",
+   "canonical-nav",
+   "clause-ledger(6)",
+   "index-rail(6)",
+   "hero-art",
+   "section-numbers(1)",
+   "public-mast",
+   "entrance(11)"
+  ]
+ }
+]

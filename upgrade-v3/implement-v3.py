@@ -271,6 +271,7 @@ def build_mast(main: Node, ctx: dict) -> Node:
             break
     mast = el("header", [("class", "nl-mast reveal")])
     left = el("div", [("class", "nl-mast-l")])
+    ctx["mast_left"] = left
     right = el("div", [("class", "nl-mast-r")])
     head = None
     tabs = None
@@ -311,13 +312,12 @@ def build_mast(main: Node, ctx: dict) -> Node:
     kicker.append(frag('<span class="nl-kicker-line" aria-hidden="true"></span>'))
     left.append(kicker)
 
-    if title is None and main.find("h1") is not None:
-        # the page already owns an <h1> further down (chat headers do); the mast
-        # must not mint a second one, so it stays a kicker + facts band.
+    deep_h1 = main.find("h1")
+    if title is None and deep_h1 is not None:
+        # the page already owns an <h1> further down and it is genuinely first;
+        # the mast must not mint a second one, so it stays a kicker + facts band.
         ctx["mast_title"] = "h1-lower"
-        title = main.find("h1")
-        ctx["title_id"] = title.attr("id")
-        title = None
+        ctx["title_id"] = deep_h1.attr("id")
     elif title is None:
         tid = ctx["ids"].next("nl-t")
         left.append(frag(f'<h1 class="nl-title" id="{tid}">{esc(ctx["page_title"])}</h1>'))
@@ -417,6 +417,54 @@ def classify(main: Node, path: str) -> str:
     return "detail"
 
 
+def fix_heading_order(main: Node, ctx: dict) -> None:
+    """Last pass: the page must open on a single <h1>.
+
+    Chat- and review-style pages let a pane label hold the only <h1>, which ends
+    up under a section heading once the ledger is built. The pane label keeps its
+    text, classes and id and becomes an <h2>; the masthead title is minted from
+    the document <title>, so the page has exactly one h1 and it comes first.
+    """
+    fh = first_heading(main)
+    if fh is None or fh.tag == "h1":
+        return
+    deep = main.find("h1")
+    if deep is None:
+        return
+    retag(deep, "h2")
+    ctx["notes"].append("heading-order: pane <h1> demoted, masthead title minted from <title>")
+    left = ctx.get("mast_left")
+    if left is not None and left.find("h1") is None:
+        tid = ctx["ids"].next("nl-t")
+        node = el("h1", [("class", "nl-title"), ("id", tid)])
+        node.children = [esc(ctx["page_title"])]
+        left.children.insert(min(1, len(left.children)), node)
+        ctx["title_id"] = tid
+
+
+def first_heading(node: Node) -> Node | None:
+    """First heading element in document order, skipping non-rendered subtrees."""
+    def walk(n: Node):
+        for c in n.child_elements():
+            if c.tag in ("h1", "h2", "h3", "h4", "h5", "h6"):
+                return c
+            if c.tag not in ("script", "style", "template", "noscript"):
+                got = walk(c)
+                if got is not None:
+                    return got
+        return None
+    return walk(node)
+
+
+def _contains(node: Node, other: Node) -> bool:
+    cur = other.parent
+    while cur is not None:
+        if cur is node:
+            return True
+        cur = cur.parent
+    return False
+
+
 def panel_to_card(panel: Node, ctx: dict, sec_id: str) -> str | None:
     """Converts a .panel into article.nl-card. Returns the card's title text.
 
@@ -433,6 +481,13 @@ def panel_to_card(panel: Node, ctx: dict, sec_id: str) -> str | None:
     if head is not None:
         title_node = head.find(None, "panel-title") or head.find("h2") or head.find("h3") or head.find("h4")
         sub_node = head.find(None, "panel-sub")
+        if title_node is None and ctx.get("mast_title") == "h1-lower":
+            # on pane-style pages (chat, review) the page's own <h1> is the name of
+            # the surface; adopt it as this card's title instead of minting a second
+            # heading above it, which would break heading order.
+            own = panel.find("h1")
+            if own is not None and _contains(head, own) is False:
+                title_node = own
         title_text = title_node.text_flat() if title_node is not None else "Details"
         tools_src = [c for c in head.child_elements()
                      if c is not title_node and c is not sub_node and c is not (title_node.parent if title_node else None)]
@@ -805,6 +860,7 @@ def recompose(main: Node, ctx: dict):
     root.append(body)
     root.append(build_strip(ctx, len(sections)))
     main.append(root)
+    fix_heading_order(main, ctx)
     ctx["sections"] = len(sections)
     return True
 
@@ -997,6 +1053,7 @@ def process(path: str, dry=False) -> dict:
         "kind": "detail",
         "cards": 0,
         "rows": 0,
+        "notes": rec["notes"],
     }
     m = re.search(r'<div class="stats[^"]*"', text)
     if m:

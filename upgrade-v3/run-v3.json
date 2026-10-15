@@ -1053,7 +1053,9 @@
  {
   "path": "proto/apps/web/messages/[conversationId]/index.html",
   "changed": true,
-  "notes": [],
+  "notes": [
+   "heading-order: pane <h1> demoted, masthead title minted from <title>"
+  ],
   "lost_tokens": [],
   "cards": 0,
   "rows": 0,

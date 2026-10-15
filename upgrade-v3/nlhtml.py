@@ -69,6 +69,18 @@ class Node:
         add = f' {name}="{value}"' if value is not None else f" {name}"
         self.open_raw = f"<{tagname}{attrs}{add}{sc}>"
 
+    def del_attr(self, name):
+        """Remove an attribute from the opening tag. No-op when absent."""
+        m = re.match(r"^<([^>\s]+)(.*?)(/?)>$", self.open_raw, re.S)
+        if not m:
+            return
+        tagname, attrs, sc = m.group(1), m.group(2), m.group(3)
+        for am in ATTR_RE.finditer(attrs):
+            if am.group("name").lower() == name.lower():
+                attrs = attrs[:am.start()] + attrs[am.end():]
+                self.open_raw = f"<{tagname}{attrs}{sc}>"
+                return
+
     def set_attrs(self, pairs):
         for name, value in pairs:
             self.set_attr(name, value)

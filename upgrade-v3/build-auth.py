@@ -183,8 +183,29 @@ def flow(items: list[tuple[str, str, str, str]]) -> str:
     return f'<ul class="nl-auth-flow" role="list">{out}</ul>'
 
 
+PREVIEW = (
+    '<details class="nl-auth-preview"><summary>Project Hub preview</summary>'
+    '<div class="nl-auth-win"><div class="nl-auth-win-top">'
+    '<i style="background:#F7675D"></i><i style="background:#F5B544"></i><i style="background:#37C262"></i>'
+    '<span>project-hub · NL-204</span><b>68%</b></div>'
+    '<div class="nl-auth-win-bd">'
+    '<p class="nl-auth-eyebrow" style="margin:0">NL-204 · Milestone 3</p>'
+    '<p class="nl-auth-win-t">Frontend — SaaS Landing Redesign</p>'
+    '<p class="nl-auth-win-tags"><span class="badge tone-info">In progress</span>'
+    '<span class="badge tone-success">Deposit paid</span><b>₹48,000</b></p>'
+    '<div class="nl-auth-prog" role="img" aria-label="Milestone progress: 68 percent complete"><i style="width:68%"></i></div>'
+    '<ul class="nl-auth-feed" role="list">'
+    '<li><span class="nl-auth-av">NL</span><span><b>Staging build pushed</b>'
+    '<span>14 min ago · deliverable linked</span></span></li>'
+    '<li><span class="nl-auth-av" style="background:#F3E8D7;color:#8A5A1D">RH</span>'
+    '<span><b>Rahul: Hero CTA above the fold?</b><span>1h ago · thread</span></span></li>'
+    '</ul></div></div></details>'
+)
+
+
 def signal(brand_href: str, eyebrow: str, head: str, sub: str, ledger: list[tuple[str, str, str]],
-           art: tuple[str, str, str], status: str, words: list[str], facts: list[str] | None = None) -> str:
+           art: tuple[str, str, str], status: str, words: list[str], facts: list[str] | None = None,
+           preview: bool = False) -> str:
     led = "".join(
         f'<li><span class="nl-al-i">{n}</span><span>{t}</span><span class="nl-al-t">{k}</span></li>'
         for n, t, k in ledger
@@ -203,9 +224,10 @@ def signal(brand_href: str, eyebrow: str, head: str, sub: str, ledger: list[tupl
         f'<div class="nl-auth-seal" aria-hidden="true">{seal(words)}</div>'
         '<div>'
         f'<ul class="nl-auth-ledger" role="list">{led}</ul>{fc}'
-        f'<figure class="nl-auth-art"><img alt="{alt}" decoding="async" height="{ah}" loading="lazy" src="{ASSET}/art/{src}" width="{aw}"/>'
+        f'<figure class="nl-auth-art" data-nl-art="plate"><img alt="{alt}" decoding="async" height="{ah}" loading="lazy" src="{ASSET}/art/{src}" width="{aw}"/>'
         f'<figcaption>{cap}</figcaption></figure>'
         f'<p class="nl-auth-status"><span class="dot"></span>{status}</p>'
+        + (PREVIEW if preview else "") +
         '</div></aside>'
     )
 
@@ -213,7 +235,7 @@ def signal(brand_href: str, eyebrow: str, head: str, sub: str, ledger: list[tupl
 def card(kicker: str, ico: str, title: str, lede: str, body: str, foot: str, note: str = "") -> str:
     nt = f'<p class="nl-auth-note">{note}</p>' if note else ""
     return (
-        '<section class="nl-auth-card">'
+        '<section class="nl-auth-card reveal">'
         f'<header class="nl-auth-card-hd"><p class="nl-auth-kicker">{icon(ico)}{kicker}</p>'
         f'<h1>{title}</h1><p>{lede}</p></header>'
         f'<div class="nl-auth-card-bd">{body}{nt}</div>'
@@ -226,7 +248,13 @@ def result(id_: str) -> str:
 
 
 def dock(page: str) -> str:
-    """The prototype dock, kept identical to the marketing pages so surfaces stay cross-linked."""
+    """The prototype dock, shared verbatim with the rest of the marketing surface
+    (upgrade-v3/auth-dock.html holds the same markup the v2 pages carry, so the
+    cross-surface jump list and the theme switch stay identical everywhere)."""
+    shared = os.path.join(os.path.dirname(os.path.abspath(__file__)), "auth-dock.html")
+    if os.path.exists(shared):
+        html = open(shared, encoding="utf-8").read().strip()
+        return html
     l = (
         f'<a class="fx" href="../../../index.html">{icon("grid")} Sign-off hub <small>hub</small></a>'
         f'<a class="fx" href="../index.html">{icon("globe")} Marketing — nestlancer.com <small>9020</small></a>'
@@ -236,7 +264,7 @@ def dock(page: str) -> str:
     return (
         '<div class="fab" id="fab">'
         '<button aria-label="Prototype menu" class="fab-btn" type="button" '
-        'onclick="document.getElementById(\'fab\').classList.toggle(\'open\')">'
+        "onclick=\"document.getElementById('fab').classList.toggle('open')\">"
         f'<i class="dot"></i><span>Prototype</span>{icon("arrow")}</button>'
         '<div class="fab-menu"><div class="fab-lab">Jump to surface</div>' + l +
         '<div class="fab-sep"></div><div class="fab-lab">This page</div>'
@@ -272,7 +300,8 @@ TPL = """<!DOCTYPE html>
 <div class="nl-auth-body{body_class}">
 {signal}
 <main class="nl-auth-main" id="main" tabindex="-1">
-<div class="nl-auth-stage">{steps_}
+<div class="nl-auth-stage reveal">
+{steps_}
 {card_}
 {extra}</div>
 <footer class="nl-auth-foot">
@@ -312,7 +341,7 @@ def login() -> dict:
          ("03", "Razorpay / UPI — tabular money, deposits and payouts clear.", "RAIL")],
         ("work-workspace.svg", "Illustrative client workspace with project panels.",
          "Illustrative workspace · local prototype"),
-        "Client portal surface · prototype build", ["sign-in", "client"],
+        "Client portal surface · prototype build", ["sign-in", "client"], preview=True,
         facts=["No account exists in this prototype — sign-in never authenticates.",
                "Operators and administrators use the operator console, not this page."],
     )
@@ -415,7 +444,7 @@ def register() -> dict:
          ("03", "A live Project Hub your stakeholders can actually read.", "HUB")],
         ("studio-collaboration.svg", "Illustrative collaboration board with project cards.",
          "Illustrative account setup · local prototype"),
-        "Client portal · registration is local only", ["register", "client"],
+        "Client portal · registration is local only", ["register", "client"], preview=True,
         facts=["Password policy: 12 characters, mixed case, a number and a symbol.",
                "Verification runs on this page — no email leaves the browser."],
     )
@@ -474,7 +503,7 @@ def forgot_password() -> dict:
          ("03", "Sign-ins after a reset require a fresh device trust prompt.", "TRUST")],
         ("studio-correspondence.svg", "Illustrative message threads with reply panels.",
          "Illustrative account recovery · local prototype"),
-        "No mail is sent by this prototype", ["recovery", "reset"],
+        "No mail is sent by this prototype", ["recovery", "reset"], preview=True,
         facts=["If the address exists in our records, mail heads your way.",
                "Nothing arrives in 2 minutes? Check spam, then the allowlist note below."],
     )
@@ -518,7 +547,7 @@ def reset_password() -> dict:
          ("03", "Resetting signs the other sessions out.", "SESSIONS")],
         ("account-access.svg", "Illustrative account security panel with access rules.",
          "Illustrative password reset · local prototype"),
-        "Link verified · expires in 28 minutes", ["fresh", "password"],
+        "Link verified · expires in 28 minutes", ["fresh", "password"], preview=True,
         facts=["Reset links are single-use; reopening one asks for a fresh request.",
                "The old password stays in no log, on no clipboard, in no field."],
     )
@@ -564,7 +593,7 @@ def verify_email() -> dict:
          ("03", "Wrong address? Change it before you re-request.", "FIX")],
         ("delivery-process.svg", "Illustrative delivery pipeline with status stages.",
          "Illustrative verification · local prototype"),
-        "Code expires in 14:32", ["verify", "email"],
+        "Code expires in 14:32", ["verify", "email"], preview=True,
         facts=["Paste works: the six boxes spread themselves.",
                "Nothing is emailed; this prototype has no mail transport."],
     )
@@ -661,8 +690,17 @@ def verify_document() -> dict:
         + '<p class="nl-auth-help" data-doc-status="" id="doc-status" role="status" tabindex="-1">Prototype lookup: only <b>NL-INV-2026-000008</b> is included in this sample. No request is sent; checks run in this browser.</p>'
         + "</form>"
     )
+    how = ('<div class="nl-auth-pre"><h2 class="nl-auth-pre-t">' + icon("doc")
+           + 'How a reference is checked</h2>' + flow([
+               ("", "1", "Find the reference",
+                "It lives in the footer of the PDF and in your portal under Billing → Invoices."),
+               ("", "2", "We re-hash the file",
+                "The stored copy is hashed at issue; any tampering breaks verification."),
+               ("", "3", "Report mismatches",
+                "A failed check goes straight to a human auditor, not a log file."),
+           ]) + "</div>")
     proof = (
-        '<section aria-labelledby="doc-result-h" class="nl-auth-proof" data-doc-ref="NL-INV-2026-000008" id="doc-result">'
+        '<section aria-labelledby="doc-result-h" class="nl-auth-proof reveal" data-doc-ref="NL-INV-2026-000008" id="doc-result">'
         '<header class="nl-auth-proof-hd">' + icon("check")
         + '<span id="doc-result-h">Authentic · issued by Nestlancer</span>'
         '<span class="badge tone-success" style="margin-left:auto">Verified</span></header>'
@@ -696,7 +734,7 @@ def verify_document() -> dict:
                   body, '<p class="nl-auth-switch">Need your own documents? <a href="../index.html">Back to the studio</a></p>'
                         '<a class="nl-auth-alt" href="../contact/index.html">' + icon("mail") + " Report a mismatch</a>",
                   "References are printed in the document footer and listed in your portal under Billing → Invoices."),
-        extra=proof,
+        extra=how + proof,
         footnav='<a href="../index.html">Home</a><a href="../login/index.html">Sign in</a>'
                 '<a href="../terms/index.html">Terms</a><a href="../privacy/index.html">Privacy</a>',
         stamp="prototype lookup · in-browser",

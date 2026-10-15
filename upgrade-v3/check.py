@@ -27,6 +27,7 @@ from nlhtml import parse  # noqa: E402
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
         "param", "source", "track", "wbr"}
+NAV_LABELS = ["Home", "Portfolio", "Services", "Pricing", "Blog", "About", "Contact"]
 INLINE_SCRIPT_RE = re.compile(r"<script\b(?![^>]*\bsrc=)", re.I)
 
 ARIA_IDREF = {"aria-labelledby", "aria-describedby", "aria-controls", "aria-flowto", "aria-owns"}
@@ -146,6 +147,26 @@ def check_page(abs_path: str, css_classes: set, css_vars: set) -> dict:
                 tgt_txt = open(resolved, encoding="utf-8", errors="ignore").read() if os.path.isfile(resolved) else ""
                 if f'id="{frag}"' not in tgt_txt:
                     out["errors"].append(f"broken fragment: {target}{m.group(2)}")
+    # ---- the shared marketing nav: one link set, distinct targets, one current item.
+    # A site-wide nav is the easiest thing in a batch pass to quietly flatten —
+    # rewriting hrefs to one prefix still resolves, so nothing else notices.
+    nav = re.search(r'<nav\b[^>]*aria-label="Primary[^"]*"[^>]*>(.*?)</nav>', scope, re.S)
+    if nav is not None and "apps/landing/" in path:
+        items = re.findall(r"<a\b([^>]*)>(.*?)</a>", nav.group(1), re.S)
+        labels = [re.sub(r"<[^>]+>", "", inner).strip() for _attrs, inner in items]
+        if labels != NAV_LABELS:
+            out["errors"].append(f"primary nav labels: {labels}")
+        targets, current = [], 0
+        for attrs, _inner in items:
+            hm = re.search(r'href="([^"]*)"', attrs)
+            targets.append(os.path.normpath(os.path.join(os.path.dirname(abs_path), hm.group(1))) if hm else "")
+            if "aria-current" in attrs:
+                current += 1
+        if len(set(targets)) != len(targets):
+            out["errors"].append("primary nav: two links share one target")
+        if current > 1:
+            out["errors"].append(f"primary nav marks {current} links as current")
+
     # inline scripts must not have been corrupted
     for sm in INLINE_SCRIPT_RE.finditer(scope):
         seg = scope[sm.start():sm.start() + 1200]

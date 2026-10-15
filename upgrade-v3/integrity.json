@@ -99,8 +99,8 @@
   "path": "proto/apps/admin/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 6521,
-  "text_len": 309,
+  "bytes": 7311,
+  "text_len": 601,
   "headings": 1
  },
  {
@@ -811,47 +811,47 @@
   "path": "proto/apps/landing/about/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 15956,
-  "text_len": 2257,
+  "bytes": 18369,
+  "text_len": 2711,
   "headings": 17
  },
  {
   "path": "proto/apps/landing/admin-login/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 14595,
-  "text_len": 1966,
+  "bytes": 16762,
+  "text_len": 2073,
   "headings": 2
  },
  {
   "path": "proto/apps/landing/blog/[slug]/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 14723,
-  "text_len": 3100,
+  "bytes": 15077,
+  "text_len": 3097,
   "headings": 13
  },
  {
   "path": "proto/apps/landing/blog/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 22346,
-  "text_len": 3663,
+  "bytes": 22788,
+  "text_len": 3660,
   "headings": 18
  },
  {
   "path": "proto/apps/landing/contact-alt/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 13172,
-  "text_len": 1449,
+  "bytes": 13841,
+  "text_len": 1466,
   "headings": 7
  },
  {
   "path": "proto/apps/landing/contact/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 15532,
+  "bytes": 15824,
   "text_len": 2414,
   "headings": 7
  },
@@ -859,120 +859,120 @@
   "path": "proto/apps/landing/forgot-password/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 12462,
-  "text_len": 1621,
+  "bytes": 15687,
+  "text_len": 1963,
   "headings": 1
  },
  {
   "path": "proto/apps/landing/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 31090,
-  "text_len": 5047,
+  "bytes": 34291,
+  "text_len": 5590,
   "headings": 9
  },
  {
   "path": "proto/apps/landing/login/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 13528,
-  "text_len": 1593,
+  "bytes": 16763,
+  "text_len": 1945,
   "headings": 1
  },
  {
   "path": "proto/apps/landing/portfolio/[id]/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 15220,
-  "text_len": 2529,
+  "bytes": 15872,
+  "text_len": 2552,
   "headings": 11
  },
  {
   "path": "proto/apps/landing/portfolio/fintech-payments-hub/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 15220,
-  "text_len": 2529,
+  "bytes": 15858,
+  "text_len": 2552,
   "headings": 11
  },
  {
   "path": "proto/apps/landing/portfolio/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 19900,
-  "text_len": 2863,
+  "bytes": 20382,
+  "text_len": 2883,
   "headings": 14
  },
  {
   "path": "proto/apps/landing/pricing/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 20472,
-  "text_len": 3380,
+  "bytes": 22910,
+  "text_len": 3901,
   "headings": 9
  },
  {
   "path": "proto/apps/landing/privacy/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 13988,
-  "text_len": 3138,
+  "bytes": 15592,
+  "text_len": 3132,
   "headings": 11
  },
  {
   "path": "proto/apps/landing/register/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 16544,
-  "text_len": 1906,
+  "bytes": 19776,
+  "text_len": 2255,
   "headings": 1
  },
  {
   "path": "proto/apps/landing/reset-password/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 13774,
-  "text_len": 1737,
+  "bytes": 17000,
+  "text_len": 2080,
   "headings": 1
  },
  {
   "path": "proto/apps/landing/services/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 19375,
-  "text_len": 2115,
+  "bytes": 20452,
+  "text_len": 2272,
   "headings": 8
  },
  {
   "path": "proto/apps/landing/terms/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 14454,
-  "text_len": 3269,
+  "bytes": 16453,
+  "text_len": 3291,
   "headings": 13
  },
  {
   "path": "proto/apps/landing/verify-document/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 13765,
-  "text_len": 1931,
-  "headings": 1
+  "bytes": 16951,
+  "text_len": 2339,
+  "headings": 2
  },
  {
   "path": "proto/apps/landing/verify-email/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 13250,
-  "text_len": 1627,
+  "bytes": 16478,
+  "text_len": 1972,
   "headings": 1
  },
  {
   "path": "proto/apps/landing/verify/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 12533,
-  "text_len": 1409,
+  "bytes": 14705,
+  "text_len": 1521,
   "headings": 1
  },
  {
@@ -1010,12 +1010,10 @@
  {
   "path": "proto/apps/web/messages/[conversationId]/index.html",
   "errors": [],
-  "warns": [
-   "first heading is h2"
-  ],
-  "bytes": 32930,
-  "text_len": 2329,
-  "headings": 11
+  "warns": [],
+  "bytes": 32980,
+  "text_len": 2341,
+  "headings": 12
  },
  {
   "path": "proto/apps/web/messages/archived/index.html",
@@ -1397,8 +1395,8 @@
   "path": "proto/index.html",
   "errors": [],
   "warns": [],
-  "bytes": 47882,
-  "text_len": 7407,
+  "bytes": 49852,
+  "text_len": 7760,
   "headings": 21
  }
 ]
