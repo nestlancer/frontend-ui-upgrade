@@ -1,0 +1,877 @@
+{
+ "apps_admin_analytics": [
+  0.997,
+  1.0,
+  0.991
+ ],
+ "apps_admin_api-keys": [
+  0.997,
+  1.0,
+  0.999
+ ],
+ "apps_admin_audit": [
+  0.984,
+  0.818,
+  0.966
+ ],
+ "apps_admin_contact": [
+  0.968,
+  0.909,
+  null
+ ],
+ "apps_admin_content_blog__id_": [
+  1.0,
+  1.0,
+  0.932
+ ],
+ "apps_admin_content_blog_new": [
+  1.0,
+  1.0,
+  0.986
+ ],
+ "apps_admin_content_blog_post-custom-crm": [
+  1.0,
+  1.0,
+  0.998
+ ],
+ "apps_admin_content": [
+  0.978,
+  0.667,
+  0.99
+ ],
+ "apps_admin_content_posts_01a10a2a-361c-758f-a218-fb673fd3b9d2_edit": [
+  1.0,
+  1.0,
+  0.951
+ ],
+ "apps_admin_content_posts__id__edit": [
+  1.0,
+  1.0,
+  0.932
+ ],
+ "apps_admin_content_posts_new": [
+  1.0,
+  1.0,
+  0.983
+ ],
+ "apps_admin_dashboard": [
+  0.941,
+  0.875,
+  0.905
+ ],
+ "apps_admin": [
+  0.941,
+  0.875,
+  0.906
+ ],
+ "apps_admin_integrations": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_media_analytics": [
+  1.0,
+  1.0,
+  0.999
+ ],
+ "apps_admin_media_browse": [
+  0.909,
+  0.6,
+  null
+ ],
+ "apps_admin_media_folders": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_media": [
+  0.978,
+  1.0,
+  0.99
+ ],
+ "apps_admin_media_quarantine": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_media_storage": [
+  1.0,
+  1.0,
+  0.996
+ ],
+ "apps_admin_media_upload": [
+  1.0,
+  1.0,
+  0.99
+ ],
+ "apps_admin_messages__id_": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_messages_archived": [
+  0.978,
+  0.571,
+  null
+ ],
+ "apps_admin_messages_inbox": [
+  0.997,
+  1.0,
+  null
+ ],
+ "apps_admin_messages": [
+  1.0,
+  1.0,
+  0.996
+ ],
+ "apps_admin_messages_new-direct": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_messages_new-group": [
+  1.0,
+  1.0,
+  0.993
+ ],
+ "apps_admin_messages_new_direct": [
+  1.0,
+  1.0,
+  0.998
+ ],
+ "apps_admin_messages_new_group": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_messages_new": [
+  1.0,
+  1.0,
+  0.996
+ ],
+ "apps_admin_messages_project__projectId_": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a": [
+  1.0,
+  1.0,
+  0.999
+ ],
+ "apps_admin_messages_thread__threadId_": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_messages_threads": [
+  0.96,
+  0.6,
+  null
+ ],
+ "apps_admin_moderation": [
+  0.994,
+  0.923,
+  0.988
+ ],
+ "apps_admin_notifications": [
+  0.993,
+  0.706,
+  0.996
+ ],
+ "apps_admin_payments_01a10a2c-2d0e-7499-b769-967d17a42197": [
+  0.99,
+  1.0,
+  0.915
+ ],
+ "apps_admin_payments__id_": [
+  1.0,
+  1.0,
+  0.989
+ ],
+ "apps_admin_payments_accounts": [
+  1.0,
+  1.0,
+  0.98
+ ],
+ "apps_admin_payments_company-legal": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_payments_disputes": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_payments": [
+  0.966,
+  0.737,
+  0.973
+ ],
+ "apps_admin_payments_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924": [
+  1.0,
+  1.0,
+  0.972
+ ],
+ "apps_admin_payments_projects__id_": [
+  1.0,
+  1.0,
+  0.972
+ ],
+ "apps_admin_payments_projects_nl-lms": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_pipeline": [
+  0.985,
+  1.0,
+  0.981
+ ],
+ "apps_admin_pipeline_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924": [
+  1.0,
+  1.0,
+  0.983
+ ],
+ "apps_admin_pipeline_projects__id_": [
+  1.0,
+  1.0,
+  0.984
+ ],
+ "apps_admin_pipeline_projects": [
+  0.963,
+  0.667,
+  0.978
+ ],
+ "apps_admin_pipeline_projects_nl-lms": [
+  1.0,
+  1.0,
+  0.994
+ ],
+ "apps_admin_pipeline_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b": [
+  0.993,
+  0.933,
+  0.99
+ ],
+ "apps_admin_pipeline_users__id_": [
+  0.993,
+  0.923,
+  0.987
+ ],
+ "apps_admin_pipeline_users": [
+  0.974,
+  0.667,
+  0.979
+ ],
+ "apps_admin_pipeline_users_priya-nair": [
+  0.991,
+  1.0,
+  0.974
+ ],
+ "apps_admin_portfolio_01a10a2a-544e-757a-8806-721a7b8591dd_edit": [
+  1.0,
+  1.0,
+  0.996
+ ],
+ "apps_admin_portfolio__id__edit": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_portfolio_banking-dashboard.edit": [
+  1.0,
+  1.0,
+  0.998
+ ],
+ "apps_admin_portfolio": [
+  0.974,
+  1.0,
+  0.991
+ ],
+ "apps_admin_portfolio_new": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_profile": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_projects_01a10a2b-5eaa-769e-a5d9-0d58fcca6924": [
+  1.0,
+  1.0,
+  0.995
+ ],
+ "apps_admin_projects__id_": [
+  0.997,
+  0.889,
+  0.991
+ ],
+ "apps_admin_projects_archive": [
+  0.967,
+  0.571,
+  null
+ ],
+ "apps_admin_projects_completed": [
+  0.979,
+  0.571,
+  null
+ ],
+ "apps_admin_projects": [
+  0.943,
+  0.727,
+  null
+ ],
+ "apps_admin_projects_new": [
+  1.0,
+  1.0,
+  0.994
+ ],
+ "apps_admin_projects_nl-lms": [
+  0.947,
+  1.0,
+  0.925
+ ],
+ "apps_admin_projects_stats": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_admin_quotes__id_": [
+  1.0,
+  1.0,
+  0.996
+ ],
+ "apps_admin_quotes_drafts": [
+  0.993,
+  1.0,
+  null
+ ],
+ "apps_admin_quotes": [
+  0.904,
+  1.0,
+  null
+ ],
+ "apps_admin_quotes_new": [
+  1.0,
+  1.0,
+  0.975
+ ],
+ "apps_admin_quotes_payment-schedules": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_quotes_stats": [
+  1.0,
+  1.0,
+  0.974
+ ],
+ "apps_admin_requests_01a10a2c-01c3-7079-93e9-9d001541ced8_quote_new": [
+  0.792,
+  1.0,
+  0.991
+ ],
+ "apps_admin_requests_01a10a2c-1a04-75bb-8e80-fc143257fa02": [
+  1.0,
+  1.0,
+  0.995
+ ],
+ "apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_edit": [
+  1.0,
+  1.0,
+  0.994
+ ],
+ "apps_admin_requests_6a4110f3-1507-769c-99d0-253425f8a1_quote_new": [
+  1.0,
+  1.0,
+  0.992
+ ],
+ "apps_admin_requests__id_": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "apps_admin_requests__id__quote_edit": [
+  1.0,
+  1.0,
+  0.993
+ ],
+ "apps_admin_requests__id__quote_new": [
+  1.0,
+  1.0,
+  0.99
+ ],
+ "apps_admin_requests_capacity": [
+  1.0,
+  1.0,
+  0.995
+ ],
+ "apps_admin_requests": [
+  0.982,
+  0.714,
+  0.99
+ ],
+ "apps_admin_system_announcements": [
+  0.964,
+  1.0,
+  0.977
+ ],
+ "apps_admin_system_cache": [
+  0.997,
+  1.0,
+  0.963
+ ],
+ "apps_admin_system_email-templates": [
+  1.0,
+  1.0,
+  0.998
+ ],
+ "apps_admin_system_features": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_admin_system_health": [
+  1.0,
+  1.0,
+  0.933
+ ],
+ "apps_admin_system": [
+  0.998,
+  0.889,
+  0.995
+ ],
+ "apps_admin_system_jobs": [
+  0.994,
+  1.0,
+  0.983
+ ],
+ "apps_admin_system_logs": [
+  0.983,
+  0.667,
+  null
+ ],
+ "apps_admin_system_maintenance": [
+  1.0,
+  1.0,
+  0.986
+ ],
+ "apps_admin_system_notification-templates": [
+  0.958,
+  0.909,
+  null
+ ],
+ "apps_admin_system_staff": [
+  0.997,
+  1.0,
+  0.975
+ ],
+ "apps_admin_users_01a10a2a-a99a-7578-825a-c7de8bce4d2b": [
+  0.998,
+  1.0,
+  0.996
+ ],
+ "apps_admin_users__id_": [
+  0.998,
+  1.0,
+  0.993
+ ],
+ "apps_admin_users_arjun-mehta": [
+  0.997,
+  1.0,
+  0.988
+ ],
+ "apps_admin_users": [
+  0.961,
+  0.6,
+  null
+ ],
+ "apps_admin_users_search": [
+  0.993,
+  1.0,
+  0.994
+ ],
+ "apps_landing_about": [
+  0.722,
+  0.6,
+  0.845
+ ],
+ "apps_landing_admin-login": [
+  0.953,
+  1.0,
+  0.563
+ ],
+ "apps_landing_blog__slug_": [
+  0.612,
+  1.0,
+  0.85
+ ],
+ "apps_landing_blog": [
+  0.652,
+  1.0,
+  null
+ ],
+ "apps_landing_contact-alt": [
+  0.901,
+  1.0,
+  0.901
+ ],
+ "apps_landing_contact": [
+  0.83,
+  1.0,
+  0.823
+ ],
+ "apps_landing_forgot-password": [
+  0.852,
+  0.6,
+  null
+ ],
+ "apps_landing": [
+  0.736,
+  0.167,
+  0.927
+ ],
+ "apps_landing_login": [
+  0.903,
+  0.8,
+  null
+ ],
+ "apps_landing_portfolio__id_": [
+  0.141,
+  0.5,
+  0.854
+ ],
+ "apps_landing_portfolio_fintech-payments-hub": [
+  0.81,
+  0.5,
+  0.937
+ ],
+ "apps_landing_portfolio": [
+  0.302,
+  0.667,
+  null
+ ],
+ "apps_landing_pricing": [
+  0.866,
+  0.75,
+  0.62
+ ],
+ "apps_landing_privacy": [
+  0.953,
+  1.0,
+  0.974
+ ],
+ "apps_landing_register": [
+  0.918,
+  0.4,
+  null
+ ],
+ "apps_landing_reset-password": [
+  0.884,
+  0.4,
+  null
+ ],
+ "apps_landing_services": [
+  0.9,
+  1.0,
+  0.921
+ ],
+ "apps_landing_terms": [
+  0.984,
+  1.0,
+  0.959
+ ],
+ "apps_landing_verify-document": [
+  0.933,
+  1.0,
+  null
+ ],
+ "apps_landing_verify-email": [
+  0.794,
+  0.615,
+  null
+ ],
+ "apps_landing_verify": [
+  0.75,
+  1.0,
+  null
+ ],
+ "apps_web_dashboard": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_web_invoices_NL-INV-2026-000009": [
+  1.0,
+  1.0,
+  0.996
+ ],
+ "apps_web_invoices__id_": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "apps_web_invoices": [
+  0.984,
+  0.667,
+  null
+ ],
+ "apps_web_messages__conversationId_": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_messages_archived": [
+  0.974,
+  0.571,
+  null
+ ],
+ "apps_web_messages_inbox": [
+  0.898,
+  0.4,
+  null
+ ],
+ "apps_web_messages": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_messages_new_direct": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_messages_new": [
+  1.0,
+  1.0,
+  0.994
+ ],
+ "apps_web_messages_thread_01a10a2e-42f8-70c9-95f7-0d05d4fd738a": [
+  1.0,
+  1.0,
+  0.996
+ ],
+ "apps_web_messages_thread__threadId_": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_messages_threads": [
+  0.943,
+  0.6,
+  null
+ ],
+ "apps_web_notifications": [
+  0.958,
+  0.727,
+  0.974
+ ],
+ "apps_web_payments_01a10a2c-2d0e-7499-b769-967d17a42197": [
+  1.0,
+  1.0,
+  0.997
+ ],
+ "apps_web_payments_01a10a2c-5d1c-73fa-8a13-ae6621f9c1c2": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "apps_web_payments_01a10a2c-5d1c-73fa-8a13-b5a4b5e610a5": [
+  1.0,
+  1.0,
+  0.999
+ ],
+ "apps_web_payments__id_": [
+  1.0,
+  1.0,
+  0.999
+ ],
+ "apps_web_payments": [
+  0.958,
+  0.75,
+  null
+ ],
+ "apps_web_payments_invoice_NL-INV-2026-000008": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_payments_invoice__id_": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_payments_invoices": [
+  0.951,
+  0.6,
+  null
+ ],
+ "apps_web_payments_methods": [
+  1.0,
+  1.0,
+  0.988
+ ],
+ "apps_web_profile_edit": [
+  1.0,
+  1.0,
+  0.986
+ ],
+ "apps_web_profile": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "apps_web_projects_01a10a2c-5cfb-71fa-854b-d88f4481e3e8": [
+  1.0,
+  1.0,
+  0.998
+ ],
+ "apps_web_projects__id_": [
+  0.961,
+  1.0,
+  0.983
+ ],
+ "apps_web_projects_archive": [
+  0.959,
+  0.571,
+  null
+ ],
+ "apps_web_projects_completed": [
+  0.975,
+  0.571,
+  null
+ ],
+ "apps_web_projects": [
+  0.932,
+  0.833,
+  null
+ ],
+ "apps_web_projects_new": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_projects_nl-lms": [
+  0.961,
+  1.0,
+  0.983
+ ],
+ "apps_web_quotes_01a10f80-e01a-4d90-bd1c-86a026ad71f9": [
+  1.0,
+  1.0,
+  0.994
+ ],
+ "apps_web_quotes__id_": [
+  1.0,
+  1.0,
+  0.989
+ ],
+ "apps_web_quotes_drafts": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_quotes": [
+  0.914,
+  0.667,
+  null
+ ],
+ "apps_web_quotes_new": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_quotes_templates": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_requests_01a10a2c-530e-7354-b21b-f5ecdab54f7a": [
+  1.0,
+  1.0,
+  0.992
+ ],
+ "apps_web_requests_4b8110f3-1d0e-4f8c-a111-3e0a1": [
+  1.0,
+  1.0,
+  0.987
+ ],
+ "apps_web_requests__id_": [
+  1.0,
+  1.0,
+  0.987
+ ],
+ "apps_web_requests_archive": [
+  0.933,
+  0.545,
+  null
+ ],
+ "apps_web_requests": [
+  0.926,
+  0.875,
+  null
+ ],
+ "apps_web_requests_new": [
+  1.0,
+  1.0,
+  0.989
+ ],
+ "apps_web_settings_account": [
+  1.0,
+  1.0,
+  0.982
+ ],
+ "apps_web_settings_activity": [
+  0.953,
+  1.0,
+  0.941
+ ],
+ "apps_web_settings_billing": [
+  1.0,
+  1.0,
+  0.974
+ ],
+ "apps_web_settings_files": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "apps_web_settings": [
+  1.0,
+  1.0,
+  null
+ ],
+ "apps_web_settings_notifications": [
+  1.0,
+  1.0,
+  0.992
+ ],
+ "apps_web_settings_security": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "apps_web_settings_sessions": [
+  0.994,
+  1.0,
+  0.997
+ ],
+ "index.html": [
+  0.08,
+  1.0,
+  0.944
+ ]
+}

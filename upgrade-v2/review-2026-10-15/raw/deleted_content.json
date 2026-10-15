@@ -1,0 +1,235 @@
+{
+ "apps/admin/login/index.html": {
+  "text_len": 1607,
+  "tokens": 2,
+  "missing_tokens": [],
+  "missing_n": 0
+ },
+ "apps/web/about/index.html": {
+  "text_len": 1211,
+  "tokens": 4,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/blog/[slug]/index.html": {
+  "text_len": 5603,
+  "tokens": 9,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign",
+   "Like Bookmark Arjun Mehta"
+  ],
+  "missing_n": 2
+ },
+ "apps/web/blog/bookmarks/index.html": {
+  "text_len": 1068,
+  "tokens": 7,
+  "missing_tokens": [
+   "Five Saved Oct",
+   "Freelance Marketplace Architecture Saved Oct",
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 3
+ },
+ "apps/web/blog/category/[slug]/index.html": {
+  "text_len": 1734,
+  "tokens": 14,
+  "missing_tokens": [
+   "Bookmarks Case Studies",
+   "Compliance Platform Rebuild Nestlancer Editorial",
+   "Five Nestlancer Editorial",
+   "Freelance Marketplace Architecture Nestlancer Editorial",
+   "Home About Work Blog Contact Sign",
+   "Kubernetes Migration Cost Analysis Nestlancer Editorial",
+   "Order Management Nestlancer Editorial",
+   "Region Deployment Case Study Nestlancer Editorial",
+   "Search Features Nestlancer Editorial",
+   "Versioning Without Breaking Mobile Clients Nestlancer Editorial"
+  ],
+  "missing_n": 10
+ },
+ "apps/web/blog/cutting-deploy-time-from-45-minutes-to-five/index.html": {
+  "text_len": 5603,
+  "tokens": 9,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign",
+   "Like Bookmark Arjun Mehta"
+  ],
+  "missing_n": 2
+ },
+ "apps/web/blog/index.html": {
+  "text_len": 2379,
+  "tokens": 16,
+  "missing_tokens": [
+   "Compliance Platform Rebuild Migrating",
+   "Compliance Platform Rebuild Nestlancer Editorial",
+   "Featured Cutting Deploy Time",
+   "Freelance Marketplace Architecture Nestlancer Editorial",
+   "Home About Work Blog Contact Sign",
+   "Incident Response Culture Nestlancer Editorial",
+   "Kubernetes Migration Cost Analysis Nestlancer Editorial",
+   "Order Management Nestlancer Editorial",
+   "Region Deployment Case Study Nestlancer Editorial",
+   "Search Features Nestlancer Editorial",
+   "Versioning Without Breaking Mobile Clients Nestlancer Editorial"
+  ],
+  "missing_n": 11
+ },
+ "apps/web/blog/tag/[slug]/index.html": {
+  "text_len": 1431,
+  "tokens": 10,
+  "missing_tokens": [
+   "Compliance Platform Rebuild Nestlancer Editorial",
+   "Five Nestlancer Editorial",
+   "Freelance Marketplace Architecture Nestlancer Editorial",
+   "Home About Work Blog Contact Sign",
+   "Search Features Nestlancer Editorial",
+   "Versioning Without Breaking Mobile Clients Nestlancer Editorial"
+  ],
+  "missing_n": 6
+ },
+ "apps/web/contact/index.html": {
+  "text_len": 1175,
+  "tokens": 6,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/forgot-password/index.html": {
+  "text_len": 1240,
+  "tokens": 4,
+  "missing_tokens": [],
+  "missing_n": 0
+ },
+ "apps/web/impersonate/index.html": {
+  "text_len": 1186,
+  "tokens": 6,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign",
+   "Nair Learning Systems Started Oct"
+  ],
+  "missing_n": 2
+ },
+ "apps/web/index.html": {
+  "text_len": 1697,
+  "tokens": 5,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign",
+   "Nair Learning Systems Dashboard"
+  ],
+  "missing_n": 2
+ },
+ "apps/web/login/index.html": {
+  "text_len": 1294,
+  "tokens": 4,
+  "missing_tokens": [],
+  "missing_n": 0
+ },
+ "apps/web/portfolio/[id]/index.html": {
+  "text_len": 2023,
+  "tokens": 8,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/portfolio/fintech-payments-hub/index.html": {
+  "text_len": 2023,
+  "tokens": 8,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/portfolio/index.html": {
+  "text_len": 2546,
+  "tokens": 15,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/privacy/index.html": {
+  "text_len": 3016,
+  "tokens": 6,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/register/index.html": {
+  "text_len": 1344,
+  "tokens": 4,
+  "missing_tokens": [],
+  "missing_n": 0
+ },
+ "apps/web/reset-password/index.html": {
+  "text_len": 1280,
+  "tokens": 3,
+  "missing_tokens": [],
+  "missing_n": 0
+ },
+ "apps/web/share/[token]/index.html": {
+  "text_len": 1366,
+  "tokens": 14,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign",
+   "Patel Digital Agency Prepared",
+   "Qty Amount Design",
+   "sh_b18f7c\u20264d21",
+   "\u20b93,90,000.00",
+   "\u20b94,60,200.00",
+   "\u20b960,000.00",
+   "\u20b970,200.00",
+   "\u20b990,000.00"
+  ],
+  "missing_n": 9
+ },
+ "apps/web/terms/index.html": {
+  "text_len": 3293,
+  "tokens": 6,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/verify-document/index.html": {
+  "text_len": 1656,
+  "tokens": 10,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/verify-email/index.html": {
+  "text_len": 1230,
+  "tokens": 3,
+  "missing_tokens": [],
+  "missing_n": 0
+ },
+ "apps/web/verify/index.html": {
+  "text_len": 876,
+  "tokens": 4,
+  "missing_tokens": [
+   "Home About Work Blog Contact Sign"
+  ],
+  "missing_n": 1
+ },
+ "apps/web/work/index.html": {
+  "text_len": 1938,
+  "tokens": 14,
+  "missing_tokens": [
+   "Analytics Platform Oct",
+   "Brand Identity System Oct",
+   "Commerce Mobile App Oct",
+   "Fintech Payments Hub Oct",
+   "Fitness Tracking App Oct",
+   "Home About Work Blog Contact Sign",
+   "Marketplace Redesign Oct",
+   "Tech Dashboard Oct"
+  ],
+  "missing_n": 8
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "apps_admin_dashboard": {
+  "before_h": 540,
+  "after_h": 540,
+  "diff_pct_full": 7.15
+ },
+ "apps_admin_users": {
+  "before_h": 540,
+  "after_h": 540,
+  "diff_pct_full": 6.23
+ },
+ "apps_admin_media": {
+  "before_h": 540,
+  "after_h": 540,
+  "diff_pct_full": 9.21
+ },
+ "apps_admin_system": {
+  "before_h": 540,
+  "after_h": 540,
+  "diff_pct_full": 6.71
+ },
+ "apps_admin_payments": {
+  "before_h": 540,
+  "after_h": 540,
+  "diff_pct_full": 10.43
+ }
+}

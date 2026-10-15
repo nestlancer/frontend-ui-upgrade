@@ -1,0 +1,180 @@
+{
+ "apps/landing/login/index.html": {
+  "old": "apps/web/login/index.html",
+  "old_text": 1294,
+  "new_text": 1427,
+  "old_sentences": 13,
+  "carried": 12,
+  "missing_sentences": [
+   "Sign in Staff or platform operator?"
+  ],
+  "missing_count": 1,
+  "new_sentences": 3,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/register/index.html": {
+  "old": "apps/web/register/index.html",
+  "old_text": 1344,
+  "new_text": 1555,
+  "old_sentences": 13,
+  "carried": 11,
+  "missing_sentences": [
+   "First name * Last name * Email * Password * Confirm password * I agree to the Terms of Service and Privacy Policy",
+   "Sign up Administrator and operator accounts are issued by your team \u2014 this form is only for new client accounts"
+  ],
+  "missing_count": 2,
+  "new_sentences": 6,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/forgot-password/index.html": {
+  "old": "apps/web/forgot-password/index.html",
+  "old_text": 1240,
+  "new_text": 1443,
+  "old_sentences": 12,
+  "carried": 10,
+  "missing_sentences": [
+   "We&#39;ll send a secure reset link valid for 30 minutes",
+   "Email * Send reset link If the address exists in our records, mail headed your way \u2014 check spam if nothing arrives in 2 minutes"
+  ],
+  "missing_count": 2,
+  "new_sentences": 6,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/reset-password/index.html": {
+  "old": "apps/web/reset-password/index.html",
+  "old_text": 1280,
+  "new_text": 1495,
+  "old_sentences": 12,
+  "carried": 11,
+  "missing_sentences": [
+   "New password * Confirm new password * Password requirements 10+ characters One uppercase &amp; one number Not your email name Not a breached password (k-Anonymity check) Update password &amp; sign in Cancel \u2014 I remembered it Terms \u00b7"
+  ],
+  "missing_count": 1,
+  "new_sentences": 5,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/verify-email/index.html": {
+  "old": "apps/web/verify-email/index.html",
+  "old_text": 1230,
+  "new_text": 1448,
+  "old_sentences": 13,
+  "carried": 12,
+  "missing_sentences": [
+   "Verify &amp; continue Code expires in 14:32 Resend code Used a work email?"
+  ],
+  "missing_count": 1,
+  "new_sentences": 4,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/verify/index.html": {
+  "old": "apps/web/verify/index.html",
+  "old_text": 876,
+  "new_text": 1050,
+  "old_sentences": 8,
+  "carried": 6,
+  "missing_sentences": [
+   "Home About Work Blog Contact Sign in Start a project Verify your email We sent a 6-digit code to ananya.iyer@nestlancer.com",
+   "Verify email Code expires in 14:32 \u00b7"
+  ],
+  "missing_count": 2,
+  "new_sentences": 4,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/verify-document/index.html": {
+  "old": "apps/web/verify-document/index.html",
+  "old_text": 1656,
+  "new_text": 1835,
+  "old_sentences": 15,
+  "carried": 14,
+  "missing_sentences": [
+   "Home About Work Blog Contact Sign in Start a project TRUST Verify a Nestlancer document Every quote, contract, invoice, and receipt we issue carries a public reference"
+  ],
+  "missing_count": 1,
+  "new_sentences": 5,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/terms/index.html": {
+  "old": "apps/web/terms/index.html",
+  "old_text": 3293,
+  "new_text": 3327,
+  "old_sentences": 31,
+  "carried": 26,
+  "missing_sentences": [
+   "Home About Work Blog Contact Sign in Start a project LEGAL Terms of Service The contract that governs the public site and the client portal",
+   "Quotes & payments Quotes are fixed-price and valid for the period shown on them (typically 10 days)",
+   "Delivery & acceptance Deliverables are accepted through the portal's approval gates",
+   "Quotes & payments Quotes are fixed-price and valid for the period shown on them (typically 10 days)",
+   "Delivery & acceptance Deliverables are accepted through the portal's approval gates"
+  ],
+  "missing_count": 5,
+  "new_sentences": 5,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/privacy/index.html": {
+  "old": "apps/web/privacy/index.html",
+  "old_text": 3016,
+  "new_text": 3170,
+  "old_sentences": 29,
+  "carried": 28,
+  "missing_sentences": [
+   "Home About Work Blog Contact Sign in Start a project LEGAL Privacy Policy How Nestlancer Studio Private Limited collects, uses, and protects personal data"
+  ],
+  "missing_count": 1,
+  "new_sentences": 1,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/admin-login/index.html": {
+  "old": "apps/admin/login/index.html",
+  "old_text": 1607,
+  "new_text": 1775,
+  "old_sentences": 21,
+  "carried": 20,
+  "missing_sentences": [
+   "Sign in to console Staff only"
+  ],
+  "missing_count": 1,
+  "new_sentences": 4,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/contact-alt/index.html": {
+  "old": "apps/web/contact/index.html",
+  "old_text": 1175,
+  "new_text": 1367,
+  "old_sentences": 9,
+  "carried": 8,
+  "missing_sentences": [
+   "Home About Work Blog Contact Sign in Start a project CONTACT Talk to the studio"
+  ],
+  "missing_count": 1,
+  "new_sentences": 3,
+  "fields_old": [],
+  "fields_new": []
+ },
+ "apps/landing/portfolio/fintech-payments-hub/index.html": {
+  "old": "apps/web/portfolio/fintech-payments-hub/index.html",
+  "old_text": 2023,
+  "new_text": 2567,
+  "old_sentences": 19,
+  "carried": 15,
+  "missing_sentences": [
+   "Home About Work Blog Contact Sign in Start a project PORTFOLIO \u00b7",
+   "PAYFLOW LENDING 1 view \u2665 Like FINTECH PAYMENTS HUB 42% fewer settlement errors \u20b96.2Cr reconciled monthly 11 days UAT \u2192 production 0 findings in last audit OVERVIEW What we shipped Unified payouts and reconciliation for a lending platform",
+   "Fintech Tech stack NestJS PostgreSQL RabbitMQ Razorpay Interested in similar work?",
+   "Start a similar project Nestlancer"
+  ],
+  "missing_count": 4,
+  "new_sentences": 10,
+  "fields_old": [],
+  "fields_new": []
+ }
+}

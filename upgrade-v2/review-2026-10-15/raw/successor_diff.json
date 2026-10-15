@@ -1,0 +1,50 @@
+{
+ "apps_landing_login": {
+  "old": "apps_web_login",
+  "diff_pct": 16.39
+ },
+ "apps_landing_register": {
+  "old": "apps_web_register",
+  "diff_pct": 16.27
+ },
+ "apps_landing_forgot-password": {
+  "old": "apps_web_forgot-password",
+  "diff_pct": 15.57
+ },
+ "apps_landing_reset-password": {
+  "old": "apps_web_reset-password",
+  "diff_pct": 16.53
+ },
+ "apps_landing_verify-email": {
+  "old": "apps_web_verify-email",
+  "diff_pct": 17.38
+ },
+ "apps_landing_verify": {
+  "old": "apps_web_verify",
+  "diff_pct": 9.97
+ },
+ "apps_landing_verify-document": {
+  "old": "apps_web_verify-document",
+  "diff_pct": 9.49
+ },
+ "apps_landing_terms": {
+  "old": "apps_web_terms",
+  "diff_pct": 6.65
+ },
+ "apps_landing_privacy": {
+  "old": "apps_web_privacy",
+  "diff_pct": 5.98
+ },
+ "apps_landing_admin-login": {
+  "old": "apps_admin_login",
+  "diff_pct": 19.9
+ },
+ "apps_landing_contact-alt": {
+  "old": "apps_web_contact",
+  "diff_pct": 12.96
+ },
+ "apps_landing_portfolio_fintech-payments-hub": {
+  "old": "apps_web_portfolio_fintech-payments-hub",
+  "diff_pct": 41.2
+ }
+}
