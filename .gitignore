@@ -9,3 +9,6 @@ tools/proto/grade/scores2.json
 tools/proto/grade/render.json
 tools/proto/grade/render_partial.json
 tools/proto/upgrade/coverage.json
+
+
+verified-backups/
