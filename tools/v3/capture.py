@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-Nestlancer v3 capture tool — renders proto pages to PNG at 1440x900 and 390x844.
+Nestlancer v3 capture tool — renders prototype/ pages to PNG at 1440x900 and 390x844.
+
+Isolation: v3 work lives under prototype/ only. Never capture or edit proto/.
 
 Usage:
-  python3 tools/v3/capture.py --surface landing --out upgrade-v3/public/baseline
+  python3 tools/v3/capture.py --surface public --out upgrade-v3/public/baseline
   python3 tools/v3/capture.py --surface web     --out upgrade-v3/client/after
-  python3 tools/v3/capture.py --paths admin/dashboard admin/requests --out upgrade-v3/admin/after
+  python3 tools/v3/capture.py --paths public/about web/dashboard --out upgrade-v3/spot
   python3 tools/v3/capture.py --surface admin --theme dark --out upgrade-v3/admin/after-dark
 
 Options:
@@ -18,8 +20,14 @@ Setup (once per sandbox):
 import argparse, asyncio, glob, os, sys
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-APPS = os.path.join(REPO, "proto", "apps")
+PROTO_ROOT = os.path.join(REPO, "prototype")
+# CLI surface → directory under prototype/
+SURFACE_DIR = {"public": "public", "landing": "public", "web": "web", "admin": "admin"}
 VIEWPORTS = [(1440, 900), (390, 844)]
+
+
+def surface_root(surface):
+    return os.path.join(PROTO_ROOT, SURFACE_DIR[surface])
 
 
 def page_list(surface, paths):
@@ -27,10 +35,19 @@ def page_list(surface, paths):
         out = []
         for p in paths:
             p = p.strip("/").replace("/index.html", "")
+            # accept legacy "landing/…" as "public/…"
+            if p == "landing" or p.startswith("landing/"):
+                p = "public" + p[len("landing"):]
             out.append(p)
         return out
-    files = sorted(glob.glob(os.path.join(APPS, surface, "**", "index.html"), recursive=True))
-    return [os.path.relpath(os.path.dirname(f), APPS) for f in files]
+    root = surface_root(surface)
+    label = SURFACE_DIR[surface]
+    files = sorted(glob.glob(os.path.join(root, "**", "index.html"), recursive=True))
+    rels = []
+    for f in files:
+        sub = os.path.relpath(os.path.dirname(f), root)
+        rels.append(label if sub == "." else os.path.join(label, sub))
+    return rels
 
 
 def slug(rel):
@@ -53,7 +70,7 @@ async def run(pages, out, full, theme):
             errors = []
             page.on("pageerror", lambda e: errors.append(str(e)))
             for rel in pages:
-                f = os.path.join(APPS, rel, "index.html")
+                f = os.path.join(PROTO_ROOT, rel, "index.html")
                 if not os.path.exists(f):
                     print("MISSING", rel, file=sys.stderr); continue
                 await page.goto("file://" + f, wait_until="load")
@@ -73,7 +90,7 @@ async def run(pages, out, full, theme):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--surface", choices=["landing", "web", "admin"])
+    ap.add_argument("--surface", choices=["public", "landing", "web", "admin"])
     ap.add_argument("--paths", nargs="*")
     ap.add_argument("--out", required=True)
     ap.add_argument("--full", action="store_true")

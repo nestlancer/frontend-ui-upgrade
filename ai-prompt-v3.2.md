@@ -3,11 +3,93 @@
 **File:** `ai-prompt-v3.2.md` · **Part 3 of 3** · Previous: `ai-prompt-v3.md` (public), `ai-prompt-v3.1.md` (client)
 **Repo:** https://github.com/nestlancer/frontend-ui-upgrade.git
 **Read before coding:** `verified-backups/direction.md` (§2, §4 admin column, §5 Ⓒ) → `research/LINEAR_UI_RESEARCH.md` → this file.
-**Scope:** `proto/apps/admin/**` (101 pages). `landing/admin-login` belongs to v3 (public). Do **not** edit landing or client HTML. Reuse shared `assets/v3/`; admin rules only in `nl-admin.css`.
+**Scope:** `prototype/admin/**` (101 pages). `prototype/public/admin-login` belongs to v3 (public). Do **not** edit `prototype/public/**`, `prototype/web/**`, or **anything under `proto/`**. Reuse shared `prototype/shared/assets/v3/` (tokens/base/theme only); admin rules only in `prototype/admin/assets/nl-admin.css`.
 
-> **Run:** "Execute `ai-prompt-v3.2.md`. Rebuild every admin page to the v3 Linear-teal operator system, pass all gates in `tools/v3/gate.py`, update `PAGE_REVIEW.md`, commit per family, push."
+> **Run:** "Execute `ai-prompt-v3.2.md`. Seed `prototype/admin/` from `proto/apps/admin/` if needed, rebuild every admin page under `prototype/admin/` to the v3 Linear-teal operator system, pass all gates in `tools/v3/gate.py`, update `PAGE_REVIEW.md`, commit per family, push."
 
 ---
+
+## Isolation — work only under `prototype/` (non-negotiable)
+
+`proto/` is the live shared tree: public/landing HTML, the client dashboard, and the admin console all load the same `proto/shared/assets/*` (CSS + JS). Editing public pages or shared stylesheets there breaks client and admin.
+
+**Therefore:**
+
+| Rule | Detail |
+|---|---|
+| **Write only** | `prototype/**` |
+| **Never edit** | anything under `proto/` (HTML, CSS, JS, fonts, art) |
+| **Never link** | prototype pages must not `href`/`src` into `proto/` — only `prototype/shared/` |
+| **Seed once** | copy from `proto/` into `prototype/`, then redesign the copy |
+| **Shared v3** | Only cross-surface files in `prototype/shared/assets/v3/` (tokens, base, theme JS). Surface CSS/JS live under each surface's `assets/` |
+
+### Tree (create exactly this)
+
+```
+prototype/
+  index.html                 # optional hub (was proto/index.html)
+  public/                    # was proto/apps/landing/**  → ai-prompt-v3.md
+    assets/
+      nl-public.css          # public-only layouts, hero, auth, marketing motion
+      nl-public.js           # public-only behaviour (optional; omit if unused)
+  web/                       # was proto/apps/web/**      → ai-prompt-v3.1.md
+    assets/
+      nl-client.css          # client shell + archetypes only
+      nl-client.js           # client-only behaviour (optional)
+  admin/                     # was proto/apps/admin/**    → ai-prompt-v3.2.md
+    assets/
+      nl-admin.css           # admin shell + archetypes only
+      nl-admin.js            # admin-only behaviour (optional)
+  shared/
+    assets/
+      v3/
+        nl-tokens.css        # SHARED — light/dark tokens + legacy remap
+        nl-base.css          # SHARED — reset, type, focus, primitives (btn, input, table…)
+        nl-v3.js             # SHARED — theme helpers only (+ tiny cross-surface utils)
+      fonts/                 # SHARED — Geist (used by all surfaces)
+      art/                   # only art used by ≥2 surfaces; else keep under the surface
+      proto.css, ui.js, …    # seeded COPIES for fallback/behaviour — patch only these copies
+```
+
+
+### Shared vs surface-specific assets (do not dump everything in `shared/`)
+
+`shared/` is **only** for things that truly apply to **all three** surfaces (public + client + admin). If something is unique to one surface, keep it under that surface — never park it in `shared/` "just in case."
+
+| Goes in `prototype/shared/` | Stays on the surface (`public/` · `web/` · `admin/`) |
+|---|---|
+| Theme system: light / dark tokens, `data-theme`, theme toggle helpers | Public home hero animation, scroll-reveal, marketing nav sheet |
+| Design tokens + base primitives used by every surface (`nl-tokens.css`, `nl-base.css`) | Client shell, bento dashboard, quote-paper layout (`nl-client.css`) |
+| Fonts used across surfaces; art reused by ≥2 surfaces | Admin table density, ⌘K palette chrome, view-bar filters (`nl-admin.css`) |
+| Tiny shared JS: theme boot/read, copy-ID, focus helpers (`nl-v3.js` shared core only) | Surface-only JS: public motion, client sidebar collapse UX, admin peek panel |
+
+**Examples**
+- ✅ Theme (dark/light) → `shared/assets/v3/` — one system, all three surfaces.
+- ✅ Button / input / status primitives → `shared/assets/v3/nl-base.css`.
+- ❌ Public homepage-specific animation → `prototype/public/assets/nl-public.css` (and/or `nl-public.js`), **not** shared.
+- ❌ Client billing strip or admin 36px table rows → surface CSS only.
+- ❌ Do **not** put `nl-public.css` + `nl-client.css` + `nl-admin.css` logic into one mega shared stylesheet. Each surface loads **only** its own surface file plus the shared tokens/base.
+
+**Rule of thumb:** if removing a file would break only one surface, it does not belong in `shared/`.
+
+
+### Seed protocol (Phase 0, before baseline / before any redesign)
+
+If `prototype/` is missing or this surface is not seeded yet:
+
+```bash
+mkdir -p prototype
+# shared once — do not overwrite files already seeded by another surface
+rsync -a --ignore-existing proto/shared/ prototype/shared/
+# this surface only (admin ← operator console)
+rsync -a proto/apps/admin/ prototype/admin/
+cp -n proto/index.html prototype/index.html 2>/dev/null || true
+```
+
+Then **rewrite asset paths** in the seeded HTML. Under `proto/apps/<surface>/` links were `../../shared/` (or deeper). Under `prototype/public|web|admin/` there is no `apps/` level — every `../` chain to `shared/` is **one level shorter** (e.g. `../../shared/` → `../shared/`, `../../../shared/` → `../../shared/`). Fix with a script across the seeded surface. Confirm no page still points at `proto/`.
+
+`tools/v3` already roots at `prototype/`. Gates use `--surface public|web|admin` (alias: `landing` → `public`).
+
 
 ## 0. Read this first — why earlier runs "changed nothing"
 
@@ -71,21 +153,33 @@ Formula (direction.md §5 Ⓒ): **256px collapsible sidebar · 4–6 KPI strip �
 
 ## 4. The Nestlancer v3 design system ("Linear-teal"), shared by all three surfaces
 
-> **Single source of truth.** `proto/shared/assets/v3/nl-tokens.css` and `nl-base.css` are shared by public, client and admin.
-> **If they already exist** (another v3 prompt ran first): **do not rewrite or fork them.** Diff against the spec below and only *add* what's missing. Surface-specific rules go in your surface file only.
+> **Single source of truth for cross-surface design:** `prototype/shared/assets/v3/nl-tokens.css` and `nl-base.css` (theme + primitives).
+> **If they already exist** (another v3 prompt ran first): **do not rewrite or fork them.** Diff against the spec below and only *add* what's missing.
+> **Surface-specific rules** go only in that surface's own file under `prototype/{public|web|admin}/assets/` — never into shared tokens/base.
 
 ### 4.1 File architecture (create exactly this)
 
+> **Shared folder = cross-surface only.** Surface CSS/JS live under `prototype/{public|web|admin}/assets/`. See § Isolation → *Shared vs surface-specific*.
+
 ```
-proto/shared/assets/v3/
-  nl-tokens.css    # tokens (light + dark) + LEGACY TOKEN REMAP (shared)
+prototype/shared/assets/v3/          # SHARED only (all 3 surfaces)
+  nl-tokens.css    # tokens (light + dark) + LEGACY TOKEN REMAP
   nl-base.css      # reset, type, focus, primitives: btn, input, select, field, status, badge,
                    # table, list-row, card, kbd, tabs, chip, empty, skeleton, toast, dialog,
-                   # avatar, progress, kpi, disclosure (shared)
-  nl-public.css    # public marketing + auth layouts            (v3   / ai-prompt-v3.md)
-  nl-client.css    # client portal shell + archetypes           (v3.1 / ai-prompt-v3.1.md)
-  nl-admin.css     # operator console shell + archetypes        (v3.2 / ai-prompt-v3.2.md)
-  nl-v3.js         # per-surface theme, sidebar collapse, ⌘K, scroll-reveal, row-link, copy (shared)
+                   # avatar, progress, kpi, disclosure
+  nl-v3.js         # theme boot helpers, per-surface theme key, copy-ID, focus — NO surface-only motion
+
+prototype/public/assets/             # PUBLIC only (v3)
+  nl-public.css    # marketing + auth layouts, hero, bento, public motion
+  nl-public.js     # optional public-only scripts
+
+prototype/web/assets/                # CLIENT only (v3.1)
+  nl-client.css    # client portal shell + archetypes
+  nl-client.js     # optional client-only scripts
+
+prototype/admin/assets/              # ADMIN only (v3.2)
+  nl-admin.css     # operator console shell + archetypes
+  nl-admin.js      # optional admin-only scripts
 ```
 
 **`<head>` order on every migrated page** (paths relative to the page):
@@ -95,16 +189,18 @@ proto/shared/assets/v3/
 (function(){var k='nl-theme-admin',d='dark',t=null;
 try{t=localStorage.getItem(k)}catch(e){}
 var r=document.documentElement;r.setAttribute('data-theme',t||d);r.setAttribute('data-surface','admin');r.setAttribute('data-theme-key',k);})();</script>
-<link rel="stylesheet" href="…/shared/assets/proto.css">          <!-- legacy fallback only, temporary -->
-<link rel="stylesheet" href="…/shared/assets/v3/nl-tokens.css">
-<link rel="stylesheet" href="…/shared/assets/v3/nl-base.css">
-<link rel="stylesheet" href="…/shared/assets/v3/nl-admin.css">
-<script defer src="…/shared/assets/v3/nl-v3.js"></script>
-<!-- keep existing JS behaviour files (ui.js, workbench.js, studio.js, operator.js, …) if the page uses their data-* hooks -->
+<link rel="stylesheet" href="…/shared/assets/proto.css">          <!-- legacy fallback from prototype/shared copy only, temporary -->
+<link rel="stylesheet" href="…/shared/assets/v3/nl-tokens.css">   <!-- SHARED -->
+<link rel="stylesheet" href="…/shared/assets/v3/nl-base.css">     <!-- SHARED -->
+<link rel="stylesheet" href="…/assets/nl-admin.css">              <!-- ADMIN only — not in shared/ -->
+<script defer src="…/shared/assets/v3/nl-v3.js"></script>         <!-- SHARED theme helpers -->
+<script defer src="…/assets/nl-admin.js"></script>                <!-- ADMIN only if needed -->
+<!-- keep existing JS behaviour files (ui.js, workbench.js, studio.js, operator.js, …) from prototype/shared copies if the page uses their data-* hooks -->
 ```
 
+
 **Remove from migrated pages:** `studio.css`, `workbench.css`, `operator.css`, `public-flow.css`, `editorial.css`, `inbox.css` links (the residue gate fails if they remain), and the body classes `upgrade-v2 studio-v2 workbench-v2 workbench-admin workbench-client operator-v2 flow-v2 auth-v2 batch-*`. New body class: `class="nl nl-admin"` (keep `data-page` / `data-surface`).
-**Theme toggle:** update `ui.js` so the toggle reads/writes `document.documentElement.dataset.themeKey` (fall back to `'nl-theme'`). Per-surface keys: `nl-theme-public`, `nl-theme-client`, `nl-theme-admin`. Defaults: **public = dark, client = light, admin = dark**.
+**Theme toggle:** update **`prototype/shared/assets/ui.js` only** (never `proto/…/ui.js`) so the toggle reads/writes `document.documentElement.dataset.themeKey` (fall back to `'nl-theme'`). Per-surface keys: `nl-theme-public`, `nl-theme-client`, `nl-theme-admin`. Defaults: **public = dark, client = light, admin = dark**.
 
 ### 4.2 Tokens (write verbatim into `nl-tokens.css`)
 
@@ -220,13 +316,13 @@ html:root, html:root[data-theme] {
 8. **Strip inline `style=""`.** Convert to classes. Only CSS custom-property hooks are allowed (`style="--progress:40%"`).
 9. **Do not lose data.** Every ₹ amount, ID, email, name, date and % in the baseline stays in the page's visible HTML (it may move, collapse into `<details>`, or change style). Keep date strings literally (e.g. `Oct 6, 2026`), not converted to "6d".
 10. **Prototype honesty.** Keep the prototype notes and the "Prototype" FAB (restyle: neutral, 28px, bg-2, text-2, bottom-right, no teal). Any "AI summary" must be labelled *Prototype summary · derived from figures on this page* and only restate on-page numbers.
-11. **Offline-safe.** No CDNs, no external fonts or images. Use `assets/fonts/Geist-Variable.woff2` (supports weights 400/510/590) and inline SVG.
+11. **Offline-safe.** No CDNs, no external fonts or images. Use `prototype/shared/assets/fonts/Geist-Variable.woff2` (seeded copy) (supports weights 400/510/590) and inline SVG.
 12. **Vercel web-interface checklist** (`research/LINEAR_UI_RESEARCH.md` §2): `…` character, curly quotes, `aria-label` on icon buttons, labels on every control, `touch-action:manipulation` on controls, `scroll-margin-top` on anchors, `<meta name="theme-color">` matching bg-0, `color-scheme` set.
 
 
 ---
 
-## 5. Admin shell (`nl-admin.css`)
+## 5. Admin shell (`prototype/admin/assets/nl-admin.css`)
 
 **Theme default:** dark (`nl-theme-admin`). Light theme must be finished too (Linear light: canvas `#F7F7F6`, panel white).
 
@@ -309,7 +405,7 @@ Body: **main column (flex 1, max 820) + properties rail 300px** (border-left bor
 
 ## 7. Page map: every in-scope file (101)
 
-| Archetype | Pages (under `admin/`) |
+| Archetype | Pages (under `prototype/admin/`) |
 |---|---|
 | A1 Command center (2) | `dashboard`, `index.html` (redirect: keep redirect, style the interstitial) |
 | A2 Table/list (34) | `requests`, `quotes`, `quotes/drafts`, `quotes/payment-schedules`, `projects`, `projects/completed`, `projects/archive`, `payments`, `payments/disputes`, `payments/accounts`, `users`, `users/search`, `contact`, `moderation`, `audit`, `api-keys`, `notifications`, `content`, `portfolio`, `media/browse`, `media/quarantine`, `messages/threads`, `messages/archived`, `pipeline/projects`, `pipeline/users`, `system/announcements`, `system/cache`, `system/email-templates`, `system/features`, `system/health`, `system/jobs`, `system/logs`, `system/notification-templates`, `system/staff` |
@@ -323,9 +419,9 @@ Body: **main column (flex 1, max 820) + properties rail 300px** (border-left bor
 **Families / commit order:** ① system + shell script across all 101 → ② A1 dashboard + index → ③ requests + quotes (list, detail, builder, stats, capacity, drafts, schedules) → ④ projects + pipeline → ⑤ payments → ⑥ users + messages + moderation + contact + notifications → ⑦ content + portfolio + media → ⑧ system + analytics + audit + api-keys + integrations + profile.
 
 ### Execution protocol
-1. **Phase 0:** setup + baseline (§8; baseline is captured in light so the visual gate compares light vs light). Commit baseline + `PAGE_COVERAGE.csv` (101 rows).
-2. **Phase 1, system:** ensure shared files (§4); write `nl-admin.css` (shell, view bar, table, rail, palette).
-3. **Phase 2, scripted shell:** `tools/v3/migrate_admin.py`: `<head>` (§4.1, default dark), body `nl nl-admin`, replace sidebar + topbar with `tools/v3/shell/admin-shell.html` (grouping above; active item from path), wrap content in panel + 44px header (move existing `<h1>` text into the header breadcrumb), delete eyebrow/intro paragraph (move the paragraph into the header's `title` attribute or a `<details>` help popover so text is preserved), list inline styles. Run on all 101, render, fix.
+1. **Phase 0:** seed `prototype/` (§ Isolation) — `rsync -a proto/apps/admin/ prototype/admin/`, shared assets with `--ignore-existing`, fix `../shared` path depth. Then setup + baseline (§8; baseline is captured in light so the visual gate compares light vs light). Commit seed + baseline + `PAGE_COVERAGE.csv` (101 rows). **Do not modify `proto/`.**
+2. **Phase 1, system:** ensure shared files under `prototype/shared/assets/v3/` (§4 tokens/base/theme JS only); write **admin-only** `prototype/admin/assets/nl-admin.css` (+ optional `nl-admin.js`) for shell, view bar, table, rail, palette.
+3. **Phase 2, scripted shell:** `tools/v3/migrate_admin.py`: `<head>` (§4.1, default dark), body `nl nl-admin`, replace sidebar + topbar with `tools/v3/shell/admin-shell.html` (grouping above; active item from path), wrap content in panel + 44px header (move existing `<h1>` text into the header breadcrumb), delete eyebrow/intro paragraph (move the paragraph into the header's `title` attribute or a `<details>` help popover so text is preserved), list inline styles. Operate only on `prototype/admin/**`. Run on all 101, render, fix.
 4. **Phase 3:** build A1, then one exemplar per archetype (A2 = `requests`, A3 = `analytics`, A4 = `requests/[id]` and `payments/[id]`, A5 = `requests/[id]/quote/new`, A6 = `messages/inbox`); save screenshots to `upgrade-v3/admin/templates/`; then apply per family. Gates. Commit per family.
 5. **Phase 4:** dark-default capture → `after-dark/` (§8); eyeball 10 flagship pages in both themes; `PAGE_REVIEW.md`; push.
 
@@ -383,6 +479,8 @@ A page is **VERIFIED** only when every gate passes. **Never** write "A+", "≥95
 - ❌ Font weights 600/700/800; radii > 12px (except pills); `transition: all`; more than one entrance animation per view.
 - ❌ Inventing data, logos, testimonials, metrics or "live" AI. Removing routes or pages.
 - ❌ Installing React/Tailwind/component kits, or copying code from paid templates (Tailwind Plus is study-only).
+- ❌ Editing anything under `proto/` or linking prototype pages to `proto/shared/` assets.
+- ❌ Dumping surface-only CSS/JS into `prototype/shared/` (public animations, client shell, admin tables belong under that surface's `assets/`).
 - ❌ Claiming COMPLETE while any gate fails; self-assigned grades.
 
 ## 10. Ledger, `PAGE_REVIEW.md`, git

@@ -14,14 +14,16 @@ Nestlancer v3 quality gates. Three hard gates — a page is VERIFIED only if all
                      <body>, and no inline style="" except CSS custom-property hooks
                      (style="--progress:40%").
 
-Usage:
-  # 1) before touching anything
-  python3 tools/v3/gate.py snapshot --surface landing --out upgrade-v3/public/data-baseline.json
-  python3 tools/v3/capture.py --surface landing --out upgrade-v3/public/baseline
+Isolation: gates read prototype/ only — never proto/.
 
-  # 2) after redesign (also: python3 tools/v3/gate.py links --surface landing)
-  python3 tools/v3/capture.py --surface landing --out upgrade-v3/public/after
-  python3 tools/v3/gate.py check --surface landing \
+Usage:
+  # 1) before touching anything (after seeding prototype/)
+  python3 tools/v3/gate.py snapshot --surface public --out upgrade-v3/public/data-baseline.json
+  python3 tools/v3/capture.py --surface public --out upgrade-v3/public/baseline
+
+  # 2) after redesign (also: python3 tools/v3/gate.py links --surface public)
+  python3 tools/v3/capture.py --surface public --out upgrade-v3/public/after
+  python3 tools/v3/gate.py check --surface public \
       --data upgrade-v3/public/data-baseline.json \
       --before upgrade-v3/public/baseline --after upgrade-v3/public/after \
       --report upgrade-v3/public/GATE_REPORT.md --compare upgrade-v3/public/compare
@@ -29,7 +31,8 @@ Usage:
 import argparse, glob, html, json, os, re, sys
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-APPS = os.path.join(REPO, "proto", "apps")
+PROTO_ROOT = os.path.join(REPO, "prototype")
+SURFACE_DIR = {"public": "public", "landing": "public", "web": "web", "admin": "admin"}
 
 NAMES = ["Arjun Mehta", "Samira Patel", "Rahul Desai", "Ananya Iyer", "Priya Nair", "Vikram Shah",
          "Kavya Reddy", "Rajan Kumar", "Divya Sharma", "Amit Verma", "Neha Gupta", "Suresh Iyer",
@@ -46,9 +49,19 @@ PATTERNS = [
 LEGACY_BODY = re.compile(r"\b(upgrade-v2|batch-(two|three|four|five)|studio-v2|workbench-v2|operator-v2|flow-v2|auth-v2)\b")
 
 
+def surface_root(surface):
+    return os.path.join(PROTO_ROOT, SURFACE_DIR[surface])
+
+
 def pages(surface):
-    fs = sorted(glob.glob(os.path.join(APPS, surface, "**", "index.html"), recursive=True))
-    return [os.path.relpath(os.path.dirname(f), APPS) for f in fs]
+    root = surface_root(surface)
+    label = SURFACE_DIR[surface]
+    fs = sorted(glob.glob(os.path.join(root, "**", "index.html"), recursive=True))
+    out = []
+    for f in fs:
+        sub = os.path.relpath(os.path.dirname(f), root)
+        out.append(label if sub == "." else os.path.join(label, sub))
+    return out
 
 
 def visible_text(s):
@@ -71,7 +84,7 @@ def tokens(s):
 def snapshot(surface, out):
     data = {}
     for rel in pages(surface):
-        s = open(os.path.join(APPS, rel, "index.html"), encoding="utf-8").read()
+        s = open(os.path.join(PROTO_ROOT, rel, "index.html"), encoding="utf-8").read()
         data[rel] = sorted(tokens(s))
     os.makedirs(os.path.dirname(os.path.join(REPO, out)), exist_ok=True)
     json.dump(data, open(os.path.join(REPO, out), "w"), indent=1)
@@ -125,7 +138,7 @@ def check(surface, data, before, after, report, compare, min_change):
     if compare:
         os.makedirs(os.path.join(REPO, compare), exist_ok=True)
     for rel in pages(surface):
-        s = open(os.path.join(APPS, rel, "index.html"), encoding="utf-8").read()
+        s = open(os.path.join(PROTO_ROOT, rel, "index.html"), encoding="utf-8").read()
         now = tokens(s)
         missing = [t for t in base.get(rel, []) if t not in now]
         b = os.path.join(REPO, before, f"{slug(rel)}-1440.png"); a = os.path.join(REPO, after, f"{slug(rel)}-1440.png")
@@ -156,7 +169,7 @@ def links(surface):
     """Every relative href/src in the surface must resolve to an existing file."""
     bad = []
     for rel in pages(surface):
-        f = os.path.join(APPS, rel, "index.html"); d = os.path.dirname(f)
+        f = os.path.join(PROTO_ROOT, rel, "index.html"); d = os.path.dirname(f)
         s = open(f, encoding="utf-8").read()
         for m in re.finditer(r'(?:href|src)="([^"#?]+)', s):
             u = m.group(1)
